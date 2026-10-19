@@ -30,71 +30,59 @@ gantt
     P7 归档与答辩          :p7, 2027-04-26, 2027-05-16
 ```
 
-### ② 阶段推进与决策门（两行：上半程 P0—P3，下半程 P4—P7）
-
-```mermaid
-flowchart TD
-    subgraph R1["上半程 · P0 → P3（10-19 → 01-17）"]
-        direction LR
-        P0["P0 文献与可行性<br/>10-19 → 11-08<br/>环境·引擎·模型·冒烟·E0/E1"] --> G0{"G0<br/>可行性"}
-        G0 --> P1["P1 需求与预注册<br/>11-09 → 11-29<br/>需求/场景/SLO/矩阵冻结"] --> G1{"G1<br/>预注册"}
-        G1 --> P2["P2 设计与开题<br/>11-30 → 12-20<br/>状态机/容量/接口"] --> G2{"G2<br/>容量闭合"}
-        G2 --> P3["P3 基线与观测<br/>12-21 → 01-17<br/>B0/B1/插桩/对账"] --> G3{"G3<br/>基线可信"}
-    end
-    subgraph R2["下半程 · P4 → P7（01-18 → 05-16）"]
-        direction LR
-        P4["P4 核心策略<br/>01-18 → 02-28<br/>校准/软准入/老化/M"] --> G4{"G4<br/>机制有效"}
-        G4 --> P5["P5 测试与实验<br/>03-01 → 03-28<br/>验收/对照/消融/统计"] --> G5{"G5<br/>数据冻结"}
-        G5 --> P6["P6 论文修订<br/>04-01 → 04-25"] --> P7["P7 归档与答辩<br/>04-26 → 05-16"] --> G6{"G6<br/>交付核对"}
-    end
-    G3 --> P4
-
-    G0 -.->|不通过| FIX0["核对条件 / 收窄命题 / 修测量"]
-    G2 -.->|不通过| FIX2["修正容量与回收逻辑后复验"]
-    G4 -.->|不通过| FIX4["检验阈值与触发条件 / 冗余性"]
-
-    classDef current fill:#fff3cd,stroke:#fd7e14,stroke-width:3px,color:#664d03;
-    classDef todo fill:#eef1f5,stroke:#9aa5b1,color:#374151;
-    classDef gate fill:#e7e9f7,stroke:#5b6ee1,color:#1f2a63;
-    classDef branch fill:#fde2e1,stroke:#c0392b,color:#5c1a16;
-    class P0 current;
-    class G0,G1,G2,G3,G4,G5,G6 gate;
-    class P1,P2,P3,P4,P5,P6,P7 todo;
-    class FIX0,FIX2,FIX4 branch;
-```
-### ③ 当前阶段 P0 展开（✔ 已完成 ｜ ▶ 当前位置）
+### ② 阶段推进与决策门（单行紧凑：门标在箭头上）
 
 ```mermaid
 flowchart LR
-    NOW(["◀ 当前位置<br/>P0 第二步起点"])
-    S1["① 环境冻结 ✔<br/>WSL2 · CUDA 12.6 · RTX 3050 Ti"]
-    S2["② 引擎与模型 ✔<br/>llama.cpp v0.7.0（620d2225）<br/>Qwen2.5-1.5B Q4_K_M（6a1a2eb6）"]
-    S3["③ 冒烟核对 ✔<br/>交互 + 后台 · 逐块计时"]
-    S4["④ 源码定位 ✔<br/>7 条链路 · 15 个接入点"]
-    S5["▶ ⑤ 回放器（下一步）<br/>开放到达 · 计划到达表<br/>发送滞后 · 逐块时间戳"]
-    S6["⑥ prestudy E0<br/>200 交互 × 3 次重复"]
-    S7["⑦ prestudy E1<br/>同轨迹 + 约 100 后台"]
-    G0{"G0 可行性门"}
-    BAD["不通过：核对条件 / 收窄命题 / 修测量"]
+    P0["P0 文献与可行性<br/>10-19→11-08"] -->|"G0 可行性"| P1["P1 需求与预注册<br/>11-09→11-29"]
+    P1 -->|"G1 预注册"| P2["P2 设计与开题<br/>11-30→12-20"]
+    P2 -->|"G2 容量闭合"| P3["P3 基线与观测<br/>12-21→01-17"]
+    P3 -->|"G3 基线可信"| P4["P4 核心策略<br/>01-18→02-28"]
+    P4 -->|"G4 机制有效"| P5["P5 测试与实验<br/>03-01→03-28"]
+    P5 -->|"G5 数据冻结"| P6["P6 论文修订<br/>04-01→04-25"]
+    P6 --> P7["P7 归档与答辩<br/>04-26→05-16"]
+    P7 -->|"G6 交付核对"| DONE(["交付"])
+
+    classDef current fill:#fff3cd,stroke:#fd7e14,stroke-width:3px,color:#664d03;
+    classDef todo fill:#eef1f5,stroke:#9aa5b1,color:#374151;
+    classDef done fill:#d1e7dd,stroke:#198754,color:#0a3622;
+    class P0 current;
+    class P1,P2,P3,P4,P5,P6,P7 todo;
+    class DONE done;
+```
+
+> 决策门 G0—G6 以箭头标签表示。G0/G2/G4 不通过时按《开发流程计划》§4.3 调整（核对条件、收窄命题、修容量/回收逻辑）后复验；为免图面臃肿，分支不画在图上。
+
+### ③ 当前阶段 P0 展开（横向一行，箭头指向当前位置）
+
+```mermaid
+flowchart LR
+    NOW(["◀ 当前位置"])
+    S1["① 环境冻结 ✔"]
+    S2["② 引擎+模型 ✔"]
+    S3["③ 冒烟核对 ✔"]
+    S4["④ 源码定位 ✔"]
+    S5["▶ ⑤ 回放器"]
+    S6["⑥ E0 200×3"]
+    S7["⑦ E1 +100 后台"]
+    G0{"G0 门"}
 
     S1 --> S2 --> S3 --> S4 --> S5 --> S6 --> S7 --> G0
     NOW -.-> S5
-    G0 -.->|不通过| BAD
 
     classDef done fill:#d1e7dd,stroke:#198754,color:#0a3622;
     classDef current fill:#fff3cd,stroke:#fd7e14,stroke-width:3px,color:#664d03;
     classDef todo fill:#eef1f5,stroke:#9aa5b1,color:#374151;
     classDef gate fill:#e7e9f7,stroke:#5b6ee1,color:#1f2a63;
     classDef nowbox fill:#ffe8a3,stroke:#fd7e14,stroke-width:2px,color:#5c3d00;
-    classDef branch fill:#fde2e1,stroke:#c0392b,color:#5c1a16;
     class S1,S2,S3,S4 done;
     class S5 current;
     class S6,S7 todo;
     class G0 gate;
     class NOW nowbox;
-    class BAD branch;
 ```
 
+> 步骤要点：① WSL2/CUDA/GPU 与工具链体检 ② llama.cpp v0.7.0（`620d2225`）+ Qwen2.5-1.5B Q4_K_M（`6a1a2eb6`）③ 交互+后台逐块计时冒烟 ④ 7 条链路源码定位 ⑤ 开放到达回放器（**下一步**）⑥ E0：200 交互×3 ⑦ E1：同轨迹+约 100 后台。
 **图例**：🟨 当前/进行中 ｜ 🟩 已完成 ｜ ⬜ 未开始 ｜ 🟪 菱形为决策门（不过则按虚线分支调整） ｜ 橙色竖线为今日。
 
 | 阶段 | 时间 | 状态 | 关键交付 / 门槛 |
