@@ -29,7 +29,7 @@
 | O8 | 引擎固定版本记录（含回退预案） | `results/raw/prestudy/2026-10-19-build/clone-record.md` |
 | O9 | 每日记录体系（本目录 + 索引 + 模板） | `daily/` |
 | O10 | 一键推送脚本（WSL 借用 Windows SSH key，用完即删） | `scripts/ops/push.sh` |
-| O11 | 项目任务流程图（Mermaid，P0—P7 + G0—G6，标注当前进度） | `README.md`「任务流程与当前进度」 |
+| O11 | 项目任务流程图（Mermaid 三张：甘特时间线 / 两段式阶段推进与决策门 / 当前阶段 P0 展开，均横向布局并标注当前位置） | `README.md`「任务流程与当前进度」 |
 
 ## 3. 关键数据
 
