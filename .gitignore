@@ -1,2 +1,29 @@
 # Submission sources are Markdown; generated Word files stay local.
 *.docx
+
+# Build and Python environment artifacts.
+/build/
+/build-*/
+/.venv/
+__pycache__/
+*.py[cod]
+/.pytest_cache/
+
+# Local engine checkout and large artifacts; keep directory documentation.
+/third_party/llama.cpp/
+/models/*
+!/models/README.md
+/data/workloads/*
+!/data/workloads/.gitkeep
+/data/calibration/*
+!/data/calibration/.gitkeep
+/data/development/*
+!/data/development/.gitkeep
+/data/test/*
+!/data/test/.gitkeep
+/results/raw/*
+!/results/raw/.gitkeep
+/results/processed/*
+!/results/processed/.gitkeep
+/results/figures/*
+!/results/figures/.gitkeep

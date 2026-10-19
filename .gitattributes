@@ -1,0 +1,21 @@
+# 统一换行与文本规范
+# 目的：避免 Windows 检出（CRLF）与 Linux 构建/运行（LF）之间产生假改动或脚本失效。
+
+# 脚本必须为 LF，否则 bash 报 $'\r': command not found
+*.sh    text eol=lf
+*.py    text eol=lf
+*.bash  text eol=lf
+
+# 数据与日志不做换行转换
+*.csv   -text
+*.log   -text
+*.sse   -text
+*.gguf  -text
+
+# 二进制文档
+*.docx  binary
+*.png   binary
+*.jpg   binary
+
+# 其余文本默认按文本处理
+* text=auto
