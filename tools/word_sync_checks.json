@@ -1,0 +1,43 @@
+[
+  {
+    "file": "开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统.docx",
+    "blocks": 103,
+    "reused_blocks": 102,
+    "tables": 5,
+    "content_matches_markdown": true,
+    "visual_qa": "passed_all_pages",
+    "pages": 10,
+    "sha256": "05f26e7e0d1c76b2fb7c4b2d9a72d724798bcedc6965ace4a62ea5bdc76b6147",
+    "page_text_characters": [
+      235,
+      854,
+      868,
+      656,
+      886,
+      897,
+      984,
+      938,
+      167,
+      3066
+    ]
+  },
+  {
+    "file": "开发流程计划_面向混合长短请求的LLM推理准入与尾延迟控制系统.docx",
+    "blocks": 67,
+    "reused_blocks": 67,
+    "tables": 4,
+    "content_matches_markdown": true,
+    "visual_qa": "passed_all_pages",
+    "pages": 7,
+    "sha256": "8f6af384417ed0d1f1bfbfeb54de3afa3866935513cdc3077b26818d475e10d8",
+    "page_text_characters": [
+      206,
+      936,
+      896,
+      820,
+      851,
+      749,
+      714
+    ]
+  }
+]
