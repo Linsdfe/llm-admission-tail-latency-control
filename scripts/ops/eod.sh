@@ -69,6 +69,7 @@ cat <<'TODO'
   [ ] 填写 daily/<日期>/README.md：人时、问题与处置、下一步
   [ ] 在 daily/README.md 索引表追加当天一行
   [ ] git add -A && git commit -m "<当天主题>"
+  [ ] 推送远端：bash scripts/ops/push.sh
   [ ] 确认无残留 llama-server、显存已释放（宿主运行 nvidia-smi 检查）
 TODO
 echo "===== 收尾完成 ====="
