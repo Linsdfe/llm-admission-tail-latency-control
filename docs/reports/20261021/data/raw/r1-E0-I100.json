@@ -1,0 +1,108 @@
+{
+  "req_id": "I100",
+  "category": "interactive",
+  "arrival_offset_ms": 50000,
+  "prompt": "任务编号 I100。请用一句话解释流式响应。",
+  "max_tokens": 64,
+  "temperature": 0,
+  "terminal": "completed",
+  "http_status": 200,
+  "error": null,
+  "actual_send_offset_ms": 50001.017977,
+  "first_content_offset_ms": 50022.954172,
+  "end_offset_ms": 50178.768814999996,
+  "send_lag_ms": 1.0179770000031567,
+  "ttft_ms": 21.93619499999477,
+  "finish_reason": "stop",
+  "stream_done": true,
+  "timings": {
+    "cache_n": 27,
+    "prompt_n": 17,
+    "prompt_ms": 16.138,
+    "prompt_per_token_ms": 0.949294117647059,
+    "prompt_per_second": 1053.4143016482835,
+    "predicted_n": 19,
+    "predicted_ms": 155.673,
+    "predicted_per_token_ms": 8.6485,
+    "predicted_per_second": 115.62698733884488
+  },
+  "usage": null,
+  "content": "流式响应是指在处理大量数据流时，实时处理和响应数据的能力。",
+  "chunk_series": [
+    {
+      "offset_ms": 50022.954172,
+      "chars": 1
+    },
+    {
+      "offset_ms": 50033.94398899999,
+      "chars": 1
+    },
+    {
+      "offset_ms": 50044.509838,
+      "chars": 2
+    },
+    {
+      "offset_ms": 50052.673194999996,
+      "chars": 2
+    },
+    {
+      "offset_ms": 50061.329552999996,
+      "chars": 1
+    },
+    {
+      "offset_ms": 50069.12145200001,
+      "chars": 2
+    },
+    {
+      "offset_ms": 50077.86772,
+      "chars": 2
+    },
+    {
+      "offset_ms": 50085.799616000004,
+      "chars": 2
+    },
+    {
+      "offset_ms": 50093.628725,
+      "chars": 1
+    },
+    {
+      "offset_ms": 50101.990057999996,
+      "chars": 1
+    },
+    {
+      "offset_ms": 50111.103728,
+      "chars": 1
+    },
+    {
+      "offset_ms": 50119.12437700001,
+      "chars": 2
+    },
+    {
+      "offset_ms": 50127.443127000006,
+      "chars": 2
+    },
+    {
+      "offset_ms": 50135.322725,
+      "chars": 1
+    },
+    {
+      "offset_ms": 50144.042059,
+      "chars": 2
+    },
+    {
+      "offset_ms": 50152.63899200001,
+      "chars": 2
+    },
+    {
+      "offset_ms": 50160.743608000004,
+      "chars": 3
+    },
+    {
+      "offset_ms": 50169.789463,
+      "chars": 1
+    }
+  ],
+  "headers_ms": 5.7468859999971755,
+  "clock": "client time.monotonic",
+  "time_unit": "ms"
+}

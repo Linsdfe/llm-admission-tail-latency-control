@@ -1,0 +1,120 @@
+{
+  "req_id": "I199",
+  "category": "interactive",
+  "arrival_offset_ms": 99500,
+  "prompt": "任务编号 I199。请用一句话解释首 token 延迟。",
+  "max_tokens": 64,
+  "temperature": 0,
+  "terminal": "completed",
+  "http_status": 200,
+  "error": null,
+  "actual_send_offset_ms": 99501.55290000001,
+  "first_content_offset_ms": 215612.968783,
+  "end_offset_ms": 215820.24968399998,
+  "send_lag_ms": 1.5529000000096858,
+  "ttft_ms": 116111.41588299998,
+  "finish_reason": "stop",
+  "stream_done": true,
+  "timings": {
+    "cache_n": 29,
+    "prompt_n": 18,
+    "prompt_ms": 26.558,
+    "prompt_per_token_ms": 1.4754444444444443,
+    "prompt_per_second": 677.7618796596129,
+    "predicted_n": 24,
+    "predicted_ms": 207.334,
+    "predicted_per_token_ms": 9.014521739130435,
+    "predicted_per_second": 110.93211918932737
+  },
+  "usage": null,
+  "content": "首 token 延迟是指在使用第一个 token 时，需要等待一段时间才能继续使用后续 token。",
+  "chunk_series": [
+    {
+      "offset_ms": 215612.968783,
+      "chars": 1
+    },
+    {
+      "offset_ms": 215626.44316,
+      "chars": 6
+    },
+    {
+      "offset_ms": 215653.47633200002,
+      "chars": 2
+    },
+    {
+      "offset_ms": 215662.40411,
+      "chars": 1
+    },
+    {
+      "offset_ms": 215670.424211,
+      "chars": 2
+    },
+    {
+      "offset_ms": 215679.092287,
+      "chars": 1
+    },
+    {
+      "offset_ms": 215687.900814,
+      "chars": 2
+    },
+    {
+      "offset_ms": 215699.07039999997,
+      "chars": 3
+    },
+    {
+      "offset_ms": 215707.94095500003,
+      "chars": 6
+    },
+    {
+      "offset_ms": 215716.179858,
+      "chars": 1
+    },
+    {
+      "offset_ms": 215724.49242099997,
+      "chars": 1
+    },
+    {
+      "offset_ms": 215732.719681,
+      "chars": 1
+    },
+    {
+      "offset_ms": 215741.35550099998,
+      "chars": 2
+    },
+    {
+      "offset_ms": 215750.293543,
+      "chars": 2
+    },
+    {
+      "offset_ms": 215758.893899,
+      "chars": 4
+    },
+    {
+      "offset_ms": 215768.430528,
+      "chars": 2
+    },
+    {
+      "offset_ms": 215776.467827,
+      "chars": 2
+    },
+    {
+      "offset_ms": 215785.444095,
+      "chars": 2
+    },
+    {
+      "offset_ms": 215794.381692,
+      "chars": 2
+    },
+    {
+      "offset_ms": 215802.84595900003,
+      "chars": 6
+    },
+    {
+      "offset_ms": 215812.12886700002,
+      "chars": 1
+    }
+  ],
+  "headers_ms": 116084.69714999998,
+  "clock": "client time.monotonic",
+  "time_unit": "ms"
+}

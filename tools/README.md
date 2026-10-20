@@ -6,7 +6,9 @@
 
 ## 本地 Word 材料
 
-Word 文件不提交到 GitHub，以下工具仅用于维护本地提交材料。
+开题报告和开发计划等生成的 Word 默认不提交到 GitHub。应本次发布要求，`docs/reports/20261021/P0阶段总结与下一阶段安排.docx` 单独纳入版本管理，方便直接下载；同目录 Markdown 是内容源码。
+
+`build_p0_report.py` 使用 `python-docx` 将该 Markdown 生成为同名 Word。`export_p0_report_samples.py` 从本机原始实验导出固定编号的9份样本，先核对既有证据 SHA256，再保留原文件字节，生成 CSV、来源清单，并刷新 Markdown 样本表。全新克隆已有公开样本，生成 Word 不需要重新运行实验；重新导出样本需要本机完整原始目录。
 
 使用前需要在项目根目录准备两份与 Markdown 同名的 Word 文件；`sync_word.py` 读取这些文件以保留样式，无法在全新克隆中直接生成模板。
 

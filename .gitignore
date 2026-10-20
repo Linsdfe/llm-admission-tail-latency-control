@@ -1,5 +1,6 @@
 # Submission sources are Markdown; generated Word files stay local.
 *.docx
+!docs/reports/20261021/P0阶段总结与下一阶段安排.docx
 
 # Build and Python environment artifacts.
 /build/

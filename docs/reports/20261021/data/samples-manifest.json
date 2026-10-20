@@ -1,0 +1,53 @@
+{
+  "batch": "20261020-234210-p0-e0e1",
+  "selection": "first, middle and last planned IDs in repeat 1, selected independently of latency",
+  "scope": "9 explanatory examples; not representative statistics; full 1500 requests remain local",
+  "evidence": "docs/experiments/20261020-234210-p0-e0e1/evidence-sha256.json",
+  "files": [
+    {
+      "source": "results/raw/prestudy/20261020-234210-p0-e0e1/r1-E0/replay/requests/I000.json",
+      "copy": "data/raw/r1-E0-I000.json",
+      "sha256": "223a7b450e4d4ecec827105f3c651c4425f88ced79379a372189f20b33628099"
+    },
+    {
+      "source": "results/raw/prestudy/20261020-234210-p0-e0e1/r1-E0/replay/requests/I100.json",
+      "copy": "data/raw/r1-E0-I100.json",
+      "sha256": "e88462ae97ee7c2f9f3e79919ef42c2c8ce514785a40971d7c413c46c3ed350e"
+    },
+    {
+      "source": "results/raw/prestudy/20261020-234210-p0-e0e1/r1-E0/replay/requests/I199.json",
+      "copy": "data/raw/r1-E0-I199.json",
+      "sha256": "e82f941e29b06f558e22373153eee0f6bf8db7ba629cf5f6d06946750699c791"
+    },
+    {
+      "source": "results/raw/prestudy/20261020-234210-p0-e0e1/r1-E1/replay/requests/I000.json",
+      "copy": "data/raw/r1-E1-I000.json",
+      "sha256": "09f0e4ae555f79c61094085a1106c7e0dd49652d5d40b75f0a891002ce010b05"
+    },
+    {
+      "source": "results/raw/prestudy/20261020-234210-p0-e0e1/r1-E1/replay/requests/I100.json",
+      "copy": "data/raw/r1-E1-I100.json",
+      "sha256": "08b468a1395e1d3833acc8f15b472ba1b23f23276fa00f2c4b6dd6fa0507b0d3"
+    },
+    {
+      "source": "results/raw/prestudy/20261020-234210-p0-e0e1/r1-E1/replay/requests/I199.json",
+      "copy": "data/raw/r1-E1-I199.json",
+      "sha256": "fdd9e747d7a45d9c3fec4aa4a237f1a6fe005e1a834130de9b923d326dcdca16"
+    },
+    {
+      "source": "results/raw/prestudy/20261020-234210-p0-e0e1/r1-E1/replay/requests/B000.json",
+      "copy": "data/raw/r1-E1-B000.json",
+      "sha256": "4b94a2c0942c1672929d8adad6a0854b14f6ca3602e79fb5672d645a9547e865"
+    },
+    {
+      "source": "results/raw/prestudy/20261020-234210-p0-e0e1/r1-E1/replay/requests/B050.json",
+      "copy": "data/raw/r1-E1-B050.json",
+      "sha256": "9dfe9bbe0810190dcaa2b77f7bee85ab8265e6f407e9e7296ef88f24bd317354"
+    },
+    {
+      "source": "results/raw/prestudy/20261020-234210-p0-e0e1/r1-E1/replay/requests/B099.json",
+      "copy": "data/raw/r1-E1-B099.json",
+      "sha256": "ed500384264ca695d8504ef8d07ae911b9fcd9d12279c295379da78ec078184a"
+    }
+  ]
+}

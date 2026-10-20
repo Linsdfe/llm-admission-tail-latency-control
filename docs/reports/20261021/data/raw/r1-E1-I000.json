@@ -1,0 +1,96 @@
+{
+  "req_id": "I000",
+  "category": "interactive",
+  "arrival_offset_ms": 0,
+  "prompt": "任务编号 I000。请用一句话解释尾延迟。",
+  "max_tokens": 64,
+  "temperature": 0,
+  "terminal": "completed",
+  "http_status": 200,
+  "error": null,
+  "actual_send_offset_ms": 1.8248690000035594,
+  "first_content_offset_ms": 22.779276999997933,
+  "end_offset_ms": 162.9355480000072,
+  "send_lag_ms": 1.8248690000035594,
+  "ttft_ms": 20.954407999994373,
+  "finish_reason": "stop",
+  "stream_done": true,
+  "timings": {
+    "cache_n": 24,
+    "prompt_n": 19,
+    "prompt_ms": 19.437,
+    "prompt_per_token_ms": 1.0230000000000001,
+    "prompt_per_second": 977.5171065493645,
+    "predicted_n": 16,
+    "predicted_ms": 140.102,
+    "predicted_per_token_ms": 9.340133333333334,
+    "predicted_per_second": 107.06485275013918
+  },
+  "usage": null,
+  "content": "尾延迟是指数据包从网络的一端到达另一端所需的时间。",
+  "chunk_series": [
+    {
+      "offset_ms": 22.779276999997933,
+      "chars": 1
+    },
+    {
+      "offset_ms": 34.38381499999821,
+      "chars": 2
+    },
+    {
+      "offset_ms": 44.2362800000069,
+      "chars": 2
+    },
+    {
+      "offset_ms": 53.71029399999827,
+      "chars": 2
+    },
+    {
+      "offset_ms": 62.78926699999943,
+      "chars": 1
+    },
+    {
+      "offset_ms": 70.94709499999396,
+      "chars": 1
+    },
+    {
+      "offset_ms": 80.65798100000166,
+      "chars": 2
+    },
+    {
+      "offset_ms": 90.05570400000806,
+      "chars": 2
+    },
+    {
+      "offset_ms": 98.48301600000298,
+      "chars": 1
+    },
+    {
+      "offset_ms": 107.61349000000564,
+      "chars": 2
+    },
+    {
+      "offset_ms": 117.81493099999807,
+      "chars": 2
+    },
+    {
+      "offset_ms": 126.87603499999511,
+      "chars": 1
+    },
+    {
+      "offset_ms": 135.82554699999605,
+      "chars": 2
+    },
+    {
+      "offset_ms": 144.4927339999964,
+      "chars": 3
+    },
+    {
+      "offset_ms": 154.15867699999808,
+      "chars": 1
+    }
+  ],
+  "headers_ms": 1.2860770000031607,
+  "clock": "client time.monotonic",
+  "time_unit": "ms"
+}

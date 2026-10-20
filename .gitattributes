@@ -19,3 +19,6 @@
 
 # 其余文本默认按文本处理
 * text=auto
+
+# Preserve the byte-identical raw excerpts published with the P0 summary.
+docs/reports/20261021/data/raw/*.json -text
