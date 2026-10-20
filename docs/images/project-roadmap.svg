@@ -81,5 +81,5 @@
 <text x="852" y="698" font-size="16" fill="#53677c" font-weight="600">G6  交付核对</text>
 <text x="40" y="470" font-size="18" fill="#182d43" font-weight="600">02  策略实现、验证与交付</text>
 <rect x="40" y="746" width="1040" height="46" rx="12" fill="#e6eeF4" stroke="none"/>
-<text x="60" y="775" font-size="17" fill="#182d43" font-weight="400">当前：P0 第一步已完成；下一项是开放到达回放器。G0 尚未通过，后续阶段均未开始。</text>
+<text x="60" y="775" font-size="17" fill="#182d43" font-weight="400">当前：10 条正常请求核对已通过；下一项是异常终态与统一排空。G0 尚未通过。</text>
 </g></svg>

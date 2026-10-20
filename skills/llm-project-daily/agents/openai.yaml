@@ -1,0 +1,4 @@
+interface:
+  display_name: "LLM 项目每日收尾"
+  short_description: "记录每日工作、校验并按日期打包成果，同步实验索引与 README 进度图"
+  default_prompt: "使用 $llm-project-daily 整理这个项目今天的工作，按日期打包成果并更新 README 进度图。"

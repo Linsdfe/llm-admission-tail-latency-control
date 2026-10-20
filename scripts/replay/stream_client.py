@@ -71,6 +71,7 @@ def do_request(base_url, prompt, max_tokens, temperature=0.0, timeout=300.0, met
     })
 
     t_send = time.monotonic()
+    t_send_unix_ms = time.time() * 1000.0
     first_content_t = None
     first_content_sse_index = None
     content_parts = []
@@ -78,6 +79,7 @@ def do_request(base_url, prompt, max_tokens, temperature=0.0, timeout=300.0, met
     finish_reason = None
     timings = None
     n_sse_json = 0
+    stream_done = False
     ttfb = None
     end_t = None
     status = None
@@ -94,6 +96,7 @@ def do_request(base_url, prompt, max_tokens, temperature=0.0, timeout=300.0, met
                     continue
                 data = line[len(CONTENT_PREFIX):].strip()
                 if data == "[DONE]":
+                    stream_done = True
                     end_t = now
                     break
                 try:
@@ -119,6 +122,7 @@ def do_request(base_url, prompt, max_tokens, temperature=0.0, timeout=300.0, met
                 if obj.get("timings"):
                     timings = obj["timings"]
     except urllib.error.HTTPError as exc:
+        status = exc.code
         error = "HTTPError %s: %s" % (exc.code, exc.read()[:200])
     except Exception as exc:  # noqa: BLE001 - 记录所有异常，不中断整批
         error = "%s: %s" % (type(exc).__name__, exc)
@@ -141,7 +145,14 @@ def do_request(base_url, prompt, max_tokens, temperature=0.0, timeout=300.0, met
         "error": error,
         "client": {
             "clock": "time.monotonic()（客户端单调时钟），单位 ms",
-            "t_send_unix_ms": round(time.time() * 1000.0, 3),
+            "t_send_unix_ms": round(t_send_unix_ms, 3),
+            "t_send_monotonic_ms": t_send * 1000.0,
+            "t_first_content_monotonic_ms": (
+                first_content_t * 1000.0
+                if first_content_t is not None else None
+            ),
+            "t_end_monotonic_ms": end_t * 1000.0,
+            "stream_done": stream_done,
             "ttfb_ms": _round(ttfb * 1000.0),
             "ttft_ms": ttft_ms,
             "total_ms": _round((end_t - t_send) * 1000.0),

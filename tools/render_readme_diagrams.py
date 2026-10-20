@@ -73,12 +73,12 @@ def roadmap():
             e += [text(x + 250, y + 117, "›", 22, "#8b9bab")]
     e += [text(40, 470, "02  策略实现、验证与交付", 18, INK, 600),
           rect(40, 746, 1040, 46, "#e6eeF4", radius=12),
-          text(60, 775, "当前：P0 第一步已完成；下一项是开放到达回放器。G0 尚未通过，后续阶段均未开始。", 17, INK)]
+          text(60, 775, "当前：10 条正常请求核对已通过；下一项是异常终态与统一排空。G0 尚未通过。", 17, INK)]
     save("project-roadmap.svg", e)
 
 
 def p0():
-    e = frame("P0 进度与下一步", "阶段截止 2026.11.08  /  已完成环境与链路验证，进入回放与干扰复现准备", 760)
+    e = frame("P0 进度与下一步", "进度快照 2026.10.20  /  小轨迹正常路径通过；异常终态与统一排空待验收", 852)
     e += [text(40, 182, "已完成  /  第一步 · 2026.10.19", 18, TEAL, 600)]
     for i, (title, detail) in enumerate([
         ("环境冻结", "WSL2 / CUDA / GPU"), ("引擎与模型", "固定版本 / 构建 / 加载"),
@@ -88,24 +88,26 @@ def p0():
         e += [rect(x, 202, 248, 100, "#e7f4ef", "#c4dfd5"),
               text(x + 18, 237, f"{i+1:02d}  {title}", 21, TEAL, 600),
               text(x + 18, 274, detail, 16, MUTED)]
-    e += [text(40, 346, "接下来  /  第二步 · 按验收结果依次推进", 18, INK, 600)]
+    e += [text(40, 346, "第二步进行中  /  依据 20261020-231546-sanity-rerun-395", 18, INK, 600)]
     tasks = [
-        ("05", "开放到达回放器", "计划表独立发送；记录滞后、首内容和终态", "下一项", True),
-        ("06", "10 条小轨迹核对", "ID 唯一、发送准确、计时有序、终态与排空闭合", "待开始", False),
-        ("07", "E0 / E1 配对预实验", "每组 200 交互 × 3；E1 同轨迹叠加约 100 后台", "待开始", False),
+        ("05", "小轨迹回放骨架", "轨迹生成 / 调度干跑 / 真实流式回放（限 10 条）", "已完成", True),
+        ("06", "正常路径小轨迹核对", "6 交互 + 4 后台；计时、文件完整性与在途重叠通过", "已通过", True),
+        ("07", "异常终态与统一排空", "补齐拒绝、超时、取消、断流与截止未完成的核对", "下一项", True),
+        ("08", "E0 / E1 配对预实验", "每组 200 交互 × 3；E1 同轨迹叠加约 100 后台", "待开始", False),
     ]
     for i, (num, title, detail, status, active) in enumerate(tasks):
         y = 366 + i * 92
-        e += [rect(40, y, 1040, 78, "#ffffff", "#80c4b8" if active else "#dce3eb"),
-              rect(56, y + 15, 48, 48, TEAL if active else "#edf1f5", radius=12),
-              text(65, y + 47, num, 22, "#ffffff" if active else MUTED, 700),
+        current = status == "下一项"
+        e += [rect(40, y, 1040, 78, "#f0f8f5" if active and not current else "#ffffff", "#80c4b8" if active else "#dce3eb"),
+              rect(56, y + 15, 48, 48, TEAL if current else "#dff3ed" if active else "#edf1f5", radius=12),
+              text(65, y + 47, num, 22, "#ffffff" if current else TEAL if active else MUTED, 700),
               text(124, y + 33, title, 21, INK, 600),
               text(124, y + 60, detail, 17, MUTED),
               badge(972, y + 24, status, active)]
-    e += [rect(40, 662, 1040, 60, "#e9edf7", radius=14),
-          text(60, 700, "G0", 23, "#4c5885", 700),
-          text(126, 686, "核对可行性：测量可信、容量可观测、接入路径可达；据 E0/E1 判断干扰与范围。", 17, INK),
-          text(126, 710, "字段不足先修测量；未见实质干扰则核对条件、收窄命题并复审。", 16, MUTED)]
+    e += [rect(40, 754, 1040, 60, "#e9edf7", radius=14),
+          text(60, 792, "G0", 23, "#4c5885", 700),
+          text(126, 778, "核对可行性：测量可信、容量可观测、接入路径可达；据 E0/E1 判断干扰与范围。", 17, INK),
+          text(126, 802, "10 条小轨迹仅是正确性证据；尚无配对 E0/E1 性能结论，P0 仍未完成。", 16, MUTED)]
     save("p0-progress.svg", e)
 
 

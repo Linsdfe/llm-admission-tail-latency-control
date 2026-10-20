@@ -1,0 +1,12 @@
+{
+  "date": "20261020",
+  "archive": "results/archives/20261020/daily-20261020-233313-cc99fd57.zip",
+  "sha256": "495c76b8ec7050a8bc0052e1dedd554491101801cbeff8f225d1ee7dfb3b5f87",
+  "file_count": 81,
+  "run_dirs": [
+    "results/raw/prestudy/20261020-231546-sanity-rerun-395"
+  ],
+  "verified": true,
+  "packed_at": "2026-10-20T23:33:13.299909+08:00",
+  "backup_scope": "local_only"
+}

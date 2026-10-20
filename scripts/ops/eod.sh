@@ -25,12 +25,15 @@ for pat in '*.pid' '*.tmp' '*.bak' '*.orig' '*.rej' 'nohup.out' '*.pyc'; do
   while IFS= read -r f; do
     [ -z "$f" ] && continue
     rm -f "$f" && echo "  删除 ${f#$WIN/}" && n=$((n + 1))
-  done < <(find "$WIN" -name "$pat" -not -path "*/third_party/*" -not -path "*/.git/*" 2>/dev/null)
+  done < <(find "$WIN" -name "$pat" -not -path "*/third_party/*" -not -path "*/.git/*" \
+    -not -path "*/results/raw/*" -not -path "*/results/archives/*" 2>/dev/null)
 done
 while IFS= read -r d; do
   [ -z "$d" ] && continue
   rm -rf "$d" && echo "  删除空目录 ${d#$WIN/}" && n=$((n + 1))
-done < <(find "$WIN/results" -type d -empty 2>/dev/null)
+done < <(find "$WIN/results" -type d -empty \
+  -not -path "$WIN/results/raw" -not -path "$WIN/results/raw/*" \
+  -not -path "$WIN/results/archives" -not -path "$WIN/results/archives/*" 2>/dev/null)
 [ "$n" -eq 0 ] && echo "  无临时文件 / 空目录（OK）"
 
 echo "--- 2. 生成当天产出清单 ---"

@@ -36,6 +36,14 @@ wsl.exe -d Ubuntu-24.04 -e bash "<Windows 仓库>/scripts/replay/50_run_all.sh" 
 
 ## 下一步（prestudy-E0/E1）
 
+### 2026-10-20 小轨迹重跑入口
+
+已有合成轨迹时，在 WSL 运行 `bash "$HOME/proj-win/scripts/replay/60_run_sanity.sh"`。它在独立的 `results/raw/prestudy/<时间>-sanity-rerun-<PID>/` 中运行调度干跑、重启原始引擎、执行 2 条预热与 10 条混合请求，再调用 `scripts/analysis/10_check_sanity.py` 生成逐请求 Markdown 报告、`summary.json` 和 `manifest.json`。清理只停止本次启动的服务，不删除历史运行目录。
+
+报告入口为运行目录的 `README.md`；`dry-run/` 是模拟记录，`http/` 是真实流式请求、日志与配置。真实回放脚本仍限定最多 10 条，异常终态分类和统一排空截止尚未验收，不能直接作为 200 条正式实验入口。`length` 表示达到输出上限；并发下 `server_overhead_ms` 含排队等时间，不能解释成纯交付开销。
+
+### 正式预实验前仍需完成
+
 1. 计划到达表 + 开放到达循环（目标发送时刻用单调时钟累加，记录发送滞后）。
 2. 每重复前重置服务端状态（重启 `llama-server` 或显式清理 slot），固定预热条数（≥2）。
 3. 逐请求记录：计划/释放/实际发送/首内容/终态、`cache_n`/`prompt_n`、实际输出长度与结束原因。
