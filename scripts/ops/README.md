@@ -14,6 +14,8 @@
 
 ## 每日收尾流程
 
+若只需要生成产出清单和只读核对，可运行 `bash scripts/ops/eod.sh YYYYMMDD --records-only`；此模式跳过清理及同步，不会借用其他脚本绕过被拒绝的删除。必要的非删除同步可独立复制改动文件后再核对。
+
 ```bash
 # 1) 收尾（自动清理 + 生成清单 + 同步 + 检查）
 bash scripts/ops/eod.sh

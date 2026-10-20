@@ -36,6 +36,16 @@ wsl.exe -d Ubuntu-24.04 -e bash "<Windows 仓库>/scripts/replay/50_run_all.sh" 
 
 ## 下一步（prestudy-E0/E1）
 
+### 第七、八步入口
+
+`open_loop.py` 提供标准库 asyncio HTTP/SSE 开放到达回放，支持请求总超时、显式取消、统一排空截止、未释放计数与六类互斥终态；通过异步连接独立发送，不使用阻塞线程来实现截止。
+
+1. `tests/integration/verify_open_loop.py --out-dir <新目录>`：可控 HTTP/SSE 终态测试、完成/取消竞争和发送能力校准。
+2. `70_run_prestudy.py --step7-dir <通过的测试目录> --out-dir <新批次目录>`：先做真实引擎取消/超时/截止/恢复，再按 `configs/prestudy-e0e1.json` 执行三组配对。每轮新引擎、两条预热；记录所有状态，不因结果不好而删数据。
+3. `scripts/analysis/80_analyze_prestudy.py --batch <完成的批次> --output <新分析目录>`：审计轨迹、请求文件、终态、计时及版本，输出逐轮表、配对差异、后台代价和可追溯摘要。
+
+完整协议见 [docs/prestudy-protocol.md](../../docs/prestudy-protocol.md)。第七步只验证客户端生命周期与服务恢复，不能据此宣称已实现引擎内部容量硬账本或 KV 幂等回收。迟发上限在采集前固定为 50 ms，超限保留并标记；第八步是探索性预实验，三次重复不承担正式显著性判断。
+
 ### 2026-10-20 小轨迹重跑入口
 
 已有合成轨迹时，在 WSL 运行 `bash "$HOME/proj-win/scripts/replay/60_run_sanity.sh"`。它在独立的 `results/raw/prestudy/<时间>-sanity-rerun-<PID>/` 中运行调度干跑、重启原始引擎、执行 2 条预热与 10 条混合请求，再调用 `scripts/analysis/10_check_sanity.py` 生成逐请求 Markdown 报告、`summary.json` 和 `manifest.json`。清理只停止本次启动的服务，不删除历史运行目录。

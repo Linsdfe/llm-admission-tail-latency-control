@@ -1,0 +1,15 @@
+{
+  "date": "20261021",
+  "archive": "results/archives/20261021/daily-20261021-000524-4fe5ff27.zip",
+  "sha256": "6b5bf8978b525d4bbaa917911c41f171e51ec9ddefa5c26e6b9d0f2b8e3aa0a9",
+  "file_count": 2438,
+  "run_dirs": [
+    "results/raw/prestudy/20261020-233937-p0-step7",
+    "results/raw/prestudy/20261020-234009-p0-step7",
+    "results/raw/prestudy/20261020-234210-p0-e0e1",
+    "results/raw/prestudy/20261020-235916-p0-step7-extended"
+  ],
+  "verified": true,
+  "packed_at": "2026-10-21T00:05:24.257116+08:00",
+  "backup_scope": "local_only"
+}

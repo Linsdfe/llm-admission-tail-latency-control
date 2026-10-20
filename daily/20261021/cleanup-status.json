@@ -1,0 +1,9 @@
+{
+  "checked_at": "2026-10-21T00:04:17.065940+08:00",
+  "llama_server_or_batch_sampler_remaining": [],
+  "port_8080_free": true,
+  "raw_evidence_preserved": true,
+  "cache_cleanup": "not_performed_automatic_approval_rejected",
+  "cache_cleanup_reason": "blocked by policy",
+  "scope": "Task services stopped; no user applications or evidence removed"
+}

@@ -9,7 +9,7 @@
 - ttft_ms           收到首个**非空生成内容**（排除元数据块、空 delta、心跳）
 - total_ms          收到 [DONE] 或连接结束
 - inter_token_ms    相邻内容块到达间隔的分布（不含首块）
-- server_overhead_ms  ttft_ms - 服务端 timings.prompt_ms（交付段 + 客户端开销，粗估）
+- server_overhead_ms  TTFT - prompt_ms，可能包含排队等，不能解释为纯交付开销
 
 仅用标准库，无第三方依赖。
 """
@@ -153,7 +153,7 @@ def do_request(base_url, prompt, max_tokens, temperature=0.0, timeout=300.0, met
             ),
             "t_end_monotonic_ms": end_t * 1000.0,
             "stream_done": stream_done,
-            "ttfb_ms": _round(ttfb * 1000.0),
+            "ttfb_ms": _round(ttfb * 1000.0) if ttfb is not None else None,
             "ttft_ms": ttft_ms,
             "total_ms": _round((end_t - t_send) * 1000.0),
             "first_content_sse_index": first_content_sse_index,

@@ -1,0 +1,21 @@
+{
+  "protocol_version": 1,
+  "purpose": "exploratory_prestudy_not_final_test",
+  "seed": 20261020,
+  "interactive_requests": 200,
+  "background_requests": 100,
+  "interactive_interval_ms": 500,
+  "background_interval_ms": 1000,
+  "background_start_ms": 250,
+  "interactive_max_tokens": 64,
+  "background_max_tokens": 384,
+  "temperature": 0,
+  "measurement_seconds": 100,
+  "drain_seconds": 180,
+  "request_timeout_seconds": 180,
+  "send_lag_limit_ms": 50,
+  "repeats": 3,
+  "execution_order": [["E0", "E1"], ["E1", "E0"], ["E0", "E1"]],
+  "cache_protocol": "Fresh engine per run; default prefix cache; two fixed warmups; cache_n/prompt_n reported",
+  "notes": "Synthetic exploratory workload. No outcome-based exclusions. Report all states and send-lag violations; do not claim significant effect from three repeats."
+}

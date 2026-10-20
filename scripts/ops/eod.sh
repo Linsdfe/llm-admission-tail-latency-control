@@ -2,7 +2,7 @@
 # 每日收尾（End of Day）：
 #   1) 清理临时文件与空目录   2) 生成当天产出清单（daily/<日期>/产出清单.md）
 #   3) 同步到 WSL             4) 一致性检查   5) 打印人工待办
-# 用法：bash scripts/ops/eod.sh [YYYYMMDD]   默认今天
+# 用法：bash scripts/ops/eod.sh [YYYYMMDD] [--records-only]   默认今天
 set -uo pipefail
 
 WIN="$HOME/proj-win"
@@ -10,6 +10,10 @@ WROOT="$(readlink -f "$HOME/proj-win" 2>/dev/null || echo "$HOME/proj-win")"   #
 REPO="$HOME/projects/llm-admission-tail-latency-control"
 OPS="$WIN/scripts/ops"
 DAY="${1:-$(date +%Y%m%d)}"
+MODE="${2:-}"
+if [ -n "$MODE" ] && [ "$MODE" != "--records-only" ]; then
+  echo "Unknown option: $MODE"; exit 1
+fi
 REF="${DAY:0:4}-${DAY:4:2}-${DAY:6:2}"
 DAILY="$WIN/daily/$DAY"
 LIST="$DAILY/产出清单.md"
@@ -20,6 +24,9 @@ mkdir -p "$DAILY"
 echo "===== 每日收尾 $REF（daily/$DAY） ====="
 
 echo "--- 1. 清理临时文件 / 空目录 ---"
+if [ "$MODE" = "--records-only" ]; then
+  echo "  仅生成记录与只读核对：跳过所有清理及同步"
+else
 n=0
 for pat in '*.pid' '*.tmp' '*.bak' '*.orig' '*.rej' 'nohup.out' '*.pyc'; do
   while IFS= read -r f; do
@@ -35,6 +42,7 @@ done < <(find "$WIN/results" -type d -empty \
   -not -path "$WIN/results/raw" -not -path "$WIN/results/raw/*" \
   -not -path "$WIN/results/archives" -not -path "$WIN/results/archives/*" 2>/dev/null)
 [ "$n" -eq 0 ] && echo "  无临时文件 / 空目录（OK）"
+fi
 
 echo "--- 2. 生成当天产出清单 ---"
 {
@@ -62,7 +70,11 @@ echo "--- 2. 生成当天产出清单 ---"
 echo "  已生成 daily/$DAY/产出清单.md（$(grep -c '^| `' "$LIST" || true) 条记录）"
 
 echo "--- 3. 同步到 WSL 工作副本 ---"
-bash "$OPS/sync.sh" | tail -2
+if [ "$MODE" = "--records-only" ]; then
+  echo "  已跳过；若需要同步，单独采用不删除文件的复制操作"
+else
+  bash "$OPS/sync.sh" | tail -2
+fi
 
 echo "--- 4. 一致性检查 ---"
 bash "$OPS/compare.sh" 2>/dev/null | sed -n '/受管目录/,/根目录文件/p' | head -14
