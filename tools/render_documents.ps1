@@ -18,7 +18,7 @@ try {
     $env:PYTHONUTF8 = '1'
     $env:PYTHONIOENCODING = 'utf-8'
     $documents = @(
-        @{ Kind = 'Proposal'; File = '开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统_V1.4.docx'; Output = 'render-proposal-v14-final' },
+        @{ Kind = 'Proposal'; File = '开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统.docx'; Output = 'render-proposal-v14-final' },
         @{ Kind = 'Plan'; File = '开发流程计划_面向混合长短请求的LLM推理准入与尾延迟控制系统.docx'; Output = 'render-plan-v13-delivery' }
     )
     foreach ($document in $documents) {
