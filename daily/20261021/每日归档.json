@@ -1,15 +1,19 @@
 {
   "date": "20261021",
-  "archive": "results/archives/20261021/daily-20261021-000524-4fe5ff27.zip",
-  "sha256": "6b5bf8978b525d4bbaa917911c41f171e51ec9ddefa5c26e6b9d0f2b8e3aa0a9",
-  "file_count": 2438,
+  "archive": "results/archives/20261021/daily-20261021-095340-985323f3.zip",
+  "sha256": "5c65458b32af7e495979989a664238aafcc0afd4f443e898b86b4641ae1bcb8f",
+  "file_count": 4415,
   "run_dirs": [
     "results/raw/prestudy/20261020-233937-p0-step7",
     "results/raw/prestudy/20261020-234009-p0-step7",
     "results/raw/prestudy/20261020-234210-p0-e0e1",
-    "results/raw/prestudy/20261020-235916-p0-step7-extended"
+    "results/raw/prestudy/20261020-235916-p0-step7-extended",
+    "results/raw/prestudy/20261021-092933-lowload-client-gate",
+    "results/raw/prestudy/20261021-093210-lowload-client-gate-v2",
+    "results/raw/prestudy/20261021-093300-p0-lowload-v1",
+    "results/raw/maintenance/20261021-093400-document-consolidation"
   ],
   "verified": true,
-  "packed_at": "2026-10-21T00:05:24.257116+08:00",
+  "packed_at": "2026-10-21T09:53:40.865378+08:00",
   "backup_scope": "local_only"
 }

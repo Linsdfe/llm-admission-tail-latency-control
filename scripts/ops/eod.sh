@@ -45,29 +45,7 @@ done < <(find "$WIN/results" -type d -empty \
 fi
 
 echo "--- 2. 生成当天产出清单 ---"
-{
-  echo "# $REF 当天产出清单（自动生成）"
-  echo
-  echo "> 由 \`scripts/ops/eod.sh\` 生成，请勿手工编辑；每次收尾会重新生成。"
-  echo "> 只列受管文件（排除 \`.git\`、\`third_party/\`、\`models/\` 本地产物与 \`.docx\`）。"
-  echo "> 生成时间：$(date -Is)"
-  echo
-  echo "| 文件 | 字节 | 修改时间 |"
-  echo "|---|---:|---|"
-  find "$WROOT" -type f -newermt "$REF 00:00" \
-    -not -path "*/.git/*" -not -path "*/third_party/*" -not -path "*/models/*" \
-    -not -name "*.docx" -not -name "产出清单.md" \
-    2>/dev/null | sort | while IFS= read -r f; do
-      rel="${f#"$WROOT/"}"
-      sz=$(stat -c %s "$f" 2>/dev/null || echo 0)
-      mt=$(stat -c %y "$f" 2>/dev/null | cut -d. -f1)
-      printf "| \`%s\` | %s | %s |\n" "$rel" "$sz" "$mt"
-    done
-  total=$(find "$WROOT" -type f -newermt "$REF 00:00" -not -path "*/.git/*" -not -path "*/third_party/*" -not -path "*/models/*" -not -name "*.docx" -not -name "产出清单.md" 2>/dev/null | wc -l)
-  echo
-  echo "合计 **$total** 个文件。"
-} > "$LIST"
-echo "  已生成 daily/$DAY/产出清单.md（$(grep -c '^| `' "$LIST" || true) 条记录）"
+python3 "$OPS/day_inventory.py" --project "$WROOT" --date "$DAY" || exit 1
 
 echo "--- 3. 同步到 WSL 工作副本 ---"
 if [ "$MODE" = "--records-only" ]; then

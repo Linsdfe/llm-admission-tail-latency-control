@@ -2,9 +2,24 @@
 
 P0 首先实现最小流式客户端与自动化冒烟，再扩展 prestudy-E0/E1 的开放到达回放。按计划到达发送，分别记录计划、释放、实际发送、首个生成内容和客户端终态；每条请求具有唯一 ID 和明确类别。
 
-首内容排除心跳、元数据和空块（实测首位内容在第 2 个 SSE JSON 块）。记录实际生成长度、结束原因、发送滞后、测量窗口与排空截止。有闸门时，尚未释放请求也跟踪到截止。字段口径见根目录《预实验方案》。
+首内容排除心跳、元数据和空块。记录实际生成长度、结束原因、发送滞后、测量窗口与排空截止。有闸门时，尚未释放请求也跟踪到截止。2026-10-21 已将根目录旧《预实验方案》融合到本文、[复审设计](../../docs/p0-experiment-review-minimal-supplement-20261021.md)和版本化执行协议，避免继续维护重复规划。原文保存在 Git 历史及当日维护证据包。
 
-## 当前实现（2026-10-19）
+## 当前入口（2026-10-21）
+
+- 客户端核对：`tests/integration/verify_open_loop.py --out-dir <新目录>`。
+- 低强度补充：`75_run_lowload.py --gate-dir <本次通过的核对目录> --out-dir <新批次>`，配置 `configs/prestudy-lowload-v1.json`，协议见 [低强度执行协议 v1](../../docs/prestudy-lowload-protocol-v1.md)。
+- 低强度审计：`scripts/analysis/85_analyze_lowload.py --batch <完整批次> --output <新报告目录>`。
+- 原 E0/E1 复现入口仍为 `70_run_prestudy.py` 与 `80_analyze_prestudy.py`，按 [原冻结协议](../../docs/prestudy-protocol.md)使用；不修改旧配置适配新实验。
+
+### 通用字段与可选探针（由旧方案合并）
+
+计划到达 `t_planned`、闸门释放 `t_queue_release`、实际发送 `t_actual`、首非空内容 `t_client_first_content`、终态 `t_end_client` 均注明时钟和单位。TTFT=首内容−实际发送；迟发=实际发送−释放；策略等待=释放−计划。后台完成代价从计划到达算，尚未释放也跟踪至统一截止。无闸门按窗口内实际发送核对分母，有闸门按计划请求并包含未释放者。
+
+本次异步客户端 actual-send 边界在 TCP 建连后、HTTP 写入前；旧 urllib 冒烟边界不同，不作严格性能对照。服务端 prompt 开始、首 token 产生及 slot/KV 字段尚未完整记录，不能跨未验证时钟相减；字段未知就标未知。各段 P95 不能相加。
+
+E2 等输入/输出总量的更多短请求仍改变请求数与每请求开销；E3 保持数量、到达及预设总预算而改变长度离散度；E4 需要同请求阶段观测；E5 可试外部在途上限或推迟释放，但必须报告后台等待和全部终态。只按信息缺口选探针，等 token 不等于等计算量，外部闸门不证明内部软预算收益。业务类别预先指定，不按事后实际长度重分类。
+
+## 历史冒烟实现（2026-10-19，仅复现旧链路）
 
 | 文件 | 作用 |
 |---|---|
@@ -15,7 +30,7 @@ P0 首先实现最小流式客户端与自动化冒烟，再扩展 prestudy-E0/E
 
 > 仓库同步、一致性检查、每日收尾属于仓库运维，已独立到 `scripts/ops/`（`sync.sh`、`compare.sh`、`eod.sh`），见 `scripts/ops/README.md`。
 
-用法（在 WSL 内，证据直接写入 Windows 工作区仓库）：
+以下旧脚本固定使用历史目录；这些目录已有证据，**不要再次直接运行覆盖旧记录**。新实验使用上方新建目录的入口。历史命令仅供理解：
 
 ```bash
 wsl.exe -d Ubuntu-24.04 -e bash "<Windows 仓库>/scripts/replay/00_env_check.sh"   # 环境基线
@@ -34,7 +49,7 @@ wsl.exe -d Ubuntu-24.04 -e bash "<Windows 仓库>/scripts/replay/50_run_all.sh" 
 | `total_ms` | 收到 `[DONE]` 的时间 | 交互 0.32 s，后台 3.22 s |
 | `inter_token_ms` | 相邻内容块到达间隔（不含首块） | p50 ≈ 10 ms，p95 11—15 ms |
 
-## 下一步（prestudy-E0/E1）
+## 原 E0/E1 与小轨迹工具
 
 ### 第七、八步入口
 
@@ -50,12 +65,4 @@ wsl.exe -d Ubuntu-24.04 -e bash "<Windows 仓库>/scripts/replay/50_run_all.sh" 
 
 已有合成轨迹时，在 WSL 运行 `bash "$HOME/proj-win/scripts/replay/60_run_sanity.sh"`。它在独立的 `results/raw/prestudy/<时间>-sanity-rerun-<PID>/` 中运行调度干跑、重启原始引擎、执行 2 条预热与 10 条混合请求，再调用 `scripts/analysis/10_check_sanity.py` 生成逐请求 Markdown 报告、`summary.json` 和 `manifest.json`。清理只停止本次启动的服务，不删除历史运行目录。
 
-报告入口为运行目录的 `README.md`；`dry-run/` 是模拟记录，`http/` 是真实流式请求、日志与配置。真实回放脚本仍限定最多 10 条，异常终态分类和统一排空截止尚未验收，不能直接作为 200 条正式实验入口。`length` 表示达到输出上限；并发下 `server_overhead_ms` 含排队等时间，不能解释成纯交付开销。
-
-### 正式预实验前仍需完成
-
-1. 计划到达表 + 开放到达循环（目标发送时刻用单调时钟累加，记录发送滞后）。
-2. 每重复前重置服务端状态（重启 `llama-server` 或显式清理 slot），固定预热条数（≥2）。
-3. 逐请求记录：计划/释放/实际发送/首内容/终态、`cache_n`/`prompt_n`、实际输出长度与结束原因。
-4. 终态互斥分类（完成/拒绝/超时/取消/失败/未完成）与统一排空截止。
-5. 先 10 条小轨迹核对，再跑 E0（200 交互 × 3 重复）与 E1（同轨迹 + 约 100 后台）。
+报告入口为运行目录的 `README.md`；`dry-run/` 是模拟记录，`http/` 是真实流式请求、日志与配置。旧小轨迹工具仍限最多 10 条，不适配完整终态矩阵。完整终态与统一排空已经由 `open_loop.py` 和受控测试验收，200 条实验应使用上面的版本化入口。`length` 表示达到输出上限；并发下 `server_overhead_ms` 含排队等时间，不能解释成纯交付开销。

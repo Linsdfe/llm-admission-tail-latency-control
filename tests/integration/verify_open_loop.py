@@ -21,11 +21,14 @@ async def verify(out):
         handlers.add(task)
         writers.add(writer)
         try:
-            await reader.readline()
+            if not await reader.readline():
+                return  # Cancellation can close a connected socket before HTTP is sent.
             headers = {}
             while (line := await reader.readline()) not in (b"\r\n", b"\n", b""):
                 k, v = line.decode().split(":", 1)
                 headers[k.lower()] = v.strip()
+            if "content-length" not in headers:
+                return  # A cancellation may also interrupt the header block.
             body = json.loads(await reader.readexactly(int(headers["content-length"])))
             case = body["messages"][0]["content"]
             if case in ("slow", "timeout", "cancel"):

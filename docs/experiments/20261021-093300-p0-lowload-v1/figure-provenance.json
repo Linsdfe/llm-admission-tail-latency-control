@@ -1,0 +1,8 @@
+{
+  "batch": "20261021-093300-p0-lowload-v1",
+  "analysis_summary_sha256": "46e5b8abf413397d59799ec23d4a8a89686cd98ff2e703494b25c0e4c88f3787",
+  "plot_code_sha256": "d3963a36d950ed73f18e7e9deee91ed4da31e6e1c90fc3228cacdd7038b07639",
+  "matplotlib_version": "3.11.2",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "scope": "Static scientific plots; no inferred server queue or uncertainty intervals"
+}

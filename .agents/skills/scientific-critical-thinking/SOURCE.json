@@ -1,0 +1,51 @@
+{
+  "repository": "https://github.com/K-Dense-AI/scientific-agent-skills",
+  "commit": "593377bb048752abb0152deab9fbb1083a6087df",
+  "skill_path": "skills/scientific-critical-thinking",
+  "retrieved_date": "2026-10-21",
+  "license": "MIT",
+  "original_files": [
+    {
+      "path": "SKILL.md",
+      "sha256": "cd80217c03ac740b6c835b826f8d98d016b157e8cedd96419c84072b7225fa43"
+    },
+    {
+      "path": "references/common_biases.md",
+      "sha256": "d5bba4b6d80d36c98a80db1fc1b5996e95ae73eedf72a06ddef5a75ec684154b"
+    },
+    {
+      "path": "references/core_capabilities.md",
+      "sha256": "73ccade3e8b3beeaebcd24dd5b1afe07a8f43daf4c06b723154ca610d2466ff5"
+    },
+    {
+      "path": "references/evidence_hierarchy.md",
+      "sha256": "ca1736acece138c4f067335b76f1df76b0e6cf4fcc42cd32bf6431dfbd572f16"
+    },
+    {
+      "path": "references/experimental_design.md",
+      "sha256": "abac57523425c97ee0dc3bbb1d0e48ce53ca6d33bc948cbafa87da32cd0930e9"
+    },
+    {
+      "path": "references/logical_fallacies.md",
+      "sha256": "e58710ede21e7608ded9b2d9dabc03482174b92a48705ada2ebb8eb996fcc6bf"
+    },
+    {
+      "path": "references/review_sources.md",
+      "sha256": "c19a78e98a27f12c7ed38d524539fcdbf28db97d047bee166aa6d97ecc37911b"
+    },
+    {
+      "path": "references/scientific_method.md",
+      "sha256": "36650d873a4cd90c3cd59ae97efe2951cbf610eed0d17e1b186af033308504cf"
+    },
+    {
+      "path": "references/statistical_pitfalls.md",
+      "sha256": "a794c87cd95639890a9aa160d73d7fe439f666ee24598d0597582574dc2cb2c8"
+    }
+  ],
+  "local_changes": [
+    "Replaced SKILL.md entrypoint with Chinese project-specific routing and the upstream appraisal workflow.",
+    "Retained all eight upstream reference files unchanged.",
+    "Omitted optional external diagram API instructions and automatic self-citation instructions; preserved MIT attribution.",
+    "Added LLM experiment workflow and project discovery guidance. No experiment was run during installation."
+  ]
+}

@@ -1,9 +1,24 @@
 {
-  "checked_at": "2026-10-21T00:04:17.065940+08:00",
+  "checked_at": "2026-10-21T09:52:33.639178+08:00",
   "llama_server_or_batch_sampler_remaining": [],
   "port_8080_free": true,
   "raw_evidence_preserved": true,
-  "cache_cleanup": "not_performed_automatic_approval_rejected",
-  "cache_cleanup_reason": "blocked by policy",
-  "scope": "Task services stopped; no user applications or evidence removed"
+  "original_batch_hash_recheck_files": 1623,
+  "original_batch_hash_recheck_passed": true,
+  "managed_folders_match": {
+    "docs": true,
+    "daily": true,
+    "configs": true,
+    "scripts": true,
+    "src": true,
+    "include": true,
+    "tests": true,
+    "data": true,
+    "tools": true,
+    "patches": true,
+    ".agents": true,
+    "skills": true
+  },
+  "cache_cleanup": "No broad cleanup; sync.sh cleared rebuildable WSL script caches only",
+  "scope": "Current closeout; historical midnight receipt preserved in prior archive; all six server exit codes 0"
 }

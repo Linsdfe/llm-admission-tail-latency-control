@@ -1,0 +1,1113 @@
+{
+  "batch": "20261021-093300-p0-lowload-v1",
+  "audit_status": "passed",
+  "scope": "Exploratory paired runs on one deterministic synthetic workload; not final significance evidence",
+  "protocol": {
+    "protocol_version": 1,
+    "purpose": "exploratory_lowload_supplement_not_final_test",
+    "source_batch": "results/raw/prestudy/20261020-234210-p0-e0e1",
+    "seed": 20261020,
+    "execution_order": [
+      [
+        "C",
+        "L"
+      ],
+      [
+        "L",
+        "C"
+      ],
+      [
+        "C",
+        "L"
+      ]
+    ],
+    "background_ids": [
+      "B000",
+      "B010",
+      "B020",
+      "B030",
+      "B040",
+      "B050",
+      "B060",
+      "B070",
+      "B080",
+      "B090"
+    ],
+    "measurement_seconds": 100,
+    "drain_seconds": 180,
+    "request_timeout_seconds": 180,
+    "send_lag_limit_ms": 50,
+    "idle_seconds": 60,
+    "startup_warmup_timeout_seconds": 120,
+    "batch_start_limit_seconds": 3600,
+    "min_free_bytes": 2147483648,
+    "max_batch_bytes": 1073741824,
+    "practical_delta_ms": 100,
+    "max_drain_for_no_persistent_backlog_seconds": 10,
+    "max_quarter_median_increase_ms": 100,
+    "engine_commit": "620d2225cc436ab0b001e3200e590e3b286ef9ab",
+    "model_sha256": "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e",
+    "cache_protocol": "Fresh server per run; default prefix cache; two original fixed warmups; record actual cache_n/prompt_n",
+    "timing": "Client monotonic; actual send after TCP connect and before HTTP write; first nonempty generated content",
+    "exclusions": "Retain all outcomes. Pause on integrity/version/capacity/send-lag failure; no result-based reruns.",
+    "notes": "User authorized local WSL execution on 2026-10-21. Historical traces are inputs, not contemporary controls. No length-effect or policy-benefit claim."
+  },
+  "terminal_counts": {
+    "completed": 1230,
+    "rejected": 0,
+    "timeout": 0,
+    "cancelled": 0,
+    "failed": 0,
+    "unfinished": 0
+  },
+  "total_requests": 1230,
+  "pairs": [
+    {
+      "repeat": 1,
+      "c_p95_ms": 25.766085250014477,
+      "l_p95_ms": 48.942011550035396,
+      "delta_ms": 23.17592630002092,
+      "l_no_obvious_persistent_backlog": true
+    },
+    {
+      "repeat": 2,
+      "c_p95_ms": 40.33044775001765,
+      "l_p95_ms": 58.24558574999794,
+      "delta_ms": 17.915137999980296,
+      "l_no_obvious_persistent_backlog": true
+    },
+    {
+      "repeat": 3,
+      "c_p95_ms": 33.97935570001866,
+      "l_p95_ms": 48.45703150003211,
+      "delta_ms": 14.47767580001345,
+      "l_no_obvious_persistent_backlog": true
+    }
+  ],
+  "runs": [
+    {
+      "repeat": 1,
+      "scenario": "C",
+      "flags": [],
+      "summary": {
+        "schema_version": 2,
+        "planned": 200,
+        "sent": 200,
+        "terminal_counts": {
+          "completed": 200,
+          "rejected": 0,
+          "timeout": 0,
+          "cancelled": 0,
+          "failed": 0,
+          "unfinished": 0
+        },
+        "actual_send_window_denominator": 200,
+        "window_terminal_counts": {
+          "completed": 200,
+          "rejected": 0,
+          "timeout": 0,
+          "cancelled": 0,
+          "failed": 0,
+          "unfinished": 0
+        },
+        "measurement_seconds": 100,
+        "drain_seconds": 180,
+        "last_end_seconds": 99.75327205000002,
+        "send_lag_limit_ms": 50,
+        "send_lag_max_ms": 18.275331000011647,
+        "send_lag_p95_ms": 12.592753200024529,
+        "late_send_count": 0,
+        "classes": {
+          "interactive": {
+            "planned": 200,
+            "completed": 200,
+            "ttft_samples": 200,
+            "terminal_counts": {
+              "completed": 200
+            },
+            "ttft_p50_ms": 22.548771000005218,
+            "ttft_p95_ms": 25.766085250014477,
+            "completion_from_planned_p50_ms": 187.53979000000209,
+            "completion_from_planned_p95_ms": 271.80350790001904,
+            "completion_from_planned_max_ms": 314.97058500000276,
+            "output_tokens": 3985,
+            "output_length_known": 200,
+            "new_prompt_tokens": 3016,
+            "cached_prompt_tokens": 5775
+          },
+          "background": {
+            "planned": 0,
+            "completed": 0,
+            "ttft_samples": 0,
+            "terminal_counts": {},
+            "ttft_p50_ms": null,
+            "ttft_p95_ms": null,
+            "completion_from_planned_p50_ms": null,
+            "completion_from_planned_p95_ms": null,
+            "completion_from_planned_max_ms": null,
+            "output_tokens": 0,
+            "output_length_known": 0,
+            "new_prompt_tokens": 0,
+            "cached_prompt_tokens": 0
+          }
+        },
+        "window_completion_throughput_rps": 2.0,
+        "drain_elapsed_seconds": 0
+      },
+      "diagnostics": {
+        "background_arrival_checks": [],
+        "quarters": [
+          {
+            "start_ms": 0,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 22.5318604999959,
+            "p95_ms": 32.91939620001318
+          },
+          {
+            "start_ms": 25000,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 22.615611500015802,
+            "p95_ms": 25.345655100014476
+          },
+          {
+            "start_ms": 50000,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 22.475434500003757,
+            "p95_ms": 24.23505524999855
+          },
+          {
+            "start_ms": 75000,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 22.45843199999217,
+            "p95_ms": 30.806395100001076
+          }
+        ],
+        "last_minus_first_quarter_p50_ms": -0.07342850000372891,
+        "drain_seconds": 0,
+        "no_obvious_persistent_backlog": false
+      },
+      "interactive_first_content_samples": 200,
+      "all_observed_interactive_ttft_p95_ms": 25.766085250014477,
+      "metrics_zero": {
+        "llamacpp:requests_processing": true,
+        "llamacpp:requests_deferred": true
+      },
+      "background_requests": [],
+      "output_tps_whole_run_including_drain": 39.94856427368689,
+      "server_exit_code": 0
+    },
+    {
+      "repeat": 1,
+      "scenario": "L",
+      "flags": [],
+      "summary": {
+        "schema_version": 2,
+        "planned": 210,
+        "sent": 210,
+        "terminal_counts": {
+          "completed": 210,
+          "rejected": 0,
+          "timeout": 0,
+          "cancelled": 0,
+          "failed": 0,
+          "unfinished": 0
+        },
+        "actual_send_window_denominator": 210,
+        "window_terminal_counts": {
+          "completed": 210,
+          "rejected": 0,
+          "timeout": 0,
+          "cancelled": 0,
+          "failed": 0,
+          "unfinished": 0
+        },
+        "measurement_seconds": 100,
+        "drain_seconds": 180,
+        "last_end_seconds": 99.755405214,
+        "send_lag_limit_ms": 50,
+        "send_lag_max_ms": 14.648173000008683,
+        "send_lag_p95_ms": 8.763180000010067,
+        "late_send_count": 0,
+        "classes": {
+          "interactive": {
+            "planned": 200,
+            "completed": 200,
+            "ttft_samples": 200,
+            "terminal_counts": {
+              "completed": 200
+            },
+            "ttft_p50_ms": 24.03747299999486,
+            "ttft_p95_ms": 48.942011550035396,
+            "completion_from_planned_p50_ms": 202.53122650001205,
+            "completion_from_planned_p95_ms": 309.15161155000726,
+            "completion_from_planned_max_ms": 362.2032879999897,
+            "output_tokens": 4009,
+            "output_length_known": 200,
+            "new_prompt_tokens": 3016,
+            "cached_prompt_tokens": 5775
+          },
+          "background": {
+            "planned": 10,
+            "completed": 10,
+            "ttft_samples": 10,
+            "terminal_counts": {
+              "completed": 10
+            },
+            "ttft_p50_ms": 25.40426300001309,
+            "ttft_p95_ms": 32.47372185001151,
+            "completion_from_planned_p50_ms": 3592.8196275000364,
+            "completion_from_planned_p95_ms": 3902.4782423500073,
+            "completion_from_planned_max_ms": 3903.5208189999903,
+            "output_tokens": 3735,
+            "output_length_known": 10,
+            "new_prompt_tokens": 347,
+            "cached_prompt_tokens": 278
+          }
+        },
+        "window_completion_throughput_rps": 2.1,
+        "drain_elapsed_seconds": 0
+      },
+      "diagnostics": {
+        "background_arrival_checks": [
+          {
+            "offset_ms": 10250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 20250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 30250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 40250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 50250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 60250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 70250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 80250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 90250,
+            "active_before": 0
+          }
+        ],
+        "quarters": [
+          {
+            "start_ms": 0,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 25.000914999993256,
+            "p95_ms": 43.72028889998245
+          },
+          {
+            "start_ms": 25000,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 23.373163000003842,
+            "p95_ms": 50.65500630002897
+          },
+          {
+            "start_ms": 50000,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 34.33622049999394,
+            "p95_ms": 48.14852075001872
+          },
+          {
+            "start_ms": 75000,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 22.780791500001214,
+            "p95_ms": 44.91129884997643
+          }
+        ],
+        "last_minus_first_quarter_p50_ms": -2.2201234999920416,
+        "drain_seconds": 0,
+        "no_obvious_persistent_backlog": true
+      },
+      "interactive_first_content_samples": 200,
+      "all_observed_interactive_ttft_p95_ms": 48.942011550035396,
+      "metrics_zero": {
+        "llamacpp:requests_processing": true,
+        "llamacpp:requests_deferred": true
+      },
+      "background_requests": [
+        {
+          "req_id": "B000",
+          "terminal": "completed",
+          "completion_from_planned_ms": 2591.9156850000036,
+          "output_tokens": 279,
+          "finish_reason": "stop"
+        },
+        {
+          "req_id": "B010",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3588.5098070000367,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B020",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3571.3578319999906,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B030",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3575.5237260000285,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B040",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3903.5208189999903,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B050",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3901.203982000028,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B060",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3686.497341999995,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B070",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3626.510000999988,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B080",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3597.129448000036,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B090",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3580.791254000025,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        }
+      ],
+      "output_tps_whole_run_including_drain": 77.62987863552061,
+      "server_exit_code": 0
+    },
+    {
+      "repeat": 2,
+      "scenario": "L",
+      "flags": [],
+      "summary": {
+        "schema_version": 2,
+        "planned": 210,
+        "sent": 210,
+        "terminal_counts": {
+          "completed": 210,
+          "rejected": 0,
+          "timeout": 0,
+          "cancelled": 0,
+          "failed": 0,
+          "unfinished": 0
+        },
+        "actual_send_window_denominator": 210,
+        "window_terminal_counts": {
+          "completed": 210,
+          "rejected": 0,
+          "timeout": 0,
+          "cancelled": 0,
+          "failed": 0,
+          "unfinished": 0
+        },
+        "measurement_seconds": 100,
+        "drain_seconds": 180,
+        "last_end_seconds": 99.77022219600008,
+        "send_lag_limit_ms": 50,
+        "send_lag_max_ms": 9.291340999989188,
+        "send_lag_p95_ms": 7.973284799999601,
+        "late_send_count": 0,
+        "classes": {
+          "interactive": {
+            "planned": 200,
+            "completed": 200,
+            "ttft_samples": 200,
+            "terminal_counts": {
+              "completed": 200
+            },
+            "ttft_p50_ms": 32.127103500014755,
+            "ttft_p95_ms": 58.24558574999794,
+            "completion_from_planned_p50_ms": 205.51945850007178,
+            "completion_from_planned_p95_ms": 297.3782657500441,
+            "completion_from_planned_max_ms": 360.4669659999927,
+            "output_tokens": 4000,
+            "output_length_known": 200,
+            "new_prompt_tokens": 3016,
+            "cached_prompt_tokens": 5775
+          },
+          "background": {
+            "planned": 10,
+            "completed": 10,
+            "ttft_samples": 10,
+            "terminal_counts": {
+              "completed": 10
+            },
+            "ttft_p50_ms": 25.662741499982758,
+            "ttft_p95_ms": 42.306553750009705,
+            "completion_from_planned_p50_ms": 3678.1423054999923,
+            "completion_from_planned_p95_ms": 3874.483430700022,
+            "completion_from_planned_max_ms": 3891.823791000039,
+            "output_tokens": 3735,
+            "output_length_known": 10,
+            "new_prompt_tokens": 347,
+            "cached_prompt_tokens": 278
+          }
+        },
+        "window_completion_throughput_rps": 2.1,
+        "drain_elapsed_seconds": 0
+      },
+      "diagnostics": {
+        "background_arrival_checks": [
+          {
+            "offset_ms": 10250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 20250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 30250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 40250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 50250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 60250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 70250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 80250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 90250,
+            "active_before": 0
+          }
+        ],
+        "quarters": [
+          {
+            "start_ms": 0,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 32.426172000015185,
+            "p95_ms": 43.057639000025304
+          },
+          {
+            "start_ms": 25000,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 36.19092400001318,
+            "p95_ms": 76.80296624999428
+          },
+          {
+            "start_ms": 50000,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 27.167150000022957,
+            "p95_ms": 45.518902800008796
+          },
+          {
+            "start_ms": 75000,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 23.725974000051792,
+            "p95_ms": 45.73216570000004
+          }
+        ],
+        "last_minus_first_quarter_p50_ms": -8.700197999963393,
+        "drain_seconds": 0,
+        "no_obvious_persistent_backlog": true
+      },
+      "interactive_first_content_samples": 200,
+      "all_observed_interactive_ttft_p95_ms": 58.24558574999794,
+      "metrics_zero": {
+        "llamacpp:requests_processing": true,
+        "llamacpp:requests_deferred": true
+      },
+      "background_requests": [
+        {
+          "req_id": "B000",
+          "terminal": "completed",
+          "completion_from_planned_ms": 2635.3190690000474,
+          "output_tokens": 279,
+          "finish_reason": "stop"
+        },
+        {
+          "req_id": "B010",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3618.0537790000362,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B020",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3644.456181999998,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B030",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3891.823791000039,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B040",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3737.632248000067,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B050",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3728.5988880000805,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B060",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3543.3547270000636,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B070",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3507.9203420000267,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B080",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3853.289657000001,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B090",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3711.8284289999865,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        }
+      ],
+      "output_tps_whole_run_including_drain": 77.52814246323395,
+      "server_exit_code": 0
+    },
+    {
+      "repeat": 2,
+      "scenario": "C",
+      "flags": [],
+      "summary": {
+        "schema_version": 2,
+        "planned": 200,
+        "sent": 200,
+        "terminal_counts": {
+          "completed": 200,
+          "rejected": 0,
+          "timeout": 0,
+          "cancelled": 0,
+          "failed": 0,
+          "unfinished": 0
+        },
+        "actual_send_window_denominator": 200,
+        "window_terminal_counts": {
+          "completed": 200,
+          "rejected": 0,
+          "timeout": 0,
+          "cancelled": 0,
+          "failed": 0,
+          "unfinished": 0
+        },
+        "measurement_seconds": 100,
+        "drain_seconds": 180,
+        "last_end_seconds": 99.780416435,
+        "send_lag_limit_ms": 50,
+        "send_lag_max_ms": 9.29548800001794,
+        "send_lag_p95_ms": 7.941832800022532,
+        "late_send_count": 0,
+        "classes": {
+          "interactive": {
+            "planned": 200,
+            "completed": 200,
+            "ttft_samples": 200,
+            "terminal_counts": {
+              "completed": 200
+            },
+            "ttft_p50_ms": 22.73906800002078,
+            "ttft_p95_ms": 40.33044775001765,
+            "completion_from_planned_p50_ms": 196.1943955000147,
+            "completion_from_planned_p95_ms": 278.99305110001063,
+            "completion_from_planned_max_ms": 333.76233600006526,
+            "output_tokens": 3985,
+            "output_length_known": 200,
+            "new_prompt_tokens": 3016,
+            "cached_prompt_tokens": 5775
+          },
+          "background": {
+            "planned": 0,
+            "completed": 0,
+            "ttft_samples": 0,
+            "terminal_counts": {},
+            "ttft_p50_ms": null,
+            "ttft_p95_ms": null,
+            "completion_from_planned_p50_ms": null,
+            "completion_from_planned_p95_ms": null,
+            "completion_from_planned_max_ms": null,
+            "output_tokens": 0,
+            "output_length_known": 0,
+            "new_prompt_tokens": 0,
+            "cached_prompt_tokens": 0
+          }
+        },
+        "window_completion_throughput_rps": 2.0,
+        "drain_elapsed_seconds": 0
+      },
+      "diagnostics": {
+        "background_arrival_checks": [],
+        "quarters": [
+          {
+            "start_ms": 0,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 23.114407000037318,
+            "p95_ms": 34.18513434991723
+          },
+          {
+            "start_ms": 25000,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 22.768356999964453,
+            "p95_ms": 38.95283074999459
+          },
+          {
+            "start_ms": 50000,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 22.395623499956855,
+            "p95_ms": 29.639143500029967
+          },
+          {
+            "start_ms": 75000,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 22.70723250001174,
+            "p95_ms": 44.69975110000814
+          }
+        ],
+        "last_minus_first_quarter_p50_ms": -0.407174500025576,
+        "drain_seconds": 0,
+        "no_obvious_persistent_backlog": false
+      },
+      "interactive_first_content_samples": 200,
+      "all_observed_interactive_ttft_p95_ms": 40.33044775001765,
+      "metrics_zero": {
+        "llamacpp:requests_processing": true,
+        "llamacpp:requests_deferred": true
+      },
+      "background_requests": [],
+      "output_tps_whole_run_including_drain": 39.937696618012716,
+      "server_exit_code": 0
+    },
+    {
+      "repeat": 3,
+      "scenario": "C",
+      "flags": [],
+      "summary": {
+        "schema_version": 2,
+        "planned": 200,
+        "sent": 200,
+        "terminal_counts": {
+          "completed": 200,
+          "rejected": 0,
+          "timeout": 0,
+          "cancelled": 0,
+          "failed": 0,
+          "unfinished": 0
+        },
+        "actual_send_window_denominator": 200,
+        "window_terminal_counts": {
+          "completed": 200,
+          "rejected": 0,
+          "timeout": 0,
+          "cancelled": 0,
+          "failed": 0,
+          "unfinished": 0
+        },
+        "measurement_seconds": 100,
+        "drain_seconds": 180,
+        "last_end_seconds": 99.75735008000004,
+        "send_lag_limit_ms": 50,
+        "send_lag_max_ms": 13.383213999986765,
+        "send_lag_p95_ms": 8.717935749984827,
+        "late_send_count": 0,
+        "classes": {
+          "interactive": {
+            "planned": 200,
+            "completed": 200,
+            "ttft_samples": 200,
+            "terminal_counts": {
+              "completed": 200
+            },
+            "ttft_p50_ms": 22.836823500027094,
+            "ttft_p95_ms": 33.97935570001866,
+            "completion_from_planned_p50_ms": 195.86078700001417,
+            "completion_from_planned_p95_ms": 284.5254481499931,
+            "completion_from_planned_max_ms": 321.79823600006057,
+            "output_tokens": 3985,
+            "output_length_known": 200,
+            "new_prompt_tokens": 3016,
+            "cached_prompt_tokens": 5775
+          },
+          "background": {
+            "planned": 0,
+            "completed": 0,
+            "ttft_samples": 0,
+            "terminal_counts": {},
+            "ttft_p50_ms": null,
+            "ttft_p95_ms": null,
+            "completion_from_planned_p50_ms": null,
+            "completion_from_planned_p95_ms": null,
+            "completion_from_planned_max_ms": null,
+            "output_tokens": 0,
+            "output_length_known": 0,
+            "new_prompt_tokens": 0,
+            "cached_prompt_tokens": 0
+          }
+        },
+        "window_completion_throughput_rps": 2.0,
+        "drain_elapsed_seconds": 0
+      },
+      "diagnostics": {
+        "background_arrival_checks": [],
+        "quarters": [
+          {
+            "start_ms": 0,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 22.805074000018976,
+            "p95_ms": 43.27449250001121
+          },
+          {
+            "start_ms": 25000,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 22.78914700002315,
+            "p95_ms": 28.69585329992278
+          },
+          {
+            "start_ms": 50000,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 23.11624599996867,
+            "p95_ms": 27.630190999965635
+          },
+          {
+            "start_ms": 75000,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 22.82077400002163,
+            "p95_ms": 35.66114189993968
+          }
+        ],
+        "last_minus_first_quarter_p50_ms": 0.015700000002652814,
+        "drain_seconds": 0,
+        "no_obvious_persistent_backlog": false
+      },
+      "interactive_first_content_samples": 200,
+      "all_observed_interactive_ttft_p95_ms": 33.97935570001866,
+      "metrics_zero": {
+        "llamacpp:requests_processing": true,
+        "llamacpp:requests_deferred": true
+      },
+      "background_requests": [],
+      "output_tps_whole_run_including_drain": 39.94693119659097,
+      "server_exit_code": 0
+    },
+    {
+      "repeat": 3,
+      "scenario": "L",
+      "flags": [],
+      "summary": {
+        "schema_version": 2,
+        "planned": 210,
+        "sent": 210,
+        "terminal_counts": {
+          "completed": 210,
+          "rejected": 0,
+          "timeout": 0,
+          "cancelled": 0,
+          "failed": 0,
+          "unfinished": 0
+        },
+        "actual_send_window_denominator": 210,
+        "window_terminal_counts": {
+          "completed": 210,
+          "rejected": 0,
+          "timeout": 0,
+          "cancelled": 0,
+          "failed": 0,
+          "unfinished": 0
+        },
+        "measurement_seconds": 100,
+        "drain_seconds": 180,
+        "last_end_seconds": 99.75581599199997,
+        "send_lag_limit_ms": 50,
+        "send_lag_max_ms": 9.410296999929415,
+        "send_lag_p95_ms": 7.882436350008038,
+        "late_send_count": 0,
+        "classes": {
+          "interactive": {
+            "planned": 200,
+            "completed": 200,
+            "ttft_samples": 200,
+            "terminal_counts": {
+              "completed": 200
+            },
+            "ttft_p50_ms": 27.270262000000002,
+            "ttft_p95_ms": 48.45703150003211,
+            "completion_from_planned_p50_ms": 211.81017750006959,
+            "completion_from_planned_p95_ms": 306.862969250077,
+            "completion_from_planned_max_ms": 403.70425300011266,
+            "output_tokens": 4000,
+            "output_length_known": 200,
+            "new_prompt_tokens": 3016,
+            "cached_prompt_tokens": 5775
+          },
+          "background": {
+            "planned": 10,
+            "completed": 10,
+            "ttft_samples": 10,
+            "terminal_counts": {
+              "completed": 10
+            },
+            "ttft_p50_ms": 26.933399499961524,
+            "ttft_p95_ms": 35.297714150020695,
+            "completion_from_planned_p50_ms": 3689.601465500007,
+            "completion_from_planned_p95_ms": 3975.3396773499917,
+            "completion_from_planned_max_ms": 3988.966854999948,
+            "output_tokens": 3735,
+            "output_length_known": 10,
+            "new_prompt_tokens": 347,
+            "cached_prompt_tokens": 278
+          }
+        },
+        "window_completion_throughput_rps": 2.1,
+        "drain_elapsed_seconds": 0
+      },
+      "diagnostics": {
+        "background_arrival_checks": [
+          {
+            "offset_ms": 10250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 20250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 30250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 40250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 50250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 60250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 70250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 80250,
+            "active_before": 0
+          },
+          {
+            "offset_ms": 90250,
+            "active_before": 0
+          }
+        ],
+        "quarters": [
+          {
+            "start_ms": 0,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 29.357355999990887,
+            "p95_ms": 51.305769100036464
+          },
+          {
+            "start_ms": 25000,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 31.756419500026823,
+            "p95_ms": 47.76349640003791
+          },
+          {
+            "start_ms": 50000,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 31.977056499956234,
+            "p95_ms": 46.99475119992166
+          },
+          {
+            "start_ms": 75000,
+            "planned": 50,
+            "samples": 50,
+            "p50_ms": 23.368186500076263,
+            "p95_ms": 48.4371232999576
+          }
+        ],
+        "last_minus_first_quarter_p50_ms": -5.989169499914624,
+        "drain_seconds": 0,
+        "no_obvious_persistent_backlog": true
+      },
+      "interactive_first_content_samples": 200,
+      "all_observed_interactive_ttft_p95_ms": 48.45703150003211,
+      "metrics_zero": {
+        "llamacpp:requests_processing": true,
+        "llamacpp:requests_deferred": true
+      },
+      "background_requests": [
+        {
+          "req_id": "B000",
+          "terminal": "completed",
+          "completion_from_planned_ms": 2637.2750190000716,
+          "output_tokens": 279,
+          "finish_reason": "stop"
+        },
+        {
+          "req_id": "B010",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3940.7963020000807,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B020",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3699.344290000001,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B030",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3958.6842380000453,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B040",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3824.3357640000104,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B050",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3988.966854999948,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B060",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3679.8586410000134,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B070",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3653.808991999991,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B080",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3679.2156920000707,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        },
+        {
+          "req_id": "B090",
+          "terminal": "completed",
+          "completion_from_planned_ms": 3491.25643999991,
+          "output_tokens": 384,
+          "finish_reason": "length"
+        }
+      ],
+      "output_tps_whole_run_including_drain": 77.53933866492875,
+      "server_exit_code": 0
+    }
+  ],
+  "hypothesis_screen_supported": false,
+  "analysis_code_sha256": "72212903d3998e2e09042ec76651b4ade1b63117f5c91432d44b90ace7c6b1bc",
+  "analysis_module_sha256": "c60af8a46298b0fd4f106d828fa170c4afc681e06047d8c07b73b896694b37ec",
+  "source_execution_analysis_matches_current": true
+}

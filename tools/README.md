@@ -4,7 +4,11 @@
 
 运行 `python tools/render_readme_diagrams.py`，使用 Python 标准库生成 `docs/images/project-roadmap.svg` 与 `docs/images/p0-progress.svg`。修改阶段日期、状态或任务时，更新生成脚本并重跑；同时同步 README 进度表和实施计划。SVG 使用本地中文字体回退，不依赖外部图片、字体服务或 Mermaid 渲染。
 
-## 本地 Word 材料
+## 实验结果图
+
+`plot_lowload.py --batch <低强度批次目录> --report <已经审计的报告目录>` 使用 Matplotlib 生成逐请求 TTFT 与客户端在途事件图，输出 PNG、SVG 和来源/版本摘要。需在安装 Matplotlib 的 Python 环境运行；图中在途数不代表服务端纯排队，不能由曲线替代完整终态审计。渲染在性能采集结束后执行。
+
+## 本地 Word 材料（历史导出与按需同步）
 
 开题报告和开发计划等生成的 Word 默认不提交到 GitHub。应本次发布要求，`docs/reports/20261021/P0阶段总结与下一阶段安排.docx` 单独纳入版本管理，方便直接下载；同目录 Markdown 是内容源码。
 

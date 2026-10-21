@@ -7,6 +7,7 @@
 | `sync.sh` | 单向同步 Windows 主仓库 → WSL 工作副本（`docs/ daily/ configs/ scripts/ src/ include/ tests/ data/ tools/ patches/` + 根文件与 `*.md`/`*.docx`），并清 `__pycache__`；`results/` 与引擎检出不同步 | 改过文档/脚本/配置后 |
 | `compare.sh` | 只读对比两端：10 个受管目录的差异数、根文件逐字节、设计差异（`.git`/模型/构建产物/证据）与体积 | 任何怀疑不同步时 |
 | `eod.sh` | **每日收尾**：清临时文件与空目录 → 生成 `daily/<YYYYMMDD>/产出清单.md` → 同步 → 一致性检查 → 打印人工待办 | 每天工作结束 |
+| `day_inventory.py` | 按 Asia/Shanghai 当日 mtime 列 Git 已跟踪或未忽略的源文件；排除 raw/archives、Word 和清单自身，运行证据在结果索引另列 | 由 eod.sh 自动调用 |
 | `archive_run.py` | 按运行日期生成 ZIP、保存执行脚本快照、逐文件校验和 ZIP SHA256；不修改原始运行 | 每次证据核对完成后 |
 | `push.sh` | **一键推送**到 GitHub：在 WSL 内临时借用 Windows 侧 SSH 私钥（用完即删），推送 `/mnt/c` 上的主仓库并校验本地/远端 HEAD 一致 | 提交后备份到远端 |
 

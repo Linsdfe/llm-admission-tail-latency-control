@@ -8,7 +8,7 @@ from pathlib import Path
 import uuid
 from zipfile import ZipFile, ZIP_DEFLATED
 
-SOURCE_DIRS = ("docs", "scripts", "src", "include", "configs", "patches", "tests", "tools", "skills")
+SOURCE_DIRS = ("docs", "scripts", "src", "include", "configs", "patches", "tests", "tools", "skills", ".agents")
 SUFFIXES = {".md", ".svg", ".py", ".sh", ".ps1", ".json", ".yaml", ".yml", ".toml", ".cpp", ".cc", ".c", ".hpp", ".h", ".cmake", ".txt"}
 SKIP = {"__pycache__", ".venv", "node_modules", ".git", ".pytest_cache", ".document-work"}
 
