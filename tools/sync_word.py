@@ -116,8 +116,9 @@ def author_block(doc, block, table_templates):
         ('编号', '需求', '主要证据'): [2.1, 5.3, 9.1],
         ('模块', '职责'): [4.1, 12.4],
         ('项目', '已确认配置'): [3.8, 12.7],
-        ('编号', '策略', '比较目的'): [2.1, 8.0, 6.4],
+        ('编号', '策略', '比较目的'): [2.6, 7.5, 6.4],
         ('指标', '口径'): [3.8, 12.7],
+        ('批次', '已验证观察', '解释边界'): [3.0, 7.0, 6.5],
         ('阶段', '日期', '人时', '产出与决策门'): [3.2, 5.1, 1.3, 6.9],
         ('触发与节点', '保留内容', '处置与重新验收'): [4.6, 3.7, 8.2],
         ('编号', '验收项', '通过证据'): [1.5, 3.5, 11.5],
@@ -175,7 +176,10 @@ for stem in ['开题报告_面向混合长短请求的LLM推理准入与尾延�
     dest = ROOT / (stem + '.docx')
     doc = Document(BACK / dest.name)
     oldblocks, oldelements = existing_blocks(doc)
-    target = blocks_from_md((ROOT/(stem+'.md')).read_text(encoding='utf-8'))
+    source_text = (ROOT/(stem+'.md')).read_text(encoding='utf-8')
+    version_match = re.search(r'文档版本：V([0-9.]+)', source_text)
+    assert version_match, 'Document version missing: ' + stem
+    target = blocks_from_md(source_text)
     templates = {len(t.columns): t for t in doc.tables}
     matcher = SequenceMatcher(None, [key(b) for b in oldblocks], [key(b) for b in target], autojunk=False)
     output = []
@@ -198,10 +202,29 @@ for stem in ['开题报告_面向混合长短请求的LLM推理准入与尾延�
     for el in output:
         doc.element.body.append(el)
     doc.element.body.append(sect)
-    doc.core_properties.version = '1.2'
+    doc.core_properties.version = version_match[1]
+    if stem.startswith('开发流程计划'):
+        # Keep the short final delivery checklist on the preceding page without
+        # reducing the source document's font size or line spacing.
+        doc.styles['Normal'].paragraph_format.space_after = Pt(3.5)
+        doc.styles['Heading 1'].paragraph_format.space_before = Pt(10)
+        doc.styles['Heading 2'].paragraph_format.space_before = Pt(10)
+    # The compact module overview should remain a single readable table.
+    for table in doc.tables:
+        table_header = [cell.text for cell in table.rows[0].cells]
+        if table_header == ['编号', '策略', '比较目的']:
+            for j, width in enumerate([2.6, 7.5, 6.4]):
+                table.columns[j].width = Cm(width)
+                for row in table.rows:
+                    row.cells[j].width = Cm(width)
+        if table_header == ['模块', '职责']:
+            for row in table.rows[:-1]:
+                for cell in row.cells:
+                    for paragraph in cell.paragraphs:
+                        paragraph.paragraph_format.keep_with_next = True
     doc.save(dest)
     actual,_ = existing_blocks(Document(dest))
     assert [key(b) for b in actual] == [key(b) for b in target], dest
-    reports.append({'file':dest.name,'blocks':len(target),'reused_blocks':reused,'tables':len(Document(dest).tables),'content_matches_markdown':True,'visual_qa':'pending_renderer'})
+    reports.append({'file':dest.name,'version':version_match[1],'blocks':len(target),'reused_blocks':reused,'tables':len(Document(dest).tables),'content_matches_markdown':True,'visual_qa':'pending_renderer'})
 (ROOT/'tools/word_sync_checks.json').write_text(json.dumps(reports,ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps(reports,ensure_ascii=False))

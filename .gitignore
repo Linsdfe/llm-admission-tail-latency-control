@@ -9,6 +9,7 @@
 __pycache__/
 *.py[cod]
 /.pytest_cache/
+/.document-work/
 
 # Local engine checkout and large artifacts; keep directory documentation.
 /third_party/llama.cpp/
