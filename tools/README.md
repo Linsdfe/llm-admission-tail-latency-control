@@ -18,4 +18,8 @@
 
 用安装了 `python-docx` 的 Python 执行 `sync_word.py`，将两份 Markdown 同步到同名 Word。运行 `render_documents.ps1` 生成 `.document-work/` 下的 PDF 与页面图片，逐页核验后可删除该临时目录。Word 已被 `.gitignore` 排除，生成的 PDF 和页面图片也不应提交到仓库。
 
+单文档同步可使用 `sync_word.py --selection proposal` 或 `--selection plan`；另存时追加 `--output`。随后按渲染脚本实际配置的输入文件执行 `render_documents.ps1 -Selection Proposal` 或 `-Selection Plan`，确保同步输出与渲染输入一致。单文档同步保留另一份文档的既有核对记录。开题正文维护研究方案；实际执行进度、实验数据与协议偏离按真实日期在项目记录中维护，不回填为开题时已有证据或原始预注册。
+
+同名模板正在被打开而无法覆盖时，使用 `--output <新文件.docx>` 另存修订版，并将渲染脚本的输入指向该文件。当前开题修正版输出为根目录的 `开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统_V1.4.docx`；核对记录以 `source_file` 关联 Markdown，不把文件名后缀误认为另一份内容源。
+
 渲染脚本当前使用本机的 Codex 文档渲染脚本、Python、LibreOffice 与 Poppler 路径，其他设备使用前需要调整。`word_sync_checks.json` 记录最近一次文档核对结果；它不表示修改后的文档已自动通过视觉检查。

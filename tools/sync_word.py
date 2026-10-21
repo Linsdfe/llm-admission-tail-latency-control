@@ -3,6 +3,7 @@ from copy import deepcopy
 from difflib import SequenceMatcher
 import re
 import json
+import argparse
 from docx import Document
 from docx.text.paragraph import Paragraph
 from docx.table import Table
@@ -116,6 +117,7 @@ def author_block(doc, block, table_templates):
         ('编号', '需求', '主要证据'): [2.1, 5.3, 9.1],
         ('模块', '职责'): [4.1, 12.4],
         ('项目', '已确认配置'): [3.8, 12.7],
+        ('项目', '拟用设备与基础环境'): [3.8, 12.7],
         ('编号', '策略', '比较目的'): [2.6, 7.5, 6.4],
         ('指标', '口径'): [3.8, 12.7],
         ('批次', '已验证观察', '解释边界'): [3.0, 7.0, 6.5],
@@ -171,10 +173,22 @@ def author_block(doc, block, table_templates):
             b.set(qn('w:'+attr),val)
     return table._tbl
 
+parser = argparse.ArgumentParser(description='Synchronize selected Markdown documents to existing Word templates.')
+parser.add_argument('--selection', choices=['all', 'proposal', 'plan'], default='all')
+parser.add_argument('--output', type=Path, help='Alternate output path for one selected document, for example when its template is open.')
+args = parser.parse_args()
+selection = args.selection
+if args.output and selection == 'all':
+    parser.error('--output requires --selection proposal or plan')
 reports = []
 for stem in ['开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统', '开发流程计划_面向混合长短请求的LLM推理准入与尾延迟控制系统']:
-    dest = ROOT / (stem + '.docx')
-    doc = Document(BACK / dest.name)
+    if selection == 'proposal' and not stem.startswith('开题报告'):
+        continue
+    if selection == 'plan' and not stem.startswith('开发流程计划'):
+        continue
+    template = BACK / (stem + '.docx')
+    dest = args.output.resolve() if args.output else ROOT / (stem + '.docx')
+    doc = Document(template)
     oldblocks, oldelements = existing_blocks(doc)
     source_text = (ROOT/(stem+'.md')).read_text(encoding='utf-8')
     version_match = re.search(r'文档版本：V([0-9.]+)', source_text)
@@ -225,6 +239,10 @@ for stem in ['开题报告_面向混合长短请求的LLM推理准入与尾延�
     doc.save(dest)
     actual,_ = existing_blocks(Document(dest))
     assert [key(b) for b in actual] == [key(b) for b in target], dest
-    reports.append({'file':dest.name,'version':version_match[1],'blocks':len(target),'reused_blocks':reused,'tables':len(Document(dest).tables),'content_matches_markdown':True,'visual_qa':'pending_renderer'})
+    reports.append({'file':str(dest.relative_to(ROOT)).replace('\\','/'),'source_file':stem+'.md','version':version_match[1],'blocks':len(target),'reused_blocks':reused,'tables':len(Document(dest).tables),'content_matches_markdown':True,'visual_qa':'pending_renderer'})
+if selection != 'all' and (ROOT/'tools/word_sync_checks.json').exists():
+    previous = json.loads((ROOT/'tools/word_sync_checks.json').read_text(encoding='utf-8'))
+    updated_sources = {report['source_file'] for report in reports}
+    reports.extend(report for report in previous if report.get('source_file', str(Path(report['file']).with_suffix('.md'))) not in updated_sources)
 (ROOT/'tools/word_sync_checks.json').write_text(json.dumps(reports,ensure_ascii=False,indent=2),encoding='utf-8')
 print(json.dumps(reports,ensure_ascii=False))
