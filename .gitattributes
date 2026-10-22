@@ -22,3 +22,11 @@
 
 # Preserve the byte-identical raw excerpts published with the P0 summary.
 docs/reports/20261021/data/raw/*.json -text
+
+# Preserve renderer/export bytes; generated CSS includes intentional line-end spaces.
+docs/architecture/current.html -text whitespace=-blank-at-eol
+docs/architecture/target.html -text whitespace=-blank-at-eol
+docs/architecture/request.html -text whitespace=-blank-at-eol
+docs/images/current-architecture.svg -text whitespace=-blank-at-eol
+docs/images/system-architecture.svg -text whitespace=-blank-at-eol
+docs/images/request-lifecycle.svg -text whitespace=-blank-at-eol

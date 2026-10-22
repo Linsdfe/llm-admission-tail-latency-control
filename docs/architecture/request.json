@@ -1,0 +1,390 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "03 请求处理设计：为什么放行、等待或拒绝",
+    "output": "docs/architecture/request.html",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "git@github.com:Linsdfe/llm-admission-tail-latency-control.git",
+      "revision": "c855ef3b61143a184052c86a1101d9b482a4c646",
+      "link_mode": "local-only"
+    }
+  },
+  "lanes": [
+    {
+      "id": "entry",
+      "label": "接入与准入判断 · 拟实现"
+    },
+    {
+      "id": "wait",
+      "label": "等待与不能放行的情况 · 拟实现",
+      "variant": "exception"
+    },
+    {
+      "id": "exec",
+      "label": "模型执行与安全回收 · 拟接入"
+    },
+    {
+      "id": "cleanup",
+      "label": "停止、清理与安全回收 · 拟实现"
+    },
+    {
+      "id": "learn",
+      "label": "完成样本反馈 · 拟实现"
+    }
+  ],
+  "nodes": [
+    {
+      "id": "receive",
+      "lane": "entry",
+      "col": 0,
+      "type": "backend",
+      "label": "接收请求",
+      "sublabel": "登记类别与输出上限",
+      "sources": [
+        {
+          "path": "开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统.md",
+          "line": 92,
+          "end_line": 102
+        }
+      ]
+    },
+    {
+      "id": "choose",
+      "lane": "entry",
+      "col": 1,
+      "type": "backend",
+      "label": "选择候选",
+      "sublabel": "类别队列与后台保护",
+      "sources": [
+        {
+          "path": "开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统.md",
+          "line": 110,
+          "end_line": 118
+        }
+      ]
+    },
+    {
+      "id": "hard",
+      "lane": "entry",
+      "col": 2,
+      "type": "security",
+      "label": "检查硬约束",
+      "sublabel": "总容量 / 单序列 / 槽位",
+      "sources": [
+        {
+          "path": "开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统.md",
+          "line": 106,
+          "end_line": 112
+        }
+      ]
+    },
+    {
+      "id": "soft",
+      "lane": "entry",
+      "col": 3,
+      "type": "security",
+      "label": "判断软预算",
+      "sublabel": "工作量或预定放行规则",
+      "sources": [
+        {
+          "path": "开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统.md",
+          "line": 108,
+          "end_line": 110
+        }
+      ]
+    },
+    {
+      "id": "reserve",
+      "lane": "entry",
+      "col": 4,
+      "type": "backend",
+      "label": "准入并预留",
+      "sublabel": "硬预留不使用预测缩减",
+      "sources": [
+        {
+          "path": "开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统.md",
+          "line": 106,
+          "end_line": 110
+        }
+      ]
+    },
+    {
+      "id": "waiting",
+      "lane": "wait",
+      "col": 2,
+      "type": "messagebus",
+      "label": "继续等待",
+      "sublabel": "暂时不足或软预算超限",
+      "sources": [
+        {
+          "path": "开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统.md",
+          "line": 110,
+          "end_line": 118
+        }
+      ]
+    },
+    {
+      "id": "reject",
+      "lane": "wait",
+      "col": 0,
+      "type": "security",
+      "label": "拒绝请求",
+      "sublabel": "永久超过容量或单序列上限",
+      "sources": [
+        {
+          "path": "开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统.md",
+          "line": 118,
+          "end_line": 118
+        }
+      ]
+    },
+    {
+      "id": "exit",
+      "lane": "wait",
+      "col": 4,
+      "type": "backend",
+      "label": "按期限等退出",
+      "sublabel": "记录超时与取消等终态",
+      "sources": [
+        {
+          "path": "开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统.md",
+          "line": 118,
+          "end_line": 120
+        }
+      ]
+    },
+    {
+      "id": "prefill",
+      "lane": "exec",
+      "col": 4,
+      "type": "backend",
+      "label": "处理输入",
+      "sublabel": "prefill",
+      "sources": [
+        {
+          "path": "开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统.md",
+          "line": 112,
+          "end_line": 122
+        }
+      ]
+    },
+    {
+      "id": "decode",
+      "lane": "exec",
+      "col": 5,
+      "type": "backend",
+      "label": "逐步生成",
+      "sublabel": "decode / 流式返回",
+      "sources": [
+        {
+          "path": "开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统.md",
+          "line": 112,
+          "end_line": 122
+        }
+      ]
+    },
+    {
+      "id": "reclaim",
+      "lane": "cleanup",
+      "col": 5,
+      "type": "backend",
+      "label": "停止与清理回收",
+      "sublabel": "槽位安全后一次归还",
+      "sources": [
+        {
+          "path": "开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统.md",
+          "line": 120,
+          "end_line": 120
+        }
+      ]
+    },
+    {
+      "id": "sample",
+      "lane": "learn",
+      "col": 5,
+      "type": "backend",
+      "label": "筛选完成样本",
+      "sublabel": "保留实际长度和结束原因",
+      "sources": [
+        {
+          "path": "开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统.md",
+          "line": 108,
+          "end_line": 108
+        }
+      ]
+    },
+    {
+      "id": "update",
+      "lane": "learn",
+      "col": 4,
+      "type": "backend",
+      "label": "更新误差余量",
+      "sublabel": "样本不足回退 / 后续使用",
+      "sources": [
+        {
+          "path": "开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统.md",
+          "line": 108,
+          "end_line": 110
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "id": "receive-choose",
+      "from": "receive",
+      "to": "choose",
+      "label": "入队",
+      "role": "main"
+    },
+    {
+      "id": "choose-hard",
+      "from": "choose",
+      "to": "hard",
+      "label": "取候选",
+      "role": "main"
+    },
+    {
+      "id": "hard-soft",
+      "from": "hard",
+      "to": "soft",
+      "label": "硬允许",
+      "role": "main"
+    },
+    {
+      "id": "soft-reserve",
+      "from": "soft",
+      "to": "reserve",
+      "label": "预算允许或例外放行",
+      "role": "main"
+    },
+    {
+      "id": "reserve-prefill",
+      "from": "reserve",
+      "to": "prefill",
+      "label": "进入引擎",
+      "role": "main"
+    },
+    {
+      "id": "prefill-decode",
+      "from": "prefill",
+      "to": "decode",
+      "label": "输入已处理",
+      "role": "main"
+    },
+    {
+      "id": "decode-reclaim",
+      "from": "decode",
+      "to": "reclaim",
+      "label": "执行结束",
+      "role": "main"
+    },
+    {
+      "id": "hard-waiting",
+      "from": "hard",
+      "to": "waiting",
+      "label": "当前不足",
+      "role": "branch"
+    },
+    {
+      "id": "hard-reject",
+      "from": "hard",
+      "to": "reject",
+      "label": "永久不适配",
+      "role": "branch"
+    },
+    {
+      "id": "soft-waiting",
+      "from": "soft",
+      "to": "waiting",
+      "label": "预算超限且无例外",
+      "role": "branch"
+    },
+    {
+      "id": "waiting-choose",
+      "from": "waiting",
+      "to": "choose",
+      "label": "变化后重选",
+      "role": "return"
+    },
+    {
+      "id": "waiting-exit",
+      "from": "waiting",
+      "to": "exit",
+      "label": "超时或取消",
+      "role": "branch"
+    },
+    {
+      "id": "reclaim-sample",
+      "from": "reclaim",
+      "to": "sample",
+      "label": "完成且有效",
+      "role": "branch"
+    },
+    {
+      "id": "sample-update",
+      "from": "sample",
+      "to": "update",
+      "label": "实际减预测",
+      "role": "branch"
+    },
+    {
+      "id": "update-soft",
+      "from": "update",
+      "to": "soft",
+      "label": "供后续请求使用",
+      "role": "return"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "amber",
+      "title": "主线与等待分支",
+      "items": [
+        "主线从接收请求开始，经过硬约束和软预算判断才进入执行。硬容量和槽位都允许，仍可能因软预算而等待。",
+        "永久不可容纳按预定规则拒绝；仅当前容量不足则等待。软预算超限可以延后，但空系统可容纳单请求及后台保护请求按预定规则放行。",
+        "等待中的请求按资源变化或保护状态变化重新参与候选选择；统一期限、取消等退出不能静默丢失。"
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "执行阶段的通俗解释",
+      "items": [
+        "prefill：先处理输入提示词。decode：再逐步生成输出。slot：引擎中可承载一个执行序列的位置。",
+        "本图将首内容和后续生成合并在执行阶段；客户端从实际发送到首个非空生成内容计 TTFT。",
+        "执行、取消或异常结束后，先停止并清理，再安全回收。未执行请求不应归还从未分配的容量。"
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "反馈不是事后改答案",
+      "items": [
+        "只有当时已完成且有效的请求，才为后续决策提供实际生成长度；不能使用未来请求信息。",
+        "反馈只调整未来软估计的余量，不改变调用方输出上限，不追溯修改原始记录。",
+        "后台保护与固定余量对照的详细优先级、更新时刻和阈值仍需 G2 冻结；此图是方案级流程。"
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "最终如何判断是否值得",
+      "items": [
+        "P95 TTFT 是首内容等待时间的第 95 百分位，用于观察较慢请求；并非最大值，也不是模型开始计算时长。",
+        "同时报告吞吐、后台等待及完成代价、拒绝与失败等全部终态，避免只看成功请求。",
+        "终态至少区分完成、拒绝、超时、取消、失败和截止未完成。此图不包含任何性能提升实测值。"
+      ]
+    }
+  ],
+  "mainPath": [
+    "receive",
+    "choose",
+    "hard",
+    "soft",
+    "reserve",
+    "prefill",
+    "decode",
+    "reclaim"
+  ]
+}

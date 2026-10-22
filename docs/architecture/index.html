@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>LLM 推理控制项目 · 从零读懂架构</title>
+<style>
+:root{color-scheme:light;--bg:#f3f6fa;--paper:#fff;--text:#16273d;--muted:#53647b;--line:#dce4ee;--accent:#125bc2}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.8 system-ui,"Microsoft YaHei",sans-serif}main{max-width:1480px;margin:auto;padding:40px 32px}h1{font-size:clamp(26px,3vw,42px);line-height:1.3;margin:8px 0 16px}h2{font-size:22px;line-height:1.5;margin:0 0 12px}h3{font-size:17px;margin:0 0 6px}p{margin:8px 0}.eyebrow{font-weight:700;color:var(--accent);letter-spacing:.08em;font-size:13px}.lead{font-size:19px;max-width:1000px}.muted,small{color:var(--muted)}.panel{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px;margin:24px 0}.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.tile{background:#f7f9fc;border-radius:12px;padding:18px}.badge{display:inline-block;border-radius:6px;padding:2px 10px;font-size:13px;background:#e1f2ea;color:#176546;font-weight:600}.plan{background:#fff0d5;color:#875619}nav{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}button,a{font:inherit}button{background:#fff;color:var(--accent);border:1px solid #a8bedc;border-radius:10px;padding:10px 18px;cursor:pointer}button[aria-selected="true"]{background:var(--accent);color:white;border-color:var(--accent)}a{color:var(--accent);text-underline-offset:3px}iframe{width:100%;height:1000px;border:1px solid var(--line);border-radius:12px;background:#080e18}.glossary{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.term{border-left:3px solid #7ea9e3;padding:0 16px}.example{background:#eef5ff;border-radius:12px;padding:18px}.foot{font-size:13px;color:var(--muted);border-top:1px solid var(--line);padding-top:18px;margin-top:30px}code{font-size:.9em}noscript{display:block;padding:20px;background:#fff0d5}@media(max-width:760px){main{padding:24px 14px}.panel{padding:18px}.grid,.glossary{grid-template-columns:1fr}iframe{height:850px}.lead{font-size:17px}}
+</style></head><body><main>
+<div class="eyebrow">项目架构阅读指南 · 2026-10-22</div><h1>让两类请求共享模型，研究如何减少交互等待</h1>
+<p class="lead">这个项目不训练新模型，而是计划在 llama.cpp 推理服务里增加一个 C++ 控制层：决定<strong>谁先进入执行、现在还能接多少工作、后台等太久时如何获得服务</strong>。</p>
+<p class="muted">已有回放、测量、审计与归档工具；自研准入控制仍待实现。下面的目标设计解释“准备怎样做”，不表示已经获得性能提升。</p>
+<section class="panel"><h2>先抓住三个问题</h2><div class="grid">
+<div class="tile"><h3>谁在使用系统？</h3><p>交互请求希望尽快看到回答开头，后台任务需要最终得到处理。它们共享同一个模型实例和 GPU。</p><small>交互 / 后台是业务类别；输入和输出长度是另一组属性，不能直接画等号。</small></div>
+<div class="tile"><h3>系统打算控制什么？</h3><p>在模型执行之前控制请求的<strong>准入时机与候选顺序</strong>，并用完成后的真实长度更新软估计。</p><small>llama.cpp 继续负责模型计算和流式输出；不把此项目误读为重写推理引擎。</small></div>
+<div class="tile"><h3>怎样判断有没有价值？</h3><p>观察交互中较慢请求的首内容等待，同时检查吞吐、后台完成代价以及拒绝和失败。</p><small>保护交互不能只靠让后台永远等待；图中不使用实测收益数值。</small></div></div></section>
+<section class="panel"><h2>按 ① 现状 → ② 目标 → ③ 请求过程阅读</h2>
+<p>先看已经存在的能力，再看计划增加的控制层，最后顺着一条请求理解决策。每张图下方有分模块说明，可滚动阅读。</p>
+<nav aria-label="架构图切换" role="tablist"><button type="button" role="tab" aria-selected="true" data-file="current.html" data-heading="① 现状：已经运行的实验与证据链">① 当前已经能运行什么</button><button type="button" role="tab" aria-selected="false" data-file="target.html" data-heading="② 目标：各模块如何分工和反馈">② 计划怎样实现控制</button><button type="button" role="tab" aria-selected="false" data-file="request.html" data-heading="③ 过程：请求为什么放行、等待或拒绝">③ 跟着一条请求走一遍</button></nav>
+<h3 id="diagram-heading">① 现状：已经运行的实验与证据链</h3>
+<p><a id="full-view" href="current.html" target="_blank" rel="noopener">单独打开这张交互图 ↗</a> <span class="muted">｜支持缩放、查看来源、切换明暗主题和导出。</span></p>
+<iframe id="diagram" title="当前已经运行的实验与证据链" src="current.html" loading="eager"></iframe>
+<noscript>可直接打开：<a href="current.html">当前链路</a> · <a href="target.html">目标架构</a> · <a href="request.html">请求过程</a></noscript>
+<p><span class="badge">已实现 / 已可用</span> 表示已有工具或引擎能力。 <span class="badge plan">待实现 / 拟接入</span> 表示方案中的目标能力。图的颜色按组件类型区分，实施状态以文字为准。</p></section>
+<section class="panel"><h2>第一次看项目时容易混淆的概念</h2><div class="glossary">
+<div class="term"><h3>准入与排队</h3><p>请求到达不等于立即进入模型执行。准入决定何时允许执行；等待中的请求仍要被记录，并受期限和退出规则约束。</p></div>
+<div class="term"><h3>硬容量：能不能放得下？</h3><p>按实际输入长度与最大允许输出保守预留逻辑容量，还要检查单序列上限和可用槽位。预测乐观也不能突破它。</p></div>
+<div class="term"><h3>软预算：现在是否太忙？</h3><p>用未处理输入与预计剩余输出估计工作量；即使硬容量足够，也可暂缓接纳。它是成本近似，不是精确时延保证。</p></div>
+<div class="term"><h3>估计与在线校准</h3><p>估计器预测生成长度；校准根据已完成样本补充正向误差余量。后续决策可以使用新余量，但不能偷看未来结果。</p></div>
+<div class="term"><h3>后台老化与保护</h3><p>后台等待达到阈值后进入保护集合，为其腾出接纳机会；它仍须满足硬约束，不能保证任意过载下都在有限时间完成。</p></div>
+<div class="term"><h3>slot、prefill 与 decode</h3><p>slot 是承载执行序列的位置；prefill 处理输入提示词；decode 逐步生成输出。核心计划使用固定 prefill 配置。</p></div>
+<div class="term"><h3>TTFT 与 P95</h3><p>TTFT 是从实际发送到收到首个非空生成内容的时间。P95 是这类等待时间的第 95 百分位，用来描述较慢请求，不能当成最大值。</p></div>
+<div class="term"><h3>逻辑回收与显存释放</h3><p>归还硬账本前必须确认执行停止、序列清理与槽位安全；逻辑容量释放不等于 GPU 显存立即返还操作系统。</p></div></div>
+<div class="example"><strong>一个便于理解的例子（示意，非实验数据）</strong><p>某请求的实际输入是 100 token，允许最多生成 300 token。硬预留的基础量是 100 + 300 = 400 token，之后还需按分配粒度取整。即使估计只会生成 50 token，硬预留也不能因此缩成 150；这个估计只参与软工作量判断。</p></div></section>
+<footer class="foot">来源：项目已提交方案、脚本、环境与源码定位记录；各图的组件附有来源范围。依据提交 c855ef3b61143a184052c86a1101d9b482a4c646。架构事实引用该提交中的方案与代码，图示发布为后续独立文档变更。正式接口、阈值及状态转移仍待后续设计冻结；本次只制作说明图，不运行实验、不推进阶段。</footer>
+</main><script>const buttons=document.querySelectorAll('button[data-file]');buttons.forEach(b=>b.addEventListener('click',()=>{buttons.forEach(x=>x.setAttribute('aria-selected',String(x===b)));document.getElementById('diagram').src=b.dataset.file;document.getElementById('diagram').title=b.dataset.heading;document.getElementById('diagram-heading').textContent=b.dataset.heading;document.getElementById('full-view').href=b.dataset.file;}));</script></body></html>

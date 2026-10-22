@@ -1,0 +1,371 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "02 目标设计：谁负责接入、决策、执行与反馈",
+    "output": "docs/architecture/target.html",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "git@github.com:Linsdfe/llm-admission-tail-latency-control.git",
+      "revision": "c855ef3b61143a184052c86a1101d9b482a4c646",
+      "link_mode": "local-only"
+    }
+  },
+  "components": [
+    {
+      "id": "replay",
+      "type": "external",
+      "label": "开放到达回放器",
+      "sublabel": "交互 / 后台 · HTTP 流式",
+      "pos": [
+        40,
+        40
+      ],
+      "size": [
+        200,
+        82
+      ],
+      "sources": [
+        {
+          "path": "scripts/replay/open_loop.py",
+          "line": 88,
+          "end_line": 132
+        }
+      ],
+      "tag": "已实现 · Python"
+    },
+    {
+      "id": "ingress",
+      "type": "messagebus",
+      "label": "接入与类别队列",
+      "sublabel": "ID / 时限 / 输出上限",
+      "pos": [
+        365,
+        40
+      ],
+      "size": [
+        200,
+        82
+      ],
+      "sources": [
+        {
+          "path": "开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统.md",
+          "line": 92,
+          "end_line": 102
+        },
+        {
+          "path": "src/README.md",
+          "line": 3,
+          "end_line": 9
+        }
+      ],
+      "tag": "待实现 · C++"
+    },
+    {
+      "id": "control",
+      "type": "backend",
+      "label": "准入决策与后台保护",
+      "sublabel": "决定何时进入，而非改模型",
+      "pos": [
+        690,
+        40
+      ],
+      "size": [
+        200,
+        82
+      ],
+      "sources": [
+        {
+          "path": "开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统.md",
+          "line": 106,
+          "end_line": 118
+        },
+        {
+          "path": "src/README.md",
+          "line": 5,
+          "end_line": 8
+        }
+      ],
+      "tag": "待实现 · 硬约束先行"
+    },
+    {
+      "id": "adapter",
+      "type": "security",
+      "label": "硬容量与生命周期",
+      "sublabel": "硬预留 / 取消 / 安全回收",
+      "pos": [
+        1015,
+        40
+      ],
+      "size": [
+        200,
+        82
+      ],
+      "sources": [
+        {
+          "path": "开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统.md",
+          "line": 106,
+          "end_line": 120
+        },
+        {
+          "path": "src/README.md",
+          "line": 8,
+          "end_line": 9
+        }
+      ],
+      "tag": "待实现 · C++ 适配"
+    },
+    {
+      "id": "engine",
+      "type": "backend",
+      "label": "llama.cpp 单实例",
+      "sublabel": "slot · prefill · decode",
+      "pos": [
+        1015,
+        315
+      ],
+      "size": [
+        200,
+        82
+      ],
+      "sources": [
+        {
+          "path": "docs/environment.md",
+          "line": 8,
+          "end_line": 16
+        },
+        {
+          "path": "docs/source-map.md",
+          "line": 120,
+          "end_line": 138
+        }
+      ],
+      "tag": "引擎已可用 · WSL2 / GPU"
+    },
+    {
+      "id": "calibration",
+      "type": "backend",
+      "label": "长度估计与在线校准",
+      "sublabel": "分桶 / 正向误差 / 回退",
+      "pos": [
+        690,
+        315
+      ],
+      "size": [
+        200,
+        82
+      ],
+      "sources": [
+        {
+          "path": "开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统.md",
+          "line": 108,
+          "end_line": 110
+        },
+        {
+          "path": "src/README.md",
+          "line": 6,
+          "end_line": 6
+        }
+      ],
+      "tag": "待实现 · 仅用已完成样本"
+    },
+    {
+      "id": "raw",
+      "type": "database",
+      "label": "不可变运行记录",
+      "sublabel": "请求时序 / 终态 / 版本",
+      "pos": [
+        40,
+        315
+      ],
+      "size": [
+        200,
+        82
+      ],
+      "sources": [
+        {
+          "path": "scripts/replay/open_loop.py",
+          "line": 96,
+          "end_line": 117
+        },
+        {
+          "path": "scripts/replay/open_loop.py",
+          "line": 204,
+          "end_line": 204
+        },
+        {
+          "path": "scripts/replay/75_run_lowload.py",
+          "line": 139,
+          "end_line": 169
+        }
+      ],
+      "tag": "已实现 · results/raw"
+    },
+    {
+      "id": "analysis",
+      "type": "backend",
+      "label": "完整性审计与统计",
+      "sublabel": "TTFT / 吞吐 / 后台代价",
+      "pos": [
+        365,
+        315
+      ],
+      "size": [
+        200,
+        82
+      ],
+      "sources": [
+        {
+          "path": "scripts/analysis/85_analyze_lowload.py",
+          "line": 20,
+          "end_line": 34
+        },
+        {
+          "path": "scripts/analysis/85_analyze_lowload.py",
+          "line": 81,
+          "end_line": 103
+        }
+      ],
+      "tag": "已实现 · Python"
+    },
+    {
+      "id": "archive",
+      "type": "database",
+      "label": "校验与本地归档",
+      "sublabel": "原始记录 + 源码快照",
+      "pos": [
+        365,
+        575
+      ],
+      "size": [
+        200,
+        82
+      ],
+      "sources": [
+        {
+          "path": "scripts/ops/archive_run.py",
+          "line": 17,
+          "end_line": 61
+        }
+      ],
+      "tag": "已实现 · ZIP / SHA256"
+    }
+  ],
+  "connections": [
+    {
+      "id": "request-entry",
+      "from": "replay",
+      "to": "ingress",
+      "label": "拟接入",
+      "variant": "emphasis"
+    },
+    {
+      "id": "candidate-selection",
+      "from": "ingress",
+      "to": "control",
+      "label": "拟选候选",
+      "variant": "emphasis"
+    },
+    {
+      "id": "hard-reserve",
+      "from": "control",
+      "to": "adapter",
+      "label": "硬可容纳",
+      "variant": "emphasis"
+    },
+    {
+      "id": "execute",
+      "from": "adapter",
+      "to": "engine",
+      "label": "拟预留后执行",
+      "variant": "emphasis"
+    },
+    {
+      "id": "completion-learning",
+      "from": "engine",
+      "to": "calibration",
+      "label": "拟反馈实际长度"
+    },
+    {
+      "id": "soft-estimate",
+      "from": "calibration",
+      "to": "control",
+      "label": "拟供软决策"
+    },
+    {
+      "id": "client-evidence",
+      "from": "replay",
+      "to": "raw",
+      "label": "逐请求记录"
+    },
+    {
+      "id": "audit",
+      "from": "raw",
+      "to": "analysis",
+      "label": "离线审计"
+    },
+    {
+      "id": "archive-reads",
+      "from": "archive",
+      "to": "raw",
+      "label": "读取并校验"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "如何顺着图阅读",
+      "items": [
+        "从左上回放器出发：接入登记请求 → 选择候选并判断准入 → 预留硬容量 → 交给 llama.cpp 执行。",
+        "下方校准模块用已完成请求的实际长度更新余量，再供下一次软判断使用。数据记录与离线分析位于左下。",
+        "节点标注“待实现”的模块是设计；图中跨这些节点的箭头代表拟接入关系。当前客户端直接访问原始引擎。"
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "接入、排队与后台保护",
+      "items": [
+        "接入记录请求 ID、业务类别、时限和最大输出长度；交互与后台按规则进入类别队列。",
+        "admission 拟负责候选选择和软准入；fairness 拟根据等待时长维护后台保护集合。",
+        "后台等太久后，暂停会持续占用其所需容量的新准入；已有请求结束且容量足够时，优先接纳可容纳的受保护请求。"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "两道约束为何分开",
+      "items": [
+        "硬容量回答“放得下吗”：按实际输入长度 L + 调用方最大输出 M 保守预留，并检查单序列、总容量和槽位。",
+        "软预算回答“现在再接一个是否太忙”：用未处理输入和预计剩余输出估计工作量，超阈值可延后。",
+        "预测只影响软决策，不能缩减硬预留。逻辑容量账本也不能覆盖权重、工作区或其他进程的全部显存。"
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "估计与校准分别做什么",
+      "items": [
+        "estimation 拟按类别与输入长度分桶，给出长度估计；实际生成结束后记录“实际长度 − 预测值”的正向误差。",
+        "在线余量随当时已完成样本更新；样本不足时回退，超预测时更新软剩余量。失败、取消、未完成不能当零长度样本。",
+        "关键对照采用相同估计器和其他规则，比较固定余量与在线余量；是否带来收益仍待实验检验。"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "引擎、回收与观测",
+      "items": [
+        "llama.cpp 负责模型执行、连续批处理与流式响应；runtime 拟负责硬预留、引擎适配、取消和回收，不重复实现模型计算。",
+        "结束后须确认执行停止、序列按接口清理、槽位安全可复用，再归还一次硬账本；取消与完成竞争需要测试。",
+        "observability 拟增加请求关联、事件、预算快照和决策原因。核心共用固定 prefill 配置，动态 prefill 扩展默认不纳入。"
+      ]
+    },
+    {
+      "dot": "slate",
+      "title": "看图时需记住的限制",
+      "items": [
+        "这是单模型、单实例、单 GPU 的目标架构，不包括模型训练、多卡分布式或企业平台。",
+        "采用非抢占设计；后台保护不能绕过硬边界，也不承诺任意过载下的有限等待。",
+        "目前源码只提供模块骨架；具体 C++ 接口和状态转移仍需后续评审核实。"
+      ]
+    }
+  ]
+}

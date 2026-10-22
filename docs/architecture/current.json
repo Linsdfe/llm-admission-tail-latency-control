@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "01 现状：已经运行的实验与证据链",
+    "output": "docs/architecture/current.html",
+    "locale": "zh-CN",
+    "quality_profile": "showcase",
+    "repository": {
+      "url": "git@github.com:Linsdfe/llm-admission-tail-latency-control.git",
+      "revision": "c855ef3b61143a184052c86a1101d9b482a4c646",
+      "link_mode": "local-only"
+    }
+  },
+  "components": [
+    {
+      "id": "runner",
+      "type": "backend",
+      "label": "① 批次运行脚本",
+      "sublabel": "快照 / 启动 / 预热 / 停服",
+      "pos": [
+        40,
+        40
+      ],
+      "size": [
+        210,
+        86
+      ],
+      "sources": [
+        {
+          "path": "scripts/replay/75_run_lowload.py",
+          "line": 65,
+          "end_line": 169
+        }
+      ],
+      "tag": "已实现 · Python"
+    },
+    {
+      "id": "client",
+      "type": "external",
+      "label": "② 请求回放客户端",
+      "sublabel": "按计划到达发送两类请求",
+      "pos": [
+        390,
+        40
+      ],
+      "size": [
+        210,
+        86
+      ],
+      "sources": [
+        {
+          "path": "scripts/replay/open_loop.py",
+          "line": 88,
+          "end_line": 132
+        }
+      ],
+      "tag": "已实现 · 本地 HTTP"
+    },
+    {
+      "id": "llama",
+      "type": "backend",
+      "label": "③ 原始 llama.cpp",
+      "sublabel": "读取输入并流式生成回答",
+      "pos": [
+        740,
+        40
+      ],
+      "size": [
+        210,
+        86
+      ],
+      "sources": [
+        {
+          "path": "docs/environment.md",
+          "line": 8,
+          "end_line": 16
+        }
+      ],
+      "tag": "已可用 · WSL2 / 单 GPU"
+    },
+    {
+      "id": "raw",
+      "type": "database",
+      "label": "④ 原始运行目录",
+      "sublabel": "请求时序 / 终态 / 版本",
+      "pos": [
+        390,
+        330
+      ],
+      "size": [
+        210,
+        86
+      ],
+      "sources": [
+        {
+          "path": "scripts/replay/open_loop.py",
+          "line": 96,
+          "end_line": 117
+        },
+        {
+          "path": "scripts/replay/open_loop.py",
+          "line": 204,
+          "end_line": 204
+        },
+        {
+          "path": "scripts/replay/75_run_lowload.py",
+          "line": 139,
+          "end_line": 169
+        }
+      ],
+      "tag": "results/raw · 本机保留"
+    },
+    {
+      "id": "audit",
+      "type": "backend",
+      "label": "⑤ 审计与统计",
+      "sublabel": "先核对完整性，再计算指标",
+      "pos": [
+        740,
+        330
+      ],
+      "size": [
+        210,
+        86
+      ],
+      "sources": [
+        {
+          "path": "scripts/analysis/85_analyze_lowload.py",
+          "line": 20,
+          "end_line": 48
+        },
+        {
+          "path": "scripts/analysis/85_analyze_lowload.py",
+          "line": 81,
+          "end_line": 103
+        }
+      ],
+      "tag": "已实现 · 离线分析"
+    },
+    {
+      "id": "zip",
+      "type": "backend",
+      "label": "⑥ 本地归档工具",
+      "sublabel": "读取原始证据并校验打包",
+      "pos": [
+        40,
+        330
+      ],
+      "size": [
+        210,
+        86
+      ],
+      "sources": [
+        {
+          "path": "scripts/ops/archive_run.py",
+          "line": 17,
+          "end_line": 61
+        }
+      ],
+      "tag": "已实现 · ZIP / SHA256"
+    }
+  ],
+  "connections": [
+    {
+      "id": "runner-client",
+      "from": "runner",
+      "to": "client",
+      "label": "编排回放"
+    },
+    {
+      "id": "client-llama",
+      "from": "client",
+      "to": "llama",
+      "label": "HTTP 请求"
+    },
+    {
+      "id": "client-raw",
+      "from": "client",
+      "to": "raw",
+      "label": "写请求记录"
+    },
+    {
+      "id": "raw-audit",
+      "from": "raw",
+      "to": "audit",
+      "label": "读取审计"
+    },
+    {
+      "id": "zip-raw",
+      "from": "zip",
+      "to": "raw",
+      "label": "读取打包"
+    }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "先理解项目在做什么",
+      "items": [
+        "交互请求关心尽快看到回答开头；后台任务也需要得到服务。两类请求共享一个模型实例和 GPU。",
+        "项目拟研究何时允许新请求进入执行，兼顾交互尾延迟、吞吐和后台完成代价。业务类别由负载定义，并不等于事后实际输出长短。"
+      ]
+    },
+    {
+      "dot": "cyan",
+      "title": "现在已经具备什么",
+      "items": [
+        "批次脚本管理原始引擎的启动、预热、测量、停服，保留配置、版本、服务日志与 GPU 采样。",
+        "异步客户端记录实际发送、首个非空生成内容和结束时间；服务响应被客户端接收并落盘。",
+        "分析脚本读取原始批次，输出 summary、逐请求指标、配对表及可发布报告。"
+      ]
+    },
+    {
+      "dot": "amber",
+      "title": "现在还没有什么",
+      "items": [
+        "当前没有可运行的自研 C++ 准入与调度系统，src 下是模块目录骨架。",
+        "下一张图展示目标设计；现有预实验不能证明目标策略有效。服务端完整事件插桩也尚未完成。",
+        "归档是本地证据包，不等于异地备份；完整原始记录默认不进入 Git。"
+      ]
+    }
+  ]
+}
