@@ -87,6 +87,12 @@ P0 通过后，再进入 **P1 需求与实验预注册（11-09—11-29）**，�
 
 可直接说：“使用 scientific-critical-thinking 技能，审查 P0 E0/E1 实验，给出最小补充对照方案，先写协议。”项目 `AGENTS.md` 已加入相关研究任务的读取入口；安装技能本身不会启动实验或推进阶段。
 
+## 论文写作技能
+
+项目安装了 [`scientific-writing`](.agents/skills/scientific-writing/SKILL.md)，用于中文本科论文、开题报告和研究章节的起草、改写、引用及方法—结果一致性核对。[项目论文工作流](.agents/skills/scientific-writing/references/project-thesis-workflow.md) 区分方案、实际执行记录和论文结果，保留真实修订日期，不将后验修订冒充原始预注册。来源与固定版本见 [SOURCE.json](.agents/skills/scientific-writing/SOURCE.json)，许可证为 MIT；随附检查工具离线运行，不需要 API 密钥。
+
+可直接说：“使用 scientific-writing 技能，按本项目证据撰写论文绪论。”涉及实验设计或结论审查时配合 scientific-critical-thinking，Word/PDF 排版使用对应文档技能。
+
 ## 文档维护
 
 项目每日收尾使用 [`$llm-project-daily`](skills/llm-project-daily/SKILL.md)：核对当天实际工作，更新日志与结果索引，按日期打包成果并校验，同步 README 进度表和两张进度图。可以直接说“按项目技能做今天收尾”。技能源文件随项目保存，个人技能目录中已安装可发现的副本；它不创建定时任务，也不自动提交或推送。

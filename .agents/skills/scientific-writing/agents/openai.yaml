@@ -1,0 +1,4 @@
+interface:
+  display_name: "中文科研论文写作"
+  short_description: "撰写与修订中文本科论文，核对引用和数值来源，区分开题方案与实验结果"
+  default_prompt: "使用 $scientific-writing，依据本项目有效方案与真实证据撰写或修订论文，先核对文档阶段和时间线。"
