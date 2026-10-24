@@ -1,0 +1,1984 @@
+{
+  "status": "passed_file_only_objective_recomputation",
+  "run_id": "20261024-2000-p1-prompt-task-repair-v2",
+  "analyzed_at": "2026-10-24T20:00:16.107264+08:00",
+  "measured_completions": 40,
+  "warmups_separate": 2,
+  "paired_prompts": 8,
+  "fresh_development_prompts": 24,
+  "analysis_script_sha256": "3fec7f68340dddc7f085e402b68dedfe900d53e0b22cb4ea757e94ba8a106228",
+  "groups": {
+    "paired_v1": {
+      "requests": 8,
+      "stop_types": {
+        "limit": 7,
+        "eos": 1
+      },
+      "input_tokens": {
+        "n": 8,
+        "min": 151,
+        "median": 239.5,
+        "max": 335,
+        "mean": 241.25
+      },
+      "output_tokens": {
+        "n": 8,
+        "min": 49,
+        "median": 224.0,
+        "max": 384,
+        "mean": 222.125
+      },
+      "total_output_tokens": 1777,
+      "output_at_cap": 7
+    },
+    "paired_v2": {
+      "requests": 8,
+      "stop_types": {
+        "eos": 7,
+        "limit": 1
+      },
+      "input_tokens": {
+        "n": 8,
+        "min": 172,
+        "median": 274.0,
+        "max": 383,
+        "mean": 275.75
+      },
+      "output_tokens": {
+        "n": 8,
+        "min": 10,
+        "median": 155.5,
+        "max": 384,
+        "mean": 173.625
+      },
+      "total_output_tokens": 1389,
+      "output_at_cap": 1
+    },
+    "fresh_v2": {
+      "requests": 24,
+      "stop_types": {
+        "eos": 15,
+        "limit": 9
+      },
+      "input_tokens": {
+        "n": 24,
+        "min": 64,
+        "median": 142.5,
+        "max": 653,
+        "mean": 236.29166666666666
+      },
+      "output_tokens": {
+        "n": 24,
+        "min": 9,
+        "median": 99.5,
+        "max": 384,
+        "mean": 183.79166666666666
+      },
+      "total_output_tokens": 4411,
+      "output_at_cap": 9
+    }
+  },
+  "pairs": {
+    "1": {
+      "v1": {
+        "req_id": "repair-01-v1",
+        "repair_role": "paired_sentinel",
+        "prompt_version": "v1",
+        "pair_index": 1,
+        "source_case": "c05",
+        "source_req_id": "cal-11001-i002",
+        "category": "interactive",
+        "template_family": "calibration_activity_time",
+        "input_token_bucket": 2,
+        "input_tokens": 151,
+        "max_tokens": 64,
+        "output_tokens": 64,
+        "new_prompt_tokens": 151,
+        "cached_prompt_tokens": 0,
+        "stop_type": "limit",
+        "input_plus_max_output_plus_safety": 216,
+        "output_at_cap": true,
+        "content_sha256": "7f9f18041d72996844cdb9433af016980cd140960f26639353805d750d1edae1",
+        "prompt_sha256": "268eff6bfcfcb4f27f5767514dd14ce68636c7a5b80790fb521aec7ad2eb151d",
+        "repetition": {
+          "character_count_without_whitespace": 92,
+          "ngrams": {
+            "4": {
+              "windows": 89,
+              "unique": 56,
+              "duplicate_excess_ratio": 0.3707865168539326,
+              "maximum_occurrences": 5
+            },
+            "8": {
+              "windows": 85,
+              "unique": 72,
+              "duplicate_excess_ratio": 0.15294117647058825,
+              "maximum_occurrences": 3
+            },
+            "16": {
+              "windows": 77,
+              "unique": 77,
+              "duplicate_excess_ratio": 0.0,
+              "maximum_occurrences": 1
+            }
+          },
+          "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+        },
+        "source_directory": "cases/q01-repair-01-v1",
+        "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+      },
+      "v2": {
+        "req_id": "repair-01-v2",
+        "repair_role": "paired_sentinel",
+        "prompt_version": "v2",
+        "pair_index": 1,
+        "source_case": "c05",
+        "source_req_id": "cal-11001-i002",
+        "category": "interactive",
+        "template_family": "calibration_activity_time",
+        "input_token_bucket": 2,
+        "input_tokens": 172,
+        "max_tokens": 64,
+        "output_tokens": 15,
+        "new_prompt_tokens": 172,
+        "cached_prompt_tokens": 0,
+        "stop_type": "eos",
+        "input_plus_max_output_plus_safety": 237,
+        "output_at_cap": false,
+        "content_sha256": "03d4dac368285d5474c13156b0a2b4ed899818a899483609199f60599529cd10",
+        "prompt_sha256": "16bf6c25b6d7f4aa788db5588e5280a4a2be2d1800f62100846076b66127f500",
+        "repetition": {
+          "character_count_without_whitespace": 21,
+          "ngrams": {
+            "4": {
+              "windows": 18,
+              "unique": 18,
+              "duplicate_excess_ratio": 0.0,
+              "maximum_occurrences": 1
+            },
+            "8": {
+              "windows": 14,
+              "unique": 14,
+              "duplicate_excess_ratio": 0.0,
+              "maximum_occurrences": 1
+            },
+            "16": {
+              "windows": 6,
+              "unique": 6,
+              "duplicate_excess_ratio": 0.0,
+              "maximum_occurrences": 1
+            }
+          },
+          "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+        },
+        "source_directory": "cases/q02-repair-01-v2",
+        "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+      }
+    },
+    "2": {
+      "v2": {
+        "req_id": "repair-02-v2",
+        "repair_role": "paired_sentinel",
+        "prompt_version": "v2",
+        "pair_index": 2,
+        "source_case": "c11",
+        "source_req_id": "cal-11001-i005",
+        "category": "interactive",
+        "template_family": "calibration_kitchen_scaling",
+        "input_token_bucket": 2,
+        "input_tokens": 174,
+        "max_tokens": 64,
+        "output_tokens": 17,
+        "new_prompt_tokens": 174,
+        "cached_prompt_tokens": 0,
+        "stop_type": "eos",
+        "input_plus_max_output_plus_safety": 239,
+        "output_at_cap": false,
+        "content_sha256": "bda49206a9d6bebb115347b398dc11e79a91efc8966ec30a517ead4cdc2faee2",
+        "prompt_sha256": "a71ea8903b1c9217591689a779960cb8bdc14485676f88039a5b5ebe5a188d37",
+        "repetition": {
+          "character_count_without_whitespace": 14,
+          "ngrams": {
+            "4": {
+              "windows": 11,
+              "unique": 11,
+              "duplicate_excess_ratio": 0.0,
+              "maximum_occurrences": 1
+            },
+            "8": {
+              "windows": 7,
+              "unique": 7,
+              "duplicate_excess_ratio": 0.0,
+              "maximum_occurrences": 1
+            },
+            "16": {
+              "windows": 0,
+              "unique": 0,
+              "duplicate_excess_ratio": null,
+              "maximum_occurrences": 0
+            }
+          },
+          "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+        },
+        "source_directory": "cases/q03-repair-02-v2",
+        "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+      },
+      "v1": {
+        "req_id": "repair-02-v1",
+        "repair_role": "paired_sentinel",
+        "prompt_version": "v1",
+        "pair_index": 2,
+        "source_case": "c11",
+        "source_req_id": "cal-11001-i005",
+        "category": "interactive",
+        "template_family": "calibration_kitchen_scaling",
+        "input_token_bucket": 2,
+        "input_tokens": 153,
+        "max_tokens": 64,
+        "output_tokens": 64,
+        "new_prompt_tokens": 153,
+        "cached_prompt_tokens": 0,
+        "stop_type": "limit",
+        "input_plus_max_output_plus_safety": 218,
+        "output_at_cap": true,
+        "content_sha256": "d961ea7e58b61a8c4d980d10c4679ab723d57222fcdcbcd1c629bd5833b0bcd2",
+        "prompt_sha256": "58b8e4159446d83e8f7bcb13eb69c5d914f5ccc4b0617cfafc74b2c1a363023e",
+        "repetition": {
+          "character_count_without_whitespace": 92,
+          "ngrams": {
+            "4": {
+              "windows": 89,
+              "unique": 60,
+              "duplicate_excess_ratio": 0.3258426966292135,
+              "maximum_occurrences": 5
+            },
+            "8": {
+              "windows": 85,
+              "unique": 79,
+              "duplicate_excess_ratio": 0.07058823529411765,
+              "maximum_occurrences": 2
+            },
+            "16": {
+              "windows": 77,
+              "unique": 77,
+              "duplicate_excess_ratio": 0.0,
+              "maximum_occurrences": 1
+            }
+          },
+          "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+        },
+        "source_directory": "cases/q04-repair-02-v1",
+        "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+      }
+    },
+    "3": {
+      "v1": {
+        "req_id": "repair-03-v1",
+        "repair_role": "paired_sentinel",
+        "prompt_version": "v1",
+        "pair_index": 3,
+        "source_case": "c17",
+        "source_req_id": "cal-11001-i008",
+        "category": "interactive",
+        "template_family": "calibration_library_lending",
+        "input_token_bucket": 2,
+        "input_tokens": 155,
+        "max_tokens": 64,
+        "output_tokens": 64,
+        "new_prompt_tokens": 155,
+        "cached_prompt_tokens": 0,
+        "stop_type": "limit",
+        "input_plus_max_output_plus_safety": 220,
+        "output_at_cap": true,
+        "content_sha256": "db69911b7014a887e8abff1620a5e9734e15b1b57532b2c3aaad5685ce6465ba",
+        "prompt_sha256": "a2a69e5b29d4f1f2fd8c71f969393f875d22b0f99e98399308f7d324ff967b3a",
+        "repetition": {
+          "character_count_without_whitespace": 76,
+          "ngrams": {
+            "4": {
+              "windows": 73,
+              "unique": 62,
+              "duplicate_excess_ratio": 0.1506849315068493,
+              "maximum_occurrences": 3
+            },
+            "8": {
+              "windows": 69,
+              "unique": 69,
+              "duplicate_excess_ratio": 0.0,
+              "maximum_occurrences": 1
+            },
+            "16": {
+              "windows": 61,
+              "unique": 61,
+              "duplicate_excess_ratio": 0.0,
+              "maximum_occurrences": 1
+            }
+          },
+          "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+        },
+        "source_directory": "cases/q05-repair-03-v1",
+        "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+      },
+      "v2": {
+        "req_id": "repair-03-v2",
+        "repair_role": "paired_sentinel",
+        "prompt_version": "v2",
+        "pair_index": 3,
+        "source_case": "c17",
+        "source_req_id": "cal-11001-i008",
+        "category": "interactive",
+        "template_family": "calibration_library_lending",
+        "input_token_bucket": 2,
+        "input_tokens": 176,
+        "max_tokens": 64,
+        "output_tokens": 25,
+        "new_prompt_tokens": 176,
+        "cached_prompt_tokens": 0,
+        "stop_type": "eos",
+        "input_plus_max_output_plus_safety": 241,
+        "output_at_cap": false,
+        "content_sha256": "1a5b1bc1caa484e7355a023c4aa9d876abccdd055d30de67d5af4f7b2a3bd8d1",
+        "prompt_sha256": "0d0a893183a0f81b38fab3a6f0ba883118a0625adedf42dcd9f69c57f2540ebd",
+        "repetition": {
+          "character_count_without_whitespace": 30,
+          "ngrams": {
+            "4": {
+              "windows": 27,
+              "unique": 27,
+              "duplicate_excess_ratio": 0.0,
+              "maximum_occurrences": 1
+            },
+            "8": {
+              "windows": 23,
+              "unique": 23,
+              "duplicate_excess_ratio": 0.0,
+              "maximum_occurrences": 1
+            },
+            "16": {
+              "windows": 15,
+              "unique": 15,
+              "duplicate_excess_ratio": 0.0,
+              "maximum_occurrences": 1
+            }
+          },
+          "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+        },
+        "source_directory": "cases/q06-repair-03-v2",
+        "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+      }
+    },
+    "4": {
+      "v2": {
+        "req_id": "repair-04-v2",
+        "repair_role": "paired_sentinel",
+        "prompt_version": "v2",
+        "pair_index": 4,
+        "source_case": "c23",
+        "source_req_id": "cal-11001-i011",
+        "category": "interactive",
+        "template_family": "calibration_stationery_budget",
+        "input_token_bucket": 2,
+        "input_tokens": 175,
+        "max_tokens": 64,
+        "output_tokens": 10,
+        "new_prompt_tokens": 175,
+        "cached_prompt_tokens": 0,
+        "stop_type": "eos",
+        "input_plus_max_output_plus_safety": 240,
+        "output_at_cap": false,
+        "content_sha256": "aef5df87e3cb9aaf59d10651f9f4ad55db6d9617673c1d0a23eab848b6bc966b",
+        "prompt_sha256": "18a8a2d813c7780579f28e39b6a641544fd32eff1b46244dcdd59a9d45e6554f",
+        "repetition": {
+          "character_count_without_whitespace": 16,
+          "ngrams": {
+            "4": {
+              "windows": 13,
+              "unique": 13,
+              "duplicate_excess_ratio": 0.0,
+              "maximum_occurrences": 1
+            },
+            "8": {
+              "windows": 9,
+              "unique": 9,
+              "duplicate_excess_ratio": 0.0,
+              "maximum_occurrences": 1
+            },
+            "16": {
+              "windows": 1,
+              "unique": 1,
+              "duplicate_excess_ratio": 0.0,
+              "maximum_occurrences": 1
+            }
+          },
+          "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+        },
+        "source_directory": "cases/q07-repair-04-v2",
+        "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+      },
+      "v1": {
+        "req_id": "repair-04-v1",
+        "repair_role": "paired_sentinel",
+        "prompt_version": "v1",
+        "pair_index": 4,
+        "source_case": "c23",
+        "source_req_id": "cal-11001-i011",
+        "category": "interactive",
+        "template_family": "calibration_stationery_budget",
+        "input_token_bucket": 2,
+        "input_tokens": 154,
+        "max_tokens": 64,
+        "output_tokens": 49,
+        "new_prompt_tokens": 154,
+        "cached_prompt_tokens": 0,
+        "stop_type": "eos",
+        "input_plus_max_output_plus_safety": 219,
+        "output_at_cap": false,
+        "content_sha256": "ac90c43fd5b36f1b56ace9ee5303d82873b0e1dc8aaac06be88de045f9973903",
+        "prompt_sha256": "4d2f8d552c89a18cc1540cc9901bc2e94528fd0f931f34fbe77f336632f59dc2",
+        "repetition": {
+          "character_count_without_whitespace": 62,
+          "ngrams": {
+            "4": {
+              "windows": 59,
+              "unique": 56,
+              "duplicate_excess_ratio": 0.05084745762711865,
+              "maximum_occurrences": 2
+            },
+            "8": {
+              "windows": 55,
+              "unique": 55,
+              "duplicate_excess_ratio": 0.0,
+              "maximum_occurrences": 1
+            },
+            "16": {
+              "windows": 47,
+              "unique": 47,
+              "duplicate_excess_ratio": 0.0,
+              "maximum_occurrences": 1
+            }
+          },
+          "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+        },
+        "source_directory": "cases/q08-repair-04-v1",
+        "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+      }
+    },
+    "5": {
+      "v1": {
+        "req_id": "repair-05-v1",
+        "repair_role": "paired_sentinel",
+        "prompt_version": "v1",
+        "pair_index": 5,
+        "source_case": "c04",
+        "source_req_id": "cal-11001-b001",
+        "category": "background",
+        "template_family": "calibration_community_event",
+        "input_token_bucket": 1,
+        "input_tokens": 327,
+        "max_tokens": 384,
+        "output_tokens": 384,
+        "new_prompt_tokens": 327,
+        "cached_prompt_tokens": 0,
+        "stop_type": "limit",
+        "input_plus_max_output_plus_safety": 712,
+        "output_at_cap": true,
+        "content_sha256": "eea9375baf19bff0a639a7c94ebd50bdd9ad880332d9ee762173cad684b8b0b2",
+        "prompt_sha256": "24609fc3e8aa79df63082310c5046534cd35e5939e1559060d195c6eadca7f38",
+        "repetition": {
+          "character_count_without_whitespace": 507,
+          "ngrams": {
+            "4": {
+              "windows": 504,
+              "unique": 133,
+              "duplicate_excess_ratio": 0.7361111111111112,
+              "maximum_occurrences": 31
+            },
+            "8": {
+              "windows": 500,
+              "unique": 286,
+              "duplicate_excess_ratio": 0.428,
+              "maximum_occurrences": 17
+            },
+            "16": {
+              "windows": 492,
+              "unique": 490,
+              "duplicate_excess_ratio": 0.0040650406504065045,
+              "maximum_occurrences": 2
+            }
+          },
+          "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+        },
+        "source_directory": "cases/q09-repair-05-v1",
+        "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+      },
+      "v2": {
+        "req_id": "repair-05-v2",
+        "repair_role": "paired_sentinel",
+        "prompt_version": "v2",
+        "pair_index": 5,
+        "source_case": "c04",
+        "source_req_id": "cal-11001-b001",
+        "category": "background",
+        "template_family": "calibration_community_event",
+        "input_token_bucket": 1,
+        "input_tokens": 375,
+        "max_tokens": 384,
+        "output_tokens": 351,
+        "new_prompt_tokens": 375,
+        "cached_prompt_tokens": 0,
+        "stop_type": "eos",
+        "input_plus_max_output_plus_safety": 760,
+        "output_at_cap": false,
+        "content_sha256": "28ba411adf05c840abb1522650af9dfaaedb8f93d9ba735aae2f09d2eeab7ed7",
+        "prompt_sha256": "4c35fd61f428e205d41705c30fb0f7755fd7fd5f624f8f06380ef19f369ff91b",
+        "repetition": {
+          "character_count_without_whitespace": 564,
+          "ngrams": {
+            "4": {
+              "windows": 561,
+              "unique": 270,
+              "duplicate_excess_ratio": 0.5187165775401069,
+              "maximum_occurrences": 8
+            },
+            "8": {
+              "windows": 557,
+              "unique": 374,
+              "duplicate_excess_ratio": 0.32854578096947934,
+              "maximum_occurrences": 4
+            },
+            "16": {
+              "windows": 549,
+              "unique": 463,
+              "duplicate_excess_ratio": 0.15664845173041894,
+              "maximum_occurrences": 4
+            }
+          },
+          "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+        },
+        "source_directory": "cases/q10-repair-05-v2",
+        "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+      }
+    },
+    "6": {
+      "v2": {
+        "req_id": "repair-06-v2",
+        "repair_role": "paired_sentinel",
+        "prompt_version": "v2",
+        "pair_index": 6,
+        "source_case": "c08",
+        "source_req_id": "cal-11001-b003",
+        "category": "background",
+        "template_family": "calibration_training_diary",
+        "input_token_bucket": 1,
+        "input_tokens": 372,
+        "max_tokens": 384,
+        "output_tokens": 301,
+        "new_prompt_tokens": 372,
+        "cached_prompt_tokens": 0,
+        "stop_type": "eos",
+        "input_plus_max_output_plus_safety": 757,
+        "output_at_cap": false,
+        "content_sha256": "2fd29962f75817ad4d6ebf4cfeee2fae4f5d03146851ff5ae50a4249e51b7e44",
+        "prompt_sha256": "bc9ed2cc94b3a472df42184d2f69bbdb56f256a49b48a48a79d6bced17ee3703",
+        "repetition": {
+          "character_count_without_whitespace": 484,
+          "ngrams": {
+            "4": {
+              "windows": 481,
+              "unique": 209,
+              "duplicate_excess_ratio": 0.5654885654885655,
+              "maximum_occurrences": 11
+            },
+            "8": {
+              "windows": 477,
+              "unique": 297,
+              "duplicate_excess_ratio": 0.37735849056603776,
+              "maximum_occurrences": 6
+            },
+            "16": {
+              "windows": 469,
+              "unique": 376,
+              "duplicate_excess_ratio": 0.19829424307036247,
+              "maximum_occurrences": 2
+            }
+          },
+          "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+        },
+        "source_directory": "cases/q11-repair-06-v2",
+        "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+      },
+      "v1": {
+        "req_id": "repair-06-v1",
+        "repair_role": "paired_sentinel",
+        "prompt_version": "v1",
+        "pair_index": 6,
+        "source_case": "c08",
+        "source_req_id": "cal-11001-b003",
+        "category": "background",
+        "template_family": "calibration_training_diary",
+        "input_token_bucket": 1,
+        "input_tokens": 324,
+        "max_tokens": 384,
+        "output_tokens": 384,
+        "new_prompt_tokens": 324,
+        "cached_prompt_tokens": 0,
+        "stop_type": "limit",
+        "input_plus_max_output_plus_safety": 709,
+        "output_at_cap": true,
+        "content_sha256": "db162fced1441ad3a6cf546f97f3daa4dda8aa54b259bf07fdc41dd001ca3a08",
+        "prompt_sha256": "8829cbfdcc7c16f497ade1008519b56eb9df96d973618b6e7715ebb06532ed1e",
+        "repetition": {
+          "character_count_without_whitespace": 478,
+          "ngrams": {
+            "4": {
+              "windows": 475,
+              "unique": 305,
+              "duplicate_excess_ratio": 0.35789473684210527,
+              "maximum_occurrences": 45
+            },
+            "8": {
+              "windows": 471,
+              "unique": 470,
+              "duplicate_excess_ratio": 0.0021231422505307855,
+              "maximum_occurrences": 2
+            },
+            "16": {
+              "windows": 463,
+              "unique": 463,
+              "duplicate_excess_ratio": 0.0,
+              "maximum_occurrences": 1
+            }
+          },
+          "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+        },
+        "source_directory": "cases/q12-repair-06-v1",
+        "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+      }
+    },
+    "7": {
+      "v1": {
+        "req_id": "repair-07-v1",
+        "repair_role": "paired_sentinel",
+        "prompt_version": "v1",
+        "pair_index": 7,
+        "source_case": "c18",
+        "source_req_id": "cal-11001-b008",
+        "category": "background",
+        "template_family": "calibration_greenhouse_log",
+        "input_token_bucket": 1,
+        "input_tokens": 331,
+        "max_tokens": 384,
+        "output_tokens": 384,
+        "new_prompt_tokens": 331,
+        "cached_prompt_tokens": 0,
+        "stop_type": "limit",
+        "input_plus_max_output_plus_safety": 716,
+        "output_at_cap": true,
+        "content_sha256": "1c9436f29b157f14990f2101b4ff6f3c5948fbf7fc49ce7cb14ef80d6d41c11b",
+        "prompt_sha256": "3fd7b5ef2118bc90b09db788aa5313c2f215846addb3b8965eb967feeea4a051",
+        "repetition": {
+          "character_count_without_whitespace": 492,
+          "ngrams": {
+            "4": {
+              "windows": 489,
+              "unique": 61,
+              "duplicate_excess_ratio": 0.8752556237218814,
+              "maximum_occurrences": 17
+            },
+            "8": {
+              "windows": 485,
+              "unique": 66,
+              "duplicate_excess_ratio": 0.8639175257731959,
+              "maximum_occurrences": 17
+            },
+            "16": {
+              "windows": 477,
+              "unique": 74,
+              "duplicate_excess_ratio": 0.8448637316561844,
+              "maximum_occurrences": 17
+            }
+          },
+          "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+        },
+        "source_directory": "cases/q13-repair-07-v1",
+        "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+      },
+      "v2": {
+        "req_id": "repair-07-v2",
+        "repair_role": "paired_sentinel",
+        "prompt_version": "v2",
+        "pair_index": 7,
+        "source_case": "c18",
+        "source_req_id": "cal-11001-b008",
+        "category": "background",
+        "template_family": "calibration_greenhouse_log",
+        "input_token_bucket": 1,
+        "input_tokens": 379,
+        "max_tokens": 384,
+        "output_tokens": 384,
+        "new_prompt_tokens": 379,
+        "cached_prompt_tokens": 0,
+        "stop_type": "limit",
+        "input_plus_max_output_plus_safety": 764,
+        "output_at_cap": true,
+        "content_sha256": "b950d7b5c74f90645dc273932f0d837d56779ceadd2a0529fecdcddafb31f205",
+        "prompt_sha256": "d6beef990bf1a181011ab7f8ee6d52f864698ab92389517f0067aabfc30e354d",
+        "repetition": {
+          "character_count_without_whitespace": 586,
+          "ngrams": {
+            "4": {
+              "windows": 583,
+              "unique": 208,
+              "duplicate_excess_ratio": 0.6432246998284734,
+              "maximum_occurrences": 9
+            },
+            "8": {
+              "windows": 579,
+              "unique": 288,
+              "duplicate_excess_ratio": 0.5025906735751295,
+              "maximum_occurrences": 5
+            },
+            "16": {
+              "windows": 571,
+              "unique": 392,
+              "duplicate_excess_ratio": 0.3134851138353765,
+              "maximum_occurrences": 5
+            }
+          },
+          "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+        },
+        "source_directory": "cases/q14-repair-07-v2",
+        "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+      }
+    },
+    "8": {
+      "v2": {
+        "req_id": "repair-08-v2",
+        "repair_role": "paired_sentinel",
+        "prompt_version": "v2",
+        "pair_index": 8,
+        "source_case": "c22",
+        "source_req_id": "cal-11001-b010",
+        "category": "background",
+        "template_family": "calibration_storage_inventory",
+        "input_token_bucket": 1,
+        "input_tokens": 383,
+        "max_tokens": 384,
+        "output_tokens": 286,
+        "new_prompt_tokens": 383,
+        "cached_prompt_tokens": 0,
+        "stop_type": "eos",
+        "input_plus_max_output_plus_safety": 768,
+        "output_at_cap": false,
+        "content_sha256": "5567d53713b3b88c29fa4e770a7e8881c8ece93ef68fd42a51d58c517e3cfc72",
+        "prompt_sha256": "435228cb3f8186deb6ae5e00c7857b9002682edf897f3b3eed48edfe73184b7f",
+        "repetition": {
+          "character_count_without_whitespace": 418,
+          "ngrams": {
+            "4": {
+              "windows": 415,
+              "unique": 223,
+              "duplicate_excess_ratio": 0.46265060240963857,
+              "maximum_occurrences": 9
+            },
+            "8": {
+              "windows": 411,
+              "unique": 258,
+              "duplicate_excess_ratio": 0.3722627737226277,
+              "maximum_occurrences": 6
+            },
+            "16": {
+              "windows": 403,
+              "unique": 293,
+              "duplicate_excess_ratio": 0.2729528535980149,
+              "maximum_occurrences": 6
+            }
+          },
+          "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+        },
+        "source_directory": "cases/q15-repair-08-v2",
+        "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+      },
+      "v1": {
+        "req_id": "repair-08-v1",
+        "repair_role": "paired_sentinel",
+        "prompt_version": "v1",
+        "pair_index": 8,
+        "source_case": "c22",
+        "source_req_id": "cal-11001-b010",
+        "category": "background",
+        "template_family": "calibration_storage_inventory",
+        "input_token_bucket": 1,
+        "input_tokens": 335,
+        "max_tokens": 384,
+        "output_tokens": 384,
+        "new_prompt_tokens": 335,
+        "cached_prompt_tokens": 0,
+        "stop_type": "limit",
+        "input_plus_max_output_plus_safety": 720,
+        "output_at_cap": true,
+        "content_sha256": "9ac210782e93f1350d6e4e18651c812afff1b251815e1e77786d434eabd27f41",
+        "prompt_sha256": "b7e053aac8b994a5cc043d6b5e262952fd4746cb38479bc21229128acee3bcf5",
+        "repetition": {
+          "character_count_without_whitespace": 389,
+          "ngrams": {
+            "4": {
+              "windows": 386,
+              "unique": 57,
+              "duplicate_excess_ratio": 0.8523316062176166,
+              "maximum_occurrences": 109
+            },
+            "8": {
+              "windows": 382,
+              "unique": 61,
+              "duplicate_excess_ratio": 0.8403141361256544,
+              "maximum_occurrences": 107
+            },
+            "16": {
+              "windows": 374,
+              "unique": 64,
+              "duplicate_excess_ratio": 0.8288770053475936,
+              "maximum_occurrences": 105
+            }
+          },
+          "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+        },
+        "source_directory": "cases/q16-repair-08-v1",
+        "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+      }
+    }
+  },
+  "fresh_development": [
+    {
+      "req_id": "dev-22001-i000",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "interactive",
+      "template_family": "development_bike_route",
+      "input_token_bucket": 0,
+      "input_tokens": 64,
+      "max_tokens": 64,
+      "output_tokens": 11,
+      "new_prompt_tokens": 64,
+      "cached_prompt_tokens": 0,
+      "stop_type": "eos",
+      "input_plus_max_output_plus_safety": 129,
+      "output_at_cap": false,
+      "content_sha256": "555bf53949ada4bfc4290fc92bb1392e8884ffdb50eb5c78249328e1cad1f590",
+      "prompt_sha256": "1bc73b8a4f8816a1c967096f92bc5579f0401b97a314db0cef3d7ccfbc6d30fd",
+      "repetition": {
+        "character_count_without_whitespace": 17,
+        "ngrams": {
+          "4": {
+            "windows": 14,
+            "unique": 14,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          },
+          "8": {
+            "windows": 10,
+            "unique": 10,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          },
+          "16": {
+            "windows": 2,
+            "unique": 2,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q17-dev-22001-i000",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-b000",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "background",
+      "template_family": "development_repair_ticket",
+      "input_token_bucket": 0,
+      "input_tokens": 134,
+      "max_tokens": 384,
+      "output_tokens": 384,
+      "new_prompt_tokens": 134,
+      "cached_prompt_tokens": 0,
+      "stop_type": "limit",
+      "input_plus_max_output_plus_safety": 519,
+      "output_at_cap": true,
+      "content_sha256": "369805def5fcf3881e8a097d4de289ba6091ee81780f6a62553bcf220b78f1c1",
+      "prompt_sha256": "ab56d6aaac6bedc2fb7a315a05b6153d1b9e404d67d81505381dd9ae8941851c",
+      "repetition": {
+        "character_count_without_whitespace": 574,
+        "ngrams": {
+          "4": {
+            "windows": 571,
+            "unique": 146,
+            "duplicate_excess_ratio": 0.7443082311733801,
+            "maximum_occurrences": 17
+          },
+          "8": {
+            "windows": 567,
+            "unique": 173,
+            "duplicate_excess_ratio": 0.6948853615520282,
+            "maximum_occurrences": 12
+          },
+          "16": {
+            "windows": 559,
+            "unique": 202,
+            "duplicate_excess_ratio": 0.6386404293381037,
+            "maximum_occurrences": 5
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q18-dev-22001-b000",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-i001",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "interactive",
+      "template_family": "development_pc_cooling",
+      "input_token_bucket": 1,
+      "input_tokens": 92,
+      "max_tokens": 64,
+      "output_tokens": 13,
+      "new_prompt_tokens": 92,
+      "cached_prompt_tokens": 0,
+      "stop_type": "eos",
+      "input_plus_max_output_plus_safety": 157,
+      "output_at_cap": false,
+      "content_sha256": "0ffa3c0b85c89465b15dcc07328bdbba2958973bece10240f78083c357e897a2",
+      "prompt_sha256": "e2f2f73d2bc55c52225e831b114ffd3a67904fa80586bd808b566127220b65c9",
+      "repetition": {
+        "character_count_without_whitespace": 16,
+        "ngrams": {
+          "4": {
+            "windows": 13,
+            "unique": 13,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          },
+          "8": {
+            "windows": 9,
+            "unique": 9,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          },
+          "16": {
+            "windows": 1,
+            "unique": 1,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q19-dev-22001-i001",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-b001",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "background",
+      "template_family": "development_course_feedback",
+      "input_token_bucket": 1,
+      "input_tokens": 337,
+      "max_tokens": 384,
+      "output_tokens": 384,
+      "new_prompt_tokens": 337,
+      "cached_prompt_tokens": 0,
+      "stop_type": "limit",
+      "input_plus_max_output_plus_safety": 722,
+      "output_at_cap": true,
+      "content_sha256": "7ea4572cd58deef937230b5be4b61a6b982e172874f2d4121678f83b0ee2076a",
+      "prompt_sha256": "62533e22878cc6e116b8bbc6116b684821415fc9e74e197a9e48a97573e530e4",
+      "repetition": {
+        "character_count_without_whitespace": 509,
+        "ngrams": {
+          "4": {
+            "windows": 506,
+            "unique": 195,
+            "duplicate_excess_ratio": 0.6146245059288538,
+            "maximum_occurrences": 6
+          },
+          "8": {
+            "windows": 502,
+            "unique": 230,
+            "duplicate_excess_ratio": 0.5418326693227091,
+            "maximum_occurrences": 6
+          },
+          "16": {
+            "windows": 494,
+            "unique": 272,
+            "duplicate_excess_ratio": 0.4493927125506073,
+            "maximum_occurrences": 5
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q20-dev-22001-b001",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-i002",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "interactive",
+      "template_family": "development_study_break",
+      "input_token_bucket": 2,
+      "input_tokens": 147,
+      "max_tokens": 64,
+      "output_tokens": 21,
+      "new_prompt_tokens": 147,
+      "cached_prompt_tokens": 0,
+      "stop_type": "eos",
+      "input_plus_max_output_plus_safety": 212,
+      "output_at_cap": false,
+      "content_sha256": "f5ce2d2487aa5e1058a4a1878ab050ca5bb4b1b236d53eb6977ae4c8af948356",
+      "prompt_sha256": "8be29a7f4e3632c64658a8ff948c83f4001870e0a86878a0a5463173c062165b",
+      "repetition": {
+        "character_count_without_whitespace": 29,
+        "ngrams": {
+          "4": {
+            "windows": 26,
+            "unique": 26,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          },
+          "8": {
+            "windows": 22,
+            "unique": 22,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          },
+          "16": {
+            "windows": 14,
+            "unique": 14,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q21-dev-22001-i002",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-b002",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "background",
+      "template_family": "development_parcel_dispatch",
+      "input_token_bucket": 2,
+      "input_tokens": 647,
+      "max_tokens": 384,
+      "output_tokens": 257,
+      "new_prompt_tokens": 647,
+      "cached_prompt_tokens": 0,
+      "stop_type": "eos",
+      "input_plus_max_output_plus_safety": 1032,
+      "output_at_cap": false,
+      "content_sha256": "575400671d77ce5abc7f5db1c2ab339339b6222faf46d8f84dd3ba5425d00013",
+      "prompt_sha256": "cd24f8b6409b4f1d532d72b3ffca08c1961a7db9699c93c344ceaedae1659c6a",
+      "repetition": {
+        "character_count_without_whitespace": 415,
+        "ngrams": {
+          "4": {
+            "windows": 412,
+            "unique": 295,
+            "duplicate_excess_ratio": 0.28398058252427183,
+            "maximum_occurrences": 9
+          },
+          "8": {
+            "windows": 408,
+            "unique": 357,
+            "duplicate_excess_ratio": 0.125,
+            "maximum_occurrences": 3
+          },
+          "16": {
+            "windows": 400,
+            "unique": 377,
+            "duplicate_excess_ratio": 0.0575,
+            "maximum_occurrences": 2
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q22-dev-22001-b002",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-i003",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "interactive",
+      "template_family": "development_laundry_plan",
+      "input_token_bucket": 0,
+      "input_tokens": 64,
+      "max_tokens": 64,
+      "output_tokens": 15,
+      "new_prompt_tokens": 64,
+      "cached_prompt_tokens": 0,
+      "stop_type": "eos",
+      "input_plus_max_output_plus_safety": 129,
+      "output_at_cap": false,
+      "content_sha256": "1c876ce4066ed4a7d8458c0e2dff0905ca18a685442cbedd8a83ed89338d0799",
+      "prompt_sha256": "2416754e5c800fe64e2a830b5ff84be75d129dc2547b7d744d6b46066a6d2145",
+      "repetition": {
+        "character_count_without_whitespace": 16,
+        "ngrams": {
+          "4": {
+            "windows": 13,
+            "unique": 13,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          },
+          "8": {
+            "windows": 9,
+            "unique": 9,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          },
+          "16": {
+            "windows": 1,
+            "unique": 1,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q23-dev-22001-i003",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-b003",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "background",
+      "template_family": "development_service_incident",
+      "input_token_bucket": 1,
+      "input_tokens": 327,
+      "max_tokens": 384,
+      "output_tokens": 384,
+      "new_prompt_tokens": 327,
+      "cached_prompt_tokens": 0,
+      "stop_type": "limit",
+      "input_plus_max_output_plus_safety": 712,
+      "output_at_cap": true,
+      "content_sha256": "f8b02313d0b5b7f008f1ef392de2f8dfffa52f83e0c1fa77f86debbe0086f073",
+      "prompt_sha256": "f1f7613293902e58bc27070de26f0dd8bb1c3162b06ad5cc9fd9d30acf337c73",
+      "repetition": {
+        "character_count_without_whitespace": 629,
+        "ngrams": {
+          "4": {
+            "windows": 626,
+            "unique": 470,
+            "duplicate_excess_ratio": 0.24920127795527156,
+            "maximum_occurrences": 10
+          },
+          "8": {
+            "windows": 622,
+            "unique": 574,
+            "duplicate_excess_ratio": 0.07717041800643087,
+            "maximum_occurrences": 3
+          },
+          "16": {
+            "windows": 614,
+            "unique": 606,
+            "duplicate_excess_ratio": 0.013029315960912053,
+            "maximum_occurrences": 2
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q24-dev-22001-b003",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-i004",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "interactive",
+      "template_family": "development_bike_route",
+      "input_token_bucket": 1,
+      "input_tokens": 91,
+      "max_tokens": 64,
+      "output_tokens": 10,
+      "new_prompt_tokens": 91,
+      "cached_prompt_tokens": 0,
+      "stop_type": "eos",
+      "input_plus_max_output_plus_safety": 156,
+      "output_at_cap": false,
+      "content_sha256": "4031095748df35791302d4e6f069e36b177f87d4b6ec880529ba077d3605081d",
+      "prompt_sha256": "acfb024965a026a7ebb08df7f1f2e39e26545cda1dfe63bfbdc4917d4d00efb1",
+      "repetition": {
+        "character_count_without_whitespace": 15,
+        "ngrams": {
+          "4": {
+            "windows": 12,
+            "unique": 12,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          },
+          "8": {
+            "windows": 8,
+            "unique": 8,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          },
+          "16": {
+            "windows": 0,
+            "unique": 0,
+            "duplicate_excess_ratio": null,
+            "maximum_occurrences": 0
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q25-dev-22001-i004",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-b004",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "background",
+      "template_family": "development_repair_ticket",
+      "input_token_bucket": 2,
+      "input_tokens": 651,
+      "max_tokens": 384,
+      "output_tokens": 384,
+      "new_prompt_tokens": 651,
+      "cached_prompt_tokens": 0,
+      "stop_type": "limit",
+      "input_plus_max_output_plus_safety": 1036,
+      "output_at_cap": true,
+      "content_sha256": "b31862a3cd46f55f6237089411e8ad5ee448ad6f054e61acf1696f3447f2c575",
+      "prompt_sha256": "8cff271f53b62f4027c3987c2117a3fe736ef971f30c7d1ff4723e9e8c4c8286",
+      "repetition": {
+        "character_count_without_whitespace": 597,
+        "ngrams": {
+          "4": {
+            "windows": 594,
+            "unique": 296,
+            "duplicate_excess_ratio": 0.5016835016835017,
+            "maximum_occurrences": 12
+          },
+          "8": {
+            "windows": 590,
+            "unique": 402,
+            "duplicate_excess_ratio": 0.31864406779661014,
+            "maximum_occurrences": 12
+          },
+          "16": {
+            "windows": 582,
+            "unique": 524,
+            "duplicate_excess_ratio": 0.09965635738831616,
+            "maximum_occurrences": 6
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q26-dev-22001-b004",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-i005",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "interactive",
+      "template_family": "development_pc_cooling",
+      "input_token_bucket": 2,
+      "input_tokens": 148,
+      "max_tokens": 64,
+      "output_tokens": 13,
+      "new_prompt_tokens": 148,
+      "cached_prompt_tokens": 0,
+      "stop_type": "eos",
+      "input_plus_max_output_plus_safety": 213,
+      "output_at_cap": false,
+      "content_sha256": "b191197b3a0f26c53f52fc6efb63d154025f09196936c9d9b8e6a1f742c3e57f",
+      "prompt_sha256": "c8d337b964ac105d5ff910c2051687aeaca55de4c99ed0b3bc698fbe92c6653d",
+      "repetition": {
+        "character_count_without_whitespace": 16,
+        "ngrams": {
+          "4": {
+            "windows": 13,
+            "unique": 13,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          },
+          "8": {
+            "windows": 9,
+            "unique": 9,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          },
+          "16": {
+            "windows": 1,
+            "unique": 1,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q27-dev-22001-i005",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-b005",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "background",
+      "template_family": "development_course_feedback",
+      "input_token_bucket": 0,
+      "input_tokens": 138,
+      "max_tokens": 384,
+      "output_tokens": 384,
+      "new_prompt_tokens": 138,
+      "cached_prompt_tokens": 0,
+      "stop_type": "limit",
+      "input_plus_max_output_plus_safety": 523,
+      "output_at_cap": true,
+      "content_sha256": "6df402b33d6e69e7c6efdfb3320c6b549e3d8e377a69f6c182a4f8b6a7d4c1b0",
+      "prompt_sha256": "ce432a3306473c72a0b5e30d93660949a75db1c72d2855d0c9e9130d02aee844",
+      "repetition": {
+        "character_count_without_whitespace": 591,
+        "ngrams": {
+          "4": {
+            "windows": 588,
+            "unique": 299,
+            "duplicate_excess_ratio": 0.4914965986394558,
+            "maximum_occurrences": 6
+          },
+          "8": {
+            "windows": 584,
+            "unique": 385,
+            "duplicate_excess_ratio": 0.3407534246575342,
+            "maximum_occurrences": 5
+          },
+          "16": {
+            "windows": 576,
+            "unique": 455,
+            "duplicate_excess_ratio": 0.21006944444444445,
+            "maximum_occurrences": 2
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q28-dev-22001-b005",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-i006",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "interactive",
+      "template_family": "development_study_break",
+      "input_token_bucket": 0,
+      "input_tokens": 64,
+      "max_tokens": 64,
+      "output_tokens": 15,
+      "new_prompt_tokens": 64,
+      "cached_prompt_tokens": 0,
+      "stop_type": "eos",
+      "input_plus_max_output_plus_safety": 129,
+      "output_at_cap": false,
+      "content_sha256": "fbe958af82c2103f208b0510cff1cfc9a366f951e2980a20d00f1fd4f237f370",
+      "prompt_sha256": "182f8b4420d08e9105bd3cd64a973779442240e074827943789366880d3d76a4",
+      "repetition": {
+        "character_count_without_whitespace": 18,
+        "ngrams": {
+          "4": {
+            "windows": 15,
+            "unique": 13,
+            "duplicate_excess_ratio": 0.13333333333333333,
+            "maximum_occurrences": 2
+          },
+          "8": {
+            "windows": 11,
+            "unique": 11,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          },
+          "16": {
+            "windows": 3,
+            "unique": 3,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q29-dev-22001-i006",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-b006",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "background",
+      "template_family": "development_parcel_dispatch",
+      "input_token_bucket": 2,
+      "input_tokens": 642,
+      "max_tokens": 384,
+      "output_tokens": 384,
+      "new_prompt_tokens": 642,
+      "cached_prompt_tokens": 0,
+      "stop_type": "limit",
+      "input_plus_max_output_plus_safety": 1027,
+      "output_at_cap": true,
+      "content_sha256": "c762f2afd306060dc832318fbce0c72b5d3e66ee15301d06ac51f1406f8e796e",
+      "prompt_sha256": "930816b60239618fff199b0e34a0018fbd2e930dac12e98c30b00ea2e1f8af84",
+      "repetition": {
+        "character_count_without_whitespace": 569,
+        "ngrams": {
+          "4": {
+            "windows": 566,
+            "unique": 305,
+            "duplicate_excess_ratio": 0.46113074204946997,
+            "maximum_occurrences": 10
+          },
+          "8": {
+            "windows": 562,
+            "unique": 401,
+            "duplicate_excess_ratio": 0.28647686832740216,
+            "maximum_occurrences": 5
+          },
+          "16": {
+            "windows": 554,
+            "unique": 469,
+            "duplicate_excess_ratio": 0.15342960288808663,
+            "maximum_occurrences": 3
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q30-dev-22001-b006",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-i007",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "interactive",
+      "template_family": "development_laundry_plan",
+      "input_token_bucket": 1,
+      "input_tokens": 91,
+      "max_tokens": 64,
+      "output_tokens": 15,
+      "new_prompt_tokens": 91,
+      "cached_prompt_tokens": 0,
+      "stop_type": "eos",
+      "input_plus_max_output_plus_safety": 156,
+      "output_at_cap": false,
+      "content_sha256": "bdebf176b19b5868cc2a18c30e3900922381183b1cea658036b54d5d67c979ed",
+      "prompt_sha256": "5775e62284e5ef70b6fc7cb726e4bbc554d8593bfc1841920f8f3ec7dc6d85c0",
+      "repetition": {
+        "character_count_without_whitespace": 19,
+        "ngrams": {
+          "4": {
+            "windows": 16,
+            "unique": 16,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          },
+          "8": {
+            "windows": 12,
+            "unique": 12,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          },
+          "16": {
+            "windows": 4,
+            "unique": 4,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q31-dev-22001-i007",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-b007",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "background",
+      "template_family": "development_service_incident",
+      "input_token_bucket": 0,
+      "input_tokens": 133,
+      "max_tokens": 384,
+      "output_tokens": 169,
+      "new_prompt_tokens": 133,
+      "cached_prompt_tokens": 0,
+      "stop_type": "eos",
+      "input_plus_max_output_plus_safety": 518,
+      "output_at_cap": false,
+      "content_sha256": "c2ef21e16f50ffefc6c2959e6f4561862127ec417c74ccb463a36073d59fce32",
+      "prompt_sha256": "458f0731d747d5920828db09ed05385eaf6ae8c9e0af80831c5362450379b23b",
+      "repetition": {
+        "character_count_without_whitespace": 263,
+        "ngrams": {
+          "4": {
+            "windows": 260,
+            "unique": 165,
+            "duplicate_excess_ratio": 0.36538461538461536,
+            "maximum_occurrences": 5
+          },
+          "8": {
+            "windows": 256,
+            "unique": 184,
+            "duplicate_excess_ratio": 0.28125,
+            "maximum_occurrences": 5
+          },
+          "16": {
+            "windows": 248,
+            "unique": 207,
+            "duplicate_excess_ratio": 0.16532258064516128,
+            "maximum_occurrences": 4
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q32-dev-22001-b007",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-i008",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "interactive",
+      "template_family": "development_bike_route",
+      "input_token_bucket": 2,
+      "input_tokens": 147,
+      "max_tokens": 64,
+      "output_tokens": 9,
+      "new_prompt_tokens": 147,
+      "cached_prompt_tokens": 0,
+      "stop_type": "eos",
+      "input_plus_max_output_plus_safety": 212,
+      "output_at_cap": false,
+      "content_sha256": "6a3f5af95eaf12671be528167aba2329b0841837d6fdcc5ea40d1336fc8b6e5b",
+      "prompt_sha256": "15b32bce8671b29bcf85126939258ae9bbddc345418eda632d0d65d0f68f7c6d",
+      "repetition": {
+        "character_count_without_whitespace": 13,
+        "ngrams": {
+          "4": {
+            "windows": 10,
+            "unique": 10,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          },
+          "8": {
+            "windows": 6,
+            "unique": 6,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          },
+          "16": {
+            "windows": 0,
+            "unique": 0,
+            "duplicate_excess_ratio": null,
+            "maximum_occurrences": 0
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q33-dev-22001-i008",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-b008",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "background",
+      "template_family": "development_repair_ticket",
+      "input_token_bucket": 1,
+      "input_tokens": 327,
+      "max_tokens": 384,
+      "output_tokens": 384,
+      "new_prompt_tokens": 327,
+      "cached_prompt_tokens": 0,
+      "stop_type": "limit",
+      "input_plus_max_output_plus_safety": 712,
+      "output_at_cap": true,
+      "content_sha256": "d4c0af45813b78735e3117141951062f083f7642b7694c49eadf1f822a2bdf30",
+      "prompt_sha256": "e3c9321810379c21584ccaf3d0cb627b67d07f4008caa2d514f70e44a79aee88",
+      "repetition": {
+        "character_count_without_whitespace": 535,
+        "ngrams": {
+          "4": {
+            "windows": 532,
+            "unique": 205,
+            "duplicate_excess_ratio": 0.6146616541353384,
+            "maximum_occurrences": 21
+          },
+          "8": {
+            "windows": 528,
+            "unique": 244,
+            "duplicate_excess_ratio": 0.5378787878787878,
+            "maximum_occurrences": 4
+          },
+          "16": {
+            "windows": 520,
+            "unique": 280,
+            "duplicate_excess_ratio": 0.46153846153846156,
+            "maximum_occurrences": 4
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q34-dev-22001-b008",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-i009",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "interactive",
+      "template_family": "development_pc_cooling",
+      "input_token_bucket": 0,
+      "input_tokens": 65,
+      "max_tokens": 64,
+      "output_tokens": 11,
+      "new_prompt_tokens": 65,
+      "cached_prompt_tokens": 0,
+      "stop_type": "eos",
+      "input_plus_max_output_plus_safety": 130,
+      "output_at_cap": false,
+      "content_sha256": "eab59514d4e877142c2684e9f7306f30716b69823b835c5bebb7a7176ebbfb7f",
+      "prompt_sha256": "9299c13195d581f846a08f3e837cbe64bfe68894b1e9f7c1d1a7e4d878eece0c",
+      "repetition": {
+        "character_count_without_whitespace": 14,
+        "ngrams": {
+          "4": {
+            "windows": 11,
+            "unique": 11,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          },
+          "8": {
+            "windows": 7,
+            "unique": 7,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          },
+          "16": {
+            "windows": 0,
+            "unique": 0,
+            "duplicate_excess_ratio": null,
+            "maximum_occurrences": 0
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q35-dev-22001-i009",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-b009",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "background",
+      "template_family": "development_course_feedback",
+      "input_token_bucket": 0,
+      "input_tokens": 138,
+      "max_tokens": 384,
+      "output_tokens": 384,
+      "new_prompt_tokens": 138,
+      "cached_prompt_tokens": 0,
+      "stop_type": "limit",
+      "input_plus_max_output_plus_safety": 523,
+      "output_at_cap": true,
+      "content_sha256": "95eaa872572c6cfb89bffe81f12c0215deb0192c08a578fc50f2b40d4d5a7253",
+      "prompt_sha256": "e98e9637a9625fdb017cd311f96084d5ac085744bfc72a52f7c272ebfaa68606",
+      "repetition": {
+        "character_count_without_whitespace": 594,
+        "ngrams": {
+          "4": {
+            "windows": 591,
+            "unique": 248,
+            "duplicate_excess_ratio": 0.5803722504230119,
+            "maximum_occurrences": 6
+          },
+          "8": {
+            "windows": 587,
+            "unique": 306,
+            "duplicate_excess_ratio": 0.4787052810902896,
+            "maximum_occurrences": 6
+          },
+          "16": {
+            "windows": 579,
+            "unique": 346,
+            "duplicate_excess_ratio": 0.40241796200345425,
+            "maximum_occurrences": 2
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q36-dev-22001-b009",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-i010",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "interactive",
+      "template_family": "development_study_break",
+      "input_token_bucket": 1,
+      "input_tokens": 91,
+      "max_tokens": 64,
+      "output_tokens": 30,
+      "new_prompt_tokens": 91,
+      "cached_prompt_tokens": 0,
+      "stop_type": "eos",
+      "input_plus_max_output_plus_safety": 156,
+      "output_at_cap": false,
+      "content_sha256": "a99a687794d40f860ed3254aa06041209b813fe88f97c54d88563dde084517e2",
+      "prompt_sha256": "0e9b7df9de4a3006113fe1958c091bd1ad26ceea749de29ff281d3c107033b34",
+      "repetition": {
+        "character_count_without_whitespace": 33,
+        "ngrams": {
+          "4": {
+            "windows": 30,
+            "unique": 25,
+            "duplicate_excess_ratio": 0.16666666666666666,
+            "maximum_occurrences": 2
+          },
+          "8": {
+            "windows": 26,
+            "unique": 25,
+            "duplicate_excess_ratio": 0.038461538461538464,
+            "maximum_occurrences": 2
+          },
+          "16": {
+            "windows": 18,
+            "unique": 18,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q37-dev-22001-i010",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-b010",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "background",
+      "template_family": "development_parcel_dispatch",
+      "input_token_bucket": 1,
+      "input_tokens": 333,
+      "max_tokens": 384,
+      "output_tokens": 384,
+      "new_prompt_tokens": 333,
+      "cached_prompt_tokens": 0,
+      "stop_type": "limit",
+      "input_plus_max_output_plus_safety": 718,
+      "output_at_cap": true,
+      "content_sha256": "a785c58c363384f3ab3275b5d902fe7fe6dff658382d477fad62c6bf6b9b1adf",
+      "prompt_sha256": "584ceea5f8dbcd1ef94de4c59eae9eeba879ce7fd3f0f13ad860e7fe16b70895",
+      "repetition": {
+        "character_count_without_whitespace": 485,
+        "ngrams": {
+          "4": {
+            "windows": 482,
+            "unique": 57,
+            "duplicate_excess_ratio": 0.8817427385892116,
+            "maximum_occurrences": 36
+          },
+          "8": {
+            "windows": 478,
+            "unique": 61,
+            "duplicate_excess_ratio": 0.8723849372384938,
+            "maximum_occurrences": 18
+          },
+          "16": {
+            "windows": 470,
+            "unique": 61,
+            "duplicate_excess_ratio": 0.8702127659574468,
+            "maximum_occurrences": 18
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q38-dev-22001-b010",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-i011",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "interactive",
+      "template_family": "development_laundry_plan",
+      "input_token_bucket": 2,
+      "input_tokens": 147,
+      "max_tokens": 64,
+      "output_tokens": 19,
+      "new_prompt_tokens": 147,
+      "cached_prompt_tokens": 0,
+      "stop_type": "eos",
+      "input_plus_max_output_plus_safety": 212,
+      "output_at_cap": false,
+      "content_sha256": "23eb34998b57c674ab2b0452bd0070fd39f9431d0e3fc9c44261f7ca2971c222",
+      "prompt_sha256": "6b4bfa1607e85971bffc12db02fdc594428af8191767c9419072a74b1d757757",
+      "repetition": {
+        "character_count_without_whitespace": 19,
+        "ngrams": {
+          "4": {
+            "windows": 16,
+            "unique": 15,
+            "duplicate_excess_ratio": 0.0625,
+            "maximum_occurrences": 2
+          },
+          "8": {
+            "windows": 12,
+            "unique": 12,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          },
+          "16": {
+            "windows": 4,
+            "unique": 4,
+            "duplicate_excess_ratio": 0.0,
+            "maximum_occurrences": 1
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q39-dev-22001-i011",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    },
+    {
+      "req_id": "dev-22001-b011",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "pair_index": null,
+      "source_case": null,
+      "source_req_id": null,
+      "category": "background",
+      "template_family": "development_service_incident",
+      "input_token_bucket": 2,
+      "input_tokens": 653,
+      "max_tokens": 384,
+      "output_tokens": 347,
+      "new_prompt_tokens": 653,
+      "cached_prompt_tokens": 0,
+      "stop_type": "eos",
+      "input_plus_max_output_plus_safety": 1038,
+      "output_at_cap": false,
+      "content_sha256": "f7b4e74d35191da99a2873e41df66641b3ab6be4fd2b09ace9b2eb026f8914e1",
+      "prompt_sha256": "e12282c0900c6960fd0362add255fb05a5fe8759158449540fceabb50130376b",
+      "repetition": {
+        "character_count_without_whitespace": 561,
+        "ngrams": {
+          "4": {
+            "windows": 558,
+            "unique": 335,
+            "duplicate_excess_ratio": 0.3996415770609319,
+            "maximum_occurrences": 13
+          },
+          "8": {
+            "windows": 554,
+            "unique": 418,
+            "duplicate_excess_ratio": 0.24548736462093862,
+            "maximum_occurrences": 11
+          },
+          "16": {
+            "windows": 546,
+            "unique": 474,
+            "duplicate_excess_ratio": 0.13186813186813187,
+            "maximum_occurrences": 4
+          }
+        },
+        "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+      },
+      "source_directory": "cases/q40-dev-22001-b011",
+      "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass"
+    }
+  ],
+  "semantic_quality_gate": null,
+  "G1_passed": false,
+  "scope": "Serial development diagnostic; no estimator fit, final test, population quality, scheduling or performance effect"
+}

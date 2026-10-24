@@ -1,0 +1,4787 @@
+{
+  "schema_version": "p1-prompt-task-repair-assistant-review-v2.1",
+  "run_id": "20261024-2000-p1-prompt-task-repair-v2",
+  "status": "completed_exploratory_assistant_reading_gate_failed",
+  "review_date": "2026-10-25",
+  "collection_date": "2026-10-24",
+  "timezone": "Asia/Shanghai",
+  "method": "助手知道提示版本，逐条读取全部40份原题、背景/资料和输出全文，再按采前量规逐维判断。计数脚本只整理判断和核对ID、原文摘录、SHA，不以EOS、字符/正则或重复率自动通过。聊天另由第二路助手交叉核对并沟通过边界，仍不是独立人工盲评。",
+  "reviewed_measured_outputs": 40,
+  "warmups_excluded": 2,
+  "source_sha256": {
+    "docs/experiments/20261024-2000-p1-prompt-task-repair-v2/fulltexts.json": "625c9dceb008ad050224bba9e472f657bff9ca913f9a54e82e857e1365ddf7a2",
+    "docs/experiments/20261024-2000-p1-prompt-task-repair-v2/evidence-sha256.json": "9e994c62fbb26edf468fe57cfefcaf1c0a74628649207dd0ecb7ab8732025673",
+    "docs/experiments/20261024-2000-p1-prompt-task-repair-v2/report-sha256.json": "3518980b7154370820b13d2cc8b308a75257265ee0e9b02fd295f8a72ba5c26e",
+    "docs/experiments/20261024-2000-p1-prompt-task-repair-v2/summary.json": "977cee3cc8a1e6f5a513233b568b20a77c3e49f7a25d02a9b332ff200e5d1113",
+    "docs/experiments/20261024-2000-p1-prompt-task-repair-v2/analysis-source.py": "3fec7f68340dddc7f085e402b68dedfe900d53e0b22cb4ea757e94ba8a106228",
+    "docs/experiments/20261024-2000-p1-prompt-task-repair-v2/metrics.md": "403c5dfc0ffcd904b277ea98e88780abc107ef66f4ebbce5a295c79957684b4d",
+    "docs/p1/prompt-task-repair-quality-rubric-v2.md": "0d1e64631618f636c21e8d9e2db60957642b0691aeb707a08aaab85cb2d34948",
+    "results/raw/maintenance/20261024-p1-prompt-task-repair-independent-audit-v2/summary.json": "f1db57d2bbee27fb14442ff052bee2fff39f65c1517ac9cedebecd7989d68d44",
+    "docs/p1/prompt-task-repair-protocol-v2.md": "04bd5c1db99804788b8aca5955595be5b47ebceceb382d75e6a493f43fdb5bed",
+    "results/raw/maintenance/20261025-prompt-repair-interactive-crosscheck-v2/summary.json": "beb6fe301089c448901619842dcca83b75a257070fa6ac0f73c5c571f3b14e1f",
+    "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/batch-status.json": "fcc8a2454fac0ed4764fc6e17ffbd5ee30457f23a46ae98c5107a7caf10a4d5d"
+  },
+  "source_integrity_audit": {
+    "status": "passed",
+    "checks": 1764,
+    "measured_completions": 40,
+    "warmups": 2,
+    "cap_events": 84,
+    "semantic_quality_accepted": null,
+    "scope": "Independent raw data integrity and actual frozen asset audit; no collector/analysis imports, no GPU or semantic verdict"
+  },
+  "original_report_files_preserved": {
+    "fulltexts.json": "625c9dceb008ad050224bba9e472f657bff9ca913f9a54e82e857e1365ddf7a2",
+    "evidence-sha256.json": "9e994c62fbb26edf468fe57cfefcaf1c0a74628649207dd0ecb7ab8732025673",
+    "report-sha256.json": "3518980b7154370820b13d2cc8b308a75257265ee0e9b02fd295f8a72ba5c26e",
+    "summary.json": "977cee3cc8a1e6f5a513233b568b20a77c3e49f7a25d02a9b332ff200e5d1113",
+    "analysis-source.py": "3fec7f68340dddc7f085e402b68dedfe900d53e0b22cb4ea757e94ba8a106228",
+    "metrics.md": "403c5dfc0ffcd904b277ea98e88780abc107ef66f4ebbce5a295c79957684b4d"
+  },
+  "scoring_policy": "没有统一加权质量分数。任务内容、句数/六点外形、逐点具体依据与行动、数字/记录/单位和无依据结论分别记录。事实关注项可重叠，不相加成失败分数或总体率。",
+  "boundary_decisions": [
+    "一个句子含两个分句仍只算一句；小数点、列表序号不算句末。后台六个完整编号只是外形，仍逐点检查具体依据和行动。",
+    "三条电脑散热回答满足最简检查顺序，不添加题目未要求的维修细则；均因仅一句而未完成。",
+    "i007每批5件允许末批不足5件；未报可选15批不单独判错。文具题也不因未报可选最大32件本身判错。",
+    "自拟专注1分钟、每页1分钟按安排建议理解，不直接判为已测阅读速度事实错；页数遗漏、休息单位错配和自行引用时间的合计矛盾另记。",
+    "装备完好、体力充沛、确保安全按准备目标理解，不把建议目标指控为已证实状态或安全保证。",
+    "repair-03-v2的138页乘法正确，可用时间充足的确定判断缺依据；记依据/不确定性部分，不夸大为明确数值错或已确认严重事实错误。",
+    "复制的背景数值有来源，不因未回答原题就称这些数字不存在；未作答仍不能判任务完成。",
+    "可能遇到变化、待确认故障的条件性建议与已发生趋势/异常分开，不把所有建议都当事实臆断。"
+  ],
+  "descriptive_counts_only": {
+    "all": {
+      "n": 40,
+      "overall_completed": 0,
+      "original_task_content_satisfied": 7,
+      "format_structure_counts": {
+        "interactive": {
+          "n": 20,
+          "满足": 4,
+          "部分满足": 0,
+          "不满足": 16
+        },
+        "background": {
+          "n": 20,
+          "满足": 6,
+          "部分满足": 9,
+          "不满足": 5
+        }
+      },
+      "rubric_dimension_counts": {
+        "回应原任务": {
+          "满足": 7,
+          "部分满足": 26,
+          "不满足": 7,
+          "无法判断": 0
+        },
+        "规定格式": {
+          "满足": 4,
+          "部分满足": 15,
+          "不满足": 21,
+          "无法判断": 0
+        },
+        "依据是否存在": {
+          "满足": 14,
+          "部分满足": 5,
+          "不满足": 21,
+          "无法判断": 0
+        },
+        "是否在解决问题": {
+          "满足": 7,
+          "部分满足": 23,
+          "不满足": 10,
+          "无法判断": 0
+        },
+        "不确定性是否保留": {
+          "满足": 13,
+          "部分满足": 10,
+          "不满足": 17,
+          "无法判断": 0
+        }
+      },
+      "factual_concerns": {
+        "explicit_numeric_or_record_inconsistency": 9,
+        "quantity_or_unit_inconsistency": 10,
+        "serious_unsupported_conclusion": 15
+      },
+      "stop_types": {
+        "limit": 17,
+        "eos": 23
+      }
+    },
+    "paired_v1": {
+      "n": 8,
+      "overall_completed": 0,
+      "original_task_content_satisfied": 0,
+      "format_structure_counts": {
+        "interactive": {
+          "n": 4,
+          "满足": 1,
+          "部分满足": 0,
+          "不满足": 3
+        },
+        "background": {
+          "n": 4,
+          "满足": 0,
+          "部分满足": 0,
+          "不满足": 4
+        }
+      },
+      "rubric_dimension_counts": {
+        "回应原任务": {
+          "满足": 0,
+          "部分满足": 3,
+          "不满足": 5,
+          "无法判断": 0
+        },
+        "规定格式": {
+          "满足": 1,
+          "部分满足": 0,
+          "不满足": 7,
+          "无法判断": 0
+        },
+        "依据是否存在": {
+          "满足": 3,
+          "部分满足": 1,
+          "不满足": 4,
+          "无法判断": 0
+        },
+        "是否在解决问题": {
+          "满足": 0,
+          "部分满足": 2,
+          "不满足": 6,
+          "无法判断": 0
+        },
+        "不确定性是否保留": {
+          "满足": 3,
+          "部分满足": 2,
+          "不满足": 3,
+          "无法判断": 0
+        }
+      },
+      "factual_concerns": {
+        "explicit_numeric_or_record_inconsistency": 3,
+        "quantity_or_unit_inconsistency": 3,
+        "serious_unsupported_conclusion": 3
+      },
+      "stop_types": {
+        "limit": 7,
+        "eos": 1
+      }
+    },
+    "paired_v2": {
+      "n": 8,
+      "overall_completed": 0,
+      "original_task_content_satisfied": 3,
+      "format_structure_counts": {
+        "interactive": {
+          "n": 4,
+          "满足": 1,
+          "部分满足": 0,
+          "不满足": 3
+        },
+        "background": {
+          "n": 4,
+          "满足": 3,
+          "部分满足": 1,
+          "不满足": 0
+        }
+      },
+      "rubric_dimension_counts": {
+        "回应原任务": {
+          "满足": 3,
+          "部分满足": 5,
+          "不满足": 0,
+          "无法判断": 0
+        },
+        "规定格式": {
+          "满足": 1,
+          "部分满足": 4,
+          "不满足": 3,
+          "无法判断": 0
+        },
+        "依据是否存在": {
+          "满足": 2,
+          "部分满足": 3,
+          "不满足": 3,
+          "无法判断": 0
+        },
+        "是否在解决问题": {
+          "满足": 3,
+          "部分满足": 4,
+          "不满足": 1,
+          "无法判断": 0
+        },
+        "不确定性是否保留": {
+          "满足": 2,
+          "部分满足": 3,
+          "不满足": 3,
+          "无法判断": 0
+        }
+      },
+      "factual_concerns": {
+        "explicit_numeric_or_record_inconsistency": 1,
+        "quantity_or_unit_inconsistency": 1,
+        "serious_unsupported_conclusion": 3
+      },
+      "stop_types": {
+        "eos": 7,
+        "limit": 1
+      }
+    },
+    "fresh_v2": {
+      "n": 24,
+      "overall_completed": 0,
+      "original_task_content_satisfied": 4,
+      "format_structure_counts": {
+        "interactive": {
+          "n": 12,
+          "满足": 2,
+          "部分满足": 0,
+          "不满足": 10
+        },
+        "background": {
+          "n": 12,
+          "满足": 3,
+          "部分满足": 8,
+          "不满足": 1
+        }
+      },
+      "rubric_dimension_counts": {
+        "回应原任务": {
+          "满足": 4,
+          "部分满足": 18,
+          "不满足": 2,
+          "无法判断": 0
+        },
+        "规定格式": {
+          "满足": 2,
+          "部分满足": 11,
+          "不满足": 11,
+          "无法判断": 0
+        },
+        "依据是否存在": {
+          "满足": 9,
+          "部分满足": 1,
+          "不满足": 14,
+          "无法判断": 0
+        },
+        "是否在解决问题": {
+          "满足": 4,
+          "部分满足": 17,
+          "不满足": 3,
+          "无法判断": 0
+        },
+        "不确定性是否保留": {
+          "满足": 8,
+          "部分满足": 5,
+          "不满足": 11,
+          "无法判断": 0
+        }
+      },
+      "factual_concerns": {
+        "explicit_numeric_or_record_inconsistency": 5,
+        "quantity_or_unit_inconsistency": 6,
+        "serious_unsupported_conclusion": 9
+      },
+      "stop_types": {
+        "eos": 15,
+        "limit": 9
+      }
+    },
+    "all_v2": {
+      "n": 32,
+      "overall_completed": 0,
+      "original_task_content_satisfied": 7,
+      "format_structure_counts": {
+        "interactive": {
+          "n": 16,
+          "满足": 3,
+          "部分满足": 0,
+          "不满足": 13
+        },
+        "background": {
+          "n": 16,
+          "满足": 6,
+          "部分满足": 9,
+          "不满足": 1
+        }
+      },
+      "rubric_dimension_counts": {
+        "回应原任务": {
+          "满足": 7,
+          "部分满足": 23,
+          "不满足": 2,
+          "无法判断": 0
+        },
+        "规定格式": {
+          "满足": 3,
+          "部分满足": 15,
+          "不满足": 14,
+          "无法判断": 0
+        },
+        "依据是否存在": {
+          "满足": 11,
+          "部分满足": 4,
+          "不满足": 17,
+          "无法判断": 0
+        },
+        "是否在解决问题": {
+          "满足": 7,
+          "部分满足": 21,
+          "不满足": 4,
+          "无法判断": 0
+        },
+        "不确定性是否保留": {
+          "满足": 10,
+          "部分满足": 8,
+          "不满足": 14,
+          "无法判断": 0
+        }
+      },
+      "factual_concerns": {
+        "explicit_numeric_or_record_inconsistency": 6,
+        "quantity_or_unit_inconsistency": 7,
+        "serious_unsupported_conclusion": 12
+      },
+      "stop_types": {
+        "eos": 22,
+        "limit": 10
+      }
+    }
+  },
+  "fresh_six_cells": {
+    "interactive_bucket_0": {
+      "n": 4,
+      "overall_completed": 0,
+      "original_task_content_satisfied": 1,
+      "format_structure_counts": {
+        "interactive": {
+          "n": 4,
+          "满足": 1,
+          "部分满足": 0,
+          "不满足": 3
+        },
+        "background": {
+          "n": 0,
+          "满足": 0,
+          "部分满足": 0,
+          "不满足": 0
+        }
+      },
+      "rubric_dimension_counts": {
+        "回应原任务": {
+          "满足": 1,
+          "部分满足": 3,
+          "不满足": 0,
+          "无法判断": 0
+        },
+        "规定格式": {
+          "满足": 1,
+          "部分满足": 0,
+          "不满足": 3,
+          "无法判断": 0
+        },
+        "依据是否存在": {
+          "满足": 3,
+          "部分满足": 0,
+          "不满足": 1,
+          "无法判断": 0
+        },
+        "是否在解决问题": {
+          "满足": 1,
+          "部分满足": 3,
+          "不满足": 0,
+          "无法判断": 0
+        },
+        "不确定性是否保留": {
+          "满足": 3,
+          "部分满足": 1,
+          "不满足": 0,
+          "无法判断": 0
+        }
+      },
+      "factual_concerns": {
+        "explicit_numeric_or_record_inconsistency": 1,
+        "quantity_or_unit_inconsistency": 1,
+        "serious_unsupported_conclusion": 0
+      },
+      "stop_types": {
+        "eos": 4
+      }
+    },
+    "interactive_bucket_1": {
+      "n": 4,
+      "overall_completed": 0,
+      "original_task_content_satisfied": 2,
+      "format_structure_counts": {
+        "interactive": {
+          "n": 4,
+          "满足": 1,
+          "部分满足": 0,
+          "不满足": 3
+        },
+        "background": {
+          "n": 0,
+          "满足": 0,
+          "部分满足": 0,
+          "不满足": 0
+        }
+      },
+      "rubric_dimension_counts": {
+        "回应原任务": {
+          "满足": 2,
+          "部分满足": 1,
+          "不满足": 1,
+          "无法判断": 0
+        },
+        "规定格式": {
+          "满足": 1,
+          "部分满足": 0,
+          "不满足": 3,
+          "无法判断": 0
+        },
+        "依据是否存在": {
+          "满足": 3,
+          "部分满足": 1,
+          "不满足": 0,
+          "无法判断": 0
+        },
+        "是否在解决问题": {
+          "满足": 2,
+          "部分满足": 2,
+          "不满足": 0,
+          "无法判断": 0
+        },
+        "不确定性是否保留": {
+          "满足": 3,
+          "部分满足": 1,
+          "不满足": 0,
+          "无法判断": 0
+        }
+      },
+      "factual_concerns": {
+        "explicit_numeric_or_record_inconsistency": 0,
+        "quantity_or_unit_inconsistency": 1,
+        "serious_unsupported_conclusion": 0
+      },
+      "stop_types": {
+        "eos": 4
+      }
+    },
+    "interactive_bucket_2": {
+      "n": 4,
+      "overall_completed": 0,
+      "original_task_content_satisfied": 1,
+      "format_structure_counts": {
+        "interactive": {
+          "n": 4,
+          "满足": 0,
+          "部分满足": 0,
+          "不满足": 4
+        },
+        "background": {
+          "n": 0,
+          "满足": 0,
+          "部分满足": 0,
+          "不满足": 0
+        }
+      },
+      "rubric_dimension_counts": {
+        "回应原任务": {
+          "满足": 1,
+          "部分满足": 3,
+          "不满足": 0,
+          "无法判断": 0
+        },
+        "规定格式": {
+          "满足": 0,
+          "部分满足": 0,
+          "不满足": 4,
+          "无法判断": 0
+        },
+        "依据是否存在": {
+          "满足": 2,
+          "部分满足": 0,
+          "不满足": 2,
+          "无法判断": 0
+        },
+        "是否在解决问题": {
+          "满足": 1,
+          "部分满足": 3,
+          "不满足": 0,
+          "无法判断": 0
+        },
+        "不确定性是否保留": {
+          "满足": 2,
+          "部分满足": 1,
+          "不满足": 1,
+          "无法判断": 0
+        }
+      },
+      "factual_concerns": {
+        "explicit_numeric_or_record_inconsistency": 2,
+        "quantity_or_unit_inconsistency": 2,
+        "serious_unsupported_conclusion": 0
+      },
+      "stop_types": {
+        "eos": 4
+      }
+    },
+    "background_bucket_0": {
+      "n": 4,
+      "overall_completed": 0,
+      "original_task_content_satisfied": 0,
+      "format_structure_counts": {
+        "interactive": {
+          "n": 0,
+          "满足": 0,
+          "部分满足": 0,
+          "不满足": 0
+        },
+        "background": {
+          "n": 4,
+          "满足": 1,
+          "部分满足": 3,
+          "不满足": 0
+        }
+      },
+      "rubric_dimension_counts": {
+        "回应原任务": {
+          "满足": 0,
+          "部分满足": 4,
+          "不满足": 0,
+          "无法判断": 0
+        },
+        "规定格式": {
+          "满足": 0,
+          "部分满足": 4,
+          "不满足": 0,
+          "无法判断": 0
+        },
+        "依据是否存在": {
+          "满足": 1,
+          "部分满足": 0,
+          "不满足": 3,
+          "无法判断": 0
+        },
+        "是否在解决问题": {
+          "满足": 0,
+          "部分满足": 3,
+          "不满足": 1,
+          "无法判断": 0
+        },
+        "不确定性是否保留": {
+          "满足": 0,
+          "部分满足": 1,
+          "不满足": 3,
+          "无法判断": 0
+        }
+      },
+      "factual_concerns": {
+        "explicit_numeric_or_record_inconsistency": 0,
+        "quantity_or_unit_inconsistency": 0,
+        "serious_unsupported_conclusion": 3
+      },
+      "stop_types": {
+        "limit": 3,
+        "eos": 1
+      }
+    },
+    "background_bucket_1": {
+      "n": 4,
+      "overall_completed": 0,
+      "original_task_content_satisfied": 0,
+      "format_structure_counts": {
+        "interactive": {
+          "n": 0,
+          "满足": 0,
+          "部分满足": 0,
+          "不满足": 0
+        },
+        "background": {
+          "n": 4,
+          "满足": 0,
+          "部分满足": 3,
+          "不满足": 1
+        }
+      },
+      "rubric_dimension_counts": {
+        "回应原任务": {
+          "满足": 0,
+          "部分满足": 3,
+          "不满足": 1,
+          "无法判断": 0
+        },
+        "规定格式": {
+          "满足": 0,
+          "部分满足": 3,
+          "不满足": 1,
+          "无法判断": 0
+        },
+        "依据是否存在": {
+          "满足": 0,
+          "部分满足": 0,
+          "不满足": 4,
+          "无法判断": 0
+        },
+        "是否在解决问题": {
+          "满足": 0,
+          "部分满足": 3,
+          "不满足": 1,
+          "无法判断": 0
+        },
+        "不确定性是否保留": {
+          "满足": 0,
+          "部分满足": 0,
+          "不满足": 4,
+          "无法判断": 0
+        }
+      },
+      "factual_concerns": {
+        "explicit_numeric_or_record_inconsistency": 1,
+        "quantity_or_unit_inconsistency": 1,
+        "serious_unsupported_conclusion": 3
+      },
+      "stop_types": {
+        "limit": 4
+      }
+    },
+    "background_bucket_2": {
+      "n": 4,
+      "overall_completed": 0,
+      "original_task_content_satisfied": 0,
+      "format_structure_counts": {
+        "interactive": {
+          "n": 0,
+          "满足": 0,
+          "部分满足": 0,
+          "不满足": 0
+        },
+        "background": {
+          "n": 4,
+          "满足": 2,
+          "部分满足": 2,
+          "不满足": 0
+        }
+      },
+      "rubric_dimension_counts": {
+        "回应原任务": {
+          "满足": 0,
+          "部分满足": 4,
+          "不满足": 0,
+          "无法判断": 0
+        },
+        "规定格式": {
+          "满足": 0,
+          "部分满足": 4,
+          "不满足": 0,
+          "无法判断": 0
+        },
+        "依据是否存在": {
+          "满足": 0,
+          "部分满足": 0,
+          "不满足": 4,
+          "无法判断": 0
+        },
+        "是否在解决问题": {
+          "满足": 0,
+          "部分满足": 3,
+          "不满足": 1,
+          "无法判断": 0
+        },
+        "不确定性是否保留": {
+          "满足": 0,
+          "部分满足": 1,
+          "不满足": 3,
+          "无法判断": 0
+        }
+      },
+      "factual_concerns": {
+        "explicit_numeric_or_record_inconsistency": 1,
+        "quantity_or_unit_inconsistency": 1,
+        "serious_unsupported_conclusion": 3
+      },
+      "stop_types": {
+        "eos": 2,
+        "limit": 2
+      }
+    }
+  },
+  "entry_condition": {
+    "expected_v2": 32,
+    "reviewed_v2": 32,
+    "completed_all_original_requirements": 0,
+    "satisfied": false,
+    "decision": "未达到采前进入条件，不能据此登记后续小规模长度/负载复核。",
+    "reason": "32份v2均至少有一项原要求未完成；另有明确数量/记录/单位问题和严重无依据结论。自然EOS增加不能替代任务完成。",
+    "G1_passed": false,
+    "automatic_nine_round_load_authorized": false,
+    "next_step": "保留唯一v2与全量失败输出，另登记后续任务/提示版本的修订边界和质量验收。任何任务、提示、预算或模型改变均需新版本与新长度核对；不得同批改词续跑或自动扩大负载。"
+  },
+  "limitations": [
+    "8条哨兵按已知问题选择；24条新pilot仍来自预先公开的开发家族，且共享同一服务进程。这些计数不能估总体业务合格率、显著性或独立性能效果。",
+    "该核读是2026-10-25完成的非盲助手探索性判断，不是2026-10-24采前已知结果，不冒充学生/导师人工审核。",
+    "cache_prompt=false及提示长度变化均已记录；配对和新pilot时延不与旧cache开启并发批直接混算，不据此推断调度收益。",
+    "原objective summary中的semantic_quality_gate=null保留；本新增审阅文件记录语义门槛false，两个分析层次和文件版本分别保留。"
+  ],
+  "records": [
+    {
+      "req_id": "repair-01-v1",
+      "repair_role": "paired_sentinel",
+      "prompt_version": "v1",
+      "source_case": "c05",
+      "category": "interactive",
+      "template_family": "calibration_activity_time",
+      "input_token_bucket": 2,
+      "input_tokens": 151,
+      "output_tokens": 64,
+      "stop_type": "limit",
+      "content_sha256": "7f9f18041d72996844cdb9433af016980cd140960f26639353805d750d1edae1",
+      "prompt_sha256": "268eff6bfcfcb4f27f5767514dd14ce68636c7a5b80790fb521aec7ad2eb151d",
+      "source_directory": "cases/q01-repair-01-v1",
+      "output_fulltext_sha256": "7f9f18041d72996844cdb9433af016980cd140960f26639353805d750d1edae1",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q01-repair-01-v1/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "补充1：可用时间20分钟，已有安排2项。",
+        "补充5：可用时间78分钟"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "不满足",
+          "reason": "只复述背景，未安排69分钟准备和2分钟休息。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "规定格式": {
+          "status": "不满足",
+          "reason": "输出四个完整背景句并在第五条中止，不是两句话。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "依据是否存在": {
+          "status": "满足",
+          "reason": "已写出的背景数值与原文相符，截断处未把78写成别的数。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "是否在解决问题": {
+          "status": "不满足",
+          "reason": "整段抄补充记录，没有任务行动。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "满足",
+          "reason": "没有新增故障、时长或足量保证；主任务仍缺失。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "sentences",
+        "complete_sentences": 4,
+        "incomplete_tail": true,
+        "required": 2,
+        "status": "不满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": false,
+        "reason": "已写出的背景数值与原文相符，截断处未把78写成别的数。"
+      },
+      "issues": [
+        "背景复述",
+        "未回应主任务",
+        "句数不符"
+      ],
+      "overall_completed": false,
+      "completion_reason": "背景复述；未回应主任务；句数不符"
+    },
+    {
+      "req_id": "repair-01-v2",
+      "repair_role": "paired_sentinel",
+      "prompt_version": "v2",
+      "source_case": "c05",
+      "category": "interactive",
+      "template_family": "calibration_activity_time",
+      "input_token_bucket": 2,
+      "input_tokens": 172,
+      "output_tokens": 15,
+      "stop_type": "eos",
+      "content_sha256": "03d4dac368285d5474c13156b0a2b4ed899818a899483609199f60599529cd10",
+      "prompt_sha256": "16bf6c25b6d7f4aa788db5588e5280a4a2be2d1800f62100846076b66127f500",
+      "source_directory": "cases/q02-repair-01-v2",
+      "output_fulltext_sha256": "03d4dac368285d5474c13156b0a2b4ed899818a899483609199f60599529cd10",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q02-repair-01-v2/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "先安排活动准备69分钟，后安排休息2分钟。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "满足",
+          "reason": "69分钟准备在前、2分钟休息在后，安排正确。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "规定格式": {
+          "status": "不满足",
+          "reason": "全文只有一句，明确的两句要求未完成。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "依据是否存在": {
+          "status": "满足",
+          "reason": "69和2及单位与题目一致。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "是否在解决问题": {
+          "status": "满足",
+          "reason": "直接给出先后安排，没有抄背景。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "满足",
+          "reason": "未增加完成保证、阈值或无依据时长。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "sentences",
+        "complete_sentences": 1,
+        "required": 2,
+        "status": "不满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": false,
+        "reason": "69和2及单位与题目一致。"
+      },
+      "issues": [
+        "句数不符"
+      ],
+      "overall_completed": false,
+      "completion_reason": "句数不符"
+    },
+    {
+      "req_id": "repair-02-v2",
+      "repair_role": "paired_sentinel",
+      "prompt_version": "v2",
+      "source_case": "c11",
+      "category": "interactive",
+      "template_family": "calibration_kitchen_scaling",
+      "input_token_bucket": 2,
+      "input_tokens": 174,
+      "output_tokens": 17,
+      "stop_type": "eos",
+      "content_sha256": "bda49206a9d6bebb115347b398dc11e79a91efc8966ec30a517ead4cdc2faee2",
+      "prompt_sha256": "a71ea8903b1c9217591689a779960cb8bdc14485676f88039a5b5ebe5a188d37",
+      "source_directory": "cases/q03-repair-02-v2",
+      "output_fulltext_sha256": "bda49206a9d6bebb115347b398dc11e79a91efc8966ec30a517ead4cdc2faee2",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q03-repair-02-v2/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "62克/份 * 7份 = 434克。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "满足",
+          "reason": "62×7=434克，食谱换算完成。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "规定格式": {
+          "status": "不满足",
+          "reason": "只有一个计算句，不是两句话。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "依据是否存在": {
+          "status": "满足",
+          "reason": "62克每份、7份和434克均对应原题且乘法正确。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "是否在解决问题": {
+          "status": "满足",
+          "reason": "直接完成换算，没有转向时间背景。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "满足",
+          "reason": "未增加未知配方或速度假设。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "sentences",
+        "complete_sentences": 1,
+        "required": 2,
+        "status": "不满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": false,
+        "reason": "62克每份、7份和434克均对应原题且乘法正确。"
+      },
+      "issues": [
+        "句数不符"
+      ],
+      "overall_completed": false,
+      "completion_reason": "句数不符"
+    },
+    {
+      "req_id": "repair-02-v1",
+      "repair_role": "paired_sentinel",
+      "prompt_version": "v1",
+      "source_case": "c11",
+      "category": "interactive",
+      "template_family": "calibration_kitchen_scaling",
+      "input_token_bucket": 2,
+      "input_tokens": 153,
+      "output_tokens": 64,
+      "stop_type": "limit",
+      "content_sha256": "d961ea7e58b61a8c4d980d10c4679ab723d57222fcdcbcd1c629bd5833b0bcd2",
+      "prompt_sha256": "58b8e4159446d83e8f7bcb13eb69c5d914f5ccc4b0617cfafc74b2c1a363023e",
+      "source_directory": "cases/q04-repair-02-v1",
+      "output_fulltext_sha256": "d961ea7e58b61a8c4d980d10c4679ab723d57222fcdcbcd1c629bd5833b0bcd2",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q04-repair-02-v1/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "补充1：可用时间74分钟，已有安排8项。",
+        "补充5：可用时间25分钟"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "不满足",
+          "reason": "未回答62克×7份的换算。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "规定格式": {
+          "status": "不满足",
+          "reason": "四个完整背景句和第五条残句，不是两句换算说明。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "依据是否存在": {
+          "status": "满足",
+          "reason": "已出现的背景数字与原文一致。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "是否在解决问题": {
+          "status": "不满足",
+          "reason": "重复抄录补充记录，没有配料计算。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "满足",
+          "reason": "未新增配料换算事实；这不弥补原任务缺答。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "sentences",
+        "complete_sentences": 4,
+        "incomplete_tail": true,
+        "required": 2,
+        "status": "不满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": false,
+        "reason": "已出现的背景数字与原文一致。"
+      },
+      "issues": [
+        "背景复述",
+        "未回应主任务",
+        "句数不符"
+      ],
+      "overall_completed": false,
+      "completion_reason": "背景复述；未回应主任务；句数不符"
+    },
+    {
+      "req_id": "repair-03-v1",
+      "repair_role": "paired_sentinel",
+      "prompt_version": "v1",
+      "source_case": "c17",
+      "category": "interactive",
+      "template_family": "calibration_library_lending",
+      "input_token_bucket": 2,
+      "input_tokens": 155,
+      "output_tokens": 64,
+      "stop_type": "limit",
+      "content_sha256": "db69911b7014a887e8abff1620a5e9734e15b1b57532b2c3aaad5685ce6465ba",
+      "prompt_sha256": "a2a69e5b29d4f1f2fd8c71f969393f875d22b0f99e98399308f7d324ff967b3a",
+      "source_directory": "cases/q05-repair-03-v1",
+      "output_fulltext_sha256": "db69911b7014a887e8abff1620a5e9734e15b1b57532b2c3aaad5685ce6465ba",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q05-repair-03-v1/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "每天读2页，83分钟内可读14页，剩余29页。",
+        "39分钟内可读19页，剩余4页。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "不满足",
+          "reason": "转而按背景分钟推算页数，没有69天、每日2页的阅读安排。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "规定格式": {
+          "status": "不满足",
+          "reason": "三个完整补充句和第四条残句，未按两句回答。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "依据是否存在": {
+          "status": "不满足",
+          "reason": "题目无每分钟阅读速度或总页数，14页、19页及剩余页数没有依据。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "涉及阅读但沿补充记录逐条生成，未解决期限内安排。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "不满足",
+          "reason": "把未知阅读速度和剩余量写成确定值。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "sentences",
+        "complete_sentences": 3,
+        "incomplete_tail": true,
+        "required": 2,
+        "status": "不满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": true,
+        "reason": "题目无每分钟阅读速度或总页数，14页、19页及剩余页数没有依据。",
+        "unsupported_invented_reading_quantities": true
+      },
+      "issues": [
+        "无依据数字换算",
+        "未完成期限安排",
+        "句数不符"
+      ],
+      "overall_completed": false,
+      "completion_reason": "无依据数字换算；未完成期限安排；句数不符"
+    },
+    {
+      "req_id": "repair-03-v2",
+      "repair_role": "paired_sentinel",
+      "prompt_version": "v2",
+      "source_case": "c17",
+      "category": "interactive",
+      "template_family": "calibration_library_lending",
+      "input_token_bucket": 2,
+      "input_tokens": 176,
+      "output_tokens": 25,
+      "stop_type": "eos",
+      "content_sha256": "1a5b1bc1caa484e7355a023c4aa9d876abccdd055d30de67d5af4f7b2a3bd8d1",
+      "prompt_sha256": "0d0a893183a0f81b38fab3a6f0ba883118a0625adedf42dcd9f69c57f2540ebd",
+      "source_directory": "cases/q06-repair-03-v2",
+      "output_fulltext_sha256": "1a5b1bc1caa484e7355a023c4aa9d876abccdd055d30de67d5af4f7b2a3bd8d1",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q06-repair-03-v2/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "每天读2页，69天内共需读138页。",
+        "可用时间充足，无需担心。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "满足",
+          "reason": "按69天每日2页给出安排，138页乘法正确。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "规定格式": {
+          "status": "满足",
+          "reason": "全文两个完整句，满足两句结构。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "依据是否存在": {
+          "status": "部分满足",
+          "reason": "138=69×2正确；但题干没有总页数和阅读速度，无法证明时间充足。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "是否在解决问题": {
+          "status": "满足",
+          "reason": "第一句直接安排阅读，第二句有无依据的保证。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "部分满足",
+          "reason": "可用时间充足、无需担心是无依据确定判断，不能用背景分钟替代。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "sentences",
+        "complete_sentences": 2,
+        "required": 2,
+        "status": "满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": false,
+        "reason": "138=69×2正确；但题干没有总页数和阅读速度，无法证明时间充足。"
+      },
+      "issues": [
+        "无依据充足保证"
+      ],
+      "overall_completed": false,
+      "completion_reason": "无依据充足保证"
+    },
+    {
+      "req_id": "repair-04-v2",
+      "repair_role": "paired_sentinel",
+      "prompt_version": "v2",
+      "source_case": "c23",
+      "category": "interactive",
+      "template_family": "calibration_stationery_budget",
+      "input_token_bucket": 2,
+      "input_tokens": 175,
+      "output_tokens": 10,
+      "stop_type": "eos",
+      "content_sha256": "aef5df87e3cb9aaf59d10651f9f4ad55db6d9617673c1d0a23eab848b6bc966b",
+      "prompt_sha256": "18a8a2d813c7780579f28e39b6a641544fd32eff1b46244dcdd59a9d45e6554f",
+      "source_directory": "cases/q07-repair-04-v2",
+      "output_fulltext_sha256": "aef5df87e3cb9aaf59d10651f9f4ad55db6d9617673c1d0a23eab848b6bc966b",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q07-repair-04-v2/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "减少购买数量，或者增加可用时间。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "减少购买数量有关，但未按65元、2元约束说明可执行的预算办法；增加时间不能避免支出超预算。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "规定格式": {
+          "status": "不满足",
+          "reason": "只有一句。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "依据是否存在": {
+          "status": "部分满足",
+          "reason": "未报错数；将增加可用时间作为避超支办法没有题目支持。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "是否在解决问题": {
+          "status": "不满足",
+          "reason": "一半建议偏离预算问题，无法据此确定花费不超过65元。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "部分满足",
+          "reason": "未区分时间建议与实际预算约束。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "sentences",
+        "complete_sentences": 1,
+        "required": 2,
+        "status": "不满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": false,
+        "reason": "未报错数；将增加可用时间作为避超支办法没有题目支持。"
+      },
+      "issues": [
+        "句数不符",
+        "预算建议偏题"
+      ],
+      "overall_completed": false,
+      "completion_reason": "句数不符；预算建议偏题"
+    },
+    {
+      "req_id": "repair-04-v1",
+      "repair_role": "paired_sentinel",
+      "prompt_version": "v1",
+      "source_case": "c23",
+      "category": "interactive",
+      "template_family": "calibration_stationery_budget",
+      "input_token_bucket": 2,
+      "input_tokens": 154,
+      "output_tokens": 49,
+      "stop_type": "eos",
+      "content_sha256": "ac90c43fd5b36f1b56ace9ee5303d82873b0e1dc8aaac06be88de045f9973903",
+      "prompt_sha256": "4d2f8d552c89a18cc1540cc9901bc2e94528fd0f931f34fbe77f336632f59dc2",
+      "source_directory": "cases/q08-repair-04-v1",
+      "output_fulltext_sha256": "ac90c43fd5b36f1b56ace9ee5303d82873b0e1dc8aaac06be88de045f9973903",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q08-repair-04-v1/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "文具预算65元，单件2元",
+        "1. 用时间安排表来管理时间，避免重复安排。",
+        "2. 用预算管理表来管理预算，避免超支。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "引用预算与单价，但只提通用表格，未给受65元约束的购买方法；未计算最大件数本身不单独判错。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "规定格式": {
+          "status": "满足",
+          "reason": "编号1和2各成一句，共两句话。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "依据是否存在": {
+          "status": "部分满足",
+          "reason": "65元、2元正确；时间安排与预算约束没有依据关系。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "预算表建议有关，时间表段偏题，缺具体支出核对。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "部分满足",
+          "reason": "避免超支作为建议目标可接受，但没有说明如何按给定单价核对预算。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "sentences",
+        "complete_sentences": 2,
+        "required": 2,
+        "status": "满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": false,
+        "reason": "65元、2元正确；时间安排与预算约束没有依据关系。"
+      },
+      "issues": [
+        "预算内容不足",
+        "无关时间管理"
+      ],
+      "overall_completed": false,
+      "completion_reason": "预算内容不足；无关时间管理"
+    },
+    {
+      "req_id": "repair-05-v1",
+      "repair_role": "paired_sentinel",
+      "prompt_version": "v1",
+      "source_case": "c04",
+      "category": "background",
+      "template_family": "calibration_community_event",
+      "input_token_bucket": 1,
+      "input_tokens": 327,
+      "output_tokens": 384,
+      "stop_type": "limit",
+      "content_sha256": "eea9375baf19bff0a639a7c94ebd50bdd9ad880332d9ee762173cad684b8b0b2",
+      "prompt_sha256": "24609fc3e8aa79df63082310c5046534cd35e5939e1559060d195c6eadca7f38",
+      "source_directory": "cases/q09-repair-05-v1",
+      "output_fulltext_sha256": "eea9375baf19bff0a639a7c94ebd50bdd9ad880332d9ee762173cad684b8b0b2",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q09-repair-05-v1/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "人员：报名人数78，物资份数14。",
+        "物资：报名人数78，物资份数14。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "不满足",
+          "reason": "未形成六点人员、物资、现场协调分析或行动。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "规定格式": {
+          "status": "不满足",
+          "reason": "反复列出人员/物资记录，远多于六点，尾部截断。 本维同时要求每点有具体依据和行动，详见逐点核读；完整编号外形不自动等于规定格式满足。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "依据是否存在": {
+          "status": "满足",
+          "reason": "反复引用的报名和物资数字源于原记录。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "是否在解决问题": {
+          "status": "不满足",
+          "reason": "把整段记录复制两遍，没有具体安排。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "满足",
+          "reason": "没有新增人数需求或物资规则；缺少行动不等于引用数字错误。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "points",
+        "visible_numbered_points": 0,
+        "complete_points": 0,
+        "required": 6,
+        "status": "不满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": false,
+        "reason": "反复引用的报名和物资数字源于原记录。"
+      },
+      "issues": [
+        "整段复述",
+        "未给行动",
+        "非六点"
+      ],
+      "overall_completed": false,
+      "completion_reason": "整段复述；未给行动；非六点",
+      "background_each_point_review": {
+        "status": "不满足",
+        "all_six_have_valid_specific_basis_and_action": false,
+        "points": [
+          {
+            "point": 1,
+            "status": "不满足",
+            "reason": "整段复制报名/物资数据，未形成有行动的第1点。"
+          },
+          {
+            "point": 2,
+            "status": "不满足",
+            "reason": "无独立第2点。"
+          },
+          {
+            "point": 3,
+            "status": "不满足",
+            "reason": "无现场协调行动。"
+          },
+          {
+            "point": 4,
+            "status": "不满足",
+            "reason": "无第4点。"
+          },
+          {
+            "point": 5,
+            "status": "不满足",
+            "reason": "无第5点。"
+          },
+          {
+            "point": 6,
+            "status": "不满足",
+            "reason": "无第6点。"
+          }
+        ]
+      }
+    },
+    {
+      "req_id": "repair-05-v2",
+      "repair_role": "paired_sentinel",
+      "prompt_version": "v2",
+      "source_case": "c04",
+      "category": "background",
+      "template_family": "calibration_community_event",
+      "input_token_bucket": 1,
+      "input_tokens": 375,
+      "output_tokens": 351,
+      "stop_type": "eos",
+      "content_sha256": "28ba411adf05c840abb1522650af9dfaaedb8f93d9ba735aae2f09d2eeab7ed7",
+      "prompt_sha256": "4c35fd61f428e205d41705c30fb0f7755fd7fd5f624f8f06380ef19f369ff91b",
+      "source_directory": "cases/q10-repair-05-v2",
+      "output_fulltext_sha256": "28ba411adf05c840abb1522650af9dfaaedb8f93d9ba735aae2f09d2eeab7ed7",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q10-repair-05-v2/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "报名人数为78的社区活动，可能需要至少78名参与者才能确保活动的顺利进行。",
+        "因此需要至少78名现场协调人员。",
+        "可以安排78名现场协调人员和15份物资。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "有六点人员/物资/协调标题，但协调人数依据错误，安排未可靠完成。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "规定格式": {
+          "status": "部分满足",
+          "reason": "六个编号段落均完整，六点外形满足；各点依据与行动另评。 本维同时要求每点有具体依据和行动，详见逐点核读；完整编号外形不自动等于规定格式满足。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "依据是否存在": {
+          "status": "不满足",
+          "reason": "报名人数不能推出至少78名协调员；78来自记录1、15份来自其他记录，未核是否同场活动。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "给了一些准备和分配动作，但第3、4、6点重复错误换算，第2、5点重复物资。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "不满足",
+          "reason": "把报名人数当协调员下限，物资份数当所需数量；未核岗位规则、物资用途。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "points",
+        "visible_numbered_points": 6,
+        "complete_points": 6,
+        "required": 6,
+        "status": "满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": true,
+        "reason": "报名人数不能推出至少78名协调员；78来自记录1、15份来自其他记录，未核是否同场活动。"
+      },
+      "issues": [
+        "报名人数误当协调人数",
+        "跨记录拼接",
+        "重复内容"
+      ],
+      "overall_completed": false,
+      "completion_reason": "报名人数误当协调人数；跨记录拼接；重复内容",
+      "background_each_point_review": {
+        "status": "部分满足",
+        "all_six_have_valid_specific_basis_and_action": false,
+        "points": [
+          {
+            "point": 1,
+            "status": "部分满足",
+            "reason": "78报名对应资料，但至少78名参与者确保顺利没有规则，行动不具体。"
+          },
+          {
+            "point": 2,
+            "status": "部分满足",
+            "reason": "15份确实出现，但记录份数不能直接视作所需份数；分配动作未给用途。"
+          },
+          {
+            "point": 3,
+            "status": "不满足",
+            "reason": "至少78名协调员没有依据。"
+          },
+          {
+            "point": 4,
+            "status": "部分满足",
+            "reason": "78名协调员安排依据仍错误。"
+          },
+          {
+            "point": 5,
+            "status": "不满足",
+            "reason": "重复按15份准备，未核需求和用途。"
+          },
+          {
+            "point": 6,
+            "status": "部分满足",
+            "reason": "把78报名与别条15份拼接安排，重复第3/4点。"
+          }
+        ]
+      }
+    },
+    {
+      "req_id": "repair-06-v2",
+      "repair_role": "paired_sentinel",
+      "prompt_version": "v2",
+      "source_case": "c08",
+      "category": "background",
+      "template_family": "calibration_training_diary",
+      "input_token_bucket": 1,
+      "input_tokens": 372,
+      "output_tokens": 301,
+      "stop_type": "eos",
+      "content_sha256": "2fd29962f75817ad4d6ebf4cfeee2fae4f5d03146851ff5ae50a4249e51b7e44",
+      "prompt_sha256": "bc9ed2cc94b3a472df42184d2f69bbdb56f256a49b48a48a79d6bced17ee3703",
+      "source_directory": "cases/q11-repair-06-v2",
+      "output_fulltext_sha256": "2fd29962f75817ad4d6ebf4cfeee2fae4f5d03146851ff5ae50a4249e51b7e44",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q11-repair-06-v2/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "训练时间（分钟）和休息时间（分钟）。",
+        "根据训练记录中的具体数据，分析训练效果，调整训练计划，确保训练效果最大化。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "覆盖节奏、休息、记录等标题，但没有任何具体记录或针对差异的安排。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "规定格式": {
+          "status": "部分满足",
+          "reason": "六个编号点完整，且有依据/行动标签；标签不能证明内容满足。 本维同时要求每点有具体依据和行动，详见逐点核读；完整编号外形不自动等于规定格式满足。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "依据是否存在": {
+          "status": "部分满足",
+          "reason": "字段确实存在，但所谓具体数据没有实际摘出；训练效果并未在资料提供。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "多个点重复调整计划、效果最大化，没有可核对的记录改进步骤。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "部分满足",
+          "reason": "未说明仅凭训练/休息分钟不能判断效果或充分程度；最大化为行动目标，不当成已观察效果。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "points",
+        "visible_numbered_points": 6,
+        "complete_points": 6,
+        "required": 6,
+        "status": "满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": false,
+        "reason": "字段确实存在，但所谓具体数据没有实际摘出；训练效果并未在资料提供。"
+      },
+      "issues": [
+        "依据空泛",
+        "行动重复",
+        "记录改进不足"
+      ],
+      "overall_completed": false,
+      "completion_reason": "依据空泛；行动重复；记录改进不足",
+      "background_each_point_review": {
+        "status": "部分满足",
+        "all_six_have_valid_specific_basis_and_action": false,
+        "points": [
+          {
+            "point": 1,
+            "status": "部分满足",
+            "reason": "只列训练/休息字段，无具体记录对比。"
+          },
+          {
+            "point": 2,
+            "status": "部分满足",
+            "reason": "只列休息字段，无时长或个人反馈核查。"
+          },
+          {
+            "point": 3,
+            "status": "部分满足",
+            "reason": "所谓具体数据未实际引用，未给记录改进方法。"
+          },
+          {
+            "point": 4,
+            "status": "部分满足",
+            "reason": "重复平衡/最大化目标，无具体安排。"
+          },
+          {
+            "point": 5,
+            "status": "部分满足",
+            "reason": "重复第3点，没有新增记录字段。"
+          },
+          {
+            "point": 6,
+            "status": "部分满足",
+            "reason": "重复第4点，没有独立依据和行动。"
+          }
+        ]
+      }
+    },
+    {
+      "req_id": "repair-06-v1",
+      "repair_role": "paired_sentinel",
+      "prompt_version": "v1",
+      "source_case": "c08",
+      "category": "background",
+      "template_family": "calibration_training_diary",
+      "input_token_bucket": 1,
+      "input_tokens": 324,
+      "output_tokens": 384,
+      "stop_type": "limit",
+      "content_sha256": "db162fced1441ad3a6cf546f97f3daa4dda8aa54b259bf07fdc41dd001ca3a08",
+      "prompt_sha256": "8829cbfdcc7c16f497ade1008519b56eb9df96d973618b6e7715ebb06532ed1e",
+      "source_directory": "cases/q12-repair-06-v1",
+      "output_fulltext_sha256": "db162fced1441ad3a6cf546f97f3daa4dda8aa54b259bf07fdc41dd001ca3a08",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q12-repair-06-v1/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "记录19-21分钟，记录22-24分钟",
+        "记录113-114分钟"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "不满足",
+          "reason": "没有六点训练、休息、记录改进分析。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "规定格式": {
+          "status": "不满足",
+          "reason": "连续列号与分钟，未形成六点。 本维同时要求每点有具体依据和行动，详见逐点核读；完整编号外形不自动等于规定格式满足。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "依据是否存在": {
+          "status": "不满足",
+          "reason": "原题只有19条记录；输出编出22至114等记录，把记录号和分钟混为一体。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "是否在解决问题": {
+          "status": "不满足",
+          "reason": "持续生成记录号序列，没有训练安排或改进动作。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "不满足",
+          "reason": "大量不存在的记录以确定语气呈现。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "points",
+        "visible_numbered_points": 0,
+        "complete_points": 0,
+        "required": 6,
+        "status": "不满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": true,
+        "quantity_or_unit_inconsistency": true,
+        "serious_unsupported_conclusion": true,
+        "reason": "原题只有19条记录；输出编出22至114等记录，把记录号和分钟混为一体。"
+      },
+      "issues": [
+        "不存在的记录",
+        "循环列号",
+        "未给行动"
+      ],
+      "overall_completed": false,
+      "completion_reason": "不存在的记录；循环列号；未给行动",
+      "background_each_point_review": {
+        "status": "不满足",
+        "all_six_have_valid_specific_basis_and_action": false,
+        "points": [
+          {
+            "point": 1,
+            "status": "不满足",
+            "reason": "记录号/分钟串列而非依据行动点。"
+          },
+          {
+            "point": 2,
+            "status": "不满足",
+            "reason": "未形成第2点。"
+          },
+          {
+            "point": 3,
+            "status": "不满足",
+            "reason": "未形成第3点。"
+          },
+          {
+            "point": 4,
+            "status": "不满足",
+            "reason": "未形成第4点。"
+          },
+          {
+            "point": 5,
+            "status": "不满足",
+            "reason": "未形成第5点。"
+          },
+          {
+            "point": 6,
+            "status": "不满足",
+            "reason": "未形成第6点。"
+          }
+        ]
+      }
+    },
+    {
+      "req_id": "repair-07-v1",
+      "repair_role": "paired_sentinel",
+      "prompt_version": "v1",
+      "source_case": "c18",
+      "category": "background",
+      "template_family": "calibration_greenhouse_log",
+      "input_token_bucket": 1,
+      "input_tokens": 331,
+      "output_tokens": 384,
+      "stop_type": "limit",
+      "content_sha256": "1c9436f29b157f14990f2101b4ff6f3c5948fbf7fc49ce7cb14ef80d6d41c11b",
+      "prompt_sha256": "3fd7b5ef2118bc90b09db788aa5313c2f215846addb3b8965eb967feeea4a051",
+      "source_directory": "cases/q13-repair-07-v1",
+      "output_fulltext_sha256": "1c9436f29b157f14990f2101b4ff6f3c5948fbf7fc49ce7cb14ef80d6d41c11b",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q13-repair-07-v1/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "记录1-记录23，温度和湿度都异常，温度范围在20-90之间",
+        "补查方法：记录1-记录23，温度和湿度都异常，需要补查。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "提到异常与补查，但结论无标准，方法只重复需要补查，后续安排缺失。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "规定格式": {
+          "status": "不满足",
+          "reason": "异常/补查字样连续重复，未形成六点完整安排。 本维同时要求每点有具体依据和行动，详见逐点核读；完整编号外形不自动等于规定格式满足。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "依据是否存在": {
+          "status": "不满足",
+          "reason": "记录23温度12，因此温度范围20—90错误；没有正常阈值，不能判全异常。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "是否在解决问题": {
+          "status": "不满足",
+          "reason": "反复说需要补查，没有传感器、基准或复测步骤。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "不满足",
+          "reason": "把无阈值的记录全部判异常。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "points",
+        "visible_numbered_points": 0,
+        "complete_points": 0,
+        "required": 6,
+        "status": "不满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": true,
+        "quantity_or_unit_inconsistency": true,
+        "serious_unsupported_conclusion": true,
+        "reason": "记录23温度12，因此温度范围20—90错误；没有正常阈值，不能判全异常。"
+      },
+      "issues": [
+        "温度范围错误",
+        "无阈值判异常",
+        "循环"
+      ],
+      "overall_completed": false,
+      "completion_reason": "温度范围错误；无阈值判异常；循环",
+      "background_each_point_review": {
+        "status": "不满足",
+        "all_six_have_valid_specific_basis_and_action": false,
+        "points": [
+          {
+            "point": 1,
+            "status": "不满足",
+            "reason": "全异常无阈值且范围有错，未形成六点。"
+          },
+          {
+            "point": 2,
+            "status": "不满足",
+            "reason": "重复需要补查无方法。"
+          },
+          {
+            "point": 3,
+            "status": "不满足",
+            "reason": "重复需要补查无方法。"
+          },
+          {
+            "point": 4,
+            "status": "不满足",
+            "reason": "重复需要补查无方法。"
+          },
+          {
+            "point": 5,
+            "status": "不满足",
+            "reason": "重复需要补查无方法。"
+          },
+          {
+            "point": 6,
+            "status": "不满足",
+            "reason": "重复需要补查无方法。"
+          }
+        ]
+      }
+    },
+    {
+      "req_id": "repair-07-v2",
+      "repair_role": "paired_sentinel",
+      "prompt_version": "v2",
+      "source_case": "c18",
+      "category": "background",
+      "template_family": "calibration_greenhouse_log",
+      "input_token_bucket": 1,
+      "input_tokens": 379,
+      "output_tokens": 384,
+      "stop_type": "limit",
+      "content_sha256": "b950d7b5c74f90645dc273932f0d837d56779ceadd2a0529fecdcddafb31f205",
+      "prompt_sha256": "d6beef990bf1a181011ab7f8ee6d52f864698ab92389517f0067aabfc30e354d",
+      "source_directory": "cases/q14-repair-07-v2",
+      "output_fulltext_sha256": "b950d7b5c74f90645dc273932f0d837d56779ceadd2a0529fecdcddafb31f205",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q14-repair-07-v2/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "记录14和记录22显示温度和湿度都处于极端值",
+        "记录17和记录24",
+        "记录18和记录25"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "有传感器校准/维护核查动作，但不实异常依据且未完成六点。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "规定格式": {
+          "status": "部分满足",
+          "reason": "出现第1至5点，第5点未写完，缺第6点。 本维同时要求每点有具体依据和行动，详见逐点核读；完整编号外形不自动等于规定格式满足。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "依据是否存在": {
+          "status": "不满足",
+          "reason": "资料只有23条，24/25不存在；记录22是53/2而非与14相同的56/15，极端结论无阈值。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "传感器检查可执行，但各点重复同一办法并绑定错误记录。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "不满足",
+          "reason": "将无标准数据称为极端值；用可能二字仍未保留记录存在性及正常阈值缺口。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "points",
+        "visible_numbered_points": 5,
+        "complete_points": 4,
+        "required": 6,
+        "incomplete_tail": true,
+        "status": "部分满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": true,
+        "quantity_or_unit_inconsistency": true,
+        "serious_unsupported_conclusion": true,
+        "reason": "资料只有23条，24/25不存在；记录22是53/2而非与14相同的56/15，极端结论无阈值。"
+      },
+      "issues": [
+        "不存在的记录",
+        "无阈值判极端",
+        "未满六点"
+      ],
+      "overall_completed": false,
+      "completion_reason": "不存在的记录；无阈值判极端；未满六点",
+      "background_each_point_review": {
+        "status": "部分满足",
+        "all_six_have_valid_specific_basis_and_action": false,
+        "points": [
+          {
+            "point": 1,
+            "status": "部分满足",
+            "reason": "14/22被混合称极端，校准检查可执行但依据不实。"
+          },
+          {
+            "point": 2,
+            "status": "部分满足",
+            "reason": "15/21被混合称极端，检查动作重复。"
+          },
+          {
+            "point": 3,
+            "status": "部分满足",
+            "reason": "16/23被混合称极端，检查动作重复。"
+          },
+          {
+            "point": 4,
+            "status": "部分满足",
+            "reason": "24号不存在，虽有检查动作也没有真实记录依据。"
+          },
+          {
+            "point": 5,
+            "status": "部分满足",
+            "reason": "25号不存在，第5点未写完。"
+          },
+          {
+            "point": 6,
+            "status": "不满足",
+            "reason": "未出现第6点。"
+          }
+        ]
+      }
+    },
+    {
+      "req_id": "repair-08-v2",
+      "repair_role": "paired_sentinel",
+      "prompt_version": "v2",
+      "source_case": "c22",
+      "category": "background",
+      "template_family": "calibration_storage_inventory",
+      "input_token_bucket": 1,
+      "input_tokens": 383,
+      "output_tokens": 286,
+      "stop_type": "eos",
+      "content_sha256": "5567d53713b3b88c29fa4e770a7e8881c8ece93ef68fd42a51d58c517e3cfc72",
+      "prompt_sha256": "435228cb3f8186deb6ae5e00c7857b9002682edf897f3b3eed48edfe73184b7f",
+      "source_directory": "cases/q15-repair-08-v2",
+      "output_fulltext_sha256": "5567d53713b3b88c29fa4e770a7e8881c8ece93ef68fd42a51d58c517e3cfc72",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q15-repair-08-v2/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "库存件数减少，当天领用件数增加。",
+        "优先盘点库存件数减少的仓库",
+        "分析库存件数和领用件数的趋势"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "有缺货、盘点、补货标题和动作，但全用同一未证实趋势，无法完成可靠安排。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "规定格式": {
+          "status": "部分满足",
+          "reason": "六个编号点完整；具体依据另评。 本维同时要求每点有具体依据和行动，详见逐点核读；完整编号外形不自动等于规定格式满足。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "依据是否存在": {
+          "status": "不满足",
+          "reason": "没有时间顺序或同仓关联，无法推出库存减少、领用增加。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "监控和调整补货有方向，但未引用具体快照或核查库存定义，六点依据重复。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "不满足",
+          "reason": "把无序快照当趋势和异常，没有核对先后关系。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "points",
+        "visible_numbered_points": 6,
+        "complete_points": 6,
+        "required": 6,
+        "status": "满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": true,
+        "reason": "没有时间顺序或同仓关联，无法推出库存减少、领用增加。"
+      },
+      "issues": [
+        "无序记录当趋势",
+        "依据重复",
+        "缺具体盘点次序"
+      ],
+      "overall_completed": false,
+      "completion_reason": "无序记录当趋势；依据重复；缺具体盘点次序",
+      "background_each_point_review": {
+        "status": "部分满足",
+        "all_six_have_valid_specific_basis_and_action": false,
+        "points": [
+          {
+            "point": 1,
+            "status": "部分满足",
+            "reason": "监控动作建立在未证实库存减少/领用增加上。"
+          },
+          {
+            "point": 2,
+            "status": "部分满足",
+            "reason": "优先盘点规则未给真实减少记录。"
+          },
+          {
+            "point": 3,
+            "status": "部分满足",
+            "reason": "补货频率/数量依据同一未证实趋势。"
+          },
+          {
+            "point": 4,
+            "status": "部分满足",
+            "reason": "记录异常建议可做，但没有证实的异常与原因。"
+          },
+          {
+            "point": 5,
+            "status": "部分满足",
+            "reason": "无序快照不能支持趋势分析结论。"
+          },
+          {
+            "point": 6,
+            "status": "部分满足",
+            "reason": "稳定性目标泛化，重复同一依据。"
+          }
+        ]
+      }
+    },
+    {
+      "req_id": "repair-08-v1",
+      "repair_role": "paired_sentinel",
+      "prompt_version": "v1",
+      "source_case": "c22",
+      "category": "background",
+      "template_family": "calibration_storage_inventory",
+      "input_token_bucket": 1,
+      "input_tokens": 335,
+      "output_tokens": 384,
+      "stop_type": "limit",
+      "content_sha256": "9ac210782e93f1350d6e4e18651c812afff1b251815e1e77786d434eabd27f41",
+      "prompt_sha256": "b7e053aac8b994a5cc043d6b5e262952fd4746cb38479bc21229128acee3bcf5",
+      "source_directory": "cases/q16-repair-08-v1",
+      "output_fulltext_sha256": "9ac210782e93f1350d6e4e18651c812afff1b251815e1e77786d434eabd27f41",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q16-repair-08-v1/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "库存件数从低到高依次为：23、27、33、41、44、46、47、47、47、47",
+        "63、63、63、63"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "只开始缺货风险标题，没有盘点顺序与补货安排。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "规定格式": {
+          "status": "不满足",
+          "reason": "仅第1点，后续为数列循环，非六点。 本维同时要求每点有具体依据和行动，详见逐点核读；完整编号外形不自动等于规定格式满足。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "依据是否存在": {
+          "status": "不满足",
+          "reason": "所谓排序漏掉29、35等且重复47/63次数远超原记录，无法代表17条库存。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "是否在解决问题": {
+          "status": "不满足",
+          "reason": "无限列数，没有风险核查或补货行动。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "部分满足",
+          "reason": "未给未来不缺货保证，但把错误排序当记录事实。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "points",
+        "visible_numbered_points": 1,
+        "complete_points": 0,
+        "required": 6,
+        "incomplete_tail": true,
+        "status": "不满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": true,
+        "quantity_or_unit_inconsistency": true,
+        "serious_unsupported_conclusion": false,
+        "reason": "所谓排序漏掉29、35等且重复47/63次数远超原记录，无法代表17条库存。"
+      },
+      "issues": [
+        "库存排序错误",
+        "数列循环",
+        "未给行动"
+      ],
+      "overall_completed": false,
+      "completion_reason": "库存排序错误；数列循环；未给行动",
+      "background_each_point_review": {
+        "status": "部分满足",
+        "all_six_have_valid_specific_basis_and_action": false,
+        "points": [
+          {
+            "point": 1,
+            "status": "部分满足",
+            "reason": "第1点仅错误排序与循环，没有行动。"
+          },
+          {
+            "point": 2,
+            "status": "不满足",
+            "reason": "缺第2点。"
+          },
+          {
+            "point": 3,
+            "status": "不满足",
+            "reason": "缺第3点。"
+          },
+          {
+            "point": 4,
+            "status": "不满足",
+            "reason": "缺第4点。"
+          },
+          {
+            "point": 5,
+            "status": "不满足",
+            "reason": "缺第5点。"
+          },
+          {
+            "point": 6,
+            "status": "不满足",
+            "reason": "缺第6点。"
+          }
+        ]
+      }
+    },
+    {
+      "req_id": "dev-22001-i000",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "interactive",
+      "template_family": "development_bike_route",
+      "input_token_bucket": 0,
+      "input_tokens": 64,
+      "output_tokens": 11,
+      "stop_type": "eos",
+      "content_sha256": "555bf53949ada4bfc4290fc92bb1392e8884ffdb50eb5c78249328e1cad1f590",
+      "prompt_sha256": "1bc73b8a4f8816a1c967096f92bc5579f0401b97a314db0cef3d7ccfbc6d30fd",
+      "source_directory": "cases/q17-dev-22001-i000",
+      "output_fulltext_sha256": "555bf53949ada4bfc4290fc92bb1392e8884ffdb50eb5c78249328e1cad1f590",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q17-dev-22001-i000/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "出发前检查装备，确保骑行工具完好。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "给出装备检查，但没有结合54公里路线和6分钟休息安排补给或休息准备。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "规定格式": {
+          "status": "不满足",
+          "reason": "只有一句，未完成两句要求。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "依据是否存在": {
+          "status": "满足",
+          "reason": "检查工具是建议，未编造速度或抵达时刻。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "有可执行装备检查，但出发准备内容较少。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "满足",
+          "reason": "确保工具完好是检查目标，不当成已证明安全或全程无风险。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "sentences",
+        "complete_sentences": 1,
+        "required": 2,
+        "status": "不满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": false,
+        "reason": "检查工具是建议，未编造速度或抵达时刻。"
+      },
+      "issues": [
+        "句数不符",
+        "路线休息信息未用于准备"
+      ],
+      "overall_completed": false,
+      "completion_reason": "句数不符；路线休息信息未用于准备"
+    },
+    {
+      "req_id": "dev-22001-b000",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "background",
+      "template_family": "development_repair_ticket",
+      "input_token_bucket": 0,
+      "input_tokens": 134,
+      "output_tokens": 384,
+      "stop_type": "limit",
+      "content_sha256": "369805def5fcf3881e8a097d4de289ba6091ee81780f6a62553bcf220b78f1c1",
+      "prompt_sha256": "ab56d6aaac6bedc2fb7a315a05b6153d1b9e404d67d81505381dd9ae8941851c",
+      "source_directory": "cases/q18-dev-22001-b000",
+      "output_fulltext_sha256": "369805def5fcf3881e8a097d4de289ba6091ee81780f6a62553bcf220b78f1c1",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q18-dev-22001-b000/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "目前等待时间52分钟，影响人数9人。",
+        "根据设备报修工单的优先级和紧急程度，确定处理顺序。",
+        "最后，根据设备报修工单的处理流程，确定验证步骤和进度通知。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "提到核信息、确定顺序，但未给验证设备恢复的实际步骤、何时向9人通知。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "规定格式": {
+          "status": "部分满足",
+          "reason": "第1至5点，第5点截断，缺第6点。 本维同时要求每点有具体依据和行动，详见逐点核读；完整编号外形不自动等于规定格式满足。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "依据是否存在": {
+          "status": "满足",
+          "reason": "52分钟、9人正确；后续点未结合这两数，优先级/流程也未在资料提供。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "各点反复同一段确认工单信息，未形成不同验证与通知动作。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "部分满足",
+          "reason": "核查设备类型原因是合理建议；未把优先级规则作为自拟建议说明，但不据此指控已有明确假规则。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "points",
+        "visible_numbered_points": 5,
+        "complete_points": 4,
+        "required": 6,
+        "incomplete_tail": true,
+        "status": "部分满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": false,
+        "reason": "52分钟、9人正确；后续点未结合这两数，优先级/流程也未在资料提供。"
+      },
+      "issues": [
+        "未满六点",
+        "行动循环",
+        "验证通知不足"
+      ],
+      "overall_completed": false,
+      "completion_reason": "未满六点；行动循环；验证通知不足",
+      "background_each_point_review": {
+        "status": "部分满足",
+        "all_six_have_valid_specific_basis_and_action": false,
+        "points": [
+          {
+            "point": 1,
+            "status": "满足",
+            "reason": "52分钟/9人与确认设备详情有可识别联系，属于可执行补查。"
+          },
+          {
+            "point": 2,
+            "status": "部分满足",
+            "reason": "重复确认详情，没有实际验证设备的步骤和本点具体依据。"
+          },
+          {
+            "point": 3,
+            "status": "部分满足",
+            "reason": "重复确认详情，没有通知对象/时机。"
+          },
+          {
+            "point": 4,
+            "status": "满足",
+            "reason": "重复第1点，单点有依据动作但不增加新分析。"
+          },
+          {
+            "point": 5,
+            "status": "部分满足",
+            "reason": "第5点未写完且仍重复，缺验证动作。"
+          },
+          {
+            "point": 6,
+            "status": "不满足",
+            "reason": "未出现第6点。"
+          }
+        ]
+      }
+    },
+    {
+      "req_id": "dev-22001-i001",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "interactive",
+      "template_family": "development_pc_cooling",
+      "input_token_bucket": 1,
+      "input_tokens": 92,
+      "output_tokens": 13,
+      "stop_type": "eos",
+      "content_sha256": "0ffa3c0b85c89465b15dcc07328bdbba2958973bece10240f78083c357e897a2",
+      "prompt_sha256": "e2f2f73d2bc55c52225e831b114ffd3a67904fa80586bd808b566127220b65c9",
+      "source_directory": "cases/q19-dev-22001-i001",
+      "output_fulltext_sha256": "0ffa3c0b85c89465b15dcc07328bdbba2958973bece10240f78083c357e897a2",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q19-dev-22001-i001/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "先检查电脑风扇，再检查桌边空隙。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "满足",
+          "reason": "给出先风扇、后通风空隙的可执行检查顺序，达到内容最低要求。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "规定格式": {
+          "status": "不满足",
+          "reason": "只有一句，两句格式未完成。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "依据是否存在": {
+          "status": "满足",
+          "reason": "未把17分钟或3厘米当成已确认故障原因。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "是否在解决问题": {
+          "status": "满足",
+          "reason": "直接按题意安排两项检查，没有复述背景。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "满足",
+          "reason": "没有断言根因、正常阈值或修复成功。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "sentences",
+        "complete_sentences": 1,
+        "required": 2,
+        "status": "不满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": false,
+        "reason": "未把17分钟或3厘米当成已确认故障原因。"
+      },
+      "issues": [
+        "句数不符"
+      ],
+      "overall_completed": false,
+      "completion_reason": "句数不符"
+    },
+    {
+      "req_id": "dev-22001-b001",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "background",
+      "template_family": "development_course_feedback",
+      "input_token_bucket": 1,
+      "input_tokens": 337,
+      "output_tokens": 384,
+      "stop_type": "limit",
+      "content_sha256": "7ea4572cd58deef937230b5be4b61a6b982e172874f2d4121678f83b0ee2076a",
+      "prompt_sha256": "62533e22878cc6e116b8bbc6116b684821415fc9e74e197a9e48a97573e530e4",
+      "source_directory": "cases/q20-dev-22001-b001",
+      "output_fulltext_sha256": "7ea4572cd58deef937230b5be4b61a6b982e172874f2d4121678f83b0ee2076a",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q20-dev-22001-b001/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "大多数学生在做题时存在对题目理解不透彻的问题。",
+        "学生在做题时存在订正时间不充足的问题。",
+        "学生在订正时存在订正方法不正确的问题。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "有困难、订正、反馈的标题与建议，但把原因臆断为事实，未可靠完成。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "规定格式": {
+          "status": "部分满足",
+          "reason": "有1至6编号，第6点只开头未写完，六点未完整。 本维同时要求每点有具体依据和行动，详见逐点核读；完整编号外形不自动等于规定格式满足。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "依据是否存在": {
+          "status": "不满足",
+          "reason": "已做/待订正数量不能证明理解不透、时间不足或方法错误；列出记录号不构成原因证据。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "加强讲解和安排时间是动作，但1/4、2/5重复，未针对7、15等待订正数核查。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "不满足",
+          "reason": "用从记录可以看出断言困难原因，未提出核对错题、学生反馈等证据步骤。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "points",
+        "visible_numbered_points": 6,
+        "complete_points": 5,
+        "required": 6,
+        "incomplete_tail": true,
+        "status": "部分满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": true,
+        "reason": "已做/待订正数量不能证明理解不透、时间不足或方法错误；列出记录号不构成原因证据。"
+      },
+      "issues": [
+        "从数量臆断学习原因",
+        "重复内容",
+        "第六点未完成"
+      ],
+      "overall_completed": false,
+      "completion_reason": "从数量臆断学习原因；重复内容；第六点未完成",
+      "background_each_point_review": {
+        "status": "部分满足",
+        "all_six_have_valid_specific_basis_and_action": false,
+        "points": [
+          {
+            "point": 1,
+            "status": "部分满足",
+            "reason": "记录号存在，但理解不透结论不由数量支持。"
+          },
+          {
+            "point": 2,
+            "status": "部分满足",
+            "reason": "订正时间不足无资料，安排时间是一般建议。"
+          },
+          {
+            "point": 3,
+            "status": "部分满足",
+            "reason": "订正方法错误无资料，指导方法是一般建议。"
+          },
+          {
+            "point": 4,
+            "status": "部分满足",
+            "reason": "重复第1点同一臆断。"
+          },
+          {
+            "point": 5,
+            "status": "部分满足",
+            "reason": "重复第2点同一臆断。"
+          },
+          {
+            "point": 6,
+            "status": "部分满足",
+            "reason": "第6点尚未完成。"
+          }
+        ]
+      }
+    },
+    {
+      "req_id": "dev-22001-i002",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "interactive",
+      "template_family": "development_study_break",
+      "input_token_bucket": 2,
+      "input_tokens": 147,
+      "output_tokens": 21,
+      "stop_type": "eos",
+      "content_sha256": "f5ce2d2487aa5e1058a4a1878ab050ca5bb4b1b236d53eb6977ae4c8af948356",
+      "prompt_sha256": "8be29a7f4e3632c64658a8ff948c83f4001870e0a86878a0a5463173c062165b",
+      "source_directory": "cases/q21-dev-22001-i002",
+      "output_fulltext_sha256": "f5ce2d2487aa5e1058a4a1878ab050ca5bb4b1b236d53eb6977ae4c8af948356",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q21-dev-22001-i002/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "可用时间50分钟，已有安排1项，专注49分钟，休息2分钟。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "没有安排40页逐轮完成，反而使用非题干背景计算专注时长。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "规定格式": {
+          "status": "不满足",
+          "reason": "仅一句。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "依据是否存在": {
+          "status": "不满足",
+          "reason": "自行选的50分钟与49分钟专注加2分钟休息冲突，合计51分钟；题干无专注时长。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "给出一轮数值但缺页数安排，也不说明后续如何完成。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "不满足",
+          "reason": "把背景50分钟当约束，并把49分钟写成确定结果，未说明自拟安排。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "sentences",
+        "complete_sentences": 1,
+        "required": 2,
+        "status": "不满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": true,
+        "quantity_or_unit_inconsistency": true,
+        "serious_unsupported_conclusion": false,
+        "reason": "自行选的50分钟与49分钟专注加2分钟休息冲突，合计51分钟；题干无专注时长。"
+      },
+      "issues": [
+        "合计时长冲突",
+        "背景冒充题干",
+        "页数未安排",
+        "句数不符"
+      ],
+      "overall_completed": false,
+      "completion_reason": "合计时长冲突；背景冒充题干；页数未安排；句数不符"
+    },
+    {
+      "req_id": "dev-22001-b002",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "background",
+      "template_family": "development_parcel_dispatch",
+      "input_token_bucket": 2,
+      "input_tokens": 647,
+      "output_tokens": 257,
+      "stop_type": "eos",
+      "content_sha256": "575400671d77ce5abc7f5db1c2ab339339b6222faf46d8f84dd3ba5425d00013",
+      "prompt_sha256": "cd24f8b6409b4f1d532d72b3ffca08c1961a7db9699c93c344ceaedae1659c6a",
+      "source_directory": "cases/q22-dev-22001-b002",
+      "output_fulltext_sha256": "575400671d77ce5abc7f5db1c2ab339339b6222faf46d8f84dd3ba5425d00013",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q22-dev-22001-b002/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "包裹件数从低到高逐渐增加。",
+        "路线安排是合理的，没有异常。",
+        "交接记录是不需要的。",
+        "记录中没有时间顺序，所有包裹件数都是按照时间顺序增加的。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "涉及路线、异常、交接，但直接取消核对与交接，未完成题意。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        "规定格式": {
+          "status": "部分满足",
+          "reason": "六个编号段均完整；具体依据与行动另评。 本维同时要求每点有具体依据和行动，详见逐点核读；完整编号外形不自动等于规定格式满足。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        "依据是否存在": {
+          "status": "不满足",
+          "reason": "记录件数35、25、46等并非单调增加，资料无路线；正常、直达目的地等无依据。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        "是否在解决问题": {
+          "status": "不满足",
+          "reason": "前三点用不需要行动代替路线与交接安排，后面也缺具体核查记录。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2,
+            3
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "不满足",
+          "reason": "同时称没有时间顺序又断言按时间增加，给正常/无异常结论。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2,
+            3
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "points",
+        "visible_numbered_points": 6,
+        "complete_points": 6,
+        "required": 6,
+        "status": "满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": true,
+        "reason": "记录件数35、25、46等并非单调增加，资料无路线；正常、直达目的地等无依据。"
+      },
+      "issues": [
+        "无依据趋势",
+        "无依据正常",
+        "取消异常与交接核对"
+      ],
+      "overall_completed": false,
+      "completion_reason": "无依据趋势；无依据正常；取消异常与交接核对",
+      "background_each_point_review": {
+        "status": "部分满足",
+        "all_six_have_valid_specific_basis_and_action": false,
+        "points": [
+          {
+            "point": 1,
+            "status": "不满足",
+            "reason": "无路线和时间依据，却宣布路线合理无异常。"
+          },
+          {
+            "point": 2,
+            "status": "不满足",
+            "reason": "无正常阈值，却取消异常核对。"
+          },
+          {
+            "point": 3,
+            "status": "不满足",
+            "reason": "从无交接资料推出不需交接，缺行动。"
+          },
+          {
+            "point": 4,
+            "status": "部分满足",
+            "reason": "否认时间顺序又断言按时间增加，没有核查动作。"
+          },
+          {
+            "point": 5,
+            "status": "部分满足",
+            "reason": "剩余时间确有差异，但没有具体记录、路线或耗时核查。"
+          },
+          {
+            "point": 6,
+            "status": "部分满足",
+            "reason": "包裹量确有差异，但调整配送策略仍泛化。"
+          }
+        ]
+      }
+    },
+    {
+      "req_id": "dev-22001-i003",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "interactive",
+      "template_family": "development_laundry_plan",
+      "input_token_bucket": 0,
+      "input_tokens": 64,
+      "output_tokens": 15,
+      "stop_type": "eos",
+      "content_sha256": "1c876ce4066ed4a7d8458c0e2dff0905ca18a685442cbedd8a83ed89338d0799",
+      "prompt_sha256": "2416754e5c800fe64e2a830b5ff84be75d129dc2547b7d744d6b46066a6d2145",
+      "source_directory": "cases/q23-dev-22001-i003",
+      "output_fulltext_sha256": "1c876ce4066ed4a7d8458c0e2dff0905ca18a685442cbedd8a83ed89338d0799",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q23-dev-22001-i003/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "将衣物分成7组，每组4件，晾晒。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "7组×4件只覆盖28件，少5件，未处理全部33件。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "规定格式": {
+          "status": "不满足",
+          "reason": "只有一句。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "依据是否存在": {
+          "status": "不满足",
+          "reason": "原题33件、7位置；分组覆盖总量28，明确不符。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "提出分组晾晒动作，但分组总量错误。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "部分满足",
+          "reason": "未增加晾晒位置，未把最后不足一批的通常情况用来解释明确写出的7×4。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "sentences",
+        "complete_sentences": 1,
+        "required": 2,
+        "status": "不满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": true,
+        "quantity_or_unit_inconsistency": true,
+        "serious_unsupported_conclusion": false,
+        "reason": "原题33件、7位置；分组覆盖总量28，明确不符。"
+      },
+      "issues": [
+        "衣物总量不足",
+        "句数不符"
+      ],
+      "overall_completed": false,
+      "completion_reason": "衣物总量不足；句数不符"
+    },
+    {
+      "req_id": "dev-22001-b003",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "background",
+      "template_family": "development_service_incident",
+      "input_token_bucket": 1,
+      "input_tokens": 327,
+      "output_tokens": 384,
+      "stop_type": "limit",
+      "content_sha256": "f8b02313d0b5b7f008f1ef392de2f8dfffa52f83e0c1fa77f86debbe0086f073",
+      "prompt_sha256": "f1f7613293902e58bc27070de26f0dd8bb1c3162b06ad5cc9fd9d30acf337c73",
+      "source_directory": "cases/q24-dev-22001-b003",
+      "output_fulltext_sha256": "f8b02313d0b5b7f008f1ef392de2f8dfffa52f83e0c1fa77f86debbe0086f073",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q24-dev-22001-b003/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "重试次数越多，表示服务的响应时间越长。",
+        "可以设定以下观测指标：请求件数、重试次数、响应时间、成功率等。",
+        "最后，优化"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "提出指标与条件排查，但恢复确认写成采取资源措施，未给恢复后的验证步骤，末点截断。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "规定格式": {
+          "status": "部分满足",
+          "reason": "有第1至6点，第6点未完成。 本维同时要求每点有具体依据和行动，详见逐点核读；完整编号外形不自动等于规定格式满足。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "依据是否存在": {
+          "status": "不满足",
+          "reason": "重试次数不能直接推出响应时间长；计数没有观测窗口，也未证明负载高低。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "观测响应时间/成功率作为建议可执行；其余多为通用优化，未核具体高重试记录。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "不满足",
+          "reason": "假设分支使用如果可接受，但首点直接把重试等同延迟，未保留原因不明。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "points",
+        "visible_numbered_points": 6,
+        "complete_points": 5,
+        "required": 6,
+        "incomplete_tail": true,
+        "status": "部分满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": true,
+        "reason": "重试次数不能直接推出响应时间长；计数没有观测窗口，也未证明负载高低。"
+      },
+      "issues": [
+        "重试误当响应时长",
+        "恢复确认不足",
+        "第六点未完成"
+      ],
+      "overall_completed": false,
+      "completion_reason": "重试误当响应时长；恢复确认不足；第六点未完成",
+      "background_each_point_review": {
+        "status": "部分满足",
+        "all_six_have_valid_specific_basis_and_action": false,
+        "points": [
+          {
+            "point": 1,
+            "status": "部分满足",
+            "reason": "按计数排查建议可讨论，但重试等于时长的依据错误。"
+          },
+          {
+            "point": 2,
+            "status": "部分满足",
+            "reason": "建议观测响应时长/成功率可执行，但未给资料中的具体比较依据。"
+          },
+          {
+            "point": 3,
+            "status": "部分满足",
+            "reason": "条件性恢复措施不等于恢复后验证。"
+          },
+          {
+            "point": 4,
+            "status": "部分满足",
+            "reason": "检查/记录动作有方向，仍未对应具体高重试记录。"
+          },
+          {
+            "point": 5,
+            "status": "部分满足",
+            "reason": "持续上升若出现需分析是条件建议，资料不能证实趋势。"
+          },
+          {
+            "point": 6,
+            "status": "部分满足",
+            "reason": "第6点未写完，泛称代码/资源优化。"
+          }
+        ]
+      }
+    },
+    {
+      "req_id": "dev-22001-i004",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "interactive",
+      "template_family": "development_bike_route",
+      "input_token_bucket": 1,
+      "input_tokens": 91,
+      "output_tokens": 10,
+      "stop_type": "eos",
+      "content_sha256": "4031095748df35791302d4e6f069e36b177f87d4b6ec880529ba077d3605081d",
+      "prompt_sha256": "acfb024965a026a7ebb08df7f1f2e39e26545cda1dfe63bfbdc4917d4d00efb1",
+      "source_directory": "cases/q25-dev-22001-i004",
+      "output_fulltext_sha256": "4031095748df35791302d4e6f069e36b177f87d4b6ec880529ba077d3605081d",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q25-dev-22001-i004/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "出发前检查装备，确保体力充沛。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "有装备和体力准备提醒，但未结合12公里路线、4分钟休息给具体准备。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "规定格式": {
+          "status": "不满足",
+          "reason": "只有一句。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "依据是否存在": {
+          "status": "满足",
+          "reason": "体力充沛是准备目标，未宣称已知身体状态；没有速度/时刻数字。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "有出发前准备方向，较笼统。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "满足",
+          "reason": "不将确保体力充沛解释为已观察的身体事实。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "sentences",
+        "complete_sentences": 1,
+        "required": 2,
+        "status": "不满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": false,
+        "reason": "体力充沛是准备目标，未宣称已知身体状态；没有速度/时刻数字。"
+      },
+      "issues": [
+        "句数不符",
+        "路线休息信息未用于准备"
+      ],
+      "overall_completed": false,
+      "completion_reason": "句数不符；路线休息信息未用于准备"
+    },
+    {
+      "req_id": "dev-22001-b004",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "background",
+      "template_family": "development_repair_ticket",
+      "input_token_bucket": 2,
+      "input_tokens": 651,
+      "output_tokens": 384,
+      "stop_type": "limit",
+      "content_sha256": "b31862a3cd46f55f6237089411e8ad5ee448ad6f054e61acf1696f3447f2c575",
+      "prompt_sha256": "8cff271f53b62f4027c3987c2117a3fe736ef971f30c7d1ff4723e9e8c4c8286",
+      "source_directory": "cases/q26-dev-22001-b004",
+      "output_fulltext_sha256": "b31862a3cd46f55f6237089411e8ad5ee448ad6f054e61acf1696f3447f2c575",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q26-dev-22001-b004/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "大多数工单的等待时间在40分钟到89分钟之间，这表明大多数工单的等待时间处于正常范围。",
+        "大多数工单的处理顺序是按照等待时间进行的",
+        "大多数工单的验证步骤是按照等待时间进行的"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "未给实际处理次序、设备验证或进度通知步骤；把未提供的流程当既有事实。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "规定格式": {
+          "status": "部分满足",
+          "reason": "有1至6编号，第6点在总异常处截断。 本维同时要求每点有具体依据和行动，详见逐点核读；完整编号外形不自动等于规定格式满足。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "依据是否存在": {
+          "status": "不满足",
+          "reason": "无正常范围、已执行顺序/验证/通知资料；总等待时间略高于平均值也无可比对象。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "重复总量略高于平均值、可能优化，没有针对等待/影响记录的具体动作。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "不满足",
+          "reason": "从等待快照断言系统原处理顺序和正常状态，没有保留规则/流程未知。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "points",
+        "visible_numbered_points": 6,
+        "complete_points": 5,
+        "required": 6,
+        "incomplete_tail": true,
+        "status": "部分满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": true,
+        "reason": "无正常范围、已执行顺序/验证/通知资料；总等待时间略高于平均值也无可比对象。"
+      },
+      "issues": [
+        "无阈值判正常",
+        "虚构既有流程",
+        "动作空泛",
+        "第六点未完成"
+      ],
+      "overall_completed": false,
+      "completion_reason": "无阈值判正常；虚构既有流程；动作空泛；第六点未完成",
+      "background_each_point_review": {
+        "status": "部分满足",
+        "all_six_have_valid_specific_basis_and_action": false,
+        "points": [
+          {
+            "point": 1,
+            "status": "部分满足",
+            "reason": "等待范围部分可描述，但正常范围与总量略高平均无依据。"
+          },
+          {
+            "point": 2,
+            "status": "部分满足",
+            "reason": "影响人数范围存在，但小/总量略高平均无判断标准。"
+          },
+          {
+            "point": 3,
+            "status": "部分满足",
+            "reason": "既有处理顺序没有资料，优化动作泛化。"
+          },
+          {
+            "point": 4,
+            "status": "部分满足",
+            "reason": "既有验证步骤没有资料，没有实际验证动作。"
+          },
+          {
+            "point": 5,
+            "status": "部分满足",
+            "reason": "既有进度通知没有资料，没有对象/时点。"
+          },
+          {
+            "point": 6,
+            "status": "部分满足",
+            "reason": "第6点未写完且继续泛论总异常。"
+          }
+        ]
+      }
+    },
+    {
+      "req_id": "dev-22001-i005",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "interactive",
+      "template_family": "development_pc_cooling",
+      "input_token_bucket": 2,
+      "input_tokens": 148,
+      "output_tokens": 13,
+      "stop_type": "eos",
+      "content_sha256": "b191197b3a0f26c53f52fc6efb63d154025f09196936c9d9b8e6a1f742c3e57f",
+      "prompt_sha256": "c8d337b964ac105d5ff910c2051687aeaca55de4c99ed0b3bc698fbe92c6653d",
+      "source_directory": "cases/q27-dev-22001-i005",
+      "output_fulltext_sha256": "b191197b3a0f26c53f52fc6efb63d154025f09196936c9d9b8e6a1f742c3e57f",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q27-dev-22001-i005/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "先检查风扇噪声，再检查桌边空隙。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "满足",
+          "reason": "先检查噪声，再看空隙，有明确先后，内容达到题目最低要求。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "规定格式": {
+          "status": "不满足",
+          "reason": "只有一句。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "依据是否存在": {
+          "status": "满足",
+          "reason": "未把35分钟噪声或9厘米直接判为故障原因。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "是否在解决问题": {
+          "status": "满足",
+          "reason": "直接给出检查顺序，没有抄背景。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "满足",
+          "reason": "未推断根因或保证恢复。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "sentences",
+        "complete_sentences": 1,
+        "required": 2,
+        "status": "不满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": false,
+        "reason": "未把35分钟噪声或9厘米直接判为故障原因。"
+      },
+      "issues": [
+        "句数不符"
+      ],
+      "overall_completed": false,
+      "completion_reason": "句数不符"
+    },
+    {
+      "req_id": "dev-22001-b005",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "background",
+      "template_family": "development_course_feedback",
+      "input_token_bucket": 0,
+      "input_tokens": 138,
+      "output_tokens": 384,
+      "stop_type": "limit",
+      "content_sha256": "6df402b33d6e69e7c6efdfb3320c6b549e3d8e377a69f6c182a4f8b6a7d4c1b0",
+      "prompt_sha256": "ce432a3306473c72a0b5e30d93660949a75db1c72d2855d0c9e9130d02aee844",
+      "source_directory": "cases/q28-dev-22001-b005",
+      "output_fulltext_sha256": "6df402b33d6e69e7c6efdfb3320c6b549e3d8e377a69f6c182a4f8b6a7d4c1b0",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q28-dev-22001-b005/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "根据反馈，学生在计算题和理解题上都存在较多错误。",
+        "学生在订正过程中存在拖延和不认真订正的问题。",
+        "学生在反馈过程中存在反馈不准确和反馈不及时的问题。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "未从34已做、7待订正出发核查共性困难，直接虚构错误类型和态度原因。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "规定格式": {
+          "status": "部分满足",
+          "reason": "六个编号但第6点尚未给完整依据与行动，尾句截断。 本维同时要求每点有具体依据和行动，详见逐点核读；完整编号外形不自动等于规定格式满足。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "依据是否存在": {
+          "status": "不满足",
+          "reason": "唯一资料只有34、7，没有计算/理解题类型、拖延或反馈时效。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "练习/定时/反馈检查作为一般建议有动作，但原因虚构，1/4、2/5重复。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "不满足",
+          "reason": "把需要先调查的问题写成根据反馈已证实。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "points",
+        "visible_numbered_points": 6,
+        "complete_points": 5,
+        "required": 6,
+        "incomplete_tail": true,
+        "status": "部分满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": true,
+        "reason": "唯一资料只有34、7，没有计算/理解题类型、拖延或反馈时效。"
+      },
+      "issues": [
+        "虚构反馈内容",
+        "原因臆断",
+        "重复内容",
+        "第六点未完成"
+      ],
+      "overall_completed": false,
+      "completion_reason": "虚构反馈内容；原因臆断；重复内容；第六点未完成",
+      "background_each_point_review": {
+        "status": "部分满足",
+        "all_six_have_valid_specific_basis_and_action": false,
+        "points": [
+          {
+            "point": 1,
+            "status": "部分满足",
+            "reason": "计算/理解错误资料不存在，增加练习建议不能补足依据。"
+          },
+          {
+            "point": 2,
+            "status": "部分满足",
+            "reason": "拖延/不认真无资料，定时提醒是一般建议。"
+          },
+          {
+            "point": 3,
+            "status": "部分满足",
+            "reason": "不准确/不及时反馈无资料，反馈检查是一般建议。"
+          },
+          {
+            "point": 4,
+            "status": "部分满足",
+            "reason": "重复第1点。"
+          },
+          {
+            "point": 5,
+            "status": "部分满足",
+            "reason": "重复第2点。"
+          },
+          {
+            "point": 6,
+            "status": "部分满足",
+            "reason": "第6点未写完，无完整行动。"
+          }
+        ]
+      }
+    },
+    {
+      "req_id": "dev-22001-i006",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "interactive",
+      "template_family": "development_study_break",
+      "input_token_bucket": 0,
+      "input_tokens": 64,
+      "output_tokens": 15,
+      "stop_type": "eos",
+      "content_sha256": "fbe958af82c2103f208b0510cff1cfc9a366f951e2980a20d00f1fd4f237f370",
+      "prompt_sha256": "182f8b4420d08e9105bd3cd64a973779442240e074827943789366880d3d76a4",
+      "source_directory": "cases/q29-dev-22001-i006",
+      "output_fulltext_sha256": "fbe958af82c2103f208b0510cff1cfc9a366f951e2980a20d00f1fd4f237f370",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q29-dev-22001-i006/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "专注：1.0分钟。休息：7.0分钟。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "休息7分钟正确，但没有给21页如何分轮覆盖或继续学习的安排。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "规定格式": {
+          "status": "满足",
+          "reason": "两个完整句，满足两句结构。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "依据是否存在": {
+          "status": "满足",
+          "reason": "休息7分钟正确；1分钟可作自拟专注建议，不把它当作已测速度或明确数字错误。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "确有专注/休息安排，但页数任务未处理。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "满足",
+          "reason": "专注1分钟按自拟安排理解，不认作能在1分钟内读完21页的事实保证；21页未分配归原任务缺口。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "sentences",
+        "complete_sentences": 2,
+        "required": 2,
+        "status": "满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": false,
+        "reason": "休息7分钟正确；1分钟可作自拟专注建议，不把它当作已测速度或明确数字错误。"
+      },
+      "issues": [
+        "页数未安排",
+        "建议时长未说明"
+      ],
+      "overall_completed": false,
+      "completion_reason": "页数未安排；建议时长未说明"
+    },
+    {
+      "req_id": "dev-22001-b006",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "background",
+      "template_family": "development_parcel_dispatch",
+      "input_token_bucket": 2,
+      "input_tokens": 642,
+      "output_tokens": 384,
+      "stop_type": "limit",
+      "content_sha256": "c762f2afd306060dc832318fbce0c72b5d3e66ee15301d06ac51f1406f8e796e",
+      "prompt_sha256": "930816b60239618fff199b0e34a0018fbd2e930dac12e98c30b00ea2e1f8af84",
+      "source_directory": "cases/q30-dev-22001-b006",
+      "output_fulltext_sha256": "c762f2afd306060dc832318fbce0c72b5d3e66ee15301d06ac51f1406f8e796e",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q30-dev-22001-b006/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "记录1至记录34，这些记录显示了包裹件数从19到86的范围，且剩余分钟从1到12不等。",
+        "记录33至记录36，这些记录显示了包裹件数从68到83的范围"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "有路线/核对/交接方向，但范围引用错误，动作未对应具体紧迫记录且缺第6点。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "规定格式": {
+          "status": "部分满足",
+          "reason": "第1至5点，第5点未写完，缺第6点。 本维同时要求每点有具体依据和行动，详见逐点核读；完整编号外形不自动等于规定格式满足。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "依据是否存在": {
+          "status": "不满足",
+          "reason": "1—34实际包裹12—86、剩余1—14；33—36实际17—68，非68—83；1—32范围也漏12与14。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "定期异常核对、交接记录有行动方向，主要仍是重复概括而非按资料排序。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "部分满足",
+          "reason": "可能遇到变化作为待核可能性不算已证实异常；但未说明无路线/单件耗时，泛称确保顺利也缺验证。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "points",
+        "visible_numbered_points": 5,
+        "complete_points": 4,
+        "required": 6,
+        "incomplete_tail": true,
+        "status": "部分满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": true,
+        "quantity_or_unit_inconsistency": true,
+        "serious_unsupported_conclusion": false,
+        "reason": "1—34实际包裹12—86、剩余1—14；33—36实际17—68，非68—83；1—32范围也漏12与14。"
+      },
+      "issues": [
+        "范围错误",
+        "未满六点",
+        "行动空泛"
+      ],
+      "overall_completed": false,
+      "completion_reason": "范围错误；未满六点；行动空泛",
+      "background_each_point_review": {
+        "status": "部分满足",
+        "all_six_have_valid_specific_basis_and_action": false,
+        "points": [
+          {
+            "point": 1,
+            "status": "部分满足",
+            "reason": "1—34范围有错，路线调整也没有路线资料。"
+          },
+          {
+            "point": 2,
+            "status": "满足",
+            "reason": "35—37的17—77件、3—12分钟正确，定期异常核对是可执行建议；没有把可能变化当已发生。"
+          },
+          {
+            "point": 3,
+            "status": "部分满足",
+            "reason": "1—32范围有错，交接记录建议仍需准确原数。"
+          },
+          {
+            "point": 4,
+            "status": "部分满足",
+            "reason": "33—36的范围错误，异常处理泛化。"
+          },
+          {
+            "point": 5,
+            "status": "部分满足",
+            "reason": "第5点未写完且1—30范围仍有错。"
+          },
+          {
+            "point": 6,
+            "status": "不满足",
+            "reason": "缺第6点。"
+          }
+        ]
+      }
+    },
+    {
+      "req_id": "dev-22001-i007",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "interactive",
+      "template_family": "development_laundry_plan",
+      "input_token_bucket": 1,
+      "input_tokens": 91,
+      "output_tokens": 15,
+      "stop_type": "eos",
+      "content_sha256": "bdebf176b19b5868cc2a18c30e3900922381183b1cea658036b54d5d67c979ed",
+      "prompt_sha256": "5775e62284e5ef70b6fc7cb726e4bbc554d8593bfc1841920f8f3ec7dc6d85c0",
+      "source_directory": "cases/q31-dev-22001-i007",
+      "output_fulltext_sha256": "bdebf176b19b5868cc2a18c30e3900922381183b1cea658036b54d5d67c979ed",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q31-dev-22001-i007/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "将衣物分成每批5件，晾晒位置轮流使用。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "满足",
+          "reason": "每批最多用5位置，轮流处理可覆盖71件；通常最后不足5件不必补写总批数才算可执行。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "规定格式": {
+          "status": "不满足",
+          "reason": "仅一句，两句要求未满足。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "依据是否存在": {
+          "status": "满足",
+          "reason": "没有编造总批数或位置；不因未主动计算15批而判数字错。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "是否在解决问题": {
+          "status": "满足",
+          "reason": "给出可执行分批和位置轮用办法。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "满足",
+          "reason": "按通常分批语义容许末批不足5件，没有无依据保证。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "sentences",
+        "complete_sentences": 1,
+        "required": 2,
+        "status": "不满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": false,
+        "reason": "没有编造总批数或位置；不因未主动计算15批而判数字错。"
+      },
+      "issues": [
+        "句数不符"
+      ],
+      "overall_completed": false,
+      "completion_reason": "句数不符"
+    },
+    {
+      "req_id": "dev-22001-b007",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "background",
+      "template_family": "development_service_incident",
+      "input_token_bucket": 0,
+      "input_tokens": 133,
+      "output_tokens": 169,
+      "stop_type": "eos",
+      "content_sha256": "c2ef21e16f50ffefc6c2959e6f4561862127ec417c74ccb463a36073d59fce32",
+      "prompt_sha256": "458f0731d747d5920828db09ed05385eaf6ae8c9e0af80831c5362450379b23b",
+      "source_directory": "cases/q32-dev-22001-b007",
+      "output_fulltext_sha256": "c2ef21e16f50ffefc6c2959e6f4561862127ec417c74ccb463a36073d59fce32",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q32-dev-22001-b007/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "当前请求件数48和重试次数3表明服务运行正常，无需关注观测指标。",
+        "无需确认恢复状态。",
+        "无需采取任何行动，因为当前服务运行正常。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "取消排查、观测与恢复确认，未完成原要求。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "规定格式": {
+          "status": "部分满足",
+          "reason": "六个编号段完整，具体依据与行动另评。 本维同时要求每点有具体依据和行动，详见逐点核读；完整编号外形不自动等于规定格式满足。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "依据是否存在": {
+          "status": "不满足",
+          "reason": "48与3引用正确，但无阈值、错误状态、时长或恢复证据，不能判正常。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "是否在解决问题": {
+          "status": "不满足",
+          "reason": "以无需行动代替所要求的排查、指标和确认步骤。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "不满足",
+          "reason": "反复确定服务正常，未保留计数无法判断健康状态的限制。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "points",
+        "visible_numbered_points": 6,
+        "complete_points": 6,
+        "required": 6,
+        "status": "满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": true,
+        "reason": "48与3引用正确，但无阈值、错误状态、时长或恢复证据，不能判正常。"
+      },
+      "issues": [
+        "无阈值判正常",
+        "拒绝必要核查动作"
+      ],
+      "overall_completed": false,
+      "completion_reason": "无阈值判正常；拒绝必要核查动作",
+      "background_each_point_review": {
+        "status": "不满足",
+        "all_six_have_valid_specific_basis_and_action": false,
+        "points": [
+          {
+            "point": 1,
+            "status": "不满足",
+            "reason": "以48/3判正常，取消排查。"
+          },
+          {
+            "point": 2,
+            "status": "不满足",
+            "reason": "同一无依据正常结论，取消观测。"
+          },
+          {
+            "point": 3,
+            "status": "不满足",
+            "reason": "同一结论，取消恢复确认。"
+          },
+          {
+            "point": 4,
+            "status": "不满足",
+            "reason": "同一结论，取消异常判断。"
+          },
+          {
+            "point": 5,
+            "status": "不满足",
+            "reason": "同一结论，取消趋势核查。"
+          },
+          {
+            "point": 6,
+            "status": "不满足",
+            "reason": "以正常为由无需行动，没有执行方案。"
+          }
+        ]
+      }
+    },
+    {
+      "req_id": "dev-22001-i008",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "interactive",
+      "template_family": "development_bike_route",
+      "input_token_bucket": 2,
+      "input_tokens": 147,
+      "output_tokens": 9,
+      "stop_type": "eos",
+      "content_sha256": "6a3f5af95eaf12671be528167aba2329b0841837d6fdcc5ea40d1336fc8b6e5b",
+      "prompt_sha256": "15b32bce8671b29bcf85126939258ae9bbddc345418eda632d0d65d0f68f7c6d",
+      "source_directory": "cases/q33-dev-22001-i008",
+      "output_fulltext_sha256": "6a3f5af95eaf12671be528167aba2329b0841837d6fdcc5ea40d1336fc8b6e5b",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q33-dev-22001-i008/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "出发前检查装备，确保安全。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "有装备检查提醒，但未结合24公里路线、2分钟休息给出具体准备。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "规定格式": {
+          "status": "不满足",
+          "reason": "只有一句。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "依据是否存在": {
+          "status": "满足",
+          "reason": "装备检查是建议，未编造速度或到达时间。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "有出发检查行动，内容较笼统。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "满足",
+          "reason": "确保安全按提醒目标理解，不认作已证明全程安全。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "sentences",
+        "complete_sentences": 1,
+        "required": 2,
+        "status": "不满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": false,
+        "reason": "装备检查是建议，未编造速度或到达时间。"
+      },
+      "issues": [
+        "句数不符",
+        "路线休息信息未用于准备"
+      ],
+      "overall_completed": false,
+      "completion_reason": "句数不符；路线休息信息未用于准备"
+    },
+    {
+      "req_id": "dev-22001-b008",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "background",
+      "template_family": "development_repair_ticket",
+      "input_token_bucket": 1,
+      "input_tokens": 327,
+      "output_tokens": 384,
+      "stop_type": "limit",
+      "content_sha256": "d4c0af45813b78735e3117141951062f083f7642b7694c49eadf1f822a2bdf30",
+      "prompt_sha256": "e3c9321810379c21584ccaf3d0cb627b67d07f4008caa2d514f70e44a79aee88",
+      "source_directory": "cases/q34-dev-22001-b008",
+      "output_fulltext_sha256": "d4c0af45813b78735e3117141951062f083f7642b7694c49eadf1f822a2bdf30",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q34-dev-22001-b008/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "等待时间从39分钟到71分钟不等，且影响人数从3到16不等。",
+        "这表明在不同时间段内，等待时间的长短和影响人数的多少存在差异。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "没有处理顺序、实际验证或通知动作，行动标签后仍是描述。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "规定格式": {
+          "status": "部分满足",
+          "reason": "第1至4点，第4点记录号清单中止，缺第5、6点。 本维同时要求每点有具体依据和行动，详见逐点核读；完整编号外形不自动等于规定格式满足。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "依据是否存在": {
+          "status": "不满足",
+          "reason": "16条等待实际13—71分钟、影响1—15人；39—71与3—16均错。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "大量列同一组记录号，行动栏复述同一句范围描述。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "不满足",
+          "reason": "资料未给时间顺序，却称不同时间段；未核采样时间和工单规则。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "points",
+        "visible_numbered_points": 4,
+        "complete_points": 3,
+        "required": 6,
+        "incomplete_tail": true,
+        "status": "部分满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": true,
+        "quantity_or_unit_inconsistency": true,
+        "serious_unsupported_conclusion": false,
+        "reason": "16条等待实际13—71分钟、影响1—15人；39—71与3—16均错。"
+      },
+      "issues": [
+        "范围错误",
+        "复述代替行动",
+        "未满六点",
+        "无时间依据"
+      ],
+      "overall_completed": false,
+      "completion_reason": "范围错误；复述代替行动；未满六点；无时间依据",
+      "background_each_point_review": {
+        "status": "部分满足",
+        "all_six_have_valid_specific_basis_and_action": false,
+        "points": [
+          {
+            "point": 1,
+            "status": "部分满足",
+            "reason": "范围错误，行动栏仍在描述而非动作。"
+          },
+          {
+            "point": 2,
+            "status": "部分满足",
+            "reason": "影响人数范围错误，未给行动。"
+          },
+          {
+            "point": 3,
+            "status": "部分满足",
+            "reason": "重复错误范围，未给处理次序。"
+          },
+          {
+            "point": 4,
+            "status": "不满足",
+            "reason": "第4点记录号清单截断，未有验证步骤。"
+          },
+          {
+            "point": 5,
+            "status": "不满足",
+            "reason": "缺第5点。"
+          },
+          {
+            "point": 6,
+            "status": "不满足",
+            "reason": "缺第6点。"
+          }
+        ]
+      }
+    },
+    {
+      "req_id": "dev-22001-i009",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "interactive",
+      "template_family": "development_pc_cooling",
+      "input_token_bucket": 0,
+      "input_tokens": 65,
+      "output_tokens": 11,
+      "stop_type": "eos",
+      "content_sha256": "eab59514d4e877142c2684e9f7306f30716b69823b835c5bebb7a7176ebbfb7f",
+      "prompt_sha256": "9299c13195d581f846a08f3e837cbe64bfe68894b1e9f7c1d1a7e4d878eece0c",
+      "source_directory": "cases/q35-dev-22001-i009",
+      "output_fulltext_sha256": "eab59514d4e877142c2684e9f7306f30716b69823b835c5bebb7a7176ebbfb7f",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q35-dev-22001-i009/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "先检查风扇，再检查桌边缝隙。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "满足",
+          "reason": "先风扇、后桌边空隙，达到检查顺序的最低内容要求。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "规定格式": {
+          "status": "不满足",
+          "reason": "只有一句。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "依据是否存在": {
+          "status": "满足",
+          "reason": "未把25分钟或2厘米直接当作故障诊断。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "是否在解决问题": {
+          "status": "满足",
+          "reason": "明确两项检查次序，没有背景复述。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "满足",
+          "reason": "没有正常阈值、故障原因或修复保证。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "sentences",
+        "complete_sentences": 1,
+        "required": 2,
+        "status": "不满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": false,
+        "reason": "未把25分钟或2厘米直接当作故障诊断。"
+      },
+      "issues": [
+        "句数不符"
+      ],
+      "overall_completed": false,
+      "completion_reason": "句数不符"
+    },
+    {
+      "req_id": "dev-22001-b009",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "background",
+      "template_family": "development_course_feedback",
+      "input_token_bucket": 0,
+      "input_tokens": 138,
+      "output_tokens": 384,
+      "stop_type": "limit",
+      "content_sha256": "95eaa872572c6cfb89bffe81f12c0215deb0192c08a578fc50f2b40d4d5a7253",
+      "prompt_sha256": "e98e9637a9625fdb017cd311f96084d5ac085744bfc72a52f7c272ebfaa68606",
+      "source_directory": "cases/q36-dev-22001-b009",
+      "output_fulltext_sha256": "95eaa872572c6cfb89bffe81f12c0215deb0192c08a578fc50f2b40d4d5a7253",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q36-dev-22001-b009/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "学生在计算题和理解题上都出现了较多错误。",
+        "学生在订正过程中存在拖延和不认真订正的问题。",
+        "学生在反馈过程中存在误解和不准确反馈的问题。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "未以19已做、6待订正安排核查，直接臆断原因；反馈方法也未完整。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "规定格式": {
+          "status": "部分满足",
+          "reason": "出现第1至6点，第6点停在提供反馈指导，完整句与安排未写完。 本维同时要求每点有具体依据和行动，详见逐点核读；完整编号外形不自动等于规定格式满足。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "依据是否存在": {
+          "status": "不满足",
+          "reason": "资料只有19与6，不含错题类型、态度或反馈误解；依据虚构。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "增加练习和订正提醒是一般动作，1/4、2/5重复，缺具体错题核查。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "不满足",
+          "reason": "将本应调查的困难和原因当成已有反馈事实。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "points",
+        "visible_numbered_points": 6,
+        "complete_points": 5,
+        "required": 6,
+        "incomplete_tail": true,
+        "status": "部分满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": true,
+        "reason": "资料只有19与6，不含错题类型、态度或反馈误解；依据虚构。"
+      },
+      "issues": [
+        "虚构反馈内容",
+        "原因臆断",
+        "重复内容",
+        "第六点未完成"
+      ],
+      "overall_completed": false,
+      "completion_reason": "虚构反馈内容；原因臆断；重复内容；第六点未完成",
+      "background_each_point_review": {
+        "status": "部分满足",
+        "all_six_have_valid_specific_basis_and_action": false,
+        "points": [
+          {
+            "point": 1,
+            "status": "部分满足",
+            "reason": "错误类型无资料，练习建议不能补足依据。"
+          },
+          {
+            "point": 2,
+            "status": "部分满足",
+            "reason": "拖延/态度无资料，提醒是一般建议。"
+          },
+          {
+            "point": 3,
+            "status": "部分满足",
+            "reason": "反馈误解无资料，指导是一般建议。"
+          },
+          {
+            "point": 4,
+            "status": "部分满足",
+            "reason": "重复第1点。"
+          },
+          {
+            "point": 5,
+            "status": "部分满足",
+            "reason": "重复第2点。"
+          },
+          {
+            "point": 6,
+            "status": "部分满足",
+            "reason": "第6点未完成，反馈指导未形成完整方案。"
+          }
+        ]
+      }
+    },
+    {
+      "req_id": "dev-22001-i010",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "interactive",
+      "template_family": "development_study_break",
+      "input_token_bucket": 1,
+      "input_tokens": 91,
+      "output_tokens": 30,
+      "stop_type": "eos",
+      "content_sha256": "a99a687794d40f860ed3254aa06041209b813fe88f97c54d88563dde084517e2",
+      "prompt_sha256": "0e9b7df9de4a3006113fe1958c091bd1ad26ceea749de29ff281d3c107033b34",
+      "source_directory": "cases/q37-dev-22001-i010",
+      "output_fulltext_sha256": "a99a687794d40f860ed3254aa06041209b813fe88f97c54d88563dde084517e2",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q37-dev-22001-i010/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "专注：第1-30页，每页1分钟。",
+        "休息：第31-64页，每页1分钟。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "不满足",
+          "reason": "分配了页码却把31—64页列为休息，没有每轮休息9分钟的安排。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "规定格式": {
+          "status": "满足",
+          "reason": "两个完整句，满足两句结构。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "依据是否存在": {
+          "status": "部分满足",
+          "reason": "页码1—64未越界，但第31—64页被列作休息，页数与休息单位混淆，未保留9分钟休息。每页1分钟可理解为建议，不把它本身判算术错误。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "有专注与休息标签，但休息内容仍是阅读页数，无法执行原计划。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "部分满足",
+          "reason": "每页1分钟按自拟安排理解；仍未说明为何把后34页列作休息，也未保留每轮9分钟休息约束。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "sentences",
+        "complete_sentences": 2,
+        "required": 2,
+        "status": "满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": true,
+        "serious_unsupported_conclusion": false,
+        "reason": "页码1—64未越界，但第31—64页被列作休息，页数与休息单位混淆，未保留9分钟休息。每页1分钟可理解为建议，不把它本身判算术错误。"
+      },
+      "issues": [
+        "休息单位错配",
+        "未用9分钟休息要求"
+      ],
+      "overall_completed": false,
+      "completion_reason": "休息单位错配；未用9分钟休息要求"
+    },
+    {
+      "req_id": "dev-22001-b010",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "background",
+      "template_family": "development_parcel_dispatch",
+      "input_token_bucket": 1,
+      "input_tokens": 333,
+      "output_tokens": 384,
+      "stop_type": "limit",
+      "content_sha256": "a785c58c363384f3ab3275b5d902fe7fe6dff658382d477fad62c6bf6b9b1adf",
+      "prompt_sha256": "584ceea5f8dbcd1ef94de4c59eae9eeba879ce7fd3f0f13ad860e7fe16b70895",
+      "source_directory": "cases/q38-dev-22001-b010",
+      "output_fulltext_sha256": "a785c58c363384f3ab3275b5d902fe7fe6dff658382d477fad62c6bf6b9b1adf",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q38-dev-22001-b010/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "包裹件数从25到57，再到66，再到38，再到86，再到82，再到64",
+        "再到66，再到38，再到86，再到82，再到64"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "不满足",
+          "reason": "没有路线、异常核对或交接安排。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "规定格式": {
+          "status": "不满足",
+          "reason": "只有第1点，数列循环且尾部截断，非六点。 本维同时要求每点有具体依据和行动，详见逐点核读；完整编号外形不自动等于规定格式满足。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "依据是否存在": {
+          "status": "不满足",
+          "reason": "原记录25、27、26、51等并非此序列；86/82/64循环不是15条记录提供的过程。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "是否在解决问题": {
+          "status": "不满足",
+          "reason": "重复件数序列，未给实际路线或核查动作。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "不满足",
+          "reason": "无时间顺序仍用从/再到构造连续过程，未说明依据不足。",
+          "evidence_excerpt_indices": [
+            0,
+            1
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "points",
+        "visible_numbered_points": 1,
+        "complete_points": 0,
+        "required": 6,
+        "incomplete_tail": true,
+        "status": "不满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": true,
+        "reason": "原记录25、27、26、51等并非此序列；86/82/64循环不是15条记录提供的过程。"
+      },
+      "issues": [
+        "无依据序列",
+        "数列循环",
+        "未给行动"
+      ],
+      "overall_completed": false,
+      "completion_reason": "无依据序列；数列循环；未给行动",
+      "background_each_point_review": {
+        "status": "部分满足",
+        "all_six_have_valid_specific_basis_and_action": false,
+        "points": [
+          {
+            "point": 1,
+            "status": "部分满足",
+            "reason": "只有第1点且循环件数，无路线行动。"
+          },
+          {
+            "point": 2,
+            "status": "不满足",
+            "reason": "缺第2点。"
+          },
+          {
+            "point": 3,
+            "status": "不满足",
+            "reason": "缺第3点。"
+          },
+          {
+            "point": 4,
+            "status": "不满足",
+            "reason": "缺第4点。"
+          },
+          {
+            "point": 5,
+            "status": "不满足",
+            "reason": "缺第5点。"
+          },
+          {
+            "point": 6,
+            "status": "不满足",
+            "reason": "缺第6点。"
+          }
+        ]
+      }
+    },
+    {
+      "req_id": "dev-22001-i011",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "interactive",
+      "template_family": "development_laundry_plan",
+      "input_token_bucket": 2,
+      "input_tokens": 147,
+      "output_tokens": 19,
+      "stop_type": "eos",
+      "content_sha256": "23eb34998b57c674ab2b0452bd0070fd39f9431d0e3fc9c44261f7ca2971c222",
+      "prompt_sha256": "6b4bfa1607e85971bffc12db02fdc594428af8191767c9419072a74b1d757757",
+      "source_directory": "cases/q39-dev-22001-i011",
+      "output_fulltext_sha256": "23eb34998b57c674ab2b0452bd0070fd39f9431d0e3fc9c44261f7ca2971c222",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q39-dev-22001-i011/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "先晾晒3件，再晾晒2件，最后晾晒2件。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "先3再2最后2仅覆盖7件，54件中47件未安排。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "规定格式": {
+          "status": "不满足",
+          "reason": "只有一句，未完成两句要求。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "依据是否存在": {
+          "status": "不满足",
+          "reason": "所给总处理量3+2+2=7，与54件任务不符；并非可选批数未算问题。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "有先后分批动作，但以最后结束并遗漏47件。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "部分满足",
+          "reason": "没有新增晾晒位置，仍未说明剩余衣物如何处理。",
+          "evidence_excerpt_indices": [
+            0
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "sentences",
+        "complete_sentences": 1,
+        "required": 2,
+        "status": "不满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": true,
+        "quantity_or_unit_inconsistency": true,
+        "serious_unsupported_conclusion": false,
+        "reason": "所给总处理量3+2+2=7，与54件任务不符；并非可选批数未算问题。"
+      },
+      "issues": [
+        "衣物总量不足",
+        "句数不符"
+      ],
+      "overall_completed": false,
+      "completion_reason": "衣物总量不足；句数不符"
+    },
+    {
+      "req_id": "dev-22001-b011",
+      "repair_role": "fresh_development_pilot",
+      "prompt_version": "v2",
+      "source_case": null,
+      "category": "background",
+      "template_family": "development_service_incident",
+      "input_token_bucket": 2,
+      "input_tokens": 653,
+      "output_tokens": 347,
+      "stop_type": "eos",
+      "content_sha256": "f7b4e74d35191da99a2873e41df66641b3ab6be4fd2b09ace9b2eb026f8914e1",
+      "prompt_sha256": "e12282c0900c6960fd0362add255fb05a5fe8759158449540fceabb50130376b",
+      "source_directory": "cases/q40-dev-22001-b011",
+      "output_fulltext_sha256": "f7b4e74d35191da99a2873e41df66641b3ab6be4fd2b09ace9b2eb026f8914e1",
+      "source_output": "results/raw/development/20261024-2000-p1-prompt-task-repair-v2/cases/q40-dev-22001-b011/output.txt",
+      "review_basis": "阅读全文与原题/背景/资料对照；下列计数只描述这一指定输出。",
+      "evidence_excerpts": [
+        "重试次数越多则说明服务的响应时间越长。",
+        "重试次数反映了服务的响应时间。",
+        "恢复确认可以通过增加资源、优化算法、提高硬件性能等方式进行。"
+      ],
+      "dimensions": {
+        "回应原任务": {
+          "status": "部分满足",
+          "reason": "有六点排查/观测标题，但恢复确认写成修复手段，没有恢复后验证动作。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "规定格式": {
+          "status": "部分满足",
+          "reason": "六个编号段均完整；具体依据与行动另评。 本维同时要求每点有具体依据和行动，详见逐点核读；完整编号外形不自动等于规定格式满足。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "依据是否存在": {
+          "status": "不满足",
+          "reason": "重试计数不等于响应时间，资料没有延迟或故障根因；未引用具体记录比较。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "是否在解决问题": {
+          "status": "部分满足",
+          "reason": "给出按计数排查和资源方向，但多个点重复如果异常，没有具体观测和恢复判据。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        },
+        "不确定性是否保留": {
+          "status": "不满足",
+          "reason": "首两点把重试与时长当确定关系；后面的假设分支不弥补这一错误。",
+          "evidence_excerpt_indices": [
+            0,
+            1,
+            2
+          ]
+        }
+      },
+      "format_structure": {
+        "kind": "points",
+        "visible_numbered_points": 6,
+        "complete_points": 6,
+        "required": 6,
+        "status": "满足"
+      },
+      "factual_checks": {
+        "explicit_numeric_or_record_inconsistency": false,
+        "quantity_or_unit_inconsistency": false,
+        "serious_unsupported_conclusion": true,
+        "reason": "重试计数不等于响应时间，资料没有延迟或故障根因；未引用具体记录比较。"
+      },
+      "issues": [
+        "重试误当响应时长",
+        "依据空泛",
+        "恢复确认不足"
+      ],
+      "overall_completed": false,
+      "completion_reason": "重试误当响应时长；依据空泛；恢复确认不足",
+      "background_each_point_review": {
+        "status": "部分满足",
+        "all_six_have_valid_specific_basis_and_action": false,
+        "points": [
+          {
+            "point": 1,
+            "status": "部分满足",
+            "reason": "重试等同响应时长无依据，未引用具体记录。"
+          },
+          {
+            "point": 2,
+            "status": "部分满足",
+            "reason": "有观测指标但错误解释重试含义。"
+          },
+          {
+            "point": 3,
+            "status": "部分满足",
+            "reason": "增加资源等是修复动作，非恢复确认。"
+          },
+          {
+            "point": 4,
+            "status": "部分满足",
+            "reason": "条件性异常分析方向泛化，缺具体记录和执行步骤。"
+          },
+          {
+            "point": 5,
+            "status": "部分满足",
+            "reason": "长期趋势需先补时间顺序，未写补查动作。"
+          },
+          {
+            "point": 6,
+            "status": "部分满足",
+            "reason": "重复长期趋势，未给独立的时间核对行动。"
+          }
+        ]
+      }
+    }
+  ]
+}

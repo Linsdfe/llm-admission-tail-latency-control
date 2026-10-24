@@ -1,12 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1128" viewBox="0 0 1120 1128" role="img" aria-labelledby="title desc">
-<title id="title">P0 成果与阶段决定</title><desc id="desc">进度快照 2026.10.24  /  用户确认 G0 通过，P1 已启动，G1 待审</desc>
+<title id="title">P0 成果与阶段决定</title><desc id="desc">进度快照 2026.10.25  /  用户确认 G0 通过，P1 已启动，G1 待审</desc>
 <g font-family="Segoe UI, PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">
 <rect x="0" y="0" width="1120" height="1128" rx="24" fill="#f5f7fa" stroke="none"/>
 <rect x="0" y="0" width="1120" height="142" rx="24" fill="#182d43" stroke="none"/>
 <rect x="0" y="80" width="1120" height="62" rx="0" fill="#182d43" stroke="none"/>
 <text x="40" y="36" font-size="13" fill="#9cb6cc" font-weight="600">LLM ADMISSION / PROJECT ROADMAP</text>
 <text x="40" y="80" font-size="30" fill="#ffffff" font-weight="700">P0 成果与阶段决定</text>
-<text x="40" y="115" font-size="17" fill="#c4d3df" font-weight="400">进度快照 2026.10.24  /  用户确认 G0 通过，P1 已启动，G1 待审</text>
+<text x="40" y="115" font-size="17" fill="#c4d3df" font-weight="400">进度快照 2026.10.25  /  用户确认 G0 通过，P1 已启动，G1 待审</text>
 <text x="40" y="182" font-size="18" fill="#087f78" font-weight="600">已完成  /  第一步 · 2026.10.19</text>
 <rect x="40" y="202" width="248" height="100" rx="16" fill="#e7f4ef" stroke="#c4dfd5"/>
 <text x="58" y="237" font-size="21" fill="#087f78" font-weight="600">01  环境冻结</text>

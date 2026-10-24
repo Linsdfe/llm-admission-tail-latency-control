@@ -1,0 +1,1962 @@
+[
+  {
+    "req_id": "repair-01-v1",
+    "repair_role": "paired_sentinel",
+    "prompt_version": "v1",
+    "pair_index": 1,
+    "source_case": "c05",
+    "source_req_id": "cal-11001-i002",
+    "category": "interactive",
+    "template_family": "calibration_activity_time",
+    "input_token_bucket": 2,
+    "input_tokens": 151,
+    "max_tokens": 64,
+    "output_tokens": 64,
+    "new_prompt_tokens": 151,
+    "cached_prompt_tokens": 0,
+    "stop_type": "limit",
+    "input_plus_max_output_plus_safety": 216,
+    "output_at_cap": true,
+    "content_sha256": "7f9f18041d72996844cdb9433af016980cd140960f26639353805d750d1edae1",
+    "prompt_sha256": "268eff6bfcfcb4f27f5767514dd14ce68636c7a5b80790fb521aec7ad2eb151d",
+    "repetition": {
+      "character_count_without_whitespace": 92,
+      "ngrams": {
+        "4": {
+          "windows": 89,
+          "unique": 56,
+          "duplicate_excess_ratio": 0.3707865168539326,
+          "maximum_occurrences": 5
+        },
+        "8": {
+          "windows": 85,
+          "unique": 72,
+          "duplicate_excess_ratio": 0.15294117647058825,
+          "maximum_occurrences": 3
+        },
+        "16": {
+          "windows": 77,
+          "unique": 77,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q01-repair-01-v1",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n题号cal-11001-i002。活动准备需69分钟，休息2分钟，请用两句话安排先后顺序。参考情况：补充1：可用时间20分钟，已有安排2项。补充2：可用时间90分钟，已有安排3项。补充3：可用时间90分钟，已有安排5项。补充4：可用时间36分钟，已有安排3项。补充5：可用时间78分钟，已有安排3项。补充6：可用时间38分钟，已有安排7项。补充7：可用时间87分钟，已有安排2项。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "补充1：可用时间20分钟，已有安排2项。补充2：可用时间90分钟，已有安排3项。补充3：可用时间90分钟，已有安排5项。补充4：可用时间36分钟，已有安排3项。补充5：可用时间78分钟"
+  },
+  {
+    "req_id": "repair-01-v2",
+    "repair_role": "paired_sentinel",
+    "prompt_version": "v2",
+    "pair_index": 1,
+    "source_case": "c05",
+    "source_req_id": "cal-11001-i002",
+    "category": "interactive",
+    "template_family": "calibration_activity_time",
+    "input_token_bucket": 2,
+    "input_tokens": 172,
+    "max_tokens": 64,
+    "output_tokens": 15,
+    "new_prompt_tokens": 172,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 237,
+    "output_at_cap": false,
+    "content_sha256": "03d4dac368285d5474c13156b0a2b4ed899818a899483609199f60599529cd10",
+    "prompt_sha256": "16bf6c25b6d7f4aa788db5588e5280a4a2be2d1800f62100846076b66127f500",
+    "repetition": {
+      "character_count_without_whitespace": 21,
+      "ngrams": {
+        "4": {
+          "windows": 18,
+          "unique": 18,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "8": {
+          "windows": 14,
+          "unique": 14,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "16": {
+          "windows": 6,
+          "unique": 6,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q02-repair-01-v2",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只用中文回答任务，不抄背景。<|im_end|>\n<|im_start|>user\n题号cal-11001-i002。\n背景（不是题干）：\n[背景]\n补充1：可用时间20分钟，已有安排2项。补充2：可用时间90分钟，已有安排3项。补充3：可用时间90分钟，已有安排5项。补充4：可用时间36分钟，已有安排3项。补充5：可用时间78分钟，已有安排3项。补充6：可用时间38分钟，已有安排7项。补充7：可用时间87分钟，已有安排2项。\n[/背景]\n任务：活动准备需69分钟，休息2分钟，请用两句话安排先后顺序。\n只答两句。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "先安排活动准备69分钟，后安排休息2分钟。"
+  },
+  {
+    "req_id": "repair-02-v2",
+    "repair_role": "paired_sentinel",
+    "prompt_version": "v2",
+    "pair_index": 2,
+    "source_case": "c11",
+    "source_req_id": "cal-11001-i005",
+    "category": "interactive",
+    "template_family": "calibration_kitchen_scaling",
+    "input_token_bucket": 2,
+    "input_tokens": 174,
+    "max_tokens": 64,
+    "output_tokens": 17,
+    "new_prompt_tokens": 174,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 239,
+    "output_at_cap": false,
+    "content_sha256": "bda49206a9d6bebb115347b398dc11e79a91efc8966ec30a517ead4cdc2faee2",
+    "prompt_sha256": "a71ea8903b1c9217591689a779960cb8bdc14485676f88039a5b5ebe5a188d37",
+    "repetition": {
+      "character_count_without_whitespace": 14,
+      "ngrams": {
+        "4": {
+          "windows": 11,
+          "unique": 11,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "8": {
+          "windows": 7,
+          "unique": 7,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "16": {
+          "windows": 0,
+          "unique": 0,
+          "duplicate_excess_ratio": null,
+          "maximum_occurrences": 0
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q03-repair-02-v2",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只用中文回答任务，不抄背景。<|im_end|>\n<|im_start|>user\n题号cal-11001-i005。\n背景（不是题干）：\n[背景]\n补充1：可用时间74分钟，已有安排8项。补充2：可用时间43分钟，已有安排1项。补充3：可用时间15分钟，已有安排4项。补充4：可用时间75分钟，已有安排4项。补充5：可用时间25分钟，已有安排5项。补充6：可用时间20分钟，已有安排8项。补充7：可用时间43分钟，已有安排1项。\n[/背景]\n任务：一份食谱需要62克配料，要做7份，请用两句话说明换算。\n只答两句。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "62克/份 * 7份 = 434克。"
+  },
+  {
+    "req_id": "repair-02-v1",
+    "repair_role": "paired_sentinel",
+    "prompt_version": "v1",
+    "pair_index": 2,
+    "source_case": "c11",
+    "source_req_id": "cal-11001-i005",
+    "category": "interactive",
+    "template_family": "calibration_kitchen_scaling",
+    "input_token_bucket": 2,
+    "input_tokens": 153,
+    "max_tokens": 64,
+    "output_tokens": 64,
+    "new_prompt_tokens": 153,
+    "cached_prompt_tokens": 0,
+    "stop_type": "limit",
+    "input_plus_max_output_plus_safety": 218,
+    "output_at_cap": true,
+    "content_sha256": "d961ea7e58b61a8c4d980d10c4679ab723d57222fcdcbcd1c629bd5833b0bcd2",
+    "prompt_sha256": "58b8e4159446d83e8f7bcb13eb69c5d914f5ccc4b0617cfafc74b2c1a363023e",
+    "repetition": {
+      "character_count_without_whitespace": 92,
+      "ngrams": {
+        "4": {
+          "windows": 89,
+          "unique": 60,
+          "duplicate_excess_ratio": 0.3258426966292135,
+          "maximum_occurrences": 5
+        },
+        "8": {
+          "windows": 85,
+          "unique": 79,
+          "duplicate_excess_ratio": 0.07058823529411765,
+          "maximum_occurrences": 2
+        },
+        "16": {
+          "windows": 77,
+          "unique": 77,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q04-repair-02-v1",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n题号cal-11001-i005。一份食谱需要62克配料，要做7份，请用两句话说明换算。参考情况：补充1：可用时间74分钟，已有安排8项。补充2：可用时间43分钟，已有安排1项。补充3：可用时间15分钟，已有安排4项。补充4：可用时间75分钟，已有安排4项。补充5：可用时间25分钟，已有安排5项。补充6：可用时间20分钟，已有安排8项。补充7：可用时间43分钟，已有安排1项。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "补充1：可用时间74分钟，已有安排8项。补充2：可用时间43分钟，已有安排1项。补充3：可用时间15分钟，已有安排4项。补充4：可用时间75分钟，已有安排4项。补充5：可用时间25分钟"
+  },
+  {
+    "req_id": "repair-03-v1",
+    "repair_role": "paired_sentinel",
+    "prompt_version": "v1",
+    "pair_index": 3,
+    "source_case": "c17",
+    "source_req_id": "cal-11001-i008",
+    "category": "interactive",
+    "template_family": "calibration_library_lending",
+    "input_token_bucket": 2,
+    "input_tokens": 155,
+    "max_tokens": 64,
+    "output_tokens": 64,
+    "new_prompt_tokens": 155,
+    "cached_prompt_tokens": 0,
+    "stop_type": "limit",
+    "input_plus_max_output_plus_safety": 220,
+    "output_at_cap": true,
+    "content_sha256": "db69911b7014a887e8abff1620a5e9734e15b1b57532b2c3aaad5685ce6465ba",
+    "prompt_sha256": "a2a69e5b29d4f1f2fd8c71f969393f875d22b0f99e98399308f7d324ff967b3a",
+    "repetition": {
+      "character_count_without_whitespace": 76,
+      "ngrams": {
+        "4": {
+          "windows": 73,
+          "unique": 62,
+          "duplicate_excess_ratio": 0.1506849315068493,
+          "maximum_occurrences": 3
+        },
+        "8": {
+          "windows": 69,
+          "unique": 69,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "16": {
+          "windows": 61,
+          "unique": 61,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q05-repair-03-v1",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n题号cal-11001-i008。借书期限还剩69天，计划每天读2页，请用两句话给出阅读安排。参考情况：补充1：可用时间83分钟，已有安排7项。补充2：可用时间39分钟，已有安排2项。补充3：可用时间20分钟，已有安排7项。补充4：可用时间81分钟，已有安排3项。补充5：可用时间86分钟，已有安排1项。补充6：可用时间62分钟，已有安排1项。补充7：可用时间88分钟，已有安排3项。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "补充1：每天读2页，83分钟内可读14页，剩余29页。补充2：39分钟内可读19页，剩余4页。补充3：20分钟内可读10页，剩余19页。补充4：81分钟"
+  },
+  {
+    "req_id": "repair-03-v2",
+    "repair_role": "paired_sentinel",
+    "prompt_version": "v2",
+    "pair_index": 3,
+    "source_case": "c17",
+    "source_req_id": "cal-11001-i008",
+    "category": "interactive",
+    "template_family": "calibration_library_lending",
+    "input_token_bucket": 2,
+    "input_tokens": 176,
+    "max_tokens": 64,
+    "output_tokens": 25,
+    "new_prompt_tokens": 176,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 241,
+    "output_at_cap": false,
+    "content_sha256": "1a5b1bc1caa484e7355a023c4aa9d876abccdd055d30de67d5af4f7b2a3bd8d1",
+    "prompt_sha256": "0d0a893183a0f81b38fab3a6f0ba883118a0625adedf42dcd9f69c57f2540ebd",
+    "repetition": {
+      "character_count_without_whitespace": 30,
+      "ngrams": {
+        "4": {
+          "windows": 27,
+          "unique": 27,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "8": {
+          "windows": 23,
+          "unique": 23,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "16": {
+          "windows": 15,
+          "unique": 15,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q06-repair-03-v2",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只用中文回答任务，不抄背景。<|im_end|>\n<|im_start|>user\n题号cal-11001-i008。\n背景（不是题干）：\n[背景]\n补充1：可用时间83分钟，已有安排7项。补充2：可用时间39分钟，已有安排2项。补充3：可用时间20分钟，已有安排7项。补充4：可用时间81分钟，已有安排3项。补充5：可用时间86分钟，已有安排1项。补充6：可用时间62分钟，已有安排1项。补充7：可用时间88分钟，已有安排3项。\n[/背景]\n任务：借书期限还剩69天，计划每天读2页，请用两句话给出阅读安排。\n只答两句。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "每天读2页，69天内共需读138页。可用时间充足，无需担心。"
+  },
+  {
+    "req_id": "repair-04-v2",
+    "repair_role": "paired_sentinel",
+    "prompt_version": "v2",
+    "pair_index": 4,
+    "source_case": "c23",
+    "source_req_id": "cal-11001-i011",
+    "category": "interactive",
+    "template_family": "calibration_stationery_budget",
+    "input_token_bucket": 2,
+    "input_tokens": 175,
+    "max_tokens": 64,
+    "output_tokens": 10,
+    "new_prompt_tokens": 175,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 240,
+    "output_at_cap": false,
+    "content_sha256": "aef5df87e3cb9aaf59d10651f9f4ad55db6d9617673c1d0a23eab848b6bc966b",
+    "prompt_sha256": "18a8a2d813c7780579f28e39b6a641544fd32eff1b46244dcdd59a9d45e6554f",
+    "repetition": {
+      "character_count_without_whitespace": 16,
+      "ngrams": {
+        "4": {
+          "windows": 13,
+          "unique": 13,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "8": {
+          "windows": 9,
+          "unique": 9,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "16": {
+          "windows": 1,
+          "unique": 1,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q07-repair-04-v2",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只用中文回答任务，不抄背景。<|im_end|>\n<|im_start|>user\n题号cal-11001-i011。\n背景（不是题干）：\n[背景]\n补充1：可用时间28分钟，已有安排8项。补充2：可用时间80分钟，已有安排3项。补充3：可用时间56分钟，已有安排2项。补充4：可用时间21分钟，已有安排8项。补充5：可用时间18分钟，已有安排3项。补充6：可用时间31分钟，已有安排1项。补充7：可用时间29分钟，已有安排8项。\n[/背景]\n任务：文具预算65元，单件2元，请用两句话说明怎样避免超支。\n只答两句。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "减少购买数量，或者增加可用时间。"
+  },
+  {
+    "req_id": "repair-04-v1",
+    "repair_role": "paired_sentinel",
+    "prompt_version": "v1",
+    "pair_index": 4,
+    "source_case": "c23",
+    "source_req_id": "cal-11001-i011",
+    "category": "interactive",
+    "template_family": "calibration_stationery_budget",
+    "input_token_bucket": 2,
+    "input_tokens": 154,
+    "max_tokens": 64,
+    "output_tokens": 49,
+    "new_prompt_tokens": 154,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 219,
+    "output_at_cap": false,
+    "content_sha256": "ac90c43fd5b36f1b56ace9ee5303d82873b0e1dc8aaac06be88de045f9973903",
+    "prompt_sha256": "4d2f8d552c89a18cc1540cc9901bc2e94528fd0f931f34fbe77f336632f59dc2",
+    "repetition": {
+      "character_count_without_whitespace": 62,
+      "ngrams": {
+        "4": {
+          "windows": 59,
+          "unique": 56,
+          "duplicate_excess_ratio": 0.05084745762711865,
+          "maximum_occurrences": 2
+        },
+        "8": {
+          "windows": 55,
+          "unique": 55,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "16": {
+          "windows": 47,
+          "unique": 47,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q08-repair-04-v1",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n题号cal-11001-i011。文具预算65元，单件2元，请用两句话说明怎样避免超支。参考情况：补充1：可用时间28分钟，已有安排8项。补充2：可用时间80分钟，已有安排3项。补充3：可用时间56分钟，已有安排2项。补充4：可用时间21分钟，已有安排8项。补充5：可用时间18分钟，已有安排3项。补充6：可用时间31分钟，已有安排1项。补充7：可用时间29分钟，已有安排8项。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "文具预算65元，单件2元，避免超支的方法是：1. 用时间安排表来管理时间，避免重复安排。2. 用预算管理表来管理预算，避免超支。"
+  },
+  {
+    "req_id": "repair-05-v1",
+    "repair_role": "paired_sentinel",
+    "prompt_version": "v1",
+    "pair_index": 5,
+    "source_case": "c04",
+    "source_req_id": "cal-11001-b001",
+    "category": "background",
+    "template_family": "calibration_community_event",
+    "input_token_bucket": 1,
+    "input_tokens": 327,
+    "max_tokens": 384,
+    "output_tokens": 384,
+    "new_prompt_tokens": 327,
+    "cached_prompt_tokens": 0,
+    "stop_type": "limit",
+    "input_plus_max_output_plus_safety": 712,
+    "output_at_cap": true,
+    "content_sha256": "eea9375baf19bff0a639a7c94ebd50bdd9ad880332d9ee762173cad684b8b0b2",
+    "prompt_sha256": "24609fc3e8aa79df63082310c5046534cd35e5939e1559060d195c6eadca7f38",
+    "repetition": {
+      "character_count_without_whitespace": 507,
+      "ngrams": {
+        "4": {
+          "windows": 504,
+          "unique": 133,
+          "duplicate_excess_ratio": 0.7361111111111112,
+          "maximum_occurrences": 31
+        },
+        "8": {
+          "windows": 500,
+          "unique": 286,
+          "duplicate_excess_ratio": 0.428,
+          "maximum_occurrences": 17
+        },
+        "16": {
+          "windows": 492,
+          "unique": 490,
+          "duplicate_excess_ratio": 0.0040650406504065045,
+          "maximum_occurrences": 2
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q09-repair-05-v1",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n任务cal-11001-b001。以下是虚构的社区活动筹备记录。请分六点分析人员、物资和现场协调安排，每点写出具体依据和行动。数字只用于本题，不补造事实。记录如下：记录1：报名人数78，物资份数14。记录2：报名人数31，物资份数12。记录3：报名人数63，物资份数15。记录4：报名人数70，物资份数13。记录5：报名人数87，物资份数9。记录6：报名人数23，物资份数1。记录7：报名人数43，物资份数2。记录8：报名人数39，物资份数15。记录9：报名人数77，物资份数13。记录10：报名人数38，物资份数10。记录11：报名人数27，物资份数14。记录12：报名人数53，物资份数3。记录13：报名人数31，物资份数9。记录14：报名人数58，物资份数5。记录15：报名人数58，物资份数15。记录16：报名人数14，物资份数4。记录17：报名人数69，物资份数7。记录18：报名人数67，物资份数12。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "人员：报名人数78，物资份数14。人员：报名人数31，物资份数12。人员：报名人数63，物资份数15。人员：报名人数70，物资份数13。人员：报名人数87，物资份数9。人员：报名人数23，物资份数1。人员：报名人数43，物资份数2。人员：报名人数39，物资份数15。人员：报名人数77，物资份数13。人员：报名人数38，物资份数10。人员：报名人数27，物资份数14。人员：报名人数53，物资份数3。人员：报名人数31，物资份数9。人员：报名人数58，物资份数5。人员：报名人数58，物资份数15。人员：报名人数14，物资份数4。人员：报名人数69，物资份数7。人员：报名人数67，物资份数12。物资：报名人数78，物资份数14。物资：报名人数31，物资份数12。物资：报名人数63，物资份数15。物资：报名人数70，物资份数13。物资：报名人数87，物资份数9。物资：报名人数23，物资份数1。物资：报名人数43，物资份数2。物资：报名人数39，物资份数15。物资：报名人数77，物资份数13。物资：报名人数38，物资份数10。物资：报名人数27，物资份数14。物资：报名人数53，物资份数3。物资：报名人数31"
+  },
+  {
+    "req_id": "repair-05-v2",
+    "repair_role": "paired_sentinel",
+    "prompt_version": "v2",
+    "pair_index": 5,
+    "source_case": "c04",
+    "source_req_id": "cal-11001-b001",
+    "category": "background",
+    "template_family": "calibration_community_event",
+    "input_token_bucket": 1,
+    "input_tokens": 375,
+    "max_tokens": 384,
+    "output_tokens": 351,
+    "new_prompt_tokens": 375,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 760,
+    "output_at_cap": false,
+    "content_sha256": "28ba411adf05c840abb1522650af9dfaaedb8f93d9ba735aae2f09d2eeab7ed7",
+    "prompt_sha256": "4c35fd61f428e205d41705c30fb0f7755fd7fd5f624f8f06380ef19f369ff91b",
+    "repetition": {
+      "character_count_without_whitespace": 564,
+      "ngrams": {
+        "4": {
+          "windows": 561,
+          "unique": 270,
+          "duplicate_excess_ratio": 0.5187165775401069,
+          "maximum_occurrences": 8
+        },
+        "8": {
+          "windows": 557,
+          "unique": 374,
+          "duplicate_excess_ratio": 0.32854578096947934,
+          "maximum_occurrences": 4
+        },
+        "16": {
+          "windows": 549,
+          "unique": 463,
+          "duplicate_excess_ratio": 0.15664845173041894,
+          "maximum_occurrences": 4
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q10-repair-05-v2",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只依据资料回答，勿抄录；依据不足就说明，不补造事实。<|im_end|>\n<|im_start|>user\n任务cal-11001-b001。以下是虚构的社区活动筹备记录。\n[资料]\n记录1：报名人数78，物资份数14。记录2：报名人数31，物资份数12。记录3：报名人数63，物资份数15。记录4：报名人数70，物资份数13。记录5：报名人数87，物资份数9。记录6：报名人数23，物资份数1。记录7：报名人数43，物资份数2。记录8：报名人数39，物资份数15。记录9：报名人数77，物资份数13。记录10：报名人数38，物资份数10。记录11：报名人数27，物资份数14。记录12：报名人数53，物资份数3。记录13：报名人数31，物资份数9。记录14：报名人数58，物资份数5。记录15：报名人数58，物资份数15。记录16：报名人数14，物资份数4。记录17：报名人数69，物资份数7。记录18：报名人数67，物资份数12。\n[/资料]\n任务：请分六点分析人员、物资和现场协调安排，每点写出具体依据和行动。数字只用于本题，不补造事实。\n资料无阈值或时间顺序时，不判断正常、异常或趋势。\n仅写六点，每点含依据和行动。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "1. **人员分析**：根据报名人数，可以初步判断活动参与者的数量。例如，报名人数为78的社区活动，可能需要至少78名参与者才能确保活动的顺利进行。这表明活动规模较大，需要准备相应的人员安排。\n\n2. **物资分析**：物资份数反映了活动所需物资的数量。例如，物资份数为15的社区活动，可能需要准备15份物资。这表明活动所需的物资较多，需要提前准备和分配。\n\n3. **现场协调安排**：根据报名人数和物资份数，可以推断出现场协调人员的数量和物资的分配方式。例如，报名人数为78的社区活动，可能需要至少78名参与者，因此需要至少78名现场协调人员。物资份数为15的社区活动，可能需要准备15份物资，因此需要提前准备和分配。\n\n4. **人员安排**：根据报名人数，可以安排相应的人员。例如，报名人数为78的社区活动，可以安排78名现场协调人员。这表明活动规模较大，需要准备相应的人员安排。\n\n5. **物资分配**：根据物资份数，可以分配相应的物资。例如，物资份数为15的社区活动，可以准备15份物资。这表明活动所需的物资较多，需要提前准备和分配。\n\n6. **现场协调安排**：根据报名人数和物资份数，可以安排相应的现场协调人员和物资。例如，报名人数为78的社区活动，可以安排78名现场协调人员和15份物资。这表明活动规模较大，需要准备相应的人员安排和物资。"
+  },
+  {
+    "req_id": "repair-06-v2",
+    "repair_role": "paired_sentinel",
+    "prompt_version": "v2",
+    "pair_index": 6,
+    "source_case": "c08",
+    "source_req_id": "cal-11001-b003",
+    "category": "background",
+    "template_family": "calibration_training_diary",
+    "input_token_bucket": 1,
+    "input_tokens": 372,
+    "max_tokens": 384,
+    "output_tokens": 301,
+    "new_prompt_tokens": 372,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 757,
+    "output_at_cap": false,
+    "content_sha256": "2fd29962f75817ad4d6ebf4cfeee2fae4f5d03146851ff5ae50a4249e51b7e44",
+    "prompt_sha256": "bc9ed2cc94b3a472df42184d2f69bbdb56f256a49b48a48a79d6bced17ee3703",
+    "repetition": {
+      "character_count_without_whitespace": 484,
+      "ngrams": {
+        "4": {
+          "windows": 481,
+          "unique": 209,
+          "duplicate_excess_ratio": 0.5654885654885655,
+          "maximum_occurrences": 11
+        },
+        "8": {
+          "windows": 477,
+          "unique": 297,
+          "duplicate_excess_ratio": 0.37735849056603776,
+          "maximum_occurrences": 6
+        },
+        "16": {
+          "windows": 469,
+          "unique": 376,
+          "duplicate_excess_ratio": 0.19829424307036247,
+          "maximum_occurrences": 2
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q11-repair-06-v2",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只依据资料回答，勿抄录；依据不足就说明，不补造事实。<|im_end|>\n<|im_start|>user\n任务cal-11001-b003。以下是虚构的运动训练日志。\n[资料]\n记录1：训练分钟57，休息分钟13。记录2：训练分钟50，休息分钟12。记录3：训练分钟14，休息分钟11。记录4：训练分钟69，休息分钟14。记录5：训练分钟30，休息分钟10。记录6：训练分钟14，休息分钟5。记录7：训练分钟77，休息分钟15。记录8：训练分钟82，休息分钟3。记录9：训练分钟90，休息分钟15。记录10：训练分钟28，休息分钟12。记录11：训练分钟74，休息分钟8。记录12：训练分钟70，休息分钟14。记录13：训练分钟57，休息分钟5。记录14：训练分钟43，休息分钟11。记录15：训练分钟29，休息分钟2。记录16：训练分钟34，休息分钟1。记录17：训练分钟66，休息分钟9。记录18：训练分钟24，休息分钟13。记录19：训练分钟21，休息分钟13。\n[/资料]\n任务：请分六点分析训练节奏、休息和记录改进，每点写出具体依据和行动。数字只用于本题，不补造事实。\n资料无阈值或时间顺序时，不判断正常、异常或趋势。\n仅写六点，每点含依据和行动。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "1. **训练节奏分析**：\n   - **依据**：训练时间（分钟）和休息时间（分钟）。\n   - **行动**：根据训练时间与休息时间的对比，调整训练计划，确保合理分配时间，避免过度训练或休息不足。\n\n2. **休息时间分析**：\n   - **依据**：休息时间（分钟）。\n   - **行动**：根据休息时间的长短，调整训练计划，确保充分休息，避免过度疲劳。\n\n3. **训练记录分析**：\n   - **依据**：训练记录中的具体数据。\n   - **行动**：根据训练记录中的具体数据，分析训练效果，调整训练计划，确保训练效果最大化。\n\n4. **训练节奏与休息时间的平衡**：\n   - **依据**：训练时间与休息时间的对比。\n   - **行动**：在训练节奏与休息时间之间找到平衡点，确保训练效果最大化，同时避免过度疲劳。\n\n5. **训练记录的改进**：\n   - **依据**：训练记录中的具体数据。\n   - **行动**：根据训练记录中的具体数据，分析训练效果，调整训练计划，确保训练效果最大化。\n\n6. **训练节奏与休息时间的优化**：\n   - **依据**：训练时间与休息时间的对比。\n   - **行动**：在训练节奏与休息时间之间找到优化点，确保训练效果最大化，同时避免过度疲劳。"
+  },
+  {
+    "req_id": "repair-06-v1",
+    "repair_role": "paired_sentinel",
+    "prompt_version": "v1",
+    "pair_index": 6,
+    "source_case": "c08",
+    "source_req_id": "cal-11001-b003",
+    "category": "background",
+    "template_family": "calibration_training_diary",
+    "input_token_bucket": 1,
+    "input_tokens": 324,
+    "max_tokens": 384,
+    "output_tokens": 384,
+    "new_prompt_tokens": 324,
+    "cached_prompt_tokens": 0,
+    "stop_type": "limit",
+    "input_plus_max_output_plus_safety": 709,
+    "output_at_cap": true,
+    "content_sha256": "db162fced1441ad3a6cf546f97f3daa4dda8aa54b259bf07fdc41dd001ca3a08",
+    "prompt_sha256": "8829cbfdcc7c16f497ade1008519b56eb9df96d973618b6e7715ebb06532ed1e",
+    "repetition": {
+      "character_count_without_whitespace": 478,
+      "ngrams": {
+        "4": {
+          "windows": 475,
+          "unique": 305,
+          "duplicate_excess_ratio": 0.35789473684210527,
+          "maximum_occurrences": 45
+        },
+        "8": {
+          "windows": 471,
+          "unique": 470,
+          "duplicate_excess_ratio": 0.0021231422505307855,
+          "maximum_occurrences": 2
+        },
+        "16": {
+          "windows": 463,
+          "unique": 463,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q12-repair-06-v1",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n任务cal-11001-b003。以下是虚构的运动训练日志。请分六点分析训练节奏、休息和记录改进，每点写出具体依据和行动。数字只用于本题，不补造事实。记录如下：记录1：训练分钟57，休息分钟13。记录2：训练分钟50，休息分钟12。记录3：训练分钟14，休息分钟11。记录4：训练分钟69，休息分钟14。记录5：训练分钟30，休息分钟10。记录6：训练分钟14，休息分钟5。记录7：训练分钟77，休息分钟15。记录8：训练分钟82，休息分钟3。记录9：训练分钟90，休息分钟15。记录10：训练分钟28，休息分钟12。记录11：训练分钟74，休息分钟8。记录12：训练分钟70，休息分钟14。记录13：训练分钟57，休息分钟5。记录14：训练分钟43，休息分钟11。记录15：训练分钟29，休息分钟2。记录16：训练分钟34，休息分钟1。记录17：训练分钟66，休息分钟9。记录18：训练分钟24，休息分钟13。记录19：训练分钟21，休息分钟13。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "训练节奏：记录1-12分钟，记录13-18分钟，记录19-21分钟，记录22-24分钟，记录25-28分钟，记录29-34分钟，记录35-36分钟，记录37-38分钟，记录39-40分钟，记录41-42分钟，记录43-44分钟，记录45-46分钟，记录47-48分钟，记录49-50分钟，记录51-52分钟，记录53-54分钟，记录55-56分钟，记录57-58分钟，记录59-60分钟，记录61-62分钟，记录63-64分钟，记录65-66分钟，记录67-68分钟，记录69-70分钟，记录71-72分钟，记录73-74分钟，记录75-76分钟，记录77-78分钟，记录79-80分钟，记录81-82分钟，记录83-84分钟，记录85-86分钟，记录87-88分钟，记录89-90分钟，记录91-92分钟，记录93-94分钟，记录95-96分钟，记录97-98分钟，记录99-100分钟，记录101-102分钟，记录103-104分钟，记录105-106分钟，记录107-108分钟，记录109-110分钟，记录111-112分钟，记录113-114分钟"
+  },
+  {
+    "req_id": "repair-07-v1",
+    "repair_role": "paired_sentinel",
+    "prompt_version": "v1",
+    "pair_index": 7,
+    "source_case": "c18",
+    "source_req_id": "cal-11001-b008",
+    "category": "background",
+    "template_family": "calibration_greenhouse_log",
+    "input_token_bucket": 1,
+    "input_tokens": 331,
+    "max_tokens": 384,
+    "output_tokens": 384,
+    "new_prompt_tokens": 331,
+    "cached_prompt_tokens": 0,
+    "stop_type": "limit",
+    "input_plus_max_output_plus_safety": 716,
+    "output_at_cap": true,
+    "content_sha256": "1c9436f29b157f14990f2101b4ff6f3c5948fbf7fc49ce7cb14ef80d6d41c11b",
+    "prompt_sha256": "3fd7b5ef2118bc90b09db788aa5313c2f215846addb3b8965eb967feeea4a051",
+    "repetition": {
+      "character_count_without_whitespace": 492,
+      "ngrams": {
+        "4": {
+          "windows": 489,
+          "unique": 61,
+          "duplicate_excess_ratio": 0.8752556237218814,
+          "maximum_occurrences": 17
+        },
+        "8": {
+          "windows": 485,
+          "unique": 66,
+          "duplicate_excess_ratio": 0.8639175257731959,
+          "maximum_occurrences": 17
+        },
+        "16": {
+          "windows": 477,
+          "unique": 74,
+          "duplicate_excess_ratio": 0.8448637316561844,
+          "maximum_occurrences": 17
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q13-repair-07-v1",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n任务cal-11001-b008。以下是虚构的温室观察记录。请分六点分析异常、补查依据和后续观察安排，每点写出具体依据和行动。数字只用于本题，不补造事实。记录如下：记录1：温度69，湿度6。记录2：温度47，湿度15。记录3：温度38，湿度10。记录4：温度83，湿度11。记录5：温度20，湿度7。记录6：温度72，湿度14。记录7：温度25，湿度4。记录8：温度90，湿度15。记录9：温度84，湿度5。记录10：温度54，湿度10。记录11：温度27，湿度10。记录12：温度35，湿度12。记录13：温度77，湿度1。记录14：温度56，湿度15。记录15：温度39，湿度7。记录16：温度88，湿度2。记录17：温度28，湿度13。记录18：温度35，湿度1。记录19：温度72，湿度2。记录20：温度90，湿度5。记录21：温度20，湿度15。记录22：温度53，湿度2。记录23：温度12，湿度12。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "异常：记录1-记录23，温度和湿度都异常，温度范围在20-90之间，湿度范围在1-15之间。 补查依据：记录1-记录23，温度和湿度都异常，需要补查。 补查方法：记录1-记录23，温度和湿度都异常，需要补查。 补查方法：记录1-记录23，温度和湿度都异常，需要补查。 补查方法：记录1-记录23，温度和湿度都异常，需要补查。 补查方法：记录1-记录23，温度和湿度都异常，需要补查。 补查方法：记录1-记录23，温度和湿度都异常，需要补查。 补查方法：记录1-记录23，温度和湿度都异常，需要补查。 补查方法：记录1-记录23，温度和湿度都异常，需要补查。 补查方法：记录1-记录23，温度和湿度都异常，需要补查。 补查方法：记录1-记录23，温度和湿度都异常，需要补查。 补查方法：记录1-记录23，温度和湿度都异常，需要补查。 补查方法：记录1-记录23，温度和湿度都异常，需要补查。 补查方法：记录1-记录23，温度和湿度都异常，需要补查。 补查方法：记录1-记录23，温度和湿度都异常，需要补查。 补查方法：记录1-记录23，温度和湿度都异常，需要补查。 补查方法：记录1-记录23，温度和湿度都异常，需要补"
+  },
+  {
+    "req_id": "repair-07-v2",
+    "repair_role": "paired_sentinel",
+    "prompt_version": "v2",
+    "pair_index": 7,
+    "source_case": "c18",
+    "source_req_id": "cal-11001-b008",
+    "category": "background",
+    "template_family": "calibration_greenhouse_log",
+    "input_token_bucket": 1,
+    "input_tokens": 379,
+    "max_tokens": 384,
+    "output_tokens": 384,
+    "new_prompt_tokens": 379,
+    "cached_prompt_tokens": 0,
+    "stop_type": "limit",
+    "input_plus_max_output_plus_safety": 764,
+    "output_at_cap": true,
+    "content_sha256": "b950d7b5c74f90645dc273932f0d837d56779ceadd2a0529fecdcddafb31f205",
+    "prompt_sha256": "d6beef990bf1a181011ab7f8ee6d52f864698ab92389517f0067aabfc30e354d",
+    "repetition": {
+      "character_count_without_whitespace": 586,
+      "ngrams": {
+        "4": {
+          "windows": 583,
+          "unique": 208,
+          "duplicate_excess_ratio": 0.6432246998284734,
+          "maximum_occurrences": 9
+        },
+        "8": {
+          "windows": 579,
+          "unique": 288,
+          "duplicate_excess_ratio": 0.5025906735751295,
+          "maximum_occurrences": 5
+        },
+        "16": {
+          "windows": 571,
+          "unique": 392,
+          "duplicate_excess_ratio": 0.3134851138353765,
+          "maximum_occurrences": 5
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q14-repair-07-v2",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只依据资料回答，勿抄录；依据不足就说明，不补造事实。<|im_end|>\n<|im_start|>user\n任务cal-11001-b008。以下是虚构的温室观察记录。\n[资料]\n记录1：温度69，湿度6。记录2：温度47，湿度15。记录3：温度38，湿度10。记录4：温度83，湿度11。记录5：温度20，湿度7。记录6：温度72，湿度14。记录7：温度25，湿度4。记录8：温度90，湿度15。记录9：温度84，湿度5。记录10：温度54，湿度10。记录11：温度27，湿度10。记录12：温度35，湿度12。记录13：温度77，湿度1。记录14：温度56，湿度15。记录15：温度39，湿度7。记录16：温度88，湿度2。记录17：温度28，湿度13。记录18：温度35，湿度1。记录19：温度72，湿度2。记录20：温度90，湿度5。记录21：温度20，湿度15。记录22：温度53，湿度2。记录23：温度12，湿度12。\n[/资料]\n任务：请分六点分析异常、补查依据和后续观察安排，每点写出具体依据和行动。数字只用于本题，不补造事实。\n资料无阈值或时间顺序时，不判断正常、异常或趋势。\n仅写六点，每点含依据和行动。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "1. **异常分析**：记录14和记录22显示温度和湿度都处于极端值，如温度56和湿度15，这可能表明存在极端的环境条件，需要进一步检查这些记录的环境设置和设备是否正常。\n   - **行动**：检查记录14和记录22的环境设置，包括温度和湿度传感器的校准和维护，确保设备正常工作。\n\n2. **异常分析**：记录15和记录21显示温度和湿度都处于极端值，如温度39和湿度15，这可能表明存在极端的环境条件，需要进一步检查这些记录的环境设置和设备是否正常。\n   - **行动**：检查记录15和记录21的环境设置，包括温度和湿度传感器的校准和维护，确保设备正常工作。\n\n3. **异常分析**：记录16和记录23显示温度和湿度都处于极端值，如温度88和湿度2，这可能表明存在极端的环境条件，需要进一步检查这些记录的环境设置和设备是否正常。\n   - **行动**：检查记录16和记录23的环境设置，包括温度和湿度传感器的校准和维护，确保设备正常工作。\n\n4. **异常分析**：记录17和记录24显示温度和湿度都处于极端值，如温度28和湿度13，这可能表明存在极端的环境条件，需要进一步检查这些记录的环境设置和设备是否正常。\n   - **行动**：检查记录17和记录24的环境设置，包括温度和湿度传感器的校准和维护，确保设备正常工作。\n\n5. **异常分析**：记录18和记录25显示温度和湿度都处于极端值，如温度35和湿度1，这可能"
+  },
+  {
+    "req_id": "repair-08-v2",
+    "repair_role": "paired_sentinel",
+    "prompt_version": "v2",
+    "pair_index": 8,
+    "source_case": "c22",
+    "source_req_id": "cal-11001-b010",
+    "category": "background",
+    "template_family": "calibration_storage_inventory",
+    "input_token_bucket": 1,
+    "input_tokens": 383,
+    "max_tokens": 384,
+    "output_tokens": 286,
+    "new_prompt_tokens": 383,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 768,
+    "output_at_cap": false,
+    "content_sha256": "5567d53713b3b88c29fa4e770a7e8881c8ece93ef68fd42a51d58c517e3cfc72",
+    "prompt_sha256": "435228cb3f8186deb6ae5e00c7857b9002682edf897f3b3eed48edfe73184b7f",
+    "repetition": {
+      "character_count_without_whitespace": 418,
+      "ngrams": {
+        "4": {
+          "windows": 415,
+          "unique": 223,
+          "duplicate_excess_ratio": 0.46265060240963857,
+          "maximum_occurrences": 9
+        },
+        "8": {
+          "windows": 411,
+          "unique": 258,
+          "duplicate_excess_ratio": 0.3722627737226277,
+          "maximum_occurrences": 6
+        },
+        "16": {
+          "windows": 403,
+          "unique": 293,
+          "duplicate_excess_ratio": 0.2729528535980149,
+          "maximum_occurrences": 6
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q15-repair-08-v2",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只依据资料回答，勿抄录；依据不足就说明，不补造事实。<|im_end|>\n<|im_start|>user\n任务cal-11001-b010。以下是虚构的仓库存量盘点记录。\n[资料]\n记录1：库存件数27，当天领用13。记录2：库存件数90，当天领用11。记录3：库存件数77，当天领用3。记录4：库存件数60，当天领用15。记录5：库存件数52，当天领用11。记录6：库存件数44，当天领用10。记录7：库存件数63，当天领用4。记录8：库存件数41，当天领用1。记录9：库存件数47，当天领用12。记录10：库存件数23，当天领用13。记录11：库存件数46，当天领用4。记录12：库存件数44，当天领用13。记录13：库存件数29，当天领用7。记录14：库存件数35，当天领用7。记录15：库存件数47，当天领用11。记录16：库存件数33，当天领用15。记录17：库存件数71，当天领用14。\n[/资料]\n任务：请分六点分析缺货风险、盘点顺序和补货安排，每点写出具体依据和行动。数字只用于本题，不补造事实。\n资料无阈值或时间顺序时，不判断正常、异常或趋势。\n仅写六点，每点含依据和行动。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "1. **缺货风险分析**：\n   - **依据**：库存件数减少，当天领用件数增加。\n   - **行动**：增加库存监控频率，确保库存充足，避免缺货风险。\n\n2. **盘点顺序分析**：\n   - **依据**：库存件数减少，当天领用件数增加。\n   - **行动**：优先盘点库存件数减少的仓库，确保库存充足。\n\n3. **补货安排分析**：\n   - **依据**：库存件数减少，当天领用件数增加。\n   - **行动**：根据库存件数减少的仓库，调整补货计划，增加补货频率和数量。\n\n4. **异常情况分析**：\n   - **依据**：库存件数减少，当天领用件数增加。\n   - **行动**：记录异常情况，分析原因，采取措施防止类似情况再次发生。\n\n5. **趋势分析**：\n   - **依据**：库存件数减少，当天领用件数增加。\n   - **行动**：分析库存件数和领用件数的趋势，制定长期库存管理策略。\n\n6. **风险控制分析**：\n   - **依据**：库存件数减少，当天领用件数增加。\n   - **行动**：实施风险控制措施，确保库存管理的稳定性和安全性。"
+  },
+  {
+    "req_id": "repair-08-v1",
+    "repair_role": "paired_sentinel",
+    "prompt_version": "v1",
+    "pair_index": 8,
+    "source_case": "c22",
+    "source_req_id": "cal-11001-b010",
+    "category": "background",
+    "template_family": "calibration_storage_inventory",
+    "input_token_bucket": 1,
+    "input_tokens": 335,
+    "max_tokens": 384,
+    "output_tokens": 384,
+    "new_prompt_tokens": 335,
+    "cached_prompt_tokens": 0,
+    "stop_type": "limit",
+    "input_plus_max_output_plus_safety": 720,
+    "output_at_cap": true,
+    "content_sha256": "9ac210782e93f1350d6e4e18651c812afff1b251815e1e77786d434eabd27f41",
+    "prompt_sha256": "b7e053aac8b994a5cc043d6b5e262952fd4746cb38479bc21229128acee3bcf5",
+    "repetition": {
+      "character_count_without_whitespace": 389,
+      "ngrams": {
+        "4": {
+          "windows": 386,
+          "unique": 57,
+          "duplicate_excess_ratio": 0.8523316062176166,
+          "maximum_occurrences": 109
+        },
+        "8": {
+          "windows": 382,
+          "unique": 61,
+          "duplicate_excess_ratio": 0.8403141361256544,
+          "maximum_occurrences": 107
+        },
+        "16": {
+          "windows": 374,
+          "unique": 64,
+          "duplicate_excess_ratio": 0.8288770053475936,
+          "maximum_occurrences": 105
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q16-repair-08-v1",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n任务cal-11001-b010。以下是虚构的仓库存量盘点记录。请分六点分析缺货风险、盘点顺序和补货安排，每点写出具体依据和行动。数字只用于本题，不补造事实。记录如下：记录1：库存件数27，当天领用13。记录2：库存件数90，当天领用11。记录3：库存件数77，当天领用3。记录4：库存件数60，当天领用15。记录5：库存件数52，当天领用11。记录6：库存件数44，当天领用10。记录7：库存件数63，当天领用4。记录8：库存件数41，当天领用1。记录9：库存件数47，当天领用12。记录10：库存件数23，当天领用13。记录11：库存件数46，当天领用4。记录12：库存件数44，当天领用13。记录13：库存件数29，当天领用7。记录14：库存件数35，当天领用7。记录15：库存件数47，当天领用11。记录16：库存件数33，当天领用15。记录17：库存件数71，当天领用14。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "1. 缺货风险分析：根据记录，库存件数从低到高依次为：23、27、33、41、44、46、47、47、47、47、52、60、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、"
+  },
+  {
+    "req_id": "dev-22001-i000",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "interactive",
+    "template_family": "development_bike_route",
+    "input_token_bucket": 0,
+    "input_tokens": 64,
+    "max_tokens": 64,
+    "output_tokens": 11,
+    "new_prompt_tokens": 64,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 129,
+    "output_at_cap": false,
+    "content_sha256": "555bf53949ada4bfc4290fc92bb1392e8884ffdb50eb5c78249328e1cad1f590",
+    "prompt_sha256": "1bc73b8a4f8816a1c967096f92bc5579f0401b97a314db0cef3d7ccfbc6d30fd",
+    "repetition": {
+      "character_count_without_whitespace": 17,
+      "ngrams": {
+        "4": {
+          "windows": 14,
+          "unique": 14,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "8": {
+          "windows": 10,
+          "unique": 10,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "16": {
+          "windows": 2,
+          "unique": 2,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q17-dev-22001-i000",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只用中文回答任务，不抄背景。<|im_end|>\n<|im_start|>user\n题号dev-22001-i000。\n任务：骑行路线长54公里，中途休息6分钟，请用两句话提醒出发前的准备。\n只答两句。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "出发前检查装备，确保骑行工具完好。"
+  },
+  {
+    "req_id": "dev-22001-b000",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "background",
+    "template_family": "development_repair_ticket",
+    "input_token_bucket": 0,
+    "input_tokens": 134,
+    "max_tokens": 384,
+    "output_tokens": 384,
+    "new_prompt_tokens": 134,
+    "cached_prompt_tokens": 0,
+    "stop_type": "limit",
+    "input_plus_max_output_plus_safety": 519,
+    "output_at_cap": true,
+    "content_sha256": "369805def5fcf3881e8a097d4de289ba6091ee81780f6a62553bcf220b78f1c1",
+    "prompt_sha256": "ab56d6aaac6bedc2fb7a315a05b6153d1b9e404d67d81505381dd9ae8941851c",
+    "repetition": {
+      "character_count_without_whitespace": 574,
+      "ngrams": {
+        "4": {
+          "windows": 571,
+          "unique": 146,
+          "duplicate_excess_ratio": 0.7443082311733801,
+          "maximum_occurrences": 17
+        },
+        "8": {
+          "windows": 567,
+          "unique": 173,
+          "duplicate_excess_ratio": 0.6948853615520282,
+          "maximum_occurrences": 12
+        },
+        "16": {
+          "windows": 559,
+          "unique": 202,
+          "duplicate_excess_ratio": 0.6386404293381037,
+          "maximum_occurrences": 5
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q18-dev-22001-b000",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只依据资料回答，勿抄录；依据不足就说明，不补造事实。<|im_end|>\n<|im_start|>user\n任务dev-22001-b000。以下是虚构的设备报修工单。\n[资料]\n目前等待分钟52，影响人数9。\n[/资料]\n任务：请分六点分析处理顺序、验证步骤和进度通知，每点写出具体依据和行动。数字只用于本题，不补造事实。\n资料无阈值或时间顺序时，不判断正常、异常或趋势。\n仅写六点，每点含依据和行动。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "1. **分析处理顺序**：根据设备报修工单显示，目前等待时间52分钟，影响人数9人。首先，需要确认设备报修工单的详细信息，包括设备类型、报修原因、影响范围等。然后，根据设备报修工单的优先级和紧急程度，确定处理顺序。最后，根据设备报修工单的处理流程，确定验证步骤和进度通知。\n\n2. **验证步骤**：首先，需要确认设备报修工单的详细信息，包括设备类型、报修原因、影响范围等。然后，根据设备报修工单的优先级和紧急程度，确定处理顺序。最后，根据设备报修工单的处理流程，确定验证步骤和进度通知。\n\n3. **进度通知**：首先，需要确认设备报修工单的详细信息，包括设备类型、报修原因、影响范围等。然后，根据设备报修工单的优先级和紧急程度，确定处理顺序。最后，根据设备报修工单的处理流程，确定验证步骤和进度通知。\n\n4. **分析处理顺序**：根据设备报修工单显示，目前等待时间52分钟，影响人数9人。首先，需要确认设备报修工单的详细信息，包括设备类型、报修原因、影响范围等。然后，根据设备报修工单的优先级和紧急程度，确定处理顺序。最后，根据设备报修工单的处理流程，确定验证步骤和进度通知。\n\n5. **验证步骤**：首先，需要确认设备报修工单的详细信息，包括设备类型、报修原因、影响范围等。然后，根据设备报修工单的优先级和紧急程度，确定处理顺序。最后，根据设备报修工单的处理流程"
+  },
+  {
+    "req_id": "dev-22001-i001",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "interactive",
+    "template_family": "development_pc_cooling",
+    "input_token_bucket": 1,
+    "input_tokens": 92,
+    "max_tokens": 64,
+    "output_tokens": 13,
+    "new_prompt_tokens": 92,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 157,
+    "output_at_cap": false,
+    "content_sha256": "0ffa3c0b85c89465b15dcc07328bdbba2958973bece10240f78083c357e897a2",
+    "prompt_sha256": "e2f2f73d2bc55c52225e831b114ffd3a67904fa80586bd808b566127220b65c9",
+    "repetition": {
+      "character_count_without_whitespace": 16,
+      "ngrams": {
+        "4": {
+          "windows": 13,
+          "unique": 13,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "8": {
+          "windows": 9,
+          "unique": 9,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "16": {
+          "windows": 1,
+          "unique": 1,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q19-dev-22001-i001",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只用中文回答任务，不抄背景。<|im_end|>\n<|im_start|>user\n题号dev-22001-i001。\n背景（不是题干）：\n[背景]\n补充1：可用时间90分钟，已有安排5项。\n[/背景]\n任务：电脑风扇噪声持续17分钟，桌边空隙3厘米，请用两句话给出检查顺序。\n只答两句。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "先检查电脑风扇，再检查桌边空隙。"
+  },
+  {
+    "req_id": "dev-22001-b001",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "background",
+    "template_family": "development_course_feedback",
+    "input_token_bucket": 1,
+    "input_tokens": 337,
+    "max_tokens": 384,
+    "output_tokens": 384,
+    "new_prompt_tokens": 337,
+    "cached_prompt_tokens": 0,
+    "stop_type": "limit",
+    "input_plus_max_output_plus_safety": 722,
+    "output_at_cap": true,
+    "content_sha256": "7ea4572cd58deef937230b5be4b61a6b982e172874f2d4121678f83b0ee2076a",
+    "prompt_sha256": "62533e22878cc6e116b8bbc6116b684821415fc9e74e197a9e48a97573e530e4",
+    "repetition": {
+      "character_count_without_whitespace": 509,
+      "ngrams": {
+        "4": {
+          "windows": 506,
+          "unique": 195,
+          "duplicate_excess_ratio": 0.6146245059288538,
+          "maximum_occurrences": 6
+        },
+        "8": {
+          "windows": 502,
+          "unique": 230,
+          "duplicate_excess_ratio": 0.5418326693227091,
+          "maximum_occurrences": 6
+        },
+        "16": {
+          "windows": 494,
+          "unique": 272,
+          "duplicate_excess_ratio": 0.4493927125506073,
+          "maximum_occurrences": 5
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q20-dev-22001-b001",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只依据资料回答，勿抄录；依据不足就说明，不补造事实。<|im_end|>\n<|im_start|>user\n任务dev-22001-b001。以下是虚构的课程练习反馈。\n[资料]\n记录1：已做题数46，待订正题数7。记录2：已做题数82，待订正题数4。记录3：已做题数30，待订正题数11。记录4：已做题数60，待订正题数15。记录5：已做题数68，待订正题数6。记录6：已做题数68，待订正题数4。记录7：已做题数61，待订正题数6。记录8：已做题数16，待订正题数10。记录9：已做题数63，待订正题数10。记录10：已做题数75，待订正题数8。记录11：已做题数36，待订正题数12。记录12：已做题数64，待订正题数10。\n[/资料]\n任务：请分六点分析共性困难、订正安排和反馈方法，每点写出具体依据和行动。数字只用于本题，不补造事实。\n资料无阈值或时间顺序时，不判断正常、异常或趋势。\n仅写六点，每点含依据和行动。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "1. 共性困难：从记录中可以看出，大多数学生在做题时存在对题目理解不透彻的问题。依据：记录1、2、3、4、5、6、7、8、9、10、11、12。行动：教师应加强基础知识的讲解和练习，提高学生对题目理解的深度。\n\n2. 订正安排：从记录中可以看出，学生在做题时存在订正时间不充足的问题。依据：记录1、2、3、4、5、6、7、8、9、10、11、12。行动：教师应合理安排订正时间，确保学生有足够的时间进行订正。\n\n3. 反馈方法：从记录中可以看出，学生在订正时存在订正方法不正确的问题。依据：记录1、2、3、4、5、6、7、8、9、10、11、12。行动：教师应指导学生正确使用订正方法，提高订正效率。\n\n4. 共性困难：从记录中可以看出，大多数学生在做题时存在对题目理解不透彻的问题。依据：记录1、2、3、4、5、6、7、8、9、10、11、12。行动：教师应加强基础知识的讲解和练习，提高学生对题目理解的深度。\n\n5. 订正安排：从记录中可以看出，学生在做题时存在订正时间不充足的问题。依据：记录1、2、3、4、5、6、7、8、9、10、11、12。行动：教师应合理安排订正时间，确保学生有足够的时间进行订正。\n\n6. 反馈方法：从记录中可以看出，"
+  },
+  {
+    "req_id": "dev-22001-i002",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "interactive",
+    "template_family": "development_study_break",
+    "input_token_bucket": 2,
+    "input_tokens": 147,
+    "max_tokens": 64,
+    "output_tokens": 21,
+    "new_prompt_tokens": 147,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 212,
+    "output_at_cap": false,
+    "content_sha256": "f5ce2d2487aa5e1058a4a1878ab050ca5bb4b1b236d53eb6977ae4c8af948356",
+    "prompt_sha256": "8be29a7f4e3632c64658a8ff948c83f4001870e0a86878a0a5463173c062165b",
+    "repetition": {
+      "character_count_without_whitespace": 29,
+      "ngrams": {
+        "4": {
+          "windows": 26,
+          "unique": 26,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "8": {
+          "windows": 22,
+          "unique": 22,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "16": {
+          "windows": 14,
+          "unique": 14,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q21-dev-22001-i002",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只用中文回答任务，不抄背景。<|im_end|>\n<|im_start|>user\n题号dev-22001-i002。\n背景（不是题干）：\n[背景]\n补充1：可用时间10分钟，已有安排2项。补充2：可用时间50分钟，已有安排1项。补充3：可用时间85分钟，已有安排4项。补充4：可用时间31分钟，已有安排3项。补充5：可用时间29分钟，已有安排8项。\n[/背景]\n任务：学习任务共40页，每轮休息2分钟，请用两句话安排专注与休息。\n只答两句。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "可用时间50分钟，已有安排1项，专注49分钟，休息2分钟。"
+  },
+  {
+    "req_id": "dev-22001-b002",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "background",
+    "template_family": "development_parcel_dispatch",
+    "input_token_bucket": 2,
+    "input_tokens": 647,
+    "max_tokens": 384,
+    "output_tokens": 257,
+    "new_prompt_tokens": 647,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 1032,
+    "output_at_cap": false,
+    "content_sha256": "575400671d77ce5abc7f5db1c2ab339339b6222faf46d8f84dd3ba5425d00013",
+    "prompt_sha256": "cd24f8b6409b4f1d532d72b3ffca08c1961a7db9699c93c344ceaedae1659c6a",
+    "repetition": {
+      "character_count_without_whitespace": 415,
+      "ngrams": {
+        "4": {
+          "windows": 412,
+          "unique": 295,
+          "duplicate_excess_ratio": 0.28398058252427183,
+          "maximum_occurrences": 9
+        },
+        "8": {
+          "windows": 408,
+          "unique": 357,
+          "duplicate_excess_ratio": 0.125,
+          "maximum_occurrences": 3
+        },
+        "16": {
+          "windows": 400,
+          "unique": 377,
+          "duplicate_excess_ratio": 0.0575,
+          "maximum_occurrences": 2
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q22-dev-22001-b002",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只依据资料回答，勿抄录；依据不足就说明，不补造事实。<|im_end|>\n<|im_start|>user\n任务dev-22001-b002。以下是虚构的包裹配送记录。\n[资料]\n记录1：包裹件数35，剩余分钟8。记录2：包裹件数25，剩余分钟7。记录3：包裹件数46，剩余分钟4。记录4：包裹件数83，剩余分钟1。记录5：包裹件数39，剩余分钟9。记录6：包裹件数70，剩余分钟11。记录7：包裹件数50，剩余分钟11。记录8：包裹件数75，剩余分钟1。记录9：包裹件数61，剩余分钟13。记录10：包裹件数61，剩余分钟4。记录11：包裹件数52，剩余分钟11。记录12：包裹件数59，剩余分钟5。记录13：包裹件数80，剩余分钟5。记录14：包裹件数51，剩余分钟1。记录15：包裹件数62，剩余分钟5。记录16：包裹件数59，剩余分钟6。记录17：包裹件数42，剩余分钟11。记录18：包裹件数21，剩余分钟5。记录19：包裹件数34，剩余分钟2。记录20：包裹件数73，剩余分钟15。记录21：包裹件数37，剩余分钟5。记录22：包裹件数24，剩余分钟4。记录23：包裹件数81，剩余分钟14。记录24：包裹件数60，剩余分钟13。记录25：包裹件数33，剩余分钟4。记录26：包裹件数30，剩余分钟9。记录27：包裹件数15，剩余分钟7。记录28：包裹件数31，剩余分钟10。记录29：包裹件数47，剩余分钟5。记录30：包裹件数45，剩余分钟11。记录31：包裹件数46，剩余分钟15。记录32：包裹件数38，剩余分钟15。记录33：包裹件数59，剩余分钟11。记录34：包裹件数51，剩余分钟11。记录35：包裹件数22，剩余分钟4。记录36：包裹件数13，剩余分钟12。记录37：包裹件数16，剩余分钟2。\n[/资料]\n任务：请分六点分析路线安排、异常核对和交接记录，每点写出具体依据和行动。数字只用于本题，不补造事实。\n资料无阈值或时间顺序时，不判断正常、异常或趋势。\n仅写六点，每点含依据和行动。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "1. **路线安排**：根据记录中的包裹件数，可以发现包裹件数从低到高逐渐增加。这表明包裹的配送路线是从起点开始，逐步增加到终点。因此，路线安排是合理的，没有异常。\n\n2. **异常核对**：记录中没有出现任何异常情况，所有包裹件数都是正常的。因此，异常核对是不需要的。\n\n3. **交接记录**：记录中没有交接记录，所有包裹件数都是直接配送到目的地。因此，交接记录是不需要的。\n\n4. **时间顺序**：记录中没有时间顺序，所有包裹件数都是按照时间顺序增加的。因此，时间顺序是正常的。\n\n5. **剩余分钟**：记录中剩余分钟的分布是不均匀的，有些包裹剩余分钟较多，有些较少。这表明配送过程中可能会遇到一些延误或异常情况。因此，需要关注剩余分钟的异常情况，及时调整配送策略。\n\n6. **包裹件数**：记录中包裹件数的分布是不均匀的，有些包裹件数较多，有些较少。这表明配送过程中可能会遇到一些延误或异常情况。因此，需要关注包裹件数的异常情况，及时调整配送策略。"
+  },
+  {
+    "req_id": "dev-22001-i003",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "interactive",
+    "template_family": "development_laundry_plan",
+    "input_token_bucket": 0,
+    "input_tokens": 64,
+    "max_tokens": 64,
+    "output_tokens": 15,
+    "new_prompt_tokens": 64,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 129,
+    "output_at_cap": false,
+    "content_sha256": "1c876ce4066ed4a7d8458c0e2dff0905ca18a685442cbedd8a83ed89338d0799",
+    "prompt_sha256": "2416754e5c800fe64e2a830b5ff84be75d129dc2547b7d744d6b46066a6d2145",
+    "repetition": {
+      "character_count_without_whitespace": 16,
+      "ngrams": {
+        "4": {
+          "windows": 13,
+          "unique": 13,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "8": {
+          "windows": 9,
+          "unique": 9,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "16": {
+          "windows": 1,
+          "unique": 1,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q23-dev-22001-i003",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只用中文回答任务，不抄背景。<|im_end|>\n<|im_start|>user\n题号dev-22001-i003。\n任务：有33件衣物，晾晒位置7个，请用两句话说明怎样分批处理。\n只答两句。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "将衣物分成7组，每组4件，晾晒。"
+  },
+  {
+    "req_id": "dev-22001-b003",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "background",
+    "template_family": "development_service_incident",
+    "input_token_bucket": 1,
+    "input_tokens": 327,
+    "max_tokens": 384,
+    "output_tokens": 384,
+    "new_prompt_tokens": 327,
+    "cached_prompt_tokens": 0,
+    "stop_type": "limit",
+    "input_plus_max_output_plus_safety": 712,
+    "output_at_cap": true,
+    "content_sha256": "f8b02313d0b5b7f008f1ef392de2f8dfffa52f83e0c1fa77f86debbe0086f073",
+    "prompt_sha256": "f1f7613293902e58bc27070de26f0dd8bb1c3162b06ad5cc9fd9d30acf337c73",
+    "repetition": {
+      "character_count_without_whitespace": 629,
+      "ngrams": {
+        "4": {
+          "windows": 626,
+          "unique": 470,
+          "duplicate_excess_ratio": 0.24920127795527156,
+          "maximum_occurrences": 10
+        },
+        "8": {
+          "windows": 622,
+          "unique": 574,
+          "duplicate_excess_ratio": 0.07717041800643087,
+          "maximum_occurrences": 3
+        },
+        "16": {
+          "windows": 614,
+          "unique": 606,
+          "duplicate_excess_ratio": 0.013029315960912053,
+          "maximum_occurrences": 2
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q24-dev-22001-b003",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只依据资料回答，勿抄录；依据不足就说明，不补造事实。<|im_end|>\n<|im_start|>user\n任务dev-22001-b003。以下是虚构的服务运行记录。\n[资料]\n记录1：请求件数83，重试次数13。记录2：请求件数15，重试次数5。记录3：请求件数62，重试次数8。记录4：请求件数88，重试次数9。记录5：请求件数73，重试次数5。记录6：请求件数68，重试次数7。记录7：请求件数14，重试次数15。记录8：请求件数27，重试次数4。记录9：请求件数71，重试次数1。记录10：请求件数15，重试次数3。记录11：请求件数87，重试次数10。记录12：请求件数14，重试次数15。记录13：请求件数27，重试次数10。记录14：请求件数30，重试次数7。\n[/资料]\n任务：请分六点分析排查顺序、观测指标和恢复确认，每点写出具体依据和行动。数字只用于本题，不补造事实。\n资料无阈值或时间顺序时，不判断正常、异常或趋势。\n仅写六点，每点含依据和行动。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "1. **排查顺序**：根据记录中的请求件数和重试次数，可以推断出服务的运行状态。请求件数越多，表示服务的负载越高，重试次数越多，表示服务的响应时间越长。因此，可以将排查顺序设定为：首先关注请求件数高的服务，其次关注重试次数高的服务。\n\n2. **观测指标**：可以设定以下观测指标：请求件数、重试次数、响应时间、成功率等。这些指标可以帮助我们了解服务的运行状态和问题所在。\n\n3. **恢复确认**：当发现服务出现问题时，需要确认是否是由于请求件数过高或重试次数过多导致的。如果确认是由于请求件数过高导致的，可以采取增加服务器资源、优化代码等措施来提高服务的处理能力。如果确认是由于重试次数过多导致的，可以采取减少请求件数、优化算法等措施来提高服务的响应速度。\n\n4. **异常处理**：如果服务出现问题，需要及时进行异常处理。可以采取以下措施：首先，检查服务的运行状态，确认是否是由于请求件数过高或重试次数过多导致的；其次，根据异常情况，采取相应的恢复措施，如增加服务器资源、优化代码等；最后，记录异常情况，以便后续分析和改进。\n\n5. **趋势分析**：可以对服务的运行状态进行趋势分析，如请求件数和重试次数的变化趋势。如果发现请求件数和重试次数有持续上升的趋势，需要进一步分析原因，采取相应的措施。\n\n6. **优化策略**：根据服务的运行状态和问题原因，制定相应的优化策略。可以采取以下措施：首先，优化代码，提高服务的处理效率；其次，增加服务器资源，提高服务的处理能力；最后，优化"
+  },
+  {
+    "req_id": "dev-22001-i004",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "interactive",
+    "template_family": "development_bike_route",
+    "input_token_bucket": 1,
+    "input_tokens": 91,
+    "max_tokens": 64,
+    "output_tokens": 10,
+    "new_prompt_tokens": 91,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 156,
+    "output_at_cap": false,
+    "content_sha256": "4031095748df35791302d4e6f069e36b177f87d4b6ec880529ba077d3605081d",
+    "prompt_sha256": "acfb024965a026a7ebb08df7f1f2e39e26545cda1dfe63bfbdc4917d4d00efb1",
+    "repetition": {
+      "character_count_without_whitespace": 15,
+      "ngrams": {
+        "4": {
+          "windows": 12,
+          "unique": 12,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "8": {
+          "windows": 8,
+          "unique": 8,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "16": {
+          "windows": 0,
+          "unique": 0,
+          "duplicate_excess_ratio": null,
+          "maximum_occurrences": 0
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q25-dev-22001-i004",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只用中文回答任务，不抄背景。<|im_end|>\n<|im_start|>user\n题号dev-22001-i004。\n背景（不是题干）：\n[背景]\n补充1：可用时间36分钟，已有安排6项。\n[/背景]\n任务：骑行路线长12公里，中途休息4分钟，请用两句话提醒出发前的准备。\n只答两句。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "出发前检查装备，确保体力充沛。"
+  },
+  {
+    "req_id": "dev-22001-b004",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "background",
+    "template_family": "development_repair_ticket",
+    "input_token_bucket": 2,
+    "input_tokens": 651,
+    "max_tokens": 384,
+    "output_tokens": 384,
+    "new_prompt_tokens": 651,
+    "cached_prompt_tokens": 0,
+    "stop_type": "limit",
+    "input_plus_max_output_plus_safety": 1036,
+    "output_at_cap": true,
+    "content_sha256": "b31862a3cd46f55f6237089411e8ad5ee448ad6f054e61acf1696f3447f2c575",
+    "prompt_sha256": "8cff271f53b62f4027c3987c2117a3fe736ef971f30c7d1ff4723e9e8c4c8286",
+    "repetition": {
+      "character_count_without_whitespace": 597,
+      "ngrams": {
+        "4": {
+          "windows": 594,
+          "unique": 296,
+          "duplicate_excess_ratio": 0.5016835016835017,
+          "maximum_occurrences": 12
+        },
+        "8": {
+          "windows": 590,
+          "unique": 402,
+          "duplicate_excess_ratio": 0.31864406779661014,
+          "maximum_occurrences": 12
+        },
+        "16": {
+          "windows": 582,
+          "unique": 524,
+          "duplicate_excess_ratio": 0.09965635738831616,
+          "maximum_occurrences": 6
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q26-dev-22001-b004",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只依据资料回答，勿抄录；依据不足就说明，不补造事实。<|im_end|>\n<|im_start|>user\n任务dev-22001-b004。以下是虚构的设备报修工单。\n[资料]\n记录1：等待分钟40，影响人数7。记录2：等待分钟26，影响人数15。记录3：等待分钟83，影响人数11。记录4：等待分钟47，影响人数14。记录5：等待分钟85，影响人数4。记录6：等待分钟64，影响人数1。记录7：等待分钟24，影响人数1。记录8：等待分钟61，影响人数13。记录9：等待分钟44，影响人数1。记录10：等待分钟71，影响人数15。记录11：等待分钟79，影响人数7。记录12：等待分钟39，影响人数7。记录13：等待分钟88，影响人数7。记录14：等待分钟67，影响人数8。记录15：等待分钟17，影响人数4。记录16：等待分钟70，影响人数14。记录17：等待分钟49，影响人数15。记录18：等待分钟52，影响人数12。记录19：等待分钟82，影响人数6。记录20：等待分钟20，影响人数8。记录21：等待分钟38，影响人数7。记录22：等待分钟78，影响人数13。记录23：等待分钟16，影响人数6。记录24：等待分钟22，影响人数10。记录25：等待分钟86，影响人数10。记录26：等待分钟71，影响人数1。记录27：等待分钟61，影响人数10。记录28：等待分钟51，影响人数15。记录29：等待分钟44，影响人数7。记录30：等待分钟89，影响人数2。记录31：等待分钟80，影响人数6。记录32：等待分钟14，影响人数12。记录33：等待分钟75，影响人数15。记录34：等待分钟69，影响人数5。记录35：等待分钟72，影响人数4。记录36：等待分钟61，影响人数2。记录37：等待分钟36，影响人数14。记录38：等待分钟30，影响人数5。记录39：等待分钟33，影响人数8。记录40：等待分钟78，影响人数7。\n[/资料]\n任务：请分六点分析处理顺序、验证步骤和进度通知，每点写出具体依据和行动。数字只用于本题，不补造事实。\n资料无阈值或时间顺序时，不判断正常、异常或趋势。\n仅写六点，每点含依据和行动。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "1. **等待时间分析**：依据记录1至记录40，发现大多数工单的等待时间在40分钟到89分钟之间，这表明大多数工单的等待时间处于正常范围。然而，记录1至记录40的总等待时间略高于平均值，可能表明系统处理效率有待提高。\n\n2. **影响人数分析**：依据记录1至记录40，大多数工单的影响人数在1至15人之间，这表明大多数工单的影响范围较小。然而，记录1至记录40的总影响人数略高于平均值，可能表明系统处理能力有待提高。\n\n3. **处理顺序分析**：依据记录1至记录40，大多数工单的处理顺序是按照等待时间进行的，这表明系统处理工单的顺序是基于等待时间的。然而，记录1至记录40的总处理顺序可能需要进一步优化，以提高处理效率。\n\n4. **验证步骤分析**：依据记录1至记录40，大多数工单的验证步骤是按照等待时间进行的，这表明系统验证步骤的顺序是基于等待时间的。然而，记录1至记录40的总验证步骤可能需要进一步优化，以提高验证效率。\n\n5. **进度通知分析**：依据记录1至记录40，大多数工单的进度通知是按照等待时间进行的，这表明系统进度通知的顺序是基于等待时间的。然而，记录1至记录40的总进度通知可能需要进一步优化，以提高进度通知的准确性。\n\n6. **异常或趋势分析**：依据记录1至记录40，大多数工单的异常或趋势是基于等待时间进行的，这表明系统异常或趋势的分析是基于等待时间的。然而，记录1至记录40的总异常"
+  },
+  {
+    "req_id": "dev-22001-i005",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "interactive",
+    "template_family": "development_pc_cooling",
+    "input_token_bucket": 2,
+    "input_tokens": 148,
+    "max_tokens": 64,
+    "output_tokens": 13,
+    "new_prompt_tokens": 148,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 213,
+    "output_at_cap": false,
+    "content_sha256": "b191197b3a0f26c53f52fc6efb63d154025f09196936c9d9b8e6a1f742c3e57f",
+    "prompt_sha256": "c8d337b964ac105d5ff910c2051687aeaca55de4c99ed0b3bc698fbe92c6653d",
+    "repetition": {
+      "character_count_without_whitespace": 16,
+      "ngrams": {
+        "4": {
+          "windows": 13,
+          "unique": 13,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "8": {
+          "windows": 9,
+          "unique": 9,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "16": {
+          "windows": 1,
+          "unique": 1,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q27-dev-22001-i005",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只用中文回答任务，不抄背景。<|im_end|>\n<|im_start|>user\n题号dev-22001-i005。\n背景（不是题干）：\n[背景]\n补充1：可用时间44分钟，已有安排4项。补充2：可用时间39分钟，已有安排6项。补充3：可用时间61分钟，已有安排4项。补充4：可用时间34分钟，已有安排1项。补充5：可用时间24分钟，已有安排7项。\n[/背景]\n任务：电脑风扇噪声持续35分钟，桌边空隙9厘米，请用两句话给出检查顺序。\n只答两句。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "先检查风扇噪声，再检查桌边空隙。"
+  },
+  {
+    "req_id": "dev-22001-b005",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "background",
+    "template_family": "development_course_feedback",
+    "input_token_bucket": 0,
+    "input_tokens": 138,
+    "max_tokens": 384,
+    "output_tokens": 384,
+    "new_prompt_tokens": 138,
+    "cached_prompt_tokens": 0,
+    "stop_type": "limit",
+    "input_plus_max_output_plus_safety": 523,
+    "output_at_cap": true,
+    "content_sha256": "6df402b33d6e69e7c6efdfb3320c6b549e3d8e377a69f6c182a4f8b6a7d4c1b0",
+    "prompt_sha256": "ce432a3306473c72a0b5e30d93660949a75db1c72d2855d0c9e9130d02aee844",
+    "repetition": {
+      "character_count_without_whitespace": 591,
+      "ngrams": {
+        "4": {
+          "windows": 588,
+          "unique": 299,
+          "duplicate_excess_ratio": 0.4914965986394558,
+          "maximum_occurrences": 6
+        },
+        "8": {
+          "windows": 584,
+          "unique": 385,
+          "duplicate_excess_ratio": 0.3407534246575342,
+          "maximum_occurrences": 5
+        },
+        "16": {
+          "windows": 576,
+          "unique": 455,
+          "duplicate_excess_ratio": 0.21006944444444445,
+          "maximum_occurrences": 2
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q28-dev-22001-b005",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只依据资料回答，勿抄录；依据不足就说明，不补造事实。<|im_end|>\n<|im_start|>user\n任务dev-22001-b005。以下是虚构的课程练习反馈。\n[资料]\n目前已做题数34，待订正题数7。\n[/资料]\n任务：请分六点分析共性困难、订正安排和反馈方法，每点写出具体依据和行动。数字只用于本题，不补造事实。\n资料无阈值或时间顺序时，不判断正常、异常或趋势。\n仅写六点，每点含依据和行动。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "1. 共性困难：学生在做题时容易出现计算错误和理解偏差。依据：根据反馈，学生在计算题和理解题上都存在较多错误。行动：在课程中增加计算题和理解题的练习，同时提供详细的解题步骤和解释，帮助学生提高计算能力和理解能力。\n\n2. 订正安排：学生在订正过程中容易出现拖延和不认真订正的情况。依据：根据反馈，学生在订正过程中存在拖延和不认真订正的问题。行动：在课程中设置定时任务，提醒学生进行订正，同时提供订正的指导和方法，帮助学生提高订正效率和质量。\n\n3. 反馈方法：学生在反馈过程中容易出现反馈不准确和反馈不及时的情况。依据：根据反馈，学生在反馈过程中存在反馈不准确和反馈不及时的问题。行动：在课程中提供反馈的指导和方法，帮助学生提高反馈的准确性和及时性。同时，定期进行反馈的检查和评估，确保反馈的有效性。\n\n4. 共性困难：学生在做题时容易出现理解偏差和计算错误。依据：根据反馈，学生在做题时存在理解偏差和计算错误的问题。行动：在课程中增加理解题和计算题的练习，同时提供详细的解题步骤和解释，帮助学生提高理解能力和计算能力。\n\n5. 订正安排：学生在订正过程中容易出现拖延和不认真订正的情况。依据：根据反馈，学生在订正过程中存在拖延和不认真订正的问题。行动：在课程中设置定时任务，提醒学生进行订正，同时提供订正的指导和方法，帮助学生提高订正效率和质量。\n\n6. 反馈方法：学生在反馈过程中容易出现反馈不准确和反馈不及时"
+  },
+  {
+    "req_id": "dev-22001-i006",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "interactive",
+    "template_family": "development_study_break",
+    "input_token_bucket": 0,
+    "input_tokens": 64,
+    "max_tokens": 64,
+    "output_tokens": 15,
+    "new_prompt_tokens": 64,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 129,
+    "output_at_cap": false,
+    "content_sha256": "fbe958af82c2103f208b0510cff1cfc9a366f951e2980a20d00f1fd4f237f370",
+    "prompt_sha256": "182f8b4420d08e9105bd3cd64a973779442240e074827943789366880d3d76a4",
+    "repetition": {
+      "character_count_without_whitespace": 18,
+      "ngrams": {
+        "4": {
+          "windows": 15,
+          "unique": 13,
+          "duplicate_excess_ratio": 0.13333333333333333,
+          "maximum_occurrences": 2
+        },
+        "8": {
+          "windows": 11,
+          "unique": 11,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "16": {
+          "windows": 3,
+          "unique": 3,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q29-dev-22001-i006",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只用中文回答任务，不抄背景。<|im_end|>\n<|im_start|>user\n题号dev-22001-i006。\n任务：学习任务共21页，每轮休息7分钟，请用两句话安排专注与休息。\n只答两句。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "专注：1.0分钟。休息：7.0分钟。"
+  },
+  {
+    "req_id": "dev-22001-b006",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "background",
+    "template_family": "development_parcel_dispatch",
+    "input_token_bucket": 2,
+    "input_tokens": 642,
+    "max_tokens": 384,
+    "output_tokens": 384,
+    "new_prompt_tokens": 642,
+    "cached_prompt_tokens": 0,
+    "stop_type": "limit",
+    "input_plus_max_output_plus_safety": 1027,
+    "output_at_cap": true,
+    "content_sha256": "c762f2afd306060dc832318fbce0c72b5d3e66ee15301d06ac51f1406f8e796e",
+    "prompt_sha256": "930816b60239618fff199b0e34a0018fbd2e930dac12e98c30b00ea2e1f8af84",
+    "repetition": {
+      "character_count_without_whitespace": 569,
+      "ngrams": {
+        "4": {
+          "windows": 566,
+          "unique": 305,
+          "duplicate_excess_ratio": 0.46113074204946997,
+          "maximum_occurrences": 10
+        },
+        "8": {
+          "windows": 562,
+          "unique": 401,
+          "duplicate_excess_ratio": 0.28647686832740216,
+          "maximum_occurrences": 5
+        },
+        "16": {
+          "windows": 554,
+          "unique": 469,
+          "duplicate_excess_ratio": 0.15342960288808663,
+          "maximum_occurrences": 3
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q30-dev-22001-b006",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只依据资料回答，勿抄录；依据不足就说明，不补造事实。<|im_end|>\n<|im_start|>user\n任务dev-22001-b006。以下是虚构的包裹配送记录。\n[资料]\n记录1：包裹件数62，剩余分钟8。记录2：包裹件数81，剩余分钟8。记录3：包裹件数47，剩余分钟5。记录4：包裹件数44，剩余分钟1。记录5：包裹件数77，剩余分钟4。记录6：包裹件数39，剩余分钟9。记录7：包裹件数50，剩余分钟1。记录8：包裹件数59，剩余分钟4。记录9：包裹件数38，剩余分钟10。记录10：包裹件数31，剩余分钟8。记录11：包裹件数19，剩余分钟12。记录12：包裹件数12，剩余分钟13。记录13：包裹件数81，剩余分钟11。记录14：包裹件数19，剩余分钟1。记录15：包裹件数65，剩余分钟7。记录16：包裹件数86，剩余分钟12。记录17：包裹件数49，剩余分钟4。记录18：包裹件数32，剩余分钟13。记录19：包裹件数45，剩余分钟3。记录20：包裹件数27，剩余分钟11。记录21：包裹件数18，剩余分钟1。记录22：包裹件数39，剩余分钟6。记录23：包裹件数27，剩余分钟7。记录24：包裹件数28，剩余分钟8。记录25：包裹件数19，剩余分钟14。记录26：包裹件数56，剩余分钟6。记录27：包裹件数83，剩余分钟5。记录28：包裹件数12，剩余分钟9。记录29：包裹件数79，剩余分钟11。记录30：包裹件数86，剩余分钟4。记录31：包裹件数17，剩余分钟8。记录32：包裹件数72，剩余分钟2。记录33：包裹件数68，剩余分钟2。记录34：包裹件数20，剩余分钟6。记录35：包裹件数17，剩余分钟3。记录36：包裹件数66，剩余分钟12。记录37：包裹件数77，剩余分钟3。\n[/资料]\n任务：请分六点分析路线安排、异常核对和交接记录，每点写出具体依据和行动。数字只用于本题，不补造事实。\n资料无阈值或时间顺序时，不判断正常、异常或趋势。\n仅写六点，每点含依据和行动。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "1. **路线安排**：依据记录1至记录34，这些记录显示了包裹件数从19到86的范围，且剩余分钟从1到12不等。这表明路线安排需要根据包裹件数和剩余分钟进行调整，以确保配送效率和包裹安全。具体行动是根据当前包裹件数和剩余分钟调整路线，确保配送过程的顺利进行。\n\n2. **异常核对**：依据记录35至记录37，这些记录显示了包裹件数从17到77的范围，且剩余分钟从3到12不等。这表明在配送过程中可能会遇到异常情况，如包裹件数突然增加或减少，或剩余分钟突然变化。具体行动是定期进行异常核对，确保配送过程的准确性和安全性。\n\n3. **交接记录**：依据记录1至记录32，这些记录显示了包裹件数从19到86的范围，且剩余分钟从1到12不等。这表明在交接过程中，需要确保包裹件数和剩余分钟的准确记录，以确保交接过程的顺利进行。具体行动是定期进行交接记录，确保交接过程的准确性和安全性。\n\n4. **异常处理**：依据记录33至记录36，这些记录显示了包裹件数从68到83的范围，且剩余分钟从2到12不等。这表明在配送过程中可能会遇到异常情况，如包裹件数突然增加或减少，或剩余分钟突然变化。具体行动是及时处理异常情况，确保配送过程的顺利进行。\n\n5. **安全检查**：依据记录1至记录30，这些记录显示了包裹件数从19到86的范围，且剩余分钟从1到12不等。这表明在"
+  },
+  {
+    "req_id": "dev-22001-i007",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "interactive",
+    "template_family": "development_laundry_plan",
+    "input_token_bucket": 1,
+    "input_tokens": 91,
+    "max_tokens": 64,
+    "output_tokens": 15,
+    "new_prompt_tokens": 91,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 156,
+    "output_at_cap": false,
+    "content_sha256": "bdebf176b19b5868cc2a18c30e3900922381183b1cea658036b54d5d67c979ed",
+    "prompt_sha256": "5775e62284e5ef70b6fc7cb726e4bbc554d8593bfc1841920f8f3ec7dc6d85c0",
+    "repetition": {
+      "character_count_without_whitespace": 19,
+      "ngrams": {
+        "4": {
+          "windows": 16,
+          "unique": 16,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "8": {
+          "windows": 12,
+          "unique": 12,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "16": {
+          "windows": 4,
+          "unique": 4,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q31-dev-22001-i007",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只用中文回答任务，不抄背景。<|im_end|>\n<|im_start|>user\n题号dev-22001-i007。\n背景（不是题干）：\n[背景]\n补充1：可用时间14分钟，已有安排2项。\n[/背景]\n任务：有71件衣物，晾晒位置5个，请用两句话说明怎样分批处理。\n只答两句。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "将衣物分成每批5件，晾晒位置轮流使用。"
+  },
+  {
+    "req_id": "dev-22001-b007",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "background",
+    "template_family": "development_service_incident",
+    "input_token_bucket": 0,
+    "input_tokens": 133,
+    "max_tokens": 384,
+    "output_tokens": 169,
+    "new_prompt_tokens": 133,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 518,
+    "output_at_cap": false,
+    "content_sha256": "c2ef21e16f50ffefc6c2959e6f4561862127ec417c74ccb463a36073d59fce32",
+    "prompt_sha256": "458f0731d747d5920828db09ed05385eaf6ae8c9e0af80831c5362450379b23b",
+    "repetition": {
+      "character_count_without_whitespace": 263,
+      "ngrams": {
+        "4": {
+          "windows": 260,
+          "unique": 165,
+          "duplicate_excess_ratio": 0.36538461538461536,
+          "maximum_occurrences": 5
+        },
+        "8": {
+          "windows": 256,
+          "unique": 184,
+          "duplicate_excess_ratio": 0.28125,
+          "maximum_occurrences": 5
+        },
+        "16": {
+          "windows": 248,
+          "unique": 207,
+          "duplicate_excess_ratio": 0.16532258064516128,
+          "maximum_occurrences": 4
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q32-dev-22001-b007",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只依据资料回答，勿抄录；依据不足就说明，不补造事实。<|im_end|>\n<|im_start|>user\n任务dev-22001-b007。以下是虚构的服务运行记录。\n[资料]\n目前请求件数48，重试次数3。\n[/资料]\n任务：请分六点分析排查顺序、观测指标和恢复确认，每点写出具体依据和行动。数字只用于本题，不补造事实。\n资料无阈值或时间顺序时，不判断正常、异常或趋势。\n仅写六点，每点含依据和行动。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "1. **排查顺序**：依据当前请求件数48和重试次数3，可以推测服务当前处于正常运行状态。因此，无需立即进行排查顺序的分析。\n\n2. **观测指标**：当前请求件数48和重试次数3表明服务运行正常，无需关注观测指标。\n\n3. **恢复确认**：当前请求件数48和重试次数3表明服务运行正常，无需确认恢复状态。\n\n4. **异常判断**：当前请求件数48和重试次数3表明服务运行正常，无需进行异常判断。\n\n5. **趋势分析**：当前请求件数48和重试次数3表明服务运行正常，无需进行趋势分析。\n\n6. **行动**：无需采取任何行动，因为当前服务运行正常。"
+  },
+  {
+    "req_id": "dev-22001-i008",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "interactive",
+    "template_family": "development_bike_route",
+    "input_token_bucket": 2,
+    "input_tokens": 147,
+    "max_tokens": 64,
+    "output_tokens": 9,
+    "new_prompt_tokens": 147,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 212,
+    "output_at_cap": false,
+    "content_sha256": "6a3f5af95eaf12671be528167aba2329b0841837d6fdcc5ea40d1336fc8b6e5b",
+    "prompt_sha256": "15b32bce8671b29bcf85126939258ae9bbddc345418eda632d0d65d0f68f7c6d",
+    "repetition": {
+      "character_count_without_whitespace": 13,
+      "ngrams": {
+        "4": {
+          "windows": 10,
+          "unique": 10,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "8": {
+          "windows": 6,
+          "unique": 6,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "16": {
+          "windows": 0,
+          "unique": 0,
+          "duplicate_excess_ratio": null,
+          "maximum_occurrences": 0
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q33-dev-22001-i008",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只用中文回答任务，不抄背景。<|im_end|>\n<|im_start|>user\n题号dev-22001-i008。\n背景（不是题干）：\n[背景]\n补充1：可用时间20分钟，已有安排4项。补充2：可用时间76分钟，已有安排2项。补充3：可用时间44分钟，已有安排5项。补充4：可用时间46分钟，已有安排5项。补充5：可用时间70分钟，已有安排8项。\n[/背景]\n任务：骑行路线长24公里，中途休息2分钟，请用两句话提醒出发前的准备。\n只答两句。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "出发前检查装备，确保安全。"
+  },
+  {
+    "req_id": "dev-22001-b008",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "background",
+    "template_family": "development_repair_ticket",
+    "input_token_bucket": 1,
+    "input_tokens": 327,
+    "max_tokens": 384,
+    "output_tokens": 384,
+    "new_prompt_tokens": 327,
+    "cached_prompt_tokens": 0,
+    "stop_type": "limit",
+    "input_plus_max_output_plus_safety": 712,
+    "output_at_cap": true,
+    "content_sha256": "d4c0af45813b78735e3117141951062f083f7642b7694c49eadf1f822a2bdf30",
+    "prompt_sha256": "e3c9321810379c21584ccaf3d0cb627b67d07f4008caa2d514f70e44a79aee88",
+    "repetition": {
+      "character_count_without_whitespace": 535,
+      "ngrams": {
+        "4": {
+          "windows": 532,
+          "unique": 205,
+          "duplicate_excess_ratio": 0.6146616541353384,
+          "maximum_occurrences": 21
+        },
+        "8": {
+          "windows": 528,
+          "unique": 244,
+          "duplicate_excess_ratio": 0.5378787878787878,
+          "maximum_occurrences": 4
+        },
+        "16": {
+          "windows": 520,
+          "unique": 280,
+          "duplicate_excess_ratio": 0.46153846153846156,
+          "maximum_occurrences": 4
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q34-dev-22001-b008",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只依据资料回答，勿抄录；依据不足就说明，不补造事实。<|im_end|>\n<|im_start|>user\n任务dev-22001-b008。以下是虚构的设备报修工单。\n[资料]\n记录1：等待分钟39，影响人数4。记录2：等待分钟39，影响人数7。记录3：等待分钟67，影响人数15。记录4：等待分钟53，影响人数9。记录5：等待分钟18，影响人数3。记录6：等待分钟20，影响人数1。记录7：等待分钟35，影响人数4。记录8：等待分钟14，影响人数1。记录9：等待分钟71，影响人数7。记录10：等待分钟36，影响人数14。记录11：等待分钟13，影响人数11。记录12：等待分钟71，影响人数14。记录13：等待分钟21，影响人数6。记录14：等待分钟45，影响人数9。记录15：等待分钟47，影响人数7。记录16：等待分钟33，影响人数7。\n[/资料]\n任务：请分六点分析处理顺序、验证步骤和进度通知，每点写出具体依据和行动。数字只用于本题，不补造事实。\n资料无阈值或时间顺序时，不判断正常、异常或趋势。\n仅写六点，每点含依据和行动。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "1. **等待时间分析**：\n   - **依据**：记录1、记录2、记录3、记录4、记录5、记录6、记录7、记录8、记录9、记录10、记录11、记录12、记录13、记录14、记录15、记录16。\n   - **行动**：根据这些记录，可以观察到等待时间从39分钟到71分钟不等，且影响人数从3到16不等。这表明在不同时间段内，等待时间的长短和影响人数的多少存在差异。\n\n2. **影响人数分析**：\n   - **依据**：记录1、记录2、记录3、记录4、记录5、记录6、记录7、记录8、记录9、记录10、记录11、记录12、记录13、记录14、记录15、记录16。\n   - **行动**：通过这些记录，可以发现影响人数从3到16不等，这表明在不同时间段内，等待时间的长短和影响人数的多少存在差异。\n\n3. **处理顺序分析**：\n   - **依据**：记录1、记录2、记录3、记录4、记录5、记录6、记录7、记录8、记录9、记录10、记录11、记录12、记录13、记录14、记录15、记录16。\n   - **行动**：根据这些记录，可以观察到影响人数从3到16不等，这表明在不同时间段内，等待时间的长短和影响人数的多少存在差异。\n\n4. **验证步骤分析**：\n   - **依据**：记录1、记录2、记录3、记录4、记录5、记录6、记录7、记录8、"
+  },
+  {
+    "req_id": "dev-22001-i009",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "interactive",
+    "template_family": "development_pc_cooling",
+    "input_token_bucket": 0,
+    "input_tokens": 65,
+    "max_tokens": 64,
+    "output_tokens": 11,
+    "new_prompt_tokens": 65,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 130,
+    "output_at_cap": false,
+    "content_sha256": "eab59514d4e877142c2684e9f7306f30716b69823b835c5bebb7a7176ebbfb7f",
+    "prompt_sha256": "9299c13195d581f846a08f3e837cbe64bfe68894b1e9f7c1d1a7e4d878eece0c",
+    "repetition": {
+      "character_count_without_whitespace": 14,
+      "ngrams": {
+        "4": {
+          "windows": 11,
+          "unique": 11,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "8": {
+          "windows": 7,
+          "unique": 7,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "16": {
+          "windows": 0,
+          "unique": 0,
+          "duplicate_excess_ratio": null,
+          "maximum_occurrences": 0
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q35-dev-22001-i009",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只用中文回答任务，不抄背景。<|im_end|>\n<|im_start|>user\n题号dev-22001-i009。\n任务：电脑风扇噪声持续25分钟，桌边空隙2厘米，请用两句话给出检查顺序。\n只答两句。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "先检查风扇，再检查桌边缝隙。"
+  },
+  {
+    "req_id": "dev-22001-b009",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "background",
+    "template_family": "development_course_feedback",
+    "input_token_bucket": 0,
+    "input_tokens": 138,
+    "max_tokens": 384,
+    "output_tokens": 384,
+    "new_prompt_tokens": 138,
+    "cached_prompt_tokens": 0,
+    "stop_type": "limit",
+    "input_plus_max_output_plus_safety": 523,
+    "output_at_cap": true,
+    "content_sha256": "95eaa872572c6cfb89bffe81f12c0215deb0192c08a578fc50f2b40d4d5a7253",
+    "prompt_sha256": "e98e9637a9625fdb017cd311f96084d5ac085744bfc72a52f7c272ebfaa68606",
+    "repetition": {
+      "character_count_without_whitespace": 594,
+      "ngrams": {
+        "4": {
+          "windows": 591,
+          "unique": 248,
+          "duplicate_excess_ratio": 0.5803722504230119,
+          "maximum_occurrences": 6
+        },
+        "8": {
+          "windows": 587,
+          "unique": 306,
+          "duplicate_excess_ratio": 0.4787052810902896,
+          "maximum_occurrences": 6
+        },
+        "16": {
+          "windows": 579,
+          "unique": 346,
+          "duplicate_excess_ratio": 0.40241796200345425,
+          "maximum_occurrences": 2
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q36-dev-22001-b009",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只依据资料回答，勿抄录；依据不足就说明，不补造事实。<|im_end|>\n<|im_start|>user\n任务dev-22001-b009。以下是虚构的课程练习反馈。\n[资料]\n目前已做题数19，待订正题数6。\n[/资料]\n任务：请分六点分析共性困难、订正安排和反馈方法，每点写出具体依据和行动。数字只用于本题，不补造事实。\n资料无阈值或时间顺序时，不判断正常、异常或趋势。\n仅写六点，每点含依据和行动。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "1. 共性困难：学生在做题时容易出现计算错误和理解偏差。依据：根据反馈，学生在计算题和理解题上都出现了较多错误。行动：在课程中增加计算题和理解题的练习，确保学生能够熟练掌握基本的数学知识和解题技巧。\n\n2. 订正安排：学生在订正过程中容易出现拖延和不认真订正的情况。依据：根据反馈，学生在订正过程中存在拖延和不认真订正的问题。行动：在课程中设置定时任务，提醒学生按时完成订正，同时提供订正指导，帮助学生提高订正效率和质量。\n\n3. 反馈方法：学生在反馈过程中容易出现误解和不准确反馈的情况。依据：根据反馈，学生在反馈过程中存在误解和不准确反馈的问题。行动：在课程中提供反馈指导，帮助学生理解如何准确反馈，同时鼓励学生积极反馈，提高反馈质量。\n\n4. 共性困难：学生在做题时容易出现计算错误和理解偏差。依据：根据反馈，学生在计算题和理解题上都出现了较多错误。行动：在课程中增加计算题和理解题的练习，确保学生能够熟练掌握基本的数学知识和解题技巧。\n\n5. 订正安排：学生在订正过程中容易出现拖延和不认真订正的情况。依据：根据反馈，学生在订正过程中存在拖延和不认真订正的问题。行动：在课程中设置定时任务，提醒学生按时完成订正，同时提供订正指导，帮助学生提高订正效率和质量。\n\n6. 反馈方法：学生在反馈过程中容易出现误解和不准确反馈的情况。依据：根据反馈，学生在反馈过程中存在误解和不准确反馈的问题。行动：在课程中提供反馈指导"
+  },
+  {
+    "req_id": "dev-22001-i010",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "interactive",
+    "template_family": "development_study_break",
+    "input_token_bucket": 1,
+    "input_tokens": 91,
+    "max_tokens": 64,
+    "output_tokens": 30,
+    "new_prompt_tokens": 91,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 156,
+    "output_at_cap": false,
+    "content_sha256": "a99a687794d40f860ed3254aa06041209b813fe88f97c54d88563dde084517e2",
+    "prompt_sha256": "0e9b7df9de4a3006113fe1958c091bd1ad26ceea749de29ff281d3c107033b34",
+    "repetition": {
+      "character_count_without_whitespace": 33,
+      "ngrams": {
+        "4": {
+          "windows": 30,
+          "unique": 25,
+          "duplicate_excess_ratio": 0.16666666666666666,
+          "maximum_occurrences": 2
+        },
+        "8": {
+          "windows": 26,
+          "unique": 25,
+          "duplicate_excess_ratio": 0.038461538461538464,
+          "maximum_occurrences": 2
+        },
+        "16": {
+          "windows": 18,
+          "unique": 18,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q37-dev-22001-i010",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只用中文回答任务，不抄背景。<|im_end|>\n<|im_start|>user\n题号dev-22001-i010。\n背景（不是题干）：\n[背景]\n补充1：可用时间42分钟，已有安排3项。\n[/背景]\n任务：学习任务共64页，每轮休息9分钟，请用两句话安排专注与休息。\n只答两句。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "专注：第1-30页，每页1分钟。休息：第31-64页，每页1分钟。"
+  },
+  {
+    "req_id": "dev-22001-b010",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "background",
+    "template_family": "development_parcel_dispatch",
+    "input_token_bucket": 1,
+    "input_tokens": 333,
+    "max_tokens": 384,
+    "output_tokens": 384,
+    "new_prompt_tokens": 333,
+    "cached_prompt_tokens": 0,
+    "stop_type": "limit",
+    "input_plus_max_output_plus_safety": 718,
+    "output_at_cap": true,
+    "content_sha256": "a785c58c363384f3ab3275b5d902fe7fe6dff658382d477fad62c6bf6b9b1adf",
+    "prompt_sha256": "584ceea5f8dbcd1ef94de4c59eae9eeba879ce7fd3f0f13ad860e7fe16b70895",
+    "repetition": {
+      "character_count_without_whitespace": 485,
+      "ngrams": {
+        "4": {
+          "windows": 482,
+          "unique": 57,
+          "duplicate_excess_ratio": 0.8817427385892116,
+          "maximum_occurrences": 36
+        },
+        "8": {
+          "windows": 478,
+          "unique": 61,
+          "duplicate_excess_ratio": 0.8723849372384938,
+          "maximum_occurrences": 18
+        },
+        "16": {
+          "windows": 470,
+          "unique": 61,
+          "duplicate_excess_ratio": 0.8702127659574468,
+          "maximum_occurrences": 18
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q38-dev-22001-b010",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只依据资料回答，勿抄录；依据不足就说明，不补造事实。<|im_end|>\n<|im_start|>user\n任务dev-22001-b010。以下是虚构的包裹配送记录。\n[资料]\n记录1：包裹件数25，剩余分钟7。记录2：包裹件数27，剩余分钟15。记录3：包裹件数26，剩余分钟3。记录4：包裹件数51，剩余分钟12。记录5：包裹件数48，剩余分钟11。记录6：包裹件数57，剩余分钟2。记录7：包裹件数50，剩余分钟7。记录8：包裹件数50，剩余分钟13。记录9：包裹件数50，剩余分钟14。记录10：包裹件数40，剩余分钟10。记录11：包裹件数86，剩余分钟9。记录12：包裹件数82，剩余分钟10。记录13：包裹件数66，剩余分钟12。记录14：包裹件数64，剩余分钟8。记录15：包裹件数38，剩余分钟11。\n[/资料]\n任务：请分六点分析路线安排、异常核对和交接记录，每点写出具体依据和行动。数字只用于本题，不补造事实。\n资料无阈值或时间顺序时，不判断正常、异常或趋势。\n仅写六点，每点含依据和行动。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "1. **路线安排**：根据记录中的包裹件数，可以发现包裹件数从25到57，再到66，再到38，再到86，再到82，再到64，再到66，再到38，再到86，再到82，再到64，再到66，再到38，再到86，再到82，再到64，再到66，再到38，再到86，再到82，再到64，再到66，再到38，再到86，再到82，再到64，再到66，再到38，再到86，再到82，再到64，再到66，再到38，再到86，再到82，再到64，再到66，再到38，再到86，再到82，再到64，再到66，再到38，再到86，再到82，再到64，再到66，再到38，再到86，再到82，再到64，再到66，再到38，再到86，再到82，再到64，再到66，再到38，再到86，再到82，再到64，再到66，再到38，再到86，再到82，再到64，再到66，再到38，再到86，再到82，再到64，再到66，再到38，再到86，再到82，再到64，再到66，再到38，再到86，再到82，再到64，再到66，再到38，再到86，再到82，再到64，再到66，再到38，再到86，再到82，再到6"
+  },
+  {
+    "req_id": "dev-22001-i011",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "interactive",
+    "template_family": "development_laundry_plan",
+    "input_token_bucket": 2,
+    "input_tokens": 147,
+    "max_tokens": 64,
+    "output_tokens": 19,
+    "new_prompt_tokens": 147,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 212,
+    "output_at_cap": false,
+    "content_sha256": "23eb34998b57c674ab2b0452bd0070fd39f9431d0e3fc9c44261f7ca2971c222",
+    "prompt_sha256": "6b4bfa1607e85971bffc12db02fdc594428af8191767c9419072a74b1d757757",
+    "repetition": {
+      "character_count_without_whitespace": 19,
+      "ngrams": {
+        "4": {
+          "windows": 16,
+          "unique": 15,
+          "duplicate_excess_ratio": 0.0625,
+          "maximum_occurrences": 2
+        },
+        "8": {
+          "windows": 12,
+          "unique": 12,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        },
+        "16": {
+          "windows": 4,
+          "unique": 4,
+          "duplicate_excess_ratio": 0.0,
+          "maximum_occurrences": 1
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q39-dev-22001-i011",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只用中文回答任务，不抄背景。<|im_end|>\n<|im_start|>user\n题号dev-22001-i011。\n背景（不是题干）：\n[背景]\n补充1：可用时间56分钟，已有安排3项。补充2：可用时间34分钟，已有安排3项。补充3：可用时间46分钟，已有安排3项。补充4：可用时间26分钟，已有安排3项。补充5：可用时间44分钟，已有安排7项。\n[/背景]\n任务：有54件衣物，晾晒位置5个，请用两句话说明怎样分批处理。\n只答两句。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "先晾晒3件，再晾晒2件，最后晾晒2件。"
+  },
+  {
+    "req_id": "dev-22001-b011",
+    "repair_role": "fresh_development_pilot",
+    "prompt_version": "v2",
+    "pair_index": null,
+    "source_case": null,
+    "source_req_id": null,
+    "category": "background",
+    "template_family": "development_service_incident",
+    "input_token_bucket": 2,
+    "input_tokens": 653,
+    "max_tokens": 384,
+    "output_tokens": 347,
+    "new_prompt_tokens": 653,
+    "cached_prompt_tokens": 0,
+    "stop_type": "eos",
+    "input_plus_max_output_plus_safety": 1038,
+    "output_at_cap": false,
+    "content_sha256": "f7b4e74d35191da99a2873e41df66641b3ab6be4fd2b09ace9b2eb026f8914e1",
+    "prompt_sha256": "e12282c0900c6960fd0362add255fb05a5fe8759158449540fceabb50130376b",
+    "repetition": {
+      "character_count_without_whitespace": 561,
+      "ngrams": {
+        "4": {
+          "windows": 558,
+          "unique": 335,
+          "duplicate_excess_ratio": 0.3996415770609319,
+          "maximum_occurrences": 13
+        },
+        "8": {
+          "windows": 554,
+          "unique": 418,
+          "duplicate_excess_ratio": 0.24548736462093862,
+          "maximum_occurrences": 11
+        },
+        "16": {
+          "windows": 546,
+          "unique": 474,
+          "duplicate_excess_ratio": 0.13186813186813187,
+          "maximum_occurrences": 4
+        }
+      },
+      "scope": "Descriptive Unicode character windows; no semantic-quality threshold"
+    },
+    "source_directory": "cases/q40-dev-22001-b011",
+    "semantic_review": "pending_assistant_exploratory_reading_no_automatic_pass",
+    "prompt": "<|im_start|>system\n只依据资料回答，勿抄录；依据不足就说明，不补造事实。<|im_end|>\n<|im_start|>user\n任务dev-22001-b011。以下是虚构的服务运行记录。\n[资料]\n记录1：请求件数37，重试次数11。记录2：请求件数53，重试次数12。记录3：请求件数18，重试次数9。记录4：请求件数22，重试次数7。记录5：请求件数30，重试次数8。记录6：请求件数40，重试次数9。记录7：请求件数89，重试次数13。记录8：请求件数14，重试次数7。记录9：请求件数57，重试次数8。记录10：请求件数35，重试次数15。记录11：请求件数15，重试次数1。记录12：请求件数38，重试次数9。记录13：请求件数73，重试次数2。记录14：请求件数19，重试次数3。记录15：请求件数42，重试次数1。记录16：请求件数63，重试次数2。记录17：请求件数26，重试次数5。记录18：请求件数50，重试次数12。记录19：请求件数51，重试次数14。记录20：请求件数80，重试次数11。记录21：请求件数79，重试次数3。记录22：请求件数78，重试次数14。记录23：请求件数76，重试次数14。记录24：请求件数82，重试次数12。记录25：请求件数42，重试次数6。记录26：请求件数63，重试次数1。记录27：请求件数73，重试次数15。记录28：请求件数80，重试次数14。记录29：请求件数46，重试次数12。记录30：请求件数46，重试次数8。记录31：请求件数17，重试次数15。记录32：请求件数22，重试次数10。记录33：请求件数52，重试次数8。记录34：请求件数42，重试次数8。记录35：请求件数62，重试次数11。\n[/资料]\n任务：请分六点分析排查顺序、观测指标和恢复确认，每点写出具体依据和行动。数字只用于本题，不补造事实。\n资料无阈值或时间顺序时，不判断正常、异常或趋势。\n仅写六点，每点含依据和行动。<|im_end|>\n<|im_start|>assistant\n",
+    "content": "1. **排查顺序**：根据请求件数和重试次数，可以推断出服务的运行状态。请求件数越多，说明服务的负载压力越大，重试次数越多则说明服务的响应时间越长。因此，可以按照请求件数和重试次数的高低进行排查，优先处理请求件数和重试次数高的问题。\n\n2. **观测指标**：请求件数和重试次数是两个关键的观测指标，可以用来评估服务的运行状态。请求件数反映了服务的负载情况，重试次数反映了服务的响应时间。通过这两个指标，可以判断服务是否正常运行，以及是否需要进行优化。\n\n3. **恢复确认**：当发现服务出现问题时，需要确认是否需要进行恢复。如果请求件数和重试次数都异常，说明服务可能出现了问题，需要进行恢复。恢复确认可以通过增加资源、优化算法、提高硬件性能等方式进行。\n\n4. **异常判断**：如果请求件数和重试次数都异常，说明服务可能出现了问题。异常判断可以通过分析请求件数和重试次数的波动情况，以及服务的响应时间等指标来判断。\n\n5. **趋势判断**：如果请求件数和重试次数都异常，说明服务可能出现了问题。趋势判断可以通过分析请求件数和重试次数的长期趋势，以及服务的响应时间等指标来判断。\n\n6. **时间顺序**：如果请求件数和重试次数都异常，说明服务可能出现了问题。时间顺序判断可以通过分析请求件数和重试次数的长期趋势，以及服务的响应时间等指标来判断。"
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "schema_version": "p1-prompt-task-repair-review-sha256-v1",
+  "review_date": "2026-10-25",
+  "collection_date": "2026-10-24",
+  "run_id": "20261024-2000-p1-prompt-task-repair-v2",
+  "files": {
+    "README.md": "eaeff980b55b9963dbb6d8dc1a5aad1a232fd457345c8f70091c73aa3b53f928",
+    "assistant-review.json": "23717fab0c4ee00a34f0b2a695684ac2f81101dabd2ff11aee485233aa4cb2a7"
+  },
+  "preserved_existing_files_sha256": {
+    "fulltexts.json": "625c9dceb008ad050224bba9e472f657bff9ca913f9a54e82e857e1365ddf7a2",
+    "evidence-sha256.json": "9e994c62fbb26edf468fe57cfefcaf1c0a74628649207dd0ecb7ab8732025673",
+    "report-sha256.json": "3518980b7154370820b13d2cc8b308a75257265ee0e9b02fd295f8a72ba5c26e",
+    "summary.json": "977cee3cc8a1e6f5a513233b568b20a77c3e49f7a25d02a9b332ff200e5d1113",
+    "analysis-source.py": "3fec7f68340dddc7f085e402b68dedfe900d53e0b22cb4ea757e94ba8a106228",
+    "metrics.md": "403c5dfc0ffcd904b277ea98e88780abc107ef66f4ebbce5a295c79957684b4d"
+  },
+  "verification": {
+    "reviewed_ids": 40,
+    "output_text_sha256_matches": 40,
+    "raw_output_sha256_matches": 40,
+    "all_evidence_excerpts_found": true,
+    "original_six_report_files_unchanged": true
+  },
+  "scope": "New review files only; this manifest excludes itself. Original report-sha256.json is preserved."
+}
