@@ -1,19 +1,12 @@
 {
   "date": "20261025",
-  "archive": "results/archives/20261025/daily-20261025-011019-1ae4a7e2.zip",
-  "sha256": "67f43ca0d65d4c5e844d830c900bbc99d2ea7613d1a730ed0e34e318fa645990",
-  "file_count": 1131,
+  "archive": "results/archives/20261025/daily-20261025-011801-dab885a6.zip",
+  "sha256": "3687f20186f64a619f5a1bc023c809b63ae8aa0fde44aa84494a842d76bcb01b",
+  "file_count": 289,
   "run_dirs": [
-    "results/raw/development/20261024-2000-p1-prompt-task-repair-v2",
-    "results/raw/maintenance/20261024-p1-prompt-task-repair-runner-model-free-v2",
-    "results/raw/maintenance/20261024-p1-prompt-task-repair-runner-model-free-v2-recheck",
-    "results/raw/maintenance/20261024-p1-prompt-repair-supervisor-v2",
-    "results/raw/maintenance/20261024-p1-prompt-task-repair-independent-audit-v2",
-    "results/raw/maintenance/20261025-prompt-repair-evidence-closeout-v2",
-    "results/raw/maintenance/20261025-prompt-repair-interactive-crosscheck-v2",
-    "results/raw/maintenance/20261025-prompt-repair-delivery-v2"
+    "results/raw/maintenance/20261025-p1-progress-figure-fix-v1"
   ],
   "verified": true,
-  "packed_at": "2026-10-25T01:10:19.455545+08:00",
+  "packed_at": "2026-10-25T01:18:01.662832+08:00",
   "backup_scope": "local_only"
 }

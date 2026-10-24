@@ -12,6 +12,7 @@
 | T2 | 按采前量规核40份全文 | 32份v2未同时满足全部原要求，保留逐维证据 | [核读](../../docs/experiments/20261024-2000-p1-prompt-task-repair-v2/README.md) |
 | T3 | 聊天交叉核对及来源检查 | 20份聊天另核；389项来源和8项单元检查通过 | [交叉核对](../../results/raw/maintenance/20261025-prompt-repair-interactive-crosscheck-v2/README.md)、[来源复核](../../results/raw/maintenance/20261025-prompt-repair-evidence-closeout-v2/README.md) |
 | T4 | 写白话报告、更新G1/进度、归档推送 | 实际回执在完成后追加 | [白话报告](../../docs/reports/20261025/P1提示修订验证与后续任务边界.md)、[结果索引](实验结果索引.md) |
+| T5 | 修正GitHub第二张进度图缺少P1详情 | 图改为P0成果与P1进展，独立列出P1工作、问题、下一项和G1待审；已渲染查看 | [图](../../docs/images/p0-progress.svg)、[维护记录](../../results/raw/maintenance/20261025-p1-progress-figure-fix-v1/) |
 
 ## 2. 产出
 
@@ -40,6 +41,7 @@
 | B2 | 新提示减少抄录，但两句/六点及事实依据仍不满足 | 保存40份全文及逐维判断，不扩大9轮负载、不自动通过G1 |
 | B3 | 采集10-24，核读和交付跨至10-25 | 原run_id与采前协议日期不变，今日记录和归档明确区分事件，不倒填结果 |
 | B4 | 初版模型外门禁早于生成器定稿，来源SHA不同 | 初版保留；最终recheck和8项测试通过，实际46源快照与最终版本一致 |
+| B5 | 用户指出GitHub第二张图仍只有P0 | 原图只在底部提到P1，缺少实际进展；已扩为P0/P1两个独立区块并同步生成器、README说明，G1仍待审 |
 
 ## 5. 决策与变更
 
