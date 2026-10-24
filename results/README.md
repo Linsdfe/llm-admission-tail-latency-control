@@ -15,6 +15,18 @@
 | `raw/maintenance/20261024-p1-development-independent-audit-v1/` | 保留前两轮增量审计；最终113819项程序核对0错，2054启动/2054释放逐ID匹配 |
 | [本批报告](../docs/experiments/20261024-025138-p1-development-validation-v1/README.md)与[诊断](../docs/experiments/20261024-025138-p1-development-validation-v1/diagnostics-v1/README.md) | 逐轮重算，不跨批混性能；预测达到输出上限及NN分类退化仅作开发诊断，不声称M/B3收益 |
 
+晚间追加的[P1补测报告](../docs/reports/20261024/P1扩大校准与输出预算检查.md)已完成，所有旧数据保留，以下各批不混算性能或训练。
+
+| 校准与预算补测 | 状态与用途 |
+|---|---|
+| `raw/development/20261024-104708-p1-calibration-refinement-v1/` | 96条完成后协议纯换行字节变化，来源检查中止；未进入拟合 |
+| `raw/development/20261024-1142-p1-calibration-refinement-v1-retry/` | 47条完成、第48条仅启动无完整终态；进程已不在，陈旧running不代表仍运行；未进入拟合 |
+| `raw/development/20261024-1926-p1-calibration-refinement-v1-final/` | 120校准/120新开发验证/2预热全部完成，8.20分钟；后缀final仅为本轮重跑标签，不是最终测试 |
+| [240条派生分析](../docs/experiments/20261024-1926-p1-calibration-refinement-v1-final/README.md) | 预定规则选中位数；60/120点预测、100/120总上界触顶；分界64与I/B重合 |
+| `raw/maintenance/20261024-p1-calibration-final-independent-audit-v1/with-analysis/` | 独立12125项核对通过，242启动/释放对、42源/8引擎源/23运行项与模型核对；最大迟发1.955ms |
+| `raw/development/20261024-1926-p1-output-budget-probe-v1/`及[探针报告](../docs/experiments/20261024-1926-p1-output-budget-probe-v1/README.md) | 8条后验选例、16次测量、2预热；独立441项核对通过，助手核读仍见任务未完成，不是总体质量率 |
+| `raw/maintenance/20261024-p1-refinement-supervisor-v1/` | 独立WSL监督会话、两批控制台日志与退出码0，主批停服后再启动探针 |
+
 以下是决定前的G0材料入口，空白表不代替随后明确通过的项目决定。
 
 [G0白话实验与评审表](../docs/reports/20261023/G0评审材料_实验完成版.md)已整理，按实验日期归档：四个完整批次42轮9630条测量、84预热；10-23新增9次容量边界/恢复请求另列，结果通过。技术证据具备评审条件，用户/导师结论留空，原题M/B3主比较保留，P1未启动。

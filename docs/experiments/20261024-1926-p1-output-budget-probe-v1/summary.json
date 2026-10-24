@@ -1,0 +1,847 @@
+{
+  "status": "passed_file_only_objective_recomputation",
+  "run_id": "20261024-1926-p1-output-budget-probe-v1",
+  "analyzed_at": "2026-10-24T19:34:03.818788+08:00",
+  "measured_completions": 16,
+  "selected_prompts": 8,
+  "warmups_separate": 2,
+  "stop_types_by_level": {
+    "low": {
+      "limit": 7,
+      "eos": 1
+    },
+    "high": {
+      "eos": 6,
+      "limit": 2
+    }
+  },
+  "total_executed_output_tokens_by_level": {
+    "low": 1777,
+    "high": 2544
+  },
+  "objective_repetition_matches_collector_for_all_16": true,
+  "context_truncations": 0,
+  "paired_text_relations": {
+    "c05": {
+      "exact_content_equal": false,
+      "high_text_starts_with_low_text": true
+    },
+    "c11": {
+      "exact_content_equal": false,
+      "high_text_starts_with_low_text": true
+    },
+    "c17": {
+      "exact_content_equal": false,
+      "high_text_starts_with_low_text": true
+    },
+    "c23": {
+      "exact_content_equal": false,
+      "high_text_starts_with_low_text": false
+    },
+    "c04": {
+      "exact_content_equal": false,
+      "high_text_starts_with_low_text": false
+    },
+    "c08": {
+      "exact_content_equal": false,
+      "high_text_starts_with_low_text": true
+    },
+    "c18": {
+      "exact_content_equal": false,
+      "high_text_starts_with_low_text": false
+    },
+    "c22": {
+      "exact_content_equal": false,
+      "high_text_starts_with_low_text": true
+    }
+  },
+  "quality_verdict": null,
+  "pairs": {
+    "c05": {
+      "low": {
+        "req_id": "budget-01-low",
+        "source_req_id": "cal-11001-i002",
+        "category": "interactive",
+        "input_tokens": 151,
+        "new_prompt_tokens": 151,
+        "cached_prompt_tokens": 0,
+        "max_tokens": 64,
+        "output_tokens": 64,
+        "stop_type": "limit",
+        "context_truncated": false,
+        "content_sha256": "7f9f18041d72996844cdb9433af016980cd140960f26639353805d750d1edae1",
+        "prompt_sha256": "268eff6bfcfcb4f27f5767514dd14ce68636c7a5b80790fb521aec7ad2eb151d",
+        "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n题号cal-11001-i002。活动准备需69分钟，休息2分钟，请用两句话安排先后顺序。参考情况：补充1：可用时间20分钟，已有安排2项。补充2：可用时间90分钟，已有安排3项。补充3：可用时间90分钟，已有安排5项。补充4：可用时间36分钟，已有安排3项。补充5：可用时间78分钟，已有安排3项。补充6：可用时间38分钟，已有安排7项。补充7：可用时间87分钟，已有安排2项。<|im_end|>\n<|im_start|>assistant\n",
+        "content": "补充1：可用时间20分钟，已有安排2项。补充2：可用时间90分钟，已有安排3项。补充3：可用时间90分钟，已有安排5项。补充4：可用时间36分钟，已有安排3项。补充5：可用时间78分钟",
+        "repetition": {
+          "character_count_without_whitespace": 92,
+          "per_n": [
+            {
+              "n_characters": 4,
+              "windows": 89,
+              "unique_ngrams": 56,
+              "max_occurrences": 5,
+              "max_frequency_ratio": 0.056179775280898875,
+              "duplicate_excess_ratio": 0.3707865168539326
+            },
+            {
+              "n_characters": 8,
+              "windows": 85,
+              "unique_ngrams": 72,
+              "max_occurrences": 3,
+              "max_frequency_ratio": 0.03529411764705882,
+              "duplicate_excess_ratio": 0.15294117647058825
+            },
+            {
+              "n_characters": 16,
+              "windows": 77,
+              "unique_ngrams": 77,
+              "max_occurrences": 1,
+              "max_frequency_ratio": 0.012987012987012988,
+              "duplicate_excess_ratio": 0.0
+            }
+          ],
+          "max_ngram_frequency_ratio_across_n": 0.056179775280898875
+        },
+        "source_directory": "cases/q01-budget-01-low",
+        "semantic_quality": "not_automatically_assessed"
+      },
+      "high": {
+        "req_id": "budget-01-high",
+        "source_req_id": "cal-11001-i002",
+        "category": "interactive",
+        "input_tokens": 151,
+        "new_prompt_tokens": 1,
+        "cached_prompt_tokens": 150,
+        "max_tokens": 128,
+        "output_tokens": 99,
+        "stop_type": "eos",
+        "context_truncated": false,
+        "content_sha256": "8a25be5746243b815aeea67a2bab2c239c25e632b59c538054ed7fdc894c2804",
+        "prompt_sha256": "268eff6bfcfcb4f27f5767514dd14ce68636c7a5b80790fb521aec7ad2eb151d",
+        "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n题号cal-11001-i002。活动准备需69分钟，休息2分钟，请用两句话安排先后顺序。参考情况：补充1：可用时间20分钟，已有安排2项。补充2：可用时间90分钟，已有安排3项。补充3：可用时间90分钟，已有安排5项。补充4：可用时间36分钟，已有安排3项。补充5：可用时间78分钟，已有安排3项。补充6：可用时间38分钟，已有安排7项。补充7：可用时间87分钟，已有安排2项。<|im_end|>\n<|im_start|>assistant\n",
+        "content": "补充1：可用时间20分钟，已有安排2项。补充2：可用时间90分钟，已有安排3项。补充3：可用时间90分钟，已有安排5项。补充4：可用时间36分钟，已有安排3项。补充5：可用时间78分钟，已有安排3项。补充6：可用时间38分钟，已有安排7项。补充7：可用时间87分钟，已有安排2项。",
+        "repetition": {
+          "character_count_without_whitespace": 140,
+          "per_n": [
+            {
+              "n_characters": 4,
+              "windows": 137,
+              "unique_ngrams": 77,
+              "max_occurrences": 7,
+              "max_frequency_ratio": 0.051094890510948905,
+              "duplicate_excess_ratio": 0.43795620437956206
+            },
+            {
+              "n_characters": 8,
+              "windows": 133,
+              "unique_ngrams": 111,
+              "max_occurrences": 3,
+              "max_frequency_ratio": 0.022556390977443608,
+              "duplicate_excess_ratio": 0.16541353383458646
+            },
+            {
+              "n_characters": 16,
+              "windows": 125,
+              "unique_ngrams": 125,
+              "max_occurrences": 1,
+              "max_frequency_ratio": 0.008,
+              "duplicate_excess_ratio": 0.0
+            }
+          ],
+          "max_ngram_frequency_ratio_across_n": 0.051094890510948905
+        },
+        "source_directory": "cases/q02-budget-01-high",
+        "semantic_quality": "not_automatically_assessed"
+      }
+    },
+    "c11": {
+      "high": {
+        "req_id": "budget-02-high",
+        "source_req_id": "cal-11001-i005",
+        "category": "interactive",
+        "input_tokens": 153,
+        "new_prompt_tokens": 128,
+        "cached_prompt_tokens": 25,
+        "max_tokens": 128,
+        "output_tokens": 99,
+        "stop_type": "eos",
+        "context_truncated": false,
+        "content_sha256": "abb97eb762888958020c31b10c26b6cab88b0ed0a3d3611d5df0bf16700f4a99",
+        "prompt_sha256": "58b8e4159446d83e8f7bcb13eb69c5d914f5ccc4b0617cfafc74b2c1a363023e",
+        "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n题号cal-11001-i005。一份食谱需要62克配料，要做7份，请用两句话说明换算。参考情况：补充1：可用时间74分钟，已有安排8项。补充2：可用时间43分钟，已有安排1项。补充3：可用时间15分钟，已有安排4项。补充4：可用时间75分钟，已有安排4项。补充5：可用时间25分钟，已有安排5项。补充6：可用时间20分钟，已有安排8项。补充7：可用时间43分钟，已有安排1项。<|im_end|>\n<|im_start|>assistant\n",
+        "content": "补充1：可用时间74分钟，已有安排8项。补充2：可用时间43分钟，已有安排1项。补充3：可用时间15分钟，已有安排4项。补充4：可用时间75分钟，已有安排4项。补充5：可用时间25分钟，已有安排5项。补充6：可用时间20分钟，已有安排8项。补充7：可用时间43分钟，已有安排1项。",
+        "repetition": {
+          "character_count_without_whitespace": 140,
+          "per_n": [
+            {
+              "n_characters": 4,
+              "windows": 137,
+              "unique_ngrams": 76,
+              "max_occurrences": 7,
+              "max_frequency_ratio": 0.051094890510948905,
+              "duplicate_excess_ratio": 0.44525547445255476
+            },
+            {
+              "n_characters": 8,
+              "windows": 133,
+              "unique_ngrams": 111,
+              "max_occurrences": 3,
+              "max_frequency_ratio": 0.022556390977443608,
+              "duplicate_excess_ratio": 0.16541353383458646
+            },
+            {
+              "n_characters": 16,
+              "windows": 125,
+              "unique_ngrams": 123,
+              "max_occurrences": 2,
+              "max_frequency_ratio": 0.016,
+              "duplicate_excess_ratio": 0.016
+            }
+          ],
+          "max_ngram_frequency_ratio_across_n": 0.051094890510948905
+        },
+        "source_directory": "cases/q03-budget-02-high",
+        "semantic_quality": "not_automatically_assessed"
+      },
+      "low": {
+        "req_id": "budget-02-low",
+        "source_req_id": "cal-11001-i005",
+        "category": "interactive",
+        "input_tokens": 153,
+        "new_prompt_tokens": 1,
+        "cached_prompt_tokens": 152,
+        "max_tokens": 64,
+        "output_tokens": 64,
+        "stop_type": "limit",
+        "context_truncated": false,
+        "content_sha256": "d961ea7e58b61a8c4d980d10c4679ab723d57222fcdcbcd1c629bd5833b0bcd2",
+        "prompt_sha256": "58b8e4159446d83e8f7bcb13eb69c5d914f5ccc4b0617cfafc74b2c1a363023e",
+        "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n题号cal-11001-i005。一份食谱需要62克配料，要做7份，请用两句话说明换算。参考情况：补充1：可用时间74分钟，已有安排8项。补充2：可用时间43分钟，已有安排1项。补充3：可用时间15分钟，已有安排4项。补充4：可用时间75分钟，已有安排4项。补充5：可用时间25分钟，已有安排5项。补充6：可用时间20分钟，已有安排8项。补充7：可用时间43分钟，已有安排1项。<|im_end|>\n<|im_start|>assistant\n",
+        "content": "补充1：可用时间74分钟，已有安排8项。补充2：可用时间43分钟，已有安排1项。补充3：可用时间15分钟，已有安排4项。补充4：可用时间75分钟，已有安排4项。补充5：可用时间25分钟",
+        "repetition": {
+          "character_count_without_whitespace": 92,
+          "per_n": [
+            {
+              "n_characters": 4,
+              "windows": 89,
+              "unique_ngrams": 60,
+              "max_occurrences": 5,
+              "max_frequency_ratio": 0.056179775280898875,
+              "duplicate_excess_ratio": 0.3258426966292135
+            },
+            {
+              "n_characters": 8,
+              "windows": 85,
+              "unique_ngrams": 79,
+              "max_occurrences": 2,
+              "max_frequency_ratio": 0.023529411764705882,
+              "duplicate_excess_ratio": 0.07058823529411765
+            },
+            {
+              "n_characters": 16,
+              "windows": 77,
+              "unique_ngrams": 77,
+              "max_occurrences": 1,
+              "max_frequency_ratio": 0.012987012987012988,
+              "duplicate_excess_ratio": 0.0
+            }
+          ],
+          "max_ngram_frequency_ratio_across_n": 0.056179775280898875
+        },
+        "source_directory": "cases/q04-budget-02-low",
+        "semantic_quality": "not_automatically_assessed"
+      }
+    },
+    "c17": {
+      "low": {
+        "req_id": "budget-03-low",
+        "source_req_id": "cal-11001-i008",
+        "category": "interactive",
+        "input_tokens": 155,
+        "new_prompt_tokens": 130,
+        "cached_prompt_tokens": 25,
+        "max_tokens": 64,
+        "output_tokens": 64,
+        "stop_type": "limit",
+        "context_truncated": false,
+        "content_sha256": "db69911b7014a887e8abff1620a5e9734e15b1b57532b2c3aaad5685ce6465ba",
+        "prompt_sha256": "a2a69e5b29d4f1f2fd8c71f969393f875d22b0f99e98399308f7d324ff967b3a",
+        "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n题号cal-11001-i008。借书期限还剩69天，计划每天读2页，请用两句话给出阅读安排。参考情况：补充1：可用时间83分钟，已有安排7项。补充2：可用时间39分钟，已有安排2项。补充3：可用时间20分钟，已有安排7项。补充4：可用时间81分钟，已有安排3项。补充5：可用时间86分钟，已有安排1项。补充6：可用时间62分钟，已有安排1项。补充7：可用时间88分钟，已有安排3项。<|im_end|>\n<|im_start|>assistant\n",
+        "content": "补充1：每天读2页，83分钟内可读14页，剩余29页。补充2：39分钟内可读19页，剩余4页。补充3：20分钟内可读10页，剩余19页。补充4：81分钟",
+        "repetition": {
+          "character_count_without_whitespace": 76,
+          "per_n": [
+            {
+              "n_characters": 4,
+              "windows": 73,
+              "unique_ngrams": 62,
+              "max_occurrences": 3,
+              "max_frequency_ratio": 0.0410958904109589,
+              "duplicate_excess_ratio": 0.1506849315068493
+            },
+            {
+              "n_characters": 8,
+              "windows": 69,
+              "unique_ngrams": 69,
+              "max_occurrences": 1,
+              "max_frequency_ratio": 0.014492753623188406,
+              "duplicate_excess_ratio": 0.0
+            },
+            {
+              "n_characters": 16,
+              "windows": 61,
+              "unique_ngrams": 61,
+              "max_occurrences": 1,
+              "max_frequency_ratio": 0.01639344262295082,
+              "duplicate_excess_ratio": 0.0
+            }
+          ],
+          "max_ngram_frequency_ratio_across_n": 0.0410958904109589
+        },
+        "source_directory": "cases/q05-budget-03-low",
+        "semantic_quality": "not_automatically_assessed"
+      },
+      "high": {
+        "req_id": "budget-03-high",
+        "source_req_id": "cal-11001-i008",
+        "category": "interactive",
+        "input_tokens": 155,
+        "new_prompt_tokens": 1,
+        "cached_prompt_tokens": 154,
+        "max_tokens": 128,
+        "output_tokens": 128,
+        "stop_type": "eos",
+        "context_truncated": false,
+        "content_sha256": "d586e5d51f168a0cb228eea4ac2fd5ec91ef51b4eb2e859fe71065616ccc70e2",
+        "prompt_sha256": "a2a69e5b29d4f1f2fd8c71f969393f875d22b0f99e98399308f7d324ff967b3a",
+        "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n题号cal-11001-i008。借书期限还剩69天，计划每天读2页，请用两句话给出阅读安排。参考情况：补充1：可用时间83分钟，已有安排7项。补充2：可用时间39分钟，已有安排2项。补充3：可用时间20分钟，已有安排7项。补充4：可用时间81分钟，已有安排3项。补充5：可用时间86分钟，已有安排1项。补充6：可用时间62分钟，已有安排1项。补充7：可用时间88分钟，已有安排3项。<|im_end|>\n<|im_start|>assistant\n",
+        "content": "补充1：每天读2页，83分钟内可读14页，剩余29页。补充2：39分钟内可读19页，剩余4页。补充3：20分钟内可读10页，剩余19页。补充4：81分钟内可读40页，剩余2页。补充5：86分钟内可读43页，剩余1页。补充6：62分钟内可读31页，剩余19页。补充7：88分钟内可读44页，剩余1页。",
+        "repetition": {
+          "character_count_without_whitespace": 149,
+          "per_n": [
+            {
+              "n_characters": 4,
+              "windows": 146,
+              "unique_ngrams": 106,
+              "max_occurrences": 7,
+              "max_frequency_ratio": 0.04794520547945205,
+              "duplicate_excess_ratio": 0.273972602739726
+            },
+            {
+              "n_characters": 8,
+              "windows": 142,
+              "unique_ngrams": 139,
+              "max_occurrences": 2,
+              "max_frequency_ratio": 0.014084507042253521,
+              "duplicate_excess_ratio": 0.02112676056338028
+            },
+            {
+              "n_characters": 16,
+              "windows": 134,
+              "unique_ngrams": 134,
+              "max_occurrences": 1,
+              "max_frequency_ratio": 0.007462686567164179,
+              "duplicate_excess_ratio": 0.0
+            }
+          ],
+          "max_ngram_frequency_ratio_across_n": 0.04794520547945205
+        },
+        "source_directory": "cases/q06-budget-03-high",
+        "semantic_quality": "not_automatically_assessed"
+      }
+    },
+    "c23": {
+      "high": {
+        "req_id": "budget-04-high",
+        "source_req_id": "cal-11001-i011",
+        "category": "interactive",
+        "input_tokens": 154,
+        "new_prompt_tokens": 130,
+        "cached_prompt_tokens": 24,
+        "max_tokens": 128,
+        "output_tokens": 49,
+        "stop_type": "eos",
+        "context_truncated": false,
+        "content_sha256": "4f00b27c9ac4d7f3fa8cd22a2ce423a799856b28e1126219efb82019cd1497bf",
+        "prompt_sha256": "4d2f8d552c89a18cc1540cc9901bc2e94528fd0f931f34fbe77f336632f59dc2",
+        "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n题号cal-11001-i011。文具预算65元，单件2元，请用两句话说明怎样避免超支。参考情况：补充1：可用时间28分钟，已有安排8项。补充2：可用时间80分钟，已有安排3项。补充3：可用时间56分钟，已有安排2项。补充4：可用时间21分钟，已有安排8项。补充5：可用时间18分钟，已有安排3项。补充6：可用时间31分钟，已有安排1项。补充7：可用时间29分钟，已有安排8项。<|im_end|>\n<|im_start|>assistant\n",
+        "content": "文具预算65元，单件2元，避免超支的方法是：1. 用时间安排表来管理时间，避免重复安排。2. 用预算管理工具来管理预算，避免超支。",
+        "repetition": {
+          "character_count_without_whitespace": 63,
+          "per_n": [
+            {
+              "n_characters": 4,
+              "windows": 60,
+              "unique_ngrams": 58,
+              "max_occurrences": 2,
+              "max_frequency_ratio": 0.03333333333333333,
+              "duplicate_excess_ratio": 0.03333333333333333
+            },
+            {
+              "n_characters": 8,
+              "windows": 56,
+              "unique_ngrams": 56,
+              "max_occurrences": 1,
+              "max_frequency_ratio": 0.017857142857142856,
+              "duplicate_excess_ratio": 0.0
+            },
+            {
+              "n_characters": 16,
+              "windows": 48,
+              "unique_ngrams": 48,
+              "max_occurrences": 1,
+              "max_frequency_ratio": 0.020833333333333332,
+              "duplicate_excess_ratio": 0.0
+            }
+          ],
+          "max_ngram_frequency_ratio_across_n": 0.03333333333333333
+        },
+        "source_directory": "cases/q07-budget-04-high",
+        "semantic_quality": "not_automatically_assessed"
+      },
+      "low": {
+        "req_id": "budget-04-low",
+        "source_req_id": "cal-11001-i011",
+        "category": "interactive",
+        "input_tokens": 154,
+        "new_prompt_tokens": 1,
+        "cached_prompt_tokens": 153,
+        "max_tokens": 64,
+        "output_tokens": 49,
+        "stop_type": "eos",
+        "context_truncated": false,
+        "content_sha256": "ac90c43fd5b36f1b56ace9ee5303d82873b0e1dc8aaac06be88de045f9973903",
+        "prompt_sha256": "4d2f8d552c89a18cc1540cc9901bc2e94528fd0f931f34fbe77f336632f59dc2",
+        "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n题号cal-11001-i011。文具预算65元，单件2元，请用两句话说明怎样避免超支。参考情况：补充1：可用时间28分钟，已有安排8项。补充2：可用时间80分钟，已有安排3项。补充3：可用时间56分钟，已有安排2项。补充4：可用时间21分钟，已有安排8项。补充5：可用时间18分钟，已有安排3项。补充6：可用时间31分钟，已有安排1项。补充7：可用时间29分钟，已有安排8项。<|im_end|>\n<|im_start|>assistant\n",
+        "content": "文具预算65元，单件2元，避免超支的方法是：1. 用时间安排表来管理时间，避免重复安排。2. 用预算管理表来管理预算，避免超支。",
+        "repetition": {
+          "character_count_without_whitespace": 62,
+          "per_n": [
+            {
+              "n_characters": 4,
+              "windows": 59,
+              "unique_ngrams": 56,
+              "max_occurrences": 2,
+              "max_frequency_ratio": 0.03389830508474576,
+              "duplicate_excess_ratio": 0.05084745762711865
+            },
+            {
+              "n_characters": 8,
+              "windows": 55,
+              "unique_ngrams": 55,
+              "max_occurrences": 1,
+              "max_frequency_ratio": 0.01818181818181818,
+              "duplicate_excess_ratio": 0.0
+            },
+            {
+              "n_characters": 16,
+              "windows": 47,
+              "unique_ngrams": 47,
+              "max_occurrences": 1,
+              "max_frequency_ratio": 0.02127659574468085,
+              "duplicate_excess_ratio": 0.0
+            }
+          ],
+          "max_ngram_frequency_ratio_across_n": 0.03389830508474576
+        },
+        "source_directory": "cases/q08-budget-04-low",
+        "semantic_quality": "not_automatically_assessed"
+      }
+    },
+    "c04": {
+      "low": {
+        "req_id": "budget-05-low",
+        "source_req_id": "cal-11001-b001",
+        "category": "background",
+        "input_tokens": 327,
+        "new_prompt_tokens": 324,
+        "cached_prompt_tokens": 3,
+        "max_tokens": 384,
+        "output_tokens": 384,
+        "stop_type": "limit",
+        "context_truncated": false,
+        "content_sha256": "eea9375baf19bff0a639a7c94ebd50bdd9ad880332d9ee762173cad684b8b0b2",
+        "prompt_sha256": "24609fc3e8aa79df63082310c5046534cd35e5939e1559060d195c6eadca7f38",
+        "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n任务cal-11001-b001。以下是虚构的社区活动筹备记录。请分六点分析人员、物资和现场协调安排，每点写出具体依据和行动。数字只用于本题，不补造事实。记录如下：记录1：报名人数78，物资份数14。记录2：报名人数31，物资份数12。记录3：报名人数63，物资份数15。记录4：报名人数70，物资份数13。记录5：报名人数87，物资份数9。记录6：报名人数23，物资份数1。记录7：报名人数43，物资份数2。记录8：报名人数39，物资份数15。记录9：报名人数77，物资份数13。记录10：报名人数38，物资份数10。记录11：报名人数27，物资份数14。记录12：报名人数53，物资份数3。记录13：报名人数31，物资份数9。记录14：报名人数58，物资份数5。记录15：报名人数58，物资份数15。记录16：报名人数14，物资份数4。记录17：报名人数69，物资份数7。记录18：报名人数67，物资份数12。<|im_end|>\n<|im_start|>assistant\n",
+        "content": "人员：报名人数78，物资份数14。人员：报名人数31，物资份数12。人员：报名人数63，物资份数15。人员：报名人数70，物资份数13。人员：报名人数87，物资份数9。人员：报名人数23，物资份数1。人员：报名人数43，物资份数2。人员：报名人数39，物资份数15。人员：报名人数77，物资份数13。人员：报名人数38，物资份数10。人员：报名人数27，物资份数14。人员：报名人数53，物资份数3。人员：报名人数31，物资份数9。人员：报名人数58，物资份数5。人员：报名人数58，物资份数15。人员：报名人数14，物资份数4。人员：报名人数69，物资份数7。人员：报名人数67，物资份数12。物资：报名人数78，物资份数14。物资：报名人数31，物资份数12。物资：报名人数63，物资份数15。物资：报名人数70，物资份数13。物资：报名人数87，物资份数9。物资：报名人数23，物资份数1。物资：报名人数43，物资份数2。物资：报名人数39，物资份数15。物资：报名人数77，物资份数13。物资：报名人数38，物资份数10。物资：报名人数27，物资份数14。物资：报名人数53，物资份数3。物资：报名人数31",
+        "repetition": {
+          "character_count_without_whitespace": 507,
+          "per_n": [
+            {
+              "n_characters": 4,
+              "windows": 504,
+              "unique_ngrams": 133,
+              "max_occurrences": 31,
+              "max_frequency_ratio": 0.061507936507936505,
+              "duplicate_excess_ratio": 0.7361111111111112
+            },
+            {
+              "n_characters": 8,
+              "windows": 500,
+              "unique_ngrams": 286,
+              "max_occurrences": 17,
+              "max_frequency_ratio": 0.034,
+              "duplicate_excess_ratio": 0.428
+            },
+            {
+              "n_characters": 16,
+              "windows": 492,
+              "unique_ngrams": 490,
+              "max_occurrences": 2,
+              "max_frequency_ratio": 0.0040650406504065045,
+              "duplicate_excess_ratio": 0.0040650406504065045
+            }
+          ],
+          "max_ngram_frequency_ratio_across_n": 0.061507936507936505
+        },
+        "source_directory": "cases/q09-budget-05-low",
+        "semantic_quality": "not_automatically_assessed"
+      },
+      "high": {
+        "req_id": "budget-05-high",
+        "source_req_id": "cal-11001-b001",
+        "category": "background",
+        "input_tokens": 327,
+        "new_prompt_tokens": 1,
+        "cached_prompt_tokens": 326,
+        "max_tokens": 768,
+        "output_tokens": 581,
+        "stop_type": "eos",
+        "context_truncated": false,
+        "content_sha256": "398aa51af5f0254854b1e43533be8846843f438e8a60763851854fb1420f8116",
+        "prompt_sha256": "24609fc3e8aa79df63082310c5046534cd35e5939e1559060d195c6eadca7f38",
+        "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n任务cal-11001-b001。以下是虚构的社区活动筹备记录。请分六点分析人员、物资和现场协调安排，每点写出具体依据和行动。数字只用于本题，不补造事实。记录如下：记录1：报名人数78，物资份数14。记录2：报名人数31，物资份数12。记录3：报名人数63，物资份数15。记录4：报名人数70，物资份数13。记录5：报名人数87，物资份数9。记录6：报名人数23，物资份数1。记录7：报名人数43，物资份数2。记录8：报名人数39，物资份数15。记录9：报名人数77，物资份数13。记录10：报名人数38，物资份数10。记录11：报名人数27，物资份数14。记录12：报名人数53，物资份数3。记录13：报名人数31，物资份数9。记录14：报名人数58，物资份数5。记录15：报名人数58，物资份数15。记录16：报名人数14，物资份数4。记录17：报名人数69，物资份数7。记录18：报名人数67，物资份数12。<|im_end|>\n<|im_start|>assistant\n",
+        "content": "人员：报名人数78，物资份数14。报名人数31，物资份数12。报名人数63，物资份数15。报名人数70，物资份数13。报名人数87，物资份数9。报名人数23，物资份数1。报名人数43，物资份数2。报名人数39，物资份数15。报名人数77，物资份数13。报名人数38，物资份数10。报名人数27，物资份数14。报名人数53，物资份数3。报名人数31，物资份数9。报名人数58，物资份数5。报名人数58，物资份数15。报名人数14，物资份数4。报名人数69，物资份数7。报名人数67，物资份数12。物资份数：报名人数78，物资份数14。报名人数31，物资份数12。报名人数63，物资份数15。报名人数70，物资份数13。报名人数87，物资份数9。报名人数23，物资份数1。报名人数43，物资份数2。报名人数39，物资份数15。报名人数77，物资份数13。报名人数38，物资份数10。报名人数27，物资份数14。报名人数53，物资份数3。报名人数31，物资份数9。报名人数58，物资份数5。报名人数58，物资份数15。报名人数14，物资份数4。报名人数69，物资份数7。报名人数67，物资份数12。现场协调安排：报名人数78，物资份数14。报名人数31，物资份数12。报名人数63，物资份数15。报名人数70，物资份数13。报名人数87，物资份数9。报名人数23，物资份数1。报名人数43，物资份数2。报名人数39，物资份数15。报名人数77，物资份数13。报名人数38，物资份数10。报名人数27，物资份数14。报名人数53，物资份数3。报名人数31，物资份数9。报名人数58，物资份数5。报名人数58，物资份数15。报名人数14，物资份数4。报名人数69，物资份数7。报名人数67，物资份数12。",
+        "repetition": {
+          "character_count_without_whitespace": 747,
+          "per_n": [
+            {
+              "n_characters": 4,
+              "windows": 744,
+              "unique_ngrams": 129,
+              "max_occurrences": 55,
+              "max_frequency_ratio": 0.0739247311827957,
+              "duplicate_excess_ratio": 0.8266129032258065
+            },
+            {
+              "n_characters": 8,
+              "windows": 740,
+              "unique_ngrams": 228,
+              "max_occurrences": 9,
+              "max_frequency_ratio": 0.012162162162162163,
+              "duplicate_excess_ratio": 0.6918918918918919
+            },
+            {
+              "n_characters": 16,
+              "windows": 732,
+              "unique_ngrams": 272,
+              "max_occurrences": 3,
+              "max_frequency_ratio": 0.004098360655737705,
+              "duplicate_excess_ratio": 0.6284153005464481
+            }
+          ],
+          "max_ngram_frequency_ratio_across_n": 0.0739247311827957
+        },
+        "source_directory": "cases/q10-budget-05-high",
+        "semantic_quality": "not_automatically_assessed"
+      }
+    },
+    "c08": {
+      "high": {
+        "req_id": "budget-06-high",
+        "source_req_id": "cal-11001-b003",
+        "category": "background",
+        "input_tokens": 324,
+        "new_prompt_tokens": 311,
+        "cached_prompt_tokens": 13,
+        "max_tokens": 768,
+        "output_tokens": 768,
+        "stop_type": "limit",
+        "context_truncated": false,
+        "content_sha256": "0f122ecbc31262907851a088f41fc9648e08ebf0cf62987402ea8592a8be1054",
+        "prompt_sha256": "8829cbfdcc7c16f497ade1008519b56eb9df96d973618b6e7715ebb06532ed1e",
+        "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n任务cal-11001-b003。以下是虚构的运动训练日志。请分六点分析训练节奏、休息和记录改进，每点写出具体依据和行动。数字只用于本题，不补造事实。记录如下：记录1：训练分钟57，休息分钟13。记录2：训练分钟50，休息分钟12。记录3：训练分钟14，休息分钟11。记录4：训练分钟69，休息分钟14。记录5：训练分钟30，休息分钟10。记录6：训练分钟14，休息分钟5。记录7：训练分钟77，休息分钟15。记录8：训练分钟82，休息分钟3。记录9：训练分钟90，休息分钟15。记录10：训练分钟28，休息分钟12。记录11：训练分钟74，休息分钟8。记录12：训练分钟70，休息分钟14。记录13：训练分钟57，休息分钟5。记录14：训练分钟43，休息分钟11。记录15：训练分钟29，休息分钟2。记录16：训练分钟34，休息分钟1。记录17：训练分钟66，休息分钟9。记录18：训练分钟24，休息分钟13。记录19：训练分钟21，休息分钟13。<|im_end|>\n<|im_start|>assistant\n",
+        "content": "训练节奏：记录1-12分钟，记录13-18分钟，记录19-21分钟，记录22-24分钟，记录25-28分钟，记录29-34分钟，记录35-36分钟，记录37-38分钟，记录39-40分钟，记录41-42分钟，记录43-44分钟，记录45-46分钟，记录47-48分钟，记录49-50分钟，记录51-52分钟，记录53-54分钟，记录55-56分钟，记录57-58分钟，记录59-60分钟，记录61-62分钟，记录63-64分钟，记录65-66分钟，记录67-68分钟，记录69-70分钟，记录71-72分钟，记录73-74分钟，记录75-76分钟，记录77-78分钟，记录79-80分钟，记录81-82分钟，记录83-84分钟，记录85-86分钟，记录87-88分钟，记录89-90分钟，记录91-92分钟，记录93-94分钟，记录95-96分钟，记录97-98分钟，记录99-100分钟，记录101-102分钟，记录103-104分钟，记录105-106分钟，记录107-108分钟，记录109-110分钟，记录111-112分钟，记录113-114分钟，记录115-116分钟，记录117-118分钟，记录119-120分钟，记录121-122分钟，记录123-124分钟，记录125-126分钟，记录127-128分钟，记录129-130分钟，记录131-132分钟，记录133-134分钟，记录135-136分钟，记录137-138分钟，记录139-140分钟，记录141-142分钟，记录143-144分钟，记录145-146分钟，记录147-148分钟，记录149-150分钟，记录151-152分钟，记录153-154分钟，记录155-156分钟，记录157-158分钟，记录159-160分钟，记录161-162分钟，记录163-164分钟，记录165-166分钟，记录167-168分钟，记录169-170分钟，记录171-172分钟，记录173-174分钟，记录175-176分钟，记录177-178分钟，记录179-180分钟，记录181-182分钟，记录183-184分钟，记录185-186分钟，记录187-188分钟，记录189-190分钟，记录19",
+        "repetition": {
+          "character_count_without_whitespace": 939,
+          "per_n": [
+            {
+              "n_characters": 4,
+              "windows": 936,
+              "unique_ngrams": 543,
+              "max_occurrences": 84,
+              "max_frequency_ratio": 0.08974358974358974,
+              "duplicate_excess_ratio": 0.4198717948717949
+            },
+            {
+              "n_characters": 8,
+              "windows": 932,
+              "unique_ngrams": 929,
+              "max_occurrences": 2,
+              "max_frequency_ratio": 0.002145922746781116,
+              "duplicate_excess_ratio": 0.003218884120171674
+            },
+            {
+              "n_characters": 16,
+              "windows": 924,
+              "unique_ngrams": 924,
+              "max_occurrences": 1,
+              "max_frequency_ratio": 0.0010822510822510823,
+              "duplicate_excess_ratio": 0.0
+            }
+          ],
+          "max_ngram_frequency_ratio_across_n": 0.08974358974358974
+        },
+        "source_directory": "cases/q11-budget-06-high",
+        "semantic_quality": "not_automatically_assessed"
+      },
+      "low": {
+        "req_id": "budget-06-low",
+        "source_req_id": "cal-11001-b003",
+        "category": "background",
+        "input_tokens": 324,
+        "new_prompt_tokens": 1,
+        "cached_prompt_tokens": 323,
+        "max_tokens": 384,
+        "output_tokens": 384,
+        "stop_type": "limit",
+        "context_truncated": false,
+        "content_sha256": "db162fced1441ad3a6cf546f97f3daa4dda8aa54b259bf07fdc41dd001ca3a08",
+        "prompt_sha256": "8829cbfdcc7c16f497ade1008519b56eb9df96d973618b6e7715ebb06532ed1e",
+        "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n任务cal-11001-b003。以下是虚构的运动训练日志。请分六点分析训练节奏、休息和记录改进，每点写出具体依据和行动。数字只用于本题，不补造事实。记录如下：记录1：训练分钟57，休息分钟13。记录2：训练分钟50，休息分钟12。记录3：训练分钟14，休息分钟11。记录4：训练分钟69，休息分钟14。记录5：训练分钟30，休息分钟10。记录6：训练分钟14，休息分钟5。记录7：训练分钟77，休息分钟15。记录8：训练分钟82，休息分钟3。记录9：训练分钟90，休息分钟15。记录10：训练分钟28，休息分钟12。记录11：训练分钟74，休息分钟8。记录12：训练分钟70，休息分钟14。记录13：训练分钟57，休息分钟5。记录14：训练分钟43，休息分钟11。记录15：训练分钟29，休息分钟2。记录16：训练分钟34，休息分钟1。记录17：训练分钟66，休息分钟9。记录18：训练分钟24，休息分钟13。记录19：训练分钟21，休息分钟13。<|im_end|>\n<|im_start|>assistant\n",
+        "content": "训练节奏：记录1-12分钟，记录13-18分钟，记录19-21分钟，记录22-24分钟，记录25-28分钟，记录29-34分钟，记录35-36分钟，记录37-38分钟，记录39-40分钟，记录41-42分钟，记录43-44分钟，记录45-46分钟，记录47-48分钟，记录49-50分钟，记录51-52分钟，记录53-54分钟，记录55-56分钟，记录57-58分钟，记录59-60分钟，记录61-62分钟，记录63-64分钟，记录65-66分钟，记录67-68分钟，记录69-70分钟，记录71-72分钟，记录73-74分钟，记录75-76分钟，记录77-78分钟，记录79-80分钟，记录81-82分钟，记录83-84分钟，记录85-86分钟，记录87-88分钟，记录89-90分钟，记录91-92分钟，记录93-94分钟，记录95-96分钟，记录97-98分钟，记录99-100分钟，记录101-102分钟，记录103-104分钟，记录105-106分钟，记录107-108分钟，记录109-110分钟，记录111-112分钟，记录113-114分钟",
+        "repetition": {
+          "character_count_without_whitespace": 478,
+          "per_n": [
+            {
+              "n_characters": 4,
+              "windows": 475,
+              "unique_ngrams": 305,
+              "max_occurrences": 45,
+              "max_frequency_ratio": 0.09473684210526316,
+              "duplicate_excess_ratio": 0.35789473684210527
+            },
+            {
+              "n_characters": 8,
+              "windows": 471,
+              "unique_ngrams": 470,
+              "max_occurrences": 2,
+              "max_frequency_ratio": 0.004246284501061571,
+              "duplicate_excess_ratio": 0.0021231422505307855
+            },
+            {
+              "n_characters": 16,
+              "windows": 463,
+              "unique_ngrams": 463,
+              "max_occurrences": 1,
+              "max_frequency_ratio": 0.0021598272138228943,
+              "duplicate_excess_ratio": 0.0
+            }
+          ],
+          "max_ngram_frequency_ratio_across_n": 0.09473684210526316
+        },
+        "source_directory": "cases/q12-budget-06-low",
+        "semantic_quality": "not_automatically_assessed"
+      }
+    },
+    "c18": {
+      "low": {
+        "req_id": "budget-07-low",
+        "source_req_id": "cal-11001-b008",
+        "category": "background",
+        "input_tokens": 331,
+        "new_prompt_tokens": 307,
+        "cached_prompt_tokens": 24,
+        "max_tokens": 384,
+        "output_tokens": 384,
+        "stop_type": "limit",
+        "context_truncated": false,
+        "content_sha256": "15d97011e2b2cf53b7afef994dd51c400b2a83ae3ed898ee3556d79275a2f442",
+        "prompt_sha256": "3fd7b5ef2118bc90b09db788aa5313c2f215846addb3b8965eb967feeea4a051",
+        "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n任务cal-11001-b008。以下是虚构的温室观察记录。请分六点分析异常、补查依据和后续观察安排，每点写出具体依据和行动。数字只用于本题，不补造事实。记录如下：记录1：温度69，湿度6。记录2：温度47，湿度15。记录3：温度38，湿度10。记录4：温度83，湿度11。记录5：温度20，湿度7。记录6：温度72，湿度14。记录7：温度25，湿度4。记录8：温度90，湿度15。记录9：温度84，湿度5。记录10：温度54，湿度10。记录11：温度27，湿度10。记录12：温度35，湿度12。记录13：温度77，湿度1。记录14：温度56，湿度15。记录15：温度39，湿度7。记录16：温度88，湿度2。记录17：温度28，湿度13。记录18：温度35，湿度1。记录19：温度72，湿度2。记录20：温度90，湿度5。记录21：温度20，湿度15。记录22：温度53，湿度2。记录23：温度12，湿度12。<|im_end|>\n<|im_start|>assistant\n",
+        "content": "分析异常：记录1：温度69，湿度6。记录2：温度47，湿度15。记录3：温度38，湿度10。记录4：温度83，湿度11。记录5：温度20，湿度7。记录6：温度72，湿度14。记录7：温度25，湿度4。记录8：温度90，湿度15。记录9：温度84，湿度5。记录10：温度54，湿度10。记录11：温度27，湿度10。记录12：温度35，湿度12。记录13：温度77，湿度1。记录14：温度56，湿度15。记录15：温度39，湿度7。记录16：温度88，湿度2。记录17：温度28，湿度13。记录18：温度35，湿度1。记录19：温度72，湿度2。记录20：温度90，湿度5。记录21：温度20，湿度15。记录22：温度53，湿度2。记录23：温度12，湿度12。 补查依据：记录1：温度69，湿度6。记录2：温度47，湿度15。记录3：温度38，湿度10。记录4：温度83，湿度11。记录5：温度20，湿度7。记录6：温度72，湿度14。记录7：温度25，湿度4。记录8：温度90，湿度15。记录9：温度84，湿度5。记录10：温度54，湿度10。记录11：温度27，湿度10。记录",
+        "repetition": {
+          "character_count_without_whitespace": 489,
+          "per_n": [
+            {
+              "n_characters": 4,
+              "windows": 486,
+              "unique_ngrams": 210,
+              "max_occurrences": 21,
+              "max_frequency_ratio": 0.043209876543209874,
+              "duplicate_excess_ratio": 0.5679012345679012
+            },
+            {
+              "n_characters": 8,
+              "windows": 482,
+              "unique_ngrams": 320,
+              "max_occurrences": 6,
+              "max_frequency_ratio": 0.012448132780082987,
+              "duplicate_excess_ratio": 0.3360995850622407
+            },
+            {
+              "n_characters": 16,
+              "windows": 474,
+              "unique_ngrams": 334,
+              "max_occurrences": 2,
+              "max_frequency_ratio": 0.004219409282700422,
+              "duplicate_excess_ratio": 0.29535864978902954
+            }
+          ],
+          "max_ngram_frequency_ratio_across_n": 0.043209876543209874
+        },
+        "source_directory": "cases/q13-budget-07-low",
+        "semantic_quality": "not_automatically_assessed"
+      },
+      "high": {
+        "req_id": "budget-07-high",
+        "source_req_id": "cal-11001-b008",
+        "category": "background",
+        "input_tokens": 331,
+        "new_prompt_tokens": 1,
+        "cached_prompt_tokens": 330,
+        "max_tokens": 768,
+        "output_tokens": 52,
+        "stop_type": "eos",
+        "context_truncated": false,
+        "content_sha256": "80d42100c0ee0ec1b44dedcfa812c9d4bf258003098d4113017530557de51c4b",
+        "prompt_sha256": "3fd7b5ef2118bc90b09db788aa5313c2f215846addb3b8965eb967feeea4a051",
+        "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n任务cal-11001-b008。以下是虚构的温室观察记录。请分六点分析异常、补查依据和后续观察安排，每点写出具体依据和行动。数字只用于本题，不补造事实。记录如下：记录1：温度69，湿度6。记录2：温度47，湿度15。记录3：温度38，湿度10。记录4：温度83，湿度11。记录5：温度20，湿度7。记录6：温度72，湿度14。记录7：温度25，湿度4。记录8：温度90，湿度15。记录9：温度84，湿度5。记录10：温度54，湿度10。记录11：温度27，湿度10。记录12：温度35，湿度12。记录13：温度77，湿度1。记录14：温度56，湿度15。记录15：温度39，湿度7。记录16：温度88，湿度2。记录17：温度28，湿度13。记录18：温度35，湿度1。记录19：温度72，湿度2。记录20：温度90，湿度5。记录21：温度20，湿度15。记录22：温度53，湿度2。记录23：温度12，湿度12。<|im_end|>\n<|im_start|>assistant\n",
+        "content": "异常：记录1-22的温度和湿度都处于正常范围，没有异常。记录23的温度和湿度都处于异常范围，需要补查依据和后续观察安排。数字只用于本题，不补造事实。",
+        "repetition": {
+          "character_count_without_whitespace": 74,
+          "per_n": [
+            {
+              "n_characters": 4,
+              "windows": 71,
+              "unique_ngrams": 64,
+              "max_occurrences": 2,
+              "max_frequency_ratio": 0.028169014084507043,
+              "duplicate_excess_ratio": 0.09859154929577464
+            },
+            {
+              "n_characters": 8,
+              "windows": 67,
+              "unique_ngrams": 65,
+              "max_occurrences": 2,
+              "max_frequency_ratio": 0.029850746268656716,
+              "duplicate_excess_ratio": 0.029850746268656716
+            },
+            {
+              "n_characters": 16,
+              "windows": 59,
+              "unique_ngrams": 59,
+              "max_occurrences": 1,
+              "max_frequency_ratio": 0.01694915254237288,
+              "duplicate_excess_ratio": 0.0
+            }
+          ],
+          "max_ngram_frequency_ratio_across_n": 0.029850746268656716
+        },
+        "source_directory": "cases/q14-budget-07-high",
+        "semantic_quality": "not_automatically_assessed"
+      }
+    },
+    "c22": {
+      "high": {
+        "req_id": "budget-08-high",
+        "source_req_id": "cal-11001-b010",
+        "category": "background",
+        "input_tokens": 335,
+        "new_prompt_tokens": 312,
+        "cached_prompt_tokens": 23,
+        "max_tokens": 768,
+        "output_tokens": 768,
+        "stop_type": "limit",
+        "context_truncated": false,
+        "content_sha256": "17a067befb4b96c4febbc09dad6942601531056ca83eb4b0f0aebcf3399d6dc7",
+        "prompt_sha256": "b7e053aac8b994a5cc043d6b5e262952fd4746cb38479bc21229128acee3bcf5",
+        "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n任务cal-11001-b010。以下是虚构的仓库存量盘点记录。请分六点分析缺货风险、盘点顺序和补货安排，每点写出具体依据和行动。数字只用于本题，不补造事实。记录如下：记录1：库存件数27，当天领用13。记录2：库存件数90，当天领用11。记录3：库存件数77，当天领用3。记录4：库存件数60，当天领用15。记录5：库存件数52，当天领用11。记录6：库存件数44，当天领用10。记录7：库存件数63，当天领用4。记录8：库存件数41，当天领用1。记录9：库存件数47，当天领用12。记录10：库存件数23，当天领用13。记录11：库存件数46，当天领用4。记录12：库存件数44，当天领用13。记录13：库存件数29，当天领用7。记录14：库存件数35，当天领用7。记录15：库存件数47，当天领用11。记录16：库存件数33，当天领用15。记录17：库存件数71，当天领用14。<|im_end|>\n<|im_start|>assistant\n",
+        "content": "1. 缺货风险分析：根据记录，库存件数从低到高依次为：23、27、33、41、44、46、47、47、47、47、52、60、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、",
+        "repetition": {
+          "character_count_without_whitespace": 773,
+          "per_n": [
+            {
+              "n_characters": 4,
+              "windows": 770,
+              "unique_ngrams": 57,
+              "max_occurrences": 237,
+              "max_frequency_ratio": 0.3077922077922078,
+              "duplicate_excess_ratio": 0.925974025974026
+            },
+            {
+              "n_characters": 8,
+              "windows": 766,
+              "unique_ngrams": 61,
+              "max_occurrences": 235,
+              "max_frequency_ratio": 0.30678851174934724,
+              "duplicate_excess_ratio": 0.9203655352480418
+            },
+            {
+              "n_characters": 16,
+              "windows": 758,
+              "unique_ngrams": 64,
+              "max_occurrences": 233,
+              "max_frequency_ratio": 0.3073878627968338,
+              "duplicate_excess_ratio": 0.9155672823218998
+            }
+          ],
+          "max_ngram_frequency_ratio_across_n": 0.3077922077922078
+        },
+        "source_directory": "cases/q15-budget-08-high",
+        "semantic_quality": "not_automatically_assessed"
+      },
+      "low": {
+        "req_id": "budget-08-low",
+        "source_req_id": "cal-11001-b010",
+        "category": "background",
+        "input_tokens": 335,
+        "new_prompt_tokens": 1,
+        "cached_prompt_tokens": 334,
+        "max_tokens": 384,
+        "output_tokens": 384,
+        "stop_type": "limit",
+        "context_truncated": false,
+        "content_sha256": "9ac210782e93f1350d6e4e18651c812afff1b251815e1e77786d434eabd27f41",
+        "prompt_sha256": "b7e053aac8b994a5cc043d6b5e262952fd4746cb38479bc21229128acee3bcf5",
+        "prompt": "<|im_start|>system\n请用中文回答。<|im_end|>\n<|im_start|>user\n任务cal-11001-b010。以下是虚构的仓库存量盘点记录。请分六点分析缺货风险、盘点顺序和补货安排，每点写出具体依据和行动。数字只用于本题，不补造事实。记录如下：记录1：库存件数27，当天领用13。记录2：库存件数90，当天领用11。记录3：库存件数77，当天领用3。记录4：库存件数60，当天领用15。记录5：库存件数52，当天领用11。记录6：库存件数44，当天领用10。记录7：库存件数63，当天领用4。记录8：库存件数41，当天领用1。记录9：库存件数47，当天领用12。记录10：库存件数23，当天领用13。记录11：库存件数46，当天领用4。记录12：库存件数44，当天领用13。记录13：库存件数29，当天领用7。记录14：库存件数35，当天领用7。记录15：库存件数47，当天领用11。记录16：库存件数33，当天领用15。记录17：库存件数71，当天领用14。<|im_end|>\n<|im_start|>assistant\n",
+        "content": "1. 缺货风险分析：根据记录，库存件数从低到高依次为：23、27、33、41、44、46、47、47、47、47、52、60、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、63、",
+        "repetition": {
+          "character_count_without_whitespace": 389,
+          "per_n": [
+            {
+              "n_characters": 4,
+              "windows": 386,
+              "unique_ngrams": 57,
+              "max_occurrences": 109,
+              "max_frequency_ratio": 0.2823834196891192,
+              "duplicate_excess_ratio": 0.8523316062176166
+            },
+            {
+              "n_characters": 8,
+              "windows": 382,
+              "unique_ngrams": 61,
+              "max_occurrences": 107,
+              "max_frequency_ratio": 0.2801047120418848,
+              "duplicate_excess_ratio": 0.8403141361256544
+            },
+            {
+              "n_characters": 16,
+              "windows": 374,
+              "unique_ngrams": 64,
+              "max_occurrences": 105,
+              "max_frequency_ratio": 0.2807486631016043,
+              "duplicate_excess_ratio": 0.8288770053475936
+            }
+          ],
+          "max_ngram_frequency_ratio_across_n": 0.2823834196891192
+        },
+        "source_directory": "cases/q16-budget-08-low",
+        "semantic_quality": "not_automatically_assessed"
+      }
+    }
+  },
+  "scope": "Eight post-hoc selected sentinels; no overall quality rate, scheduler effect, or automatic semantic verdict.",
+  "analysis_script_sha256": "c2184d91c79c7569b3a7134f500e3e38a435ce2fee66f964b2dc10511183dad5"
+}

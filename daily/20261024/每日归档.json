@@ -1,19 +1,24 @@
 {
   "date": "20261024",
-  "archive": "results/archives/20261024/daily-20261024-094203-30d7b50a.zip",
-  "sha256": "1961308e7d3230bd6f88dd9c11144c5a17e04d9915a3dd2fa52d214659963cd5",
-  "file_count": 3618,
+  "archive": "results/archives/20261024/daily-20261024-194426-b66d6762.zip",
+  "sha256": "9ca814a15f29eb0fbe1897b0a447cfc223b8451beebcd2861cd1313ad0f04c83",
+  "file_count": 4404,
   "run_dirs": [
-    "results/raw/maintenance/20261024-g0-review-delivery-v1",
-    "results/raw/maintenance/20261024-g0-review-delivery-v2",
-    "results/raw/maintenance/20261024-p1-stage-start-v1",
-    "results/raw/client-verification/20261024-p1-development-client-v1",
-    "results/raw/client-verification/20261024-p1-development-client-v2",
-    "results/raw/development/20261024-025138-p1-development-validation-v1",
-    "results/raw/maintenance/20261024-p1-development-independent-audit-v1",
-    "results/raw/maintenance/20261024-p1-development-closeout-v1"
+    "results/raw/development/20261024-104708-p1-calibration-refinement-v1",
+    "results/raw/development/20261024-1142-p1-calibration-refinement-v1-retry",
+    "results/raw/development/20261024-1926-p1-calibration-refinement-v1-final",
+    "results/raw/development/20261024-1926-p1-output-budget-probe-v1",
+    "results/raw/maintenance/20261024-calibration-failure-audit-v1",
+    "results/raw/maintenance/20261024-p1-calibration-interruption-audit-v1",
+    "results/raw/maintenance/20261024-p1-calibration-refinement-model-free-v1",
+    "results/raw/maintenance/20261024-p1-output-budget-probe-model-free-v1",
+    "results/raw/maintenance/20261024-p1-calibration-final-independent-audit-v1",
+    "results/raw/maintenance/20261024-p1-output-budget-probe-audit-v1",
+    "results/raw/maintenance/20261024-p1-refinement-supervisor-v1",
+    "results/raw/maintenance/20261024-p1-refinement-closeout-v1",
+    "results/raw/maintenance/20261024-p1-refinement-publication-v1"
   ],
   "verified": true,
-  "packed_at": "2026-10-24T09:42:03.672495+08:00",
+  "packed_at": "2026-10-24T19:44:26.324703+08:00",
   "backup_scope": "local_only"
 }

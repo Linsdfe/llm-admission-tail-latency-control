@@ -72,3 +72,16 @@ tests/integration/verify_p1_development_replay.py -text whitespace=-blank-at-eol
 tests/unit/test_background_cap.cpp -text whitespace=-blank-at-eol,-blank-at-eof
 tests/unit/test_simple_scheduler.cpp -text whitespace=-blank-at-eol,-blank-at-eof
 tests/unit/test_p1_workload.py -text whitespace=-blank-at-eol,-blank-at-eof
+
+# P1 refinement and output-budget probe: freeze execution bytes before collection.
+configs/p1-calibration-refinement-v1.json -text whitespace=-blank-at-eol,-blank-at-eof
+docs/p1/calibration-refinement-protocol-v1.md -text whitespace=-blank-at-eol,-blank-at-eof
+docs/p1/calibration-refinement-design-review-v1.md -text whitespace=-blank-at-eol,-blank-at-eof
+docs/p1/output-budget-probe-protocol-v1.md -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/79b_run_p1_calibration_refinement.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/79c_run_p1_output_budget_probe.py -text whitespace=-blank-at-eol,-blank-at-eof
+tests/unit/test_p1_calibration_refinement.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/analysis/92_analyze_p1_calibration_refinement.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/analysis/93_analyze_p1_output_budget_probe.py -text whitespace=-blank-at-eol,-blank-at-eof
+docs/experiments/20261024-1926-p1-calibration-refinement-v1-final/** -text whitespace=-blank-at-eol,-blank-at-eof
+docs/experiments/20261024-1926-p1-output-budget-probe-v1/** -text whitespace=-blank-at-eol,-blank-at-eof

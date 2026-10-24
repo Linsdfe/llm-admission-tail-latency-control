@@ -1,0 +1,240 @@
+{
+  "review_kind": "assistant_exploratory_subjective_reading_not_human_blind_review",
+  "reviewed_at": "2026-10-24T19:36:50.089562+08:00",
+  "run_id": "20261024-1926-p1-output-budget-probe-v1",
+  "complete_outputs_read": 16,
+  "selected_prompt_pairs": 8,
+  "basis": "Read all sixteen complete output texts and their original prompts, then recorded task response, requested format, echo/repetition and paired changes.",
+  "selection_scope": "Eight post-hoc sentinels selected from already observed defects; no overall quality rate, independent performance repetition, or significance claim.",
+  "objective_summary_sha256": "4cdba262d137493dde9a56282fa4813e780d34f066418a100a6a90b92f22dd1e",
+  "automatic_quality_verdict": null,
+  "formal_student_or_supervisor_signoff": false,
+  "notes": {
+    "c05": {
+      "requested_task": "两句话安排69分钟准备和2分钟休息的先后顺序。",
+      "low": {
+        "task_response": "未安排准备与休息顺序；只有补充记录的复述。",
+        "format_completion": "没有完成所要求的两句安排，输出中途结束。",
+        "repetition_or_echo": "依次照抄补充1至补充5的一部分。",
+        "evidence_excerpt": "补充1：可用时间20分钟，已有安排2项。",
+        "req_id": "budget-01-low",
+        "max_tokens": 64,
+        "output_tokens": 64,
+        "stop_type": "limit",
+        "content_sha256": "7f9f18041d72996844cdb9433af016980cd140960f26639353805d750d1edae1",
+        "source_directory": "cases/q01-budget-01-low"
+      },
+      "high": {
+        "task_response": "仍未回答活动安排。",
+        "format_completion": "七条补充记录抄完后自然结束，没有形成两句安排。",
+        "repetition_or_echo": "主要新增部分是补充5后半及补充6、7。",
+        "evidence_excerpt": "补充7：可用时间87分钟，已有安排2项。",
+        "req_id": "budget-01-high",
+        "max_tokens": 128,
+        "output_tokens": 99,
+        "stop_type": "eos",
+        "content_sha256": "8a25be5746243b815aeea67a2bab2c239c25e632b59c538054ed7fdc894c2804",
+        "source_directory": "cases/q02-budget-01-high"
+      },
+      "paired_interpretation": "提高上限让复述完整结束，没有观察到任务完成的改善。"
+    },
+    "c11": {
+      "requested_task": "两句话说明每份62克、7份的配料换算；应回应62×7=434克这一具体问题。",
+      "low": {
+        "task_response": "没有做配料换算。",
+        "format_completion": "未给两句换算解释，停在第五条时间补充中。",
+        "repetition_or_echo": "照抄与配料换算无关的补充时间和安排数。",
+        "evidence_excerpt": "补充1：可用时间74分钟，已有安排8项。",
+        "req_id": "budget-02-low",
+        "max_tokens": 64,
+        "output_tokens": 64,
+        "stop_type": "limit",
+        "content_sha256": "d961ea7e58b61a8c4d980d10c4679ab723d57222fcdcbcd1c629bd5833b0bcd2",
+        "source_directory": "cases/q04-budget-02-low"
+      },
+      "high": {
+        "task_response": "没有给出434克或相应换算方法。",
+        "format_completion": "七条补充抄完后EOS，未完成两句换算任务。",
+        "repetition_or_echo": "继续照抄其余时间记录。",
+        "evidence_excerpt": "补充7：可用时间43分钟，已有安排1项。",
+        "req_id": "budget-02-high",
+        "max_tokens": 128,
+        "output_tokens": 99,
+        "stop_type": "eos",
+        "content_sha256": "abb97eb762888958020c31b10c26b6cab88b0ed0a3d3611d5df0bf16700f4a99",
+        "source_directory": "cases/q03-budget-02-high"
+      },
+      "paired_interpretation": "只是复述从半截变成完整，没有修复答非所问。"
+    },
+    "c17": {
+      "requested_task": "两句话安排剩余69天、每天2页的阅读。题目没有给每分钟阅读速度或全书总页数。",
+      "low": {
+        "task_response": "提到每天2页，但从补充分钟数推出读页数和剩余页数，缺少题目依据。",
+        "format_completion": "没有形成两句计划，停在第四条补充中。",
+        "repetition_or_echo": "依补充记录套用分钟、页数和剩余页数的相似句式。",
+        "evidence_excerpt": "每天读2页，83分钟内可读14页，剩余29页。",
+        "req_id": "budget-03-low",
+        "max_tokens": 64,
+        "output_tokens": 64,
+        "stop_type": "limit",
+        "content_sha256": "db69911b7014a887e8abff1620a5e9734e15b1b57532b2c3aaad5685ce6465ba",
+        "source_directory": "cases/q05-budget-03-low"
+      },
+      "high": {
+        "task_response": "延续同一无依据换算，未形成69天的合理阅读安排。",
+        "format_completion": "七条相似条目后EOS，仍非所要求的两句安排。",
+        "repetition_or_echo": "继续生成第4至7条分钟到页数的推断。",
+        "evidence_excerpt": "88分钟内可读44页，剩余1页。",
+        "req_id": "budget-03-high",
+        "max_tokens": 128,
+        "output_tokens": 128,
+        "stop_type": "eos",
+        "content_sha256": "d586e5d51f168a0cb228eea4ac2fd5ec91ef51b4eb2e859fe71065616ccc70e2",
+        "source_directory": "cases/q06-budget-03-high"
+      },
+      "paired_interpretation": "高档恰好128 token且原生停因是EOS，不能记成limit；自然结束仍不证明回答正确。"
+    },
+    "c23": {
+      "requested_task": "两句话说明文具预算65元、单件2元时怎样避免超支。",
+      "low": {
+        "task_response": "部分回应预算管理，但第一项时间管理与采购超支关系不清，未说明数量或支出边界。",
+        "format_completion": "有两项短建议并自然结束；句子数量本身不足以判定任务完成。",
+        "repetition_or_echo": "没有明显长循环，内容较泛。",
+        "evidence_excerpt": "用时间安排表来管理时间，避免重复安排。",
+        "req_id": "budget-04-low",
+        "max_tokens": 64,
+        "output_tokens": 49,
+        "stop_type": "eos",
+        "content_sha256": "ac90c43fd5b36f1b56ace9ee5303d82873b0e1dc8aaac06be88de045f9973903",
+        "source_directory": "cases/q08-budget-04-low"
+      },
+      "high": {
+        "task_response": "仍是同样的时间管理和预算工具建议。",
+        "format_completion": "有两项短建议，未增加更具体的采购限制。",
+        "repetition_or_echo": "与低档只有预算管理表/预算管理工具的用词差别。",
+        "evidence_excerpt": "用预算管理工具来管理预算，避免超支。",
+        "req_id": "budget-04-high",
+        "max_tokens": 128,
+        "output_tokens": 49,
+        "stop_type": "eos",
+        "content_sha256": "4f00b27c9ac4d7f3fa8cd22a2ce423a799856b28e1126219efb82019cd1497bf",
+        "source_directory": "cases/q07-budget-04-high"
+      },
+      "paired_interpretation": "两档均49 token EOS，未见放宽上限带来有实质内容的改进；不因其是EOS对照就预判正确。"
+    },
+    "c04": {
+      "requested_task": "分六点分析社区活动人员、物资和现场协调，每点都有具体依据和行动。",
+      "low": {
+        "task_response": "以人员、物资标题复述报名人数和物资份数，未分析行动。",
+        "format_completion": "未完成六点，第二类复述中达到上限。",
+        "repetition_or_echo": "整组原记录在不同标题后重放。",
+        "evidence_excerpt": "人员：报名人数78，物资份数14。",
+        "req_id": "budget-05-low",
+        "max_tokens": 384,
+        "output_tokens": 384,
+        "stop_type": "limit",
+        "content_sha256": "eea9375baf19bff0a639a7c94ebd50bdd9ad880332d9ee762173cad684b8b0b2",
+        "source_directory": "cases/q09-budget-05-low"
+      },
+      "high": {
+        "task_response": "出现人员、物资份数、现场协调安排三个标题，但各标题仍抄同一组18条数值，没有具体行动。",
+        "format_completion": "不是六个有依据和行动的要点，虽自然结束仍未完成要求。",
+        "repetition_or_echo": "同一组原记录重复三遍。",
+        "evidence_excerpt": "现场协调安排：报名人数78，物资份数14。",
+        "req_id": "budget-05-high",
+        "max_tokens": 768,
+        "output_tokens": 581,
+        "stop_type": "eos",
+        "content_sha256": "398aa51af5f0254854b1e43533be8846843f438e8a60763851854fb1420f8116",
+        "source_directory": "cases/q10-budget-05-high"
+      },
+      "paired_interpretation": "高档581 token EOS，比低档多抄了记录；八字符重复超额比率0.428升至约0.692，没有观察到所要求分析完成。"
+    },
+    "c08": {
+      "requested_task": "根据19条训练/休息日志分六点分析节奏、休息和记录改进，每点给依据和行动。",
+      "low": {
+        "task_response": "生成题目未提供的连续记录/分钟区间，不是对19条日志的分析。",
+        "format_completion": "停留在训练节奏的长串列数，没有六点。",
+        "repetition_or_echo": "持续生成递增编号和分钟区间，文本并非逐字循环。",
+        "evidence_excerpt": "记录109-110分钟，记录111-112分钟，记录113-114分钟",
+        "req_id": "budget-06-low",
+        "max_tokens": 384,
+        "output_tokens": 384,
+        "stop_type": "limit",
+        "content_sha256": "db162fced1441ad3a6cf546f97f3daa4dda8aa54b259bf07fdc41dd001ca3a08",
+        "source_directory": "cases/q12-budget-06-low"
+      },
+      "high": {
+        "task_response": "继续扩展无依据的编号与分钟区间。",
+        "format_completion": "768 token仍在同一列数过程，无六点及对应行动。",
+        "repetition_or_echo": "低档之后继续列到记录189-190等附近，未转入有效分析。",
+        "evidence_excerpt": "记录185-186分钟，记录187-188分钟，记录189-190分钟",
+        "req_id": "budget-06-high",
+        "max_tokens": 768,
+        "output_tokens": 768,
+        "stop_type": "limit",
+        "content_sha256": "0f122ecbc31262907851a088f41fc9648e08ebf0cf62987402ea8592a8be1054",
+        "source_directory": "cases/q11-budget-06-high"
+      },
+      "paired_interpretation": "两档都limit，放宽预算主要延长列数。八字符重复超额比率仍低，说明此指标会漏掉带变化数字的无效延续。"
+    },
+    "c18": {
+      "requested_task": "根据23条温室记录分六点分析异常、补查依据和后续观察，每点有依据和行动；题目没有正常范围。",
+      "low": {
+        "task_response": "在分析异常、补查依据标题后照抄原数值，没有给出异常判断依据和观察行动。",
+        "format_completion": "第二段复述中达到上限，没有六点。",
+        "repetition_or_echo": "原23条记录开始再次出现。",
+        "evidence_excerpt": "补查依据：记录1：温度69，湿度6。",
+        "req_id": "budget-07-low",
+        "max_tokens": 384,
+        "output_tokens": 384,
+        "stop_type": "limit",
+        "content_sha256": "15d97011e2b2cf53b7afef994dd51c400b2a83ae3ed898ee3556d79275a2f442",
+        "source_directory": "cases/q13-budget-07-low"
+      },
+      "high": {
+        "task_response": "改成简短异常断言，但题目未给正常范围，无法据题验证前22条正常、23条异常。",
+        "format_completion": "仅两句概括和一句提示复述，没有六点及具体补查/观察安排。",
+        "repetition_or_echo": "不再长段抄数值，但出现无依据的正常/异常结论。",
+        "evidence_excerpt": "记录1-22的温度和湿度都处于正常范围，没有异常。",
+        "req_id": "budget-07-high",
+        "max_tokens": 768,
+        "output_tokens": 52,
+        "stop_type": "eos",
+        "content_sha256": "80d42100c0ee0ec1b44dedcfa812c9d4bf258003098d4113017530557de51c4b",
+        "source_directory": "cases/q14-budget-07-high"
+      },
+      "paired_interpretation": "高档仅52 token EOS，文本并非低档前缀延长。固定temperature0仍有缓存、数值执行和顺序影响；本轮未分离原因，不能把变化全归于上限，也不能把更短或较少重复等同质量变好。"
+    },
+    "c22": {
+      "requested_task": "根据17条存量/领用记录，分六点分析缺货风险、盘点顺序和补货安排，每点有依据和行动。",
+      "low": {
+        "task_response": "只在第一点尝试列库存排序，随后大量重复63，没有缺货风险和补货行动的完整分析。",
+        "format_completion": "停留在第一点，未完成六点。",
+        "repetition_or_echo": "反复生成63，列出的数量也不对应17条原记录。",
+        "evidence_excerpt": "63、63、63、63、63、63",
+        "req_id": "budget-08-low",
+        "max_tokens": 384,
+        "output_tokens": 384,
+        "stop_type": "limit",
+        "content_sha256": "9ac210782e93f1350d6e4e18651c812afff1b251815e1e77786d434eabd27f41",
+        "source_directory": "cases/q16-budget-08-low"
+      },
+      "high": {
+        "task_response": "继续同一63循环，未转入下一要点或实际行动。",
+        "format_completion": "768 token仍停留第一点。",
+        "repetition_or_echo": "重复循环更长，八字符重复超额比率约0.920。",
+        "evidence_excerpt": "63、63、63、63、63、63",
+        "req_id": "budget-08-high",
+        "max_tokens": 768,
+        "output_tokens": 768,
+        "stop_type": "limit",
+        "content_sha256": "17a067befb4b96c4febbc09dad6942601531056ca83eb4b0f0aebcf3399d6dc7",
+        "source_directory": "cases/q15-budget-08-high"
+      },
+      "paired_interpretation": "输出上限翻倍只是允许循环继续，未观察到任务完成改善。"
+    }
+  },
+  "interpretation": "Increasing the generation budget did not establish instruction-complete answers in these sentinels. EOS, fewer repeated ngrams and legal token counts are insufficient quality criteria.",
+  "raw_pending_status": "Raw pending fields describe the collection-time state and are preserved; this later review is a separate derived record."
+}

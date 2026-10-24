@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "checks": 18,
+  "scope": "Model-free quantile, rational weighting, selection/tie, bounds and classification checks; not real predictor or scheduler validation",
+  "analysis_script_sha256": "eb5076e5f65b95dfe8644c54a2e3d35e39cc8a57507f8a7898bb9f5e3ba15bc2"
+}

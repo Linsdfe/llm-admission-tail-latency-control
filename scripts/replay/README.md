@@ -82,6 +82,14 @@ wsl.exe -d Ubuntu-24.04 -e bash "<Windows 仓库>/scripts/replay/50_run_all.sh" 
 
 ## 原 E0/E1 与小轨迹工具
 
+### P1串行校准和预算探针（2026-10-24）
+
+`79b_run_p1_calibration_refinement.py`按[扩大校准协议](../../docs/p1/calibration-refinement-protocol-v1.md)执行120新校准、120新开发验证和2预热，只检查长度与分类，不跑100秒并发对照。`79c_run_p1_output_budget_probe.py`按[独立探针协议](../../docs/p1/output-budget-probe-protocol-v1.md)执行8对16次测量及2预热；原提示、输入token IDs与来源交叉核对，质量判断在派生核读中另记。
+
+两者均接受`--engine-bin`与全新`--out-dir`，先用`--model-free-check --out-dir <新目录>`检查生成规则。真实运行需要固定模型、已通过的原生客户端门禁、空闲端口和GPU，不同时执行。目录存在就拒绝覆盖。若前台会话可能中断，使用独立监督进程保留标准输出、错误和退出码；再次继续时先核进程与终态，不能只看陈旧running状态就认定仍在运行。
+
+完成后分别使用`92_analyze_p1_calibration_refinement.py`和`93_analyze_p1_output_budget_probe.py`，均传`--run-dir <完整原始批>`、`--out-dir <新派生目录>`。92只按校准选型，开发仅验证；93只自动复算客观文本指标，不自动判语义质量。失败和中断批不拼接拟合，最终测试入口仍禁用。结果与范围见[本轮白话报告](../../docs/reports/20261024/P1扩大校准与输出预算检查.md)。
+
 ### 第七、八步入口
 
 `open_loop.py` 提供标准库 asyncio HTTP/SSE 开放到达回放，支持请求总超时、显式取消、统一排空截止、未释放计数与六类互斥终态；通过异步连接独立发送，不使用阻塞线程来实现截止。
