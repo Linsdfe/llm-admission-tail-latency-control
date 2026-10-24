@@ -1,0 +1,417 @@
+--- a/tools/server/server-task.h
++++ b/tools/server/server-task.h
+@@ -144,6 +144,10 @@
+     int id_target = -1;
+     int id_slot   = -1;
+ 
++    bool schedule_background = false;
++    int64_t schedule_enqueued_ms = 0;
++    std::string schedule_client_req_id;
++
+     // used by parallel sampling (multiple completions from same prompt)
+     int id_parent  = -1;
+     // temporary store of child tasks for scheduling
+@@ -283,6 +287,9 @@
+         copy.type      = type;
+         copy.tokens    = tokens.clone();
+         copy.id_slot   = -1; // child tasks cannot specify slot
++        copy.schedule_background = schedule_background;
++        copy.schedule_enqueued_ms = schedule_enqueued_ms;
++        copy.schedule_client_req_id = schedule_client_req_id;
+ 
+         // use different sampling seed for each child
+         // note: https://github.com/ggml-org/llama.cpp/pull/18700#discussion_r2675115723
+--- a/tools/server/server-queue.h
++++ b/tools/server/server-queue.h
+@@ -9,6 +9,7 @@
+ #include <thread>
+ #include <vector>
+ #include <unordered_set>
++#include <unordered_map>
+ 
+ // struct for managing server tasks
+ // in most cases, use server_response_reader to post new tasks and retrieve results
+@@ -19,6 +20,15 @@
+     bool sleeping = false;
+     bool req_stop_sleeping = false;
+     int64_t time_last_task = 0;
++    bool simple_scheduler_enabled = false;
++    int64_t background_aging_ms = 5000;
++    int max_running_background = 0;
++    struct running_task {
++        int id;
++        std::string client_id;
++        bool background;
++    };
++    std::unordered_map<int, running_task> running_slots;
+ 
+     // queues
+     std::deque<server_task> queue_tasks;
+@@ -48,6 +58,23 @@
+ 
+ public:
+     ~server_queue() { worker_stop(); }
++
++    void configure_simple_scheduler(bool enabled, int64_t aging_ms = 5000, int background_cap = 0) {
++        GGML_ASSERT(!worker.thread.joinable());
++        GGML_ASSERT(aging_ms > 0);
++        simple_scheduler_enabled = enabled;
++        GGML_ASSERT(background_cap == 0 || background_cap == 1);
++        GGML_ASSERT(enabled || background_cap == 0);
++        background_aging_ms = aging_ms;
++        max_running_background = background_cap;
++    }
++
++    bool simple_scheduler_active() const { return simple_scheduler_enabled; }
++    int background_cap() const { return max_running_background; }
++
++    // Called only after successful slot setup and after its original reset path.
++    void notify_slot_launch(const server_task & task, int id_slot);
++    void notify_slot_release(int id_slot);
+ 
+     // Add a new task to the end of the queue
+     int post(server_task && task, bool front = false);
+@@ -137,7 +164,14 @@
+     }
+ 
+ private:
++    size_t running_background_count() const;
++    bool background_blocked(const server_task & task) const;
++    void defer_capped_tasks();
+     void cleanup_pending_task(int id_target);
++    void stamp_scheduled_task(server_task & task, int64_t now_ms);
++    int scheduling_priority(const server_task & task, int64_t now_ms) const;
++    std::deque<server_task>::iterator select_scheduled_task(std::deque<server_task> & tasks, int64_t now_ms, int id_slot = -1);
++    void log_scheduled_task(const server_task & task, int64_t now_ms, const char * source, const char * original_reason) const;
+ 
+     // process all pending tasks in the queue
+     // returns true if the queue is terminated, false if there is no more task to process
+--- a/tools/server/server-queue.cpp
++++ b/tools/server/server-queue.cpp
+@@ -25,6 +25,130 @@
+     return type != SERVER_TASK_TYPE_METRICS;
+ }
+ 
++size_t server_queue::running_background_count() const {
++    size_t count = 0;
++    for (const auto & entry : running_slots) {
++        count += entry.second.background;
++    }
++    return count;
++}
++
++bool server_queue::background_blocked(const server_task & task) const {
++    return max_running_background > 0 && task.need_sampling() && task.schedule_background &&
++           running_background_count() >= (size_t) max_running_background;
++}
++
++void server_queue::notify_slot_launch(const server_task & task, int id_slot) {
++    std::unique_lock<std::mutex> lock(mutex_tasks);
++    const size_t before = running_background_count();
++    const bool background = task.need_sampling() && task.schedule_background;
++    GGML_ASSERT(!background_blocked(task));
++    GGML_ASSERT(running_slots.find(id_slot) == running_slots.end());
++    running_slots.emplace(id_slot, running_task{task.id, task.schedule_client_req_id, background});
++    QUE_INF("SCHED_CAP_LAUNCH id=%d clientid=%s class=%s slot=%d running_background_before=%zu running_background_after=%zu cap=%d event_ms=%lld\n",
++            task.id, task.schedule_client_req_id.empty() ? "-" : task.schedule_client_req_id.c_str(),
++            background ? "background" : "interactive", id_slot, before, running_background_count(),
++            max_running_background, (long long) ggml_time_ms());
++}
++
++void server_queue::notify_slot_release(int id_slot) {
++    std::unique_lock<std::mutex> lock(mutex_tasks);
++    auto found = running_slots.find(id_slot);
++    if (found == running_slots.end()) {
++        return;
++    }
++    const size_t before = running_background_count();
++    const running_task task = found->second;
++    running_slots.erase(found);
++    QUE_INF("SCHED_CAP_RELEASE id=%d clientid=%s class=%s slot=%d running_background_before=%zu running_background_after=%zu cap=%d event_ms=%lld\n",
++            task.id, task.client_id.empty() ? "-" : task.client_id.c_str(),
++            task.background ? "background" : "interactive", id_slot, before, running_background_count(),
++            max_running_background, (long long) ggml_time_ms());
++    condition_tasks.notify_all();
++}
++
++void server_queue::defer_capped_tasks() {
++    // Caller holds mutex_tasks. Move each blocked task once; no retry spin.
++    for (auto it = queue_tasks.begin(); it != queue_tasks.end();) {
++        if (!background_blocked(*it)) {
++            ++it;
++            continue;
++        }
++        QUE_INF("SCHED_CAP_DEFER id=%d clientid=%s class=background running_background=%zu cap=%d event_ms=%lld\n",
++                it->id, it->schedule_client_req_id.empty() ? "-" : it->schedule_client_req_id.c_str(),
++                running_background_count(), max_running_background, (long long) ggml_time_ms());
++        queue_tasks_deferred.push_back(std::move(*it));
++        it = queue_tasks.erase(it);
++    }
++}
++
++void server_queue::stamp_scheduled_task(server_task & task, int64_t now_ms) {
++    if (!task.need_sampling()) {
++        return;
++    }
++    if (task.schedule_enqueued_ms == 0) {
++        task.schedule_enqueued_ms = now_ms;
++    }
++    for (auto & child : task.child_tasks) {
++        stamp_scheduled_task(child, task.schedule_enqueued_ms);
++    }
++    QUE_INF("SCHED_ENQUEUE id=%d clientid=%s class=%s enqueue_ms=%lld mode=%d pending=%zu deferred=%zu\n",
++            task.id, task.schedule_client_req_id.empty() ? "-" : task.schedule_client_req_id.c_str(),
++            task.schedule_background ? "background" : "interactive", (long long) task.schedule_enqueued_ms,
++            simple_scheduler_enabled, queue_tasks.size(), queue_tasks_deferred.size());
++}
++
++int server_queue::scheduling_priority(const server_task & task, int64_t now_ms) const {
++    if (!task.need_sampling()) {
++        return -1;
++    }
++    if (task.schedule_background) {
++        return now_ms - task.schedule_enqueued_ms >= background_aging_ms ? 0 : 2;
++    }
++    return 1;
++}
++
++std::deque<server_task>::iterator server_queue::select_scheduled_task(std::deque<server_task> & tasks, int64_t now_ms, int id_slot) {
++    auto selected = tasks.end();
++    for (auto it = tasks.begin(); it != tasks.end(); ++it) {
++        if (background_blocked(*it)) {
++            continue;
++        }
++        if (id_slot != -1 && it->id_slot != -1 && it->id_slot != id_slot) {
++            continue;
++        }
++        if (selected == tasks.end()) {
++            selected = it;
++            continue;
++        }
++        const int priority = scheduling_priority(*it, now_ms);
++        const int priority_selected = scheduling_priority(*selected, now_ms);
++        if (priority < priority_selected ||
++                (priority == priority_selected && priority >= 0 &&
++                 (it->schedule_enqueued_ms < selected->schedule_enqueued_ms ||
++                  (it->schedule_enqueued_ms == selected->schedule_enqueued_ms && it->id < selected->id)))) {
++            selected = it;
++        }
++    }
++    return selected;
++}
++
++void server_queue::log_scheduled_task(const server_task & task, int64_t now_ms, const char * source, const char * original_reason) const {
++    if (!task.need_sampling()) {
++        return;
++    }
++    const char * reason = original_reason;
++    if (simple_scheduler_enabled) {
++        reason = task.schedule_background
++            ? (scheduling_priority(task, now_ms) == 0 ? "background_aged" : "background_fifo")
++            : "interactive";
++    }
++    QUE_INF("SCHED_SELECT id=%d clientid=%s class=%s reason=%s wait_ms=%lld pending=%zu deferred=%zu source=%s\n",
++            task.id, task.schedule_client_req_id.empty() ? "-" : task.schedule_client_req_id.c_str(),
++            task.schedule_background ? "background" : "interactive", reason,
++            (long long) (now_ms - task.schedule_enqueued_ms), queue_tasks.size(), queue_tasks_deferred.size(), source);
++}
++
+ int server_queue::post(server_task && task, bool front) {
+     std::unique_lock<std::mutex> lock(mutex_tasks);
+     GGML_ASSERT(task.id != -1);
+@@ -32,6 +156,7 @@
+     if (task.type == SERVER_TASK_TYPE_CANCEL) {
+         cleanup_pending_task(task.id_target);
+     }
++    stamp_scheduled_task(task, ggml_time_ms());
+     const int  task_id     = task.id;
+     const bool reset_timer = task_resets_idle_timer(task.type);
+     QUE_DBG("new task, id = %d, front = %d\n", task_id, front);
+@@ -58,6 +183,7 @@
+         if (task.type == SERVER_TASK_TYPE_CANCEL) {
+             cleanup_pending_task(task.id_target);
+         }
++        stamp_scheduled_task(task, ggml_time_ms());
+         reset_timer |= task_resets_idle_timer(task.type);
+         QUE_DBG("new task, id = %d/%d, front = %d\n", task.id, (int) tasks.size(), front);
+         if (front) {
+@@ -89,12 +215,21 @@
+ 
+ void server_queue::pop_deferred_task(int id_slot) {
+     std::unique_lock<std::mutex> lock(mutex_tasks);
+-    if (!queue_tasks_deferred.empty()) {
++    if (simple_scheduler_enabled) {
++        const int64_t now_ms = ggml_time_ms();
++        auto selected = select_scheduled_task(queue_tasks_deferred, now_ms, id_slot);
++        if (selected != queue_tasks_deferred.end()) {
++            log_scheduled_task(*selected, now_ms, "deferred", "original_fifo");
++            queue_tasks.emplace_front(std::move(*selected));
++            queue_tasks_deferred.erase(selected);
++        }
++    } else if (!queue_tasks_deferred.empty()) {
+         // try to find a task that uses the specified slot
+         bool found = false;
+         for (auto it = queue_tasks_deferred.begin(); it != queue_tasks_deferred.end(); ++it) {
+             if (it->id_slot == id_slot) {
+                 QUE_DBG("pop deferred task (use slot %d), id_task = %d\n", id_slot, it->id);
++                log_scheduled_task(*it, ggml_time_ms(), "deferred", "original_slot");
+                 queue_tasks.emplace_front(std::move(*it));
+                 queue_tasks_deferred.erase(it);
+                 found = true;
+@@ -104,6 +239,7 @@
+         // if not tasks found using the slot, just pop the first deferred task (default behavior)
+         if (!found) {
+             QUE_DBG("pop deferred task, id_task = %d\n", queue_tasks_deferred.front().id);
++            log_scheduled_task(queue_tasks_deferred.front(), ggml_time_ms(), "deferred", "original_fifo");
+             queue_tasks.emplace_front(std::move(queue_tasks_deferred.front()));
+             queue_tasks_deferred.pop_front();
+         }
+@@ -142,11 +278,18 @@
+             QUE_DBG("%s", "terminate\n");
+             return true;
+         }
++        defer_capped_tasks();
+         if (queue_tasks.empty()) {
+             return false;
+         }
+-        server_task task = std::move(queue_tasks.front());
+-        queue_tasks.pop_front();
++        const int64_t now_ms = ggml_time_ms();
++        auto selected = simple_scheduler_enabled ? select_scheduled_task(queue_tasks, now_ms) : queue_tasks.begin();
++        log_scheduled_task(*selected, now_ms, "main", "original_fifo");
++        server_task task = std::move(*selected);
++        queue_tasks.erase(selected);
++        if (task.type == SERVER_TASK_TYPE_CANCEL) {
++            cleanup_pending_task(task.id_target);
++        }
+         lock.unlock();
+ 
+         QUE_DBG("processing task, id = %d\n", task.id);
+--- a/tools/server/server-context.cpp
++++ b/tools/server/server-context.cpp
+@@ -1442,6 +1442,7 @@
+             SLT_TRC(slot, "new slot, n_ctx = %d\n", slot.n_ctx);
+ 
+             slot.callback_on_release = [this](int id_slot) {
++                queue_tasks.notify_slot_release(id_slot);
+                 queue_tasks.pop_deferred_task(id_slot);
+             };
+ 
+@@ -1552,6 +1553,42 @@
+         GGML_ASSERT(model_tgt != nullptr);
+ 
+         GGML_ASSERT(!sleeping);
++
++        bool simple_scheduler_enabled = false;
++        int64_t background_aging_ms = 5000;
++        int max_running_background = 0;
++        try {
++            if (const char * value = getenv("LLAMA_SERVER_SIMPLE_SCHEDULER")) {
++                const std::string mode(value);
++                if (mode != "0" && mode != "1") {
++                    throw std::invalid_argument("LLAMA_SERVER_SIMPLE_SCHEDULER must be 0 or 1");
++                }
++                simple_scheduler_enabled = mode == "1";
++            }
++            if (const char * value = getenv("LLAMA_SERVER_MAX_RUNNING_BACKGROUND")) {
++                const std::string cap(value);
++                if (cap != "0" && cap != "1") {
++                    throw std::invalid_argument("LLAMA_SERVER_MAX_RUNNING_BACKGROUND must be 0 or 1");
++                }
++                max_running_background = cap == "1" ? 1 : 0;
++            }
++            if (max_running_background && !simple_scheduler_enabled) {
++                throw std::invalid_argument("background cap requires simple scheduler mode 1");
++            }
++            if (const char * value = getenv("LLAMA_SERVER_BACKGROUND_AGING_MS")) {
++                size_t parsed = 0;
++                background_aging_ms = std::stoll(value, &parsed);
++                if (parsed != std::string(value).size() || background_aging_ms < 1 || background_aging_ms > 3600000) {
++                    throw std::invalid_argument("LLAMA_SERVER_BACKGROUND_AGING_MS must be 1..3600000");
++                }
++            }
++        } catch (const std::exception & e) {
++            SRV_ERR("invalid simple scheduler settings: %s\n", e.what());
++            return false;
++        }
++        queue_tasks.configure_simple_scheduler(simple_scheduler_enabled, background_aging_ms, max_running_background);
++        SRV_INF("SCHED_CONFIG mode=%d background_aging_ms=%lld preemptive=0 max_running_background=%d\n",
++                simple_scheduler_enabled, (long long) background_aging_ms, max_running_background);
+ 
+         // wiring up server queues
+         queue_tasks.on_new_task([this](server_task && task, bool is_yielding) {
+@@ -1969,6 +2006,12 @@
+         // reset server kill-switch counter
+         n_empty_consecutive = 0;
+ 
++        queue_tasks.notify_slot_launch(*slot.task, slot.id);
++        const int64_t launch_ms = ggml_time_ms();
++        SLT_INF(slot, "SCHED_LAUNCH id=%d clientid=%s class=%s wait_ms=%lld enqueue_ms=%lld launch_ms=%lld mode=%d\n",
++                slot.task->id, slot.task->schedule_client_req_id.empty() ? "-" : slot.task->schedule_client_req_id.c_str(),
++                slot.task->schedule_background ? "background" : "interactive", (long long) (launch_ms - slot.task->schedule_enqueued_ms),
++                (long long) slot.task->schedule_enqueued_ms, (long long) launch_ms, queue_tasks.simple_scheduler_active());
+         SLT_INF(slot, "processing task, is_child = %d\n", slot.task->is_child());
+         return true;
+     }
+@@ -2859,6 +2902,12 @@
+                         // if requested slot is unavailable, we defer this task for processing later
+                         SRV_DBG("requested slot is unavailable, defer task, id_task = %d\n", id_task);
+                         queue_tasks.defer(std::move(task));
++                        break;
++                    }
++
++                    if (task.is_parent() && task.schedule_background && queue_tasks.background_cap() > 0) {
++                        send_error(task, "Capped background requests support n=1 only", ERROR_TYPE_INVALID_REQUEST);
++                        queue_tasks.pop_deferred_task(slot->id);
+                         break;
+                     }
+ 
+@@ -2877,6 +2926,9 @@
+                         }
+                     } else if (!launch_slot_with_task(*slot, std::move(task))) {
+                         SRV_ERR("failed to launch slot with task, id_task = %d\n", id_task);
++                        if (queue_tasks.background_cap() > 0) {
++                            queue_tasks.pop_deferred_task(slot->id);
++                        }
+                         break; // drop the task
+                     }
+ 
+@@ -2900,11 +2952,21 @@
+                 } break;
+             case SERVER_TASK_TYPE_CANCEL:
+                 {
++                    bool released_active = false;
+                     // release slot linked with the task id
+                     for (auto & slot : slots) {
+                         if (slot.task && slot.task->id == task.id_target) {
++                            released_active = slot.is_processing();
+                             slot.release();
+                             break;
++                        }
++                    }
++                    if (!released_active && queue_tasks.background_cap() > 0) {
++                        // A queued cancellation can remove a task just promoted by release.
++                        for (auto & slot : slots) {
++                            if (!slot.is_processing()) {
++                                queue_tasks.pop_deferred_task(slot.id);
++                            }
+                         }
+                     }
+                 } break;
+@@ -4942,6 +5004,16 @@
+ 
+             task.apply_chat_session(chat_session);
+ 
++            const std::string request_class = json_value(data, "request_class", std::string("interactive"));
++            if (request_class != "interactive" && request_class != "background") {
++                throw std::invalid_argument("request_class must be interactive or background");
++            }
++            task.schedule_background = request_class == "background";
++            task.schedule_client_req_id = json_value(data, "client_req_id", std::string());
++            if (task.schedule_client_req_id.size() > 96 ||
++                    task.schedule_client_req_id.find_first_not_of("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.:-") != std::string::npos) {
++                throw std::invalid_argument("client_req_id must contain at most 96 ASCII letters, digits, or _.:-");
++            }
+             task.id_slot = json_value(data, "id_slot", -1);
+             sse_ping_interval = task.params.sse_ping_interval;
+ 

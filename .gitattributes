@@ -30,3 +30,45 @@ docs/architecture/request.html -text whitespace=-blank-at-eol
 docs/images/current-architecture.svg -text whitespace=-blank-at-eol
 docs/images/system-architecture.svg -text whitespace=-blank-at-eol
 docs/images/request-lifecycle.svg -text whitespace=-blank-at-eol
+
+# Frozen experiment artifacts must keep the exact bytes named by SHA256 manifests.
+docs/experiments/20261023-100000-p0-simple-policy-v2/** -text whitespace=-blank-at-eol,-blank-at-eof
+docs/experiments/20261023-151822-p0-background-cap-v1/** -text whitespace=-blank-at-eol,-blank-at-eof
+docs/experiments/20261024-025138-p1-development-validation-v1/** -text whitespace=-blank-at-eol,-blank-at-eof
+configs/prestudy-simple-policy-v1.json -text whitespace=-blank-at-eol,-blank-at-eof
+configs/prestudy-simple-policy-v2.json -text whitespace=-blank-at-eol,-blank-at-eof
+configs/prestudy-background-cap-v1.json -text whitespace=-blank-at-eol,-blank-at-eof
+configs/p1-development-workload-v1.json -text whitespace=-blank-at-eol,-blank-at-eof
+configs/p1-development-validation-v1.json -text whitespace=-blank-at-eol,-blank-at-eof
+docs/prestudy-simple-policy-protocol-v1.md -text whitespace=-blank-at-eol,-blank-at-eof
+docs/prestudy-simple-policy-protocol-v2.md -text whitespace=-blank-at-eol,-blank-at-eof
+docs/prestudy-background-cap-protocol-v1.md -text whitespace=-blank-at-eol,-blank-at-eof
+docs/prestudy-g0-context-boundary-protocol-v1.md -text whitespace=-blank-at-eol,-blank-at-eof
+docs/p1/development-validation-protocol-v1.md -text whitespace=-blank-at-eol,-blank-at-eof
+patches/simple-priority-aging-v1.patch -text whitespace=-blank-at-eol,-blank-at-eof
+patches/simple-priority-aging-v1/** -text whitespace=-blank-at-eol,-blank-at-eof
+patches/background-cap-v1.patch -text whitespace=-blank-at-eol,-blank-at-eof
+patches/background-cap-v1/** -text whitespace=-blank-at-eol,-blank-at-eof
+
+# Preserve frozen collection/analysis sources exactly, including historical CRLF.
+scripts/replay/open_loop.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/70_run_prestudy.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/75_run_lowload.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/76_run_simple_policy.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/77_run_simple_policy_v2.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/78_run_background_cap.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/79_run_p1_development.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/simple_policy_replay*.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/p1_development_replay.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/p1_workload.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/analysis/lowload_evidence.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/analysis/86_analyze_simple_policy.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/analysis/87_analyze_simple_policy_v2.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/analysis/88_analyze_background_cap.py -text whitespace=-blank-at-eol,-blank-at-eof
+tests/integration/verify_simple_policy*.py -text whitespace=-blank-at-eol,-blank-at-eof
+tests/integration/verify_background_cap*.py -text whitespace=-blank-at-eol,-blank-at-eof
+tests/integration/verify_g0_context_boundary.py -text whitespace=-blank-at-eol,-blank-at-eof
+tests/integration/verify_p1_development_replay.py -text whitespace=-blank-at-eol,-blank-at-eof
+tests/unit/test_background_cap.cpp -text whitespace=-blank-at-eol,-blank-at-eof
+tests/unit/test_simple_scheduler.cpp -text whitespace=-blank-at-eol,-blank-at-eof
+tests/unit/test_p1_workload.py -text whitespace=-blank-at-eol,-blank-at-eof

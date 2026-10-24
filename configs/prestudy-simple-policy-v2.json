@@ -1,0 +1,289 @@
+{
+  "protocol_version": 2,
+  "purpose": "exploratory_simple_policy_probe_measurement_repair_v2_not_final_test",
+  "registered_at": "2026-10-23T09:54:01.000+08:00",
+  "authorization": "用户已授权简单调度实现、真实验证、记录与G0评审；本次修复被受控反例证实的测量问题并新协议整12轮复验，不含发布或推送。",
+  "pre_registration_statement": "本v2协议在看到v1部分不利结果及迟发失败后登记，主张仅为修复测量链；此时尚未启动v2主性能采集。原始v1事前协议与全部结果保留，不冒称未见过结果。",
+  "source_batch": "results/raw/prestudy/20261020-234210-p0-e0e1",
+  "protocol_path": "docs/prestudy-simple-policy-protocol-v2.md",
+  "engine_patch_path": "patches/simple-priority-aging-v1.patch",
+  "engine_source_files": [
+    "tools/server/server-task.h",
+    "tools/server/server-queue.h",
+    "tools/server/server-queue.cpp",
+    "tools/server/server-context.cpp"
+  ],
+  "engine_commit": "620d2225cc436ab0b001e3200e590e3b286ef9ab",
+  "model_sha256": "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e",
+  "source_files": [
+    "scripts/replay/77_run_simple_policy_v2.py",
+    "scripts/replay/simple_policy_replay_v2.py",
+    "tests/integration/verify_simple_policy_client_v2.py",
+    "tests/integration/verify_simple_policy_engine_v2.py",
+    "scripts/analysis/87_analyze_simple_policy_v2.py",
+    "scripts/replay/open_loop.py",
+    "scripts/replay/70_run_prestudy.py",
+    "scripts/replay/75_run_lowload.py",
+    "scripts/analysis/lowload_evidence.py",
+    "tests/unit/test_simple_scheduler.cpp",
+    "patches/simple-priority-aging-v1/run_unit_tests.sh",
+    "scripts/ops/build_simple_policy.sh",
+    "scripts/ops/launch_simple_policy_v2.sh",
+    "configs/prestudy-simple-policy-v2.json",
+    "docs/prestudy-simple-policy-protocol-v2.md",
+    "patches/simple-priority-aging-v1.patch",
+    "scripts/replay/simple_policy_replay.py",
+    "configs/prestudy-simple-policy-v1.json",
+    "docs/prestudy-simple-policy-protocol-v1.md"
+  ],
+  "seed": 20261022,
+  "seed_role": "批次标识；本轮不重新随机生成内容。原请求来自seed=20261020的冻结源轨迹。",
+  "repeats": 3,
+  "interactive_requests": 200,
+  "background_requests": 30,
+  "selected_background_indices": [
+    0,
+    3,
+    6,
+    10,
+    13,
+    16,
+    20,
+    23,
+    26,
+    30,
+    33,
+    36,
+    40,
+    43,
+    46,
+    50,
+    53,
+    56,
+    60,
+    63,
+    66,
+    70,
+    73,
+    76,
+    80,
+    83,
+    86,
+    90,
+    93,
+    96
+  ],
+  "trace_source": {
+    "interactive": "r1-E0/replay/trace.jsonl",
+    "background": "r1-E1/replay/trace.jsonl",
+    "invariant": "保留源req_id、prompt、max_tokens、temperature及类别；交互到达点保留，只修改所选后台到达时间。"
+  },
+  "scenarios": {
+    "steady": {
+      "background_start_ms": 250,
+      "background_interval_ms": 3333.3333333333335,
+      "formula_ms": "250 + k * 10000 / 3; k=0..29"
+    },
+    "burst": {
+      "bursts": 10,
+      "background_per_burst": 3,
+      "burst_interval_ms": 10000,
+      "background_start_ms": 250,
+      "intra_burst_interval_ms": 50,
+      "formula_ms": "10000 * g + 250 + 50 * j; g=0..9,j=0..2"
+    }
+  },
+  "execution_order": [
+    {
+      "repeat": 1,
+      "scenario": "steady",
+      "strategy": "original"
+    },
+    {
+      "repeat": 1,
+      "scenario": "steady",
+      "strategy": "simple"
+    },
+    {
+      "repeat": 1,
+      "scenario": "burst",
+      "strategy": "simple"
+    },
+    {
+      "repeat": 1,
+      "scenario": "burst",
+      "strategy": "original"
+    },
+    {
+      "repeat": 2,
+      "scenario": "burst",
+      "strategy": "original"
+    },
+    {
+      "repeat": 2,
+      "scenario": "burst",
+      "strategy": "simple"
+    },
+    {
+      "repeat": 2,
+      "scenario": "steady",
+      "strategy": "simple"
+    },
+    {
+      "repeat": 2,
+      "scenario": "steady",
+      "strategy": "original"
+    },
+    {
+      "repeat": 3,
+      "scenario": "steady",
+      "strategy": "original"
+    },
+    {
+      "repeat": 3,
+      "scenario": "steady",
+      "strategy": "simple"
+    },
+    {
+      "repeat": 3,
+      "scenario": "burst",
+      "strategy": "simple"
+    },
+    {
+      "repeat": 3,
+      "scenario": "burst",
+      "strategy": "original"
+    }
+  ],
+  "max_measurement_runs": 12,
+  "strategies": {
+    "original": {
+      "environment": {
+        "LLAMA_SERVER_SIMPLE_SCHEDULER": "0",
+        "LLAMA_SERVER_BACKGROUND_AGING_MS": "5000"
+      },
+      "meaning": "同一修改后binary关闭策略，走原始队列路径"
+    },
+    "simple": {
+      "environment": {
+        "LLAMA_SERVER_SIMPLE_SCHEDULER": "1",
+        "LLAMA_SERVER_BACKGROUND_AGING_MS": "5000"
+      },
+      "meaning": "已有空slot时：最老已老化后台、最老交互、最老后台；非抢占、不预留slot"
+    }
+  },
+  "request_class_field": "request_class",
+  "client_req_id_field": "client_req_id",
+  "background_aging_ms": 5000,
+  "aging_role": "冻结的探索工程设置，不作参数搜索，不是后台完成SLO或最大等待保证。",
+  "measurement_seconds": 100,
+  "drain_seconds": 180,
+  "request_timeout_seconds": 180,
+  "send_lag_limit_ms": 50,
+  "idle_seconds": 60,
+  "startup_warmup_timeout_seconds": 120,
+  "batch_start_limit_seconds": 7200,
+  "min_free_bytes": 4294967296,
+  "max_batch_bytes": 2147483648,
+  "service_args": [
+    "-ngl",
+    "99",
+    "-c",
+    "4096",
+    "-np",
+    "2",
+    "-b",
+    "2048",
+    "-ub",
+    "512",
+    "--metrics"
+  ],
+  "warmups_per_run": 2,
+  "cache_protocol": "每轮重启同一修改后binary；默认前缀缓存；原两条固定预热单列；记录prompt_n/cache_n、实际输出与finish_reason。",
+  "timing": "客户端同一time.monotonic：计划到达至首段非空生成内容为主；TCP连接后、HTTP写前至首内容为TTFT；建连计入迟发。服务内部等待仅用其自身时钟差。",
+  "primary_metric": "completed interactive total_first_ms P95; linear interpolation, paired per-run contrast",
+  "exploratory_lines": {
+    "interactive_absolute_improvement_ms": 100,
+    "interactive_relative_improvement_fraction": 0.15,
+    "max_full_run_output_rate_loss_fraction": 0.05,
+    "max_background_p95_completion_increase_fraction": 0.2,
+    "interpretation": "逐对报告的探索观察线，非正式SLO、统计显著性或G0自动通过线；不要求三对全部通过，不宣称等效或复杂算法无用。"
+  },
+  "terminal_states": [
+    "completed",
+    "rejected",
+    "timeout",
+    "cancelled",
+    "failed",
+    "unfinished"
+  ],
+  "exclusions": "Retain every v1/v2 run and unfavorable outcome. v2 uses same 50ms lag, capacity/version/terminal closure gates. Integrity failure pauses later runs; no result-based replacement, load adjustment, aged-threshold search or deletion.",
+  "limitations": "三对运行仅探索。原型不含完整硬KV账本、不抢占、不验证复杂在线校准；无收益仅限本条件与策略，不能证明复杂算法无用。",
+  "notes": "v2 changes measurement persistence only. Workload, original/simple engine paths, aging5000, environment, order, windows and exploratory lines equal v1. All12 new runs, 2760 planned requests and24 separate warmups; no pooling with incomplete v1.",
+  "measurement_revision": 2,
+  "predecessor_protocol_path": "docs/prestudy-simple-policy-protocol-v1.md",
+  "expected_client_schema_version": 4,
+  "expected_client_variant": "simple_policy_replay_v2",
+  "expected_persistence_mode": "one async queue / serial worker-thread writes",
+  "measurement_repair": {
+    "registered_at": "2026-10-23T09:54:01.000+08:00",
+    "change": "Per-request JSON/JSONL persistence moves from synchronous event-loop I/O to a single asynchronous queue and serial worker-thread writes; request timestamps/strategy/workload/thresholds unchanged.",
+    "evidence_path": "results/raw/maintenance/20261023-simple-policy-slowdisk-v1/results/summary.json",
+    "evidence_scope": "Controlled artificial slow synchronous persistence can delay sends; not causal attribution of real-model negative policy results.",
+    "controlled_requests": 40,
+    "controlled_rate_rps": 20,
+    "artificial_write_delay_ms": 80,
+    "v1_normal_max_lag_ms": 2.4486170000002083,
+    "v1_normal_late_count": 0,
+    "v1_slow_max_lag_ms": 819.8696810000006,
+    "v1_slow_late_count": 33,
+    "required_v2_gate": "40/40 terminal closure, v2 artificial slow writes lag<=50ms and no late sends; cutoff timestamps <400ms for all8 unfinished, persistence drain separately accounted.",
+    "persistence_rule": "Record terminal and timestamps before persistence; wait for all request records to flush and fail the run on writer error; persistence drain excluded from model-completion denominator but reported separately.",
+    "rerun_rule": "Start all 12 runs anew under v2, never replace only an unfavorable simple run or pool v1 and v2 as paired repetitions.",
+    "v2_gate_evidence_path": "results/raw/client-verification/20261023-simple-policy-client-v2-async-persistence/summary.json",
+    "v2_gate_observed": {
+      "status": "passed",
+      "delay_ms": 80,
+      "requests": 40,
+      "rate_rps": 20,
+      "v1": {
+        "send_lag_max_ms": 807.6292669999998,
+        "late_send_count": 33,
+        "completed": 40
+      },
+      "v2": {
+        "send_lag_max_ms": 2.5415389999998297,
+        "late_send_count": 0,
+        "completed": 40,
+        "persistence_drain_seconds": 1.449635905000001
+      },
+      "cutoff": {
+        "planned": 8,
+        "unfinished": 8,
+        "last_end_offset_ms": 201.5520959999968,
+        "request_tasks_finished_offset_ms": 202.0473779999996,
+        "persistence_drain_seconds": 0.6754692449999986
+      },
+      "scope": "Controlled sync persistence counterexample; does not explain actual model policy performance by itself"
+    }
+  },
+  "predecessor_batches": [
+    {
+      "path": "results/raw/prestudy/20261022-235950-p0-simple-policy-v1",
+      "status_note": "Incomplete previous session; preserve raw status and every partial/completed record. Completed original first-run P95=226.6044810499909ms, not a complete paired cohort."
+    },
+    {
+      "path": "results/raw/prestudy/20261023-094000-p0-simple-policy-v1",
+      "status_note": "Stopped after second run for fixed 50ms send-lag gate; both230 completed. Negative simple performance retained, not dismissed by gate failure.",
+      "original_total_first_p95_ms": 515.672478900006,
+      "simple_total_first_p95_ms": 6961.207582750002,
+      "original_lag_max_ms": 21.941441999984818,
+      "simple_lag_max_ms": 66.5523939999839,
+      "simple_late_count": 2,
+      "original_background_completion_p95_ms": 4136.496997033334,
+      "simple_background_completion_p95_ms": 10760.70083769999,
+      "original_full_run_output_tps": 152.89459750885214,
+      "simple_full_run_output_tps": 148.54344940486965
+    }
+  ]
+}

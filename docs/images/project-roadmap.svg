@@ -8,24 +8,24 @@
 <text x="40" y="80" font-size="30" fill="#ffffff" font-weight="700">从可行性验证到系统交付</text>
 <text x="40" y="115" font-size="17" fill="#c4d3df" font-weight="400">2026.10.19 — 2027.05.16  /  八个阶段 · 七个决策门</text>
 <text x="40" y="184" font-size="18" fill="#182d43" font-weight="600">01  可行性、设计与基线</text>
-<text x="788" y="184" font-size="16" fill="#53677c" font-weight="400">进度快照  2026.10.21</text>
+<text x="788" y="184" font-size="16" fill="#53677c" font-weight="400">进度快照  2026.10.24</text>
 <rect x="40" y="206" width="248" height="230" rx="16" fill="#ffffff" stroke="#80c4b8"/>
-<text x="60" y="243" font-size="24" fill="#087f78" font-weight="700">P0</text>
-<rect x="186" y="220" width="82" height="28" rx="14" fill="#dff3ed" stroke="none"/><text x="200" y="240" font-size="14" fill="#087f78" font-weight="600">进行中</text>
+<text x="60" y="243" font-size="24" fill="#182d43" font-weight="700">P0</text>
+<rect x="186" y="220" width="82" height="28" rx="14" fill="#dff3ed" stroke="none"/><text x="200" y="240" font-size="14" fill="#087f78" font-weight="600">已完成</text>
 <text x="60" y="286" font-size="23" fill="#182d43" font-weight="600">文献与可行性</text>
-<text x="60" y="317" font-size="17" fill="#53677c" font-weight="400">10.19 — 11.08</text>
-<text x="60" y="357" font-size="16" fill="#53677c" font-weight="400">低强度补充完成 / 待 G0</text>
+<text x="60" y="317" font-size="17" fill="#53677c" font-weight="400">10.19 — 10.24 实际</text>
+<text x="60" y="357" font-size="16" fill="#53677c" font-weight="400">42 轮审计 / 容量补测</text>
 <path d="M60 380h208" stroke="#e3e9ef"/>
-<text x="60" y="412" font-size="16" fill="#087f78" font-weight="600">G0  可行性核对</text>
+<text x="60" y="412" font-size="16" fill="#087f78" font-weight="600">G0  用户确认通过</text>
 <text x="290" y="323" font-size="22" fill="#8b9bab" font-weight="400">›</text>
-<rect x="304" y="206" width="248" height="230" rx="16" fill="#ffffff" stroke="#dce3eb"/>
-<text x="324" y="243" font-size="24" fill="#182d43" font-weight="700">P1</text>
-<rect x="450" y="220" width="82" height="28" rx="14" fill="#edf1f5" stroke="none"/><text x="464" y="240" font-size="14" fill="#53677c" font-weight="600">待开始</text>
+<rect x="304" y="206" width="248" height="230" rx="16" fill="#ffffff" stroke="#80c4b8"/>
+<text x="324" y="243" font-size="24" fill="#087f78" font-weight="700">P1</text>
+<rect x="450" y="220" width="82" height="28" rx="14" fill="#dff3ed" stroke="none"/><text x="464" y="240" font-size="14" fill="#087f78" font-weight="600">进行中</text>
 <text x="324" y="286" font-size="23" fill="#182d43" font-weight="600">需求与预注册</text>
-<text x="324" y="317" font-size="17" fill="#53677c" font-weight="400">11.09 — 11.29</text>
-<text x="324" y="357" font-size="16" fill="#53677c" font-weight="400">需求冻结 / 实验矩阵</text>
+<text x="324" y="317" font-size="17" fill="#53677c" font-weight="400">10.24 启动 / 11.29 计划</text>
+<text x="324" y="357" font-size="16" fill="#53677c" font-weight="400">9 轮开发 / 2010 条测量</text>
 <path d="M324 380h208" stroke="#e3e9ef"/>
-<text x="324" y="412" font-size="16" fill="#53677c" font-weight="600">G1  预注册冻结</text>
+<text x="324" y="412" font-size="16" fill="#087f78" font-weight="600">G1  待审查冻结</text>
 <text x="554" y="323" font-size="22" fill="#8b9bab" font-weight="400">›</text>
 <rect x="568" y="206" width="248" height="230" rx="16" fill="#ffffff" stroke="#dce3eb"/>
 <text x="588" y="243" font-size="24" fill="#182d43" font-weight="700">P2</text>
@@ -81,5 +81,5 @@
 <text x="852" y="698" font-size="16" fill="#53677c" font-weight="600">G6  交付核对</text>
 <text x="40" y="470" font-size="18" fill="#182d43" font-weight="600">02  策略实现、验证与交付</text>
 <rect x="40" y="746" width="1040" height="46" rx="12" fill="#e6eeF4" stroke="none"/>
-<text x="60" y="775" font-size="17" fill="#182d43" font-weight="400">当前：低强度补充六轮已完成；下一项为主场景范围与 G0 复审。P0 仍进行中。</text>
+<text x="60" y="775" font-size="17" fill="#182d43" font-weight="400">G0 已由用户确认通过；P1 完成 9 轮开发验证，正在完善校准与分界，G1 待审。</text>
 </g></svg>

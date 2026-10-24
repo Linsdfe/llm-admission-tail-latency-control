@@ -1,5 +1,18 @@
 # 流式请求回放与计时
 
+## 2026-10-24 P1开发验证入口
+
+本轮使用新原生`/completion`采集器和显式ChatML，旧冻结工具不改。新[执行前协议](../../docs/p1/development-validation-protocol-v1.md)与[九轮报告](../../docs/experiments/20261024-025138-p1-development-validation-v1/README.md)区分开发验证和正式M/B3对照。
+
+- `p1_workload.py`：只生成校准/开发提示，拒绝最终测试；实际`/tokenize`核长。
+- `p1_development_replay.py`：计划到达期限、传输兜底、结构化容量拒绝、原生最终计数、未知token及异步写盘。
+- `tests/integration/verify_p1_development_replay.py`：先在新目录执行无模型门禁，检查源码SHA后才能采集。
+- `79_run_p1_development.py --client-gate-dir <通过门禁的新目录> --engine-bin <固定引擎> --out-dir <全新目录>`：准备/校准后执行9轮单策略开发；保存源码快照、逐请求、GPU与真实释放。
+- `scripts/analysis/90_analyze_p1_development.py --run-dir <原始批次> --out-dir <全新分析目录>`：从逐请求重算，速率分母至少100秒。
+- `scripts/analysis/91_check_p1_prediction_headroom.py --run-dir <原始批次> --out-dir <全新诊断目录>`：临时校准空间和长短分界诊断，不模拟或证明调度收益。
+
+实际批次为`20261024-025138-p1-development-validation-v1`；2010测量、24校准、20预热全部完成，最终数据未触碰。下文保留旧日期工具及其历史口径。
+
 P0 首先实现最小流式客户端与自动化冒烟，再扩展 prestudy-E0/E1 的开放到达回放。按计划到达发送，分别记录计划、释放、实际发送、首个生成内容和客户端终态；每条请求具有唯一 ID 和明确类别。
 
 首内容排除心跳、元数据和空块。记录实际生成长度、结束原因、发送滞后、测量窗口与排空截止。有闸门时，尚未释放请求也跟踪到截止。2026-10-21 已将根目录旧《预实验方案》融合到本文、[复审设计](../../docs/p0-experiment-review-minimal-supplement-20261021.md)和版本化执行协议，避免继续维护重复规划。原文保存在 Git 历史及当日维护证据包。
@@ -10,6 +23,24 @@ P0 首先实现最小流式客户端与自动化冒烟，再扩展 prestudy-E0/E
 - 低强度补充：`75_run_lowload.py --gate-dir <本次通过的核对目录> --out-dir <新批次>`，配置 `configs/prestudy-lowload-v1.json`，协议见 [低强度执行协议 v1](../../docs/prestudy-lowload-protocol-v1.md)。
 - 低强度审计：`scripts/analysis/85_analyze_lowload.py --batch <完整批次> --output <新报告目录>`。
 - 原 E0/E1 复现入口仍为 `70_run_prestudy.py` 与 `80_analyze_prestudy.py`，按 [原冻结协议](../../docs/prestudy-protocol.md)使用；不修改旧配置适配新实验。
+
+## 简单 C++ 策略对照（2026-10-23 增补）
+
+- v2 客户端门禁：`tests/integration/verify_simple_policy_client_v2.py --out-dir <新目录>`，含人工慢盘、六终态、取消竞争和总等待核对。
+- v2 真实引擎门禁：`tests/integration/verify_simple_policy_engine_v2.py --out-dir <新目录> --engine-bin <独立修改后llama-server>`。
+- 批次入口：`77_run_simple_policy_v2.py --config configs/prestudy-simple-policy-v2.json --gate-dir <通过的v2客户端门禁> --engine-gate-dir <通过的真实门禁> --out-dir <新批次> --engine-bin <同一修改后llama-server>`。在 WSL 中从仓库根目录调用 `python3 scripts/replay/77_run_simple_policy_v2.py ...`，保持调用会话直到退出；本次后台 launcher 未持续运行的尝试另有[维护留痕](../../results/raw/maintenance/20261023-v2-launch-transition/README.md)，不能只凭 PID 宣告采集成功。
+- 只读分析：`scripts/analysis/87_analyze_simple_policy_v2.py --batch <完整12轮> --output <新输出目录>`；不覆盖历史报告。
+
+v2 仅将每请求 JSON/JSONL 写盘移出异步事件循环，终态与结束时间先记，最后等持久化排空；所有写入数必须闭合。完整性能协议见 [v2](../../docs/prestudy-simple-policy-protocol-v2.md)，数据见[本批分析](../../docs/experiments/20261023-100000-p0-simple-policy-v2/README.md)。v1 的 76/replay/86 与两批中断或暂停数据保留；负面结果不删，不与 v2 拼配对。原始引擎历史实验仍使用各自冻结源码与快照复核，不能把新客户端替换进去重写旧结果。
+
+## 后台并发上限对照（2026-10-23 下午增补）
+
+- 独立构建与 28 项模型无关断言：[background-cap-v1](../../patches/background-cap-v1/README.md)。使用独立引擎目录，保留原始与简单原型，不覆盖历史 binary。
+- 客户端门禁仍为 `tests/integration/verify_simple_policy_client_v2.py --out-dir <新目录>`；新真实引擎门禁为 `tests/integration/verify_background_cap_engine.py --out-dir <新目录> --engine-bin <新独立引擎>`，须与主批次绑定同一模型、源码和运行库指纹。
+- 批次入口：`python3 scripts/replay/78_run_background_cap.py --config configs/prestudy-background-cap-v1.json --gate-dir <本次通过的客户端门禁> --engine-gate-dir <本次通过的真实门禁> --out-dir <新批次> --engine-bin <同一新独立引擎>`。在 WSL 仓库根目录执行，保持调用会话到退出。
+- 只读分析：`python3 scripts/analysis/88_analyze_background_cap.py --batch <完整18轮> --output <新报告目录>`；不覆盖旧输出。
+
+本批用同一新 binary 比较 original/simple/capped，主对比是加后台上限相对 simple 的增量；两种到达形状各三个三策略块，18 轮 4140 条测量、36 条预热另计。全部重新采集，不混上午 12 轮；当前进展见[工作记录](../../docs/reports/20261023/后台并发上限验证与复杂度选择.md)，判定与停止规则见[冻结协议](../../docs/prestudy-background-cap-protocol-v1.md)。original 包含三策略共用的取消正确性修复，不冒称完全未改的官方引擎。该矩阵不含复杂算法。
 
 ### 通用字段与可选探针（由旧方案合并）
 

@@ -1,0 +1,19 @@
+{
+  "date": "20261024",
+  "archive": "results/archives/20261024/daily-20261024-094203-30d7b50a.zip",
+  "sha256": "1961308e7d3230bd6f88dd9c11144c5a17e04d9915a3dd2fa52d214659963cd5",
+  "file_count": 3618,
+  "run_dirs": [
+    "results/raw/maintenance/20261024-g0-review-delivery-v1",
+    "results/raw/maintenance/20261024-g0-review-delivery-v2",
+    "results/raw/maintenance/20261024-p1-stage-start-v1",
+    "results/raw/client-verification/20261024-p1-development-client-v1",
+    "results/raw/client-verification/20261024-p1-development-client-v2",
+    "results/raw/development/20261024-025138-p1-development-validation-v1",
+    "results/raw/maintenance/20261024-p1-development-independent-audit-v1",
+    "results/raw/maintenance/20261024-p1-development-closeout-v1"
+  ],
+  "verified": true,
+  "packed_at": "2026-10-24T09:42:03.672495+08:00",
+  "backup_scope": "local_only"
+}

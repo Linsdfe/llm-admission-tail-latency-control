@@ -1,0 +1,219 @@
+{
+  "protocol_version": 1,
+  "purpose": "exploratory_simple_policy_probe_not_final_test",
+  "registered_at": "2026-10-22T23:45:38.000+08:00",
+  "authorization": "用户于2026-10-22明确授权实现简单调度、进行小规模真实验证、记录数据并复审P0/G0；不含发布或推送授权。",
+  "pre_registration_statement": "本协议形成时尚未开始本12轮主性能采集；编译、受控正确性测试及真实引擎小轨迹不计主性能运行。",
+  "source_batch": "results/raw/prestudy/20261020-234210-p0-e0e1",
+  "protocol_path": "docs/prestudy-simple-policy-protocol-v1.md",
+  "engine_patch_path": "patches/simple-priority-aging-v1.patch",
+  "engine_source_files": [
+    "tools/server/server-task.h",
+    "tools/server/server-queue.h",
+    "tools/server/server-queue.cpp",
+    "tools/server/server-context.cpp"
+  ],
+  "engine_commit": "620d2225cc436ab0b001e3200e590e3b286ef9ab",
+  "model_sha256": "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e",
+  "source_files": [
+    "scripts/replay/76_run_simple_policy.py",
+    "scripts/replay/simple_policy_replay.py",
+    "tests/integration/verify_simple_policy_client.py",
+    "tests/integration/verify_simple_policy_engine.py",
+    "scripts/analysis/86_analyze_simple_policy.py",
+    "scripts/replay/open_loop.py",
+    "scripts/replay/70_run_prestudy.py",
+    "scripts/replay/75_run_lowload.py",
+    "scripts/analysis/lowload_evidence.py",
+    "tests/unit/test_simple_scheduler.cpp",
+    "patches/simple-priority-aging-v1/run_unit_tests.sh",
+    "scripts/ops/build_simple_policy.sh",
+    "configs/prestudy-simple-policy-v1.json",
+    "docs/prestudy-simple-policy-protocol-v1.md",
+    "patches/simple-priority-aging-v1.patch"
+  ],
+  "seed": 20261022,
+  "seed_role": "批次标识；本轮不重新随机生成内容。原请求来自seed=20261020的冻结源轨迹。",
+  "repeats": 3,
+  "interactive_requests": 200,
+  "background_requests": 30,
+  "selected_background_indices": [
+    0,
+    3,
+    6,
+    10,
+    13,
+    16,
+    20,
+    23,
+    26,
+    30,
+    33,
+    36,
+    40,
+    43,
+    46,
+    50,
+    53,
+    56,
+    60,
+    63,
+    66,
+    70,
+    73,
+    76,
+    80,
+    83,
+    86,
+    90,
+    93,
+    96
+  ],
+  "trace_source": {
+    "interactive": "r1-E0/replay/trace.jsonl",
+    "background": "r1-E1/replay/trace.jsonl",
+    "invariant": "保留源req_id、prompt、max_tokens、temperature及类别；交互到达点保留，只修改所选后台到达时间。"
+  },
+  "scenarios": {
+    "steady": {
+      "background_start_ms": 250,
+      "background_interval_ms": 3333.3333333333335,
+      "formula_ms": "250 + k * 10000 / 3; k=0..29"
+    },
+    "burst": {
+      "bursts": 10,
+      "background_per_burst": 3,
+      "burst_interval_ms": 10000,
+      "background_start_ms": 250,
+      "intra_burst_interval_ms": 50,
+      "formula_ms": "10000 * g + 250 + 50 * j; g=0..9,j=0..2"
+    }
+  },
+  "execution_order": [
+    {
+      "repeat": 1,
+      "scenario": "steady",
+      "strategy": "original"
+    },
+    {
+      "repeat": 1,
+      "scenario": "steady",
+      "strategy": "simple"
+    },
+    {
+      "repeat": 1,
+      "scenario": "burst",
+      "strategy": "simple"
+    },
+    {
+      "repeat": 1,
+      "scenario": "burst",
+      "strategy": "original"
+    },
+    {
+      "repeat": 2,
+      "scenario": "burst",
+      "strategy": "original"
+    },
+    {
+      "repeat": 2,
+      "scenario": "burst",
+      "strategy": "simple"
+    },
+    {
+      "repeat": 2,
+      "scenario": "steady",
+      "strategy": "simple"
+    },
+    {
+      "repeat": 2,
+      "scenario": "steady",
+      "strategy": "original"
+    },
+    {
+      "repeat": 3,
+      "scenario": "steady",
+      "strategy": "original"
+    },
+    {
+      "repeat": 3,
+      "scenario": "steady",
+      "strategy": "simple"
+    },
+    {
+      "repeat": 3,
+      "scenario": "burst",
+      "strategy": "simple"
+    },
+    {
+      "repeat": 3,
+      "scenario": "burst",
+      "strategy": "original"
+    }
+  ],
+  "max_measurement_runs": 12,
+  "strategies": {
+    "original": {
+      "environment": {
+        "LLAMA_SERVER_SIMPLE_SCHEDULER": "0",
+        "LLAMA_SERVER_BACKGROUND_AGING_MS": "5000"
+      },
+      "meaning": "同一修改后binary关闭策略，走原始队列路径"
+    },
+    "simple": {
+      "environment": {
+        "LLAMA_SERVER_SIMPLE_SCHEDULER": "1",
+        "LLAMA_SERVER_BACKGROUND_AGING_MS": "5000"
+      },
+      "meaning": "已有空slot时：最老已老化后台、最老交互、最老后台；非抢占、不预留slot"
+    }
+  },
+  "request_class_field": "request_class",
+  "client_req_id_field": "client_req_id",
+  "background_aging_ms": 5000,
+  "aging_role": "冻结的探索工程设置，不作参数搜索，不是后台完成SLO或最大等待保证。",
+  "measurement_seconds": 100,
+  "drain_seconds": 180,
+  "request_timeout_seconds": 180,
+  "send_lag_limit_ms": 50,
+  "idle_seconds": 60,
+  "startup_warmup_timeout_seconds": 120,
+  "batch_start_limit_seconds": 7200,
+  "min_free_bytes": 4294967296,
+  "max_batch_bytes": 2147483648,
+  "service_args": [
+    "-ngl",
+    "99",
+    "-c",
+    "4096",
+    "-np",
+    "2",
+    "-b",
+    "2048",
+    "-ub",
+    "512",
+    "--metrics"
+  ],
+  "warmups_per_run": 2,
+  "cache_protocol": "每轮重启同一修改后binary；默认前缀缓存；原两条固定预热单列；记录prompt_n/cache_n、实际输出与finish_reason。",
+  "timing": "客户端同一time.monotonic：计划到达至首段非空生成内容为主；TCP连接后、HTTP写前至首内容为TTFT；建连计入迟发。服务内部等待仅用其自身时钟差。",
+  "primary_metric": "completed interactive total_first_ms P95; linear interpolation, paired per-run contrast",
+  "exploratory_lines": {
+    "interactive_absolute_improvement_ms": 100,
+    "interactive_relative_improvement_fraction": 0.15,
+    "max_full_run_output_rate_loss_fraction": 0.05,
+    "max_background_p95_completion_increase_fraction": 0.2,
+    "interpretation": "逐对报告的探索观察线，非正式SLO、统计显著性或G0自动通过线；不要求三对全部通过，不宣称等效或复杂算法无用。"
+  },
+  "terminal_states": [
+    "completed",
+    "rejected",
+    "timeout",
+    "cancelled",
+    "failed",
+    "unfinished"
+  ],
+  "exclusions": "所有真实结果保留；容量、版本、终态闭合、日志、发送迟发完整性错误暂停后续运行并保留失败；修复后仅新run_id，不按延迟/收益重跑、改负载或删样。",
+  "limitations": "三对运行仅探索。原型不含完整硬KV账本、不抢占、不验证复杂在线校准；无收益仅限本条件与策略，不能证明复杂算法无用。",
+  "notes": "最多12轮主测量，2760条计划测量请求，24条预热另计。因性能不佳或真实非完成不删样；未发生老化晋升不能宣称主矩阵验证了防饥饿。"
+}

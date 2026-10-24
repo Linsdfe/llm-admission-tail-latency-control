@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="1490" viewBox="0 0 1240 1490">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#4b5563"/>
+    </marker>
+    <marker id="arrowBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#3b74b5"/>
+    </marker>
+  </defs>
+
+  <rect x="0" y="0" width="1240" height="1490" fill="#ffffff"/>
+
+  <text x="620" y="42" text-anchor="middle" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="22" font-weight="bold" fill="#111827">LLM 推理服务的请求流转（P0 固定配置：2 个 slot）</text>
+  <text x="620" y="68" text-anchor="middle" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="13.5" fill="#5b6472">以一次聊天请求为例；后台请求走的是同一条路，只是建 task 时类别字段不同</text>
+
+  <!-- 服务端区域 -->
+  <rect x="140" y="208" width="750" height="1027" rx="14" fill="#f7f8fa" stroke="#ccd2da" stroke-width="1.2" stroke-dasharray="6 4"/>
+  <text x="156" y="228" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12.5" fill="#6b7280">llama-server 进程内（P0 的 C++ 补丁只改这一层）</text>
+
+  <!-- ① 客户端 -->
+  <rect x="170" y="95" width="690" height="105" rx="10" fill="#e8f1fb" stroke="#3b74b5" stroke-width="1.5"/>
+  <text x="190" y="120" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="15" font-weight="bold" fill="#1e3a5f">① 回放客户端（Python，按计划时刻发请求）</text>
+  <text x="190" y="143" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">POST /v1/chat/completions，带 request_class（聊天 / 后台）、client_req_id、max_tokens</text>
+  <text x="190" y="162" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">同一个单调时钟记录：t_planned → t_send → t_first（首个非空内容）→ t_end</text>
+  <text x="190" y="181" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">六类终态：完成 / 拒绝 / 超时 / 取消 / 失败 / 未完成</text>
+
+  <line x1="515" y1="206" x2="515" y2="229" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="525" y="222" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#6b7280">HTTP 请求</text>
+
+  <!-- ② HTTP -->
+  <rect x="170" y="235" width="690" height="82" rx="10" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="190" y="259" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="15" font-weight="bold" fill="#1f2937">② HTTP 线程池（默认最多 15 个连接）</text>
+  <text x="190" y="282" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">路由 → 套 chat 模板 → tokenize → 建 server_task（引擎自增 id）+ 记首次入队时间</text>
+  <text x="190" y="302" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">P0 补丁新增：把 request_class / client_req_id 存进 task，供后面调度判断</text>
+
+  <line x1="515" y1="317" x2="515" y2="346" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="525" y="338" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#6b7280">post() 入队</text>
+
+  <!-- ③ 主队列 -->
+  <rect x="170" y="352" width="690" height="76" rx="10" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="190" y="376" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="15" font-weight="bold" fill="#1f2937">③ 主队列 queue_tasks（std::deque，无上限）</text>
+  <text x="190" y="400" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">这里没有“拒绝”这道门：过载时请求不会被拒，只会越排越长（拒绝/准入是后续阶段才实现的）</text>
+
+  <line x1="515" y1="428" x2="515" y2="457" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="525" y="449" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#6b7280">每轮选一个</text>
+
+  <!-- ④ 调度 -->
+  <rect x="170" y="463" width="690" height="170" rx="10" fill="#eef2f7" stroke="#4b5563" stroke-width="1.5"/>
+  <text x="190" y="487" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="15" font-weight="bold" fill="#1f2937">④ 调度选择：P0 的三个开关就插在这一步</text>
+  <rect x="190" y="497" width="650" height="30" rx="7" fill="#ffffff" stroke="#8a94a6" stroke-width="1.2"/>
+  <text x="202" y="517" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">原路径：取队头（保留原生 slot 亲和，不是严格 FIFO）</text>
+  <rect x="190" y="533" width="650" height="30" rx="7" fill="#ffffff" stroke="#8a94a6" stroke-width="1.2"/>
+  <text x="202" y="553" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">简单优先：已等满 5 秒的后台 &gt; 聊天 &gt; 未老化后台（不抢占、不预留位置）</text>
+  <rect x="190" y="569" width="650" height="30" rx="7" fill="#ffffff" stroke="#8a94a6" stroke-width="1.2"/>
+  <text x="202" y="589" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">再加后台上限：正在跑的后台 ≥ 1 → 候选先搬去 deferred 队列</text>
+  <text x="190" y="619" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#6b7280">开关：LLAMA_SERVER_SIMPLE_SCHEDULER ／ BACKGROUND_AGING_MS=5000 ／ MAX_RUNNING_BACKGROUND</text>
+
+  <line x1="515" y1="633" x2="515" y2="662" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="525" y="654" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#6b7280">launch_slot_with_task()</text>
+
+  <!-- ⑤ slots -->
+  <rect x="170" y="668" width="690" height="150" rx="10" fill="#ffffff" stroke="#2e7d4f" stroke-width="1.5"/>
+  <text x="190" y="692" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="15" font-weight="bold" fill="#1f2937">⑤ 分到空闲执行位置（slot）—— 一共就 2 个</text>
+  <rect x="210" y="706" width="290" height="64" rx="8" fill="#eef8f0" stroke="#2e7d4f" stroke-width="1.2"/>
+  <text x="355" y="730" text-anchor="middle" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="13.5" font-weight="bold" fill="#1f2937">slot 0</text>
+  <text x="355" y="752" text-anchor="middle" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#374151">2048 token 上下文 · seq_id 0</text>
+  <rect x="530" y="706" width="290" height="64" rx="8" fill="#eef8f0" stroke="#2e7d4f" stroke-width="1.2"/>
+  <text x="675" y="730" text-anchor="middle" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="13.5" font-weight="bold" fill="#1f2937">slot 1</text>
+  <text x="675" y="752" text-anchor="middle" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#374151">2048 token 上下文 · seq_id 1</text>
+  <text x="190" y="800" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">没有空 slot 或指定 slot 正忙 → defer 到 deferred 队列，等 slot 释放再唤醒（不抢占已运行任务）</text>
+
+  <!-- deferred -->
+  <rect x="910" y="610" width="290" height="110" rx="10" fill="#fdf6ec" stroke="#b45309" stroke-width="1.3" stroke-dasharray="5 3"/>
+  <text x="926" y="634" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="13.5" font-weight="bold" fill="#7c2d12">deferred 队列</text>
+  <text x="926" y="658" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">等 slot 释放时被 pop_deferred_task() 唤醒</text>
+  <text x="926" y="678" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">被后台上限挡回的请求也来这里，</text>
+  <text x="926" y="697" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">并且保留“首次入队时间”用于老化判断</text>
+  <line x1="860" y1="735" x2="906" y2="700" stroke="#b45309" stroke-width="1.6" stroke-dasharray="5 3" marker-end="url(#arrow)"/>
+  <text x="872" y="700" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11" fill="#b45309">没空位</text>
+
+  <line x1="515" y1="818" x2="515" y2="847" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="525" y="839" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#6b7280">slot 状态 → STARTED</text>
+
+  <!-- ⑥ batch -->
+  <rect x="170" y="853" width="690" height="80" rx="10" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="190" y="877" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="15" font-weight="bold" fill="#1f2937">⑥ update_slots() 组 batch</text>
+  <text x="190" y="900" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">prefill：把这条请求的输入 token 塞进 batch；decode：给正在生成的 slot 追加“下一个 token”</text>
+  <text x="190" y="920" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">两个 slot 的 token 可以进同一个 batch —— 这里就是“混合负载互相干扰”的物理位置</text>
+
+  <line x1="515" y1="933" x2="515" y2="962" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="525" y="954" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#6b7280">llama_decode / llama_process</text>
+
+  <!-- ⑦ GPU -->
+  <rect x="170" y="968" width="690" height="115" rx="10" fill="#e7f6ea" stroke="#2e7d4f" stroke-width="1.8"/>
+  <text x="190" y="993" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="15" font-weight="bold" fill="#14532d">⑦ GPU 计算（就一张：RTX 3050 Ti Laptop 4 GiB）</text>
+  <text x="190" y="1017" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">同一 batch 里两个 slot 的 token 一起算 → 采样出下一个 token</text>
+  <text x="190" y="1037" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">所谓“生成”就是一秒几十次这个循环；GPU 在进程外，这里画的是调用关系</text>
+  <text x="190" y="1059" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">产出的东西：下一个 token → 拼成回答文字，并产生 timings（prompt_n / predicted_n / cache_n）</text>
+
+  <!-- SSE 回传 -->
+  <path d="M 170 1025 L 120 1025 L 120 152 L 166 152" fill="none" stroke="#3b74b5" stroke-width="1.8" stroke-dasharray="6 4" marker-end="url(#arrowBlue)"/>
+  <text x="108" y="590" transform="rotate(-90 108 590)" text-anchor="middle" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="13" font-weight="bold" fill="#1e3a5f">⑧ SSE 流式回传：首个非空内容块才是“首字”</text>
+
+  <line x1="515" y1="1083" x2="515" y2="1112" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="525" y="1104" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#6b7280">完成 / 取消 / 超时</text>
+
+  <!-- ⑨ 释放 -->
+  <rect x="170" y="1118" width="690" height="95" rx="10" fill="#ffffff" stroke="#6b7280" stroke-width="1.5"/>
+  <text x="190" y="1142" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="15" font-weight="bold" fill="#1f2937">⑨ 收尾与唤醒</text>
+  <text x="190" y="1165" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">send_final_response → slot.release()：state = IDLE，KV 保留下来做前缀缓存（下条命中就省 prefill）</text>
+  <text x="190" y="1186" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">→ 回调 notify_slot_release() + pop_deferred_task()：把 deferred 里最该上的候选搬回主队列</text>
+
+  <line x1="515" y1="1213" x2="515" y2="1242" stroke="#4b5563" stroke-width="2" marker-end="url(#arrow)"/>
+  <text x="525" y="1234" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#6b7280">全程留痕</text>
+
+  <!-- ⑩ 证据 -->
+  <rect x="170" y="1248" width="690" height="120" rx="10" fill="#fff6e0" stroke="#b8860b" stroke-width="1.5"/>
+  <text x="190" y="1272" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="15" font-weight="bold" fill="#6b4e00">⑩ 留下的证据（每一层都能对上账）</text>
+  <text x="190" y="1295" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">客户端：逐请求 JSON（t_planned / t_send / t_first / t_end + 六类终态）</text>
+  <text x="190" y="1315" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">服务端：server.log 里的 SCHED_ENQUEUE / SELECT / LAUNCH / CAP_LAUNCH / CAP_RELEASE（引擎单调时钟）</text>
+  <text x="190" y="1335" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">分析：88_analyze_background_cap.py → summary.json / request-metrics.csv / 报告</text>
+
+  <!-- 右侧说明 1 -->
+  <rect x="910" y="95" width="290" height="300" rx="10" fill="#fffdf5" stroke="#d6c69a" stroke-width="1.3" stroke-dasharray="5 3"/>
+  <text x="926" y="120" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="14" font-weight="bold" fill="#4b3b00">为什么是 2 个 slot？</text>
+  <text x="926" y="146" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">不是硬件只能两个，</text>
+  <text x="926" y="165" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">是启动参数 -np 2 定的</text>
+  <text x="926" y="188" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">-c 4096 ÷ 2 = 每 slot 2048 token</text>
+  <text x="926" y="207" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">（kv_unified=false：各槽独立）</text>
+  <text x="926" y="230" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">4 GiB 显存要同时装模型 + KV + 余量</text>
+  <text x="926" y="253" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">1 个 slot 没有“位置被占”的冲突，</text>
+  <text x="926" y="272" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">3 个以上冲突被摊薄、尾巴变短，</text>
+  <text x="926" y="291" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">2 个是能观察到排队效应的最小配置</text>
+  <text x="926" y="314" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">四批实验都冻结在这个配置上</text>
+  <text x="926" y="337" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">slot 数是引擎级并行度，</text>
+  <text x="926" y="356" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">不是“显卡有几个核心”</text>
+  <text x="926" y="379" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">（两个 slot 共用同一张卡）</text>
+
+  <!-- 右侧说明 2 -->
+  <rect x="910" y="410" width="290" height="175" rx="10" fill="#fffdf5" stroke="#d6c69a" stroke-width="1.3" stroke-dasharray="5 3"/>
+  <text x="926" y="435" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="14" font-weight="bold" fill="#4b3b00">过载时长什么样</text>
+  <text x="926" y="461" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">HTTP 线程池 15 个连接、队列无上限</text>
+  <text x="926" y="483" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">→ 不报错，只会等</text>
+  <text x="926" y="505" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">所以 P0 看到的是：P95 变大、</text>
+  <text x="926" y="524" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">排空变长，而不是错误率上升</text>
+  <text x="926" y="550" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">“拒绝 / 准入”是后续阶段才实现的</text>
+  <text x="926" y="572" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">P0 只有“排队、排序、限并发”</text>
+
+  <!-- 右侧说明 3 -->
+  <rect x="910" y="740" width="290" height="340" rx="10" fill="#fffdf5" stroke="#d6c69a" stroke-width="1.3" stroke-dasharray="5 3"/>
+  <text x="926" y="765" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="14" font-weight="bold" fill="#4b3b00">三种办法各改了哪一步</text>
+  <text x="926" y="793" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">原路径：④ 不动，直接取队头</text>
+  <text x="926" y="817" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">简单优先：只改 ④ 的排序规则</text>
+  <text x="926" y="841" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">后台上限：在 ④ 前面加一道闸</text>
+  <text x="926" y="875" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">GPU、模型、KV 大小、slot 数</text>
+  <text x="926" y="894" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">全都没改 —— 这才谈得上公平对比</text>
+  <text x="926" y="925" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">⑥ 就是聊天被后台拖慢的地方：</text>
+  <text x="926" y="944" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">两个 slot 的 token 在同一个 batch</text>
+  <text x="926" y="963" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">里一起算，所以“空出一个 slot”</text>
+  <text x="926" y="982" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">只减少“排队等位置”，</text>
+  <text x="926" y="1001" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">减少不了“跑起来之后抢算力”</text>
+  <text x="926" y="1032" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">主指标：聊天 P95 =</text>
+  <text x="926" y="1051" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="11.5" fill="#1f2937">t_first − t_planned（后两批口径）</text>
+
+  <!-- 底部读图提示 -->
+  <rect x="60" y="1385" width="1120" height="95" rx="10" fill="#ffffff" stroke="#d7dce3" stroke-width="1.2"/>
+  <text x="80" y="1408" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="13" font-weight="bold" fill="#111827">读图提示</text>
+  <text x="80" y="1429" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">① 两个 slot 在同一张 GPU 上 → slot 多 ≠ 算力多；空出一个 slot 只减少“排队等位置”。</text>
+  <text x="80" y="1450" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">② P95 等待 = t_first − t_planned，包含 ②③④⑤ 所有段落，不只是 GPU 计算时间。</text>
+  <text x="80" y="1471" font-family="'Microsoft YaHei','PingFang SC','Noto Sans CJK SC',sans-serif" font-size="12" fill="#1f2937">③ 后台和聊天走同一条路，唯一区别是建 task 时带的 request_class 字段。</text>
+</svg>

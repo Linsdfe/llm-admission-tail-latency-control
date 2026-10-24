@@ -1,0 +1,418 @@
+{
+  "protocol_version": 1,
+  "purpose": "exploratory_background_concurrency_cap_probe_not_final_test",
+  "registered_at": "2026-10-23T14:40:43.209299+08:00",
+  "authorization": "用户在已知简单规则结果后明确要求继续验证：实现并比较后台最多同时1条；不含发布或推送。",
+  "pre_registration_statement": "已看过20261023-100000-p0-simple-policy-v2完整12轮结果。本协议在新cap候选主性能采集前登记，验证后续工程假设，不冒称未见过旧结果。",
+  "source_batch": "results/raw/prestudy/20261020-234210-p0-e0e1",
+  "protocol_path": "docs/prestudy-background-cap-protocol-v1.md",
+  "engine_patch_path": "patches/background-cap-v1.patch",
+  "engine_source_files": [
+    "tools/server/server-task.h",
+    "tools/server/server-queue.h",
+    "tools/server/server-queue.cpp",
+    "tools/server/server-context.cpp"
+  ],
+  "engine_commit": "620d2225cc436ab0b001e3200e590e3b286ef9ab",
+  "model_sha256": "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e",
+  "source_files": [
+    "scripts/replay/78_run_background_cap.py",
+    "scripts/replay/simple_policy_replay_v2.py",
+    "tests/integration/verify_simple_policy_client_v2.py",
+    "tests/integration/verify_background_cap_engine.py",
+    "scripts/analysis/88_analyze_background_cap.py",
+    "scripts/replay/open_loop.py",
+    "scripts/replay/70_run_prestudy.py",
+    "scripts/replay/75_run_lowload.py",
+    "scripts/analysis/lowload_evidence.py",
+    "tests/unit/test_background_cap.cpp",
+    "patches/background-cap-v1/run_unit_tests.sh",
+    "patches/background-cap-v1/build.sh",
+    "configs/prestudy-background-cap-v1.json",
+    "docs/prestudy-background-cap-protocol-v1.md",
+    "patches/background-cap-v1.patch",
+    "scripts/replay/simple_policy_replay.py",
+    "configs/prestudy-simple-policy-v2.json",
+    "docs/prestudy-simple-policy-protocol-v2.md",
+    "tests/integration/verify_background_cap_harness.py",
+    "tests/unit/test_simple_scheduler.cpp",
+    "patches/background-cap-v1/build_patch.py",
+    "patches/background-cap-v1/README.md",
+    "patches/background-cap-v1/tools/server/server-task.h",
+    "patches/background-cap-v1/tools/server/server-queue.h",
+    "patches/background-cap-v1/tools/server/server-queue.cpp",
+    "patches/background-cap-v1/tools/server/server-context.cpp",
+    "patches/simple-priority-aging-v1/tools/server/server-task.h",
+    "patches/simple-priority-aging-v1/tools/server/server-queue.h",
+    "patches/simple-priority-aging-v1/tools/server/server-queue.cpp",
+    "patches/simple-priority-aging-v1/tools/server/server-context.cpp"
+  ],
+  "seed": 20261023,
+  "seed_role": "批次标识；本轮不重新随机生成内容。原请求来自seed=20261020的冻结源轨迹。",
+  "repeats": 3,
+  "interactive_requests": 200,
+  "background_requests": 30,
+  "selected_background_indices": [
+    0,
+    3,
+    6,
+    10,
+    13,
+    16,
+    20,
+    23,
+    26,
+    30,
+    33,
+    36,
+    40,
+    43,
+    46,
+    50,
+    53,
+    56,
+    60,
+    63,
+    66,
+    70,
+    73,
+    76,
+    80,
+    83,
+    86,
+    90,
+    93,
+    96
+  ],
+  "trace_source": {
+    "interactive": "r1-E0/replay/trace.jsonl",
+    "background": "r1-E1/replay/trace.jsonl",
+    "invariant": "保留源req_id、prompt、max_tokens、temperature及类别；交互到达点保留，只修改所选后台到达时间。"
+  },
+  "scenarios": {
+    "steady": {
+      "background_start_ms": 250,
+      "background_interval_ms": 3333.3333333333335,
+      "formula_ms": "250 + k * 10000 / 3; k=0..29"
+    },
+    "burst": {
+      "bursts": 10,
+      "background_per_burst": 3,
+      "burst_interval_ms": 10000,
+      "background_start_ms": 250,
+      "intra_burst_interval_ms": 50,
+      "formula_ms": "10000 * g + 250 + 50 * j; g=0..9,j=0..2"
+    }
+  },
+  "execution_order": [
+    {
+      "repeat": 1,
+      "scenario": "steady",
+      "strategy": "original"
+    },
+    {
+      "repeat": 1,
+      "scenario": "steady",
+      "strategy": "simple"
+    },
+    {
+      "repeat": 1,
+      "scenario": "steady",
+      "strategy": "capped"
+    },
+    {
+      "repeat": 1,
+      "scenario": "burst",
+      "strategy": "capped"
+    },
+    {
+      "repeat": 1,
+      "scenario": "burst",
+      "strategy": "simple"
+    },
+    {
+      "repeat": 1,
+      "scenario": "burst",
+      "strategy": "original"
+    },
+    {
+      "repeat": 2,
+      "scenario": "burst",
+      "strategy": "simple"
+    },
+    {
+      "repeat": 2,
+      "scenario": "burst",
+      "strategy": "original"
+    },
+    {
+      "repeat": 2,
+      "scenario": "burst",
+      "strategy": "capped"
+    },
+    {
+      "repeat": 2,
+      "scenario": "steady",
+      "strategy": "simple"
+    },
+    {
+      "repeat": 2,
+      "scenario": "steady",
+      "strategy": "capped"
+    },
+    {
+      "repeat": 2,
+      "scenario": "steady",
+      "strategy": "original"
+    },
+    {
+      "repeat": 3,
+      "scenario": "steady",
+      "strategy": "capped"
+    },
+    {
+      "repeat": 3,
+      "scenario": "steady",
+      "strategy": "original"
+    },
+    {
+      "repeat": 3,
+      "scenario": "steady",
+      "strategy": "simple"
+    },
+    {
+      "repeat": 3,
+      "scenario": "burst",
+      "strategy": "original"
+    },
+    {
+      "repeat": 3,
+      "scenario": "burst",
+      "strategy": "capped"
+    },
+    {
+      "repeat": 3,
+      "scenario": "burst",
+      "strategy": "simple"
+    }
+  ],
+  "max_measurement_runs": 18,
+  "strategies": {
+    "original": {
+      "environment": {
+        "LLAMA_SERVER_SIMPLE_SCHEDULER": "0",
+        "LLAMA_SERVER_BACKGROUND_AGING_MS": "5000",
+        "LLAMA_SERVER_MAX_RUNNING_BACKGROUND": "0"
+      },
+      "meaning": "同一新binary关闭简单策略及后台cap，走原生选择路径但共用worker/cancel正确性修复；不是未经修改官方binary或旧批binary"
+    },
+    "simple": {
+      "environment": {
+        "LLAMA_SERVER_SIMPLE_SCHEDULER": "1",
+        "LLAMA_SERVER_BACKGROUND_AGING_MS": "5000",
+        "LLAMA_SERVER_MAX_RUNNING_BACKGROUND": "0"
+      },
+      "meaning": "同一新binary启用交互优先和5秒老化，cap关闭"
+    },
+    "capped": {
+      "environment": {
+        "LLAMA_SERVER_SIMPLE_SCHEDULER": "1",
+        "LLAMA_SERVER_BACKGROUND_AGING_MS": "5000",
+        "LLAMA_SERVER_MAX_RUNNING_BACKGROUND": "1"
+      },
+      "meaning": "simple规则加后台运行上限1；老化不可绕过上限；不抢占，另一slot不作强制专用预留"
+    }
+  },
+  "request_class_field": "request_class",
+  "client_req_id_field": "client_req_id",
+  "background_aging_ms": 5000,
+  "aging_role": "冻结的探索工程设置，不作参数搜索，不是后台完成SLO或最大等待保证。",
+  "measurement_seconds": 100,
+  "drain_seconds": 180,
+  "request_timeout_seconds": 180,
+  "send_lag_limit_ms": 50,
+  "idle_seconds": 60,
+  "startup_warmup_timeout_seconds": 120,
+  "batch_start_limit_seconds": 9000,
+  "min_free_bytes": 4294967296,
+  "max_batch_bytes": 2147483648,
+  "service_args": [
+    "-ngl",
+    "99",
+    "-c",
+    "4096",
+    "-np",
+    "2",
+    "-b",
+    "2048",
+    "-ub",
+    "512",
+    "--metrics"
+  ],
+  "warmups_per_run": 2,
+  "cache_protocol": "每轮重启同一修改后binary；默认前缀缓存；原两条固定预热单列；记录prompt_n/cache_n、实际输出与finish_reason。",
+  "timing": "客户端同一time.monotonic：计划到达至首段非空生成内容为主；TCP连接后、HTTP写前至首内容为TTFT；建连计入迟发。服务内部等待仅用其自身时钟差。",
+  "primary_metric": "completed interactive total_first_ms P95; linear interpolation, paired per-run contrast",
+  "exploratory_lines": {
+    "interactive_absolute_improvement_ms": 100,
+    "interactive_relative_improvement_fraction": 0.15,
+    "max_full_run_output_rate_loss_fraction": 0.05,
+    "max_background_p95_completion_increase_fraction": 0.2,
+    "interpretation": "全部相对original及simple逐块报告的探索线。交互P95<=1000ms为本次工程假设，并非用户业务SLO、显著性、等效或G0自动通过线；复杂算法增量收益和成本仍未测。",
+    "interactive_p95_engineering_target_ms": 1000
+  },
+  "terminal_states": [
+    "completed",
+    "rejected",
+    "timeout",
+    "cancelled",
+    "failed",
+    "unfinished"
+  ],
+  "exclusions": "Retain all historical and new runs, failures and unfavorable outcomes. Pause later runs on integrity/capacity/version/50ms send-lag failure; preserve the failed run and use a new run_id after a documented repair. No performance-based deletion/replacement, threshold/load/cap search, or extension beyond18 runs.",
+  "limitations": "三策略块仅3个独立重复/场景；同批请求共享队列而不独立。只测单设备单模型固定合成轨迹与默认缓存，不含完整硬KV账本、抢占或复杂算法。达工程假设不能证明复杂算法成本不值得。",
+  "notes": "Three strategies share the same newly patched binary. All18 runs collected anew as six contemporaneous three-strategy blocks; 4140 measurement requests and36 separate warmups. No pooling with the prior simple-policy cohort.",
+  "measurement_revision": 2,
+  "predecessor_protocol_path": "docs/prestudy-simple-policy-protocol-v2.md",
+  "expected_client_schema_version": 4,
+  "expected_client_variant": "simple_policy_replay_v2",
+  "expected_persistence_mode": "one async queue / serial worker-thread writes",
+  "measurement_repair": {
+    "registered_at": "2026-10-23T09:54:01+08:00",
+    "change": "Per-request JSON/JSONL persistence moves from synchronous event-loop I/O to a single asynchronous queue and serial worker-thread writes; request timestamps/strategy/workload/thresholds unchanged.",
+    "evidence_path": "results/raw/maintenance/20261023-simple-policy-slowdisk-v1/results/summary.json",
+    "evidence_scope": "Controlled artificial slow synchronous persistence can delay sends; not causal attribution of real-model negative policy results.",
+    "controlled_requests": 40,
+    "controlled_rate_rps": 20,
+    "artificial_write_delay_ms": 80,
+    "v1_normal_max_lag_ms": 2.4486170000002083,
+    "v1_normal_late_count": 0,
+    "v1_slow_max_lag_ms": 819.8696810000006,
+    "v1_slow_late_count": 33,
+    "required_v2_gate": "40/40 terminal closure, v2 artificial slow writes lag<=50ms and no late sends; cutoff timestamps <400ms for all8 unfinished, persistence drain separately accounted.",
+    "persistence_rule": "Record terminal and timestamps before persistence; wait for all request records to flush and fail the run on writer error; persistence drain excluded from model-completion denominator but reported separately.",
+    "rerun_rule": "Start all 12 runs anew under v2, never replace only an unfavorable simple run or pool v1 and v2 as paired repetitions.",
+    "v2_gate_evidence_path": "results/raw/client-verification/20261023-simple-policy-client-v2-async-persistence/summary.json",
+    "v2_gate_observed": {
+      "status": "passed",
+      "delay_ms": 80,
+      "requests": 40,
+      "rate_rps": 20,
+      "v1": {
+        "send_lag_max_ms": 807.6292669999998,
+        "late_send_count": 33,
+        "completed": 40
+      },
+      "v2": {
+        "send_lag_max_ms": 2.5415389999998297,
+        "late_send_count": 0,
+        "completed": 40,
+        "persistence_drain_seconds": 1.449635905000001
+      },
+      "cutoff": {
+        "planned": 8,
+        "unfinished": 8,
+        "last_end_offset_ms": 201.5520959999968,
+        "request_tasks_finished_offset_ms": 202.0473779999996,
+        "persistence_drain_seconds": 0.6754692449999986
+      },
+      "scope": "Controlled sync persistence counterexample; does not explain actual model policy performance by itself"
+    }
+  },
+  "predecessor_batches": [
+    {
+      "path": "results/raw/prestudy/20261023-100000-p0-simple-policy-v2",
+      "report": "docs/experiments/20261023-100000-p0-simple-policy-v2",
+      "status_note": "12轮2760条完成且审计通过；本批选择新候选前已知，保留不拼接。",
+      "steady_original_p95_range_ms": [
+        347.9504094998488,
+        456.5699260499403
+      ],
+      "steady_simple_p95_range_ms": [
+        321.22854689993153,
+        408.36914945016724
+      ],
+      "burst_original_p95_range_ms": [
+        3117.4174162500585,
+        3249.4159141999485
+      ],
+      "burst_simple_p95_range_ms": [
+        2867.306350549999,
+        3018.0814846999433
+      ]
+    }
+  ],
+  "study": "background-cap-v1",
+  "max_running_background": 1,
+  "cap_evidence_schema": {
+    "config": "SCHED_CONFIG existing mode/background_aging_ms/preemptive fields plus max_running_background",
+    "launch": "SCHED_CAP_LAUNCH id clientid class slot running_background_before running_background_after cap event_ms",
+    "release": "SCHED_CAP_RELEASE same fields; exactly once for each launched slot task after cleanup",
+    "defer": "SCHED_CAP_DEFER id clientid class running_background cap event_ms; diagnostic only",
+    "audit": "Reconstruct all slot lifecycles using server log order, including warmups; compare active-background counts before/after, cap<=1 in capped, unique measurement launch/release, final active set empty. Never substitute client end times for server slot release."
+  },
+  "primary_contrast": {
+    "reference": "simple",
+    "candidate": "capped",
+    "reason": "直接识别新增后台并发上限的增量收益和代价；original对比完整作为辅助。"
+  },
+  "interpretation_fields": {
+    "target_with_cost_supported": "Both runs complete all planned requests; candidate I P95<=1s; rate loss<=5%; B completion P95 increase<=20%. Does not establish useful improvement.",
+    "candidate_meets_all_exploratory_lines": "target_with_cost_supported AND I P95 improvement>=100ms AND>=15%; no statistical or general-worth claim.",
+    "adding_cap_meets_all_exploratory_lines": "Same strict flag only when candidate=capped; primary comparison is simple to capped."
+  },
+  "development_amendments": [
+    {
+      "recorded_at": "2026-10-23T15:05:40.653441+08:00",
+      "phase": "before any background-cap main performance collection",
+      "shared_backend_repair": {
+        "applies_to": [
+          "original",
+          "simple",
+          "capped"
+        ],
+        "problem": "A deterministic yielding-callback barrier reproduced a pre-existing worker/cancel window: a target selected before a cancellation could later be launched after CANCEL processing.",
+        "change": "After removing and erasing a CANCEL task from the selected queue entry, repeat pending-task cleanup while holding the queue mutex before invoking its callback.",
+        "evidence": "results/raw/maintenance/20261023-background-cap-yield-cancel-counterexample-v1/summary.json",
+        "interpretation": "All three strategies use the same newly repaired binary; original means native selection path with shared correctness fixes, not an untouched official binary or exact historical simple-v2 binary."
+      },
+      "cap_only_recovery_repairs": {
+        "applies_to": [
+          "capped"
+        ],
+        "changes": [
+          "If n>1 background is rejected or launch_slot_with_task fails before successful launch on a real idle slot, retry eligible deferred work without inventing release credit.",
+          "After unmatched active cancellation removes a promoted pending request, retry eligible deferred work on actual idle slots; preserve the normal release callback when an active slot was released."
+        ],
+        "evidence": [
+          "results/raw/development/20261023-1455-background-cap-recovery-review",
+          "results/raw/development/20261023-1459-background-cap-cancel-review",
+          "results/raw/maintenance/20261023-background-cap-cancel-promotion-counterexample-v2/summary.json"
+        ]
+      },
+      "preservation": "All prior build/unit versions, patches and counterexamples remain as separate evidence. Final unit and real-engine gate must pass on the same final source and runtime before finalized_at is recorded and before performance collection. No policy threshold, workload, comparison order, or interpretation line changed."
+    }
+  ],
+  "known_cancellation_boundary": {
+    "recorded_at": "2026-10-23T15:09:18.825105+08:00",
+    "cap1_scope": "Only capped mode retries eligible deferred work on real idle slots after unmatched-active CANCEL; this fix is not generalized to cap0.",
+    "cap0_inherited_limit": "A very narrow deferred-promotion-then-prelaunch-cancel path can leave other deferred work waiting when no active release or later wakeup occurs; original/simple keep this inherited boundary.",
+    "main_matrix_scope": "Legal text n=1 requests only; no fault/cancel injection in main18. Separate correctness probes do not establish universal liveness.",
+    "outcome_rule": "Retain any noncompleted outcome and review the boundary/service recovery; never infer overall improvement or engineering adequacy from completed-sample P95 alone.",
+    "frozen_engine_patch_sha256": "6a1bcacb671766b0dd70261fbb9ddc244bcd7e57cb8878e8832d910753a2133b",
+    "source_status": "v4 original9+new19 assertions pass; finalization is recorded by root only after real-engine gates."
+  },
+  "client_deadline_scope": "Local timeout closes the client connection; server cancellation is asynchronous and no server absolute deadline is propagated. Real probes record possible launch, actual release and recovery; deterministic queue-CANCEL barrier checks no relaunch after cancellation has reached the queue. Failed preflight fixture attempts remain separate; main workload and thresholds unchanged.",
+  "finalized_at": "2026-10-23T15:18:22.9102943+08:00",
+  "preflight_evidence": {
+    "unit": "results/raw/development/20261023-1508-background-cap-unit-v4",
+    "barrier": "results/raw/maintenance/20261023-background-cap-yield-cancel-regression-v4",
+    "client_gate": "results/raw/client-verification/20261023-1440-background-cap-client-v2",
+    "engine_gate": "results/raw/development/20261023-1515-background-cap-engine-v3",
+    "note": "Both failures were probe-fixture assumptions or timing, preserved; new engine v4 unchanged between real probes.",
+    "failed_engine_gates": [
+      "results/raw/development/20261023-1510-background-cap-engine-v1",
+      "results/raw/development/20261023-1512-background-cap-engine-v2"
+    ]
+  }
+}

@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="944" viewBox="0 0 1120 944" role="img" aria-labelledby="title desc">
-<title id="title">P0 进度与下一步</title><desc id="desc">进度快照 2026.10.21  /  低强度补充完成；下一项为主场景范围与 G0 复审</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1128" viewBox="0 0 1120 1128" role="img" aria-labelledby="title desc">
+<title id="title">P0 成果与阶段决定</title><desc id="desc">进度快照 2026.10.24  /  用户确认 G0 通过，P1 已启动，G1 待审</desc>
 <g font-family="Segoe UI, PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">
-<rect x="0" y="0" width="1120" height="944" rx="24" fill="#f5f7fa" stroke="none"/>
+<rect x="0" y="0" width="1120" height="1128" rx="24" fill="#f5f7fa" stroke="none"/>
 <rect x="0" y="0" width="1120" height="142" rx="24" fill="#182d43" stroke="none"/>
 <rect x="0" y="80" width="1120" height="62" rx="0" fill="#182d43" stroke="none"/>
 <text x="40" y="36" font-size="13" fill="#9cb6cc" font-weight="600">LLM ADMISSION / PROJECT ROADMAP</text>
-<text x="40" y="80" font-size="30" fill="#ffffff" font-weight="700">P0 进度与下一步</text>
-<text x="40" y="115" font-size="17" fill="#c4d3df" font-weight="400">进度快照 2026.10.21  /  低强度补充完成；下一项为主场景范围与 G0 复审</text>
+<text x="40" y="80" font-size="30" fill="#ffffff" font-weight="700">P0 成果与阶段决定</text>
+<text x="40" y="115" font-size="17" fill="#c4d3df" font-weight="400">进度快照 2026.10.24  /  用户确认 G0 通过，P1 已启动，G1 待审</text>
 <text x="40" y="182" font-size="18" fill="#087f78" font-weight="600">已完成  /  第一步 · 2026.10.19</text>
 <rect x="40" y="202" width="248" height="100" rx="16" fill="#e7f4ef" stroke="#c4dfd5"/>
 <text x="58" y="237" font-size="21" fill="#087f78" font-weight="600">01  环境冻结</text>
@@ -20,7 +20,7 @@
 <rect x="832" y="202" width="248" height="100" rx="16" fill="#e7f4ef" stroke="#c4dfd5"/>
 <text x="850" y="237" font-size="21" fill="#087f78" font-weight="600">04  源码定位</text>
 <text x="850" y="274" font-size="16" fill="#53677c" font-weight="400">7 条链路 / 15 个接入点</text>
-<text x="40" y="346" font-size="18" fill="#182d43" font-weight="600">原 E0/E1 与低强度补充已审计  /  两个批次分别保留</text>
+<text x="40" y="346" font-size="18" fill="#182d43" font-weight="600">四批 42 轮、9630 条测量已审计  /  84 预热另计，批次分别解释</text>
 <rect x="40" y="366" width="1040" height="78" rx="16" fill="#f0f8f5" stroke="#80c4b8"/>
 <rect x="56" y="381" width="48" height="48" rx="12" fill="#dff3ed" stroke="none"/>
 <text x="65" y="413" font-size="22" fill="#087f78" font-weight="700">05</text>
@@ -51,8 +51,20 @@
 <text x="124" y="767" font-size="21" fill="#182d43" font-weight="600">低强度 C / L 补充</text>
 <text x="124" y="794" font-size="17" fill="#53677c" font-weight="400">3 对 1230 条完成 / P95 增加 14.478–23.176 ms / 未达 100 ms 筛选幅度</text>
 <rect x="972" y="758" width="82" height="28" rx="14" fill="#dff3ed" stroke="none"/><text x="986" y="778" font-size="14" fill="#087f78" font-weight="600">已完成</text>
-<rect x="40" y="846" width="1040" height="60" rx="14" fill="#e9edf7" stroke="none"/>
-<text x="60" y="884" font-size="23" fill="#4c5885" font-weight="700">G0</text>
-<text x="126" y="870" font-size="17" fill="#182d43" font-weight="400">下一项：确定代表性主场景与 SLO 理由，补齐文献、预算并留存 G0 复审记录。</text>
-<text x="126" y="894" font-size="16" fill="#53677c" font-weight="400">低强度未达筛选幅度不证明无干扰；长度独立效应和自研策略收益仍未验证。</text>
+<rect x="40" y="826" width="1040" height="78" rx="16" fill="#f0f8f5" stroke="#80c4b8"/>
+<rect x="56" y="841" width="48" height="48" rx="12" fill="#dff3ed" stroke="none"/>
+<text x="65" y="873" font-size="22" fill="#087f78" font-weight="700">10</text>
+<text x="124" y="859" font-size="21" fill="#182d43" font-weight="600">C++ 简单规则与对照</text>
+<text x="124" y="886" font-size="17" fill="#53677c" font-weight="400">12 轮简单优先 + 18 轮后台上限，共 6900 条；收益和后台代价完整保留</text>
+<rect x="972" y="850" width="82" height="28" rx="14" fill="#dff3ed" stroke="none"/><text x="986" y="870" font-size="14" fill="#087f78" font-weight="600">已完成</text>
+<rect x="40" y="918" width="1040" height="78" rx="16" fill="#f0f8f5" stroke="#80c4b8"/>
+<rect x="56" y="933" width="48" height="48" rx="12" fill="#dff3ed" stroke="none"/>
+<text x="65" y="965" font-size="22" fill="#087f78" font-weight="700">11</text>
+<text x="124" y="951" font-size="21" fill="#182d43" font-weight="600">容量边界与恢复</text>
+<text x="124" y="978" font-size="17" fill="#53677c" font-weight="400">9 次正确性请求另列 / 超界明确报错 / 同服务恢复 / 启动与释放闭合</text>
+<rect x="972" y="942" width="82" height="28" rx="14" fill="#dff3ed" stroke="none"/><text x="986" y="962" font-size="14" fill="#087f78" font-weight="600">已通过</text>
+<rect x="40" y="1030" width="1040" height="70" rx="14" fill="#e9edf7" stroke="none"/>
+<text x="60" y="1070" font-size="23" fill="#4c5885" font-weight="700">G0</text>
+<text x="126" y="1058" font-size="17" fill="#182d43" font-weight="400">项目决定：用户 2026.10.24 确认通过，P1 需求与实验方案开始编制。</text>
+<text x="126" y="1084" font-size="16" fill="#53677c" font-weight="400">导师 / 学院正式意见另记；复杂方法的增量价值仍待后续公平对照。</text>
 </g></svg>

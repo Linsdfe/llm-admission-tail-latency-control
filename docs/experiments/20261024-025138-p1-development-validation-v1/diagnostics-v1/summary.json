@@ -1,0 +1,590 @@
+{
+  "status": "completed_development_diagnostic_only",
+  "created_at": "2026-10-24T09:33:45.458157+08:00",
+  "batch": "20261024-025138-p1-development-validation-v1",
+  "script_sha256": "f94fed089388429e83872e8c192f25c7353d1cd9b82e24cb73a94e41c53ac48a",
+  "calibration_requests": 24,
+  "scope": "Temporary predictor diagnostic only; no predictor freeze, no M/B3 decisions, scheduler simulation or performance comparison.",
+  "calibration_groups": [
+    {
+      "category": "background",
+      "bucket": 0,
+      "samples": 4,
+      "actual_outputs": [
+        100,
+        384,
+        339,
+        264
+      ],
+      "temporary_median_prediction": 301.5,
+      "max_output_tokens": 384,
+      "output_limit_hits": 1,
+      "initial_positive_margin_headroom": 82.5
+    },
+    {
+      "category": "background",
+      "bucket": 1,
+      "samples": 4,
+      "actual_outputs": [
+        384,
+        384,
+        384,
+        384
+      ],
+      "temporary_median_prediction": 384.0,
+      "max_output_tokens": 384,
+      "output_limit_hits": 4,
+      "initial_positive_margin_headroom": 0.0
+    },
+    {
+      "category": "background",
+      "bucket": 2,
+      "samples": 4,
+      "actual_outputs": [
+        243,
+        384,
+        204,
+        384
+      ],
+      "temporary_median_prediction": 313.5,
+      "max_output_tokens": 384,
+      "output_limit_hits": 2,
+      "initial_positive_margin_headroom": 70.5
+    },
+    {
+      "category": "interactive",
+      "bucket": 0,
+      "samples": 4,
+      "actual_outputs": [
+        12,
+        25,
+        11,
+        37
+      ],
+      "temporary_median_prediction": 18.5,
+      "max_output_tokens": 64,
+      "output_limit_hits": 0,
+      "initial_positive_margin_headroom": 45.5
+    },
+    {
+      "category": "interactive",
+      "bucket": 1,
+      "samples": 4,
+      "actual_outputs": [
+        23,
+        64,
+        51,
+        60
+      ],
+      "temporary_median_prediction": 55.5,
+      "max_output_tokens": 64,
+      "output_limit_hits": 1,
+      "initial_positive_margin_headroom": 8.5
+    },
+    {
+      "category": "interactive",
+      "bucket": 2,
+      "samples": 4,
+      "actual_outputs": [
+        64,
+        64,
+        64,
+        49
+      ],
+      "temporary_median_prediction": 64.0,
+      "max_output_tokens": 64,
+      "output_limit_hits": 3,
+      "initial_positive_margin_headroom": 0.0
+    }
+  ],
+  "runs": [
+    {
+      "run": "r1-boundary_sparse-prototype",
+      "repeat": 1,
+      "scenario": "boundary_sparse",
+      "classes": {
+        "interactive": {
+          "requests": 200,
+          "prediction_at_output_cap": 66,
+          "zero_headroom_fraction": 0.33,
+          "headroom": {
+            "n": 200,
+            "min": 0,
+            "median": 8.5,
+            "p95": 45.5,
+            "max": 45.5
+          },
+          "positive_residuals": {
+            "n": 200,
+            "min": 0,
+            "median": 0.0,
+            "p95": 10.5,
+            "max": 45.5
+          },
+          "qba_short_at_draft_threshold": 200,
+          "qba_long_at_draft_threshold": 0
+        },
+        "background": {
+          "requests": 10,
+          "prediction_at_output_cap": 3,
+          "zero_headroom_fraction": 0.3,
+          "headroom": {
+            "n": 10,
+            "min": 0,
+            "median": 70.5,
+            "p95": 82.5,
+            "max": 82.5
+          },
+          "positive_residuals": {
+            "n": 10,
+            "min": 0,
+            "median": 0.0,
+            "p95": 77.1,
+            "max": 82.5
+          },
+          "qba_short_at_draft_threshold": 10,
+          "qba_long_at_draft_threshold": 0
+        }
+      }
+    },
+    {
+      "run": "r1-boundary_steady-prototype",
+      "repeat": 1,
+      "scenario": "boundary_steady",
+      "classes": {
+        "interactive": {
+          "requests": 200,
+          "prediction_at_output_cap": 66,
+          "zero_headroom_fraction": 0.33,
+          "headroom": {
+            "n": 200,
+            "min": 0,
+            "median": 8.5,
+            "p95": 45.5,
+            "max": 45.5
+          },
+          "positive_residuals": {
+            "n": 200,
+            "min": 0,
+            "median": 0.0,
+            "p95": 10.5,
+            "max": 45.5
+          },
+          "qba_short_at_draft_threshold": 200,
+          "qba_long_at_draft_threshold": 0
+        },
+        "background": {
+          "requests": 30,
+          "prediction_at_output_cap": 10,
+          "zero_headroom_fraction": 0.3333333333333333,
+          "headroom": {
+            "n": 30,
+            "min": 0,
+            "median": 70.5,
+            "p95": 82.5,
+            "max": 82.5
+          },
+          "positive_residuals": {
+            "n": 30,
+            "min": 0,
+            "median": 0.0,
+            "p95": 82.5,
+            "max": 82.5
+          },
+          "qba_short_at_draft_threshold": 30,
+          "qba_long_at_draft_threshold": 0
+        }
+      }
+    },
+    {
+      "run": "r1-main_bursty_mixed-prototype",
+      "repeat": 1,
+      "scenario": "main_bursty_mixed",
+      "classes": {
+        "interactive": {
+          "requests": 200,
+          "prediction_at_output_cap": 66,
+          "zero_headroom_fraction": 0.33,
+          "headroom": {
+            "n": 200,
+            "min": 0,
+            "median": 8.5,
+            "p95": 45.5,
+            "max": 45.5
+          },
+          "positive_residuals": {
+            "n": 200,
+            "min": 0,
+            "median": 0.0,
+            "p95": 10.5,
+            "max": 45.5
+          },
+          "qba_short_at_draft_threshold": 200,
+          "qba_long_at_draft_threshold": 0
+        },
+        "background": {
+          "requests": 30,
+          "prediction_at_output_cap": 10,
+          "zero_headroom_fraction": 0.3333333333333333,
+          "headroom": {
+            "n": 30,
+            "min": 0,
+            "median": 70.5,
+            "p95": 82.5,
+            "max": 82.5
+          },
+          "positive_residuals": {
+            "n": 30,
+            "min": 0,
+            "median": 0.0,
+            "p95": 82.5,
+            "max": 82.5
+          },
+          "qba_short_at_draft_threshold": 30,
+          "qba_long_at_draft_threshold": 0
+        }
+      }
+    },
+    {
+      "run": "r2-boundary_sparse-prototype",
+      "repeat": 2,
+      "scenario": "boundary_sparse",
+      "classes": {
+        "interactive": {
+          "requests": 200,
+          "prediction_at_output_cap": 66,
+          "zero_headroom_fraction": 0.33,
+          "headroom": {
+            "n": 200,
+            "min": 0,
+            "median": 8.5,
+            "p95": 45.5,
+            "max": 45.5
+          },
+          "positive_residuals": {
+            "n": 200,
+            "min": 0,
+            "median": 0.0,
+            "p95": 10.5,
+            "max": 45.5
+          },
+          "qba_short_at_draft_threshold": 200,
+          "qba_long_at_draft_threshold": 0
+        },
+        "background": {
+          "requests": 10,
+          "prediction_at_output_cap": 3,
+          "zero_headroom_fraction": 0.3,
+          "headroom": {
+            "n": 10,
+            "min": 0,
+            "median": 70.5,
+            "p95": 82.5,
+            "max": 82.5
+          },
+          "positive_residuals": {
+            "n": 10,
+            "min": 0,
+            "median": 0.0,
+            "p95": 77.1,
+            "max": 82.5
+          },
+          "qba_short_at_draft_threshold": 10,
+          "qba_long_at_draft_threshold": 0
+        }
+      }
+    },
+    {
+      "run": "r2-boundary_steady-prototype",
+      "repeat": 2,
+      "scenario": "boundary_steady",
+      "classes": {
+        "interactive": {
+          "requests": 200,
+          "prediction_at_output_cap": 66,
+          "zero_headroom_fraction": 0.33,
+          "headroom": {
+            "n": 200,
+            "min": 0,
+            "median": 8.5,
+            "p95": 45.5,
+            "max": 45.5
+          },
+          "positive_residuals": {
+            "n": 200,
+            "min": 0,
+            "median": 0.0,
+            "p95": 10.5,
+            "max": 45.5
+          },
+          "qba_short_at_draft_threshold": 200,
+          "qba_long_at_draft_threshold": 0
+        },
+        "background": {
+          "requests": 30,
+          "prediction_at_output_cap": 10,
+          "zero_headroom_fraction": 0.3333333333333333,
+          "headroom": {
+            "n": 30,
+            "min": 0,
+            "median": 70.5,
+            "p95": 82.5,
+            "max": 82.5
+          },
+          "positive_residuals": {
+            "n": 30,
+            "min": 0,
+            "median": 0.0,
+            "p95": 82.5,
+            "max": 82.5
+          },
+          "qba_short_at_draft_threshold": 30,
+          "qba_long_at_draft_threshold": 0
+        }
+      }
+    },
+    {
+      "run": "r2-main_bursty_mixed-prototype",
+      "repeat": 2,
+      "scenario": "main_bursty_mixed",
+      "classes": {
+        "interactive": {
+          "requests": 200,
+          "prediction_at_output_cap": 66,
+          "zero_headroom_fraction": 0.33,
+          "headroom": {
+            "n": 200,
+            "min": 0,
+            "median": 8.5,
+            "p95": 45.5,
+            "max": 45.5
+          },
+          "positive_residuals": {
+            "n": 200,
+            "min": 0,
+            "median": 0.0,
+            "p95": 20.5,
+            "max": 45.5
+          },
+          "qba_short_at_draft_threshold": 200,
+          "qba_long_at_draft_threshold": 0
+        },
+        "background": {
+          "requests": 30,
+          "prediction_at_output_cap": 10,
+          "zero_headroom_fraction": 0.3333333333333333,
+          "headroom": {
+            "n": 30,
+            "min": 0,
+            "median": 70.5,
+            "p95": 82.5,
+            "max": 82.5
+          },
+          "positive_residuals": {
+            "n": 30,
+            "min": 0,
+            "median": 0.0,
+            "p95": 82.5,
+            "max": 82.5
+          },
+          "qba_short_at_draft_threshold": 30,
+          "qba_long_at_draft_threshold": 0
+        }
+      }
+    },
+    {
+      "run": "r3-boundary_sparse-prototype",
+      "repeat": 3,
+      "scenario": "boundary_sparse",
+      "classes": {
+        "interactive": {
+          "requests": 200,
+          "prediction_at_output_cap": 66,
+          "zero_headroom_fraction": 0.33,
+          "headroom": {
+            "n": 200,
+            "min": 0,
+            "median": 8.5,
+            "p95": 45.5,
+            "max": 45.5
+          },
+          "positive_residuals": {
+            "n": 200,
+            "min": 0,
+            "median": 0.0,
+            "p95": 10.5,
+            "max": 45.5
+          },
+          "qba_short_at_draft_threshold": 200,
+          "qba_long_at_draft_threshold": 0
+        },
+        "background": {
+          "requests": 10,
+          "prediction_at_output_cap": 3,
+          "zero_headroom_fraction": 0.3,
+          "headroom": {
+            "n": 10,
+            "min": 0,
+            "median": 70.5,
+            "p95": 82.5,
+            "max": 82.5
+          },
+          "positive_residuals": {
+            "n": 10,
+            "min": 0,
+            "median": 10.5,
+            "p95": 82.5,
+            "max": 82.5
+          },
+          "qba_short_at_draft_threshold": 10,
+          "qba_long_at_draft_threshold": 0
+        }
+      }
+    },
+    {
+      "run": "r3-boundary_steady-prototype",
+      "repeat": 3,
+      "scenario": "boundary_steady",
+      "classes": {
+        "interactive": {
+          "requests": 200,
+          "prediction_at_output_cap": 66,
+          "zero_headroom_fraction": 0.33,
+          "headroom": {
+            "n": 200,
+            "min": 0,
+            "median": 8.5,
+            "p95": 45.5,
+            "max": 45.5
+          },
+          "positive_residuals": {
+            "n": 200,
+            "min": 0,
+            "median": 0.0,
+            "p95": 10.5,
+            "max": 45.5
+          },
+          "qba_short_at_draft_threshold": 200,
+          "qba_long_at_draft_threshold": 0
+        },
+        "background": {
+          "requests": 30,
+          "prediction_at_output_cap": 10,
+          "zero_headroom_fraction": 0.3333333333333333,
+          "headroom": {
+            "n": 30,
+            "min": 0,
+            "median": 70.5,
+            "p95": 82.5,
+            "max": 82.5
+          },
+          "positive_residuals": {
+            "n": 30,
+            "min": 0,
+            "median": 0.0,
+            "p95": 82.5,
+            "max": 82.5
+          },
+          "qba_short_at_draft_threshold": 30,
+          "qba_long_at_draft_threshold": 0
+        }
+      }
+    },
+    {
+      "run": "r3-main_bursty_mixed-prototype",
+      "repeat": 3,
+      "scenario": "main_bursty_mixed",
+      "classes": {
+        "interactive": {
+          "requests": 200,
+          "prediction_at_output_cap": 66,
+          "zero_headroom_fraction": 0.33,
+          "headroom": {
+            "n": 200,
+            "min": 0,
+            "median": 8.5,
+            "p95": 45.5,
+            "max": 45.5
+          },
+          "positive_residuals": {
+            "n": 200,
+            "min": 0,
+            "median": 0.0,
+            "p95": 10.5,
+            "max": 45.5
+          },
+          "qba_short_at_draft_threshold": 200,
+          "qba_long_at_draft_threshold": 0
+        },
+        "background": {
+          "requests": 30,
+          "prediction_at_output_cap": 10,
+          "zero_headroom_fraction": 0.3333333333333333,
+          "headroom": {
+            "n": 30,
+            "min": 0,
+            "median": 70.5,
+            "p95": 82.5,
+            "max": 82.5
+          },
+          "positive_residuals": {
+            "n": 30,
+            "min": 0,
+            "median": 0.0,
+            "p95": 82.5,
+            "max": 82.5
+          },
+          "qba_short_at_draft_threshold": 30,
+          "qba_long_at_draft_threshold": 0
+        }
+      }
+    }
+  ],
+  "qba_draft_threshold": {
+    "definition": "type7 85th percentile of all 24 actual calibration output lengths",
+    "tau": 384.0,
+    "classification_rule": "prediction<=tau is short; prediction>tau is long",
+    "all_development_predictions_short": true,
+    "consequence": "The draft QBA classification degenerates; revise and document the development classification before G1, or transparently report equivalence. Do not label this an implemented strong NN result."
+  },
+  "input_sha256": {
+    "prep/calibration/c01/replay/client.jsonl": "632267e942a521c7dc6b28f61a8554cf91181a73a9ec4f2e4d31040677276510",
+    "prep/calibration/c02/replay/client.jsonl": "3dc226ec10f8634da11e5a7efdc09865cbd433670a7aad7418549e80d500bccd",
+    "prep/calibration/c03/replay/client.jsonl": "aadfad886ce33d8ac9469e7d9a928acd760824a70e57f6f31d4af9e1885665a2",
+    "prep/calibration/c04/replay/client.jsonl": "4d035ba5cf458f7373ab5adfe58b0cb3a08ac354d3070775e4298bf523d13661",
+    "prep/calibration/c05/replay/client.jsonl": "372db8aa87c97966ee5b8b7752a8a5b5e5e0e3b48968e2123a332bdc53af89e4",
+    "prep/calibration/c06/replay/client.jsonl": "c53efb2c0db8507569991326b8c64af5fd003f28f27e4f03b5526e89cfd027bc",
+    "prep/calibration/c07/replay/client.jsonl": "3fae4e11df223e24c5b92186e03a90c84090dd7ebba170c484035c55a66dc98d",
+    "prep/calibration/c08/replay/client.jsonl": "f11b4d9c25fd0970a07dd9992a29ee24a7c7c8506a71daa72fa9e01347113f7f",
+    "prep/calibration/c09/replay/client.jsonl": "982d234cc273193913c4501ccec7fdf4bce7fcfbe4672d097fea0c14bf2b5170",
+    "prep/calibration/c10/replay/client.jsonl": "f93a3569ec4e5d9c360e8e111738c1637789aca3e27d79829b8bb81a363d9293",
+    "prep/calibration/c11/replay/client.jsonl": "d7afdd90d77dfa47599764e1dee7ba7864864549d8ca4366b45c62dae56f5b7c",
+    "prep/calibration/c12/replay/client.jsonl": "30d277712ee7bd537f31f273d2293e8c3847d3ab3e02e2fc5e81e082ffa18b06",
+    "prep/calibration/c13/replay/client.jsonl": "bb026feb722457980e8696af3ed07aa31267d1493d2f129e739b47c201323e9a",
+    "prep/calibration/c14/replay/client.jsonl": "6a65bec8b2ab9d0642a534098f8c257a40a81fc78d9203cf56f30f323c14365a",
+    "prep/calibration/c15/replay/client.jsonl": "79ddd8d9c9c046ac4844f560492ae3fd32a5ecb0d388e3f6569e7577a5c47d14",
+    "prep/calibration/c16/replay/client.jsonl": "74933745d19bb6b0b64d1a789c429cd2b403654cf0efe063ba1159ed57f9783d",
+    "prep/calibration/c17/replay/client.jsonl": "0a2fa92f4a15773d22633b3ffcbf28a15ce30e5a4e2ff24ed71b450251d1a90f",
+    "prep/calibration/c18/replay/client.jsonl": "8cc32317f6e4719ae04a9359a537fdd90bf2dc3147c278364ea6b4bd6d925047",
+    "prep/calibration/c19/replay/client.jsonl": "a8567d1af5631483519fe5e1478b16d0369e5f18ab65070f2fe055df80164975",
+    "prep/calibration/c20/replay/client.jsonl": "62ab9c62a76c6253b9941c0a71754ac9abee47230112ad3f381fa831380de3e2",
+    "prep/calibration/c21/replay/client.jsonl": "ff03fea47e1ae416c52ad6d3e73cad8440dc1be6ce801cef42632eb97be972f3",
+    "prep/calibration/c22/replay/client.jsonl": "018aad3e95f8925b22ee35a8e3e35c5fe1b05d5dd3db1690efcaeb4bacb19be5",
+    "prep/calibration/c23/replay/client.jsonl": "a1c81a42a02625509aa3d2b57261383a62223f87892095dcb2c5254815f6b6fc",
+    "prep/calibration/c24/replay/client.jsonl": "e9f67b3cc4edc925ba3c3f880ca4adafe54fb111f7027e07be8e3ebfa0d5ba1f",
+    "r1-boundary_sparse-prototype/replay/client.jsonl": "98d6eaa92d71306da094cdd6d3075629fc464dc6ee46c8883c5014d2907acd6e",
+    "r1-boundary_steady-prototype/replay/client.jsonl": "adb415681286c7ccd3dd1168c75c491af6e1a7a42b7e978edbb51c36e277ae7e",
+    "r1-main_bursty_mixed-prototype/replay/client.jsonl": "d909a108f6edb92870f907aff1238a5a7dd471f6258e080ae2bb5ad3ef765f3b",
+    "r2-boundary_sparse-prototype/replay/client.jsonl": "702a8f3f579020b51f8b4509a715e016744bebece1e6eff72055ff77cc7ac03e",
+    "r2-boundary_steady-prototype/replay/client.jsonl": "29067467c5167b9f277679e6b612eca4a092e828f7b3f7bcfae689421e5496b3",
+    "r2-main_bursty_mixed-prototype/replay/client.jsonl": "d93fb4c2de110e5e31fe0f0f24ea9a5db84a89908b01da5e45b77ca0e0af5c76",
+    "r3-boundary_sparse-prototype/replay/client.jsonl": "b6873244eda137b33a620a43b8472285a998687b6e96ebf090dcb790767a0b8d",
+    "r3-boundary_steady-prototype/replay/client.jsonl": "19dc3bcf27f7acf9eb29192af716d08b7b2bb9d807ca3e90e006b31d4de267e4",
+    "r3-main_bursty_mixed-prototype/replay/client.jsonl": "fe2be77d2255fc8cbfb74a5bb82b17e7af92c1b97619641d13f4e287b4d35ea6"
+  },
+  "limits": [
+    "Four samples per calibration bucket do not establish a stable predictor.",
+    "Same developer input content is replayed across scenarios; these are not independent training examples.",
+    "Zero initial output-bound headroom in some buckets does not establish identical soft decisions or overall algorithm redundancy."
+  ]
+}

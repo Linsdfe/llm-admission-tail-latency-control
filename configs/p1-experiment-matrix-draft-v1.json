@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "document_id": "p1-experiment-matrix-draft-v1",
+  "created_date_local": "2026-10-24",
+  "timezone": "Asia/Shanghai",
+  "status": "draft_not_frozen_not_executed",
+  "stage": "P1",
+  "gate": {
+    "G0": "passed_by_user_on_2026-10-24",
+    "G1": "not_reviewed_not_frozen",
+    "final_performance_execution_authorized_by_this_file": false
+  },
+  "parameter_status": "All proposed values in this file are draft; G1 must review scope, precision, timing, cost and acceptance rules before freezing.",
+  "source_paths": [
+    "开发流程计划_面向混合长短请求的LLM推理准入与尾延迟控制系统.md",
+    "开题报告_面向混合长短请求的LLM推理准入与尾延迟控制系统.md",
+    "docs/original-topic-next-step-v1.md",
+    "docs/experiments/20261023-100000-p0-simple-policy-v2/README.md",
+    "docs/experiments/20261023-151822-p0-background-cap-v1/README.md"
+  ],
+  "research_comparisons": {
+    "primary": ["M", "B3"],
+    "overall_system": ["M", "B1"],
+    "main_unit": "independent paired run block; individual requests sharing one queue are not independent repetitions",
+    "primary_difference": "online positive-error margin versus development-frozen constant margin, with shared predictor, candidate order, aging, hard guard and execution settings"
+  },
+  "configurations": [
+    {"id": "B0", "meaning_zh": "原始引擎", "implementation_status": "formal_version_unfrozen"},
+    {"id": "B1", "meaning_zh": "公共硬守卫与原始顺序", "implementation_status": "hard_ledger_not_implemented"},
+    {"id": "B2-P", "meaning_zh": "交互优先的简单规则", "implementation_status": "P0_prototype_exists_formal_version_unfrozen"},
+    {"id": "B2-Q", "meaning_zh": "固定服务配额的简单规则", "implementation_status": "formal_definition_and_parameters_pending"},
+    {"id": "B3", "meaning_zh": "与M同预测器、候选顺序及老化，余量为开发集冻结常数", "implementation_status": "not_implemented"},
+    {"id": "B4", "meaning_zh": "使用共同预测器的长度排序", "implementation_status": "not_implemented"},
+    {"id": "M", "meaning_zh": "根据历史正向误差调整余量的软准入", "implementation_status": "not_implemented"},
+    {"id": "NN", "meaning_zh": "经来源与适配核对的最近邻规则", "implementation_status": "method_selection_and_adapter_pending"},
+    {"id": "M-no-calibration", "meaning_zh": "M的余量置零，其他设置保持一致", "implementation_status": "not_implemented"},
+    {"id": "M-no-aging", "meaning_zh": "M关闭老化，其他设置保持一致", "implementation_status": "not_implemented"},
+    {"id": "S_cap1", "role": "additional_strong_simple_control", "meaning_zh": "公共硬守卫、交互优先与同老化，加后台最多同时1条", "implementation_status": "P0_cap1_prototype_exists_formal_common_guard_version_pending"}
+  ],
+  "simple_rule_S": {
+    "status": "selection_rule_draft_candidate_not_selected",
+    "candidate_ids": ["B2-P", "B2-Q", "B4", "S_cap1"],
+    "selected_configuration_id": null,
+    "selected_parameters_sha256": null,
+    "selection_data_split": "development_only",
+    "rule_zh": "先检查聊天收益与后台、速率、终态代价的联合约束，再按冻结的排序和并列规则选S；不得根据最终测试挑选弱基线。候选包含B4，但B4使用预测器的成本需列明。"
+  },
+  "deduplication": {
+    "status": "no_equivalence_asserted_yet",
+    "original_core_configuration_count": 10,
+    "additional_strong_simple_control_count": 1,
+    "nominal_main_configuration_count": 11,
+    "equivalence_groups": [],
+    "required_evidence": "same effective decision rule, parameters, information, event semantics and executable path; retain alias-to-run mapping",
+    "zero_margin_note": "M-no-calibration is not automatically B3. Only if the final development-frozen B3 margin is zero and all remaining effective settings match can the two share runs.",
+    "nearest_neighbor_note": "If an adapted NN exactly equals an existing rule, retain both labels and adaptation limits but count the same physical run once.",
+    "budget_rule": "Budget uses all nominal labels; any verified equivalence reduces physical run count transparently rather than adding independent evidence."
+  },
+  "scenarios": [
+    {
+      "id": "main_bursty_mixed",
+      "role": "unique_primary",
+      "status": "draft_synthetic_engineering_setting",
+      "configuration_ids": ["B0", "B1", "B2-P", "B2-Q", "B3", "B4", "M", "NN", "M-no-calibration", "M-no-aging", "S_cap1"],
+      "core_configuration_count": 10,
+      "additional_control_ids": ["S_cap1"],
+      "additional_control_reason": "P0 showed large cap1 chat benefit and background/rate cost. Preserve this strong simple control even if development-selected S differs; do not rename cap1 as fixed service quota B2-Q.",
+      "interactive_requests_per_run": 200,
+      "background_requests_per_run": 30,
+      "arrival_draft": "interactive every 500ms; ten background bursts separated by 10s, three requests per burst separated by 50ms; initial background offset 250ms",
+      "input_generation_status": "final_inputs_not_generated",
+      "purpose_zh": "在预定突发混合场景比较在线余量相对固定余量的增量与代价，不按最终结果挑负载。"
+    },
+    {
+      "id": "boundary_steady",
+      "role": "secondary_boundary",
+      "status": "draft_optional",
+      "configuration_ids": ["B1", "B3", "S", "M", "NN"],
+      "interactive_requests_per_run": 200,
+      "background_requests_per_run": 30,
+      "arrival_draft": "same request counts and budgets as main; background every 10/3s from 250ms",
+      "input_generation_status": "final_inputs_not_generated",
+      "purpose_zh": "固定请求数和预设工作预算，检查突发形状改成平缓后是否仍值得增加复杂度。"
+    },
+    {
+      "id": "boundary_sparse",
+      "role": "secondary_boundary",
+      "status": "draft_optional",
+      "configuration_ids": ["B1", "B3", "S", "M", "NN"],
+      "interactive_requests_per_run": 200,
+      "background_requests_per_run": 10,
+      "arrival_draft": "interactive every 500ms; one background every 10s from 250ms",
+      "input_generation_status": "final_inputs_not_generated",
+      "purpose_zh": "后台较少时检验增量需求；请求数和总预算同时改变，不据此单独识别长度效应。"
+    }
+  ],
+  "repetitions_and_order": {
+    "status": "draft_requires_precision_review",
+    "initial_independent_blocks": 5,
+    "candidate_block_counts": [5, 10, 20],
+    "content_seed_by_block": [null, null, null, null, null],
+    "order_seed": null,
+    "execution_order": [],
+    "order_rule": "For each scenario and block, all methods replay the same pre-generated trace; rotate or randomize strategy order and balance early/late positions; freeze generated order and seeds before final testing.",
+    "recommended_final_block_candidates": [10, 20],
+    "precision_note": "Five blocks are an initial cost estimate, not proof of sufficient precision. Under the current draft of five continuous criteria each using a two-sided 99% exact sign interval, five paired blocks cannot give a finite distribution-free interval and are exploratory only. Choose 10 or 20 on development-only precision rules before final testing; do not stop final testing when significance appears. Ten or twenty blocks also do not guarantee adequate precision."
+  },
+  "scope_options": [
+    {"id": "main_only", "scenario_ids": ["main_bursty_mixed"], "nominal_runs_at_5_blocks": 55, "status": "draft_minimum_preserving_strong_main_controls"},
+    {"id": "main_plus_steady", "scenario_ids": ["main_bursty_mixed", "boundary_steady"], "nominal_runs_at_5_blocks": 80, "status": "draft_recommended_budget_start"},
+    {"id": "full_two_boundaries", "scenario_ids": ["main_bursty_mixed", "boundary_steady", "boundary_sparse"], "nominal_runs_at_5_blocks": 105, "status": "draft_maximum_base_matrix"}
+  ],
+  "original_plan_reference": {
+    "main_core_configurations": 10,
+    "boundary_configurations_each": 5,
+    "initial_blocks": 5,
+    "main_runs": 50,
+    "full_two_boundaries_runs": 100,
+    "additional_control_change": "This P1 draft adds S_cap1 as one auxiliary main control, making the actual draft 55 main or105 full runs at five blocks; original10 core controls remain."
+  },
+  "timing_budget": {
+    "status": "draft_not_a_measured_P1_runtime",
+    "clock": "time.monotonic for client-relative durations; server intervals use server clock only",
+    "startup_budget_seconds": 120,
+    "warmup_budget_seconds": 60,
+    "measurement_seconds": 100,
+    "drain_seconds": 180,
+    "global_request_cutoff_from_measurement_origin_seconds": 280,
+    "logical_request_deadline_from_planned_arrival_seconds": 180,
+    "http_transport_fallback_timeout_seconds": 360,
+    "http_transport_fallback_note": "Transport-only backstop measured from HTTP send start; this does not replace or extend the system request deadline measured from planned arrival.",
+    "request_termination_rule": "earliest applicable event wins: system planned_arrival+180s, transport send_start+360s fallback, or global measurement_origin+280s cutoff. System deadline expiry is timeout; the global cutoff is unfinished when it is the earlier applicable boundary.",
+    "idle_budget_seconds": 15,
+    "teardown_and_persistence_budget_seconds": 30,
+    "conservative_attempt_budget_seconds": 505,
+    "budget_exceed_rule": "Stop scheduling new runs, preserve current evidence and actual overhead; investigate cleanup/persistence failure before continuation. This budget is not a guarantee that external cleanup always finishes within30s.",
+    "reference_observed_minutes_per_run": [2.85, 2.94],
+    "reference_scope": "Two recent P0 batches, each 100s measurement with their own startup/warmup/drain/idle behavior; reference only, not extrapolation validated for new P1 workloads."
+  },
+  "extra_machine_costs": {
+    "status": "draft_assumptions",
+    "failure_rerun_reserve_fraction": 0.2,
+    "reserve_rounding_rule": "ceil(nominal_runs * reserve_fraction), original failed runs always retained",
+    "stability_minimum_hours": 2,
+    "unknown_cost_categories": ["correctness and lifecycle probes", "predictor fitting and calibration", "parameter development and simple-rule selection", "G2/G3 intervention prototype", "instrumentation overhead checks", "robustness/fault/shift probes", "source/build debugging and repairs", "independent reproduction and figure regeneration"],
+    "unknown_costs_are_zero": false
+  },
+  "disk_budget": {
+    "status": "draft_sampled_reference_only",
+    "sample_date_local": "2026-10-24",
+    "sample_scope": "Only the four named completed P0 run directories, recursively sized; no scan of all results.",
+    "sample_runs": [
+      {"path": "results/raw/prestudy/20261023-151822-p0-background-cap-v1/r1-burst-capped", "files": 254, "bytes": 2887953},
+      {"path": "results/raw/prestudy/20261023-151822-p0-background-cap-v1/r1-burst-simple", "files": 254, "bytes": 2899728},
+      {"path": "results/raw/prestudy/20261023-151822-p0-background-cap-v1/r1-steady-original", "files": 254, "bytes": 2855631},
+      {"path": "results/raw/prestudy/20261023-100000-p0-simple-policy-v2/r1-burst-simple", "files": 254, "bytes": 2826125}
+    ],
+    "planning_bytes_per_attempt": 10485760,
+    "planning_reason": "10MiB per attempt is a provisional allowance above sampled 2.695-2.765MiB for added decision logs; actual P1 log volume must be checked before final freeze.",
+    "minimum_free_bytes_before_batch": 10737418240,
+    "fixed_assets_excluded": ["model weights", "engine source and build directories", "shared runtime snapshots", "derived figures and aggregate reports", "backup copies"],
+    "overflow_rule": "pause new runs and revise budget; never delete or overwrite raw evidence to continue"
+  },
+  "human_effort": {
+    "status": "human_hours_deferred_by_user_nonblocking",
+    "user_instruction_zh": "工时方面，你不用纠结太多，你就正常跑，然后等把成果做出来完之后，补工时的说法。",
+    "human_hours_block_current_work_or_G1": false,
+    "initial_total_hours": 250,
+    "task_hours": 230,
+    "buffer_hours": 20,
+    "actual_hours_used": null,
+    "remaining_effective_hours": null,
+    "device_available_hours": null,
+    "P1_original_budget_hours": 25,
+    "P1_original_split_hours": {"requirements": 10, "experiment_design": 9, "metrics_and_review": 6},
+    "note": "Original allocation is a planning estimate. User explicitly deferred human-hour accounting until results exist; do not block current work or G1 on missing human hours. Record machine elapsed time from actual logs and later record real human effort if available; never substitute GPU runtime or invent retrospective effort."
+  },
+  "G1_freeze_checklist": [
+    "choose scope option without deleting strong main baselines",
+    "justify synthetic main setting and serviceable load",
+    "freeze metrics, joint cost limits and interval/sample-size rules",
+    "separate calibration/development/final data and freeze input hashes",
+    "freeze predictor, B3 constant, M update rule and nearest-neighbor adaptation",
+    "freeze S selection/tie rule on development data and later record locked choice before final test",
+    "verify any equivalence with explicit run mapping",
+    "assign and freeze seeds and balanced run order",
+    "validate planned-arrival+180s logical deadline, send-start+360s transport fallback, measurement-origin+280s global cutoff, and persistence cleanup implementation",
+    "verify practical device availability and disk capacity for each scheduled batch; keep machine-cost estimates and unknown extras explicit",
+    "record human-hour accounting as deferred_by_user and nonblocking; later entries must identify actual records versus estimates"
+  ],
+  "machine_check": {
+    "script": "scripts/analysis/89_check_p1_matrix.py",
+    "checks": ["JSON structure", "10 original core plus1 auxiliary control", "original50/100 reference and actual55/80/105 run arithmetic", "5/10/20-block budgets", "deadline versus cutoff consistency", "equivalence is not asserted", "source/sample links exist"],
+    "meaning": "Passing this model-free document check does not mean any P1 performance experiment ran or G1 passed."
+  }
+}
