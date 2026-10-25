@@ -97,3 +97,16 @@ tests/unit/test_p1_prompt_task_repair_runner.py -text whitespace=-blank-at-eol,-
 scripts/analysis/94_analyze_p1_prompt_task_repair.py -text whitespace=-blank-at-eol,-blank-at-eof
 tests/integration/audit_p1_prompt_task_repair_v2.py -text whitespace=-blank-at-eol,-blank-at-eof
 docs/experiments/20261024-2000-p1-prompt-task-repair-v2/** -text whitespace=-blank-at-eol,-blank-at-eof
+
+# Verifiable extraction/check/organization pilot v3: preserve precollection bytes.
+configs/p1-verifiable-workload-v3.json -text whitespace=-blank-at-eol,-blank-at-eof
+docs/p1/verifiable-task-pilot-protocol-v3.md -text whitespace=-blank-at-eol,-blank-at-eof
+docs/p1/verifiable-task-evaluation-rubric-v3.md -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/79e_run_p1_verifiable_tasks_v3.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/p1_verifiable_workload_v3.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/analysis/95_analyze_p1_verifiable_tasks_v3.py -text whitespace=-blank-at-eol,-blank-at-eof
+tests/unit/test_p1_verifiable_workload_v3.py -text whitespace=-blank-at-eol,-blank-at-eof
+tests/unit/test_p1_verifiable_tasks_runner_v3.py -text whitespace=-blank-at-eol,-blank-at-eof
+tests/unit/test_p1_verifiable_evaluation_v3.py -text whitespace=-blank-at-eol,-blank-at-eof
+tests/integration/audit_p1_verifiable_tasks_v3.py -text whitespace=-blank-at-eol,-blank-at-eof
+docs/experiments/20261025-1015-p1-verifiable-tasks-v3/** -text whitespace=-blank-at-eol,-blank-at-eof

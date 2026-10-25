@@ -1,0 +1,672 @@
+{
+  "schema_version": "p1-verifiable-assistant-review-v3.1",
+  "run_id": "20261025-1015-p1-verifiable-tasks-v3",
+  "reviewed_at": "2026-10-25T10:17:52.292253+08:00",
+  "timezone": "Asia/Shanghai",
+  "status": "completed_gate_not_met",
+  "reviewed_measured_outputs": 24,
+  "method": "助手知晓v3版本，完整读取全部24份原始提示及回答，再逐条核对源值、目标编号、顺序、覆盖和额外内容。此为助手非盲核读，不冒充学生或导师人工审核；未以EOS或技术通过代替答案正确。",
+  "primary_rule": "按采前量规，仅忽略良性空白；不删除表头、重复/非目标行、错误标签或不完整行。",
+  "business_correct": 9,
+  "business_incorrect": 15,
+  "by_task_kind": {
+    "extract": {
+      "reviewed": 8,
+      "business_correct": 6
+    },
+    "check": {
+      "reviewed": 8,
+      "business_correct": 0
+    },
+    "organize": {
+      "reviewed": 8,
+      "business_correct": 3
+    }
+  },
+  "interpretation_limits": [
+    "24条合成开发题，不能把9/24推作总体正确率。",
+    "机器分项field_value_errors包含缺失、结构或标签问题，不能把其15条都表述成15次明确数值比较错误。",
+    "i001、i010等任务原值正确而格式不符；b004、b008等才有可直接指出的实际值/比较结论错误。",
+    "自然输出可短，不据此增加目标数制造调度空间。当前24/24进入条件未满足，G1及M/B3调度收益仍未验证。"
+  ],
+  "evidence_sha256": {
+    "results/raw/development/20261025-1015-p1-verifiable-tasks-v3/evaluation-plan.jsonl": "bf6613ebfc685b3413ab95c775625cfe54a9da237bd045c3dd85b73964d616b3",
+    "results/raw/development/20261025-1015-p1-verifiable-tasks-v3/diagnostics.json": "6d1429a750004554e47c5f8d4a28d2672b785b4328a402222e33d04e4897ecdd",
+    "results/raw/development/20261025-1015-p1-verifiable-tasks-v3/summary.json": "2c1e0560a98b6181f4f7cd0c764c7dc0e5d852fb3ae10e4ebf5023a0887fc714",
+    "docs/p1/verifiable-task-evaluation-rubric-v3.md": "2c3e503646b7a46322438d03c47dc8f0621c449290d540327868bb81b966d8c6"
+  },
+  "records": [
+    {
+      "req_id": "v3-23001-i000",
+      "task_kind": "extract",
+      "category": "interactive",
+      "input_token_bucket": 0,
+      "input_tokens": 39,
+      "output_tokens": 6,
+      "business_correct": true,
+      "problem": "正确",
+      "specific_evidence": "题目只查R1，资料是10，回答R1|10；编号、值和行数均正确。",
+      "target_ids": [
+        "R1"
+      ],
+      "independently_checked_expected_lines": [
+        "R1|10"
+      ],
+      "actual_output": "R1|10",
+      "prompt_sha256": "b2ff02ad9989343870871429a013ecb01f6b9791e3d91582fc133825040a42df",
+      "output_sha256": "f5567d889774e907cae1a1ebe5237ee1195ff165b00762b6469a59e73f3a7a26",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-i001",
+      "task_kind": "extract",
+      "category": "interactive",
+      "input_token_bucket": 0,
+      "input_tokens": 39,
+      "output_tokens": 3,
+      "business_correct": false,
+      "problem": "值正确但缺编号",
+      "specific_evidence": "资料R1为17，回答只有17。值本身正确，但漏了R1和竖线，不能作为约定格式的一条结果。",
+      "target_ids": [
+        "R1"
+      ],
+      "independently_checked_expected_lines": [
+        "R1|17"
+      ],
+      "actual_output": "17",
+      "prompt_sha256": "476c5b03db3f9f6b2c270dce86c980a5791c382979f3ec4f4cebe7d0e4a6a436",
+      "output_sha256": "4523540f1504cd17100c4835e85b7eefd49911580f8efff0599a8f283be6b9e3",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-i002",
+      "task_kind": "extract",
+      "category": "interactive",
+      "input_token_bucket": 1,
+      "input_tokens": 81,
+      "output_tokens": 6,
+      "business_correct": true,
+      "problem": "正确",
+      "specific_evidence": "资料中R1为24；回答R1|24，未把另一个值也为24的R5混作目标。",
+      "target_ids": [
+        "R1"
+      ],
+      "independently_checked_expected_lines": [
+        "R1|24"
+      ],
+      "actual_output": "R1|24",
+      "prompt_sha256": "3d15231a95f180133df8abfbee9f3e3e9143f67ddd2e0e60fe1d114926239d46",
+      "output_sha256": "64c58bf550e2029d45433f2870628dc530e1dc447cafc80b67e4d65c7eed5552",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-i003",
+      "task_kind": "extract",
+      "category": "interactive",
+      "input_token_bucket": 2,
+      "input_tokens": 150,
+      "output_tokens": 6,
+      "business_correct": true,
+      "problem": "正确",
+      "specific_evidence": "18条资料中R1为31；只返回R1|31，符合目标与格式。",
+      "target_ids": [
+        "R1"
+      ],
+      "independently_checked_expected_lines": [
+        "R1|31"
+      ],
+      "actual_output": "R1|31",
+      "prompt_sha256": "1a60fb0fc07f0491a3c6ec2223cb75261372e443ede91b897d41a61042c55c42",
+      "output_sha256": "f095880ad259200a294c6c364c16dc1de591832491f08ea97ba185e05fd6d11f",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-i004",
+      "task_kind": "check",
+      "category": "interactive",
+      "input_token_bucket": 1,
+      "input_tokens": 81,
+      "output_tokens": 18,
+      "business_correct": false,
+      "problem": "复制资料代替核对",
+      "specific_evidence": "R1在A中为38、B中为39，应答R1|不一致。实际复制A中的R1|38、R3|35、R2|90，没有给核对结论，并增加两个非目标编号。",
+      "target_ids": [
+        "R1"
+      ],
+      "independently_checked_expected_lines": [
+        "R1|不一致"
+      ],
+      "actual_output": "R1|38\nR3|35\nR2|90",
+      "prompt_sha256": "1e0210d3c1d212da92689de2867efa2ce28b9510a45a738fbc24b5230ee23107",
+      "output_sha256": "42418d7f2cc5fb89b5a952006ff17b18fe74b71c27b497f7c430a5fdb707f8bf",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-i005",
+      "task_kind": "check",
+      "category": "interactive",
+      "input_token_bucket": 1,
+      "input_tokens": 81,
+      "output_tokens": 14,
+      "business_correct": false,
+      "problem": "标签不合约定且重复",
+      "specific_evidence": "R1在A、B均为45，事实对应一致。实际两次返回R1|同写一致；同写一致不是约定标签，且同一目标重复一行。不能把这条记成数值比较明确错误。",
+      "target_ids": [
+        "R1"
+      ],
+      "independently_checked_expected_lines": [
+        "R1|一致"
+      ],
+      "actual_output": "R1|同写一致\nR1|同写一致",
+      "prompt_sha256": "15d36aa467149038d4cde384da9b164ed260e838828015a5985bcc4441a90649",
+      "output_sha256": "36fe04f9b861b655c856c1fad5d64dd48be3c90ce791692ab3283addb57e55db",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-i006",
+      "task_kind": "check",
+      "category": "interactive",
+      "input_token_bucket": 2,
+      "input_tokens": 153,
+      "output_tokens": 21,
+      "business_correct": false,
+      "problem": "核对输出不可直接使用",
+      "specific_evidence": "R1在A中52、B中53，应只答R1|不一致。实际为R1|52|同写一致和R1|53|异写不一致，两行都含三个字段，未按目标提供一条合法结论。",
+      "target_ids": [
+        "R1"
+      ],
+      "independently_checked_expected_lines": [
+        "R1|不一致"
+      ],
+      "actual_output": "R1|52|同写一致\nR1|53|异写不一致",
+      "prompt_sha256": "468877d7369956377e86723678813a4c0fcbeb125a04e603f748c9848a9a8a08",
+      "output_sha256": "17fb5481fb3e037d0b57c83c7f8d5f1e44a8bce1ef89b90caea5d6ece317634f",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-i007",
+      "task_kind": "check",
+      "category": "interactive",
+      "input_token_bucket": 0,
+      "input_tokens": 57,
+      "output_tokens": 11,
+      "business_correct": false,
+      "problem": "表头与标签不合约定",
+      "specific_evidence": "R1在A、B均为59。回答增加ID|结论表头，并写R1|同写一致。它表达了相同，但应只输出R1|一致。",
+      "target_ids": [
+        "R1"
+      ],
+      "independently_checked_expected_lines": [
+        "R1|一致"
+      ],
+      "actual_output": "ID|结论\nR1|同写一致",
+      "prompt_sha256": "c348706fd5219f49046a0cd2add0a7c0b1e05cf9c1664a8feb7c710f972df7c9",
+      "output_sha256": "eb085728dcc4ad82e56f426c5e195b9006cadb78bd9e2a66410a580d195f6812",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-i008",
+      "task_kind": "organize",
+      "category": "interactive",
+      "input_token_bucket": 2,
+      "input_tokens": 147,
+      "output_tokens": 64,
+      "business_correct": false,
+      "problem": "正确目标后继续输出非目标",
+      "specific_evidence": "目标要求R2|71、R1|66，开头两行均正确；随后输出R12、R15等非目标，末行R9|不完整。不能只截取前两行判成功。",
+      "target_ids": [
+        "R2",
+        "R1"
+      ],
+      "independently_checked_expected_lines": [
+        "R2|71",
+        "R1|66"
+      ],
+      "actual_output": "R2|71\nR1|66\nR12|51\nR15|70\nR13|14\nR14|81\nR11|34\nR16|86\nR10|96\nR9|",
+      "prompt_sha256": "6909c0bc382fd3179baa03f30876c8b7b494fb23020ef0531dc176697dfa0361",
+      "output_sha256": "0b5bb7e0ea4ad4765389bcd4743afec5347b39071ddb8be5ee99d3d2406e6b7a",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-i009",
+      "task_kind": "organize",
+      "category": "interactive",
+      "input_token_bucket": 2,
+      "input_tokens": 147,
+      "output_tokens": 64,
+      "business_correct": false,
+      "problem": "正确目标后继续输出非目标",
+      "specific_evidence": "目标要求R1|73、R2|53，开头两行均正确；随后输出R12、R16等非目标，结尾为不完整的R13。",
+      "target_ids": [
+        "R1",
+        "R2"
+      ],
+      "independently_checked_expected_lines": [
+        "R1|73",
+        "R2|53"
+      ],
+      "actual_output": "R1|73\nR2|53\nR12|22\nR16|32\nR17|93\nR15|27\nR11|77\nR10|51\nR14|10\nR13",
+      "prompt_sha256": "b1d7803643d2f2e1acd2dfa1657449df5f73466c36073d6d48e0f35cc149ac26",
+      "output_sha256": "9a1378749488f5261a74ec1657dae1246d1a3c21f97eb7c9241ccb1e47c2d806",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-i010",
+      "task_kind": "organize",
+      "category": "interactive",
+      "input_token_bucket": 0,
+      "input_tokens": 49,
+      "output_tokens": 16,
+      "business_correct": false,
+      "problem": "多余表头",
+      "specific_evidence": "要求按R1,R2返回80、50，两个目标的值和顺序都正确；开头多出ID|值表头，违反无表头要求。",
+      "target_ids": [
+        "R1",
+        "R2"
+      ],
+      "independently_checked_expected_lines": [
+        "R1|80",
+        "R2|50"
+      ],
+      "actual_output": "ID|值\nR1|80\nR2|50",
+      "prompt_sha256": "fddbc8f6010d892d3c4cfedc8ad087d3ae75ae1b349346678b508e9bbf33e774",
+      "output_sha256": "76b6b219714dc8d8ae5336a1ea47277d882f2c706808f0a2e90c6f57aa6b8a67",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-i011",
+      "task_kind": "organize",
+      "category": "interactive",
+      "input_token_bucket": 1,
+      "input_tokens": 85,
+      "output_tokens": 48,
+      "business_correct": false,
+      "problem": "正确目标后继续输出非目标",
+      "specific_evidence": "目标R1|87、R2|19两行正确；额外返回R3到R8六行。多余记录虽有资料来源，仍未完成只列目标的任务。",
+      "target_ids": [
+        "R1",
+        "R2"
+      ],
+      "independently_checked_expected_lines": [
+        "R1|87",
+        "R2|19"
+      ],
+      "actual_output": "R1|87\nR2|19\nR3|79\nR4|63\nR5|64\nR6|27\nR7|19\nR8|40",
+      "prompt_sha256": "5fa2216c3d3f2efd41721aa17fac798af9ca6c6b7c30055c8cc60d327dfdfd54",
+      "output_sha256": "a16b48fe8a7f39f2a20cc25296dc3c9c1a69d69bfd1c29fd41290abbf7621088",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-b000",
+      "task_kind": "extract",
+      "category": "background",
+      "input_token_bucket": 0,
+      "input_tokens": 132,
+      "output_tokens": 36,
+      "business_correct": true,
+      "problem": "正确",
+      "specific_evidence": "六目标R1到R6依次为10、40、98、73、39、27；回答六行逐项正确，无多余记录。",
+      "target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "independently_checked_expected_lines": [
+        "R1|10",
+        "R2|40",
+        "R3|98",
+        "R4|73",
+        "R5|39",
+        "R6|27"
+      ],
+      "actual_output": "R1|10\nR2|40\nR3|98\nR4|73\nR5|39\nR6|27",
+      "prompt_sha256": "2d0bb8c0cb0f6f1203a9b25298fd1eff99beb70476cc5829e751bf1965750e4b",
+      "output_sha256": "690ffc5fe10b428c78b417dc990ba3daaab0b9b3cd9e3515c37997761f1b34e9",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-b001",
+      "task_kind": "extract",
+      "category": "background",
+      "input_token_bucket": 0,
+      "input_tokens": 132,
+      "output_tokens": 25,
+      "business_correct": false,
+      "problem": "用编号代替值并漏目标",
+      "specific_evidence": "六目标应为17、58、85、39、92、65。实际R1|R1到R5|R5把编号写进值字段，并漏R6。",
+      "target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "independently_checked_expected_lines": [
+        "R1|17",
+        "R2|58",
+        "R3|85",
+        "R4|39",
+        "R5|92",
+        "R6|65"
+      ],
+      "actual_output": "R1|R1\nR2|R2\nR3|R3\nR4|R4\nR5|R5",
+      "prompt_sha256": "3d1f01b52093e8ed1ea2d987e0b62e752a965668ae8b4f87fa096f0276bf3b4c",
+      "output_sha256": "527bf020de5e6d290eca121b4028fe888bce53e71a4ced55537e01fcda3c9d83",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-b002",
+      "task_kind": "extract",
+      "category": "background",
+      "input_token_bucket": 1,
+      "input_tokens": 321,
+      "output_tokens": 36,
+      "business_correct": true,
+      "problem": "正确",
+      "specific_evidence": "41条资料中目标R1到R6为24、13、82、91、53、35，回答六行均正确。",
+      "target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "independently_checked_expected_lines": [
+        "R1|24",
+        "R2|13",
+        "R3|82",
+        "R4|91",
+        "R5|53",
+        "R6|35"
+      ],
+      "actual_output": "R1|24\nR2|13\nR3|82\nR4|91\nR5|53\nR6|35",
+      "prompt_sha256": "8535541654903c6c369f5a614f9ea83e4ad1bdab8317c4ab030594552a91a72d",
+      "output_sha256": "6d9641aaa28ca801f47bf5f83714777e6048209ea0315a4ba1b133d76da1cf6c",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-b003",
+      "task_kind": "extract",
+      "category": "background",
+      "input_token_bucket": 2,
+      "input_tokens": 643,
+      "output_tokens": 36,
+      "business_correct": true,
+      "problem": "正确",
+      "specific_evidence": "87条资料中目标R1到R6为31、74、52、47、57、28，回答六行均正确。",
+      "target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "independently_checked_expected_lines": [
+        "R1|31",
+        "R2|74",
+        "R3|52",
+        "R4|47",
+        "R5|57",
+        "R6|28"
+      ],
+      "actual_output": "R1|31\nR2|74\nR3|52\nR4|47\nR5|57\nR6|28",
+      "prompt_sha256": "a206cc389bc45df8012f885df22575078fdc9ad492d509dd3ee697d8810d1923",
+      "output_sha256": "5aafb0b52e45516845d88f236864063839b81cc71f1bd8582789581b031bd091",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-b004",
+      "task_kind": "check",
+      "category": "background",
+      "input_token_bucket": 1,
+      "input_tokens": 331,
+      "output_tokens": 30,
+      "business_correct": false,
+      "problem": "三个比较结论明确错误",
+      "specific_evidence": "回答六项均为一致；R1是38/39、R3是17/18、R5是93/94，三项应为不一致。R2、R4、R6的一致判断正确。",
+      "target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "independently_checked_expected_lines": [
+        "R1|不一致",
+        "R2|一致",
+        "R3|不一致",
+        "R4|一致",
+        "R5|不一致",
+        "R6|一致"
+      ],
+      "actual_output": "R1|一致\nR2|一致\nR3|一致\nR4|一致\nR5|一致\nR6|一致",
+      "prompt_sha256": "b2eef83c4611d08e0f65e924163ec14df5fe600660b46ba6f9fdda23985e5f9a",
+      "output_sha256": "51575a9e53043fa153cd278a748906685b062558c201ade33a2c2b05f56c84a7",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-b005",
+      "task_kind": "check",
+      "category": "background",
+      "input_token_bucket": 1,
+      "input_tokens": 331,
+      "output_tokens": 42,
+      "business_correct": false,
+      "problem": "比较结论错误且标签不合约定",
+      "specific_evidence": "回答六项均为同写一致；R2是36/37、R4是60/61、R6是65/66，应为不一致。R1、R3、R5的原值相同；全部标签还违反只写一致/不一致的约定。",
+      "target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "independently_checked_expected_lines": [
+        "R1|一致",
+        "R2|不一致",
+        "R3|一致",
+        "R4|不一致",
+        "R5|一致",
+        "R6|不一致"
+      ],
+      "actual_output": "R1|同写一致\nR2|同写一致\nR3|同写一致\nR4|同写一致\nR5|同写一致\nR6|同写一致",
+      "prompt_sha256": "45c03f2d2db2e2e6a5c1057b00c59fb9ae12670e25f916a5f08445e17c086fe9",
+      "output_sha256": "b7a0ad1b018cba589bef97b21013b88b909a31b2f5bef3fa0a3dcf3b34e8392b",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-b006",
+      "task_kind": "check",
+      "category": "background",
+      "input_token_bucket": 2,
+      "input_tokens": 653,
+      "output_tokens": 60,
+      "business_correct": false,
+      "problem": "三个比较错误且输出三个字段",
+      "specific_evidence": "回答每行形如R1|52|同写一致，字段数不符。R1是52/53、R3是69/70、R5是59/60，应为不一致；R2、R4、R6原值相同。",
+      "target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "independently_checked_expected_lines": [
+        "R1|不一致",
+        "R2|一致",
+        "R3|不一致",
+        "R4|一致",
+        "R5|不一致",
+        "R6|一致"
+      ],
+      "actual_output": "R1|52|同写一致\nR2|57|同写一致\nR3|69|同写一致\nR4|53|同写一致\nR5|59|同写一致\nR6|71|同写一致",
+      "prompt_sha256": "0e37080b26b4e40ba4e2910d4d0b603e762a89dd83e3f3d38cc79db80df01d98",
+      "output_sha256": "e81d5baab924797e12c3400581ea94f785229eed6b10cdc0104a4c1bebead179",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-b007",
+      "task_kind": "check",
+      "category": "background",
+      "input_token_bucket": 0,
+      "input_tokens": 139,
+      "output_tokens": 36,
+      "business_correct": false,
+      "problem": "复制资料代替核对",
+      "specific_evidence": "实际只返回A中的R1到R6数值59、63、27、64、77、98，没有一致/不一致结论。A/B中R2、R4、R6不同，R1、R3、R5相同。",
+      "target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "independently_checked_expected_lines": [
+        "R1|一致",
+        "R2|不一致",
+        "R3|一致",
+        "R4|不一致",
+        "R5|一致",
+        "R6|不一致"
+      ],
+      "actual_output": "R1|59\nR2|63\nR3|27\nR4|64\nR5|77\nR6|98",
+      "prompt_sha256": "a5b4d0e8f8e2528e8a22e114d4f1b7ffda814890aa03b8ce92931380b797fa4c",
+      "output_sha256": "0536b095a20b9920c12e9795ef86884990b2ca2488451de7d2610eb319094fa1",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-b008",
+      "task_kind": "organize",
+      "category": "background",
+      "input_token_bucket": 2,
+      "input_tokens": 645,
+      "output_tokens": 36,
+      "business_correct": false,
+      "problem": "四个提取值明确错误",
+      "specific_evidence": "目标顺序R4,R2,R1,R3,R5,R6正确；前四值应为72、96、66、32，实际为85、65、32、33。最后R5|61、R6|56正确。",
+      "target_ids": [
+        "R4",
+        "R2",
+        "R1",
+        "R3",
+        "R5",
+        "R6"
+      ],
+      "independently_checked_expected_lines": [
+        "R4|72",
+        "R2|96",
+        "R1|66",
+        "R3|32",
+        "R5|61",
+        "R6|56"
+      ],
+      "actual_output": "R4|85\nR2|65\nR1|32\nR3|33\nR5|61\nR6|56",
+      "prompt_sha256": "6ef1ed88d182b13340a5ad69f635e8c1041d21e1a7e1723b6563472056f627fe",
+      "output_sha256": "1a3b322e4f6c219ac884ee06adb44c701224545709ecc404489af214062bcb1c",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-b009",
+      "task_kind": "organize",
+      "category": "background",
+      "input_token_bucket": 2,
+      "input_tokens": 645,
+      "output_tokens": 36,
+      "business_correct": true,
+      "problem": "正确",
+      "specific_evidence": "按R2,R4,R1,R6,R5,R3顺序返回71、79、73、53、33、63，逐项与资料一致。",
+      "target_ids": [
+        "R2",
+        "R4",
+        "R1",
+        "R6",
+        "R5",
+        "R3"
+      ],
+      "independently_checked_expected_lines": [
+        "R2|71",
+        "R4|79",
+        "R1|73",
+        "R6|53",
+        "R5|33",
+        "R3|63"
+      ],
+      "actual_output": "R2|71\nR4|79\nR1|73\nR6|53\nR5|33\nR3|63",
+      "prompt_sha256": "ac987ee4cc8edfce6d0aafa30bf8fa463eb14e8da6fa37e1d787910e4cca5b55",
+      "output_sha256": "386d3788ce91b9d8d8b3d19ed5552a55e3f7d2b9ce4deed6f2e3e6e2ab40f7ff",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-b010",
+      "task_kind": "organize",
+      "category": "background",
+      "input_token_bucket": 0,
+      "input_tokens": 134,
+      "output_tokens": 36,
+      "business_correct": true,
+      "problem": "正确",
+      "specific_evidence": "按R6,R2,R4,R3,R5,R1顺序返回50、29、62、14、46、80，逐项与资料一致。",
+      "target_ids": [
+        "R6",
+        "R2",
+        "R4",
+        "R3",
+        "R5",
+        "R1"
+      ],
+      "independently_checked_expected_lines": [
+        "R6|50",
+        "R2|29",
+        "R4|62",
+        "R3|14",
+        "R5|46",
+        "R1|80"
+      ],
+      "actual_output": "R6|50\nR2|29\nR4|62\nR3|14\nR5|46\nR1|80",
+      "prompt_sha256": "5f84e5a4463483c72ace617aeb2594bd4bebc038c150129c3d98121b5c8d6ff6",
+      "output_sha256": "8cac7e668281dc88cfa801ffb20ab792275b39bccdf2c4b752626655e30233f8",
+      "prompt_and_full_output_read": true
+    },
+    {
+      "req_id": "v3-23001-b011",
+      "task_kind": "organize",
+      "category": "background",
+      "input_token_bucket": 1,
+      "input_tokens": 323,
+      "output_tokens": 36,
+      "business_correct": true,
+      "problem": "正确",
+      "specific_evidence": "按R2,R4,R6,R3,R1,R5顺序返回50、92、93、86、87、38，逐项与资料一致。",
+      "target_ids": [
+        "R2",
+        "R4",
+        "R6",
+        "R3",
+        "R1",
+        "R5"
+      ],
+      "independently_checked_expected_lines": [
+        "R2|50",
+        "R4|92",
+        "R6|93",
+        "R3|86",
+        "R1|87",
+        "R5|38"
+      ],
+      "actual_output": "R2|50\nR4|92\nR6|93\nR3|86\nR1|87\nR5|38",
+      "prompt_sha256": "fe1d382742f269bae9cf2f063e089e70694141c2c028e84e69340d8c27680578",
+      "output_sha256": "5003287e70a8285afeb53b13952af9c44c281b10003aa655892dbcdfada53312",
+      "prompt_and_full_output_read": true
+    }
+  ]
+}

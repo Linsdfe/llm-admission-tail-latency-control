@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-10-25T10:21:25.417821+08:00",
+  "scope": "Postcollection README and assistant fulltext review; original six-file report SHA preserved",
+  "files": {
+    "README.md": "d326954479197a8d7bee65088a9d18cfe8675e0f63c85e2243bddc3b6186e9b4",
+    "assistant-review.json": "873f79184d2ba3f4daddf60f16cb84e84c874f43549b1fa5a125fb51e427ba1d",
+    "assistant-review.md": "3f67877e017cd9929057d0e97fd862515c214ca3fcd9413ce74e6dcd92cf1db6"
+  }
+}
