@@ -139,3 +139,14 @@ tests/unit/test_p1_explicit_instructions_runner_v5.py -text whitespace=-blank-at
 tests/unit/test_p1_explicit_instructions_evaluation_v5.py -text whitespace=-blank-at-eol,-blank-at-eof
 tests/integration/audit_p1_explicit_instructions_v5.py -text whitespace=-blank-at-eol,-blank-at-eof
 docs/experiments/20261025-1645-p1-explicit-instructions-v5/** -text whitespace=-blank-at-eol,-blank-at-eof
+
+# Fixed model adaptation v6: preserve pre-collection source bytes.
+configs/p1-model-adaptation-v6.json -text whitespace=-blank-at-eol,-blank-at-eof
+docs/p1/model-adaptation-pilot-protocol-v6.md -text whitespace=-blank-at-eol,-blank-at-eof
+docs/p1/model-adaptation-evaluation-rubric-v6.md -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/79h_run_p1_model_adaptation_v6.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/analysis/98_analyze_p1_model_adaptation_v6.py -text whitespace=-blank-at-eol,-blank-at-eof
+tests/unit/test_p1_model_adaptation_runner_v6.py -text whitespace=-blank-at-eol,-blank-at-eof
+tests/unit/test_p1_model_adaptation_evaluation_v6.py -text whitespace=-blank-at-eol,-blank-at-eof
+tests/integration/audit_p1_model_adaptation_v6.py -text whitespace=-blank-at-eol,-blank-at-eof
+docs/experiments/20261025-2210-p1-model-adaptation-v6/** -text whitespace=-blank-at-eol,-blank-at-eof

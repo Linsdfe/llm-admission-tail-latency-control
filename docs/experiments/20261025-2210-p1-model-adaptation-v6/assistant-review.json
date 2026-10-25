@@ -1,0 +1,345 @@
+{
+  "reviewed_at": "2026-10-25T21:54:11.266254+08:00",
+  "review_type": "助手对全部48份目标答案与原始输出逐条对照，并核读4道B失败的原始目标资料；非盲复核，不是学生或导师人工验收",
+  "reviewed_unique_tasks": 24,
+  "reviewed_measured_outputs": 48,
+  "records": [
+    {
+      "req_id": "v6-v5-25001-i000-a",
+      "arm": "A",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-i003-a",
+      "arm": "A",
+      "business_correct": false,
+      "observed_wrong_fields": 1,
+      "note": "R1应63，答75。"
+    },
+    {
+      "req_id": "v6-v5-25001-i004-a",
+      "arm": "A",
+      "business_correct": false,
+      "observed_wrong_fields": 1,
+      "note": "70与71不同，误答一致。"
+    },
+    {
+      "req_id": "v6-v5-25001-i007-a",
+      "arm": "A",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-i008-a",
+      "arm": "A",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-i011-a",
+      "arm": "A",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-b000-a",
+      "arm": "A",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-b003-a",
+      "arm": "A",
+      "business_correct": false,
+      "observed_wrong_fields": 2,
+      "note": "R1应63答75，R5应94答84。"
+    },
+    {
+      "req_id": "v6-v5-25001-b004-a",
+      "arm": "A",
+      "business_correct": false,
+      "observed_wrong_fields": 3,
+      "note": "全写一致，R1/R3/R5的不同未识别。"
+    },
+    {
+      "req_id": "v6-v5-25001-b007-a",
+      "arm": "A",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-b008-a",
+      "arm": "A",
+      "business_correct": false,
+      "observed_wrong_fields": 1,
+      "note": "R2应88答32，其余目标值相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-b011-a",
+      "arm": "A",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-i000-b",
+      "arm": "B",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-i003-b",
+      "arm": "B",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-i004-b",
+      "arm": "B",
+      "business_correct": false,
+      "observed_wrong_fields": 1,
+      "note": "70与71不同，误答一致。"
+    },
+    {
+      "req_id": "v6-v5-25001-i007-b",
+      "arm": "B",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-i008-b",
+      "arm": "B",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-i011-b",
+      "arm": "B",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-b000-b",
+      "arm": "B",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-b003-b",
+      "arm": "B",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-b004-b",
+      "arm": "B",
+      "business_correct": false,
+      "observed_wrong_fields": 4,
+      "note": "R1/R5不同误答一致；R2/R6相同误答不一致，4字段错。"
+    },
+    {
+      "req_id": "v6-v5-25001-b007-b",
+      "arm": "B",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-b008-b",
+      "arm": "B",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-b011-b",
+      "arm": "B",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-i001-b",
+      "arm": "B",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-i002-b",
+      "arm": "B",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-i005-b",
+      "arm": "B",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-i006-b",
+      "arm": "B",
+      "business_correct": false,
+      "observed_wrong_fields": 1,
+      "note": "84与85不同，误答一致。"
+    },
+    {
+      "req_id": "v6-v5-25001-i009-b",
+      "arm": "B",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-i010-b",
+      "arm": "B",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-b001-b",
+      "arm": "B",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-b002-b",
+      "arm": "B",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-b005-b",
+      "arm": "B",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-b006-b",
+      "arm": "B",
+      "business_correct": false,
+      "observed_wrong_fields": 5,
+      "note": "R1/R3/R5不同误答一致；R4/R6相同误答不一致，5字段错。"
+    },
+    {
+      "req_id": "v6-v5-25001-b009-b",
+      "arm": "B",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-b010-b",
+      "arm": "B",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-i001-a",
+      "arm": "A",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-i002-a",
+      "arm": "A",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-i005-a",
+      "arm": "A",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-i006-a",
+      "arm": "A",
+      "business_correct": false,
+      "observed_wrong_fields": 1,
+      "note": "84与85不同，误答一致。"
+    },
+    {
+      "req_id": "v6-v5-25001-i009-a",
+      "arm": "A",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-i010-a",
+      "arm": "A",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-b001-a",
+      "arm": "A",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    },
+    {
+      "req_id": "v6-v5-25001-b002-a",
+      "arm": "A",
+      "business_correct": false,
+      "observed_wrong_fields": 1,
+      "note": "R1应56答73。"
+    },
+    {
+      "req_id": "v6-v5-25001-b005-a",
+      "arm": "A",
+      "business_correct": false,
+      "observed_wrong_fields": 1,
+      "note": "R2应不一致，答一致。"
+    },
+    {
+      "req_id": "v6-v5-25001-b006-a",
+      "arm": "A",
+      "business_correct": false,
+      "observed_wrong_fields": 3,
+      "note": "全写一致，R1/R3/R5的不同未识别。"
+    },
+    {
+      "req_id": "v6-v5-25001-b009-a",
+      "arm": "A",
+      "business_correct": false,
+      "observed_wrong_fields": 1,
+      "note": "R6应43答73。"
+    },
+    {
+      "req_id": "v6-v5-25001-b010-a",
+      "arm": "A",
+      "business_correct": true,
+      "observed_wrong_fields": 0,
+      "note": "已逐项对照，要求的值、顺序和行数均相符。"
+    }
+  ],
+  "important_limitation": "整题无新增退步，不代表字段无退步：比较任务字段19/28降至17/28。"
+}

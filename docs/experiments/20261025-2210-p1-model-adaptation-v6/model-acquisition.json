@@ -1,0 +1,19 @@
+{
+  "started_at": "2026-10-25T17:05:25.542313+08:00",
+  "repo": "Qwen/Qwen2.5-3B-Instruct-GGUF",
+  "revision": "7dabda4d13d513e3e842b20f0d435c732f172cbe",
+  "official_api": "https://huggingface.co/api/models/Qwen/Qwen2.5-3B-Instruct-GGUF?blobs=true",
+  "metadata_sha256": "35e10ec37e900017fb1c29b34d32f3c53b5da8498555e7445e3c69c1e71d2157",
+  "download_url": "https://hf-mirror.com/Qwen/Qwen2.5-3B-Instruct-GGUF/resolve/7dabda4d13d513e3e842b20f0d435c732f172cbe/qwen2.5-3b-instruct-q4_k_m.gguf?download=true",
+  "destination": "/home/aiinfra/projects/llm-admission-tail-latency-control/models/qwen2.5-3b-instruct-q4_k_m-v6-20261025/qwen2.5-3b-instruct-q4_k_m.gguf",
+  "expected_sha256": "626b4a6678b86442240e33df819e00132d3ba7dddfe1cdc4fbb18e0a9615c62d",
+  "expected_bytes": 2104932768,
+  "scope": "One fixed public candidate artifact; mirror bytes must match official pinned LFS SHA; no model execution",
+  "status": "passed",
+  "finished_at": "2026-10-25T17:08:43.891114+08:00",
+  "actual_sha256": "626b4a6678b86442240e33df819e00132d3ba7dddfe1cdc4fbb18e0a9615c62d",
+  "actual_bytes": 2104932768,
+  "elapsed_seconds": 202.79644664299997,
+  "official_lfs_match": true,
+  "model_started": false
+}

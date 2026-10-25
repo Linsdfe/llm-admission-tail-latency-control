@@ -86,3 +86,9 @@ wsl.exe -d Ubuntu-24.04 -e bash "<Windows 仓库路径>/scripts/replay/50_run_al
 7. 冷启动代价：未预热的首次请求 prompt eval 277.79 ms（36 token，7.72 ms/token），v2 首次请求 58.09 ms（同 36 token，4.8 倍）。该**跨运行差异为混合因素**（CUDA 图/算子首次调用、GPU 时钟爬升、模型页缓存状态），未做受控分离；运行内受控证据是预热第 1 次 TTFT 82.06 ms → 第 2 次 26.87 ms 后进入稳态（26—30 ms）。处置：实验协议固定 ≥2 条预热且不计入样本；预热效果在 P3 基线阶段做受控测量。证据 `results/raw/prestudy/2026-10-19-smoke-v2/README.md` §3.1。
 8. 第 4 条的 `ttfb` 口径问题已在 v2 解决：客户端 `scripts/replay/stream_client.py` 用 `time.monotonic()` 对首个非空内容块打时间戳；实测首个内容位于**第 2 个 SSE JSON 块**（index=1，第 1 块为 role 元数据），`ttfb` 与 TTFT 相差一个数量级。
 9. 第 5 条的覆盖问题已解决：v2 起每条请求独立 JSON（`requests/R0*.json`）+ `client.jsonl` 汇总，并由 `50_run_all.sh` 统一编排（环境核对、预热、GPU 0.25 s 采样、`/props`、`/metrics`、停服务）。v1 仅保留 `server.log` 作“无预热冷态”对照，其余派生文件已清理并记录原因；同时新增 `.gitattributes` 统一脚本为 LF，避免 Windows 检出（CRLF）与 Linux 运行混用。
+
+## 2026-10-25 模型配置核查更正
+
+本日读取实际GGUF头，旧Qwen2.5-1.5B-Instruct Q4_K_M声明的原生上下文为32768，本文早期记录的8192有误，历史表保留以便追溯。原实验仍按显式总上下文4096、2slot、每slot2048运行，低于模型文件的上下文上限；这次更正不改变旧运行记录。
+
+v5的48条实际请求均覆盖默认temperature0.8为请求temperature0、关闭缓存且原生cache_n=0、语法回显一致、无上下文截断。GGUF嵌入模板比props多末尾一个换行，48次离线渲染与实际完整提示一致。371次历史分词未发现重复BOS或未解析ChatML。所查范围内未发现明显配置/模板不匹配，不等于排除所有潜在运行问题。详见[配置核查原始记录](../results/raw/maintenance/20261025-p1-model-adaptation-config-audit-v6/)。

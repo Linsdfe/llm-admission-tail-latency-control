@@ -1,0 +1,8 @@
+{
+  "assistant-review.json": "f44858197b2605cc44108a2e7fca99a062f360c27fc941bd77cb6cea4d102781",
+  "assistant-review.md": "a6e0a1e38882fcc0641435c7f3e923bfa2d30f0931d49574d88942802b685db3",
+  "independent-audit.json": "0d48335cff6dce2941fea7262c04e05057c9a5efe56838ccebe0646a24c5437d",
+  "configuration-audit.json": "b7602af529f05457f75b9dadfcc116c1fbb9dcfbd6be42d9e9efe403fdf47d21",
+  "model-acquisition.json": "db64c1c93f70a526e0729834d44cf6f2a0f4370642f4243b953abb3e8a21aa2a",
+  "source-freeze.json": "e4defd0d092771600946c9f0b456fc0ffde2b34fecc9efd98186cb423d9830b2"
+}

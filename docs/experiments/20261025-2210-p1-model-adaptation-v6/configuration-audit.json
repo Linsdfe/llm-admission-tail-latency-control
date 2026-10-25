@@ -1,0 +1,154 @@
+{
+  "status": "completed_read_only_configuration_and_template_audit",
+  "recorded_at": "2026-10-25T17:05:08.087102+08:00",
+  "model_started": false,
+  "model_downloaded": false,
+  "model_sha256": "6a1a2eb6d15622bf3c96857206351ba97e1af16c30d7a74ee38970e434e9407e",
+  "model_bytes": 1117320736,
+  "gguf_identity": {
+    "general.architecture": "qwen2",
+    "general.name": "qwen2.5-1.5b-instruct",
+    "general.size_label": "1.8B",
+    "general.file_type": 15,
+    "general.quantization_version": 2,
+    "qwen2.context_length": 32768,
+    "qwen2.block_count": 28,
+    "qwen2.embedding_length": 1536,
+    "qwen2.attention.head_count": 12,
+    "qwen2.attention.head_count_kv": 2,
+    "tokenizer.ggml.model": "gpt2",
+    "tokenizer.ggml.pre": "qwen2",
+    "tokenizer.ggml.bos_token_id": 151643,
+    "tokenizer.ggml.eos_token_id": 151645,
+    "tokenizer.ggml.add_bos_token": false,
+    "tokenizer.ggml.add_eos_token": null
+  },
+  "embedded_template_equals_v5_props": false,
+  "embedded_template_equals_v5_props_after_trailing_lf_only": true,
+  "template_difference": "GGUF has one trailing LF beyond props; all other characters equal",
+  "basic_explicit_chatml_matches_no_tools_template_structure": true,
+  "historical_environment_doc_context_discrepancy": {
+    "document_says": 8192,
+    "actual_gguf_context_length": 32768,
+    "actual_service_total_context": 4096,
+    "actual_service_slot_context": 2048,
+    "interpretation": "Historical documentation mismatch; actual service context is below GGUF limit"
+  },
+  "template_check_boundary": "Offline Jinja2 3.1.2 rendering of recorded no-tools messages and all371 recorded tokenizer responses; no new engine service or inference.",
+  "actual_native_settings_checked": 48,
+  "all_actual_temperature_zero": true,
+  "all_actual_cache_disabled_and_zero": true,
+  "all_actual_grammar_echo_matches": true,
+  "all_actual_not_context_truncated": true,
+  "actual_stop_types": {
+    "eos": 48
+  },
+  "service_slots": 2,
+  "service_slot_context": 2048,
+  "server_default_temperature": 0.800000011920929,
+  "server_default_temperature_not_actual_request_temperature": true,
+  "registered_start_uses_full_gpu_offload_request_ngl99": true,
+  "gpu_offload_boundary": "Source requests ngl99; compact v5 startup log does not expose layer-placement count. Older startup evidence and GPU sampling support GPU use; no new service was started to re-measure placement.",
+  "observed_configuration_mismatch": false,
+  "known_warning": "v5 log records control-looking token 128247 '</s>' type override; actual configured EOS is separately read from GGUF. This warning alone does not establish the cause of factual errors.",
+  "limits": [
+    "No proof that every hidden runtime or quantization issue is absent.",
+    "Current resources are a read-only snapshot; a 3B candidate must pass actual load/VRAM/cleanup checks before claiming it fits.",
+    "Only local GGUF inventory was inspected; no download or inference was performed."
+  ],
+  "source_sha256": {
+    "docs/environment.md": "fd65d14f149b6057b238cbe4ff4e849ab47099e90d0d0a367257ad03a2d8d420",
+    "models/README.md": "1fd097ef5f646f79734c3208f86615d7a025add55a108b6b0e5e9c6335f9a511",
+    "scripts/replay/78_run_background_cap.py": "f459cc9bed578bfbda2f381ca22667106f3ff4c16411c6c1afdd573891940855",
+    "scripts/replay/79g_run_p1_explicit_instructions_v5.py": "569f6a41c9ac6bcf49d4db3a53d4be2eb4224829b06c848d271da0f3d9237ff0",
+    "configs/p1-explicit-instructions-v5.json": "6cbfce6174484c389cc752d4f2e36837007b2c2af60bd2d8ecd19f3e112a1ac0",
+    "results/raw/development/20261025-1645-p1-explicit-instructions-v5/environment.json": "cab6c14565f9a84c36ee9d1430c4d51f1ed11317c599b43c8a9c67b2ed3e6fff",
+    "results/raw/development/20261025-1645-p1-explicit-instructions-v5/service/props.json": "0578108e8695b49289ac888f7209ef8c49b107e2525304f37e9474bac53f31c1",
+    "results/raw/development/20261025-1645-p1-explicit-instructions-v5/service/server.log": "0087f18f7277e1c0b6e3e0c90f47067fd98ebcc69be2880b858fffa121d5a4a8"
+  },
+  "completed_at": "2026-10-25T17:06:50.261813+08:00",
+  "template_render_checks": 48,
+  "actual_tokenizer_calls_checked": 371,
+  "embedded_and_props_template_render_match_all_recorded_prompts": true,
+  "no_duplicate_bos_or_unparsed_chatml_in_recorded_tokenization": true,
+  "quantization_name_from_local_enum": "MOSTLY_Q4_K_M (15)",
+  "local_gguf_inventory_at": "2026-10-25T17:05:08.082925+08:00",
+  "local_gguf_count": 1,
+  "current_resources_snapshot": {
+    "gpu_current": {
+      "command": [
+        "nvidia-smi",
+        "--query-gpu=name,memory.total,memory.used,memory.free,driver_version",
+        "--format=csv"
+      ],
+      "returncode": 0,
+      "stdout": "name, memory.total [MiB], memory.used [MiB], memory.free [MiB], driver_version\nNVIDIA GeForce RTX 3050 Ti Laptop GPU, 4096 MiB, 983 MiB, 2980 MiB, 561.17\n",
+      "stderr": ""
+    },
+    "gpu_compute_processes_current": {
+      "command": [
+        "nvidia-smi",
+        "--query-compute-apps=pid,process_name,used_memory",
+        "--format=csv"
+      ],
+      "returncode": 0,
+      "stdout": "pid, process_name, used_gpu_memory [MiB]\n",
+      "stderr": ""
+    },
+    "engine_git": {
+      "command": [
+        "git",
+        "-C",
+        "/home/aiinfra/projects/llm-admission-tail-latency-control/third_party/llama.cpp-background-cap-v1-20261023",
+        "rev-parse",
+        "HEAD"
+      ],
+      "returncode": 0,
+      "stdout": "620d2225cc436ab0b001e3200e590e3b286ef9ab\n",
+      "stderr": ""
+    },
+    "proc_meminfo": {
+      "MemTotal": "8056736 kB",
+      "MemAvailable": "7390632 kB",
+      "SwapTotal": "2097152 kB",
+      "SwapFree": "2097152 kB"
+    },
+    "disk": {
+      "/mnt/c/Users/1/Desktop/面向混合长短请求的 LLM 推理准入与尾延迟控制系统设计与实现": {
+        "total": 214853218304,
+        "used": 119554048000,
+        "free": 95299170304
+      },
+      "/home/aiinfra/projects/llm-admission-tail-latency-control/models/qwen2.5-1.5b-instruct-q4_k_m": {
+        "total": 1081101176832,
+        "used": 28421160960,
+        "free": 997687660544
+      }
+    }
+  },
+  "findings": [
+    "No clear configuration/template mismatch was found in the recorded v5 checks.",
+    "Historical docs state native context 8192, but actual GGUF header states 32768; runtime slot2048 is below the file limit.",
+    "GGUF template has exactly one final LF beyond props. Raw bytes differ; all 48 offline template renders equal actual recorded prompts.",
+    "Props default temperature0.8 is overridden to actual request temperature0 in all48 records.",
+    "GGUF nominal model name is qwen2.5-1.5b-instruct; size_label metadata is1.8B, retained literally without asserting a different checkpoint.",
+    "Requested GPU offload99 is verified in frozen source; compact v5 log does not list exact actual layer placement."
+  ],
+  "evidence_files": {
+    "README.md": "9c37d1941805f6b4a0c33d3791cd7815220b19d5a0c02c86f7f54f98be755038",
+    "actual-native-settings.json": "7b97c18639ff1bb8fc5a2327673100bdd92bc0a0622ba8e5f8324ccc8c53314e",
+    "audit_config.py": "8a94e1ddca18749d0308077010586d0a8d49d3481387846b7b7c0b846779edc8",
+    "audit_config_r2.py": "1ce78a4397af96909bcdff9b9fee90053ae2ecb22580c416231410b244a7e927",
+    "completed-review/actual-native-settings.json": "7b97c18639ff1bb8fc5a2327673100bdd92bc0a0622ba8e5f8324ccc8c53314e",
+    "completed-review/current-resources-and-model-inventory.json": "c3b0df83e1757121c8bf65f6990973aced529eaacee0fa515198fd7dbe355667",
+    "completed-review/embedded-chat-template.txt": "d5495a1e5db0611132a97e46a65dbb64a642a499421228b9c8b93229097fa9a4",
+    "completed-review/gguf-metadata.json": "2180558f4e0c799ec88271c257beed2fe0d3532239071571c275d94c9c797ae7",
+    "completed-review/server-log-excerpt.txt": "f438da285e7a0fe7f794d60e0b252ed9e50b1338e411e36a50defd551f17e849",
+    "embedded-chat-template.txt": "d5495a1e5db0611132a97e46a65dbb64a642a499421228b9c8b93229097fa9a4",
+    "finalize.py": "754d26736e006742d7b262df379a68f3ff9b48bd4d4ad2ee8fccbc502990aa0e",
+    "gguf-metadata.json": "2180558f4e0c799ec88271c257beed2fe0d3532239071571c275d94c9c797ae7",
+    "quantization-enum-evidence.json": "6a40c6a95838fd4b7c15fe46821ac4608dd51ad15f5e4237731e45fbecd89ee2",
+    "template-render-check.json": "618f2923c232aa42e4a1f526bd024c2528ca006033ea88b4b757ee7e34897b26",
+    "template_render_check.py": "bffa205f9fba825dc61dbe0d1c6eb8e0452a8101337e996817c68fedf7cec252"
+  }
+}

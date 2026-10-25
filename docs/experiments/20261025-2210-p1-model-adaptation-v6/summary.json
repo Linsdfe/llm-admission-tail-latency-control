@@ -1,0 +1,6565 @@
+{
+  "status": "completed_source_derived_model_adaptation_evaluation",
+  "run_id": "20261025-2210-p1-model-adaptation-v6",
+  "analyzed_at": "2026-10-25T21:52:40.940705+08:00",
+  "analysis_script_sha256": "40cdb24abbbbfdd10c28cc977c43c62caebdf99b7e658f976e56e606a1139ce5",
+  "frozen97_sha256": "1c8aea6ea5b89dbeab3343455d4a68602809f377aab92645518998a39aaae8b3",
+  "by_arm": {
+    "A": {
+      "requests": 24,
+      "business_correct": 14,
+      "raw_text_exact": 14,
+      "schema_valid": 24,
+      "target_fields_correct": 73,
+      "target_fields_expected": 88,
+      "cases_with_value_mismatches": 10,
+      "stop_types": {
+        "eos": 24
+      },
+      "input_tokens": {
+        "samples": 24,
+        "min": 47,
+        "median": 151.0,
+        "max": 661,
+        "mean": 238.75
+      },
+      "output_tokens": {
+        "samples": 24,
+        "min": 5,
+        "median": 21.0,
+        "max": 36,
+        "mean": 21.041666666666668
+      },
+      "total_output_tokens": 505
+    },
+    "B": {
+      "requests": 24,
+      "business_correct": 20,
+      "raw_text_exact": 20,
+      "schema_valid": 24,
+      "target_fields_correct": 77,
+      "target_fields_expected": 88,
+      "cases_with_value_mismatches": 4,
+      "stop_types": {
+        "eos": 24
+      },
+      "input_tokens": {
+        "samples": 24,
+        "min": 47,
+        "median": 151.0,
+        "max": 661,
+        "mean": 238.75
+      },
+      "output_tokens": {
+        "samples": 24,
+        "min": 5,
+        "median": 22.0,
+        "max": 36,
+        "mean": 21.291666666666668
+      },
+      "total_output_tokens": 511
+    }
+  },
+  "by_arm_task": {
+    "A": {
+      "extract": {
+        "requests": 8,
+        "business_correct": 5,
+        "raw_text_exact": 5,
+        "schema_valid": 8,
+        "target_fields_correct": 24,
+        "target_fields_expected": 28,
+        "cases_with_value_mismatches": 3,
+        "stop_types": {
+          "eos": 8
+        },
+        "input_tokens": {
+          "samples": 8,
+          "min": 47,
+          "median": 140.0,
+          "max": 651,
+          "mean": 200.125
+        },
+        "output_tokens": {
+          "samples": 8,
+          "min": 6,
+          "median": 21.0,
+          "max": 36,
+          "mean": 21
+        },
+        "total_output_tokens": 168
+      },
+      "check": {
+        "requests": 8,
+        "business_correct": 3,
+        "raw_text_exact": 3,
+        "schema_valid": 8,
+        "target_fields_correct": 19,
+        "target_fields_expected": 28,
+        "cases_with_value_mismatches": 5,
+        "stop_types": {
+          "eos": 8
+        },
+        "input_tokens": {
+          "samples": 8,
+          "min": 65,
+          "median": 154.0,
+          "max": 661,
+          "mean": 236.25
+        },
+        "output_tokens": {
+          "samples": 8,
+          "min": 5,
+          "median": 17.5,
+          "max": 33,
+          "mean": 18.125
+        },
+        "total_output_tokens": 145
+      },
+      "organize": {
+        "requests": 8,
+        "business_correct": 6,
+        "raw_text_exact": 6,
+        "schema_valid": 8,
+        "target_fields_correct": 30,
+        "target_fields_expected": 32,
+        "cases_with_value_mismatches": 2,
+        "stop_types": {
+          "eos": 8
+        },
+        "input_tokens": {
+          "samples": 8,
+          "min": 57,
+          "median": 155.0,
+          "max": 653,
+          "mean": 279.875
+        },
+        "output_tokens": {
+          "samples": 8,
+          "min": 12,
+          "median": 24.0,
+          "max": 36,
+          "mean": 24
+        },
+        "total_output_tokens": 192
+      }
+    },
+    "B": {
+      "extract": {
+        "requests": 8,
+        "business_correct": 8,
+        "raw_text_exact": 8,
+        "schema_valid": 8,
+        "target_fields_correct": 28,
+        "target_fields_expected": 28,
+        "cases_with_value_mismatches": 0,
+        "stop_types": {
+          "eos": 8
+        },
+        "input_tokens": {
+          "samples": 8,
+          "min": 47,
+          "median": 140.0,
+          "max": 651,
+          "mean": 200.125
+        },
+        "output_tokens": {
+          "samples": 8,
+          "min": 6,
+          "median": 21.0,
+          "max": 36,
+          "mean": 21
+        },
+        "total_output_tokens": 168
+      },
+      "check": {
+        "requests": 8,
+        "business_correct": 4,
+        "raw_text_exact": 4,
+        "schema_valid": 8,
+        "target_fields_correct": 17,
+        "target_fields_expected": 28,
+        "cases_with_value_mismatches": 4,
+        "stop_types": {
+          "eos": 8
+        },
+        "input_tokens": {
+          "samples": 8,
+          "min": 65,
+          "median": 154.0,
+          "max": 661,
+          "mean": 236.25
+        },
+        "output_tokens": {
+          "samples": 8,
+          "min": 5,
+          "median": 18.5,
+          "max": 33,
+          "mean": 18.875
+        },
+        "total_output_tokens": 151
+      },
+      "organize": {
+        "requests": 8,
+        "business_correct": 8,
+        "raw_text_exact": 8,
+        "schema_valid": 8,
+        "target_fields_correct": 32,
+        "target_fields_expected": 32,
+        "cases_with_value_mismatches": 0,
+        "stop_types": {
+          "eos": 8
+        },
+        "input_tokens": {
+          "samples": 8,
+          "min": 57,
+          "median": 155.0,
+          "max": 653,
+          "mean": 279.875
+        },
+        "output_tokens": {
+          "samples": 8,
+          "min": 12,
+          "median": 24.0,
+          "max": 36,
+          "mean": 24
+        },
+        "total_output_tokens": 192
+      }
+    }
+  },
+  "by_arm_category": {
+    "A": {
+      "interactive": {
+        "requests": 12,
+        "business_correct": 9,
+        "raw_text_exact": 9,
+        "schema_valid": 12,
+        "target_fields_correct": 13,
+        "target_fields_expected": 16,
+        "cases_with_value_mismatches": 3,
+        "stop_types": {
+          "eos": 12
+        },
+        "input_tokens": {
+          "samples": 12,
+          "min": 47,
+          "median": 89.0,
+          "max": 161,
+          "mean": 100.41666666666667
+        },
+        "output_tokens": {
+          "samples": 12,
+          "min": 5,
+          "median": 6.0,
+          "max": 12,
+          "mean": 7.666666666666667
+        },
+        "total_output_tokens": 92
+      },
+      "background": {
+        "requests": 12,
+        "business_correct": 5,
+        "raw_text_exact": 5,
+        "schema_valid": 12,
+        "target_fields_correct": 60,
+        "target_fields_expected": 72,
+        "cases_with_value_mismatches": 7,
+        "stop_types": {
+          "eos": 12
+        },
+        "input_tokens": {
+          "samples": 12,
+          "min": 140,
+          "median": 335.0,
+          "max": 661,
+          "mean": 377.0833333333333
+        },
+        "output_tokens": {
+          "samples": 12,
+          "min": 30,
+          "median": 36.0,
+          "max": 36,
+          "mean": 34.416666666666664
+        },
+        "total_output_tokens": 413
+      }
+    },
+    "B": {
+      "interactive": {
+        "requests": 12,
+        "business_correct": 10,
+        "raw_text_exact": 10,
+        "schema_valid": 12,
+        "target_fields_correct": 14,
+        "target_fields_expected": 16,
+        "cases_with_value_mismatches": 2,
+        "stop_types": {
+          "eos": 12
+        },
+        "input_tokens": {
+          "samples": 12,
+          "min": 47,
+          "median": 89.0,
+          "max": 161,
+          "mean": 100.41666666666667
+        },
+        "output_tokens": {
+          "samples": 12,
+          "min": 5,
+          "median": 6.0,
+          "max": 12,
+          "mean": 7.666666666666667
+        },
+        "total_output_tokens": 92
+      },
+      "background": {
+        "requests": 12,
+        "business_correct": 10,
+        "raw_text_exact": 10,
+        "schema_valid": 12,
+        "target_fields_correct": 63,
+        "target_fields_expected": 72,
+        "cases_with_value_mismatches": 2,
+        "stop_types": {
+          "eos": 12
+        },
+        "input_tokens": {
+          "samples": 12,
+          "min": 140,
+          "median": 335.0,
+          "max": 661,
+          "mean": 377.0833333333333
+        },
+        "output_tokens": {
+          "samples": 12,
+          "min": 32,
+          "median": 36.0,
+          "max": 36,
+          "mean": 34.916666666666664
+        },
+        "total_output_tokens": 419
+      }
+    }
+  },
+  "by_arm_cell": {
+    "A": {
+      "interactive:0": {
+        "requests": 4,
+        "business_correct": 4,
+        "raw_text_exact": 4,
+        "schema_valid": 4,
+        "target_fields_correct": 5,
+        "target_fields_expected": 5,
+        "cases_with_value_mismatches": 0,
+        "stop_types": {
+          "eos": 4
+        },
+        "input_tokens": {
+          "samples": 4,
+          "min": 47,
+          "median": 52.0,
+          "max": 65,
+          "mean": 54
+        },
+        "output_tokens": {
+          "samples": 4,
+          "min": 5,
+          "median": 6.0,
+          "max": 12,
+          "mean": 7.25
+        },
+        "total_output_tokens": 29
+      },
+      "interactive:1": {
+        "requests": 4,
+        "business_correct": 3,
+        "raw_text_exact": 3,
+        "schema_valid": 4,
+        "target_fields_correct": 4,
+        "target_fields_expected": 5,
+        "cases_with_value_mismatches": 1,
+        "stop_types": {
+          "eos": 4
+        },
+        "input_tokens": {
+          "samples": 4,
+          "min": 89,
+          "median": 89.0,
+          "max": 93,
+          "mean": 90
+        },
+        "output_tokens": {
+          "samples": 4,
+          "min": 5,
+          "median": 5.5,
+          "max": 12,
+          "mean": 7
+        },
+        "total_output_tokens": 28
+      },
+      "interactive:2": {
+        "requests": 4,
+        "business_correct": 2,
+        "raw_text_exact": 2,
+        "schema_valid": 4,
+        "target_fields_correct": 4,
+        "target_fields_expected": 6,
+        "cases_with_value_mismatches": 2,
+        "stop_types": {
+          "eos": 4
+        },
+        "input_tokens": {
+          "samples": 4,
+          "min": 155,
+          "median": 156.5,
+          "max": 161,
+          "mean": 157.25
+        },
+        "output_tokens": {
+          "samples": 4,
+          "min": 5,
+          "median": 9.0,
+          "max": 12,
+          "mean": 8.75
+        },
+        "total_output_tokens": 35
+      },
+      "background:0": {
+        "requests": 4,
+        "business_correct": 4,
+        "raw_text_exact": 4,
+        "schema_valid": 4,
+        "target_fields_correct": 24,
+        "target_fields_expected": 24,
+        "cases_with_value_mismatches": 0,
+        "stop_types": {
+          "eos": 4
+        },
+        "input_tokens": {
+          "samples": 4,
+          "min": 140,
+          "median": 141.0,
+          "max": 147,
+          "mean": 142.25
+        },
+        "output_tokens": {
+          "samples": 4,
+          "min": 33,
+          "median": 36.0,
+          "max": 36,
+          "mean": 35.25
+        },
+        "total_output_tokens": 141
+      },
+      "background:1": {
+        "requests": 4,
+        "business_correct": 1,
+        "raw_text_exact": 1,
+        "schema_valid": 4,
+        "target_fields_correct": 19,
+        "target_fields_expected": 24,
+        "cases_with_value_mismatches": 3,
+        "stop_types": {
+          "eos": 4
+        },
+        "input_tokens": {
+          "samples": 4,
+          "min": 329,
+          "median": 335.0,
+          "max": 339,
+          "mean": 334.5
+        },
+        "output_tokens": {
+          "samples": 4,
+          "min": 30,
+          "median": 34.0,
+          "max": 36,
+          "mean": 33.5
+        },
+        "total_output_tokens": 134
+      },
+      "background:2": {
+        "requests": 4,
+        "business_correct": 0,
+        "raw_text_exact": 0,
+        "schema_valid": 4,
+        "target_fields_correct": 17,
+        "target_fields_expected": 24,
+        "cases_with_value_mismatches": 4,
+        "stop_types": {
+          "eos": 4
+        },
+        "input_tokens": {
+          "samples": 4,
+          "min": 651,
+          "median": 653.0,
+          "max": 661,
+          "mean": 654.5
+        },
+        "output_tokens": {
+          "samples": 4,
+          "min": 30,
+          "median": 36.0,
+          "max": 36,
+          "mean": 34.5
+        },
+        "total_output_tokens": 138
+      }
+    },
+    "B": {
+      "interactive:0": {
+        "requests": 4,
+        "business_correct": 4,
+        "raw_text_exact": 4,
+        "schema_valid": 4,
+        "target_fields_correct": 5,
+        "target_fields_expected": 5,
+        "cases_with_value_mismatches": 0,
+        "stop_types": {
+          "eos": 4
+        },
+        "input_tokens": {
+          "samples": 4,
+          "min": 47,
+          "median": 52.0,
+          "max": 65,
+          "mean": 54
+        },
+        "output_tokens": {
+          "samples": 4,
+          "min": 5,
+          "median": 6.0,
+          "max": 12,
+          "mean": 7.25
+        },
+        "total_output_tokens": 29
+      },
+      "interactive:1": {
+        "requests": 4,
+        "business_correct": 3,
+        "raw_text_exact": 3,
+        "schema_valid": 4,
+        "target_fields_correct": 4,
+        "target_fields_expected": 5,
+        "cases_with_value_mismatches": 1,
+        "stop_types": {
+          "eos": 4
+        },
+        "input_tokens": {
+          "samples": 4,
+          "min": 89,
+          "median": 89.0,
+          "max": 93,
+          "mean": 90
+        },
+        "output_tokens": {
+          "samples": 4,
+          "min": 5,
+          "median": 5.5,
+          "max": 12,
+          "mean": 7
+        },
+        "total_output_tokens": 28
+      },
+      "interactive:2": {
+        "requests": 4,
+        "business_correct": 3,
+        "raw_text_exact": 3,
+        "schema_valid": 4,
+        "target_fields_correct": 5,
+        "target_fields_expected": 6,
+        "cases_with_value_mismatches": 1,
+        "stop_types": {
+          "eos": 4
+        },
+        "input_tokens": {
+          "samples": 4,
+          "min": 155,
+          "median": 156.5,
+          "max": 161,
+          "mean": 157.25
+        },
+        "output_tokens": {
+          "samples": 4,
+          "min": 5,
+          "median": 9.0,
+          "max": 12,
+          "mean": 8.75
+        },
+        "total_output_tokens": 35
+      },
+      "background:0": {
+        "requests": 4,
+        "business_correct": 4,
+        "raw_text_exact": 4,
+        "schema_valid": 4,
+        "target_fields_correct": 24,
+        "target_fields_expected": 24,
+        "cases_with_value_mismatches": 0,
+        "stop_types": {
+          "eos": 4
+        },
+        "input_tokens": {
+          "samples": 4,
+          "min": 140,
+          "median": 141.0,
+          "max": 147,
+          "mean": 142.25
+        },
+        "output_tokens": {
+          "samples": 4,
+          "min": 33,
+          "median": 36.0,
+          "max": 36,
+          "mean": 35.25
+        },
+        "total_output_tokens": 141
+      },
+      "background:1": {
+        "requests": 4,
+        "business_correct": 3,
+        "raw_text_exact": 3,
+        "schema_valid": 4,
+        "target_fields_correct": 20,
+        "target_fields_expected": 24,
+        "cases_with_value_mismatches": 1,
+        "stop_types": {
+          "eos": 4
+        },
+        "input_tokens": {
+          "samples": 4,
+          "min": 329,
+          "median": 335.0,
+          "max": 339,
+          "mean": 334.5
+        },
+        "output_tokens": {
+          "samples": 4,
+          "min": 33,
+          "median": 34.5,
+          "max": 36,
+          "mean": 34.5
+        },
+        "total_output_tokens": 138
+      },
+      "background:2": {
+        "requests": 4,
+        "business_correct": 3,
+        "raw_text_exact": 3,
+        "schema_valid": 4,
+        "target_fields_correct": 19,
+        "target_fields_expected": 24,
+        "cases_with_value_mismatches": 1,
+        "stop_types": {
+          "eos": 4
+        },
+        "input_tokens": {
+          "samples": 4,
+          "min": 651,
+          "median": 653.0,
+          "max": 661,
+          "mean": 654.5
+        },
+        "output_tokens": {
+          "samples": 4,
+          "min": 32,
+          "median": 36.0,
+          "max": 36,
+          "mean": 35
+        },
+        "total_output_tokens": 140
+      }
+    }
+  },
+  "by_block": {
+    "1": {
+      "requests": 12,
+      "business_correct": 7,
+      "raw_text_exact": 7,
+      "schema_valid": 12,
+      "target_fields_correct": 36,
+      "target_fields_expected": 44,
+      "cases_with_value_mismatches": 5,
+      "stop_types": {
+        "eos": 12
+      },
+      "input_tokens": {
+        "samples": 12,
+        "min": 47,
+        "median": 151.0,
+        "max": 653,
+        "mean": 239
+      },
+      "output_tokens": {
+        "samples": 12,
+        "min": 5,
+        "median": 21.0,
+        "max": 36,
+        "mean": 21.083333333333332
+      },
+      "total_output_tokens": 253
+    },
+    "2": {
+      "requests": 12,
+      "business_correct": 10,
+      "raw_text_exact": 10,
+      "schema_valid": 12,
+      "target_fields_correct": 39,
+      "target_fields_expected": 44,
+      "cases_with_value_mismatches": 2,
+      "stop_types": {
+        "eos": 12
+      },
+      "input_tokens": {
+        "samples": 12,
+        "min": 47,
+        "median": 151.0,
+        "max": 653,
+        "mean": 239
+      },
+      "output_tokens": {
+        "samples": 12,
+        "min": 5,
+        "median": 22.5,
+        "max": 36,
+        "mean": 21.333333333333332
+      },
+      "total_output_tokens": 256
+    },
+    "3": {
+      "requests": 12,
+      "business_correct": 10,
+      "raw_text_exact": 10,
+      "schema_valid": 12,
+      "target_fields_correct": 38,
+      "target_fields_expected": 44,
+      "cases_with_value_mismatches": 2,
+      "stop_types": {
+        "eos": 12
+      },
+      "input_tokens": {
+        "samples": 12,
+        "min": 47,
+        "median": 148.5,
+        "max": 661,
+        "mean": 238.5
+      },
+      "output_tokens": {
+        "samples": 12,
+        "min": 5,
+        "median": 22.0,
+        "max": 36,
+        "mean": 21.25
+      },
+      "total_output_tokens": 255
+    },
+    "4": {
+      "requests": 12,
+      "business_correct": 7,
+      "raw_text_exact": 7,
+      "schema_valid": 12,
+      "target_fields_correct": 37,
+      "target_fields_expected": 44,
+      "cases_with_value_mismatches": 5,
+      "stop_types": {
+        "eos": 12
+      },
+      "input_tokens": {
+        "samples": 12,
+        "min": 47,
+        "median": 148.5,
+        "max": 661,
+        "mean": 238.5
+      },
+      "output_tokens": {
+        "samples": 12,
+        "min": 5,
+        "median": 21.0,
+        "max": 36,
+        "mean": 21
+      },
+      "total_output_tokens": 252
+    }
+  },
+  "pair_counts": {
+    "both_correct": 14,
+    "both_wrong": 4,
+    "A_wrong_B_correct": 6,
+    "A_correct_B_wrong": 0
+  },
+  "pair_results": [
+    {
+      "pair_id": "v6-v5-25001-i000",
+      "task_kind": "extract",
+      "category": "interactive",
+      "condition_order": "AB",
+      "A_correct": true,
+      "B_correct": true,
+      "classification": "both_correct"
+    },
+    {
+      "pair_id": "v6-v5-25001-i003",
+      "task_kind": "extract",
+      "category": "interactive",
+      "condition_order": "AB",
+      "A_correct": false,
+      "B_correct": true,
+      "classification": "A_wrong_B_correct"
+    },
+    {
+      "pair_id": "v6-v5-25001-i004",
+      "task_kind": "check",
+      "category": "interactive",
+      "condition_order": "AB",
+      "A_correct": false,
+      "B_correct": false,
+      "classification": "both_wrong"
+    },
+    {
+      "pair_id": "v6-v5-25001-i007",
+      "task_kind": "check",
+      "category": "interactive",
+      "condition_order": "AB",
+      "A_correct": true,
+      "B_correct": true,
+      "classification": "both_correct"
+    },
+    {
+      "pair_id": "v6-v5-25001-i008",
+      "task_kind": "organize",
+      "category": "interactive",
+      "condition_order": "AB",
+      "A_correct": true,
+      "B_correct": true,
+      "classification": "both_correct"
+    },
+    {
+      "pair_id": "v6-v5-25001-i011",
+      "task_kind": "organize",
+      "category": "interactive",
+      "condition_order": "AB",
+      "A_correct": true,
+      "B_correct": true,
+      "classification": "both_correct"
+    },
+    {
+      "pair_id": "v6-v5-25001-b000",
+      "task_kind": "extract",
+      "category": "background",
+      "condition_order": "AB",
+      "A_correct": true,
+      "B_correct": true,
+      "classification": "both_correct"
+    },
+    {
+      "pair_id": "v6-v5-25001-b003",
+      "task_kind": "extract",
+      "category": "background",
+      "condition_order": "AB",
+      "A_correct": false,
+      "B_correct": true,
+      "classification": "A_wrong_B_correct"
+    },
+    {
+      "pair_id": "v6-v5-25001-b004",
+      "task_kind": "check",
+      "category": "background",
+      "condition_order": "AB",
+      "A_correct": false,
+      "B_correct": false,
+      "classification": "both_wrong"
+    },
+    {
+      "pair_id": "v6-v5-25001-b007",
+      "task_kind": "check",
+      "category": "background",
+      "condition_order": "AB",
+      "A_correct": true,
+      "B_correct": true,
+      "classification": "both_correct"
+    },
+    {
+      "pair_id": "v6-v5-25001-b008",
+      "task_kind": "organize",
+      "category": "background",
+      "condition_order": "AB",
+      "A_correct": false,
+      "B_correct": true,
+      "classification": "A_wrong_B_correct"
+    },
+    {
+      "pair_id": "v6-v5-25001-b011",
+      "task_kind": "organize",
+      "category": "background",
+      "condition_order": "AB",
+      "A_correct": true,
+      "B_correct": true,
+      "classification": "both_correct"
+    },
+    {
+      "pair_id": "v6-v5-25001-i001",
+      "task_kind": "extract",
+      "category": "interactive",
+      "condition_order": "BA",
+      "A_correct": true,
+      "B_correct": true,
+      "classification": "both_correct"
+    },
+    {
+      "pair_id": "v6-v5-25001-i002",
+      "task_kind": "extract",
+      "category": "interactive",
+      "condition_order": "BA",
+      "A_correct": true,
+      "B_correct": true,
+      "classification": "both_correct"
+    },
+    {
+      "pair_id": "v6-v5-25001-i005",
+      "task_kind": "check",
+      "category": "interactive",
+      "condition_order": "BA",
+      "A_correct": true,
+      "B_correct": true,
+      "classification": "both_correct"
+    },
+    {
+      "pair_id": "v6-v5-25001-i006",
+      "task_kind": "check",
+      "category": "interactive",
+      "condition_order": "BA",
+      "A_correct": false,
+      "B_correct": false,
+      "classification": "both_wrong"
+    },
+    {
+      "pair_id": "v6-v5-25001-i009",
+      "task_kind": "organize",
+      "category": "interactive",
+      "condition_order": "BA",
+      "A_correct": true,
+      "B_correct": true,
+      "classification": "both_correct"
+    },
+    {
+      "pair_id": "v6-v5-25001-i010",
+      "task_kind": "organize",
+      "category": "interactive",
+      "condition_order": "BA",
+      "A_correct": true,
+      "B_correct": true,
+      "classification": "both_correct"
+    },
+    {
+      "pair_id": "v6-v5-25001-b001",
+      "task_kind": "extract",
+      "category": "background",
+      "condition_order": "BA",
+      "A_correct": true,
+      "B_correct": true,
+      "classification": "both_correct"
+    },
+    {
+      "pair_id": "v6-v5-25001-b002",
+      "task_kind": "extract",
+      "category": "background",
+      "condition_order": "BA",
+      "A_correct": false,
+      "B_correct": true,
+      "classification": "A_wrong_B_correct"
+    },
+    {
+      "pair_id": "v6-v5-25001-b005",
+      "task_kind": "check",
+      "category": "background",
+      "condition_order": "BA",
+      "A_correct": false,
+      "B_correct": true,
+      "classification": "A_wrong_B_correct"
+    },
+    {
+      "pair_id": "v6-v5-25001-b006",
+      "task_kind": "check",
+      "category": "background",
+      "condition_order": "BA",
+      "A_correct": false,
+      "B_correct": false,
+      "classification": "both_wrong"
+    },
+    {
+      "pair_id": "v6-v5-25001-b009",
+      "task_kind": "organize",
+      "category": "background",
+      "condition_order": "BA",
+      "A_correct": false,
+      "B_correct": true,
+      "classification": "A_wrong_B_correct"
+    },
+    {
+      "pair_id": "v6-v5-25001-b010",
+      "task_kind": "organize",
+      "category": "background",
+      "condition_order": "BA",
+      "A_correct": true,
+      "B_correct": true,
+      "classification": "both_correct"
+    }
+  ],
+  "request_results": [
+    {
+      "req_id": "v6-v5-25001-i000-a",
+      "pair_id": "v6-v5-25001-i000",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "extract",
+      "category": "interactive",
+      "kind_instance": 0,
+      "condition_order": "AB",
+      "condition_position": 1,
+      "input_token_bucket": 0,
+      "input_tokens": 47,
+      "max_tokens": 64,
+      "block_id": 1,
+      "group_id": 1,
+      "source_req_id": "v5-25001-i000-c",
+      "output_tokens": 6,
+      "stop_type": "eos",
+      "content_sha256": "19123c84b8b3656fd06ec6c1962eba1cb0ac54e6d1430d7435ff8939a2e08680",
+      "prompt_sha256": "3541dfd62702f624510bb0e0cf1688d78ce321c7d5a9d5939c388f589cd48499",
+      "grammar_sha256": "001a07f2dbed94f18eba6ee5938c18b53b02aa160add9064da7b3aeb56323677",
+      "directory": "blocks/block1/cases/q01-v6-v5-25001-i000-a",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "42"
+        ]
+      ],
+      "expected_lines": [
+        "R1|42"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "42"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "42",
+          "observed_values": [
+            "42"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1
+    },
+    {
+      "req_id": "v6-v5-25001-i003-a",
+      "pair_id": "v6-v5-25001-i003",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "extract",
+      "category": "interactive",
+      "kind_instance": 3,
+      "condition_order": "AB",
+      "condition_position": 1,
+      "input_token_bucket": 2,
+      "input_tokens": 158,
+      "max_tokens": 64,
+      "block_id": 1,
+      "group_id": 1,
+      "source_req_id": "v5-25001-i003-c",
+      "output_tokens": 6,
+      "stop_type": "eos",
+      "content_sha256": "3789da522c23dfaa6376c339d0382d22c1b9083657250a52b9648fb94f0ecee4",
+      "prompt_sha256": "5fb487d5b667952c9d4a5f645c59e832f76b87c72f1839db99af97a1b5f6f369",
+      "grammar_sha256": "001a07f2dbed94f18eba6ee5938c18b53b02aa160add9064da7b3aeb56323677",
+      "directory": "blocks/block1/cases/q02-v6-v5-25001-i003-a",
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R1",
+          "63"
+        ]
+      ],
+      "expected_lines": [
+        "R1|63"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "75"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 1,
+          "id": "R1",
+          "expected": "63",
+          "observed": "75"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "63",
+          "observed_values": [
+            "75"
+          ],
+          "status": "wrong_value"
+        }
+      ],
+      "target_fields_correct": 0,
+      "target_fields_expected": 1
+    },
+    {
+      "req_id": "v6-v5-25001-i004-a",
+      "pair_id": "v6-v5-25001-i004",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "check",
+      "category": "interactive",
+      "kind_instance": 0,
+      "condition_order": "AB",
+      "condition_position": 1,
+      "input_token_bucket": 1,
+      "input_tokens": 89,
+      "max_tokens": 64,
+      "block_id": 1,
+      "group_id": 1,
+      "source_req_id": "v5-25001-i004-c",
+      "output_tokens": 5,
+      "stop_type": "eos",
+      "content_sha256": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e",
+      "prompt_sha256": "ecb842cbf71f6d9480336d321b95b9199beed9d618ee13c1ef0d1c1998e6baf5",
+      "grammar_sha256": "3d955a37dfda3f03f798502f6e54e0d6a5629694737c5385844b2c2eccf208b0",
+      "directory": "blocks/block1/cases/q03-v6-v5-25001-i004-a",
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R1",
+          "不一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1|不一致"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 1,
+          "id": "R1",
+          "expected": "不一致",
+          "observed": "一致"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        }
+      ],
+      "target_fields_correct": 0,
+      "target_fields_expected": 1
+    },
+    {
+      "req_id": "v6-v5-25001-i007-a",
+      "pair_id": "v6-v5-25001-i007",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "check",
+      "category": "interactive",
+      "kind_instance": 3,
+      "condition_order": "AB",
+      "condition_position": 1,
+      "input_token_bucket": 0,
+      "input_tokens": 65,
+      "max_tokens": 64,
+      "block_id": 1,
+      "group_id": 1,
+      "source_req_id": "v5-25001-i007-c",
+      "output_tokens": 5,
+      "stop_type": "eos",
+      "content_sha256": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e",
+      "prompt_sha256": "8d2768c1d7b801ce791846bf99ea80b41e84136beee95923fcade8bae86d2c56",
+      "grammar_sha256": "3d955a37dfda3f03f798502f6e54e0d6a5629694737c5385844b2c2eccf208b0",
+      "directory": "blocks/block1/cases/q04-v6-v5-25001-i007-a",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1|一致"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1
+    },
+    {
+      "req_id": "v6-v5-25001-i008-a",
+      "pair_id": "v6-v5-25001-i008",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "organize",
+      "category": "interactive",
+      "kind_instance": 0,
+      "condition_order": "AB",
+      "condition_position": 1,
+      "input_token_bucket": 2,
+      "input_tokens": 155,
+      "max_tokens": 64,
+      "block_id": 1,
+      "group_id": 1,
+      "source_req_id": "v5-25001-i008-c",
+      "output_tokens": 12,
+      "stop_type": "eos",
+      "content_sha256": "5a8a84880ef50d6239459a497db663a6b5ad1d6f1df52b128c71f2a61f5fe719",
+      "prompt_sha256": "1496fe1a728bda390c23aa4a82520c585ef2f497b226c6380a8a016ee888c4b8",
+      "grammar_sha256": "bde1ada0087acc3667e0a7440d4d0f51615eeaca6938cf193141e268c0f71353",
+      "directory": "blocks/block1/cases/q05-v6-v5-25001-i008-a",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "98"
+        ],
+        [
+          "R2",
+          "76"
+        ]
+      ],
+      "expected_lines": [
+        "R1|98",
+        "R2|76"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "98"
+        ],
+        [
+          "R2",
+          "76"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "98",
+          "observed_values": [
+            "98"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R2",
+          "expected": "76",
+          "observed_values": [
+            "76"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2
+    },
+    {
+      "req_id": "v6-v5-25001-i011-a",
+      "pair_id": "v6-v5-25001-i011",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "organize",
+      "category": "interactive",
+      "kind_instance": 3,
+      "condition_order": "AB",
+      "condition_position": 1,
+      "input_token_bucket": 1,
+      "input_tokens": 93,
+      "max_tokens": 64,
+      "block_id": 1,
+      "group_id": 1,
+      "source_req_id": "v5-25001-i011-c",
+      "output_tokens": 12,
+      "stop_type": "eos",
+      "content_sha256": "7d3dc5d3f22960bbfb321b9c55dbddba42beb8ae14d648e94536f8674fe5e355",
+      "prompt_sha256": "b55f51727a5b9ea7b5f0bd79c7408f40c1e10ff5f044d0a6bb577b89b8c79d00",
+      "grammar_sha256": "7aaa325ebc02901cf2ef245a9465d279c6fa533ca270d5dd35fbfd65a1566247",
+      "directory": "blocks/block1/cases/q06-v6-v5-25001-i011-a",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R2",
+          "20"
+        ],
+        [
+          "R1",
+          "29"
+        ]
+      ],
+      "expected_lines": [
+        "R2|20",
+        "R1|29"
+      ],
+      "observed_fields": [
+        [
+          "R2",
+          "20"
+        ],
+        [
+          "R1",
+          "29"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R2",
+          "expected": "20",
+          "observed_values": [
+            "20"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1",
+          "expected": "29",
+          "observed_values": [
+            "29"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2
+    },
+    {
+      "req_id": "v6-v5-25001-b000-a",
+      "pair_id": "v6-v5-25001-b000",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "extract",
+      "category": "background",
+      "kind_instance": 0,
+      "condition_order": "AB",
+      "condition_position": 1,
+      "input_token_bucket": 0,
+      "input_tokens": 140,
+      "max_tokens": 384,
+      "block_id": 1,
+      "group_id": 1,
+      "source_req_id": "v5-25001-b000-c",
+      "output_tokens": 36,
+      "stop_type": "eos",
+      "content_sha256": "515fbcd0d20f46e06d0cd9507221ffd944b35d860821bc8bdbb5c224bdbeae92",
+      "prompt_sha256": "25dc6a7965e4410baeb357e9dc358e5c9cfb648bb7bfb863f3da1e0693780176",
+      "grammar_sha256": "c001e8d985dc474208d1c265c30beb0584c122a3ebe2c82f2def1d1aad985ba4",
+      "directory": "blocks/block1/cases/q07-v6-v5-25001-b000-a",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "42"
+        ],
+        [
+          "R2",
+          "23"
+        ],
+        [
+          "R3",
+          "14"
+        ],
+        [
+          "R4",
+          "76"
+        ],
+        [
+          "R5",
+          "91"
+        ],
+        [
+          "R6",
+          "15"
+        ]
+      ],
+      "expected_lines": [
+        "R1|42",
+        "R2|23",
+        "R3|14",
+        "R4|76",
+        "R5|91",
+        "R6|15"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "42"
+        ],
+        [
+          "R2",
+          "23"
+        ],
+        [
+          "R3",
+          "14"
+        ],
+        [
+          "R4",
+          "76"
+        ],
+        [
+          "R5",
+          "91"
+        ],
+        [
+          "R6",
+          "15"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "42",
+          "observed_values": [
+            "42"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R2",
+          "expected": "23",
+          "observed_values": [
+            "23"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R3",
+          "expected": "14",
+          "observed_values": [
+            "14"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R4",
+          "expected": "76",
+          "observed_values": [
+            "76"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "91",
+          "observed_values": [
+            "91"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R6",
+          "expected": "15",
+          "observed_values": [
+            "15"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-b003-a",
+      "pair_id": "v6-v5-25001-b003",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "extract",
+      "category": "background",
+      "kind_instance": 3,
+      "condition_order": "AB",
+      "condition_position": 1,
+      "input_token_bucket": 2,
+      "input_tokens": 651,
+      "max_tokens": 384,
+      "block_id": 1,
+      "group_id": 1,
+      "source_req_id": "v5-25001-b003-c",
+      "output_tokens": 36,
+      "stop_type": "eos",
+      "content_sha256": "d07496562c908b51c771295fcc8025f70c076908e00599ef51597b8a9b532610",
+      "prompt_sha256": "6502f04c4011b272a5a6586d0c1f29e4b20653afce78ddde06f7a82ee2fc2aa7",
+      "grammar_sha256": "c001e8d985dc474208d1c265c30beb0584c122a3ebe2c82f2def1d1aad985ba4",
+      "directory": "blocks/block1/cases/q08-v6-v5-25001-b003-a",
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R1",
+          "63"
+        ],
+        [
+          "R2",
+          "82"
+        ],
+        [
+          "R3",
+          "58"
+        ],
+        [
+          "R4",
+          "45"
+        ],
+        [
+          "R5",
+          "94"
+        ],
+        [
+          "R6",
+          "20"
+        ]
+      ],
+      "expected_lines": [
+        "R1|63",
+        "R2|82",
+        "R3|58",
+        "R4|45",
+        "R5|94",
+        "R6|20"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "75"
+        ],
+        [
+          "R2",
+          "82"
+        ],
+        [
+          "R3",
+          "58"
+        ],
+        [
+          "R4",
+          "45"
+        ],
+        [
+          "R5",
+          "84"
+        ],
+        [
+          "R6",
+          "20"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 1,
+          "id": "R1",
+          "expected": "63",
+          "observed": "75"
+        },
+        {
+          "position": 5,
+          "id": "R5",
+          "expected": "94",
+          "observed": "84"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "63",
+          "observed_values": [
+            "75"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R2",
+          "expected": "82",
+          "observed_values": [
+            "82"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R3",
+          "expected": "58",
+          "observed_values": [
+            "58"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R4",
+          "expected": "45",
+          "observed_values": [
+            "45"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "94",
+          "observed_values": [
+            "84"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R6",
+          "expected": "20",
+          "observed_values": [
+            "20"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 4,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-b004-a",
+      "pair_id": "v6-v5-25001-b004",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "check",
+      "category": "background",
+      "kind_instance": 0,
+      "condition_order": "AB",
+      "condition_position": 1,
+      "input_token_bucket": 1,
+      "input_tokens": 339,
+      "max_tokens": 384,
+      "block_id": 1,
+      "group_id": 1,
+      "source_req_id": "v5-25001-b004-c",
+      "output_tokens": 30,
+      "stop_type": "eos",
+      "content_sha256": "51575a9e53043fa153cd278a748906685b062558c201ade33a2c2b05f56c84a7",
+      "prompt_sha256": "afd3ab40e595aaae3dd5ea3359484000692be574ceace24283a44e4e81ca0fb9",
+      "grammar_sha256": "9ca0f719f31e0be7ac4996402e8ad4e11600976cf297e5fc213ed7f77bec5a3f",
+      "directory": "blocks/block1/cases/q09-v6-v5-25001-b004-a",
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R1",
+          "不一致"
+        ],
+        [
+          "R2",
+          "一致"
+        ],
+        [
+          "R3",
+          "不一致"
+        ],
+        [
+          "R4",
+          "一致"
+        ],
+        [
+          "R5",
+          "不一致"
+        ],
+        [
+          "R6",
+          "一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1|不一致",
+        "R2|一致",
+        "R3|不一致",
+        "R4|一致",
+        "R5|不一致",
+        "R6|一致"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 1,
+          "id": "R1",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "position": 3,
+          "id": "R3",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "position": 5,
+          "id": "R5",
+          "expected": "不一致",
+          "observed": "一致"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R2",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R3",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R4",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R6",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 3,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-b007-a",
+      "pair_id": "v6-v5-25001-b007",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "check",
+      "category": "background",
+      "kind_instance": 3,
+      "condition_order": "AB",
+      "condition_position": 1,
+      "input_token_bucket": 0,
+      "input_tokens": 147,
+      "max_tokens": 384,
+      "block_id": 1,
+      "group_id": 1,
+      "source_req_id": "v5-25001-b007-c",
+      "output_tokens": 33,
+      "stop_type": "eos",
+      "content_sha256": "763062d5b68885e821fb3b2376e654410ff3dcf3b1b5cb6c522a2b7b60200eea",
+      "prompt_sha256": "67dc16d449a67bb030ba4efceaade6afba9ddaf29655cf5e4bfa5aabf620e7db",
+      "grammar_sha256": "9ca0f719f31e0be7ac4996402e8ad4e11600976cf297e5fc213ed7f77bec5a3f",
+      "directory": "blocks/block1/cases/q10-v6-v5-25001-b007-a",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "不一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "不一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "不一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1|一致",
+        "R2|不一致",
+        "R3|一致",
+        "R4|不一致",
+        "R5|一致",
+        "R6|不一致"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "不一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "不一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "不一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R2",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R3",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R4",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R6",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-b008-a",
+      "pair_id": "v6-v5-25001-b008",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "organize",
+      "category": "background",
+      "kind_instance": 0,
+      "condition_order": "AB",
+      "condition_position": 1,
+      "input_token_bucket": 2,
+      "input_tokens": 653,
+      "max_tokens": 384,
+      "block_id": 1,
+      "group_id": 1,
+      "source_req_id": "v5-25001-b008-c",
+      "output_tokens": 36,
+      "stop_type": "eos",
+      "content_sha256": "6d658b84cbbd81fc210cdfe6479aea036fb966afb0e15f667455a863a571baba",
+      "prompt_sha256": "cc88168f27771f4555faa54be34ce52169f45f41b1c2ec907d5f2024a64e5dfc",
+      "grammar_sha256": "9411ac6f97484af5c7e21c81731e44bd20bf44f20a2d61cbc1bbb847b3ac5c47",
+      "directory": "blocks/block1/cases/q11-v6-v5-25001-b008-a",
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R2",
+          "88"
+        ],
+        [
+          "R1",
+          "98"
+        ],
+        [
+          "R5",
+          "24"
+        ],
+        [
+          "R3",
+          "60"
+        ],
+        [
+          "R6",
+          "35"
+        ],
+        [
+          "R4",
+          "16"
+        ]
+      ],
+      "expected_lines": [
+        "R2|88",
+        "R1|98",
+        "R5|24",
+        "R3|60",
+        "R6|35",
+        "R4|16"
+      ],
+      "observed_fields": [
+        [
+          "R2",
+          "32"
+        ],
+        [
+          "R1",
+          "98"
+        ],
+        [
+          "R5",
+          "24"
+        ],
+        [
+          "R3",
+          "60"
+        ],
+        [
+          "R6",
+          "35"
+        ],
+        [
+          "R4",
+          "16"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 1,
+          "id": "R2",
+          "expected": "88",
+          "observed": "32"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R2",
+          "expected": "88",
+          "observed_values": [
+            "32"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R1",
+          "expected": "98",
+          "observed_values": [
+            "98"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "24",
+          "observed_values": [
+            "24"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R3",
+          "expected": "60",
+          "observed_values": [
+            "60"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R6",
+          "expected": "35",
+          "observed_values": [
+            "35"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R4",
+          "expected": "16",
+          "observed_values": [
+            "16"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 5,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-b011-a",
+      "pair_id": "v6-v5-25001-b011",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "organize",
+      "category": "background",
+      "kind_instance": 3,
+      "condition_order": "AB",
+      "condition_position": 1,
+      "input_token_bucket": 1,
+      "input_tokens": 331,
+      "max_tokens": 384,
+      "block_id": 1,
+      "group_id": 1,
+      "source_req_id": "v5-25001-b011-c",
+      "output_tokens": 36,
+      "stop_type": "eos",
+      "content_sha256": "ce524ae9848207f2dfeef88b3f2a840f3de95e8254c825ffc6bf40e4d8763697",
+      "prompt_sha256": "b1ce81c3490318c9458595711bfa5424e599a55b7aa9090a633c777cff49b82a",
+      "grammar_sha256": "057ebdb8c953f07fff068011404b0a98f2f8032fde85619cb1a316c3ed897659",
+      "directory": "blocks/block1/cases/q12-v6-v5-25001-b011-a",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "29"
+        ],
+        [
+          "R6",
+          "34"
+        ],
+        [
+          "R4",
+          "99"
+        ],
+        [
+          "R3",
+          "91"
+        ],
+        [
+          "R2",
+          "11"
+        ],
+        [
+          "R5",
+          "97"
+        ]
+      ],
+      "expected_lines": [
+        "R1|29",
+        "R6|34",
+        "R4|99",
+        "R3|91",
+        "R2|11",
+        "R5|97"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "29"
+        ],
+        [
+          "R6",
+          "34"
+        ],
+        [
+          "R4",
+          "99"
+        ],
+        [
+          "R3",
+          "91"
+        ],
+        [
+          "R2",
+          "11"
+        ],
+        [
+          "R5",
+          "97"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "29",
+          "observed_values": [
+            "29"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R6",
+          "expected": "34",
+          "observed_values": [
+            "34"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R4",
+          "expected": "99",
+          "observed_values": [
+            "99"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R3",
+          "expected": "91",
+          "observed_values": [
+            "91"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R2",
+          "expected": "11",
+          "observed_values": [
+            "11"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "97",
+          "observed_values": [
+            "97"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-i000-b",
+      "pair_id": "v6-v5-25001-i000",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "extract",
+      "category": "interactive",
+      "kind_instance": 0,
+      "condition_order": "AB",
+      "condition_position": 2,
+      "input_token_bucket": 0,
+      "input_tokens": 47,
+      "max_tokens": 64,
+      "block_id": 2,
+      "group_id": 1,
+      "source_req_id": "v5-25001-i000-c",
+      "output_tokens": 6,
+      "stop_type": "eos",
+      "content_sha256": "19123c84b8b3656fd06ec6c1962eba1cb0ac54e6d1430d7435ff8939a2e08680",
+      "prompt_sha256": "3541dfd62702f624510bb0e0cf1688d78ce321c7d5a9d5939c388f589cd48499",
+      "grammar_sha256": "001a07f2dbed94f18eba6ee5938c18b53b02aa160add9064da7b3aeb56323677",
+      "directory": "blocks/block2/cases/q01-v6-v5-25001-i000-b",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "42"
+        ]
+      ],
+      "expected_lines": [
+        "R1|42"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "42"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "42",
+          "observed_values": [
+            "42"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1
+    },
+    {
+      "req_id": "v6-v5-25001-i003-b",
+      "pair_id": "v6-v5-25001-i003",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "extract",
+      "category": "interactive",
+      "kind_instance": 3,
+      "condition_order": "AB",
+      "condition_position": 2,
+      "input_token_bucket": 2,
+      "input_tokens": 158,
+      "max_tokens": 64,
+      "block_id": 2,
+      "group_id": 1,
+      "source_req_id": "v5-25001-i003-c",
+      "output_tokens": 6,
+      "stop_type": "eos",
+      "content_sha256": "a019b554169a6b823dd88e264c029cfb3233e9527bb57ba9e7db6926203819bb",
+      "prompt_sha256": "5fb487d5b667952c9d4a5f645c59e832f76b87c72f1839db99af97a1b5f6f369",
+      "grammar_sha256": "001a07f2dbed94f18eba6ee5938c18b53b02aa160add9064da7b3aeb56323677",
+      "directory": "blocks/block2/cases/q02-v6-v5-25001-i003-b",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "63"
+        ]
+      ],
+      "expected_lines": [
+        "R1|63"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "63"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "63",
+          "observed_values": [
+            "63"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1
+    },
+    {
+      "req_id": "v6-v5-25001-i004-b",
+      "pair_id": "v6-v5-25001-i004",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "check",
+      "category": "interactive",
+      "kind_instance": 0,
+      "condition_order": "AB",
+      "condition_position": 2,
+      "input_token_bucket": 1,
+      "input_tokens": 89,
+      "max_tokens": 64,
+      "block_id": 2,
+      "group_id": 1,
+      "source_req_id": "v5-25001-i004-c",
+      "output_tokens": 5,
+      "stop_type": "eos",
+      "content_sha256": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e",
+      "prompt_sha256": "ecb842cbf71f6d9480336d321b95b9199beed9d618ee13c1ef0d1c1998e6baf5",
+      "grammar_sha256": "3d955a37dfda3f03f798502f6e54e0d6a5629694737c5385844b2c2eccf208b0",
+      "directory": "blocks/block2/cases/q03-v6-v5-25001-i004-b",
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R1",
+          "不一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1|不一致"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 1,
+          "id": "R1",
+          "expected": "不一致",
+          "observed": "一致"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        }
+      ],
+      "target_fields_correct": 0,
+      "target_fields_expected": 1
+    },
+    {
+      "req_id": "v6-v5-25001-i007-b",
+      "pair_id": "v6-v5-25001-i007",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "check",
+      "category": "interactive",
+      "kind_instance": 3,
+      "condition_order": "AB",
+      "condition_position": 2,
+      "input_token_bucket": 0,
+      "input_tokens": 65,
+      "max_tokens": 64,
+      "block_id": 2,
+      "group_id": 1,
+      "source_req_id": "v5-25001-i007-c",
+      "output_tokens": 5,
+      "stop_type": "eos",
+      "content_sha256": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e",
+      "prompt_sha256": "8d2768c1d7b801ce791846bf99ea80b41e84136beee95923fcade8bae86d2c56",
+      "grammar_sha256": "3d955a37dfda3f03f798502f6e54e0d6a5629694737c5385844b2c2eccf208b0",
+      "directory": "blocks/block2/cases/q04-v6-v5-25001-i007-b",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1|一致"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1
+    },
+    {
+      "req_id": "v6-v5-25001-i008-b",
+      "pair_id": "v6-v5-25001-i008",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "organize",
+      "category": "interactive",
+      "kind_instance": 0,
+      "condition_order": "AB",
+      "condition_position": 2,
+      "input_token_bucket": 2,
+      "input_tokens": 155,
+      "max_tokens": 64,
+      "block_id": 2,
+      "group_id": 1,
+      "source_req_id": "v5-25001-i008-c",
+      "output_tokens": 12,
+      "stop_type": "eos",
+      "content_sha256": "5a8a84880ef50d6239459a497db663a6b5ad1d6f1df52b128c71f2a61f5fe719",
+      "prompt_sha256": "1496fe1a728bda390c23aa4a82520c585ef2f497b226c6380a8a016ee888c4b8",
+      "grammar_sha256": "bde1ada0087acc3667e0a7440d4d0f51615eeaca6938cf193141e268c0f71353",
+      "directory": "blocks/block2/cases/q05-v6-v5-25001-i008-b",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "98"
+        ],
+        [
+          "R2",
+          "76"
+        ]
+      ],
+      "expected_lines": [
+        "R1|98",
+        "R2|76"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "98"
+        ],
+        [
+          "R2",
+          "76"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "98",
+          "observed_values": [
+            "98"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R2",
+          "expected": "76",
+          "observed_values": [
+            "76"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2
+    },
+    {
+      "req_id": "v6-v5-25001-i011-b",
+      "pair_id": "v6-v5-25001-i011",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "organize",
+      "category": "interactive",
+      "kind_instance": 3,
+      "condition_order": "AB",
+      "condition_position": 2,
+      "input_token_bucket": 1,
+      "input_tokens": 93,
+      "max_tokens": 64,
+      "block_id": 2,
+      "group_id": 1,
+      "source_req_id": "v5-25001-i011-c",
+      "output_tokens": 12,
+      "stop_type": "eos",
+      "content_sha256": "7d3dc5d3f22960bbfb321b9c55dbddba42beb8ae14d648e94536f8674fe5e355",
+      "prompt_sha256": "b55f51727a5b9ea7b5f0bd79c7408f40c1e10ff5f044d0a6bb577b89b8c79d00",
+      "grammar_sha256": "7aaa325ebc02901cf2ef245a9465d279c6fa533ca270d5dd35fbfd65a1566247",
+      "directory": "blocks/block2/cases/q06-v6-v5-25001-i011-b",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R2",
+          "20"
+        ],
+        [
+          "R1",
+          "29"
+        ]
+      ],
+      "expected_lines": [
+        "R2|20",
+        "R1|29"
+      ],
+      "observed_fields": [
+        [
+          "R2",
+          "20"
+        ],
+        [
+          "R1",
+          "29"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R2",
+          "expected": "20",
+          "observed_values": [
+            "20"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1",
+          "expected": "29",
+          "observed_values": [
+            "29"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2
+    },
+    {
+      "req_id": "v6-v5-25001-b000-b",
+      "pair_id": "v6-v5-25001-b000",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "extract",
+      "category": "background",
+      "kind_instance": 0,
+      "condition_order": "AB",
+      "condition_position": 2,
+      "input_token_bucket": 0,
+      "input_tokens": 140,
+      "max_tokens": 384,
+      "block_id": 2,
+      "group_id": 1,
+      "source_req_id": "v5-25001-b000-c",
+      "output_tokens": 36,
+      "stop_type": "eos",
+      "content_sha256": "515fbcd0d20f46e06d0cd9507221ffd944b35d860821bc8bdbb5c224bdbeae92",
+      "prompt_sha256": "25dc6a7965e4410baeb357e9dc358e5c9cfb648bb7bfb863f3da1e0693780176",
+      "grammar_sha256": "c001e8d985dc474208d1c265c30beb0584c122a3ebe2c82f2def1d1aad985ba4",
+      "directory": "blocks/block2/cases/q07-v6-v5-25001-b000-b",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "42"
+        ],
+        [
+          "R2",
+          "23"
+        ],
+        [
+          "R3",
+          "14"
+        ],
+        [
+          "R4",
+          "76"
+        ],
+        [
+          "R5",
+          "91"
+        ],
+        [
+          "R6",
+          "15"
+        ]
+      ],
+      "expected_lines": [
+        "R1|42",
+        "R2|23",
+        "R3|14",
+        "R4|76",
+        "R5|91",
+        "R6|15"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "42"
+        ],
+        [
+          "R2",
+          "23"
+        ],
+        [
+          "R3",
+          "14"
+        ],
+        [
+          "R4",
+          "76"
+        ],
+        [
+          "R5",
+          "91"
+        ],
+        [
+          "R6",
+          "15"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "42",
+          "observed_values": [
+            "42"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R2",
+          "expected": "23",
+          "observed_values": [
+            "23"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R3",
+          "expected": "14",
+          "observed_values": [
+            "14"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R4",
+          "expected": "76",
+          "observed_values": [
+            "76"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "91",
+          "observed_values": [
+            "91"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R6",
+          "expected": "15",
+          "observed_values": [
+            "15"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-b003-b",
+      "pair_id": "v6-v5-25001-b003",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "extract",
+      "category": "background",
+      "kind_instance": 3,
+      "condition_order": "AB",
+      "condition_position": 2,
+      "input_token_bucket": 2,
+      "input_tokens": 651,
+      "max_tokens": 384,
+      "block_id": 2,
+      "group_id": 1,
+      "source_req_id": "v5-25001-b003-c",
+      "output_tokens": 36,
+      "stop_type": "eos",
+      "content_sha256": "90d0a0538ea823a52756abda4bff2f23777c40e73f4187a0b82aca621681ac47",
+      "prompt_sha256": "6502f04c4011b272a5a6586d0c1f29e4b20653afce78ddde06f7a82ee2fc2aa7",
+      "grammar_sha256": "c001e8d985dc474208d1c265c30beb0584c122a3ebe2c82f2def1d1aad985ba4",
+      "directory": "blocks/block2/cases/q08-v6-v5-25001-b003-b",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "63"
+        ],
+        [
+          "R2",
+          "82"
+        ],
+        [
+          "R3",
+          "58"
+        ],
+        [
+          "R4",
+          "45"
+        ],
+        [
+          "R5",
+          "94"
+        ],
+        [
+          "R6",
+          "20"
+        ]
+      ],
+      "expected_lines": [
+        "R1|63",
+        "R2|82",
+        "R3|58",
+        "R4|45",
+        "R5|94",
+        "R6|20"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "63"
+        ],
+        [
+          "R2",
+          "82"
+        ],
+        [
+          "R3",
+          "58"
+        ],
+        [
+          "R4",
+          "45"
+        ],
+        [
+          "R5",
+          "94"
+        ],
+        [
+          "R6",
+          "20"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "63",
+          "observed_values": [
+            "63"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R2",
+          "expected": "82",
+          "observed_values": [
+            "82"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R3",
+          "expected": "58",
+          "observed_values": [
+            "58"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R4",
+          "expected": "45",
+          "observed_values": [
+            "45"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "94",
+          "observed_values": [
+            "94"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R6",
+          "expected": "20",
+          "observed_values": [
+            "20"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-b004-b",
+      "pair_id": "v6-v5-25001-b004",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "check",
+      "category": "background",
+      "kind_instance": 0,
+      "condition_order": "AB",
+      "condition_position": 2,
+      "input_token_bucket": 1,
+      "input_tokens": 339,
+      "max_tokens": 384,
+      "block_id": 2,
+      "group_id": 1,
+      "source_req_id": "v5-25001-b004-c",
+      "output_tokens": 33,
+      "stop_type": "eos",
+      "content_sha256": "85b760fb0acff76bfe3c3fee458fa2b5a0b8a6def130c742660565753367a022",
+      "prompt_sha256": "afd3ab40e595aaae3dd5ea3359484000692be574ceace24283a44e4e81ca0fb9",
+      "grammar_sha256": "9ca0f719f31e0be7ac4996402e8ad4e11600976cf297e5fc213ed7f77bec5a3f",
+      "directory": "blocks/block2/cases/q09-v6-v5-25001-b004-b",
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R1",
+          "不一致"
+        ],
+        [
+          "R2",
+          "一致"
+        ],
+        [
+          "R3",
+          "不一致"
+        ],
+        [
+          "R4",
+          "一致"
+        ],
+        [
+          "R5",
+          "不一致"
+        ],
+        [
+          "R6",
+          "一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1|不一致",
+        "R2|一致",
+        "R3|不一致",
+        "R4|一致",
+        "R5|不一致",
+        "R6|一致"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "不一致"
+        ],
+        [
+          "R3",
+          "不一致"
+        ],
+        [
+          "R4",
+          "一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "不一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 1,
+          "id": "R1",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "position": 2,
+          "id": "R2",
+          "expected": "一致",
+          "observed": "不一致"
+        },
+        {
+          "position": 5,
+          "id": "R5",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "position": 6,
+          "id": "R6",
+          "expected": "一致",
+          "observed": "不一致"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R2",
+          "expected": "一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R3",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R4",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R6",
+          "expected": "一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "wrong_value"
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-b007-b",
+      "pair_id": "v6-v5-25001-b007",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "check",
+      "category": "background",
+      "kind_instance": 3,
+      "condition_order": "AB",
+      "condition_position": 2,
+      "input_token_bucket": 0,
+      "input_tokens": 147,
+      "max_tokens": 384,
+      "block_id": 2,
+      "group_id": 1,
+      "source_req_id": "v5-25001-b007-c",
+      "output_tokens": 33,
+      "stop_type": "eos",
+      "content_sha256": "763062d5b68885e821fb3b2376e654410ff3dcf3b1b5cb6c522a2b7b60200eea",
+      "prompt_sha256": "67dc16d449a67bb030ba4efceaade6afba9ddaf29655cf5e4bfa5aabf620e7db",
+      "grammar_sha256": "9ca0f719f31e0be7ac4996402e8ad4e11600976cf297e5fc213ed7f77bec5a3f",
+      "directory": "blocks/block2/cases/q10-v6-v5-25001-b007-b",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "不一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "不一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "不一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1|一致",
+        "R2|不一致",
+        "R3|一致",
+        "R4|不一致",
+        "R5|一致",
+        "R6|不一致"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "不一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "不一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "不一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R2",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R3",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R4",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R6",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-b008-b",
+      "pair_id": "v6-v5-25001-b008",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "organize",
+      "category": "background",
+      "kind_instance": 0,
+      "condition_order": "AB",
+      "condition_position": 2,
+      "input_token_bucket": 2,
+      "input_tokens": 653,
+      "max_tokens": 384,
+      "block_id": 2,
+      "group_id": 1,
+      "source_req_id": "v5-25001-b008-c",
+      "output_tokens": 36,
+      "stop_type": "eos",
+      "content_sha256": "ebe46b3c2dc673bda102fb0db2e3f9bd3fe0fdc0086d76e48f0a4e6111ea406d",
+      "prompt_sha256": "cc88168f27771f4555faa54be34ce52169f45f41b1c2ec907d5f2024a64e5dfc",
+      "grammar_sha256": "9411ac6f97484af5c7e21c81731e44bd20bf44f20a2d61cbc1bbb847b3ac5c47",
+      "directory": "blocks/block2/cases/q11-v6-v5-25001-b008-b",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R2",
+          "88"
+        ],
+        [
+          "R1",
+          "98"
+        ],
+        [
+          "R5",
+          "24"
+        ],
+        [
+          "R3",
+          "60"
+        ],
+        [
+          "R6",
+          "35"
+        ],
+        [
+          "R4",
+          "16"
+        ]
+      ],
+      "expected_lines": [
+        "R2|88",
+        "R1|98",
+        "R5|24",
+        "R3|60",
+        "R6|35",
+        "R4|16"
+      ],
+      "observed_fields": [
+        [
+          "R2",
+          "88"
+        ],
+        [
+          "R1",
+          "98"
+        ],
+        [
+          "R5",
+          "24"
+        ],
+        [
+          "R3",
+          "60"
+        ],
+        [
+          "R6",
+          "35"
+        ],
+        [
+          "R4",
+          "16"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R2",
+          "expected": "88",
+          "observed_values": [
+            "88"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1",
+          "expected": "98",
+          "observed_values": [
+            "98"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "24",
+          "observed_values": [
+            "24"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R3",
+          "expected": "60",
+          "observed_values": [
+            "60"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R6",
+          "expected": "35",
+          "observed_values": [
+            "35"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R4",
+          "expected": "16",
+          "observed_values": [
+            "16"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-b011-b",
+      "pair_id": "v6-v5-25001-b011",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "organize",
+      "category": "background",
+      "kind_instance": 3,
+      "condition_order": "AB",
+      "condition_position": 2,
+      "input_token_bucket": 1,
+      "input_tokens": 331,
+      "max_tokens": 384,
+      "block_id": 2,
+      "group_id": 1,
+      "source_req_id": "v5-25001-b011-c",
+      "output_tokens": 36,
+      "stop_type": "eos",
+      "content_sha256": "ce524ae9848207f2dfeef88b3f2a840f3de95e8254c825ffc6bf40e4d8763697",
+      "prompt_sha256": "b1ce81c3490318c9458595711bfa5424e599a55b7aa9090a633c777cff49b82a",
+      "grammar_sha256": "057ebdb8c953f07fff068011404b0a98f2f8032fde85619cb1a316c3ed897659",
+      "directory": "blocks/block2/cases/q12-v6-v5-25001-b011-b",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "29"
+        ],
+        [
+          "R6",
+          "34"
+        ],
+        [
+          "R4",
+          "99"
+        ],
+        [
+          "R3",
+          "91"
+        ],
+        [
+          "R2",
+          "11"
+        ],
+        [
+          "R5",
+          "97"
+        ]
+      ],
+      "expected_lines": [
+        "R1|29",
+        "R6|34",
+        "R4|99",
+        "R3|91",
+        "R2|11",
+        "R5|97"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "29"
+        ],
+        [
+          "R6",
+          "34"
+        ],
+        [
+          "R4",
+          "99"
+        ],
+        [
+          "R3",
+          "91"
+        ],
+        [
+          "R2",
+          "11"
+        ],
+        [
+          "R5",
+          "97"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "29",
+          "observed_values": [
+            "29"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R6",
+          "expected": "34",
+          "observed_values": [
+            "34"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R4",
+          "expected": "99",
+          "observed_values": [
+            "99"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R3",
+          "expected": "91",
+          "observed_values": [
+            "91"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R2",
+          "expected": "11",
+          "observed_values": [
+            "11"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "97",
+          "observed_values": [
+            "97"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-i001-b",
+      "pair_id": "v6-v5-25001-i001",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "extract",
+      "category": "interactive",
+      "kind_instance": 1,
+      "condition_order": "BA",
+      "condition_position": 1,
+      "input_token_bucket": 0,
+      "input_tokens": 47,
+      "max_tokens": 64,
+      "block_id": 3,
+      "group_id": 2,
+      "source_req_id": "v5-25001-i001-c",
+      "output_tokens": 6,
+      "stop_type": "eos",
+      "content_sha256": "0179d9618465787f1338027c59ce4d3389aa8042fbd90c740d987f59c69f1a26",
+      "prompt_sha256": "f891f3a7bf13f9adbc7001ce59816a23ca6eac7bea7ad45f513782ff3540b90f",
+      "grammar_sha256": "001a07f2dbed94f18eba6ee5938c18b53b02aa160add9064da7b3aeb56323677",
+      "directory": "blocks/block3/cases/q01-v6-v5-25001-i001-b",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "49"
+        ]
+      ],
+      "expected_lines": [
+        "R1|49"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "49"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "49",
+          "observed_values": [
+            "49"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1
+    },
+    {
+      "req_id": "v6-v5-25001-i002-b",
+      "pair_id": "v6-v5-25001-i002",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "extract",
+      "category": "interactive",
+      "kind_instance": 2,
+      "condition_order": "BA",
+      "condition_position": 1,
+      "input_token_bucket": 1,
+      "input_tokens": 89,
+      "max_tokens": 64,
+      "block_id": 3,
+      "group_id": 2,
+      "source_req_id": "v5-25001-i002-c",
+      "output_tokens": 6,
+      "stop_type": "eos",
+      "content_sha256": "0670e4036fced556ab1eea5d05e4407a2f570c9d279f3b5a50ae802a27be783d",
+      "prompt_sha256": "dea57b424b3d9a37ea0dab9a798e91a9a4f4386889b23c9b85ec8db015a42b7c",
+      "grammar_sha256": "001a07f2dbed94f18eba6ee5938c18b53b02aa160add9064da7b3aeb56323677",
+      "directory": "blocks/block3/cases/q02-v6-v5-25001-i002-b",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "56"
+        ]
+      ],
+      "expected_lines": [
+        "R1|56"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "56"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "56",
+          "observed_values": [
+            "56"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1
+    },
+    {
+      "req_id": "v6-v5-25001-i005-b",
+      "pair_id": "v6-v5-25001-i005",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "check",
+      "category": "interactive",
+      "kind_instance": 1,
+      "condition_order": "BA",
+      "condition_position": 1,
+      "input_token_bucket": 1,
+      "input_tokens": 89,
+      "max_tokens": 64,
+      "block_id": 3,
+      "group_id": 2,
+      "source_req_id": "v5-25001-i005-c",
+      "output_tokens": 5,
+      "stop_type": "eos",
+      "content_sha256": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e",
+      "prompt_sha256": "f3a594dbedeb1422e1d7a32c3733ef9e3bf6c54298cd9fd99805c3363a123a63",
+      "grammar_sha256": "3d955a37dfda3f03f798502f6e54e0d6a5629694737c5385844b2c2eccf208b0",
+      "directory": "blocks/block3/cases/q03-v6-v5-25001-i005-b",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1|一致"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1
+    },
+    {
+      "req_id": "v6-v5-25001-i006-b",
+      "pair_id": "v6-v5-25001-i006",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "check",
+      "category": "interactive",
+      "kind_instance": 2,
+      "condition_order": "BA",
+      "condition_position": 1,
+      "input_token_bucket": 2,
+      "input_tokens": 161,
+      "max_tokens": 64,
+      "block_id": 3,
+      "group_id": 2,
+      "source_req_id": "v5-25001-i006-c",
+      "output_tokens": 5,
+      "stop_type": "eos",
+      "content_sha256": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e",
+      "prompt_sha256": "4d727c3572c1453e2374c531617486d79e25da3705e1ba28a697162e97044a9e",
+      "grammar_sha256": "3d955a37dfda3f03f798502f6e54e0d6a5629694737c5385844b2c2eccf208b0",
+      "directory": "blocks/block3/cases/q04-v6-v5-25001-i006-b",
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R1",
+          "不一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1|不一致"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 1,
+          "id": "R1",
+          "expected": "不一致",
+          "observed": "一致"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        }
+      ],
+      "target_fields_correct": 0,
+      "target_fields_expected": 1
+    },
+    {
+      "req_id": "v6-v5-25001-i009-b",
+      "pair_id": "v6-v5-25001-i009",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "organize",
+      "category": "interactive",
+      "kind_instance": 1,
+      "condition_order": "BA",
+      "condition_position": 1,
+      "input_token_bucket": 2,
+      "input_tokens": 155,
+      "max_tokens": 64,
+      "block_id": 3,
+      "group_id": 2,
+      "source_req_id": "v5-25001-i009-c",
+      "output_tokens": 12,
+      "stop_type": "eos",
+      "content_sha256": "00e95c7ee278d12b2eb462239bd93b5ca3447b932d07555e09a85a2b3fd43c62",
+      "prompt_sha256": "4e9a2bb80c87e353c44794929f9b594d563039253336ad1a29381b7c6cb2ba2f",
+      "grammar_sha256": "7aaa325ebc02901cf2ef245a9465d279c6fa533ca270d5dd35fbfd65a1566247",
+      "directory": "blocks/block3/cases/q05-v6-v5-25001-i009-b",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R2",
+          "76"
+        ],
+        [
+          "R1",
+          "15"
+        ]
+      ],
+      "expected_lines": [
+        "R2|76",
+        "R1|15"
+      ],
+      "observed_fields": [
+        [
+          "R2",
+          "76"
+        ],
+        [
+          "R1",
+          "15"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R2",
+          "expected": "76",
+          "observed_values": [
+            "76"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1",
+          "expected": "15",
+          "observed_values": [
+            "15"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2
+    },
+    {
+      "req_id": "v6-v5-25001-i010-b",
+      "pair_id": "v6-v5-25001-i010",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "organize",
+      "category": "interactive",
+      "kind_instance": 2,
+      "condition_order": "BA",
+      "condition_position": 1,
+      "input_token_bucket": 0,
+      "input_tokens": 57,
+      "max_tokens": 64,
+      "block_id": 3,
+      "group_id": 2,
+      "source_req_id": "v5-25001-i010-c",
+      "output_tokens": 12,
+      "stop_type": "eos",
+      "content_sha256": "b3aa71621572e4e07cf086e4954a13f45da7c5b926f1eb51358508e4931f7e6d",
+      "prompt_sha256": "d9d28075df737c3fa477f28e7cb91b00e81bc3a5dc2759b6c73c8a890deba832",
+      "grammar_sha256": "7aaa325ebc02901cf2ef245a9465d279c6fa533ca270d5dd35fbfd65a1566247",
+      "directory": "blocks/block3/cases/q06-v6-v5-25001-i010-b",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R2",
+          "79"
+        ],
+        [
+          "R1",
+          "22"
+        ]
+      ],
+      "expected_lines": [
+        "R2|79",
+        "R1|22"
+      ],
+      "observed_fields": [
+        [
+          "R2",
+          "79"
+        ],
+        [
+          "R1",
+          "22"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R2",
+          "expected": "79",
+          "observed_values": [
+            "79"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1",
+          "expected": "22",
+          "observed_values": [
+            "22"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2
+    },
+    {
+      "req_id": "v6-v5-25001-b001-b",
+      "pair_id": "v6-v5-25001-b001",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "extract",
+      "category": "background",
+      "kind_instance": 1,
+      "condition_order": "BA",
+      "condition_position": 1,
+      "input_token_bucket": 0,
+      "input_tokens": 140,
+      "max_tokens": 384,
+      "block_id": 3,
+      "group_id": 2,
+      "source_req_id": "v5-25001-b001-c",
+      "output_tokens": 36,
+      "stop_type": "eos",
+      "content_sha256": "efbe358ba6ddde1cf328f8c09aea2368bbbb714f818ce289d280ce50921ebc5a",
+      "prompt_sha256": "89a3fe16f1b01667e8a599e0f38d0c1fcb8d1c116b1cac1d54cbf8a87ebe0938",
+      "grammar_sha256": "c001e8d985dc474208d1c265c30beb0584c122a3ebe2c82f2def1d1aad985ba4",
+      "directory": "blocks/block3/cases/q07-v6-v5-25001-b001-b",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "49"
+        ],
+        [
+          "R2",
+          "21"
+        ],
+        [
+          "R3",
+          "49"
+        ],
+        [
+          "R4",
+          "47"
+        ],
+        [
+          "R5",
+          "21"
+        ],
+        [
+          "R6",
+          "66"
+        ]
+      ],
+      "expected_lines": [
+        "R1|49",
+        "R2|21",
+        "R3|49",
+        "R4|47",
+        "R5|21",
+        "R6|66"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "49"
+        ],
+        [
+          "R2",
+          "21"
+        ],
+        [
+          "R3",
+          "49"
+        ],
+        [
+          "R4",
+          "47"
+        ],
+        [
+          "R5",
+          "21"
+        ],
+        [
+          "R6",
+          "66"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "49",
+          "observed_values": [
+            "49"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R2",
+          "expected": "21",
+          "observed_values": [
+            "21"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R3",
+          "expected": "49",
+          "observed_values": [
+            "49"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R4",
+          "expected": "47",
+          "observed_values": [
+            "47"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "21",
+          "observed_values": [
+            "21"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R6",
+          "expected": "66",
+          "observed_values": [
+            "66"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-b002-b",
+      "pair_id": "v6-v5-25001-b002",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "extract",
+      "category": "background",
+      "kind_instance": 2,
+      "condition_order": "BA",
+      "condition_position": 1,
+      "input_token_bucket": 1,
+      "input_tokens": 329,
+      "max_tokens": 384,
+      "block_id": 3,
+      "group_id": 2,
+      "source_req_id": "v5-25001-b002-c",
+      "output_tokens": 36,
+      "stop_type": "eos",
+      "content_sha256": "07fb9a366b47debe291956c5544cd034cca6996f61dbdc59e04df482e977064b",
+      "prompt_sha256": "e1ea7bb3afc800e5f4c511817331ddb25878dd06cb77e3d83e790efe2bf2b394",
+      "grammar_sha256": "c001e8d985dc474208d1c265c30beb0584c122a3ebe2c82f2def1d1aad985ba4",
+      "directory": "blocks/block3/cases/q08-v6-v5-25001-b002-b",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "56"
+        ],
+        [
+          "R2",
+          "25"
+        ],
+        [
+          "R3",
+          "37"
+        ],
+        [
+          "R4",
+          "49"
+        ],
+        [
+          "R5",
+          "10"
+        ],
+        [
+          "R6",
+          "42"
+        ]
+      ],
+      "expected_lines": [
+        "R1|56",
+        "R2|25",
+        "R3|37",
+        "R4|49",
+        "R5|10",
+        "R6|42"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "56"
+        ],
+        [
+          "R2",
+          "25"
+        ],
+        [
+          "R3",
+          "37"
+        ],
+        [
+          "R4",
+          "49"
+        ],
+        [
+          "R5",
+          "10"
+        ],
+        [
+          "R6",
+          "42"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "56",
+          "observed_values": [
+            "56"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R2",
+          "expected": "25",
+          "observed_values": [
+            "25"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R3",
+          "expected": "37",
+          "observed_values": [
+            "37"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R4",
+          "expected": "49",
+          "observed_values": [
+            "49"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "10",
+          "observed_values": [
+            "10"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R6",
+          "expected": "42",
+          "observed_values": [
+            "42"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-b005-b",
+      "pair_id": "v6-v5-25001-b005",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "check",
+      "category": "background",
+      "kind_instance": 1,
+      "condition_order": "BA",
+      "condition_position": 1,
+      "input_token_bucket": 1,
+      "input_tokens": 339,
+      "max_tokens": 384,
+      "block_id": 3,
+      "group_id": 2,
+      "source_req_id": "v5-25001-b005-c",
+      "output_tokens": 33,
+      "stop_type": "eos",
+      "content_sha256": "763062d5b68885e821fb3b2376e654410ff3dcf3b1b5cb6c522a2b7b60200eea",
+      "prompt_sha256": "6980ecf9e0a3de0ba2efbf704e5712bdd2aaca0a03b9926770ac3485c8317f67",
+      "grammar_sha256": "9ca0f719f31e0be7ac4996402e8ad4e11600976cf297e5fc213ed7f77bec5a3f",
+      "directory": "blocks/block3/cases/q09-v6-v5-25001-b005-b",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "不一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "不一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "不一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1|一致",
+        "R2|不一致",
+        "R3|一致",
+        "R4|不一致",
+        "R5|一致",
+        "R6|不一致"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "不一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "不一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "不一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R2",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R3",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R4",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R6",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-b006-b",
+      "pair_id": "v6-v5-25001-b006",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "check",
+      "category": "background",
+      "kind_instance": 2,
+      "condition_order": "BA",
+      "condition_position": 1,
+      "input_token_bucket": 2,
+      "input_tokens": 661,
+      "max_tokens": 384,
+      "block_id": 3,
+      "group_id": 2,
+      "source_req_id": "v5-25001-b006-c",
+      "output_tokens": 32,
+      "stop_type": "eos",
+      "content_sha256": "a10d0c4ad358e6ab6711cb6625105554f6aabc6eea35e67ac82cc0406942b0a2",
+      "prompt_sha256": "62027ddc595f59da40a7f8351430e4492306064991e1db35add11155e7fb0cb8",
+      "grammar_sha256": "9ca0f719f31e0be7ac4996402e8ad4e11600976cf297e5fc213ed7f77bec5a3f",
+      "directory": "blocks/block3/cases/q10-v6-v5-25001-b006-b",
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R1",
+          "不一致"
+        ],
+        [
+          "R2",
+          "一致"
+        ],
+        [
+          "R3",
+          "不一致"
+        ],
+        [
+          "R4",
+          "一致"
+        ],
+        [
+          "R5",
+          "不一致"
+        ],
+        [
+          "R6",
+          "一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1|不一致",
+        "R2|一致",
+        "R3|不一致",
+        "R4|一致",
+        "R5|不一致",
+        "R6|一致"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "不一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "不一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 1,
+          "id": "R1",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "position": 3,
+          "id": "R3",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "position": 4,
+          "id": "R4",
+          "expected": "一致",
+          "observed": "不一致"
+        },
+        {
+          "position": 5,
+          "id": "R5",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "position": 6,
+          "id": "R6",
+          "expected": "一致",
+          "observed": "不一致"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R2",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R3",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R4",
+          "expected": "一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R5",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R6",
+          "expected": "一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "wrong_value"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-b009-b",
+      "pair_id": "v6-v5-25001-b009",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "organize",
+      "category": "background",
+      "kind_instance": 1,
+      "condition_order": "BA",
+      "condition_position": 1,
+      "input_token_bucket": 2,
+      "input_tokens": 653,
+      "max_tokens": 384,
+      "block_id": 3,
+      "group_id": 2,
+      "source_req_id": "v5-25001-b009-c",
+      "output_tokens": 36,
+      "stop_type": "eos",
+      "content_sha256": "3d95d00dfaa5e880adf58c57ba4b529ae71e26ae5083badf0442772cf0b794c2",
+      "prompt_sha256": "c2d3813d7991f66f2470c8606cc2ec563aac54dda1b8e32fe05beedcf091ca24",
+      "grammar_sha256": "d7a4a9e439f8060a5f4c34f6245d63feb541cb7e2bcf798e4a3c9a6744ae7962",
+      "directory": "blocks/block3/cases/q11-v6-v5-25001-b009-b",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R6",
+          "43"
+        ],
+        [
+          "R2",
+          "17"
+        ],
+        [
+          "R3",
+          "63"
+        ],
+        [
+          "R5",
+          "17"
+        ],
+        [
+          "R1",
+          "15"
+        ],
+        [
+          "R4",
+          "41"
+        ]
+      ],
+      "expected_lines": [
+        "R6|43",
+        "R2|17",
+        "R3|63",
+        "R5|17",
+        "R1|15",
+        "R4|41"
+      ],
+      "observed_fields": [
+        [
+          "R6",
+          "43"
+        ],
+        [
+          "R2",
+          "17"
+        ],
+        [
+          "R3",
+          "63"
+        ],
+        [
+          "R5",
+          "17"
+        ],
+        [
+          "R1",
+          "15"
+        ],
+        [
+          "R4",
+          "41"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R6",
+          "expected": "43",
+          "observed_values": [
+            "43"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R2",
+          "expected": "17",
+          "observed_values": [
+            "17"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R3",
+          "expected": "63",
+          "observed_values": [
+            "63"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "17",
+          "observed_values": [
+            "17"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1",
+          "expected": "15",
+          "observed_values": [
+            "15"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R4",
+          "expected": "41",
+          "observed_values": [
+            "41"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-b010-b",
+      "pair_id": "v6-v5-25001-b010",
+      "arm": "B",
+      "instruction_arm": "C",
+      "task_kind": "organize",
+      "category": "background",
+      "kind_instance": 2,
+      "condition_order": "BA",
+      "condition_position": 1,
+      "input_token_bucket": 0,
+      "input_tokens": 142,
+      "max_tokens": 384,
+      "block_id": 3,
+      "group_id": 2,
+      "source_req_id": "v5-25001-b010-c",
+      "output_tokens": 36,
+      "stop_type": "eos",
+      "content_sha256": "a1cd306e8e70027356fb2efd08b953c7ec3271fb05ba6f847893833f47cbc2fd",
+      "prompt_sha256": "f8208b032f2cf5cecb2fb1b044a323baa5752d967cab61161a88d0bc6d5f5751",
+      "grammar_sha256": "cb6455ef893da425d2a77c8decb2dab3abd217a58313090a21e43f16c567f64a",
+      "directory": "blocks/block3/cases/q12-v6-v5-25001-b010-b",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R3",
+          "19"
+        ],
+        [
+          "R1",
+          "22"
+        ],
+        [
+          "R4",
+          "10"
+        ],
+        [
+          "R2",
+          "10"
+        ],
+        [
+          "R6",
+          "88"
+        ],
+        [
+          "R5",
+          "59"
+        ]
+      ],
+      "expected_lines": [
+        "R3|19",
+        "R1|22",
+        "R4|10",
+        "R2|10",
+        "R6|88",
+        "R5|59"
+      ],
+      "observed_fields": [
+        [
+          "R3",
+          "19"
+        ],
+        [
+          "R1",
+          "22"
+        ],
+        [
+          "R4",
+          "10"
+        ],
+        [
+          "R2",
+          "10"
+        ],
+        [
+          "R6",
+          "88"
+        ],
+        [
+          "R5",
+          "59"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R3",
+          "expected": "19",
+          "observed_values": [
+            "19"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1",
+          "expected": "22",
+          "observed_values": [
+            "22"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R4",
+          "expected": "10",
+          "observed_values": [
+            "10"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R2",
+          "expected": "10",
+          "observed_values": [
+            "10"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R6",
+          "expected": "88",
+          "observed_values": [
+            "88"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "59",
+          "observed_values": [
+            "59"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-i001-a",
+      "pair_id": "v6-v5-25001-i001",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "extract",
+      "category": "interactive",
+      "kind_instance": 1,
+      "condition_order": "BA",
+      "condition_position": 2,
+      "input_token_bucket": 0,
+      "input_tokens": 47,
+      "max_tokens": 64,
+      "block_id": 4,
+      "group_id": 2,
+      "source_req_id": "v5-25001-i001-c",
+      "output_tokens": 6,
+      "stop_type": "eos",
+      "content_sha256": "0179d9618465787f1338027c59ce4d3389aa8042fbd90c740d987f59c69f1a26",
+      "prompt_sha256": "f891f3a7bf13f9adbc7001ce59816a23ca6eac7bea7ad45f513782ff3540b90f",
+      "grammar_sha256": "001a07f2dbed94f18eba6ee5938c18b53b02aa160add9064da7b3aeb56323677",
+      "directory": "blocks/block4/cases/q01-v6-v5-25001-i001-a",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "49"
+        ]
+      ],
+      "expected_lines": [
+        "R1|49"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "49"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "49",
+          "observed_values": [
+            "49"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1
+    },
+    {
+      "req_id": "v6-v5-25001-i002-a",
+      "pair_id": "v6-v5-25001-i002",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "extract",
+      "category": "interactive",
+      "kind_instance": 2,
+      "condition_order": "BA",
+      "condition_position": 2,
+      "input_token_bucket": 1,
+      "input_tokens": 89,
+      "max_tokens": 64,
+      "block_id": 4,
+      "group_id": 2,
+      "source_req_id": "v5-25001-i002-c",
+      "output_tokens": 6,
+      "stop_type": "eos",
+      "content_sha256": "0670e4036fced556ab1eea5d05e4407a2f570c9d279f3b5a50ae802a27be783d",
+      "prompt_sha256": "dea57b424b3d9a37ea0dab9a798e91a9a4f4386889b23c9b85ec8db015a42b7c",
+      "grammar_sha256": "001a07f2dbed94f18eba6ee5938c18b53b02aa160add9064da7b3aeb56323677",
+      "directory": "blocks/block4/cases/q02-v6-v5-25001-i002-a",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "56"
+        ]
+      ],
+      "expected_lines": [
+        "R1|56"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "56"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "56",
+          "observed_values": [
+            "56"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1
+    },
+    {
+      "req_id": "v6-v5-25001-i005-a",
+      "pair_id": "v6-v5-25001-i005",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "check",
+      "category": "interactive",
+      "kind_instance": 1,
+      "condition_order": "BA",
+      "condition_position": 2,
+      "input_token_bucket": 1,
+      "input_tokens": 89,
+      "max_tokens": 64,
+      "block_id": 4,
+      "group_id": 2,
+      "source_req_id": "v5-25001-i005-c",
+      "output_tokens": 5,
+      "stop_type": "eos",
+      "content_sha256": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e",
+      "prompt_sha256": "f3a594dbedeb1422e1d7a32c3733ef9e3bf6c54298cd9fd99805c3363a123a63",
+      "grammar_sha256": "3d955a37dfda3f03f798502f6e54e0d6a5629694737c5385844b2c2eccf208b0",
+      "directory": "blocks/block4/cases/q03-v6-v5-25001-i005-a",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1|一致"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1
+    },
+    {
+      "req_id": "v6-v5-25001-i006-a",
+      "pair_id": "v6-v5-25001-i006",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "check",
+      "category": "interactive",
+      "kind_instance": 2,
+      "condition_order": "BA",
+      "condition_position": 2,
+      "input_token_bucket": 2,
+      "input_tokens": 161,
+      "max_tokens": 64,
+      "block_id": 4,
+      "group_id": 2,
+      "source_req_id": "v5-25001-i006-c",
+      "output_tokens": 5,
+      "stop_type": "eos",
+      "content_sha256": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e",
+      "prompt_sha256": "4d727c3572c1453e2374c531617486d79e25da3705e1ba28a697162e97044a9e",
+      "grammar_sha256": "3d955a37dfda3f03f798502f6e54e0d6a5629694737c5385844b2c2eccf208b0",
+      "directory": "blocks/block4/cases/q04-v6-v5-25001-i006-a",
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R1",
+          "不一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1|不一致"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 1,
+          "id": "R1",
+          "expected": "不一致",
+          "observed": "一致"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        }
+      ],
+      "target_fields_correct": 0,
+      "target_fields_expected": 1
+    },
+    {
+      "req_id": "v6-v5-25001-i009-a",
+      "pair_id": "v6-v5-25001-i009",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "organize",
+      "category": "interactive",
+      "kind_instance": 1,
+      "condition_order": "BA",
+      "condition_position": 2,
+      "input_token_bucket": 2,
+      "input_tokens": 155,
+      "max_tokens": 64,
+      "block_id": 4,
+      "group_id": 2,
+      "source_req_id": "v5-25001-i009-c",
+      "output_tokens": 12,
+      "stop_type": "eos",
+      "content_sha256": "00e95c7ee278d12b2eb462239bd93b5ca3447b932d07555e09a85a2b3fd43c62",
+      "prompt_sha256": "4e9a2bb80c87e353c44794929f9b594d563039253336ad1a29381b7c6cb2ba2f",
+      "grammar_sha256": "7aaa325ebc02901cf2ef245a9465d279c6fa533ca270d5dd35fbfd65a1566247",
+      "directory": "blocks/block4/cases/q05-v6-v5-25001-i009-a",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R2",
+          "76"
+        ],
+        [
+          "R1",
+          "15"
+        ]
+      ],
+      "expected_lines": [
+        "R2|76",
+        "R1|15"
+      ],
+      "observed_fields": [
+        [
+          "R2",
+          "76"
+        ],
+        [
+          "R1",
+          "15"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R2",
+          "expected": "76",
+          "observed_values": [
+            "76"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1",
+          "expected": "15",
+          "observed_values": [
+            "15"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2
+    },
+    {
+      "req_id": "v6-v5-25001-i010-a",
+      "pair_id": "v6-v5-25001-i010",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "organize",
+      "category": "interactive",
+      "kind_instance": 2,
+      "condition_order": "BA",
+      "condition_position": 2,
+      "input_token_bucket": 0,
+      "input_tokens": 57,
+      "max_tokens": 64,
+      "block_id": 4,
+      "group_id": 2,
+      "source_req_id": "v5-25001-i010-c",
+      "output_tokens": 12,
+      "stop_type": "eos",
+      "content_sha256": "b3aa71621572e4e07cf086e4954a13f45da7c5b926f1eb51358508e4931f7e6d",
+      "prompt_sha256": "d9d28075df737c3fa477f28e7cb91b00e81bc3a5dc2759b6c73c8a890deba832",
+      "grammar_sha256": "7aaa325ebc02901cf2ef245a9465d279c6fa533ca270d5dd35fbfd65a1566247",
+      "directory": "blocks/block4/cases/q06-v6-v5-25001-i010-a",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R2",
+          "79"
+        ],
+        [
+          "R1",
+          "22"
+        ]
+      ],
+      "expected_lines": [
+        "R2|79",
+        "R1|22"
+      ],
+      "observed_fields": [
+        [
+          "R2",
+          "79"
+        ],
+        [
+          "R1",
+          "22"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R2",
+          "expected": "79",
+          "observed_values": [
+            "79"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1",
+          "expected": "22",
+          "observed_values": [
+            "22"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2
+    },
+    {
+      "req_id": "v6-v5-25001-b001-a",
+      "pair_id": "v6-v5-25001-b001",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "extract",
+      "category": "background",
+      "kind_instance": 1,
+      "condition_order": "BA",
+      "condition_position": 2,
+      "input_token_bucket": 0,
+      "input_tokens": 140,
+      "max_tokens": 384,
+      "block_id": 4,
+      "group_id": 2,
+      "source_req_id": "v5-25001-b001-c",
+      "output_tokens": 36,
+      "stop_type": "eos",
+      "content_sha256": "efbe358ba6ddde1cf328f8c09aea2368bbbb714f818ce289d280ce50921ebc5a",
+      "prompt_sha256": "89a3fe16f1b01667e8a599e0f38d0c1fcb8d1c116b1cac1d54cbf8a87ebe0938",
+      "grammar_sha256": "c001e8d985dc474208d1c265c30beb0584c122a3ebe2c82f2def1d1aad985ba4",
+      "directory": "blocks/block4/cases/q07-v6-v5-25001-b001-a",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1",
+          "49"
+        ],
+        [
+          "R2",
+          "21"
+        ],
+        [
+          "R3",
+          "49"
+        ],
+        [
+          "R4",
+          "47"
+        ],
+        [
+          "R5",
+          "21"
+        ],
+        [
+          "R6",
+          "66"
+        ]
+      ],
+      "expected_lines": [
+        "R1|49",
+        "R2|21",
+        "R3|49",
+        "R4|47",
+        "R5|21",
+        "R6|66"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "49"
+        ],
+        [
+          "R2",
+          "21"
+        ],
+        [
+          "R3",
+          "49"
+        ],
+        [
+          "R4",
+          "47"
+        ],
+        [
+          "R5",
+          "21"
+        ],
+        [
+          "R6",
+          "66"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "49",
+          "observed_values": [
+            "49"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R2",
+          "expected": "21",
+          "observed_values": [
+            "21"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R3",
+          "expected": "49",
+          "observed_values": [
+            "49"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R4",
+          "expected": "47",
+          "observed_values": [
+            "47"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "21",
+          "observed_values": [
+            "21"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R6",
+          "expected": "66",
+          "observed_values": [
+            "66"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-b002-a",
+      "pair_id": "v6-v5-25001-b002",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "extract",
+      "category": "background",
+      "kind_instance": 2,
+      "condition_order": "BA",
+      "condition_position": 2,
+      "input_token_bucket": 1,
+      "input_tokens": 329,
+      "max_tokens": 384,
+      "block_id": 4,
+      "group_id": 2,
+      "source_req_id": "v5-25001-b002-c",
+      "output_tokens": 36,
+      "stop_type": "eos",
+      "content_sha256": "8fdd89ecdfb9c1a70bb9f768b7189bf2f0f9c9ad0ffec41b4b25a54da065e1c0",
+      "prompt_sha256": "e1ea7bb3afc800e5f4c511817331ddb25878dd06cb77e3d83e790efe2bf2b394",
+      "grammar_sha256": "c001e8d985dc474208d1c265c30beb0584c122a3ebe2c82f2def1d1aad985ba4",
+      "directory": "blocks/block4/cases/q08-v6-v5-25001-b002-a",
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R1",
+          "56"
+        ],
+        [
+          "R2",
+          "25"
+        ],
+        [
+          "R3",
+          "37"
+        ],
+        [
+          "R4",
+          "49"
+        ],
+        [
+          "R5",
+          "10"
+        ],
+        [
+          "R6",
+          "42"
+        ]
+      ],
+      "expected_lines": [
+        "R1|56",
+        "R2|25",
+        "R3|37",
+        "R4|49",
+        "R5|10",
+        "R6|42"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "73"
+        ],
+        [
+          "R2",
+          "25"
+        ],
+        [
+          "R3",
+          "37"
+        ],
+        [
+          "R4",
+          "49"
+        ],
+        [
+          "R5",
+          "10"
+        ],
+        [
+          "R6",
+          "42"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 1,
+          "id": "R1",
+          "expected": "56",
+          "observed": "73"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "56",
+          "observed_values": [
+            "73"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R2",
+          "expected": "25",
+          "observed_values": [
+            "25"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R3",
+          "expected": "37",
+          "observed_values": [
+            "37"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R4",
+          "expected": "49",
+          "observed_values": [
+            "49"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "10",
+          "observed_values": [
+            "10"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R6",
+          "expected": "42",
+          "observed_values": [
+            "42"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 5,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-b005-a",
+      "pair_id": "v6-v5-25001-b005",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "check",
+      "category": "background",
+      "kind_instance": 1,
+      "condition_order": "BA",
+      "condition_position": 2,
+      "input_token_bucket": 1,
+      "input_tokens": 339,
+      "max_tokens": 384,
+      "block_id": 4,
+      "group_id": 2,
+      "source_req_id": "v5-25001-b005-c",
+      "output_tokens": 32,
+      "stop_type": "eos",
+      "content_sha256": "a10d0c4ad358e6ab6711cb6625105554f6aabc6eea35e67ac82cc0406942b0a2",
+      "prompt_sha256": "6980ecf9e0a3de0ba2efbf704e5712bdd2aaca0a03b9926770ac3485c8317f67",
+      "grammar_sha256": "9ca0f719f31e0be7ac4996402e8ad4e11600976cf297e5fc213ed7f77bec5a3f",
+      "directory": "blocks/block4/cases/q09-v6-v5-25001-b005-a",
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "不一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "不一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "不一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1|一致",
+        "R2|不一致",
+        "R3|一致",
+        "R4|不一致",
+        "R5|一致",
+        "R6|不一致"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "不一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "不一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 2,
+          "id": "R2",
+          "expected": "不一致",
+          "observed": "一致"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R2",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R3",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R4",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R6",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 5,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-b006-a",
+      "pair_id": "v6-v5-25001-b006",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "check",
+      "category": "background",
+      "kind_instance": 2,
+      "condition_order": "BA",
+      "condition_position": 2,
+      "input_token_bucket": 2,
+      "input_tokens": 661,
+      "max_tokens": 384,
+      "block_id": 4,
+      "group_id": 2,
+      "source_req_id": "v5-25001-b006-c",
+      "output_tokens": 30,
+      "stop_type": "eos",
+      "content_sha256": "51575a9e53043fa153cd278a748906685b062558c201ade33a2c2b05f56c84a7",
+      "prompt_sha256": "62027ddc595f59da40a7f8351430e4492306064991e1db35add11155e7fb0cb8",
+      "grammar_sha256": "9ca0f719f31e0be7ac4996402e8ad4e11600976cf297e5fc213ed7f77bec5a3f",
+      "directory": "blocks/block4/cases/q10-v6-v5-25001-b006-a",
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R1",
+          "不一致"
+        ],
+        [
+          "R2",
+          "一致"
+        ],
+        [
+          "R3",
+          "不一致"
+        ],
+        [
+          "R4",
+          "一致"
+        ],
+        [
+          "R5",
+          "不一致"
+        ],
+        [
+          "R6",
+          "一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1|不一致",
+        "R2|一致",
+        "R3|不一致",
+        "R4|一致",
+        "R5|不一致",
+        "R6|一致"
+      ],
+      "observed_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 1,
+          "id": "R1",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "position": 3,
+          "id": "R3",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "position": 5,
+          "id": "R5",
+          "expected": "不一致",
+          "observed": "一致"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R2",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R3",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R4",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R6",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 3,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-b009-a",
+      "pair_id": "v6-v5-25001-b009",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "organize",
+      "category": "background",
+      "kind_instance": 1,
+      "condition_order": "BA",
+      "condition_position": 2,
+      "input_token_bucket": 2,
+      "input_tokens": 653,
+      "max_tokens": 384,
+      "block_id": 4,
+      "group_id": 2,
+      "source_req_id": "v5-25001-b009-c",
+      "output_tokens": 36,
+      "stop_type": "eos",
+      "content_sha256": "9af448db3366e66fef13fb5d1b6fe7b0501fb633f4b8ca51a132c900d8cfb38d",
+      "prompt_sha256": "c2d3813d7991f66f2470c8606cc2ec563aac54dda1b8e32fe05beedcf091ca24",
+      "grammar_sha256": "d7a4a9e439f8060a5f4c34f6245d63feb541cb7e2bcf798e4a3c9a6744ae7962",
+      "directory": "blocks/block4/cases/q11-v6-v5-25001-b009-a",
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R6",
+          "43"
+        ],
+        [
+          "R2",
+          "17"
+        ],
+        [
+          "R3",
+          "63"
+        ],
+        [
+          "R5",
+          "17"
+        ],
+        [
+          "R1",
+          "15"
+        ],
+        [
+          "R4",
+          "41"
+        ]
+      ],
+      "expected_lines": [
+        "R6|43",
+        "R2|17",
+        "R3|63",
+        "R5|17",
+        "R1|15",
+        "R4|41"
+      ],
+      "observed_fields": [
+        [
+          "R6",
+          "73"
+        ],
+        [
+          "R2",
+          "17"
+        ],
+        [
+          "R3",
+          "63"
+        ],
+        [
+          "R5",
+          "17"
+        ],
+        [
+          "R1",
+          "15"
+        ],
+        [
+          "R4",
+          "41"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 1,
+          "id": "R6",
+          "expected": "43",
+          "observed": "73"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R6",
+          "expected": "43",
+          "observed_values": [
+            "73"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R2",
+          "expected": "17",
+          "observed_values": [
+            "17"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R3",
+          "expected": "63",
+          "observed_values": [
+            "63"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "17",
+          "observed_values": [
+            "17"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1",
+          "expected": "15",
+          "observed_values": [
+            "15"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R4",
+          "expected": "41",
+          "observed_values": [
+            "41"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 5,
+      "target_fields_expected": 6
+    },
+    {
+      "req_id": "v6-v5-25001-b010-a",
+      "pair_id": "v6-v5-25001-b010",
+      "arm": "A",
+      "instruction_arm": "C",
+      "task_kind": "organize",
+      "category": "background",
+      "kind_instance": 2,
+      "condition_order": "BA",
+      "condition_position": 2,
+      "input_token_bucket": 0,
+      "input_tokens": 142,
+      "max_tokens": 384,
+      "block_id": 4,
+      "group_id": 2,
+      "source_req_id": "v5-25001-b010-c",
+      "output_tokens": 36,
+      "stop_type": "eos",
+      "content_sha256": "a1cd306e8e70027356fb2efd08b953c7ec3271fb05ba6f847893833f47cbc2fd",
+      "prompt_sha256": "f8208b032f2cf5cecb2fb1b044a323baa5752d967cab61161a88d0bc6d5f5751",
+      "grammar_sha256": "cb6455ef893da425d2a77c8decb2dab3abd217a58313090a21e43f16c567f64a",
+      "directory": "blocks/block4/cases/q12-v6-v5-25001-b010-a",
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R3",
+          "19"
+        ],
+        [
+          "R1",
+          "22"
+        ],
+        [
+          "R4",
+          "10"
+        ],
+        [
+          "R2",
+          "10"
+        ],
+        [
+          "R6",
+          "88"
+        ],
+        [
+          "R5",
+          "59"
+        ]
+      ],
+      "expected_lines": [
+        "R3|19",
+        "R1|22",
+        "R4|10",
+        "R2|10",
+        "R6|88",
+        "R5|59"
+      ],
+      "observed_fields": [
+        [
+          "R3",
+          "19"
+        ],
+        [
+          "R1",
+          "22"
+        ],
+        [
+          "R4",
+          "10"
+        ],
+        [
+          "R2",
+          "10"
+        ],
+        [
+          "R6",
+          "88"
+        ],
+        [
+          "R5",
+          "59"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R3",
+          "expected": "19",
+          "observed_values": [
+            "19"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1",
+          "expected": "22",
+          "observed_values": [
+            "22"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R4",
+          "expected": "10",
+          "observed_values": [
+            "10"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R2",
+          "expected": "10",
+          "observed_values": [
+            "10"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R6",
+          "expected": "88",
+          "observed_values": [
+            "88"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R5",
+          "expected": "59",
+          "observed_values": [
+            "59"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6
+    }
+  ],
+  "comparison_label_diagnostics": {
+    "A": {
+      "expected_label_counts": {
+        "不一致": 14,
+        "一致": 14
+      },
+      "observed_label_counts": {
+        "一致": 23,
+        "不一致": 5
+      },
+      "correct_fields": 19,
+      "planned_fields": 28
+    },
+    "B": {
+      "expected_label_counts": {
+        "不一致": 14,
+        "一致": 14
+      },
+      "observed_label_counts": {
+        "一致": 17,
+        "不一致": 11
+      },
+      "correct_fields": 17,
+      "planned_fields": 28
+    }
+  },
+  "entry_condition": {
+    "required_B_correct": 24,
+    "observed_B_correct": 20,
+    "satisfied": false,
+    "scope": "Separate registration of new calibration/small load only; not G1"
+  },
+  "G1_passed": false,
+  "final_test_accessed": false,
+  "limits": [
+    "All24 prompts already seen in development; no unseen-task reliability estimate.",
+    "One serial ABBA batch; no latency, throughput, model-size-only causal or scheduler conclusion.",
+    "Both models constrained by same public-task grammar; format validity is not semantic correctness.",
+    "Only complete model artifact packages compared; quantization errors and architecture can also differ."
+  ]
+}
