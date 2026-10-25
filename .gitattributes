@@ -110,3 +110,18 @@ tests/unit/test_p1_verifiable_tasks_runner_v3.py -text whitespace=-blank-at-eol,
 tests/unit/test_p1_verifiable_evaluation_v3.py -text whitespace=-blank-at-eol,-blank-at-eof
 tests/integration/audit_p1_verifiable_tasks_v3.py -text whitespace=-blank-at-eol,-blank-at-eof
 docs/experiments/20261025-1015-p1-verifiable-tasks-v3/** -text whitespace=-blank-at-eol,-blank-at-eof
+
+# Output-grammar paired pilot v4: precollection sources and derived bytes.
+configs/p1-output-constraints-v4.json -text whitespace=-blank-at-eol,-blank-at-eof
+docs/p1/output-constraints-pilot-protocol-v4.md -text whitespace=-blank-at-eol,-blank-at-eof
+docs/p1/output-constraints-evaluation-rubric-v4.md -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/79f_run_p1_output_constraints_v4.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/p1_verifiable_workload_v4.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/p1_output_constraints_v4.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/p1_structured_replay_v4.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/analysis/96_analyze_p1_output_constraints_v4.py -text whitespace=-blank-at-eol,-blank-at-eof
+tests/unit/test_p1_output_constraints_v4.py -text whitespace=-blank-at-eol,-blank-at-eof
+tests/unit/test_p1_output_constraints_runner_v4.py -text whitespace=-blank-at-eol,-blank-at-eof
+tests/unit/test_p1_output_constraints_evaluation_v4.py -text whitespace=-blank-at-eol,-blank-at-eof
+tests/integration/audit_p1_output_constraints_v4.py -text whitespace=-blank-at-eol,-blank-at-eof
+docs/experiments/20261025-1045-p1-output-constraints-v4/** -text whitespace=-blank-at-eol,-blank-at-eof

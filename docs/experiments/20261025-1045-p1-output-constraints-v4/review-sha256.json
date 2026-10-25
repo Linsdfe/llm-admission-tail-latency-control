@@ -1,0 +1,9 @@
+{
+  "recorded_at": "2026-10-25T10:52:49.550538+08:00",
+  "scope": "Postcollection README and nonblind assistant fulltext review; original six-file analysis SHA preserved",
+  "files": {
+    "README.md": "7a464d6daf5f0a510b193cc7b611af778e37bb2e09a733dbf2230d83f9e71be0",
+    "assistant-review.json": "1944742e5fc583d4297bf7cfa19e8a89c861d826d57886989050ab55001023d1",
+    "assistant-review.md": "555c818066bb8a234b04da54bbf89d700d79baf56d885bf4503df666cd0e91ae"
+  }
+}

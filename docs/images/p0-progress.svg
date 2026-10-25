@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="1964" viewBox="0 0 1120 1964" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="2056" viewBox="0 0 1120 2056" role="img" aria-labelledby="title desc">
 <title id="title">P0 成果与 P1 进展</title><desc id="desc">进度快照 2026.10.25  /  P0 已完成 · G0 通过  /  P1 进行中 · G1 待审</desc>
 <g font-family="Segoe UI, PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">
-<rect x="0" y="0" width="1120" height="1964" rx="24" fill="#f5f7fa" stroke="none"/>
+<rect x="0" y="0" width="1120" height="2056" rx="24" fill="#f5f7fa" stroke="none"/>
 <rect x="0" y="0" width="1120" height="142" rx="24" fill="#182d43" stroke="none"/>
 <rect x="0" y="80" width="1120" height="62" rx="0" fill="#182d43" stroke="none"/>
 <text x="40" y="36" font-size="13" fill="#9cb6cc" font-weight="600">LLM ADMISSION / PROJECT ROADMAP</text>
@@ -104,15 +104,21 @@
 <text x="124" y="1669" font-size="21" fill="#182d43" font-weight="600">资料提取、核对与整理 v3</text>
 <text x="124" y="1696" font-size="16" fill="#53677c" font-weight="400">24 条中 9 条完整正确：提取 6/8、核对 0/8、整理 3/8；失败全文保留</text>
 <rect x="972" y="1660" width="82" height="28" rx="14" fill="#dff3ed" stroke="none"/><text x="986" y="1680" font-size="14" fill="#087f78" font-weight="600">已验证</text>
-<rect x="40" y="1728" width="1040" height="78" rx="16" fill="#ffffff" stroke="#80c4b8"/>
-<rect x="56" y="1743" width="48" height="48" rx="12" fill="#087f78" stroke="none"/>
-<text x="65" y="1775" font-size="22" fill="#ffffff" font-weight="700">07</text>
-<text x="124" y="1761" font-size="21" fill="#182d43" font-weight="600">输出约束与事实正确性</text>
-<text x="124" y="1788" font-size="16" fill="#53677c" font-weight="400">先处理漏字段、多余输出和事实错；另立版本，不扩大调度实验</text>
-<rect x="972" y="1752" width="82" height="28" rx="14" fill="#dff3ed" stroke="none"/><text x="986" y="1772" font-size="14" fill="#087f78" font-weight="600">下一项</text>
-<rect x="40" y="1834" width="1040" height="98" rx="14" fill="#fff3dd" stroke="none"/>
-<text x="60" y="1882" font-size="23" fill="#8b641e" font-weight="700">G1</text>
-<text x="126" y="1862" font-size="17" fill="#182d43" font-weight="400">待评审：v3 仅 9/24 完整正确；新任务尚未重做校准、负载和参数冻结。</text>
-<text x="126" y="1889" font-size="16" fill="#53677c" font-weight="400">技术检查通过不等于 G1 通过；M/B3 尚未实现或比较。</text>
-<text x="126" y="1915" font-size="16" fill="#53677c" font-weight="400">10-25 新增 24 条测量 + 2 预热；机器耗时 100.803 秒，1472 项独立核对通过。</text>
+<rect x="40" y="1728" width="1040" height="78" rx="16" fill="#f0f8f5" stroke="#80c4b8"/>
+<rect x="56" y="1743" width="48" height="48" rx="12" fill="#dff3ed" stroke="none"/>
+<text x="65" y="1775" font-size="22" fill="#087f78" font-weight="700">07</text>
+<text x="124" y="1761" font-size="21" fill="#182d43" font-weight="600">输出约束 v4 同题配对</text>
+<text x="124" y="1788" font-size="16" fill="#53677c" font-weight="400">24 题各测两次：格式 13/24 → 24/24，完整正确 10/24 → 15/24</text>
+<rect x="972" y="1752" width="82" height="28" rx="14" fill="#dff3ed" stroke="none"/><text x="986" y="1772" font-size="14" fill="#087f78" font-weight="600">已测完</text>
+<rect x="40" y="1820" width="1040" height="78" rx="16" fill="#ffffff" stroke="#80c4b8"/>
+<rect x="56" y="1835" width="48" height="48" rx="12" fill="#087f78" stroke="none"/>
+<text x="65" y="1867" font-size="22" fill="#ffffff" font-weight="700">08</text>
+<text x="124" y="1853" font-size="21" fill="#182d43" font-weight="600">取数与比较指令核查</text>
+<text x="124" y="1880" font-size="16" fill="#53677c" font-weight="400">保留格式约束，另登记明确指令对照；仍有 9 题事实错，不扩大调度实验</text>
+<rect x="972" y="1844" width="82" height="28" rx="14" fill="#dff3ed" stroke="none"/><text x="986" y="1864" font-size="14" fill="#087f78" font-weight="600">下一项</text>
+<rect x="40" y="1926" width="1040" height="98" rx="14" fill="#fff3dd" stroke="none"/>
+<text x="60" y="1974" font-size="23" fill="#8b641e" font-weight="700">G1</text>
+<text x="126" y="1954" font-size="17" fill="#182d43" font-weight="400">待评审：格式合法不等于事实正确；v4 仍有 9 题错，校准和参数未冻结。</text>
+<text x="126" y="1981" font-size="16" fill="#53677c" font-weight="400">技术检查通过不等于 G1 通过；M/B3 尚未实现或比较。</text>
+<text x="126" y="2007" font-size="16" fill="#53677c" font-weight="400">v4 共 48 测量 + 2 预热，273.960 秒；2836 项独立核对通过，原始失败保留。</text>
 </g></svg>

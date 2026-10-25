@@ -1,0 +1,3812 @@
+{
+  "schema_version": "p1-output-constraints-assistant-review-v4.1",
+  "run_id": "20261025-1045-p1-output-constraints-v4",
+  "reviewed_at": "2026-10-25T10:49:57.475393+08:00",
+  "timezone": "Asia/Shanghai",
+  "reviewed_unique_tasks": 24,
+  "reviewed_measured_outputs": 48,
+  "method": "助手知晓v4版本，完整读取24份实际prompt和48份原始回答，先手录逐条判断，再与96比较；非学生/导师人工盲评。",
+  "primary_rule": "沿用采前量规，仅允许良性空白，不删除表头、非目标行、重复或非法列；G语法合法不当成事实正确。",
+  "by_arm": {
+    "U": {
+      "requests": 24,
+      "business_correct": 10,
+      "target_fields_correct": 56,
+      "target_fields_planned": 88
+    },
+    "G": {
+      "requests": 24,
+      "business_correct": 15,
+      "target_fields_correct": 70,
+      "target_fields_planned": 88
+    }
+  },
+  "machine_disagreements": [],
+  "machine_disagreement_count": 0,
+  "G_entry_condition_satisfied": false,
+  "G1_passed": false,
+  "records": [
+    {
+      "req_id": "v4-24001-i000-u",
+      "pair_id": "v4-24001-i000",
+      "arm": "U",
+      "task_kind": "extract",
+      "category": "interactive",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "只查R1，源值26；U准确返回编号和值。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "expected_lines": [
+        "R1|26"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "26",
+          "expected": "26"
+        }
+      ],
+      "original_content": "R1|26",
+      "parsed_fields": [
+        [
+          "R1",
+          "26"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 1,
+      "planned_fields": 1,
+      "source_prompt_sha256": "ceebf4c3a2c27c1ebc277d8718c4a64ff3cd58442e96b78de5fb4e9845db1c7b",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q01-v4-24001-i000-u/replay/client.jsonl",
+      "source_client_sha256": "09883a219adba44eae1b2bd4e3021c38bfbe60f204c8b4beb57a3aaebf568069",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q01-v4-24001-i000-u/output.txt",
+      "source_output_sha256": "1063809d0b6bda39bd5c5a975191de0b806374480ea2a08190c8406a50ddf1e1"
+    },
+    {
+      "req_id": "v4-24001-i000-g",
+      "pair_id": "v4-24001-i000",
+      "arm": "G",
+      "task_kind": "extract",
+      "category": "interactive",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "只查R1，源值26；G准确返回编号和值。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "expected_lines": [
+        "R1|26"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "26",
+          "expected": "26"
+        }
+      ],
+      "original_content": "R1|26",
+      "parsed_fields": [
+        [
+          "R1",
+          "26"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 1,
+      "planned_fields": 1,
+      "source_prompt_sha256": "ceebf4c3a2c27c1ebc277d8718c4a64ff3cd58442e96b78de5fb4e9845db1c7b",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q02-v4-24001-i000-g/replay/client.jsonl",
+      "source_client_sha256": "b9dac619e60bac2082231a7e1ec90c342b1e0a5f58dba53b28452937eaccdea2",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q02-v4-24001-i000-g/output.txt",
+      "source_output_sha256": "1063809d0b6bda39bd5c5a975191de0b806374480ea2a08190c8406a50ddf1e1"
+    },
+    {
+      "req_id": "v4-24001-i001-g",
+      "pair_id": "v4-24001-i001",
+      "arm": "G",
+      "task_kind": "extract",
+      "category": "interactive",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "只查R1，源值33；G完整正确。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "expected_lines": [
+        "R1|33"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "33",
+          "expected": "33"
+        }
+      ],
+      "original_content": "R1|33",
+      "parsed_fields": [
+        [
+          "R1",
+          "33"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 1,
+      "planned_fields": 1,
+      "source_prompt_sha256": "73e81ef97fa5366dd260055ab2ebe9d4d51bfa82f9a58b8715f1893ebd2f07fa",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q03-v4-24001-i001-g/replay/client.jsonl",
+      "source_client_sha256": "178fc5ce3a13c1d3f9c4da6dc21219ad48c366532b7dea05d6b0d9e0a97ff174",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q03-v4-24001-i001-g/output.txt",
+      "source_output_sha256": "eef84a88760eca18cc7abc57cffa6e3745911b6a43f6cf47389004abf9a15565"
+    },
+    {
+      "req_id": "v4-24001-i001-u",
+      "pair_id": "v4-24001-i001",
+      "arm": "U",
+      "task_kind": "extract",
+      "category": "interactive",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "只查R1，源值33；U完整正确。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "expected_lines": [
+        "R1|33"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "33",
+          "expected": "33"
+        }
+      ],
+      "original_content": "R1|33",
+      "parsed_fields": [
+        [
+          "R1",
+          "33"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 1,
+      "planned_fields": 1,
+      "source_prompt_sha256": "73e81ef97fa5366dd260055ab2ebe9d4d51bfa82f9a58b8715f1893ebd2f07fa",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q04-v4-24001-i001-u/replay/client.jsonl",
+      "source_client_sha256": "cbb506225dee58e6e98f4cada585b3a3adedd67cb9f4ebf7ce0bead49f35fd3b",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q04-v4-24001-i001-u/output.txt",
+      "source_output_sha256": "eef84a88760eca18cc7abc57cffa6e3745911b6a43f6cf47389004abf9a15565"
+    },
+    {
+      "req_id": "v4-24001-i002-u",
+      "pair_id": "v4-24001-i002",
+      "arm": "U",
+      "task_kind": "extract",
+      "category": "interactive",
+      "input_token_bucket": 1,
+      "business_correct": true,
+      "review_note": "资料含8个编号，R1为40；U只返回R1=40。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "expected_lines": [
+        "R1|40"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "40",
+          "expected": "40"
+        }
+      ],
+      "original_content": "R1|40",
+      "parsed_fields": [
+        [
+          "R1",
+          "40"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 1,
+      "planned_fields": 1,
+      "source_prompt_sha256": "8013f6889f863c8f02bd1ec8e07fe2c34a9201cd0365ac777c5874b842d08688",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q05-v4-24001-i002-u/replay/client.jsonl",
+      "source_client_sha256": "e8182d5ce61e8224fa389e339f2c0c2fd349a3880c55bfd8e8e8fe0c7b4c368a",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q05-v4-24001-i002-u/output.txt",
+      "source_output_sha256": "0b9a9630bb5422a89531f28f3faeaf87732a9e9406acc078b9c3c2d24923a92c"
+    },
+    {
+      "req_id": "v4-24001-i002-g",
+      "pair_id": "v4-24001-i002",
+      "arm": "G",
+      "task_kind": "extract",
+      "category": "interactive",
+      "input_token_bucket": 1,
+      "business_correct": true,
+      "review_note": "资料含8个编号，R1为40；G只返回R1=40。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "expected_lines": [
+        "R1|40"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "40",
+          "expected": "40"
+        }
+      ],
+      "original_content": "R1|40",
+      "parsed_fields": [
+        [
+          "R1",
+          "40"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 1,
+      "planned_fields": 1,
+      "source_prompt_sha256": "8013f6889f863c8f02bd1ec8e07fe2c34a9201cd0365ac777c5874b842d08688",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q06-v4-24001-i002-g/replay/client.jsonl",
+      "source_client_sha256": "cbc9e56fffa798d4850fac13da0f7bbc2c412b6f131e640072ef1cb52130877f",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q06-v4-24001-i002-g/output.txt",
+      "source_output_sha256": "0b9a9630bb5422a89531f28f3faeaf87732a9e9406acc078b9c3c2d24923a92c"
+    },
+    {
+      "req_id": "v4-24001-i003-g",
+      "pair_id": "v4-24001-i003",
+      "arm": "G",
+      "task_kind": "extract",
+      "category": "interactive",
+      "input_token_bucket": 2,
+      "business_correct": true,
+      "review_note": "资料R1为47，另有R16同为47；G选择目标R1且值正确。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "expected_lines": [
+        "R1|47"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "47",
+          "expected": "47"
+        }
+      ],
+      "original_content": "R1|47",
+      "parsed_fields": [
+        [
+          "R1",
+          "47"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 1,
+      "planned_fields": 1,
+      "source_prompt_sha256": "647fc0f389f9987cdada59abb5a21741d59af6d76b6ac44465848bc1d79cc7b8",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q07-v4-24001-i003-g/replay/client.jsonl",
+      "source_client_sha256": "f32638052d9f73f951e64a1fdc617b30266b1e6bf6bd11d73225e28b07bd1b2d",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q07-v4-24001-i003-g/output.txt",
+      "source_output_sha256": "c4e419a6a9dd26d0e332ad9c67434f5062d1a97bb5fd78671f3fdec21dc20bfd"
+    },
+    {
+      "req_id": "v4-24001-i003-u",
+      "pair_id": "v4-24001-i003",
+      "arm": "U",
+      "task_kind": "extract",
+      "category": "interactive",
+      "input_token_bucket": 2,
+      "business_correct": true,
+      "review_note": "资料R1为47，另有R16同为47；U选择目标R1且值正确。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "expected_lines": [
+        "R1|47"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "47",
+          "expected": "47"
+        }
+      ],
+      "original_content": "R1|47",
+      "parsed_fields": [
+        [
+          "R1",
+          "47"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 1,
+      "planned_fields": 1,
+      "source_prompt_sha256": "647fc0f389f9987cdada59abb5a21741d59af6d76b6ac44465848bc1d79cc7b8",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q08-v4-24001-i003-u/replay/client.jsonl",
+      "source_client_sha256": "3b6032363b2e99f67c334b81151594af60a4f126789146e3d7c3a602d5bc85c7",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q08-v4-24001-i003-u/output.txt",
+      "source_output_sha256": "c4e419a6a9dd26d0e332ad9c67434f5062d1a97bb5fd78671f3fdec21dc20bfd"
+    },
+    {
+      "req_id": "v4-24001-i004-u",
+      "pair_id": "v4-24001-i004",
+      "arm": "U",
+      "task_kind": "check",
+      "category": "interactive",
+      "input_token_bucket": 1,
+      "business_correct": false,
+      "review_note": "目标R1在A/B为54/55。U复制两份资料并夹杂同写一致/异写不一致，未形成约定的一条目标结论，还多列R2/R3。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "expected_lines": [
+        "R1|不一致"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "54",
+          "B": "55",
+          "expected": "不一致"
+        }
+      ],
+      "original_content": "R1|54\nR2|60\nR3|99\n同写一致\n\nR1|55\nR2|60\nR3|10\n异写不一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "54"
+        ],
+        [
+          "R2",
+          "60"
+        ],
+        [
+          "R3",
+          "99"
+        ],
+        [
+          "R1",
+          "55"
+        ],
+        [
+          "R2",
+          "60"
+        ],
+        [
+          "R3",
+          "10"
+        ]
+      ],
+      "invalid_lines": [
+        "同写一致",
+        "异写不一致"
+      ],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 0,
+      "planned_fields": 1,
+      "source_prompt_sha256": "5d7826bb99dd788736635881365f3f23820163bf5ce98191256a7a86ee18caef",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q09-v4-24001-i004-u/replay/client.jsonl",
+      "source_client_sha256": "41a502f90bf4a2061ea1a043d09b9c432a09b61e7f75fbc0cdc4d29dd060e060",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q09-v4-24001-i004-u/output.txt",
+      "source_output_sha256": "c163f37018a4a395ce2b43dd25162155c86e662f9305a9642e91d871e0ee6e19"
+    },
+    {
+      "req_id": "v4-24001-i004-g",
+      "pair_id": "v4-24001-i004",
+      "arm": "G",
+      "task_kind": "check",
+      "category": "interactive",
+      "input_token_bucket": 1,
+      "business_correct": false,
+      "review_note": "格式合法，但R1在A/B为54/55，应不一致，G却写一致；这是实际比较错误。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "expected_lines": [
+        "R1|不一致"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "54",
+          "B": "55",
+          "expected": "不一致"
+        }
+      ],
+      "original_content": "R1|一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [
+        {
+          "id": "R1",
+          "expected": "不一致",
+          "observed": "一致"
+        }
+      ],
+      "auxiliary_correct_fields": 0,
+      "planned_fields": 1,
+      "source_prompt_sha256": "5d7826bb99dd788736635881365f3f23820163bf5ce98191256a7a86ee18caef",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q10-v4-24001-i004-g/replay/client.jsonl",
+      "source_client_sha256": "7d21f12303b053a86b1be50139b627bf6692391dd07fca677aa088947a3776e3",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q10-v4-24001-i004-g/output.txt",
+      "source_output_sha256": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e"
+    },
+    {
+      "req_id": "v4-24001-i005-g",
+      "pair_id": "v4-24001-i005",
+      "arm": "G",
+      "task_kind": "check",
+      "category": "interactive",
+      "input_token_bucket": 1,
+      "business_correct": true,
+      "review_note": "R1两边均61，G只返回R1=一致，事实、标签和范围均正确。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "expected_lines": [
+        "R1|一致"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "61",
+          "B": "61",
+          "expected": "一致"
+        }
+      ],
+      "original_content": "R1|一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 1,
+      "planned_fields": 1,
+      "source_prompt_sha256": "ff556c9b15647a749da8e98b2a6f8875164df45b4192770be85a7caad9d40d60",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q11-v4-24001-i005-g/replay/client.jsonl",
+      "source_client_sha256": "f3569ac808825502d51ba31364af11f1cd846e0bf40fec9173bb6ab11207abb7",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q11-v4-24001-i005-g/output.txt",
+      "source_output_sha256": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e"
+    },
+    {
+      "req_id": "v4-24001-i005-u",
+      "pair_id": "v4-24001-i005",
+      "arm": "U",
+      "task_kind": "check",
+      "category": "interactive",
+      "input_token_bucket": 1,
+      "business_correct": false,
+      "review_note": "R1两边均61，U写同写一致，含义对应相同但标签不符；还多列非目标R2/R3，整题未完成。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "expected_lines": [
+        "R1|一致"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "61",
+          "B": "61",
+          "expected": "一致"
+        }
+      ],
+      "original_content": "R1|同写一致\nR2|异写不一致\nR3|异写不一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "同写一致"
+        ],
+        [
+          "R2",
+          "异写不一致"
+        ],
+        [
+          "R3",
+          "异写不一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [
+        {
+          "id": "R1",
+          "expected": "一致",
+          "observed": "同写一致"
+        }
+      ],
+      "auxiliary_correct_fields": 0,
+      "planned_fields": 1,
+      "source_prompt_sha256": "ff556c9b15647a749da8e98b2a6f8875164df45b4192770be85a7caad9d40d60",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q12-v4-24001-i005-u/replay/client.jsonl",
+      "source_client_sha256": "8afbbb813c422938996e0a893124fc4f997090e29a2797465da36e6cf4e2189a",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q12-v4-24001-i005-u/output.txt",
+      "source_output_sha256": "2fa770c88ce7ab5ce57185fa3d4a9c6fa355a7eab58b8d0ea9d714eadb67609e"
+    },
+    {
+      "req_id": "v4-24001-i006-u",
+      "pair_id": "v4-24001-i006",
+      "arm": "U",
+      "task_kind": "check",
+      "category": "interactive",
+      "input_token_bucket": 2,
+      "business_correct": false,
+      "review_note": "R1两边为68/69。U逐行给三字段并继续列非目标，结尾不完整；其目标行写同写一致，也不符合这两个源值。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "expected_lines": [
+        "R1|不一致"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "68",
+          "B": "69",
+          "expected": "不一致"
+        }
+      ],
+      "original_content": "R1|68|同写一致\nR2|93|同写一致\nR3|72|同写一致\nR4|51|同写一致\nR5|43|同写一致\nR6|68|同写一致\nR7|7",
+      "parsed_fields": [
+        [
+          "R7",
+          "7"
+        ]
+      ],
+      "invalid_lines": [
+        "R1|68|同写一致",
+        "R2|93|同写一致",
+        "R3|72|同写一致",
+        "R4|51|同写一致",
+        "R5|43|同写一致",
+        "R6|68|同写一致"
+      ],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 0,
+      "planned_fields": 1,
+      "source_prompt_sha256": "841ae28d79457ef5f31ed49204849416fabb7ce1d190ec84df1d38439d4611bb",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q13-v4-24001-i006-u/replay/client.jsonl",
+      "source_client_sha256": "856f0c6367e69b37bbdb044daf19573d51b5d17f564640a27f51f7e1d3b4ce8b",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q13-v4-24001-i006-u/output.txt",
+      "source_output_sha256": "d56c0df003549b6aaf7672c22215a8dee75b7d4884c9b06e07b56f9be0d2399e"
+    },
+    {
+      "req_id": "v4-24001-i006-g",
+      "pair_id": "v4-24001-i006",
+      "arm": "G",
+      "task_kind": "check",
+      "category": "interactive",
+      "input_token_bucket": 2,
+      "business_correct": false,
+      "review_note": "格式合法，但把R1的68/69判一致，应不一致；约束未修复比较错误。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "expected_lines": [
+        "R1|不一致"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "68",
+          "B": "69",
+          "expected": "不一致"
+        }
+      ],
+      "original_content": "R1|一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [
+        {
+          "id": "R1",
+          "expected": "不一致",
+          "observed": "一致"
+        }
+      ],
+      "auxiliary_correct_fields": 0,
+      "planned_fields": 1,
+      "source_prompt_sha256": "841ae28d79457ef5f31ed49204849416fabb7ce1d190ec84df1d38439d4611bb",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q14-v4-24001-i006-g/replay/client.jsonl",
+      "source_client_sha256": "5fc4887f88e173da21a1b9f1463bbe9402ca6fde29c58f7e2af001b453912fd3",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q14-v4-24001-i006-g/output.txt",
+      "source_output_sha256": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e"
+    },
+    {
+      "req_id": "v4-24001-i007-g",
+      "pair_id": "v4-24001-i007",
+      "arm": "G",
+      "task_kind": "check",
+      "category": "interactive",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "R1两边均75；G只写R1=一致，完整正确。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "expected_lines": [
+        "R1|一致"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "75",
+          "B": "75",
+          "expected": "一致"
+        }
+      ],
+      "original_content": "R1|一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 1,
+      "planned_fields": 1,
+      "source_prompt_sha256": "e564eee8331b656add627b790b0dd34b1ba722e56ef97fb2ced5d762323e9a47",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q15-v4-24001-i007-g/replay/client.jsonl",
+      "source_client_sha256": "6f41250aadb583de3db3e1c403b6fe4b72dc4ac4ce7bd8c714759e2cbcae8851",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q15-v4-24001-i007-g/output.txt",
+      "source_output_sha256": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e"
+    },
+    {
+      "req_id": "v4-24001-i007-u",
+      "pair_id": "v4-24001-i007",
+      "arm": "U",
+      "task_kind": "check",
+      "category": "interactive",
+      "input_token_bucket": 0,
+      "business_correct": false,
+      "review_note": "R1两边均75；U多ID/结论表头、使用同写一致标签。表达相同本身符合资料，失败在输出约定。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "expected_lines": [
+        "R1|一致"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "75",
+          "B": "75",
+          "expected": "一致"
+        }
+      ],
+      "original_content": "ID|结论\nR1|同写一致",
+      "parsed_fields": [
+        [
+          "ID",
+          "结论"
+        ],
+        [
+          "R1",
+          "同写一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [
+        {
+          "id": "R1",
+          "expected": "一致",
+          "observed": "同写一致"
+        }
+      ],
+      "auxiliary_correct_fields": 0,
+      "planned_fields": 1,
+      "source_prompt_sha256": "e564eee8331b656add627b790b0dd34b1ba722e56ef97fb2ced5d762323e9a47",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q16-v4-24001-i007-u/replay/client.jsonl",
+      "source_client_sha256": "81ed0f4f0deda72c3e974add07d267c32201516733fa91c06c1b996c7790bd83",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q16-v4-24001-i007-u/output.txt",
+      "source_output_sha256": "eb085728dcc4ad82e56f426c5e195b9006cadb78bd9e2a66410a580d195f6812"
+    },
+    {
+      "req_id": "v4-24001-i008-u",
+      "pair_id": "v4-24001-i008",
+      "arm": "U",
+      "task_kind": "organize",
+      "category": "interactive",
+      "input_token_bucket": 2,
+      "business_correct": false,
+      "review_note": "指定R1=82、R2=60，U目标两行正确，但增加表头及R11等非目标；不能截取前两行算通过。",
+      "public_target_ids": [
+        "R1",
+        "R2"
+      ],
+      "expected_lines": [
+        "R1|82",
+        "R2|60"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "82",
+          "expected": "82"
+        },
+        {
+          "id": "R2",
+          "source_value": "60",
+          "expected": "60"
+        }
+      ],
+      "original_content": "ID|值\nR1|82\nR2|60\nR11|81\nR13|25\nR16|28\nR10|32\nR15|30\nR14|10\nR17|48",
+      "parsed_fields": [
+        [
+          "ID",
+          "值"
+        ],
+        [
+          "R1",
+          "82"
+        ],
+        [
+          "R2",
+          "60"
+        ],
+        [
+          "R11",
+          "81"
+        ],
+        [
+          "R13",
+          "25"
+        ],
+        [
+          "R16",
+          "28"
+        ],
+        [
+          "R10",
+          "32"
+        ],
+        [
+          "R15",
+          "30"
+        ],
+        [
+          "R14",
+          "10"
+        ],
+        [
+          "R17",
+          "48"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 2,
+      "planned_fields": 2,
+      "source_prompt_sha256": "61fa3020b78a592faf0fc54bdb21addcb3acb3e16390a87e4715ef476ba530c3",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q17-v4-24001-i008-u/replay/client.jsonl",
+      "source_client_sha256": "bce9a4482b61e22363b100fb81a634dafe9e683e9dff726dc34aebabe278cc4a",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q17-v4-24001-i008-u/output.txt",
+      "source_output_sha256": "5325fc5f30ee5166a1b9568d4d6bb3697f2e78d30d72034266a4810b3621d5ef"
+    },
+    {
+      "req_id": "v4-24001-i008-g",
+      "pair_id": "v4-24001-i008",
+      "arm": "G",
+      "task_kind": "organize",
+      "category": "interactive",
+      "input_token_bucket": 2,
+      "business_correct": true,
+      "review_note": "G仅按R1/R2顺序返回82/60，完整正确。",
+      "public_target_ids": [
+        "R1",
+        "R2"
+      ],
+      "expected_lines": [
+        "R1|82",
+        "R2|60"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "82",
+          "expected": "82"
+        },
+        {
+          "id": "R2",
+          "source_value": "60",
+          "expected": "60"
+        }
+      ],
+      "original_content": "R1|82\nR2|60",
+      "parsed_fields": [
+        [
+          "R1",
+          "82"
+        ],
+        [
+          "R2",
+          "60"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 2,
+      "planned_fields": 2,
+      "source_prompt_sha256": "61fa3020b78a592faf0fc54bdb21addcb3acb3e16390a87e4715ef476ba530c3",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q18-v4-24001-i008-g/replay/client.jsonl",
+      "source_client_sha256": "43b3afaffc4fe8a7243cb0530156a3896f7746bbf82eb6c758d274e7883e5e7e",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q18-v4-24001-i008-g/output.txt",
+      "source_output_sha256": "f9ec4ae6cc4954f40438e835547b7ebf2b884225e65a838d39180afaa990d0d8"
+    },
+    {
+      "req_id": "v4-24001-i009-g",
+      "pair_id": "v4-24001-i009",
+      "arm": "G",
+      "task_kind": "organize",
+      "category": "interactive",
+      "input_token_bucket": 2,
+      "business_correct": true,
+      "review_note": "G仅按R1/R2顺序返回89/92，完整正确。",
+      "public_target_ids": [
+        "R1",
+        "R2"
+      ],
+      "expected_lines": [
+        "R1|89",
+        "R2|92"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "89",
+          "expected": "89"
+        },
+        {
+          "id": "R2",
+          "source_value": "92",
+          "expected": "92"
+        }
+      ],
+      "original_content": "R1|89\nR2|92",
+      "parsed_fields": [
+        [
+          "R1",
+          "89"
+        ],
+        [
+          "R2",
+          "92"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 2,
+      "planned_fields": 2,
+      "source_prompt_sha256": "a80dd3b68591376770f752041f907a96974980f4735885062d58bdc5b7eab3e6",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q19-v4-24001-i009-g/replay/client.jsonl",
+      "source_client_sha256": "8f5a4b722270f575e3ee5a16bb9123790abbd1b2e00ad693614a297f89141cd5",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q19-v4-24001-i009-g/output.txt",
+      "source_output_sha256": "45aebc874445fb87bb1b65462770db5c8f6c9ba7fe0b42f31f606e1901a1ff21"
+    },
+    {
+      "req_id": "v4-24001-i009-u",
+      "pair_id": "v4-24001-i009",
+      "arm": "U",
+      "task_kind": "organize",
+      "category": "interactive",
+      "input_token_bucket": 2,
+      "business_correct": false,
+      "review_note": "指定R1=89、R2=92，U目标两行正确，随后抄R3等非目标，末尾R11不完整。",
+      "public_target_ids": [
+        "R1",
+        "R2"
+      ],
+      "expected_lines": [
+        "R1|89",
+        "R2|92"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "89",
+          "expected": "89"
+        },
+        {
+          "id": "R2",
+          "source_value": "92",
+          "expected": "92"
+        }
+      ],
+      "original_content": "R1|89\nR2|92\nR3|30\nR4|49\nR5|87\nR6|49\nR7|62\nR8|68\nR9|61\nR10|87\nR11",
+      "parsed_fields": [
+        [
+          "R1",
+          "89"
+        ],
+        [
+          "R2",
+          "92"
+        ],
+        [
+          "R3",
+          "30"
+        ],
+        [
+          "R4",
+          "49"
+        ],
+        [
+          "R5",
+          "87"
+        ],
+        [
+          "R6",
+          "49"
+        ],
+        [
+          "R7",
+          "62"
+        ],
+        [
+          "R8",
+          "68"
+        ],
+        [
+          "R9",
+          "61"
+        ],
+        [
+          "R10",
+          "87"
+        ]
+      ],
+      "invalid_lines": [
+        "R11"
+      ],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 2,
+      "planned_fields": 2,
+      "source_prompt_sha256": "a80dd3b68591376770f752041f907a96974980f4735885062d58bdc5b7eab3e6",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q20-v4-24001-i009-u/replay/client.jsonl",
+      "source_client_sha256": "d346967f2511d00d014d310e199800693efec2ab2dfd580eccecfcc5e7d9c94a",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q20-v4-24001-i009-u/output.txt",
+      "source_output_sha256": "32381bc1aa5238e7d5fa78415fd0aa2375fffe32f3034c766cd12bade76f6e0d"
+    },
+    {
+      "req_id": "v4-24001-i010-u",
+      "pair_id": "v4-24001-i010",
+      "arm": "U",
+      "task_kind": "organize",
+      "category": "interactive",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "题目指定R2/R1顺序，源值29/96；U两行均正确，无额外内容。",
+      "public_target_ids": [
+        "R2",
+        "R1"
+      ],
+      "expected_lines": [
+        "R2|29",
+        "R1|96"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R2",
+          "source_value": "29",
+          "expected": "29"
+        },
+        {
+          "id": "R1",
+          "source_value": "96",
+          "expected": "96"
+        }
+      ],
+      "original_content": "R2|29\nR1|96",
+      "parsed_fields": [
+        [
+          "R2",
+          "29"
+        ],
+        [
+          "R1",
+          "96"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 2,
+      "planned_fields": 2,
+      "source_prompt_sha256": "948164eed79456d8b6c2941d021a98314082fa90b3e80a06743db1d8614bb862",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q21-v4-24001-i010-u/replay/client.jsonl",
+      "source_client_sha256": "10a255a4c94922856090a02264c67770e2293bdd7130026cf6937497fa984c7e",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q21-v4-24001-i010-u/output.txt",
+      "source_output_sha256": "e5b11f2d5b3d4355c3470de6daa3d2d1415530f397b946bb030feb0e2caf0499"
+    },
+    {
+      "req_id": "v4-24001-i010-g",
+      "pair_id": "v4-24001-i010",
+      "arm": "G",
+      "task_kind": "organize",
+      "category": "interactive",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "题目指定R2/R1顺序，源值29/96；G两行均正确。",
+      "public_target_ids": [
+        "R2",
+        "R1"
+      ],
+      "expected_lines": [
+        "R2|29",
+        "R1|96"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R2",
+          "source_value": "29",
+          "expected": "29"
+        },
+        {
+          "id": "R1",
+          "source_value": "96",
+          "expected": "96"
+        }
+      ],
+      "original_content": "R2|29\nR1|96",
+      "parsed_fields": [
+        [
+          "R2",
+          "29"
+        ],
+        [
+          "R1",
+          "96"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 2,
+      "planned_fields": 2,
+      "source_prompt_sha256": "948164eed79456d8b6c2941d021a98314082fa90b3e80a06743db1d8614bb862",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q22-v4-24001-i010-g/replay/client.jsonl",
+      "source_client_sha256": "5284c70e17762546b29c1340f2233e45e1f95f89814249e51672ebd8b54e2efc",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q22-v4-24001-i010-g/output.txt",
+      "source_output_sha256": "e5b11f2d5b3d4355c3470de6daa3d2d1415530f397b946bb030feb0e2caf0499"
+    },
+    {
+      "req_id": "v4-24001-i011-g",
+      "pair_id": "v4-24001-i011",
+      "arm": "G",
+      "task_kind": "organize",
+      "category": "interactive",
+      "input_token_bucket": 1,
+      "business_correct": true,
+      "review_note": "G仅按R2/R1顺序返回94/13，完整正确。",
+      "public_target_ids": [
+        "R2",
+        "R1"
+      ],
+      "expected_lines": [
+        "R2|94",
+        "R1|13"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R2",
+          "source_value": "94",
+          "expected": "94"
+        },
+        {
+          "id": "R1",
+          "source_value": "13",
+          "expected": "13"
+        }
+      ],
+      "original_content": "R2|94\nR1|13",
+      "parsed_fields": [
+        [
+          "R2",
+          "94"
+        ],
+        [
+          "R1",
+          "13"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 2,
+      "planned_fields": 2,
+      "source_prompt_sha256": "d9af85029200da8f4a028412351a102c5061de1a0cf3fbce9d53ebc255717cf0",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q23-v4-24001-i011-g/replay/client.jsonl",
+      "source_client_sha256": "79bc0c21b6506652a4382d5c789deb2aab49883dc2092bcf9f93812976f02561",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q23-v4-24001-i011-g/output.txt",
+      "source_output_sha256": "f1943cc90a99ebb66ee3e16df8160789971adcc9c8d4fa743512579ce552bc88"
+    },
+    {
+      "req_id": "v4-24001-i011-u",
+      "pair_id": "v4-24001-i011",
+      "arm": "U",
+      "task_kind": "organize",
+      "category": "interactive",
+      "input_token_bucket": 1,
+      "business_correct": false,
+      "review_note": "指定R2=94、R1=13，U目标两行正确，但额外列R6/R4/R7/R5/R3/R8六行。",
+      "public_target_ids": [
+        "R2",
+        "R1"
+      ],
+      "expected_lines": [
+        "R2|94",
+        "R1|13"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R2",
+          "source_value": "94",
+          "expected": "94"
+        },
+        {
+          "id": "R1",
+          "source_value": "13",
+          "expected": "13"
+        }
+      ],
+      "original_content": "R2|94\nR1|13\nR6|60\nR4|81\nR7|10\nR5|59\nR3|92\nR8|89",
+      "parsed_fields": [
+        [
+          "R2",
+          "94"
+        ],
+        [
+          "R1",
+          "13"
+        ],
+        [
+          "R6",
+          "60"
+        ],
+        [
+          "R4",
+          "81"
+        ],
+        [
+          "R7",
+          "10"
+        ],
+        [
+          "R5",
+          "59"
+        ],
+        [
+          "R3",
+          "92"
+        ],
+        [
+          "R8",
+          "89"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 2,
+      "planned_fields": 2,
+      "source_prompt_sha256": "d9af85029200da8f4a028412351a102c5061de1a0cf3fbce9d53ebc255717cf0",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q24-v4-24001-i011-u/replay/client.jsonl",
+      "source_client_sha256": "60725073504298d7dbc569750c38d00e4db59e5b4244d9172da3b2079277f603",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q24-v4-24001-i011-u/output.txt",
+      "source_output_sha256": "b9ad1159a6bc2c9c0c1f828e93928121fc91926ed7fc8c1de1804c90508a265a"
+    },
+    {
+      "req_id": "v4-24001-b000-u",
+      "pair_id": "v4-24001-b000",
+      "arm": "U",
+      "task_kind": "extract",
+      "category": "background",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "R1至R6应为26/69/57/24/78/40；U六行逐项正确。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "expected_lines": [
+        "R1|26",
+        "R2|69",
+        "R3|57",
+        "R4|24",
+        "R5|78",
+        "R6|40"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "26",
+          "expected": "26"
+        },
+        {
+          "id": "R2",
+          "source_value": "69",
+          "expected": "69"
+        },
+        {
+          "id": "R3",
+          "source_value": "57",
+          "expected": "57"
+        },
+        {
+          "id": "R4",
+          "source_value": "24",
+          "expected": "24"
+        },
+        {
+          "id": "R5",
+          "source_value": "78",
+          "expected": "78"
+        },
+        {
+          "id": "R6",
+          "source_value": "40",
+          "expected": "40"
+        }
+      ],
+      "original_content": "R1|26\nR2|69\nR3|57\nR4|24\nR5|78\nR6|40",
+      "parsed_fields": [
+        [
+          "R1",
+          "26"
+        ],
+        [
+          "R2",
+          "69"
+        ],
+        [
+          "R3",
+          "57"
+        ],
+        [
+          "R4",
+          "24"
+        ],
+        [
+          "R5",
+          "78"
+        ],
+        [
+          "R6",
+          "40"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 6,
+      "planned_fields": 6,
+      "source_prompt_sha256": "bc95941a29cfc09f95810b957089a889af6e586d2c63ce9b75c869d773e54fc9",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q25-v4-24001-b000-u/replay/client.jsonl",
+      "source_client_sha256": "05dc0a97ce41c8c3e7239fbf218d0215e2d3e6a92d82d79b44cb9509b2fa1245",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q25-v4-24001-b000-u/output.txt",
+      "source_output_sha256": "f0528f8071ffc0643b2b4c13a21400a51cf2aa0b58871313b1c957af79c69a44"
+    },
+    {
+      "req_id": "v4-24001-b000-g",
+      "pair_id": "v4-24001-b000",
+      "arm": "G",
+      "task_kind": "extract",
+      "category": "background",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "R1至R6应为26/69/57/24/78/40；G六行逐项正确。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "expected_lines": [
+        "R1|26",
+        "R2|69",
+        "R3|57",
+        "R4|24",
+        "R5|78",
+        "R6|40"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "26",
+          "expected": "26"
+        },
+        {
+          "id": "R2",
+          "source_value": "69",
+          "expected": "69"
+        },
+        {
+          "id": "R3",
+          "source_value": "57",
+          "expected": "57"
+        },
+        {
+          "id": "R4",
+          "source_value": "24",
+          "expected": "24"
+        },
+        {
+          "id": "R5",
+          "source_value": "78",
+          "expected": "78"
+        },
+        {
+          "id": "R6",
+          "source_value": "40",
+          "expected": "40"
+        }
+      ],
+      "original_content": "R1|26\nR2|69\nR3|57\nR4|24\nR5|78\nR6|40",
+      "parsed_fields": [
+        [
+          "R1",
+          "26"
+        ],
+        [
+          "R2",
+          "69"
+        ],
+        [
+          "R3",
+          "57"
+        ],
+        [
+          "R4",
+          "24"
+        ],
+        [
+          "R5",
+          "78"
+        ],
+        [
+          "R6",
+          "40"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 6,
+      "planned_fields": 6,
+      "source_prompt_sha256": "bc95941a29cfc09f95810b957089a889af6e586d2c63ce9b75c869d773e54fc9",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q26-v4-24001-b000-g/replay/client.jsonl",
+      "source_client_sha256": "2ceaaa9b040abfcfda543c80bb04b5d81670de09fbf6da2af4a035c8d74fc70d",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q26-v4-24001-b000-g/output.txt",
+      "source_output_sha256": "f0528f8071ffc0643b2b4c13a21400a51cf2aa0b58871313b1c957af79c69a44"
+    },
+    {
+      "req_id": "v4-24001-b001-g",
+      "pair_id": "v4-24001-b001",
+      "arm": "G",
+      "task_kind": "extract",
+      "category": "background",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "R1至R6应为33/43/48/55/40/40；G六行逐项正确。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "expected_lines": [
+        "R1|33",
+        "R2|43",
+        "R3|48",
+        "R4|55",
+        "R5|40",
+        "R6|40"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "33",
+          "expected": "33"
+        },
+        {
+          "id": "R2",
+          "source_value": "43",
+          "expected": "43"
+        },
+        {
+          "id": "R3",
+          "source_value": "48",
+          "expected": "48"
+        },
+        {
+          "id": "R4",
+          "source_value": "55",
+          "expected": "55"
+        },
+        {
+          "id": "R5",
+          "source_value": "40",
+          "expected": "40"
+        },
+        {
+          "id": "R6",
+          "source_value": "40",
+          "expected": "40"
+        }
+      ],
+      "original_content": "R1|33\nR2|43\nR3|48\nR4|55\nR5|40\nR6|40",
+      "parsed_fields": [
+        [
+          "R1",
+          "33"
+        ],
+        [
+          "R2",
+          "43"
+        ],
+        [
+          "R3",
+          "48"
+        ],
+        [
+          "R4",
+          "55"
+        ],
+        [
+          "R5",
+          "40"
+        ],
+        [
+          "R6",
+          "40"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 6,
+      "planned_fields": 6,
+      "source_prompt_sha256": "bdaa21b83ef20a0dea148deb9a64ec29c8bcc6debc9157b050c5a609551c4bcd",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q27-v4-24001-b001-g/replay/client.jsonl",
+      "source_client_sha256": "9b0f72f170d6cf6ae69824b8c9e21b513babb726d750d6bf76a1c80950aafdc2",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q27-v4-24001-b001-g/output.txt",
+      "source_output_sha256": "598cf552accf8becf2f91b26d9f843c110e1678fac699affe7ea42efb4fa2fc6"
+    },
+    {
+      "req_id": "v4-24001-b001-u",
+      "pair_id": "v4-24001-b001",
+      "arm": "U",
+      "task_kind": "extract",
+      "category": "background",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "R1至R6应为33/43/48/55/40/40；U六行逐项正确。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "expected_lines": [
+        "R1|33",
+        "R2|43",
+        "R3|48",
+        "R4|55",
+        "R5|40",
+        "R6|40"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "33",
+          "expected": "33"
+        },
+        {
+          "id": "R2",
+          "source_value": "43",
+          "expected": "43"
+        },
+        {
+          "id": "R3",
+          "source_value": "48",
+          "expected": "48"
+        },
+        {
+          "id": "R4",
+          "source_value": "55",
+          "expected": "55"
+        },
+        {
+          "id": "R5",
+          "source_value": "40",
+          "expected": "40"
+        },
+        {
+          "id": "R6",
+          "source_value": "40",
+          "expected": "40"
+        }
+      ],
+      "original_content": "R1|33\nR2|43\nR3|48\nR4|55\nR5|40\nR6|40",
+      "parsed_fields": [
+        [
+          "R1",
+          "33"
+        ],
+        [
+          "R2",
+          "43"
+        ],
+        [
+          "R3",
+          "48"
+        ],
+        [
+          "R4",
+          "55"
+        ],
+        [
+          "R5",
+          "40"
+        ],
+        [
+          "R6",
+          "40"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 6,
+      "planned_fields": 6,
+      "source_prompt_sha256": "bdaa21b83ef20a0dea148deb9a64ec29c8bcc6debc9157b050c5a609551c4bcd",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q28-v4-24001-b001-u/replay/client.jsonl",
+      "source_client_sha256": "906ee236be6f161c8717a296889cea6582ded314c7e5cf0e7a6bc2740680bd6c",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q28-v4-24001-b001-u/output.txt",
+      "source_output_sha256": "598cf552accf8becf2f91b26d9f843c110e1678fac699affe7ea42efb4fa2fc6"
+    },
+    {
+      "req_id": "v4-24001-b002-u",
+      "pair_id": "v4-24001-b002",
+      "arm": "U",
+      "task_kind": "extract",
+      "category": "background",
+      "input_token_bucket": 1,
+      "business_correct": false,
+      "review_note": "六行格式与目标顺序正确，前五值正确；R6源值88，U却抄31（资料中R7为31），实际字段错。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "expected_lines": [
+        "R1|40",
+        "R2|13",
+        "R3|33",
+        "R4|30",
+        "R5|87",
+        "R6|88"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "40",
+          "expected": "40"
+        },
+        {
+          "id": "R2",
+          "source_value": "13",
+          "expected": "13"
+        },
+        {
+          "id": "R3",
+          "source_value": "33",
+          "expected": "33"
+        },
+        {
+          "id": "R4",
+          "source_value": "30",
+          "expected": "30"
+        },
+        {
+          "id": "R5",
+          "source_value": "87",
+          "expected": "87"
+        },
+        {
+          "id": "R6",
+          "source_value": "88",
+          "expected": "88"
+        }
+      ],
+      "original_content": "R1|40\nR2|13\nR3|33\nR4|30\nR5|87\nR6|31",
+      "parsed_fields": [
+        [
+          "R1",
+          "40"
+        ],
+        [
+          "R2",
+          "13"
+        ],
+        [
+          "R3",
+          "33"
+        ],
+        [
+          "R4",
+          "30"
+        ],
+        [
+          "R5",
+          "87"
+        ],
+        [
+          "R6",
+          "31"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [
+        {
+          "id": "R6",
+          "expected": "88",
+          "observed": "31"
+        }
+      ],
+      "auxiliary_correct_fields": 5,
+      "planned_fields": 6,
+      "source_prompt_sha256": "cb64ad386a74025f451fd8af1f308567ff23d1d9f6e470df5d69f17fbc417918",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q29-v4-24001-b002-u/replay/client.jsonl",
+      "source_client_sha256": "72b87c28582aebb439edc9eaa4c843ff7de4abc418595f44d2e23eba40f7956c",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q29-v4-24001-b002-u/output.txt",
+      "source_output_sha256": "2cd38a677a34ce96a0852bbbcc6d2d39fbd3f8b4c47645935d34f0a265a791e4"
+    },
+    {
+      "req_id": "v4-24001-b002-g",
+      "pair_id": "v4-24001-b002",
+      "arm": "G",
+      "task_kind": "extract",
+      "category": "background",
+      "input_token_bucket": 1,
+      "business_correct": false,
+      "review_note": "G与U相同，R6应88却写31；合法格式没有消除抄错数。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "expected_lines": [
+        "R1|40",
+        "R2|13",
+        "R3|33",
+        "R4|30",
+        "R5|87",
+        "R6|88"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "40",
+          "expected": "40"
+        },
+        {
+          "id": "R2",
+          "source_value": "13",
+          "expected": "13"
+        },
+        {
+          "id": "R3",
+          "source_value": "33",
+          "expected": "33"
+        },
+        {
+          "id": "R4",
+          "source_value": "30",
+          "expected": "30"
+        },
+        {
+          "id": "R5",
+          "source_value": "87",
+          "expected": "87"
+        },
+        {
+          "id": "R6",
+          "source_value": "88",
+          "expected": "88"
+        }
+      ],
+      "original_content": "R1|40\nR2|13\nR3|33\nR4|30\nR5|87\nR6|31",
+      "parsed_fields": [
+        [
+          "R1",
+          "40"
+        ],
+        [
+          "R2",
+          "13"
+        ],
+        [
+          "R3",
+          "33"
+        ],
+        [
+          "R4",
+          "30"
+        ],
+        [
+          "R5",
+          "87"
+        ],
+        [
+          "R6",
+          "31"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [
+        {
+          "id": "R6",
+          "expected": "88",
+          "observed": "31"
+        }
+      ],
+      "auxiliary_correct_fields": 5,
+      "planned_fields": 6,
+      "source_prompt_sha256": "cb64ad386a74025f451fd8af1f308567ff23d1d9f6e470df5d69f17fbc417918",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q30-v4-24001-b002-g/replay/client.jsonl",
+      "source_client_sha256": "45782939756dc0e46f4006c847acb376e619c976ac5f5e38f6de6c7932cd7207",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q30-v4-24001-b002-g/output.txt",
+      "source_output_sha256": "2cd38a677a34ce96a0852bbbcc6d2d39fbd3f8b4c47645935d34f0a265a791e4"
+    },
+    {
+      "req_id": "v4-24001-b003-g",
+      "pair_id": "v4-24001-b003",
+      "arm": "G",
+      "task_kind": "extract",
+      "category": "background",
+      "input_token_bucket": 2,
+      "business_correct": false,
+      "review_note": "G与U相同，R1应47却写22；其余五目标正确，仍不能通过整题。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "expected_lines": [
+        "R1|47",
+        "R2|22",
+        "R3|60",
+        "R4|88",
+        "R5|51",
+        "R6|16"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "47",
+          "expected": "47"
+        },
+        {
+          "id": "R2",
+          "source_value": "22",
+          "expected": "22"
+        },
+        {
+          "id": "R3",
+          "source_value": "60",
+          "expected": "60"
+        },
+        {
+          "id": "R4",
+          "source_value": "88",
+          "expected": "88"
+        },
+        {
+          "id": "R5",
+          "source_value": "51",
+          "expected": "51"
+        },
+        {
+          "id": "R6",
+          "source_value": "16",
+          "expected": "16"
+        }
+      ],
+      "original_content": "R1|22\nR2|22\nR3|60\nR4|88\nR5|51\nR6|16",
+      "parsed_fields": [
+        [
+          "R1",
+          "22"
+        ],
+        [
+          "R2",
+          "22"
+        ],
+        [
+          "R3",
+          "60"
+        ],
+        [
+          "R4",
+          "88"
+        ],
+        [
+          "R5",
+          "51"
+        ],
+        [
+          "R6",
+          "16"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [
+        {
+          "id": "R1",
+          "expected": "47",
+          "observed": "22"
+        }
+      ],
+      "auxiliary_correct_fields": 5,
+      "planned_fields": 6,
+      "source_prompt_sha256": "d70bc874c1b57b2431be2633199e4340c296f358579f8b38a67893beed714f90",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q31-v4-24001-b003-g/replay/client.jsonl",
+      "source_client_sha256": "f7b39506ee713a888a1602b94de76c040b49b6611113ebfabdfa34cb998884c6",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q31-v4-24001-b003-g/output.txt",
+      "source_output_sha256": "e19aeb713e458bba59fd75aa3dfc906525220783134e877bbce617f557781a28"
+    },
+    {
+      "req_id": "v4-24001-b003-u",
+      "pair_id": "v4-24001-b003",
+      "arm": "U",
+      "task_kind": "extract",
+      "category": "background",
+      "input_token_bucket": 2,
+      "business_correct": false,
+      "review_note": "六行格式和顺序正确；R1源值47，U写22，R2的值正是22；其余五目标值正确。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "expected_lines": [
+        "R1|47",
+        "R2|22",
+        "R3|60",
+        "R4|88",
+        "R5|51",
+        "R6|16"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "47",
+          "expected": "47"
+        },
+        {
+          "id": "R2",
+          "source_value": "22",
+          "expected": "22"
+        },
+        {
+          "id": "R3",
+          "source_value": "60",
+          "expected": "60"
+        },
+        {
+          "id": "R4",
+          "source_value": "88",
+          "expected": "88"
+        },
+        {
+          "id": "R5",
+          "source_value": "51",
+          "expected": "51"
+        },
+        {
+          "id": "R6",
+          "source_value": "16",
+          "expected": "16"
+        }
+      ],
+      "original_content": "R1|22\nR2|22\nR3|60\nR4|88\nR5|51\nR6|16",
+      "parsed_fields": [
+        [
+          "R1",
+          "22"
+        ],
+        [
+          "R2",
+          "22"
+        ],
+        [
+          "R3",
+          "60"
+        ],
+        [
+          "R4",
+          "88"
+        ],
+        [
+          "R5",
+          "51"
+        ],
+        [
+          "R6",
+          "16"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [
+        {
+          "id": "R1",
+          "expected": "47",
+          "observed": "22"
+        }
+      ],
+      "auxiliary_correct_fields": 5,
+      "planned_fields": 6,
+      "source_prompt_sha256": "d70bc874c1b57b2431be2633199e4340c296f358579f8b38a67893beed714f90",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q32-v4-24001-b003-u/replay/client.jsonl",
+      "source_client_sha256": "39276cf28cadd759860e92dc69a1a09ebdeec9a1dc08ba43c8f3d47fa8dff884",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q32-v4-24001-b003-u/output.txt",
+      "source_output_sha256": "e19aeb713e458bba59fd75aa3dfc906525220783134e877bbce617f557781a28"
+    },
+    {
+      "req_id": "v4-24001-b004-u",
+      "pair_id": "v4-24001-b004",
+      "arm": "U",
+      "task_kind": "check",
+      "category": "background",
+      "input_token_bucket": 1,
+      "business_correct": false,
+      "review_note": "U每行三字段并用同写一致；R1是54/55、R3是69/70、R5是85/86，均应不一致。不能将三列原文清洗成正确结论。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "expected_lines": [
+        "R1|不一致",
+        "R2|一致",
+        "R3|不一致",
+        "R4|一致",
+        "R5|不一致",
+        "R6|一致"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "54",
+          "B": "55",
+          "expected": "不一致"
+        },
+        {
+          "id": "R2",
+          "A": "45",
+          "B": "45",
+          "expected": "一致"
+        },
+        {
+          "id": "R3",
+          "A": "69",
+          "B": "70",
+          "expected": "不一致"
+        },
+        {
+          "id": "R4",
+          "A": "18",
+          "B": "18",
+          "expected": "一致"
+        },
+        {
+          "id": "R5",
+          "A": "85",
+          "B": "86",
+          "expected": "不一致"
+        },
+        {
+          "id": "R6",
+          "A": "51",
+          "B": "51",
+          "expected": "一致"
+        }
+      ],
+      "original_content": "R1|54|同写一致\nR2|45|同写一致\nR3|69|同写一致\nR4|18|同写一致\nR5|85|同写一致\nR6|51|同写一致",
+      "parsed_fields": [],
+      "invalid_lines": [
+        "R1|54|同写一致",
+        "R2|45|同写一致",
+        "R3|69|同写一致",
+        "R4|18|同写一致",
+        "R5|85|同写一致",
+        "R6|51|同写一致"
+      ],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 0,
+      "planned_fields": 6,
+      "source_prompt_sha256": "65ac05702d4622bc434d005d3724bb55ca70003b9a154d1e54fcf5f93f5031b4",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q33-v4-24001-b004-u/replay/client.jsonl",
+      "source_client_sha256": "bf2faca0f4a48b2f34900424f753373bd0c9e84aca6b2a3fc902f9a62364042a",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q33-v4-24001-b004-u/output.txt",
+      "source_output_sha256": "8b589cd232c8de28f964780e51f12216bbd1086201456c6a7a0c84292409912f"
+    },
+    {
+      "req_id": "v4-24001-b004-g",
+      "pair_id": "v4-24001-b004",
+      "arm": "G",
+      "task_kind": "check",
+      "category": "background",
+      "input_token_bucket": 1,
+      "business_correct": false,
+      "review_note": "G六行格式合法但全写一致；R1(54/55)、R3(69/70)、R5(85/86)三项错，R2/R4/R6三项正确。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "expected_lines": [
+        "R1|不一致",
+        "R2|一致",
+        "R3|不一致",
+        "R4|一致",
+        "R5|不一致",
+        "R6|一致"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "54",
+          "B": "55",
+          "expected": "不一致"
+        },
+        {
+          "id": "R2",
+          "A": "45",
+          "B": "45",
+          "expected": "一致"
+        },
+        {
+          "id": "R3",
+          "A": "69",
+          "B": "70",
+          "expected": "不一致"
+        },
+        {
+          "id": "R4",
+          "A": "18",
+          "B": "18",
+          "expected": "一致"
+        },
+        {
+          "id": "R5",
+          "A": "85",
+          "B": "86",
+          "expected": "不一致"
+        },
+        {
+          "id": "R6",
+          "A": "51",
+          "B": "51",
+          "expected": "一致"
+        }
+      ],
+      "original_content": "R1|一致\nR2|一致\nR3|一致\nR4|一致\nR5|一致\nR6|一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [
+        {
+          "id": "R1",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "id": "R3",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "id": "R5",
+          "expected": "不一致",
+          "observed": "一致"
+        }
+      ],
+      "auxiliary_correct_fields": 3,
+      "planned_fields": 6,
+      "source_prompt_sha256": "65ac05702d4622bc434d005d3724bb55ca70003b9a154d1e54fcf5f93f5031b4",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q34-v4-24001-b004-g/replay/client.jsonl",
+      "source_client_sha256": "1b9b6ad565a3e06cc5ee456bf2d79aca46663ae0ffde19921d86ecf269df0196",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q34-v4-24001-b004-g/output.txt",
+      "source_output_sha256": "51575a9e53043fa153cd278a748906685b062558c201ade33a2c2b05f56c84a7"
+    },
+    {
+      "req_id": "v4-24001-b005-g",
+      "pair_id": "v4-24001-b005",
+      "arm": "G",
+      "task_kind": "check",
+      "category": "background",
+      "input_token_bucket": 1,
+      "business_correct": false,
+      "review_note": "G全写一致；R2(35/36)、R4(71/72)、R6(93/94)三项应不一致，其余三项一致正确。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "expected_lines": [
+        "R1|一致",
+        "R2|不一致",
+        "R3|一致",
+        "R4|不一致",
+        "R5|一致",
+        "R6|不一致"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "61",
+          "B": "61",
+          "expected": "一致"
+        },
+        {
+          "id": "R2",
+          "A": "35",
+          "B": "36",
+          "expected": "不一致"
+        },
+        {
+          "id": "R3",
+          "A": "35",
+          "B": "35",
+          "expected": "一致"
+        },
+        {
+          "id": "R4",
+          "A": "71",
+          "B": "72",
+          "expected": "不一致"
+        },
+        {
+          "id": "R5",
+          "A": "11",
+          "B": "11",
+          "expected": "一致"
+        },
+        {
+          "id": "R6",
+          "A": "93",
+          "B": "94",
+          "expected": "不一致"
+        }
+      ],
+      "original_content": "R1|一致\nR2|一致\nR3|一致\nR4|一致\nR5|一致\nR6|一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [
+        {
+          "id": "R2",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "id": "R4",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "id": "R6",
+          "expected": "不一致",
+          "observed": "一致"
+        }
+      ],
+      "auxiliary_correct_fields": 3,
+      "planned_fields": 6,
+      "source_prompt_sha256": "4142598a8f94cde4b911db045a54c79b5d73548b48675e6e51051f5fb35f2343",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q35-v4-24001-b005-g/replay/client.jsonl",
+      "source_client_sha256": "e4759494c2a22a96f71497ea7615e38ab886725cfa7717d5e7203ea01798e15e",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q35-v4-24001-b005-g/output.txt",
+      "source_output_sha256": "51575a9e53043fa153cd278a748906685b062558c201ade33a2c2b05f56c84a7"
+    },
+    {
+      "req_id": "v4-24001-b005-u",
+      "pair_id": "v4-24001-b005",
+      "arm": "U",
+      "task_kind": "check",
+      "category": "background",
+      "input_token_bucket": 1,
+      "business_correct": false,
+      "review_note": "U六行均写同写，未使用约定的一致/不一致标签；资料R2是35/36、R4是71/72、R6是93/94。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "expected_lines": [
+        "R1|一致",
+        "R2|不一致",
+        "R3|一致",
+        "R4|不一致",
+        "R5|一致",
+        "R6|不一致"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "61",
+          "B": "61",
+          "expected": "一致"
+        },
+        {
+          "id": "R2",
+          "A": "35",
+          "B": "36",
+          "expected": "不一致"
+        },
+        {
+          "id": "R3",
+          "A": "35",
+          "B": "35",
+          "expected": "一致"
+        },
+        {
+          "id": "R4",
+          "A": "71",
+          "B": "72",
+          "expected": "不一致"
+        },
+        {
+          "id": "R5",
+          "A": "11",
+          "B": "11",
+          "expected": "一致"
+        },
+        {
+          "id": "R6",
+          "A": "93",
+          "B": "94",
+          "expected": "不一致"
+        }
+      ],
+      "original_content": "R1|同写\nR2|同写\nR3|同写\nR4|同写\nR5|同写\nR6|同写",
+      "parsed_fields": [
+        [
+          "R1",
+          "同写"
+        ],
+        [
+          "R2",
+          "同写"
+        ],
+        [
+          "R3",
+          "同写"
+        ],
+        [
+          "R4",
+          "同写"
+        ],
+        [
+          "R5",
+          "同写"
+        ],
+        [
+          "R6",
+          "同写"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [
+        {
+          "id": "R1",
+          "expected": "一致",
+          "observed": "同写"
+        },
+        {
+          "id": "R2",
+          "expected": "不一致",
+          "observed": "同写"
+        },
+        {
+          "id": "R3",
+          "expected": "一致",
+          "observed": "同写"
+        },
+        {
+          "id": "R4",
+          "expected": "不一致",
+          "observed": "同写"
+        },
+        {
+          "id": "R5",
+          "expected": "一致",
+          "observed": "同写"
+        },
+        {
+          "id": "R6",
+          "expected": "不一致",
+          "observed": "同写"
+        }
+      ],
+      "auxiliary_correct_fields": 0,
+      "planned_fields": 6,
+      "source_prompt_sha256": "4142598a8f94cde4b911db045a54c79b5d73548b48675e6e51051f5fb35f2343",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q36-v4-24001-b005-u/replay/client.jsonl",
+      "source_client_sha256": "47d545e62536343cb48168a44567e865010addaf4cce551cf588f1ac9326e7cb",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q36-v4-24001-b005-u/output.txt",
+      "source_output_sha256": "97fafa3c0c418085adef4c50f4fa1b0165dd7552c0bbee57ad1adaface399231"
+    },
+    {
+      "req_id": "v4-24001-b006-u",
+      "pair_id": "v4-24001-b006",
+      "arm": "U",
+      "task_kind": "check",
+      "category": "background",
+      "input_token_bucket": 2,
+      "business_correct": false,
+      "review_note": "U只列A中原数68/19/89/32/99/22，没有核对结论；不能当作已完成比较。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "expected_lines": [
+        "R1|不一致",
+        "R2|一致",
+        "R3|不一致",
+        "R4|一致",
+        "R5|不一致",
+        "R6|一致"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "68",
+          "B": "69",
+          "expected": "不一致"
+        },
+        {
+          "id": "R2",
+          "A": "19",
+          "B": "19",
+          "expected": "一致"
+        },
+        {
+          "id": "R3",
+          "A": "89",
+          "B": "90",
+          "expected": "不一致"
+        },
+        {
+          "id": "R4",
+          "A": "32",
+          "B": "32",
+          "expected": "一致"
+        },
+        {
+          "id": "R5",
+          "A": "99",
+          "B": "10",
+          "expected": "不一致"
+        },
+        {
+          "id": "R6",
+          "A": "22",
+          "B": "22",
+          "expected": "一致"
+        }
+      ],
+      "original_content": "R1|68\nR2|19\nR3|89\nR4|32\nR5|99\nR6|22",
+      "parsed_fields": [
+        [
+          "R1",
+          "68"
+        ],
+        [
+          "R2",
+          "19"
+        ],
+        [
+          "R3",
+          "89"
+        ],
+        [
+          "R4",
+          "32"
+        ],
+        [
+          "R5",
+          "99"
+        ],
+        [
+          "R6",
+          "22"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [
+        {
+          "id": "R1",
+          "expected": "不一致",
+          "observed": "68"
+        },
+        {
+          "id": "R2",
+          "expected": "一致",
+          "observed": "19"
+        },
+        {
+          "id": "R3",
+          "expected": "不一致",
+          "observed": "89"
+        },
+        {
+          "id": "R4",
+          "expected": "一致",
+          "observed": "32"
+        },
+        {
+          "id": "R5",
+          "expected": "不一致",
+          "observed": "99"
+        },
+        {
+          "id": "R6",
+          "expected": "一致",
+          "observed": "22"
+        }
+      ],
+      "auxiliary_correct_fields": 0,
+      "planned_fields": 6,
+      "source_prompt_sha256": "1214e1131a6a481e66b1dde40fcf134f1c6563ba4a49c0176c1d3c1a251bba41",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q37-v4-24001-b006-u/replay/client.jsonl",
+      "source_client_sha256": "c8b4debecefbf12b692aa6c34cd34fc2e45a296f18cc2fa45812d5a8f55b7f0d",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q37-v4-24001-b006-u/output.txt",
+      "source_output_sha256": "a0cfa7aecece6a721d805bad94f7e21cd0c0ccc1a14db2bf19339ad4432c17c1"
+    },
+    {
+      "req_id": "v4-24001-b006-g",
+      "pair_id": "v4-24001-b006",
+      "arm": "G",
+      "task_kind": "check",
+      "category": "background",
+      "input_token_bucket": 2,
+      "business_correct": false,
+      "review_note": "G全写一致；R1(68/69)、R3(89/90)、R5(99/10)三项应不一致；R2/R4/R6正确。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "expected_lines": [
+        "R1|不一致",
+        "R2|一致",
+        "R3|不一致",
+        "R4|一致",
+        "R5|不一致",
+        "R6|一致"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "68",
+          "B": "69",
+          "expected": "不一致"
+        },
+        {
+          "id": "R2",
+          "A": "19",
+          "B": "19",
+          "expected": "一致"
+        },
+        {
+          "id": "R3",
+          "A": "89",
+          "B": "90",
+          "expected": "不一致"
+        },
+        {
+          "id": "R4",
+          "A": "32",
+          "B": "32",
+          "expected": "一致"
+        },
+        {
+          "id": "R5",
+          "A": "99",
+          "B": "10",
+          "expected": "不一致"
+        },
+        {
+          "id": "R6",
+          "A": "22",
+          "B": "22",
+          "expected": "一致"
+        }
+      ],
+      "original_content": "R1|一致\nR2|一致\nR3|一致\nR4|一致\nR5|一致\nR6|一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [
+        {
+          "id": "R1",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "id": "R3",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "id": "R5",
+          "expected": "不一致",
+          "observed": "一致"
+        }
+      ],
+      "auxiliary_correct_fields": 3,
+      "planned_fields": 6,
+      "source_prompt_sha256": "1214e1131a6a481e66b1dde40fcf134f1c6563ba4a49c0176c1d3c1a251bba41",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q38-v4-24001-b006-g/replay/client.jsonl",
+      "source_client_sha256": "9065b66fa326fdcfa35dc9c9905f425bd66552c7ed6bf91600ebc75c06129953",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q38-v4-24001-b006-g/output.txt",
+      "source_output_sha256": "51575a9e53043fa153cd278a748906685b062558c201ade33a2c2b05f56c84a7"
+    },
+    {
+      "req_id": "v4-24001-b007-g",
+      "pair_id": "v4-24001-b007",
+      "arm": "G",
+      "task_kind": "check",
+      "category": "background",
+      "input_token_bucket": 0,
+      "business_correct": false,
+      "review_note": "G全写一致；R2(24/25)、R4(81/82)、R6(86/87)三项应不一致；R1/R3/R5正确。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "expected_lines": [
+        "R1|一致",
+        "R2|不一致",
+        "R3|一致",
+        "R4|不一致",
+        "R5|一致",
+        "R6|不一致"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "75",
+          "B": "75",
+          "expected": "一致"
+        },
+        {
+          "id": "R2",
+          "A": "24",
+          "B": "25",
+          "expected": "不一致"
+        },
+        {
+          "id": "R3",
+          "A": "29",
+          "B": "29",
+          "expected": "一致"
+        },
+        {
+          "id": "R4",
+          "A": "81",
+          "B": "82",
+          "expected": "不一致"
+        },
+        {
+          "id": "R5",
+          "A": "91",
+          "B": "91",
+          "expected": "一致"
+        },
+        {
+          "id": "R6",
+          "A": "86",
+          "B": "87",
+          "expected": "不一致"
+        }
+      ],
+      "original_content": "R1|一致\nR2|一致\nR3|一致\nR4|一致\nR5|一致\nR6|一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [
+        {
+          "id": "R2",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "id": "R4",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "id": "R6",
+          "expected": "不一致",
+          "observed": "一致"
+        }
+      ],
+      "auxiliary_correct_fields": 3,
+      "planned_fields": 6,
+      "source_prompt_sha256": "3ec069a482c5d05543b79701087e4ea7d318af91f5db379b36a62098facf5eac",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q39-v4-24001-b007-g/replay/client.jsonl",
+      "source_client_sha256": "24dd6fe95d542e6f47cf209ff1f47ab6ce89f8d4e6b8ed16ca56b334e3a55945",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q39-v4-24001-b007-g/output.txt",
+      "source_output_sha256": "51575a9e53043fa153cd278a748906685b062558c201ade33a2c2b05f56c84a7"
+    },
+    {
+      "req_id": "v4-24001-b007-u",
+      "pair_id": "v4-24001-b007",
+      "arm": "U",
+      "task_kind": "check",
+      "category": "background",
+      "input_token_bucket": 0,
+      "business_correct": false,
+      "review_note": "U只列A中原数75/24/29/81/91/86，没有核对结论。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "expected_lines": [
+        "R1|一致",
+        "R2|不一致",
+        "R3|一致",
+        "R4|不一致",
+        "R5|一致",
+        "R6|不一致"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "75",
+          "B": "75",
+          "expected": "一致"
+        },
+        {
+          "id": "R2",
+          "A": "24",
+          "B": "25",
+          "expected": "不一致"
+        },
+        {
+          "id": "R3",
+          "A": "29",
+          "B": "29",
+          "expected": "一致"
+        },
+        {
+          "id": "R4",
+          "A": "81",
+          "B": "82",
+          "expected": "不一致"
+        },
+        {
+          "id": "R5",
+          "A": "91",
+          "B": "91",
+          "expected": "一致"
+        },
+        {
+          "id": "R6",
+          "A": "86",
+          "B": "87",
+          "expected": "不一致"
+        }
+      ],
+      "original_content": "R1|75\nR2|24\nR3|29\nR4|81\nR5|91\nR6|86",
+      "parsed_fields": [
+        [
+          "R1",
+          "75"
+        ],
+        [
+          "R2",
+          "24"
+        ],
+        [
+          "R3",
+          "29"
+        ],
+        [
+          "R4",
+          "81"
+        ],
+        [
+          "R5",
+          "91"
+        ],
+        [
+          "R6",
+          "86"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [
+        {
+          "id": "R1",
+          "expected": "一致",
+          "observed": "75"
+        },
+        {
+          "id": "R2",
+          "expected": "不一致",
+          "observed": "24"
+        },
+        {
+          "id": "R3",
+          "expected": "一致",
+          "observed": "29"
+        },
+        {
+          "id": "R4",
+          "expected": "不一致",
+          "observed": "81"
+        },
+        {
+          "id": "R5",
+          "expected": "一致",
+          "observed": "91"
+        },
+        {
+          "id": "R6",
+          "expected": "不一致",
+          "observed": "86"
+        }
+      ],
+      "auxiliary_correct_fields": 0,
+      "planned_fields": 6,
+      "source_prompt_sha256": "3ec069a482c5d05543b79701087e4ea7d318af91f5db379b36a62098facf5eac",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q40-v4-24001-b007-u/replay/client.jsonl",
+      "source_client_sha256": "f3467aa18d7932c37d00a57945d3a98d0b64bb6838792d612dd9d1c18f32e686",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q40-v4-24001-b007-u/output.txt",
+      "source_output_sha256": "836c27e395074883e247d84c66ed85758e7bb8a75c2c8d05b77b204317885dbe"
+    },
+    {
+      "req_id": "v4-24001-b008-u",
+      "pair_id": "v4-24001-b008",
+      "arm": "U",
+      "task_kind": "organize",
+      "category": "background",
+      "input_token_bucket": 2,
+      "business_correct": true,
+      "review_note": "指定R4/R6/R2/R1/R5/R3，应88/98/97/82/50/11；U逐项及顺序正确。",
+      "public_target_ids": [
+        "R4",
+        "R6",
+        "R2",
+        "R1",
+        "R5",
+        "R3"
+      ],
+      "expected_lines": [
+        "R4|88",
+        "R6|98",
+        "R2|97",
+        "R1|82",
+        "R5|50",
+        "R3|11"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R4",
+          "source_value": "88",
+          "expected": "88"
+        },
+        {
+          "id": "R6",
+          "source_value": "98",
+          "expected": "98"
+        },
+        {
+          "id": "R2",
+          "source_value": "97",
+          "expected": "97"
+        },
+        {
+          "id": "R1",
+          "source_value": "82",
+          "expected": "82"
+        },
+        {
+          "id": "R5",
+          "source_value": "50",
+          "expected": "50"
+        },
+        {
+          "id": "R3",
+          "source_value": "11",
+          "expected": "11"
+        }
+      ],
+      "original_content": "R4|88\nR6|98\nR2|97\nR1|82\nR5|50\nR3|11",
+      "parsed_fields": [
+        [
+          "R4",
+          "88"
+        ],
+        [
+          "R6",
+          "98"
+        ],
+        [
+          "R2",
+          "97"
+        ],
+        [
+          "R1",
+          "82"
+        ],
+        [
+          "R5",
+          "50"
+        ],
+        [
+          "R3",
+          "11"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 6,
+      "planned_fields": 6,
+      "source_prompt_sha256": "f6b752c943f607491f87e9818b0f7e0f2a2219ad5629b5ad20f5cb70f82898f2",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q41-v4-24001-b008-u/replay/client.jsonl",
+      "source_client_sha256": "96769546286ca11a986aec9b7367194cb5877e4825bf133013a8596eef675ca4",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q41-v4-24001-b008-u/output.txt",
+      "source_output_sha256": "e6e342cfec0bd64d05b9a3f3230b4669a20261fbd4a5c0af6422b1ad7bf81c15"
+    },
+    {
+      "req_id": "v4-24001-b008-g",
+      "pair_id": "v4-24001-b008",
+      "arm": "G",
+      "task_kind": "organize",
+      "category": "background",
+      "input_token_bucket": 2,
+      "business_correct": true,
+      "review_note": "指定R4/R6/R2/R1/R5/R3，应88/98/97/82/50/11；G逐项及顺序正确。",
+      "public_target_ids": [
+        "R4",
+        "R6",
+        "R2",
+        "R1",
+        "R5",
+        "R3"
+      ],
+      "expected_lines": [
+        "R4|88",
+        "R6|98",
+        "R2|97",
+        "R1|82",
+        "R5|50",
+        "R3|11"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R4",
+          "source_value": "88",
+          "expected": "88"
+        },
+        {
+          "id": "R6",
+          "source_value": "98",
+          "expected": "98"
+        },
+        {
+          "id": "R2",
+          "source_value": "97",
+          "expected": "97"
+        },
+        {
+          "id": "R1",
+          "source_value": "82",
+          "expected": "82"
+        },
+        {
+          "id": "R5",
+          "source_value": "50",
+          "expected": "50"
+        },
+        {
+          "id": "R3",
+          "source_value": "11",
+          "expected": "11"
+        }
+      ],
+      "original_content": "R4|88\nR6|98\nR2|97\nR1|82\nR5|50\nR3|11",
+      "parsed_fields": [
+        [
+          "R4",
+          "88"
+        ],
+        [
+          "R6",
+          "98"
+        ],
+        [
+          "R2",
+          "97"
+        ],
+        [
+          "R1",
+          "82"
+        ],
+        [
+          "R5",
+          "50"
+        ],
+        [
+          "R3",
+          "11"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 6,
+      "planned_fields": 6,
+      "source_prompt_sha256": "f6b752c943f607491f87e9818b0f7e0f2a2219ad5629b5ad20f5cb70f82898f2",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q42-v4-24001-b008-g/replay/client.jsonl",
+      "source_client_sha256": "3fb3a7d08b110c80edae7ee21761c6d8a5076a9afebb3d6dcf52e750be8152d4",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q42-v4-24001-b008-g/output.txt",
+      "source_output_sha256": "e6e342cfec0bd64d05b9a3f3230b4669a20261fbd4a5c0af6422b1ad7bf81c15"
+    },
+    {
+      "req_id": "v4-24001-b009-g",
+      "pair_id": "v4-24001-b009",
+      "arm": "G",
+      "task_kind": "organize",
+      "category": "background",
+      "input_token_bucket": 2,
+      "business_correct": false,
+      "review_note": "G与U相同；R5应47写48、R3应97写38。源资料R59=48、R31=38，但不能断定错误的内部原因。",
+      "public_target_ids": [
+        "R5",
+        "R4",
+        "R6",
+        "R2",
+        "R1",
+        "R3"
+      ],
+      "expected_lines": [
+        "R5|47",
+        "R4|45",
+        "R6|59",
+        "R2|60",
+        "R1|89",
+        "R3|97"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R5",
+          "source_value": "47",
+          "expected": "47"
+        },
+        {
+          "id": "R4",
+          "source_value": "45",
+          "expected": "45"
+        },
+        {
+          "id": "R6",
+          "source_value": "59",
+          "expected": "59"
+        },
+        {
+          "id": "R2",
+          "source_value": "60",
+          "expected": "60"
+        },
+        {
+          "id": "R1",
+          "source_value": "89",
+          "expected": "89"
+        },
+        {
+          "id": "R3",
+          "source_value": "97",
+          "expected": "97"
+        }
+      ],
+      "original_content": "R5|48\nR4|45\nR6|59\nR2|60\nR1|89\nR3|38",
+      "parsed_fields": [
+        [
+          "R5",
+          "48"
+        ],
+        [
+          "R4",
+          "45"
+        ],
+        [
+          "R6",
+          "59"
+        ],
+        [
+          "R2",
+          "60"
+        ],
+        [
+          "R1",
+          "89"
+        ],
+        [
+          "R3",
+          "38"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [
+        {
+          "id": "R5",
+          "expected": "47",
+          "observed": "48"
+        },
+        {
+          "id": "R3",
+          "expected": "97",
+          "observed": "38"
+        }
+      ],
+      "auxiliary_correct_fields": 4,
+      "planned_fields": 6,
+      "source_prompt_sha256": "5d83d002fb9f9eebd3b1d518c1f8de6cc53fcb893f28f112ff28d67ce7918ba4",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q43-v4-24001-b009-g/replay/client.jsonl",
+      "source_client_sha256": "8c302b640e504cc3342d59807eb65fc843b0022b2f9a79f129dc50852a6b69e2",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q43-v4-24001-b009-g/output.txt",
+      "source_output_sha256": "97bf663902d648667e7bc50198216db07cff757edc908399b9eb1a33efea4428"
+    },
+    {
+      "req_id": "v4-24001-b009-u",
+      "pair_id": "v4-24001-b009",
+      "arm": "U",
+      "task_kind": "organize",
+      "category": "background",
+      "input_token_bucket": 2,
+      "business_correct": false,
+      "review_note": "目标顺序正确，R5应47写48、R3应97写38，另外四目标正确；实际字段抄错。",
+      "public_target_ids": [
+        "R5",
+        "R4",
+        "R6",
+        "R2",
+        "R1",
+        "R3"
+      ],
+      "expected_lines": [
+        "R5|47",
+        "R4|45",
+        "R6|59",
+        "R2|60",
+        "R1|89",
+        "R3|97"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R5",
+          "source_value": "47",
+          "expected": "47"
+        },
+        {
+          "id": "R4",
+          "source_value": "45",
+          "expected": "45"
+        },
+        {
+          "id": "R6",
+          "source_value": "59",
+          "expected": "59"
+        },
+        {
+          "id": "R2",
+          "source_value": "60",
+          "expected": "60"
+        },
+        {
+          "id": "R1",
+          "source_value": "89",
+          "expected": "89"
+        },
+        {
+          "id": "R3",
+          "source_value": "97",
+          "expected": "97"
+        }
+      ],
+      "original_content": "R5|48\nR4|45\nR6|59\nR2|60\nR1|89\nR3|38",
+      "parsed_fields": [
+        [
+          "R5",
+          "48"
+        ],
+        [
+          "R4",
+          "45"
+        ],
+        [
+          "R6",
+          "59"
+        ],
+        [
+          "R2",
+          "60"
+        ],
+        [
+          "R1",
+          "89"
+        ],
+        [
+          "R3",
+          "38"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [
+        {
+          "id": "R5",
+          "expected": "47",
+          "observed": "48"
+        },
+        {
+          "id": "R3",
+          "expected": "97",
+          "observed": "38"
+        }
+      ],
+      "auxiliary_correct_fields": 4,
+      "planned_fields": 6,
+      "source_prompt_sha256": "5d83d002fb9f9eebd3b1d518c1f8de6cc53fcb893f28f112ff28d67ce7918ba4",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q44-v4-24001-b009-u/replay/client.jsonl",
+      "source_client_sha256": "5fa5d18b5201f3387a9f29a89eca81b80aee921a4e7ca327eda46be5eaf11ab0",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q44-v4-24001-b009-u/output.txt",
+      "source_output_sha256": "97bf663902d648667e7bc50198216db07cff757edc908399b9eb1a33efea4428"
+    },
+    {
+      "req_id": "v4-24001-b010-u",
+      "pair_id": "v4-24001-b010",
+      "arm": "U",
+      "task_kind": "organize",
+      "category": "background",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "指定R4/R6/R2/R5/R3/R1，应70/15/54/77/43/96；U逐项正确。",
+      "public_target_ids": [
+        "R4",
+        "R6",
+        "R2",
+        "R5",
+        "R3",
+        "R1"
+      ],
+      "expected_lines": [
+        "R4|70",
+        "R6|15",
+        "R2|54",
+        "R5|77",
+        "R3|43",
+        "R1|96"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R4",
+          "source_value": "70",
+          "expected": "70"
+        },
+        {
+          "id": "R6",
+          "source_value": "15",
+          "expected": "15"
+        },
+        {
+          "id": "R2",
+          "source_value": "54",
+          "expected": "54"
+        },
+        {
+          "id": "R5",
+          "source_value": "77",
+          "expected": "77"
+        },
+        {
+          "id": "R3",
+          "source_value": "43",
+          "expected": "43"
+        },
+        {
+          "id": "R1",
+          "source_value": "96",
+          "expected": "96"
+        }
+      ],
+      "original_content": "R4|70\nR6|15\nR2|54\nR5|77\nR3|43\nR1|96",
+      "parsed_fields": [
+        [
+          "R4",
+          "70"
+        ],
+        [
+          "R6",
+          "15"
+        ],
+        [
+          "R2",
+          "54"
+        ],
+        [
+          "R5",
+          "77"
+        ],
+        [
+          "R3",
+          "43"
+        ],
+        [
+          "R1",
+          "96"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 6,
+      "planned_fields": 6,
+      "source_prompt_sha256": "434eebd988a9626fc4de7d0ed102a372ad77f9f0c7c4d24a8f23e5dd375a845a",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q45-v4-24001-b010-u/replay/client.jsonl",
+      "source_client_sha256": "7d0513d44c3b6a2fb6635f410e9529c965a4ed17962e998159b9342a569399b3",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q45-v4-24001-b010-u/output.txt",
+      "source_output_sha256": "89e3313a1c39d4ef564cc45d7fcc477525384aa898719a415fb5c265eaa58577"
+    },
+    {
+      "req_id": "v4-24001-b010-g",
+      "pair_id": "v4-24001-b010",
+      "arm": "G",
+      "task_kind": "organize",
+      "category": "background",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "指定R4/R6/R2/R5/R3/R1，应70/15/54/77/43/96；G逐项正确。",
+      "public_target_ids": [
+        "R4",
+        "R6",
+        "R2",
+        "R5",
+        "R3",
+        "R1"
+      ],
+      "expected_lines": [
+        "R4|70",
+        "R6|15",
+        "R2|54",
+        "R5|77",
+        "R3|43",
+        "R1|96"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R4",
+          "source_value": "70",
+          "expected": "70"
+        },
+        {
+          "id": "R6",
+          "source_value": "15",
+          "expected": "15"
+        },
+        {
+          "id": "R2",
+          "source_value": "54",
+          "expected": "54"
+        },
+        {
+          "id": "R5",
+          "source_value": "77",
+          "expected": "77"
+        },
+        {
+          "id": "R3",
+          "source_value": "43",
+          "expected": "43"
+        },
+        {
+          "id": "R1",
+          "source_value": "96",
+          "expected": "96"
+        }
+      ],
+      "original_content": "R4|70\nR6|15\nR2|54\nR5|77\nR3|43\nR1|96",
+      "parsed_fields": [
+        [
+          "R4",
+          "70"
+        ],
+        [
+          "R6",
+          "15"
+        ],
+        [
+          "R2",
+          "54"
+        ],
+        [
+          "R5",
+          "77"
+        ],
+        [
+          "R3",
+          "43"
+        ],
+        [
+          "R1",
+          "96"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 6,
+      "planned_fields": 6,
+      "source_prompt_sha256": "434eebd988a9626fc4de7d0ed102a372ad77f9f0c7c4d24a8f23e5dd375a845a",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q46-v4-24001-b010-g/replay/client.jsonl",
+      "source_client_sha256": "48c8c55fe452bc24dd5f4e2871ad241fbe8308c090c3d715066a8226d8b541b2",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q46-v4-24001-b010-g/output.txt",
+      "source_output_sha256": "89e3313a1c39d4ef564cc45d7fcc477525384aa898719a415fb5c265eaa58577"
+    },
+    {
+      "req_id": "v4-24001-b011-g",
+      "pair_id": "v4-24001-b011",
+      "arm": "G",
+      "task_kind": "organize",
+      "category": "background",
+      "input_token_bucket": 1,
+      "business_correct": true,
+      "review_note": "指定R3/R5/R6/R4/R1/R2，应75/73/99/81/13/39；G逐项正确。",
+      "public_target_ids": [
+        "R3",
+        "R5",
+        "R6",
+        "R4",
+        "R1",
+        "R2"
+      ],
+      "expected_lines": [
+        "R3|75",
+        "R5|73",
+        "R6|99",
+        "R4|81",
+        "R1|13",
+        "R2|39"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R3",
+          "source_value": "75",
+          "expected": "75"
+        },
+        {
+          "id": "R5",
+          "source_value": "73",
+          "expected": "73"
+        },
+        {
+          "id": "R6",
+          "source_value": "99",
+          "expected": "99"
+        },
+        {
+          "id": "R4",
+          "source_value": "81",
+          "expected": "81"
+        },
+        {
+          "id": "R1",
+          "source_value": "13",
+          "expected": "13"
+        },
+        {
+          "id": "R2",
+          "source_value": "39",
+          "expected": "39"
+        }
+      ],
+      "original_content": "R3|75\nR5|73\nR6|99\nR4|81\nR1|13\nR2|39",
+      "parsed_fields": [
+        [
+          "R3",
+          "75"
+        ],
+        [
+          "R5",
+          "73"
+        ],
+        [
+          "R6",
+          "99"
+        ],
+        [
+          "R4",
+          "81"
+        ],
+        [
+          "R1",
+          "13"
+        ],
+        [
+          "R2",
+          "39"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 6,
+      "planned_fields": 6,
+      "source_prompt_sha256": "eb4a495de10ef56ba119bd0f20307718a2196e523337da0f9d11e95ded64350c",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q47-v4-24001-b011-g/replay/client.jsonl",
+      "source_client_sha256": "44bcc79754612df7e0180006e1e477dff4d475a28ab0439c874fdba1df2e34c9",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q47-v4-24001-b011-g/output.txt",
+      "source_output_sha256": "c5cb6d9ed3150943eb1355d2650607631c986c441f60f62ee05108f5b77c8e1d"
+    },
+    {
+      "req_id": "v4-24001-b011-u",
+      "pair_id": "v4-24001-b011",
+      "arm": "U",
+      "task_kind": "organize",
+      "category": "background",
+      "input_token_bucket": 1,
+      "business_correct": true,
+      "review_note": "指定R3/R5/R6/R4/R1/R2，应75/73/99/81/13/39；U逐项正确。",
+      "public_target_ids": [
+        "R3",
+        "R5",
+        "R6",
+        "R4",
+        "R1",
+        "R2"
+      ],
+      "expected_lines": [
+        "R3|75",
+        "R5|73",
+        "R6|99",
+        "R4|81",
+        "R1|13",
+        "R2|39"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R3",
+          "source_value": "75",
+          "expected": "75"
+        },
+        {
+          "id": "R5",
+          "source_value": "73",
+          "expected": "73"
+        },
+        {
+          "id": "R6",
+          "source_value": "99",
+          "expected": "99"
+        },
+        {
+          "id": "R4",
+          "source_value": "81",
+          "expected": "81"
+        },
+        {
+          "id": "R1",
+          "source_value": "13",
+          "expected": "13"
+        },
+        {
+          "id": "R2",
+          "source_value": "39",
+          "expected": "39"
+        }
+      ],
+      "original_content": "R3|75\nR5|73\nR6|99\nR4|81\nR1|13\nR2|39",
+      "parsed_fields": [
+        [
+          "R3",
+          "75"
+        ],
+        [
+          "R5",
+          "73"
+        ],
+        [
+          "R6",
+          "99"
+        ],
+        [
+          "R4",
+          "81"
+        ],
+        [
+          "R1",
+          "13"
+        ],
+        [
+          "R2",
+          "39"
+        ]
+      ],
+      "invalid_lines": [],
+      "target_value_mismatches": [],
+      "auxiliary_correct_fields": 6,
+      "planned_fields": 6,
+      "source_prompt_sha256": "eb4a495de10ef56ba119bd0f20307718a2196e523337da0f9d11e95ded64350c",
+      "source_client": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q48-v4-24001-b011-u/replay/client.jsonl",
+      "source_client_sha256": "3d4c8491554938087e4f34c047a927658e47a41cdeb5a6ad1fd91e8f04f912d1",
+      "source_output": "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q48-v4-24001-b011-u/output.txt",
+      "source_output_sha256": "c5cb6d9ed3150943eb1355d2650607631c986c441f60f62ee05108f5b77c8e1d"
+    }
+  ],
+  "source_sha256": {
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/evaluation-plan.jsonl": "5b498b33f5d6069538fe05aa7ef004d2f5dfd3d9ca41a2499d3c82d63d7c4445",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q01-v4-24001-i000-u/replay/client.jsonl": "09883a219adba44eae1b2bd4e3021c38bfbe60f204c8b4beb57a3aaebf568069",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q01-v4-24001-i000-u/output.txt": "1063809d0b6bda39bd5c5a975191de0b806374480ea2a08190c8406a50ddf1e1",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q02-v4-24001-i000-g/replay/client.jsonl": "b9dac619e60bac2082231a7e1ec90c342b1e0a5f58dba53b28452937eaccdea2",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q02-v4-24001-i000-g/output.txt": "1063809d0b6bda39bd5c5a975191de0b806374480ea2a08190c8406a50ddf1e1",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q03-v4-24001-i001-g/replay/client.jsonl": "178fc5ce3a13c1d3f9c4da6dc21219ad48c366532b7dea05d6b0d9e0a97ff174",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q03-v4-24001-i001-g/output.txt": "eef84a88760eca18cc7abc57cffa6e3745911b6a43f6cf47389004abf9a15565",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q04-v4-24001-i001-u/replay/client.jsonl": "cbb506225dee58e6e98f4cada585b3a3adedd67cb9f4ebf7ce0bead49f35fd3b",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q04-v4-24001-i001-u/output.txt": "eef84a88760eca18cc7abc57cffa6e3745911b6a43f6cf47389004abf9a15565",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q05-v4-24001-i002-u/replay/client.jsonl": "e8182d5ce61e8224fa389e339f2c0c2fd349a3880c55bfd8e8e8fe0c7b4c368a",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q05-v4-24001-i002-u/output.txt": "0b9a9630bb5422a89531f28f3faeaf87732a9e9406acc078b9c3c2d24923a92c",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q06-v4-24001-i002-g/replay/client.jsonl": "cbc9e56fffa798d4850fac13da0f7bbc2c412b6f131e640072ef1cb52130877f",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q06-v4-24001-i002-g/output.txt": "0b9a9630bb5422a89531f28f3faeaf87732a9e9406acc078b9c3c2d24923a92c",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q07-v4-24001-i003-g/replay/client.jsonl": "f32638052d9f73f951e64a1fdc617b30266b1e6bf6bd11d73225e28b07bd1b2d",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q07-v4-24001-i003-g/output.txt": "c4e419a6a9dd26d0e332ad9c67434f5062d1a97bb5fd78671f3fdec21dc20bfd",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q08-v4-24001-i003-u/replay/client.jsonl": "3b6032363b2e99f67c334b81151594af60a4f126789146e3d7c3a602d5bc85c7",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q08-v4-24001-i003-u/output.txt": "c4e419a6a9dd26d0e332ad9c67434f5062d1a97bb5fd78671f3fdec21dc20bfd",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q09-v4-24001-i004-u/replay/client.jsonl": "41a502f90bf4a2061ea1a043d09b9c432a09b61e7f75fbc0cdc4d29dd060e060",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q09-v4-24001-i004-u/output.txt": "c163f37018a4a395ce2b43dd25162155c86e662f9305a9642e91d871e0ee6e19",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q10-v4-24001-i004-g/replay/client.jsonl": "7d21f12303b053a86b1be50139b627bf6692391dd07fca677aa088947a3776e3",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q10-v4-24001-i004-g/output.txt": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q11-v4-24001-i005-g/replay/client.jsonl": "f3569ac808825502d51ba31364af11f1cd846e0bf40fec9173bb6ab11207abb7",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q11-v4-24001-i005-g/output.txt": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q12-v4-24001-i005-u/replay/client.jsonl": "8afbbb813c422938996e0a893124fc4f997090e29a2797465da36e6cf4e2189a",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q12-v4-24001-i005-u/output.txt": "2fa770c88ce7ab5ce57185fa3d4a9c6fa355a7eab58b8d0ea9d714eadb67609e",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q13-v4-24001-i006-u/replay/client.jsonl": "856f0c6367e69b37bbdb044daf19573d51b5d17f564640a27f51f7e1d3b4ce8b",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q13-v4-24001-i006-u/output.txt": "d56c0df003549b6aaf7672c22215a8dee75b7d4884c9b06e07b56f9be0d2399e",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q14-v4-24001-i006-g/replay/client.jsonl": "5fc4887f88e173da21a1b9f1463bbe9402ca6fde29c58f7e2af001b453912fd3",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q14-v4-24001-i006-g/output.txt": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q15-v4-24001-i007-g/replay/client.jsonl": "6f41250aadb583de3db3e1c403b6fe4b72dc4ac4ce7bd8c714759e2cbcae8851",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q15-v4-24001-i007-g/output.txt": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q16-v4-24001-i007-u/replay/client.jsonl": "81ed0f4f0deda72c3e974add07d267c32201516733fa91c06c1b996c7790bd83",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q16-v4-24001-i007-u/output.txt": "eb085728dcc4ad82e56f426c5e195b9006cadb78bd9e2a66410a580d195f6812",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q17-v4-24001-i008-u/replay/client.jsonl": "bce9a4482b61e22363b100fb81a634dafe9e683e9dff726dc34aebabe278cc4a",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q17-v4-24001-i008-u/output.txt": "5325fc5f30ee5166a1b9568d4d6bb3697f2e78d30d72034266a4810b3621d5ef",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q18-v4-24001-i008-g/replay/client.jsonl": "43b3afaffc4fe8a7243cb0530156a3896f7746bbf82eb6c758d274e7883e5e7e",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q18-v4-24001-i008-g/output.txt": "f9ec4ae6cc4954f40438e835547b7ebf2b884225e65a838d39180afaa990d0d8",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q19-v4-24001-i009-g/replay/client.jsonl": "8f5a4b722270f575e3ee5a16bb9123790abbd1b2e00ad693614a297f89141cd5",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q19-v4-24001-i009-g/output.txt": "45aebc874445fb87bb1b65462770db5c8f6c9ba7fe0b42f31f606e1901a1ff21",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q20-v4-24001-i009-u/replay/client.jsonl": "d346967f2511d00d014d310e199800693efec2ab2dfd580eccecfcc5e7d9c94a",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q20-v4-24001-i009-u/output.txt": "32381bc1aa5238e7d5fa78415fd0aa2375fffe32f3034c766cd12bade76f6e0d",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q21-v4-24001-i010-u/replay/client.jsonl": "10a255a4c94922856090a02264c67770e2293bdd7130026cf6937497fa984c7e",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q21-v4-24001-i010-u/output.txt": "e5b11f2d5b3d4355c3470de6daa3d2d1415530f397b946bb030feb0e2caf0499",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q22-v4-24001-i010-g/replay/client.jsonl": "5284c70e17762546b29c1340f2233e45e1f95f89814249e51672ebd8b54e2efc",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q22-v4-24001-i010-g/output.txt": "e5b11f2d5b3d4355c3470de6daa3d2d1415530f397b946bb030feb0e2caf0499",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q23-v4-24001-i011-g/replay/client.jsonl": "79bc0c21b6506652a4382d5c789deb2aab49883dc2092bcf9f93812976f02561",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q23-v4-24001-i011-g/output.txt": "f1943cc90a99ebb66ee3e16df8160789971adcc9c8d4fa743512579ce552bc88",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q24-v4-24001-i011-u/replay/client.jsonl": "60725073504298d7dbc569750c38d00e4db59e5b4244d9172da3b2079277f603",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q24-v4-24001-i011-u/output.txt": "b9ad1159a6bc2c9c0c1f828e93928121fc91926ed7fc8c1de1804c90508a265a",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q25-v4-24001-b000-u/replay/client.jsonl": "05dc0a97ce41c8c3e7239fbf218d0215e2d3e6a92d82d79b44cb9509b2fa1245",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q25-v4-24001-b000-u/output.txt": "f0528f8071ffc0643b2b4c13a21400a51cf2aa0b58871313b1c957af79c69a44",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q26-v4-24001-b000-g/replay/client.jsonl": "2ceaaa9b040abfcfda543c80bb04b5d81670de09fbf6da2af4a035c8d74fc70d",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q26-v4-24001-b000-g/output.txt": "f0528f8071ffc0643b2b4c13a21400a51cf2aa0b58871313b1c957af79c69a44",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q27-v4-24001-b001-g/replay/client.jsonl": "9b0f72f170d6cf6ae69824b8c9e21b513babb726d750d6bf76a1c80950aafdc2",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q27-v4-24001-b001-g/output.txt": "598cf552accf8becf2f91b26d9f843c110e1678fac699affe7ea42efb4fa2fc6",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q28-v4-24001-b001-u/replay/client.jsonl": "906ee236be6f161c8717a296889cea6582ded314c7e5cf0e7a6bc2740680bd6c",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q28-v4-24001-b001-u/output.txt": "598cf552accf8becf2f91b26d9f843c110e1678fac699affe7ea42efb4fa2fc6",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q29-v4-24001-b002-u/replay/client.jsonl": "72b87c28582aebb439edc9eaa4c843ff7de4abc418595f44d2e23eba40f7956c",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q29-v4-24001-b002-u/output.txt": "2cd38a677a34ce96a0852bbbcc6d2d39fbd3f8b4c47645935d34f0a265a791e4",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q30-v4-24001-b002-g/replay/client.jsonl": "45782939756dc0e46f4006c847acb376e619c976ac5f5e38f6de6c7932cd7207",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q30-v4-24001-b002-g/output.txt": "2cd38a677a34ce96a0852bbbcc6d2d39fbd3f8b4c47645935d34f0a265a791e4",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q31-v4-24001-b003-g/replay/client.jsonl": "f7b39506ee713a888a1602b94de76c040b49b6611113ebfabdfa34cb998884c6",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q31-v4-24001-b003-g/output.txt": "e19aeb713e458bba59fd75aa3dfc906525220783134e877bbce617f557781a28",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q32-v4-24001-b003-u/replay/client.jsonl": "39276cf28cadd759860e92dc69a1a09ebdeec9a1dc08ba43c8f3d47fa8dff884",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q32-v4-24001-b003-u/output.txt": "e19aeb713e458bba59fd75aa3dfc906525220783134e877bbce617f557781a28",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q33-v4-24001-b004-u/replay/client.jsonl": "bf2faca0f4a48b2f34900424f753373bd0c9e84aca6b2a3fc902f9a62364042a",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q33-v4-24001-b004-u/output.txt": "8b589cd232c8de28f964780e51f12216bbd1086201456c6a7a0c84292409912f",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q34-v4-24001-b004-g/replay/client.jsonl": "1b9b6ad565a3e06cc5ee456bf2d79aca46663ae0ffde19921d86ecf269df0196",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q34-v4-24001-b004-g/output.txt": "51575a9e53043fa153cd278a748906685b062558c201ade33a2c2b05f56c84a7",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q35-v4-24001-b005-g/replay/client.jsonl": "e4759494c2a22a96f71497ea7615e38ab886725cfa7717d5e7203ea01798e15e",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q35-v4-24001-b005-g/output.txt": "51575a9e53043fa153cd278a748906685b062558c201ade33a2c2b05f56c84a7",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q36-v4-24001-b005-u/replay/client.jsonl": "47d545e62536343cb48168a44567e865010addaf4cce551cf588f1ac9326e7cb",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q36-v4-24001-b005-u/output.txt": "97fafa3c0c418085adef4c50f4fa1b0165dd7552c0bbee57ad1adaface399231",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q37-v4-24001-b006-u/replay/client.jsonl": "c8b4debecefbf12b692aa6c34cd34fc2e45a296f18cc2fa45812d5a8f55b7f0d",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q37-v4-24001-b006-u/output.txt": "a0cfa7aecece6a721d805bad94f7e21cd0c0ccc1a14db2bf19339ad4432c17c1",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q38-v4-24001-b006-g/replay/client.jsonl": "9065b66fa326fdcfa35dc9c9905f425bd66552c7ed6bf91600ebc75c06129953",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q38-v4-24001-b006-g/output.txt": "51575a9e53043fa153cd278a748906685b062558c201ade33a2c2b05f56c84a7",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q39-v4-24001-b007-g/replay/client.jsonl": "24dd6fe95d542e6f47cf209ff1f47ab6ce89f8d4e6b8ed16ca56b334e3a55945",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q39-v4-24001-b007-g/output.txt": "51575a9e53043fa153cd278a748906685b062558c201ade33a2c2b05f56c84a7",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q40-v4-24001-b007-u/replay/client.jsonl": "f3467aa18d7932c37d00a57945d3a98d0b64bb6838792d612dd9d1c18f32e686",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q40-v4-24001-b007-u/output.txt": "836c27e395074883e247d84c66ed85758e7bb8a75c2c8d05b77b204317885dbe",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q41-v4-24001-b008-u/replay/client.jsonl": "96769546286ca11a986aec9b7367194cb5877e4825bf133013a8596eef675ca4",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q41-v4-24001-b008-u/output.txt": "e6e342cfec0bd64d05b9a3f3230b4669a20261fbd4a5c0af6422b1ad7bf81c15",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q42-v4-24001-b008-g/replay/client.jsonl": "3fb3a7d08b110c80edae7ee21761c6d8a5076a9afebb3d6dcf52e750be8152d4",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q42-v4-24001-b008-g/output.txt": "e6e342cfec0bd64d05b9a3f3230b4669a20261fbd4a5c0af6422b1ad7bf81c15",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q43-v4-24001-b009-g/replay/client.jsonl": "8c302b640e504cc3342d59807eb65fc843b0022b2f9a79f129dc50852a6b69e2",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q43-v4-24001-b009-g/output.txt": "97bf663902d648667e7bc50198216db07cff757edc908399b9eb1a33efea4428",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q44-v4-24001-b009-u/replay/client.jsonl": "5fa5d18b5201f3387a9f29a89eca81b80aee921a4e7ca327eda46be5eaf11ab0",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q44-v4-24001-b009-u/output.txt": "97bf663902d648667e7bc50198216db07cff757edc908399b9eb1a33efea4428",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q45-v4-24001-b010-u/replay/client.jsonl": "7d0513d44c3b6a2fb6635f410e9529c965a4ed17962e998159b9342a569399b3",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q45-v4-24001-b010-u/output.txt": "89e3313a1c39d4ef564cc45d7fcc477525384aa898719a415fb5c265eaa58577",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q46-v4-24001-b010-g/replay/client.jsonl": "48c8c55fe452bc24dd5f4e2871ad241fbe8308c090c3d715066a8226d8b541b2",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q46-v4-24001-b010-g/output.txt": "89e3313a1c39d4ef564cc45d7fcc477525384aa898719a415fb5c265eaa58577",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q47-v4-24001-b011-g/replay/client.jsonl": "44bcc79754612df7e0180006e1e477dff4d475a28ab0439c874fdba1df2e34c9",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q47-v4-24001-b011-g/output.txt": "c5cb6d9ed3150943eb1355d2650607631c986c441f60f62ee05108f5b77c8e1d",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q48-v4-24001-b011-u/replay/client.jsonl": "3d4c8491554938087e4f34c047a927658e47a41cdeb5a6ad1fd91e8f04f912d1",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/cases/q48-v4-24001-b011-u/output.txt": "c5cb6d9ed3150943eb1355d2650607631c986c441f60f62ee05108f5b77c8e1d"
+  },
+  "review_script_sha256": "647a3f470c2e5b54be41cb7f7b0f4388f0158a91d77681b430dd07f2698d7c44",
+  "limits": [
+    "仅单次串行合成开发题，不估计总体正确率、并发性能或M/B3价值。",
+    "语法强制ID/顺序/字段域，不是模型自主格式遵循改善证明。",
+    "错误值碰巧等于其他记录值只作观察，不推断模型内部错误原因。"
+  ]
+}
