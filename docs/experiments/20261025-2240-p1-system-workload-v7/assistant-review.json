@@ -1,0 +1,2215 @@
+{
+  "reviewed_at": "2026-10-25T22:46:50.220659+08:00",
+  "scope": "助手核读9轮聚合、6组配对差异、预测与分类退化、6份代表性原答/目标资料。312份由99与独立审计全量核对；不声称助手逐字人工审阅312份，不是导师验收。",
+  "reviewed_rounds": 9,
+  "reviewed_paired_differences": 6,
+  "selected_cases": [
+    {
+      "phase": "profile",
+      "round": null,
+      "req_id": "v7-cal-27001-i004-c",
+      "reference": {
+        "req_id": "v7-cal-27001-i004-c",
+        "content_id": "v7-cal-27001-i004",
+        "split": "calibration",
+        "seed": 27001,
+        "category": "interactive",
+        "category_index": 4,
+        "task_kind": "check",
+        "kind_instance": 0,
+        "template_family": "v7_fixed_C_check",
+        "template_version": "p1_system_fixed_C_v7",
+        "source_id": "project_original_synthetic_records_v7",
+        "input_token_bucket": 1,
+        "input_token_range": [
+          80,
+          143
+        ],
+        "target_count": 1,
+        "max_tokens": 64,
+        "temperature": 0.0,
+        "ignore_eos": false,
+        "cache_prompt": false,
+        "target_ids": [
+          "R1"
+        ],
+        "extra_records": 2,
+        "oracle_evaluation_only": true,
+        "evaluation_only": true,
+        "left_records": [
+          {
+            "id": "R1",
+            "value": "61"
+          },
+          {
+            "id": "R2",
+            "value": "83"
+          },
+          {
+            "id": "R3",
+            "value": "30"
+          }
+        ],
+        "right_records": [
+          {
+            "id": "R3",
+            "value": "31"
+          },
+          {
+            "id": "R2",
+            "value": "83"
+          },
+          {
+            "id": "R1",
+            "value": "62"
+          }
+        ],
+        "expected_lines": [
+          "R1|不一致"
+        ],
+        "expected_answer": "R1|不一致",
+        "pair_id": "v7-cal-27001-i004",
+        "pair_index": 5,
+        "arm": "C",
+        "condition_order": "C",
+        "condition_position": 1,
+        "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\nA\nR1|61\nR2|83\nR3|30\nB\nR3|31\nR2|83\nR1|62\n逐项比较A和B中R1的数值：相等写一致，否则写不一致。每行ID|结论。<|im_end|>\n<|im_start|>assistant\n",
+        "input_tokens": 89,
+        "token_ids_sha256": "f002e8cde8df4524be627bbdfaefbfbbe8fa88f1707a98943e34654fcb0051ed",
+        "content_sha256": "ac7439f6f063e6188cb51e7a0d24109776c56d3322725744d46af0b1937a98bb",
+        "prompt_format": "explicit_qwen_chatml_completion",
+        "tokenization": {
+          "add_special": true,
+          "parse_special": true
+        },
+        "arrival_offset_ms": 0
+      },
+      "content": "R1|一致",
+      "terminal": "completed",
+      "quality": {
+        "business_correct": false,
+        "raw_text_exact": false,
+        "expected_fields": [
+          [
+            "R1",
+            "不一致"
+          ]
+        ],
+        "expected_lines": [
+          "R1|不一致"
+        ],
+        "observed_fields": [
+          [
+            "R1",
+            "一致"
+          ]
+        ],
+        "structure_valid": true,
+        "field_values_correct": false,
+        "order_correct": true,
+        "missing_ids": [],
+        "extra_ids": [],
+        "duplicate_ids": [],
+        "value_mismatches": [
+          {
+            "position": 1,
+            "id": "R1",
+            "expected": "不一致",
+            "observed": "一致"
+          }
+        ],
+        "invalid_lines": [],
+        "nonempty_extra_text": [],
+        "missing_line_count": 0,
+        "extra_line_count": 0,
+        "blank_lines_ignored": 0,
+        "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+        "schema_valid": true,
+        "target_field_results": [
+          {
+            "id": "R1",
+            "expected": "不一致",
+            "observed_values": [
+              "一致"
+            ],
+            "status": "wrong_value"
+          }
+        ],
+        "target_fields_correct": 0,
+        "target_fields_expected": 1,
+        "completed_and_correct": false
+      }
+    },
+    {
+      "phase": "profile",
+      "round": null,
+      "req_id": "v7-cal-27001-b003-c",
+      "reference": {
+        "req_id": "v7-cal-27001-b003-c",
+        "content_id": "v7-cal-27001-b003",
+        "split": "calibration",
+        "seed": 27001,
+        "category": "background",
+        "category_index": 3,
+        "task_kind": "extract",
+        "kind_instance": 3,
+        "template_family": "v7_fixed_C_extract",
+        "template_version": "p1_system_fixed_C_v7",
+        "source_id": "project_original_synthetic_records_v7",
+        "input_token_bucket": 2,
+        "input_token_range": [
+          640,
+          1024
+        ],
+        "target_count": 6,
+        "max_tokens": 384,
+        "temperature": 0.0,
+        "ignore_eos": false,
+        "cache_prompt": false,
+        "target_ids": [
+          "R1",
+          "R2",
+          "R3",
+          "R4",
+          "R5",
+          "R6"
+        ],
+        "extra_records": 80,
+        "oracle_evaluation_only": true,
+        "evaluation_only": true,
+        "source_records": [
+          {
+            "id": "R83",
+            "value": "89"
+          },
+          {
+            "id": "R27",
+            "value": "53"
+          },
+          {
+            "id": "R85",
+            "value": "66"
+          },
+          {
+            "id": "R53",
+            "value": "69"
+          },
+          {
+            "id": "R66",
+            "value": "88"
+          },
+          {
+            "id": "R68",
+            "value": "29"
+          },
+          {
+            "id": "R3",
+            "value": "76"
+          },
+          {
+            "id": "R16",
+            "value": "97"
+          },
+          {
+            "id": "R49",
+            "value": "97"
+          },
+          {
+            "id": "R37",
+            "value": "54"
+          },
+          {
+            "id": "R35",
+            "value": "76"
+          },
+          {
+            "id": "R39",
+            "value": "28"
+          },
+          {
+            "id": "R82",
+            "value": "95"
+          },
+          {
+            "id": "R44",
+            "value": "41"
+          },
+          {
+            "id": "R46",
+            "value": "21"
+          },
+          {
+            "id": "R17",
+            "value": "25"
+          },
+          {
+            "id": "R20",
+            "value": "29"
+          },
+          {
+            "id": "R10",
+            "value": "62"
+          },
+          {
+            "id": "R50",
+            "value": "18"
+          },
+          {
+            "id": "R48",
+            "value": "86"
+          },
+          {
+            "id": "R79",
+            "value": "22"
+          },
+          {
+            "id": "R69",
+            "value": "74"
+          },
+          {
+            "id": "R13",
+            "value": "47"
+          },
+          {
+            "id": "R8",
+            "value": "46"
+          },
+          {
+            "id": "R58",
+            "value": "56"
+          },
+          {
+            "id": "R30",
+            "value": "37"
+          },
+          {
+            "id": "R63",
+            "value": "53"
+          },
+          {
+            "id": "R1",
+            "value": "54"
+          },
+          {
+            "id": "R60",
+            "value": "65"
+          },
+          {
+            "id": "R81",
+            "value": "57"
+          },
+          {
+            "id": "R15",
+            "value": "32"
+          },
+          {
+            "id": "R5",
+            "value": "28"
+          },
+          {
+            "id": "R54",
+            "value": "70"
+          },
+          {
+            "id": "R77",
+            "value": "36"
+          },
+          {
+            "id": "R78",
+            "value": "24"
+          },
+          {
+            "id": "R73",
+            "value": "75"
+          },
+          {
+            "id": "R62",
+            "value": "43"
+          },
+          {
+            "id": "R25",
+            "value": "55"
+          },
+          {
+            "id": "R47",
+            "value": "49"
+          },
+          {
+            "id": "R4",
+            "value": "87"
+          },
+          {
+            "id": "R55",
+            "value": "23"
+          },
+          {
+            "id": "R65",
+            "value": "83"
+          },
+          {
+            "id": "R24",
+            "value": "98"
+          },
+          {
+            "id": "R6",
+            "value": "37"
+          },
+          {
+            "id": "R2",
+            "value": "51"
+          },
+          {
+            "id": "R14",
+            "value": "80"
+          },
+          {
+            "id": "R23",
+            "value": "52"
+          },
+          {
+            "id": "R21",
+            "value": "48"
+          },
+          {
+            "id": "R31",
+            "value": "75"
+          },
+          {
+            "id": "R75",
+            "value": "75"
+          },
+          {
+            "id": "R57",
+            "value": "14"
+          },
+          {
+            "id": "R7",
+            "value": "60"
+          },
+          {
+            "id": "R38",
+            "value": "20"
+          },
+          {
+            "id": "R64",
+            "value": "24"
+          },
+          {
+            "id": "R74",
+            "value": "85"
+          },
+          {
+            "id": "R43",
+            "value": "99"
+          },
+          {
+            "id": "R61",
+            "value": "51"
+          },
+          {
+            "id": "R42",
+            "value": "33"
+          },
+          {
+            "id": "R22",
+            "value": "75"
+          },
+          {
+            "id": "R11",
+            "value": "37"
+          },
+          {
+            "id": "R76",
+            "value": "90"
+          },
+          {
+            "id": "R32",
+            "value": "17"
+          },
+          {
+            "id": "R18",
+            "value": "30"
+          },
+          {
+            "id": "R40",
+            "value": "78"
+          },
+          {
+            "id": "R59",
+            "value": "47"
+          },
+          {
+            "id": "R71",
+            "value": "48"
+          },
+          {
+            "id": "R86",
+            "value": "28"
+          },
+          {
+            "id": "R26",
+            "value": "47"
+          },
+          {
+            "id": "R12",
+            "value": "78"
+          },
+          {
+            "id": "R67",
+            "value": "72"
+          },
+          {
+            "id": "R84",
+            "value": "14"
+          },
+          {
+            "id": "R80",
+            "value": "33"
+          },
+          {
+            "id": "R33",
+            "value": "31"
+          },
+          {
+            "id": "R28",
+            "value": "87"
+          },
+          {
+            "id": "R56",
+            "value": "10"
+          },
+          {
+            "id": "R36",
+            "value": "49"
+          },
+          {
+            "id": "R70",
+            "value": "94"
+          },
+          {
+            "id": "R72",
+            "value": "32"
+          },
+          {
+            "id": "R52",
+            "value": "26"
+          },
+          {
+            "id": "R51",
+            "value": "97"
+          },
+          {
+            "id": "R45",
+            "value": "20"
+          },
+          {
+            "id": "R19",
+            "value": "39"
+          },
+          {
+            "id": "R34",
+            "value": "90"
+          },
+          {
+            "id": "R29",
+            "value": "18"
+          },
+          {
+            "id": "R9",
+            "value": "25"
+          },
+          {
+            "id": "R41",
+            "value": "69"
+          }
+        ],
+        "expected_lines": [
+          "R1|54",
+          "R2|51",
+          "R3|76",
+          "R4|87",
+          "R5|28",
+          "R6|37"
+        ],
+        "expected_answer": "R1|54\nR2|51\nR3|76\nR4|87\nR5|28\nR6|37",
+        "pair_id": "v7-cal-27001-b003",
+        "pair_index": 16,
+        "arm": "C",
+        "condition_order": "C",
+        "condition_position": 1,
+        "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR83|89\nR27|53\nR85|66\nR53|69\nR66|88\nR68|29\nR3|76\nR16|97\nR49|97\nR37|54\nR35|76\nR39|28\nR82|95\nR44|41\nR46|21\nR17|25\nR20|29\nR10|62\nR50|18\nR48|86\nR79|22\nR69|74\nR13|47\nR8|46\nR58|56\nR30|37\nR63|53\nR1|54\nR60|65\nR81|57\nR15|32\nR5|28\nR54|70\nR77|36\nR78|24\nR73|75\nR62|43\nR25|55\nR47|49\nR4|87\nR55|23\nR65|83\nR24|98\nR6|37\nR2|51\nR14|80\nR23|52\nR21|48\nR31|75\nR75|75\nR57|14\nR7|60\nR38|20\nR64|24\nR74|85\nR43|99\nR61|51\nR42|33\nR22|75\nR11|37\nR76|90\nR32|17\nR18|30\nR40|78\nR59|47\nR71|48\nR86|28\nR26|47\nR12|78\nR67|72\nR84|14\nR80|33\nR33|31\nR28|87\nR56|10\nR36|49\nR70|94\nR72|32\nR52|26\nR51|97\nR45|20\nR19|39\nR34|90\nR29|18\nR9|25\nR41|69\n提取R1,R2,R3,R4,R5,R6对应的数值，不要复制编号作值。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+        "input_tokens": 644,
+        "token_ids_sha256": "ceecb114bc474182ecb61c17c670ca96d2933032b91c4a05c5f10ea332258ee6",
+        "content_sha256": "5782bf60e0f447a6533b5ccfcb3935480d1dba9b87e3be6b9d2a0aef94f04048",
+        "prompt_format": "explicit_qwen_chatml_completion",
+        "tokenization": {
+          "add_special": true,
+          "parse_special": true
+        },
+        "arrival_offset_ms": 0
+      },
+      "content": "R1|37\nR2|51\nR3|76\nR4|87\nR5|28\nR6|37",
+      "terminal": "completed",
+      "quality": {
+        "business_correct": false,
+        "raw_text_exact": false,
+        "expected_fields": [
+          [
+            "R1",
+            "54"
+          ],
+          [
+            "R2",
+            "51"
+          ],
+          [
+            "R3",
+            "76"
+          ],
+          [
+            "R4",
+            "87"
+          ],
+          [
+            "R5",
+            "28"
+          ],
+          [
+            "R6",
+            "37"
+          ]
+        ],
+        "expected_lines": [
+          "R1|54",
+          "R2|51",
+          "R3|76",
+          "R4|87",
+          "R5|28",
+          "R6|37"
+        ],
+        "observed_fields": [
+          [
+            "R1",
+            "37"
+          ],
+          [
+            "R2",
+            "51"
+          ],
+          [
+            "R3",
+            "76"
+          ],
+          [
+            "R4",
+            "87"
+          ],
+          [
+            "R5",
+            "28"
+          ],
+          [
+            "R6",
+            "37"
+          ]
+        ],
+        "structure_valid": true,
+        "field_values_correct": false,
+        "order_correct": true,
+        "missing_ids": [],
+        "extra_ids": [],
+        "duplicate_ids": [],
+        "value_mismatches": [
+          {
+            "position": 1,
+            "id": "R1",
+            "expected": "54",
+            "observed": "37"
+          }
+        ],
+        "invalid_lines": [],
+        "nonempty_extra_text": [],
+        "missing_line_count": 0,
+        "extra_line_count": 0,
+        "blank_lines_ignored": 0,
+        "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+        "schema_valid": true,
+        "target_field_results": [
+          {
+            "id": "R1",
+            "expected": "54",
+            "observed_values": [
+              "37"
+            ],
+            "status": "wrong_value"
+          },
+          {
+            "id": "R2",
+            "expected": "51",
+            "observed_values": [
+              "51"
+            ],
+            "status": "correct"
+          },
+          {
+            "id": "R3",
+            "expected": "76",
+            "observed_values": [
+              "76"
+            ],
+            "status": "correct"
+          },
+          {
+            "id": "R4",
+            "expected": "87",
+            "observed_values": [
+              "87"
+            ],
+            "status": "correct"
+          },
+          {
+            "id": "R5",
+            "expected": "28",
+            "observed_values": [
+              "28"
+            ],
+            "status": "correct"
+          },
+          {
+            "id": "R6",
+            "expected": "37",
+            "observed_values": [
+              "37"
+            ],
+            "status": "correct"
+          }
+        ],
+        "target_fields_correct": 5,
+        "target_fields_expected": 6,
+        "completed_and_correct": false
+      }
+    },
+    {
+      "phase": "load",
+      "round": "r2-capped",
+      "req_id": "v7-dev-27102-b004-c",
+      "reference": {
+        "req_id": "v7-dev-27102-b004-c",
+        "content_id": "v7-dev-27102-b004",
+        "split": "development",
+        "seed": 27102,
+        "category": "background",
+        "category_index": 4,
+        "task_kind": "check",
+        "kind_instance": 0,
+        "template_family": "v7_fixed_C_check",
+        "template_version": "p1_system_fixed_C_v7",
+        "source_id": "project_original_synthetic_records_v7",
+        "input_token_bucket": 1,
+        "input_token_range": [
+          320,
+          639
+        ],
+        "target_count": 6,
+        "max_tokens": 384,
+        "temperature": 0.0,
+        "ignore_eos": false,
+        "cache_prompt": false,
+        "target_ids": [
+          "R1",
+          "R2",
+          "R3",
+          "R4",
+          "R5",
+          "R6"
+        ],
+        "extra_records": 14,
+        "oracle_evaluation_only": true,
+        "evaluation_only": true,
+        "left_records": [
+          {
+            "id": "R12",
+            "value": "21"
+          },
+          {
+            "id": "R6",
+            "value": "48"
+          },
+          {
+            "id": "R3",
+            "value": "10"
+          },
+          {
+            "id": "R1",
+            "value": "39"
+          },
+          {
+            "id": "R18",
+            "value": "67"
+          },
+          {
+            "id": "R13",
+            "value": "94"
+          },
+          {
+            "id": "R7",
+            "value": "97"
+          },
+          {
+            "id": "R5",
+            "value": "98"
+          },
+          {
+            "id": "R10",
+            "value": "20"
+          },
+          {
+            "id": "R2",
+            "value": "29"
+          },
+          {
+            "id": "R9",
+            "value": "81"
+          },
+          {
+            "id": "R15",
+            "value": "52"
+          },
+          {
+            "id": "R20",
+            "value": "94"
+          },
+          {
+            "id": "R14",
+            "value": "43"
+          },
+          {
+            "id": "R16",
+            "value": "53"
+          },
+          {
+            "id": "R8",
+            "value": "80"
+          },
+          {
+            "id": "R11",
+            "value": "42"
+          },
+          {
+            "id": "R19",
+            "value": "82"
+          },
+          {
+            "id": "R4",
+            "value": "58"
+          },
+          {
+            "id": "R17",
+            "value": "36"
+          }
+        ],
+        "right_records": [
+          {
+            "id": "R17",
+            "value": "37"
+          },
+          {
+            "id": "R4",
+            "value": "58"
+          },
+          {
+            "id": "R19",
+            "value": "83"
+          },
+          {
+            "id": "R11",
+            "value": "43"
+          },
+          {
+            "id": "R8",
+            "value": "80"
+          },
+          {
+            "id": "R16",
+            "value": "53"
+          },
+          {
+            "id": "R14",
+            "value": "43"
+          },
+          {
+            "id": "R20",
+            "value": "94"
+          },
+          {
+            "id": "R15",
+            "value": "53"
+          },
+          {
+            "id": "R9",
+            "value": "82"
+          },
+          {
+            "id": "R2",
+            "value": "29"
+          },
+          {
+            "id": "R10",
+            "value": "20"
+          },
+          {
+            "id": "R5",
+            "value": "99"
+          },
+          {
+            "id": "R7",
+            "value": "98"
+          },
+          {
+            "id": "R13",
+            "value": "95"
+          },
+          {
+            "id": "R18",
+            "value": "67"
+          },
+          {
+            "id": "R1",
+            "value": "40"
+          },
+          {
+            "id": "R3",
+            "value": "11"
+          },
+          {
+            "id": "R6",
+            "value": "48"
+          },
+          {
+            "id": "R12",
+            "value": "21"
+          }
+        ],
+        "expected_lines": [
+          "R1|不一致",
+          "R2|一致",
+          "R3|不一致",
+          "R4|一致",
+          "R5|不一致",
+          "R6|一致"
+        ],
+        "expected_answer": "R1|不一致\nR2|一致\nR3|不一致\nR4|一致\nR5|不一致\nR6|一致",
+        "pair_id": "v7-dev-27102-b004",
+        "pair_index": 17,
+        "arm": "C",
+        "condition_order": "C",
+        "condition_position": 1,
+        "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\nA\nR12|21\nR6|48\nR3|10\nR1|39\nR18|67\nR13|94\nR7|97\nR5|98\nR10|20\nR2|29\nR9|81\nR15|52\nR20|94\nR14|43\nR16|53\nR8|80\nR11|42\nR19|82\nR4|58\nR17|36\nB\nR17|37\nR4|58\nR19|83\nR11|43\nR8|80\nR16|53\nR14|43\nR20|94\nR15|53\nR9|82\nR2|29\nR10|20\nR5|99\nR7|98\nR13|95\nR18|67\nR1|40\nR3|11\nR6|48\nR12|21\n逐项比较A和B中R1,R2,R3,R4,R5,R6的数值：相等写一致，否则写不一致。每行ID|结论。<|im_end|>\n<|im_start|>assistant\n",
+        "input_tokens": 325,
+        "token_ids_sha256": "38fbd68602be59d3019a60895b799944f0b872744bc2601f5b1ecd9b7b8d7a74",
+        "content_sha256": "4f86272fde1c12710294e36707e8e34749bf3d9a3db4d63653d517c0e39fd72a",
+        "prompt_format": "explicit_qwen_chatml_completion",
+        "tokenization": {
+          "add_special": true,
+          "parse_special": true
+        },
+        "arrival_offset_ms": 0
+      },
+      "content": "R1|一致\nR2|不一致\nR3|一致\nR4|不一致\nR5|一致\nR6|不一致",
+      "terminal": "completed",
+      "quality": {
+        "business_correct": false,
+        "raw_text_exact": false,
+        "expected_fields": [
+          [
+            "R1",
+            "不一致"
+          ],
+          [
+            "R2",
+            "一致"
+          ],
+          [
+            "R3",
+            "不一致"
+          ],
+          [
+            "R4",
+            "一致"
+          ],
+          [
+            "R5",
+            "不一致"
+          ],
+          [
+            "R6",
+            "一致"
+          ]
+        ],
+        "expected_lines": [
+          "R1|不一致",
+          "R2|一致",
+          "R3|不一致",
+          "R4|一致",
+          "R5|不一致",
+          "R6|一致"
+        ],
+        "observed_fields": [
+          [
+            "R1",
+            "一致"
+          ],
+          [
+            "R2",
+            "不一致"
+          ],
+          [
+            "R3",
+            "一致"
+          ],
+          [
+            "R4",
+            "不一致"
+          ],
+          [
+            "R5",
+            "一致"
+          ],
+          [
+            "R6",
+            "不一致"
+          ]
+        ],
+        "structure_valid": true,
+        "field_values_correct": false,
+        "order_correct": true,
+        "missing_ids": [],
+        "extra_ids": [],
+        "duplicate_ids": [],
+        "value_mismatches": [
+          {
+            "position": 1,
+            "id": "R1",
+            "expected": "不一致",
+            "observed": "一致"
+          },
+          {
+            "position": 2,
+            "id": "R2",
+            "expected": "一致",
+            "observed": "不一致"
+          },
+          {
+            "position": 3,
+            "id": "R3",
+            "expected": "不一致",
+            "observed": "一致"
+          },
+          {
+            "position": 4,
+            "id": "R4",
+            "expected": "一致",
+            "observed": "不一致"
+          },
+          {
+            "position": 5,
+            "id": "R5",
+            "expected": "不一致",
+            "observed": "一致"
+          },
+          {
+            "position": 6,
+            "id": "R6",
+            "expected": "一致",
+            "observed": "不一致"
+          }
+        ],
+        "invalid_lines": [],
+        "nonempty_extra_text": [],
+        "missing_line_count": 0,
+        "extra_line_count": 0,
+        "blank_lines_ignored": 0,
+        "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+        "schema_valid": true,
+        "target_field_results": [
+          {
+            "id": "R1",
+            "expected": "不一致",
+            "observed_values": [
+              "一致"
+            ],
+            "status": "wrong_value"
+          },
+          {
+            "id": "R2",
+            "expected": "一致",
+            "observed_values": [
+              "不一致"
+            ],
+            "status": "wrong_value"
+          },
+          {
+            "id": "R3",
+            "expected": "不一致",
+            "observed_values": [
+              "一致"
+            ],
+            "status": "wrong_value"
+          },
+          {
+            "id": "R4",
+            "expected": "一致",
+            "observed_values": [
+              "不一致"
+            ],
+            "status": "wrong_value"
+          },
+          {
+            "id": "R5",
+            "expected": "不一致",
+            "observed_values": [
+              "一致"
+            ],
+            "status": "wrong_value"
+          },
+          {
+            "id": "R6",
+            "expected": "一致",
+            "observed_values": [
+              "不一致"
+            ],
+            "status": "wrong_value"
+          }
+        ],
+        "target_fields_correct": 0,
+        "target_fields_expected": 6,
+        "completed_and_correct": false
+      }
+    },
+    {
+      "phase": "load",
+      "round": "r2-original",
+      "req_id": "v7-dev-27102-b004-c",
+      "reference": {
+        "req_id": "v7-dev-27102-b004-c",
+        "content_id": "v7-dev-27102-b004",
+        "split": "development",
+        "seed": 27102,
+        "category": "background",
+        "category_index": 4,
+        "task_kind": "check",
+        "kind_instance": 0,
+        "template_family": "v7_fixed_C_check",
+        "template_version": "p1_system_fixed_C_v7",
+        "source_id": "project_original_synthetic_records_v7",
+        "input_token_bucket": 1,
+        "input_token_range": [
+          320,
+          639
+        ],
+        "target_count": 6,
+        "max_tokens": 384,
+        "temperature": 0.0,
+        "ignore_eos": false,
+        "cache_prompt": false,
+        "target_ids": [
+          "R1",
+          "R2",
+          "R3",
+          "R4",
+          "R5",
+          "R6"
+        ],
+        "extra_records": 14,
+        "oracle_evaluation_only": true,
+        "evaluation_only": true,
+        "left_records": [
+          {
+            "id": "R12",
+            "value": "21"
+          },
+          {
+            "id": "R6",
+            "value": "48"
+          },
+          {
+            "id": "R3",
+            "value": "10"
+          },
+          {
+            "id": "R1",
+            "value": "39"
+          },
+          {
+            "id": "R18",
+            "value": "67"
+          },
+          {
+            "id": "R13",
+            "value": "94"
+          },
+          {
+            "id": "R7",
+            "value": "97"
+          },
+          {
+            "id": "R5",
+            "value": "98"
+          },
+          {
+            "id": "R10",
+            "value": "20"
+          },
+          {
+            "id": "R2",
+            "value": "29"
+          },
+          {
+            "id": "R9",
+            "value": "81"
+          },
+          {
+            "id": "R15",
+            "value": "52"
+          },
+          {
+            "id": "R20",
+            "value": "94"
+          },
+          {
+            "id": "R14",
+            "value": "43"
+          },
+          {
+            "id": "R16",
+            "value": "53"
+          },
+          {
+            "id": "R8",
+            "value": "80"
+          },
+          {
+            "id": "R11",
+            "value": "42"
+          },
+          {
+            "id": "R19",
+            "value": "82"
+          },
+          {
+            "id": "R4",
+            "value": "58"
+          },
+          {
+            "id": "R17",
+            "value": "36"
+          }
+        ],
+        "right_records": [
+          {
+            "id": "R17",
+            "value": "37"
+          },
+          {
+            "id": "R4",
+            "value": "58"
+          },
+          {
+            "id": "R19",
+            "value": "83"
+          },
+          {
+            "id": "R11",
+            "value": "43"
+          },
+          {
+            "id": "R8",
+            "value": "80"
+          },
+          {
+            "id": "R16",
+            "value": "53"
+          },
+          {
+            "id": "R14",
+            "value": "43"
+          },
+          {
+            "id": "R20",
+            "value": "94"
+          },
+          {
+            "id": "R15",
+            "value": "53"
+          },
+          {
+            "id": "R9",
+            "value": "82"
+          },
+          {
+            "id": "R2",
+            "value": "29"
+          },
+          {
+            "id": "R10",
+            "value": "20"
+          },
+          {
+            "id": "R5",
+            "value": "99"
+          },
+          {
+            "id": "R7",
+            "value": "98"
+          },
+          {
+            "id": "R13",
+            "value": "95"
+          },
+          {
+            "id": "R18",
+            "value": "67"
+          },
+          {
+            "id": "R1",
+            "value": "40"
+          },
+          {
+            "id": "R3",
+            "value": "11"
+          },
+          {
+            "id": "R6",
+            "value": "48"
+          },
+          {
+            "id": "R12",
+            "value": "21"
+          }
+        ],
+        "expected_lines": [
+          "R1|不一致",
+          "R2|一致",
+          "R3|不一致",
+          "R4|一致",
+          "R5|不一致",
+          "R6|一致"
+        ],
+        "expected_answer": "R1|不一致\nR2|一致\nR3|不一致\nR4|一致\nR5|不一致\nR6|一致",
+        "pair_id": "v7-dev-27102-b004",
+        "pair_index": 17,
+        "arm": "C",
+        "condition_order": "C",
+        "condition_position": 1,
+        "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\nA\nR12|21\nR6|48\nR3|10\nR1|39\nR18|67\nR13|94\nR7|97\nR5|98\nR10|20\nR2|29\nR9|81\nR15|52\nR20|94\nR14|43\nR16|53\nR8|80\nR11|42\nR19|82\nR4|58\nR17|36\nB\nR17|37\nR4|58\nR19|83\nR11|43\nR8|80\nR16|53\nR14|43\nR20|94\nR15|53\nR9|82\nR2|29\nR10|20\nR5|99\nR7|98\nR13|95\nR18|67\nR1|40\nR3|11\nR6|48\nR12|21\n逐项比较A和B中R1,R2,R3,R4,R5,R6的数值：相等写一致，否则写不一致。每行ID|结论。<|im_end|>\n<|im_start|>assistant\n",
+        "input_tokens": 325,
+        "token_ids_sha256": "38fbd68602be59d3019a60895b799944f0b872744bc2601f5b1ecd9b7b8d7a74",
+        "content_sha256": "4f86272fde1c12710294e36707e8e34749bf3d9a3db4d63653d517c0e39fd72a",
+        "prompt_format": "explicit_qwen_chatml_completion",
+        "tokenization": {
+          "add_special": true,
+          "parse_special": true
+        },
+        "arrival_offset_ms": 0
+      },
+      "content": "R1|一致\nR2|不一致\nR3|不一致\nR4|不一致\nR5|一致\nR6|不一致",
+      "terminal": "completed",
+      "quality": {
+        "business_correct": false,
+        "raw_text_exact": false,
+        "expected_fields": [
+          [
+            "R1",
+            "不一致"
+          ],
+          [
+            "R2",
+            "一致"
+          ],
+          [
+            "R3",
+            "不一致"
+          ],
+          [
+            "R4",
+            "一致"
+          ],
+          [
+            "R5",
+            "不一致"
+          ],
+          [
+            "R6",
+            "一致"
+          ]
+        ],
+        "expected_lines": [
+          "R1|不一致",
+          "R2|一致",
+          "R3|不一致",
+          "R4|一致",
+          "R5|不一致",
+          "R6|一致"
+        ],
+        "observed_fields": [
+          [
+            "R1",
+            "一致"
+          ],
+          [
+            "R2",
+            "不一致"
+          ],
+          [
+            "R3",
+            "不一致"
+          ],
+          [
+            "R4",
+            "不一致"
+          ],
+          [
+            "R5",
+            "一致"
+          ],
+          [
+            "R6",
+            "不一致"
+          ]
+        ],
+        "structure_valid": true,
+        "field_values_correct": false,
+        "order_correct": true,
+        "missing_ids": [],
+        "extra_ids": [],
+        "duplicate_ids": [],
+        "value_mismatches": [
+          {
+            "position": 1,
+            "id": "R1",
+            "expected": "不一致",
+            "observed": "一致"
+          },
+          {
+            "position": 2,
+            "id": "R2",
+            "expected": "一致",
+            "observed": "不一致"
+          },
+          {
+            "position": 4,
+            "id": "R4",
+            "expected": "一致",
+            "observed": "不一致"
+          },
+          {
+            "position": 5,
+            "id": "R5",
+            "expected": "不一致",
+            "observed": "一致"
+          },
+          {
+            "position": 6,
+            "id": "R6",
+            "expected": "一致",
+            "observed": "不一致"
+          }
+        ],
+        "invalid_lines": [],
+        "nonempty_extra_text": [],
+        "missing_line_count": 0,
+        "extra_line_count": 0,
+        "blank_lines_ignored": 0,
+        "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+        "schema_valid": true,
+        "target_field_results": [
+          {
+            "id": "R1",
+            "expected": "不一致",
+            "observed_values": [
+              "一致"
+            ],
+            "status": "wrong_value"
+          },
+          {
+            "id": "R2",
+            "expected": "一致",
+            "observed_values": [
+              "不一致"
+            ],
+            "status": "wrong_value"
+          },
+          {
+            "id": "R3",
+            "expected": "不一致",
+            "observed_values": [
+              "不一致"
+            ],
+            "status": "correct"
+          },
+          {
+            "id": "R4",
+            "expected": "一致",
+            "observed_values": [
+              "不一致"
+            ],
+            "status": "wrong_value"
+          },
+          {
+            "id": "R5",
+            "expected": "不一致",
+            "observed_values": [
+              "一致"
+            ],
+            "status": "wrong_value"
+          },
+          {
+            "id": "R6",
+            "expected": "一致",
+            "observed_values": [
+              "不一致"
+            ],
+            "status": "wrong_value"
+          }
+        ],
+        "target_fields_correct": 1,
+        "target_fields_expected": 6,
+        "completed_and_correct": false
+      }
+    },
+    {
+      "phase": "load",
+      "round": "r3-original",
+      "req_id": "v7-dev-27103-b005-c",
+      "reference": {
+        "req_id": "v7-dev-27103-b005-c",
+        "content_id": "v7-dev-27103-b005",
+        "split": "development",
+        "seed": 27103,
+        "category": "background",
+        "category_index": 5,
+        "task_kind": "check",
+        "kind_instance": 1,
+        "template_family": "v7_fixed_C_check",
+        "template_version": "p1_system_fixed_C_v7",
+        "source_id": "project_original_synthetic_records_v7",
+        "input_token_bucket": 1,
+        "input_token_range": [
+          320,
+          639
+        ],
+        "target_count": 6,
+        "max_tokens": 384,
+        "temperature": 0.0,
+        "ignore_eos": false,
+        "cache_prompt": false,
+        "target_ids": [
+          "R1",
+          "R2",
+          "R3",
+          "R4",
+          "R5",
+          "R6"
+        ],
+        "extra_records": 14,
+        "oracle_evaluation_only": true,
+        "evaluation_only": true,
+        "left_records": [
+          {
+            "id": "R6",
+            "value": "67"
+          },
+          {
+            "id": "R8",
+            "value": "92"
+          },
+          {
+            "id": "R10",
+            "value": "26"
+          },
+          {
+            "id": "R14",
+            "value": "60"
+          },
+          {
+            "id": "R7",
+            "value": "76"
+          },
+          {
+            "id": "R18",
+            "value": "56"
+          },
+          {
+            "id": "R16",
+            "value": "81"
+          },
+          {
+            "id": "R5",
+            "value": "96"
+          },
+          {
+            "id": "R12",
+            "value": "47"
+          },
+          {
+            "id": "R19",
+            "value": "27"
+          },
+          {
+            "id": "R15",
+            "value": "80"
+          },
+          {
+            "id": "R3",
+            "value": "20"
+          },
+          {
+            "id": "R9",
+            "value": "87"
+          },
+          {
+            "id": "R4",
+            "value": "50"
+          },
+          {
+            "id": "R17",
+            "value": "79"
+          },
+          {
+            "id": "R20",
+            "value": "44"
+          },
+          {
+            "id": "R2",
+            "value": "98"
+          },
+          {
+            "id": "R13",
+            "value": "86"
+          },
+          {
+            "id": "R11",
+            "value": "60"
+          },
+          {
+            "id": "R1",
+            "value": "47"
+          }
+        ],
+        "right_records": [
+          {
+            "id": "R1",
+            "value": "47"
+          },
+          {
+            "id": "R11",
+            "value": "60"
+          },
+          {
+            "id": "R13",
+            "value": "86"
+          },
+          {
+            "id": "R2",
+            "value": "99"
+          },
+          {
+            "id": "R20",
+            "value": "45"
+          },
+          {
+            "id": "R17",
+            "value": "79"
+          },
+          {
+            "id": "R4",
+            "value": "51"
+          },
+          {
+            "id": "R9",
+            "value": "87"
+          },
+          {
+            "id": "R3",
+            "value": "20"
+          },
+          {
+            "id": "R15",
+            "value": "80"
+          },
+          {
+            "id": "R19",
+            "value": "27"
+          },
+          {
+            "id": "R12",
+            "value": "48"
+          },
+          {
+            "id": "R5",
+            "value": "96"
+          },
+          {
+            "id": "R16",
+            "value": "82"
+          },
+          {
+            "id": "R18",
+            "value": "57"
+          },
+          {
+            "id": "R7",
+            "value": "76"
+          },
+          {
+            "id": "R14",
+            "value": "61"
+          },
+          {
+            "id": "R10",
+            "value": "27"
+          },
+          {
+            "id": "R8",
+            "value": "93"
+          },
+          {
+            "id": "R6",
+            "value": "68"
+          }
+        ],
+        "expected_lines": [
+          "R1|一致",
+          "R2|不一致",
+          "R3|一致",
+          "R4|不一致",
+          "R5|一致",
+          "R6|不一致"
+        ],
+        "expected_answer": "R1|一致\nR2|不一致\nR3|一致\nR4|不一致\nR5|一致\nR6|不一致",
+        "pair_id": "v7-dev-27103-b005",
+        "pair_index": 18,
+        "arm": "C",
+        "condition_order": "C",
+        "condition_position": 1,
+        "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\nA\nR6|67\nR8|92\nR10|26\nR14|60\nR7|76\nR18|56\nR16|81\nR5|96\nR12|47\nR19|27\nR15|80\nR3|20\nR9|87\nR4|50\nR17|79\nR20|44\nR2|98\nR13|86\nR11|60\nR1|47\nB\nR1|47\nR11|60\nR13|86\nR2|99\nR20|45\nR17|79\nR4|51\nR9|87\nR3|20\nR15|80\nR19|27\nR12|48\nR5|96\nR16|82\nR18|57\nR7|76\nR14|61\nR10|27\nR8|93\nR6|68\n逐项比较A和B中R1,R2,R3,R4,R5,R6的数值：相等写一致，否则写不一致。每行ID|结论。<|im_end|>\n<|im_start|>assistant\n",
+        "input_tokens": 325,
+        "token_ids_sha256": "7ece79c27311b28948b08e388eb1a736b7c6e967141ed90d84e279f6ccc27cda",
+        "content_sha256": "1f9913b51f3e52bdbab6a3a0dcadf1d26c63f5466b292f0e6ebe0f15203af0de",
+        "prompt_format": "explicit_qwen_chatml_completion",
+        "tokenization": {
+          "add_special": true,
+          "parse_special": true
+        },
+        "arrival_offset_ms": 0
+      },
+      "content": "R1|一致\nR2|不一致\nR3|不一致\nR4|不一致\nR5|一致\nR6|不一致",
+      "terminal": "completed",
+      "quality": {
+        "business_correct": false,
+        "raw_text_exact": false,
+        "expected_fields": [
+          [
+            "R1",
+            "一致"
+          ],
+          [
+            "R2",
+            "不一致"
+          ],
+          [
+            "R3",
+            "一致"
+          ],
+          [
+            "R4",
+            "不一致"
+          ],
+          [
+            "R5",
+            "一致"
+          ],
+          [
+            "R6",
+            "不一致"
+          ]
+        ],
+        "expected_lines": [
+          "R1|一致",
+          "R2|不一致",
+          "R3|一致",
+          "R4|不一致",
+          "R5|一致",
+          "R6|不一致"
+        ],
+        "observed_fields": [
+          [
+            "R1",
+            "一致"
+          ],
+          [
+            "R2",
+            "不一致"
+          ],
+          [
+            "R3",
+            "不一致"
+          ],
+          [
+            "R4",
+            "不一致"
+          ],
+          [
+            "R5",
+            "一致"
+          ],
+          [
+            "R6",
+            "不一致"
+          ]
+        ],
+        "structure_valid": true,
+        "field_values_correct": false,
+        "order_correct": true,
+        "missing_ids": [],
+        "extra_ids": [],
+        "duplicate_ids": [],
+        "value_mismatches": [
+          {
+            "position": 3,
+            "id": "R3",
+            "expected": "一致",
+            "observed": "不一致"
+          }
+        ],
+        "invalid_lines": [],
+        "nonempty_extra_text": [],
+        "missing_line_count": 0,
+        "extra_line_count": 0,
+        "blank_lines_ignored": 0,
+        "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+        "schema_valid": true,
+        "target_field_results": [
+          {
+            "id": "R1",
+            "expected": "一致",
+            "observed_values": [
+              "一致"
+            ],
+            "status": "correct"
+          },
+          {
+            "id": "R2",
+            "expected": "不一致",
+            "observed_values": [
+              "不一致"
+            ],
+            "status": "correct"
+          },
+          {
+            "id": "R3",
+            "expected": "一致",
+            "observed_values": [
+              "不一致"
+            ],
+            "status": "wrong_value"
+          },
+          {
+            "id": "R4",
+            "expected": "不一致",
+            "observed_values": [
+              "不一致"
+            ],
+            "status": "correct"
+          },
+          {
+            "id": "R5",
+            "expected": "一致",
+            "observed_values": [
+              "一致"
+            ],
+            "status": "correct"
+          },
+          {
+            "id": "R6",
+            "expected": "不一致",
+            "observed_values": [
+              "不一致"
+            ],
+            "status": "correct"
+          }
+        ],
+        "target_fields_correct": 5,
+        "target_fields_expected": 6,
+        "completed_and_correct": false
+      }
+    },
+    {
+      "phase": "load",
+      "round": "r3-simple",
+      "req_id": "v7-dev-27103-b005-c",
+      "reference": {
+        "req_id": "v7-dev-27103-b005-c",
+        "content_id": "v7-dev-27103-b005",
+        "split": "development",
+        "seed": 27103,
+        "category": "background",
+        "category_index": 5,
+        "task_kind": "check",
+        "kind_instance": 1,
+        "template_family": "v7_fixed_C_check",
+        "template_version": "p1_system_fixed_C_v7",
+        "source_id": "project_original_synthetic_records_v7",
+        "input_token_bucket": 1,
+        "input_token_range": [
+          320,
+          639
+        ],
+        "target_count": 6,
+        "max_tokens": 384,
+        "temperature": 0.0,
+        "ignore_eos": false,
+        "cache_prompt": false,
+        "target_ids": [
+          "R1",
+          "R2",
+          "R3",
+          "R4",
+          "R5",
+          "R6"
+        ],
+        "extra_records": 14,
+        "oracle_evaluation_only": true,
+        "evaluation_only": true,
+        "left_records": [
+          {
+            "id": "R6",
+            "value": "67"
+          },
+          {
+            "id": "R8",
+            "value": "92"
+          },
+          {
+            "id": "R10",
+            "value": "26"
+          },
+          {
+            "id": "R14",
+            "value": "60"
+          },
+          {
+            "id": "R7",
+            "value": "76"
+          },
+          {
+            "id": "R18",
+            "value": "56"
+          },
+          {
+            "id": "R16",
+            "value": "81"
+          },
+          {
+            "id": "R5",
+            "value": "96"
+          },
+          {
+            "id": "R12",
+            "value": "47"
+          },
+          {
+            "id": "R19",
+            "value": "27"
+          },
+          {
+            "id": "R15",
+            "value": "80"
+          },
+          {
+            "id": "R3",
+            "value": "20"
+          },
+          {
+            "id": "R9",
+            "value": "87"
+          },
+          {
+            "id": "R4",
+            "value": "50"
+          },
+          {
+            "id": "R17",
+            "value": "79"
+          },
+          {
+            "id": "R20",
+            "value": "44"
+          },
+          {
+            "id": "R2",
+            "value": "98"
+          },
+          {
+            "id": "R13",
+            "value": "86"
+          },
+          {
+            "id": "R11",
+            "value": "60"
+          },
+          {
+            "id": "R1",
+            "value": "47"
+          }
+        ],
+        "right_records": [
+          {
+            "id": "R1",
+            "value": "47"
+          },
+          {
+            "id": "R11",
+            "value": "60"
+          },
+          {
+            "id": "R13",
+            "value": "86"
+          },
+          {
+            "id": "R2",
+            "value": "99"
+          },
+          {
+            "id": "R20",
+            "value": "45"
+          },
+          {
+            "id": "R17",
+            "value": "79"
+          },
+          {
+            "id": "R4",
+            "value": "51"
+          },
+          {
+            "id": "R9",
+            "value": "87"
+          },
+          {
+            "id": "R3",
+            "value": "20"
+          },
+          {
+            "id": "R15",
+            "value": "80"
+          },
+          {
+            "id": "R19",
+            "value": "27"
+          },
+          {
+            "id": "R12",
+            "value": "48"
+          },
+          {
+            "id": "R5",
+            "value": "96"
+          },
+          {
+            "id": "R16",
+            "value": "82"
+          },
+          {
+            "id": "R18",
+            "value": "57"
+          },
+          {
+            "id": "R7",
+            "value": "76"
+          },
+          {
+            "id": "R14",
+            "value": "61"
+          },
+          {
+            "id": "R10",
+            "value": "27"
+          },
+          {
+            "id": "R8",
+            "value": "93"
+          },
+          {
+            "id": "R6",
+            "value": "68"
+          }
+        ],
+        "expected_lines": [
+          "R1|一致",
+          "R2|不一致",
+          "R3|一致",
+          "R4|不一致",
+          "R5|一致",
+          "R6|不一致"
+        ],
+        "expected_answer": "R1|一致\nR2|不一致\nR3|一致\nR4|不一致\nR5|一致\nR6|不一致",
+        "pair_id": "v7-dev-27103-b005",
+        "pair_index": 18,
+        "arm": "C",
+        "condition_order": "C",
+        "condition_position": 1,
+        "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\nA\nR6|67\nR8|92\nR10|26\nR14|60\nR7|76\nR18|56\nR16|81\nR5|96\nR12|47\nR19|27\nR15|80\nR3|20\nR9|87\nR4|50\nR17|79\nR20|44\nR2|98\nR13|86\nR11|60\nR1|47\nB\nR1|47\nR11|60\nR13|86\nR2|99\nR20|45\nR17|79\nR4|51\nR9|87\nR3|20\nR15|80\nR19|27\nR12|48\nR5|96\nR16|82\nR18|57\nR7|76\nR14|61\nR10|27\nR8|93\nR6|68\n逐项比较A和B中R1,R2,R3,R4,R5,R6的数值：相等写一致，否则写不一致。每行ID|结论。<|im_end|>\n<|im_start|>assistant\n",
+        "input_tokens": 325,
+        "token_ids_sha256": "7ece79c27311b28948b08e388eb1a736b7c6e967141ed90d84e279f6ccc27cda",
+        "content_sha256": "1f9913b51f3e52bdbab6a3a0dcadf1d26c63f5466b292f0e6ebe0f15203af0de",
+        "prompt_format": "explicit_qwen_chatml_completion",
+        "tokenization": {
+          "add_special": true,
+          "parse_special": true
+        },
+        "arrival_offset_ms": 0
+      },
+      "content": "R1|一致\nR2|不一致\nR3|一致\nR4|不一致\nR5|一致\nR6|不一致",
+      "terminal": "completed",
+      "quality": {
+        "business_correct": true,
+        "raw_text_exact": true,
+        "expected_fields": [
+          [
+            "R1",
+            "一致"
+          ],
+          [
+            "R2",
+            "不一致"
+          ],
+          [
+            "R3",
+            "一致"
+          ],
+          [
+            "R4",
+            "不一致"
+          ],
+          [
+            "R5",
+            "一致"
+          ],
+          [
+            "R6",
+            "不一致"
+          ]
+        ],
+        "expected_lines": [
+          "R1|一致",
+          "R2|不一致",
+          "R3|一致",
+          "R4|不一致",
+          "R5|一致",
+          "R6|不一致"
+        ],
+        "observed_fields": [
+          [
+            "R1",
+            "一致"
+          ],
+          [
+            "R2",
+            "不一致"
+          ],
+          [
+            "R3",
+            "一致"
+          ],
+          [
+            "R4",
+            "不一致"
+          ],
+          [
+            "R5",
+            "一致"
+          ],
+          [
+            "R6",
+            "不一致"
+          ]
+        ],
+        "structure_valid": true,
+        "field_values_correct": true,
+        "order_correct": true,
+        "missing_ids": [],
+        "extra_ids": [],
+        "duplicate_ids": [],
+        "value_mismatches": [],
+        "invalid_lines": [],
+        "nonempty_extra_text": [],
+        "missing_line_count": 0,
+        "extra_line_count": 0,
+        "blank_lines_ignored": 0,
+        "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+        "schema_valid": true,
+        "target_field_results": [
+          {
+            "id": "R1",
+            "expected": "一致",
+            "observed_values": [
+              "一致"
+            ],
+            "status": "correct"
+          },
+          {
+            "id": "R2",
+            "expected": "不一致",
+            "observed_values": [
+              "不一致"
+            ],
+            "status": "correct"
+          },
+          {
+            "id": "R3",
+            "expected": "一致",
+            "observed_values": [
+              "一致"
+            ],
+            "status": "correct"
+          },
+          {
+            "id": "R4",
+            "expected": "不一致",
+            "observed_values": [
+              "不一致"
+            ],
+            "status": "correct"
+          },
+          {
+            "id": "R5",
+            "expected": "一致",
+            "observed_values": [
+              "一致"
+            ],
+            "status": "correct"
+          },
+          {
+            "id": "R6",
+            "expected": "不一致",
+            "observed_values": [
+              "不一致"
+            ],
+            "status": "correct"
+          }
+        ],
+        "target_fields_correct": 6,
+        "target_fields_expected": 6,
+        "completed_and_correct": true
+      }
+    }
+  ],
+  "key_findings": [
+    "简单优先在本批三组点值取得136—234ms改善，后台相对代价-1.67%到9.67%。",
+    "后台最多1条额外改善聊天约13—63ms，但后台相对原顺序多等37—41%。",
+    "预测无触顶、覆盖71/72，但按输出P85或旧64阈值都变成72短0长。",
+    "全部在12秒内完成，约45token/s不是饱和容量。",
+    "r3简单优先相对原顺序多答对1题；r2后台上限在同一道仍错误题上又错1字段，实际输出相应变化，均保留。"
+  ]
+}

@@ -1,18 +1,16 @@
 {
   "date": "20261025",
-  "archive": "results/archives/20261025/daily-20261025-215852-3f0257af.zip",
-  "sha256": "015fa7b40da0032250cc2b64f949cbb5473e39eaa8cb64e7e3837863da8aaab5",
-  "file_count": 4116,
+  "archive": "results/archives/20261025/daily-20261025-224853-11825678.zip",
+  "sha256": "b4ac18ef4f2cdb5bce73d9020cf7c6513eb8b8d8ff477fa62e9b37e4a71b893b",
+  "file_count": 2190,
   "run_dirs": [
-    "results/raw/development/20261025-2210-p1-model-adaptation-v6",
-    "results/raw/maintenance/20261025-p1-model-adaptation-config-audit-v6",
-    "results/raw/maintenance/20261025-p1-model-adaptation-acquisition-v6",
-    "results/raw/maintenance/20261025-p1-model-adaptation-preparation-v6",
-    "results/raw/maintenance/20261025-p1-model-adaptation-supervisor-v6",
-    "results/raw/maintenance/20261025-p1-model-adaptation-independent-audit-v6",
-    "results/raw/maintenance/20261025-p1-model-adaptation-delivery-v6"
+    "results/raw/development/20261025-2240-p1-system-workload-v7",
+    "results/raw/maintenance/20261025-p1-system-workload-preparation-v7",
+    "results/raw/maintenance/20261025-p1-system-workload-supervisor-v7",
+    "results/raw/maintenance/20261025-p1-system-workload-independent-audit-v7",
+    "results/raw/maintenance/20261025-p1-system-workload-delivery-v7"
   ],
   "verified": true,
-  "packed_at": "2026-10-25T21:58:52.231555+08:00",
+  "packed_at": "2026-10-25T22:48:53.851795+08:00",
   "backup_scope": "local_only"
 }

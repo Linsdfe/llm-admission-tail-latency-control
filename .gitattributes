@@ -150,3 +150,15 @@ tests/unit/test_p1_model_adaptation_runner_v6.py -text whitespace=-blank-at-eol,
 tests/unit/test_p1_model_adaptation_evaluation_v6.py -text whitespace=-blank-at-eol,-blank-at-eof
 tests/integration/audit_p1_model_adaptation_v6.py -text whitespace=-blank-at-eol,-blank-at-eof
 docs/experiments/20261025-2210-p1-model-adaptation-v6/** -text whitespace=-blank-at-eol,-blank-at-eof
+
+# Synthetic system workload v7: freeze pre-collection bytes.
+configs/p1-system-workload-v7.json -text whitespace=-blank-at-eol,-blank-at-eof
+docs/p1/system-workload-amendment-v7.md -text whitespace=-blank-at-eol,-blank-at-eof
+docs/p1/system-workload-pilot-protocol-v7.md -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/79i_run_p1_system_workload_v7.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/p1_system_workload_v7.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/p1_profile_estimator_v7.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/analysis/99_analyze_p1_system_workload_v7.py -text whitespace=-blank-at-eol,-blank-at-eof
+tests/unit/test_p1_system_workload_v7.py -text whitespace=-blank-at-eol,-blank-at-eof
+tests/integration/audit_p1_system_workload_v7.py -text whitespace=-blank-at-eol,-blank-at-eof
+docs/experiments/20261025-2240-p1-system-workload-v7/** -text whitespace=-blank-at-eol,-blank-at-eof
