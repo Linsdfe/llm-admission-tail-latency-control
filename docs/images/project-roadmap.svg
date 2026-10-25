@@ -23,7 +23,7 @@
 <rect x="450" y="220" width="82" height="28" rx="14" fill="#dff3ed" stroke="none"/><text x="464" y="240" font-size="14" fill="#087f78" font-weight="600">进行中</text>
 <text x="324" y="286" font-size="23" fill="#182d43" font-weight="600">需求与预注册</text>
 <text x="324" y="317" font-size="17" fill="#53677c" font-weight="400">10.24 启动 / 11.29 计划</text>
-<text x="324" y="357" font-size="16" fill="#53677c" font-weight="400">输出约束 / 15/24 正确</text>
+<text x="324" y="357" font-size="16" fill="#53677c" font-weight="400">明确指令 / 14/24 正确</text>
 <path d="M324 380h208" stroke="#e3e9ef"/>
 <text x="324" y="412" font-size="16" fill="#087f78" font-weight="600">G1  待审查冻结</text>
 <text x="554" y="323" font-size="22" fill="#8b9bab" font-weight="400">›</text>
@@ -81,5 +81,5 @@
 <text x="852" y="698" font-size="16" fill="#53677c" font-weight="600">G6  交付核对</text>
 <text x="40" y="470" font-size="18" fill="#182d43" font-weight="600">02  策略实现、验证与交付</text>
 <rect x="40" y="746" width="1040" height="46" rx="12" fill="#e6eeF4" stroke="none"/>
-<text x="60" y="775" font-size="17" fill="#182d43" font-weight="400">输出约束 v4 已测：格式 24/24，完整正确 15/24；继续核查取数与比较，G1 待审。</text>
+<text x="60" y="775" font-size="17" fill="#182d43" font-weight="400">明确指令 v5 同题 15/24 → 14/24；停止连续改提示，转模型适配评估，G1 待审。</text>
 </g></svg>

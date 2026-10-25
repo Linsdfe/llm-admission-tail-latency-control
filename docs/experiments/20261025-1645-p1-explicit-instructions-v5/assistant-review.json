@@ -1,0 +1,4845 @@
+{
+  "schema_version": "p1-explicit-instructions-assistant-review-v5.1",
+  "run_id": "20261025-1645-p1-explicit-instructions-v5",
+  "reviewed_at": "2026-10-25T16:46:51.340715+08:00",
+  "timezone": "Asia/Shanghai",
+  "reviewed_unique_tasks": 24,
+  "reviewed_measured_outputs": 48,
+  "method": "助手知晓v5版本，完整读取24份实际资料prompt、两种实际末尾指令及48份原答，先手录判断；再从实际prompt独立解析源表和比较答案，与手录一致后才读取97 JSON交叉核对。非学生/导师人工盲评。",
+  "by_arm": {
+    "O": {
+      "requests": 24,
+      "business_correct": 15,
+      "target_fields_correct": 70,
+      "target_fields_expected": 88
+    },
+    "C": {
+      "requests": 24,
+      "business_correct": 14,
+      "target_fields_correct": 73,
+      "target_fields_expected": 88
+    }
+  },
+  "check_label_counts": {
+    "O": {
+      "expected": {
+        "不一致": 14,
+        "一致": 14
+      },
+      "observed": {
+        "一致": 26,
+        "不一致": 2
+      },
+      "correct_fields": 16
+    },
+    "C": {
+      "expected": {
+        "不一致": 14,
+        "一致": 14
+      },
+      "observed": {
+        "一致": 23,
+        "不一致": 5
+      },
+      "correct_fields": 19
+    }
+  },
+  "machine_disagreements": [],
+  "machine_disagreement_count": 0,
+  "C_entry_condition_satisfied": false,
+  "G1_passed": false,
+  "records": [
+    {
+      "req_id": "v5-25001-i000-o",
+      "pair_id": "v5-25001-i000",
+      "arm": "O",
+      "task_kind": "extract",
+      "category": "interactive",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "源R1为42，两种指令均准确返回R1|42。",
+      "public_instruction": "提取R1。每行ID|值。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "42",
+          "expected": "42"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|42"
+      ],
+      "original_content": "R1|42",
+      "parsed_fields": [
+        [
+          "R1",
+          "42"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "42",
+          "observed_values": [
+            "42"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "prompt_sha256": "e6e50957766cae4b2433e9b1705b92e9973e481c01b8515ad0e268b90912ff11",
+      "content_sha256": "19123c84b8b3656fd06ec6c1962eba1cb0ac54e6d1430d7435ff8939a2e08680",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q01-v5-25001-i000-o/replay/client.jsonl",
+      "source_client_sha256": "232ba040cde2446830ea83dbe32fc23f0c34c38dc305779ddd7ee2f06fbf6eff"
+    },
+    {
+      "req_id": "v5-25001-i000-c",
+      "pair_id": "v5-25001-i000",
+      "arm": "C",
+      "task_kind": "extract",
+      "category": "interactive",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "源R1为42，两种指令均准确返回R1|42。",
+      "public_instruction": "提取R1对应的数值，不要复制编号作值。每行ID|值。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "42",
+          "expected": "42"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|42"
+      ],
+      "original_content": "R1|42",
+      "parsed_fields": [
+        [
+          "R1",
+          "42"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "42",
+          "observed_values": [
+            "42"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "prompt_sha256": "3541dfd62702f624510bb0e0cf1688d78ce321c7d5a9d5939c388f589cd48499",
+      "content_sha256": "19123c84b8b3656fd06ec6c1962eba1cb0ac54e6d1430d7435ff8939a2e08680",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q02-v5-25001-i000-c/replay/client.jsonl",
+      "source_client_sha256": "91a39210ef488fe6c025de96728fe58a6dd2658c5a4a2654d5b8e456201aef5a"
+    },
+    {
+      "req_id": "v5-25001-i001-c",
+      "pair_id": "v5-25001-i001",
+      "arm": "C",
+      "task_kind": "extract",
+      "category": "interactive",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "源R1为49，两种指令均准确。",
+      "public_instruction": "提取R1对应的数值，不要复制编号作值。每行ID|值。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "49",
+          "expected": "49"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|49"
+      ],
+      "original_content": "R1|49",
+      "parsed_fields": [
+        [
+          "R1",
+          "49"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "49",
+          "observed_values": [
+            "49"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "prompt_sha256": "f891f3a7bf13f9adbc7001ce59816a23ca6eac7bea7ad45f513782ff3540b90f",
+      "content_sha256": "0179d9618465787f1338027c59ce4d3389aa8042fbd90c740d987f59c69f1a26",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q03-v5-25001-i001-c/replay/client.jsonl",
+      "source_client_sha256": "4aaf8c5492f41839038511bb81e8f1661e826bf1954d836c2e6f5a3e4d96e313"
+    },
+    {
+      "req_id": "v5-25001-i001-o",
+      "pair_id": "v5-25001-i001",
+      "arm": "O",
+      "task_kind": "extract",
+      "category": "interactive",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "源R1为49，两种指令均准确。",
+      "public_instruction": "提取R1。每行ID|值。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "49",
+          "expected": "49"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|49"
+      ],
+      "original_content": "R1|49",
+      "parsed_fields": [
+        [
+          "R1",
+          "49"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "49",
+          "observed_values": [
+            "49"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "prompt_sha256": "d8d32413ddbf2368688ad8784a38d23dfa131032629f543b869d782725304a87",
+      "content_sha256": "0179d9618465787f1338027c59ce4d3389aa8042fbd90c740d987f59c69f1a26",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q04-v5-25001-i001-o/replay/client.jsonl",
+      "source_client_sha256": "b346226d6730d1e1f92e3abafb7e12edc73bb6625de8970583c67855449e9416"
+    },
+    {
+      "req_id": "v5-25001-i002-o",
+      "pair_id": "v5-25001-i002",
+      "arm": "O",
+      "task_kind": "extract",
+      "category": "interactive",
+      "input_token_bucket": 1,
+      "business_correct": true,
+      "review_note": "八条资料中R1为56，两种指令均只返回该目标且正确。",
+      "public_instruction": "提取R1。每行ID|值。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "56",
+          "expected": "56"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|56"
+      ],
+      "original_content": "R1|56",
+      "parsed_fields": [
+        [
+          "R1",
+          "56"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "56",
+          "observed_values": [
+            "56"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "prompt_sha256": "8b8018c86a3365b086a4d2eab01142dac2cda5bf9aab8fd0c6543c03ecad772d",
+      "content_sha256": "0670e4036fced556ab1eea5d05e4407a2f570c9d279f3b5a50ae802a27be783d",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q05-v5-25001-i002-o/replay/client.jsonl",
+      "source_client_sha256": "c55c2ad1e16548572d1111414b26074221ed8b06fbf3adc16ea039cf88441246"
+    },
+    {
+      "req_id": "v5-25001-i002-c",
+      "pair_id": "v5-25001-i002",
+      "arm": "C",
+      "task_kind": "extract",
+      "category": "interactive",
+      "input_token_bucket": 1,
+      "business_correct": true,
+      "review_note": "八条资料中R1为56，两种指令均只返回该目标且正确。",
+      "public_instruction": "提取R1对应的数值，不要复制编号作值。每行ID|值。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "56",
+          "expected": "56"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|56"
+      ],
+      "original_content": "R1|56",
+      "parsed_fields": [
+        [
+          "R1",
+          "56"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "56",
+          "observed_values": [
+            "56"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "prompt_sha256": "dea57b424b3d9a37ea0dab9a798e91a9a4f4386889b23c9b85ec8db015a42b7c",
+      "content_sha256": "0670e4036fced556ab1eea5d05e4407a2f570c9d279f3b5a50ae802a27be783d",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q06-v5-25001-i002-c/replay/client.jsonl",
+      "source_client_sha256": "22350230e199d3c9b691df6700bf174a95feb0d8ce0683417a074eec81926046"
+    },
+    {
+      "req_id": "v5-25001-i003-c",
+      "pair_id": "v5-25001-i003",
+      "arm": "C",
+      "task_kind": "extract",
+      "category": "interactive",
+      "input_token_bucket": 2,
+      "business_correct": false,
+      "review_note": "R1原值63，C写75；75属于另一条R13，不能用合法格式掩盖错值。",
+      "public_instruction": "提取R1对应的数值，不要复制编号作值。每行ID|值。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "63",
+          "expected": "63"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|63"
+      ],
+      "original_content": "R1|75",
+      "parsed_fields": [
+        [
+          "R1",
+          "75"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "63",
+          "observed_values": [
+            "75"
+          ],
+          "correct": false
+        }
+      ],
+      "target_fields_correct": 0,
+      "target_fields_expected": 1,
+      "prompt_sha256": "5fb487d5b667952c9d4a5f645c59e832f76b87c72f1839db99af97a1b5f6f369",
+      "content_sha256": "3789da522c23dfaa6376c339d0382d22c1b9083657250a52b9648fb94f0ecee4",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q07-v5-25001-i003-c/replay/client.jsonl",
+      "source_client_sha256": "3350e901cae074bbe057dd26b2b97ade9c6337ad09ef474f6a1e0594cfcb82b4"
+    },
+    {
+      "req_id": "v5-25001-i003-o",
+      "pair_id": "v5-25001-i003",
+      "arm": "O",
+      "task_kind": "extract",
+      "category": "interactive",
+      "input_token_bucket": 2,
+      "business_correct": true,
+      "review_note": "R1原值63，O准确。",
+      "public_instruction": "提取R1。每行ID|值。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "63",
+          "expected": "63"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|63"
+      ],
+      "original_content": "R1|63",
+      "parsed_fields": [
+        [
+          "R1",
+          "63"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "63",
+          "observed_values": [
+            "63"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "prompt_sha256": "965b7803153b7acf803f15ccdb7bec819d91e85f3ef1427291e0261aa4f31a12",
+      "content_sha256": "a019b554169a6b823dd88e264c029cfb3233e9527bb57ba9e7db6926203819bb",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q08-v5-25001-i003-o/replay/client.jsonl",
+      "source_client_sha256": "d98be18acb1ff5f020299a21f131659c44560af408597f2dea7fa15e25b46681"
+    },
+    {
+      "req_id": "v5-25001-i004-o",
+      "pair_id": "v5-25001-i004",
+      "arm": "O",
+      "task_kind": "check",
+      "category": "interactive",
+      "input_token_bucket": 1,
+      "business_correct": false,
+      "review_note": "R1在A/B为70/71，应不一致；O写一致。",
+      "public_instruction": "核对R1：同写一致，异写不一致。每行ID|结论。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "70",
+          "B": "71",
+          "expected": "不一致"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|不一致"
+      ],
+      "original_content": "R1|一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": false
+        }
+      ],
+      "target_fields_correct": 0,
+      "target_fields_expected": 1,
+      "prompt_sha256": "47816f252d575f376d4afdea5ca90b561751d7065b7d394d80dfaa986e097dad",
+      "content_sha256": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q09-v5-25001-i004-o/replay/client.jsonl",
+      "source_client_sha256": "96f40a0f54fbbcc64cebfde3e11e7b4c2fd5abbbb6bb7ed102ebe9e3ab884279"
+    },
+    {
+      "req_id": "v5-25001-i004-c",
+      "pair_id": "v5-25001-i004",
+      "arm": "C",
+      "task_kind": "check",
+      "category": "interactive",
+      "input_token_bucket": 1,
+      "business_correct": false,
+      "review_note": "R1在A/B为70/71，应不一致；C仍写一致。",
+      "public_instruction": "逐项比较A和B中R1的数值：相等写一致，否则写不一致。每行ID|结论。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "70",
+          "B": "71",
+          "expected": "不一致"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|不一致"
+      ],
+      "original_content": "R1|一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": false
+        }
+      ],
+      "target_fields_correct": 0,
+      "target_fields_expected": 1,
+      "prompt_sha256": "ecb842cbf71f6d9480336d321b95b9199beed9d618ee13c1ef0d1c1998e6baf5",
+      "content_sha256": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q10-v5-25001-i004-c/replay/client.jsonl",
+      "source_client_sha256": "d92adda647e1c7558abb0524bd952ccfe775117f4b31deddb664aec1535cf5f9"
+    },
+    {
+      "req_id": "v5-25001-i005-c",
+      "pair_id": "v5-25001-i005",
+      "arm": "C",
+      "task_kind": "check",
+      "category": "interactive",
+      "input_token_bucket": 1,
+      "business_correct": true,
+      "review_note": "R1两边均77，两种指令均判一致。",
+      "public_instruction": "逐项比较A和B中R1的数值：相等写一致，否则写不一致。每行ID|结论。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "77",
+          "B": "77",
+          "expected": "一致"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|一致"
+      ],
+      "original_content": "R1|一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "prompt_sha256": "f3a594dbedeb1422e1d7a32c3733ef9e3bf6c54298cd9fd99805c3363a123a63",
+      "content_sha256": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q11-v5-25001-i005-c/replay/client.jsonl",
+      "source_client_sha256": "33739d0f6bd514bbf125e483ceb7462f81f45da208cbfcd009058a7f2b006da1"
+    },
+    {
+      "req_id": "v5-25001-i005-o",
+      "pair_id": "v5-25001-i005",
+      "arm": "O",
+      "task_kind": "check",
+      "category": "interactive",
+      "input_token_bucket": 1,
+      "business_correct": true,
+      "review_note": "R1两边均77，两种指令均判一致。",
+      "public_instruction": "核对R1：同写一致，异写不一致。每行ID|结论。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "77",
+          "B": "77",
+          "expected": "一致"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|一致"
+      ],
+      "original_content": "R1|一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "prompt_sha256": "350ecebb520e7394d43f38a737dde9872144e24038dd05b5670f9626f969bc8e",
+      "content_sha256": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q12-v5-25001-i005-o/replay/client.jsonl",
+      "source_client_sha256": "2a3402dd1feba403c1779d4fdc305f18ccc7a7e00a4f2fd3b4dd7efbb6662bcc"
+    },
+    {
+      "req_id": "v5-25001-i006-o",
+      "pair_id": "v5-25001-i006",
+      "arm": "O",
+      "task_kind": "check",
+      "category": "interactive",
+      "input_token_bucket": 2,
+      "business_correct": true,
+      "review_note": "R1两边84/85，O判不一致正确。",
+      "public_instruction": "核对R1：同写一致，异写不一致。每行ID|结论。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "84",
+          "B": "85",
+          "expected": "不一致"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|不一致"
+      ],
+      "original_content": "R1|不一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "不一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "prompt_sha256": "8cb36c8addece2e3b421290362f5fbe1dd1cf2a14d499b730eadd15491f70d70",
+      "content_sha256": "85224c261f1d2c827c71c615aedbfef367d3b6e89e7bd79c50758f551c582735",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q13-v5-25001-i006-o/replay/client.jsonl",
+      "source_client_sha256": "5506dc2f42f1bfe65a924546f02840a34bb9d5134c0702b835c2e48889ffd4b9"
+    },
+    {
+      "req_id": "v5-25001-i006-c",
+      "pair_id": "v5-25001-i006",
+      "arm": "C",
+      "task_kind": "check",
+      "category": "interactive",
+      "input_token_bucket": 2,
+      "business_correct": false,
+      "review_note": "同一R1的84/85被C判为一致，属于整题退化。",
+      "public_instruction": "逐项比较A和B中R1的数值：相等写一致，否则写不一致。每行ID|结论。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "84",
+          "B": "85",
+          "expected": "不一致"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|不一致"
+      ],
+      "original_content": "R1|一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": false
+        }
+      ],
+      "target_fields_correct": 0,
+      "target_fields_expected": 1,
+      "prompt_sha256": "4d727c3572c1453e2374c531617486d79e25da3705e1ba28a697162e97044a9e",
+      "content_sha256": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q14-v5-25001-i006-c/replay/client.jsonl",
+      "source_client_sha256": "10f9eaaf878388c363f5fe1878e33dd0a70c19eaa20788d4b9d964fdefd5ae26"
+    },
+    {
+      "req_id": "v5-25001-i007-c",
+      "pair_id": "v5-25001-i007",
+      "arm": "C",
+      "task_kind": "check",
+      "category": "interactive",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "R1两边均91，两种指令均判一致。",
+      "public_instruction": "逐项比较A和B中R1的数值：相等写一致，否则写不一致。每行ID|结论。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "91",
+          "B": "91",
+          "expected": "一致"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|一致"
+      ],
+      "original_content": "R1|一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "prompt_sha256": "8d2768c1d7b801ce791846bf99ea80b41e84136beee95923fcade8bae86d2c56",
+      "content_sha256": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q15-v5-25001-i007-c/replay/client.jsonl",
+      "source_client_sha256": "c2950c1dcd93336af22088883aa3649a31b940c66b4dc8b217998ad0f924cc0b"
+    },
+    {
+      "req_id": "v5-25001-i007-o",
+      "pair_id": "v5-25001-i007",
+      "arm": "O",
+      "task_kind": "check",
+      "category": "interactive",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "R1两边均91，两种指令均判一致。",
+      "public_instruction": "核对R1：同写一致，异写不一致。每行ID|结论。",
+      "public_target_ids": [
+        "R1"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "91",
+          "B": "91",
+          "expected": "一致"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|一致"
+      ],
+      "original_content": "R1|一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "prompt_sha256": "524fd5b392c73d690a6c8e09af87186a12990cb70f7b399602a72de02d4b4a75",
+      "content_sha256": "2a3526d09d53060b57ca7919106f8684cd31fd9a65d088d27a317fc20b49580e",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q16-v5-25001-i007-o/replay/client.jsonl",
+      "source_client_sha256": "e03f76f9c90e720164a4c8742ab3d3f662f1619c1f3a61ac9f1783972174384f"
+    },
+    {
+      "req_id": "v5-25001-i008-o",
+      "pair_id": "v5-25001-i008",
+      "arm": "O",
+      "task_kind": "organize",
+      "category": "interactive",
+      "input_token_bucket": 2,
+      "business_correct": true,
+      "review_note": "按R1/R2返回98/76，两种指令均正确且无额外行。",
+      "public_instruction": "按R1,R2顺序整理。每行ID|值。",
+      "public_target_ids": [
+        "R1",
+        "R2"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "98",
+          "expected": "98"
+        },
+        {
+          "id": "R2",
+          "source_value": "76",
+          "expected": "76"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|98",
+        "R2|76"
+      ],
+      "original_content": "R1|98\nR2|76",
+      "parsed_fields": [
+        [
+          "R1",
+          "98"
+        ],
+        [
+          "R2",
+          "76"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "98",
+          "observed_values": [
+            "98"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R2",
+          "expected": "76",
+          "observed_values": [
+            "76"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2,
+      "prompt_sha256": "36d08c330906c2472c73884fa22fda6ac124a475630f46d11dd9bb3feb1b1d37",
+      "content_sha256": "5a8a84880ef50d6239459a497db663a6b5ad1d6f1df52b128c71f2a61f5fe719",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q17-v5-25001-i008-o/replay/client.jsonl",
+      "source_client_sha256": "75354a98551310eeb2da9aed1cfae33650b76db8d1202db6602f7289d4c6ea89"
+    },
+    {
+      "req_id": "v5-25001-i008-c",
+      "pair_id": "v5-25001-i008",
+      "arm": "C",
+      "task_kind": "organize",
+      "category": "interactive",
+      "input_token_bucket": 2,
+      "business_correct": true,
+      "review_note": "按R1/R2返回98/76，两种指令均正确且无额外行。",
+      "public_instruction": "只按R1,R2顺序抄对应数值，不要抄其他行。每行ID|值。",
+      "public_target_ids": [
+        "R1",
+        "R2"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "98",
+          "expected": "98"
+        },
+        {
+          "id": "R2",
+          "source_value": "76",
+          "expected": "76"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|98",
+        "R2|76"
+      ],
+      "original_content": "R1|98\nR2|76",
+      "parsed_fields": [
+        [
+          "R1",
+          "98"
+        ],
+        [
+          "R2",
+          "76"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "98",
+          "observed_values": [
+            "98"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R2",
+          "expected": "76",
+          "observed_values": [
+            "76"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2,
+      "prompt_sha256": "1496fe1a728bda390c23aa4a82520c585ef2f497b226c6380a8a016ee888c4b8",
+      "content_sha256": "5a8a84880ef50d6239459a497db663a6b5ad1d6f1df52b128c71f2a61f5fe719",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q18-v5-25001-i008-c/replay/client.jsonl",
+      "source_client_sha256": "347a508ef8ccda74545b6555f43023e456c1ffc9e7d90af47f3adc1b91bc2b39"
+    },
+    {
+      "req_id": "v5-25001-i009-c",
+      "pair_id": "v5-25001-i009",
+      "arm": "C",
+      "task_kind": "organize",
+      "category": "interactive",
+      "input_token_bucket": 2,
+      "business_correct": true,
+      "review_note": "按R2/R1返回76/15，两种指令均正确。",
+      "public_instruction": "只按R2,R1顺序抄对应数值，不要抄其他行。每行ID|值。",
+      "public_target_ids": [
+        "R2",
+        "R1"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R2",
+          "source_value": "76",
+          "expected": "76"
+        },
+        {
+          "id": "R1",
+          "source_value": "15",
+          "expected": "15"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R2|76",
+        "R1|15"
+      ],
+      "original_content": "R2|76\nR1|15",
+      "parsed_fields": [
+        [
+          "R2",
+          "76"
+        ],
+        [
+          "R1",
+          "15"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R2",
+          "expected": "76",
+          "observed_values": [
+            "76"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R1",
+          "expected": "15",
+          "observed_values": [
+            "15"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2,
+      "prompt_sha256": "4e9a2bb80c87e353c44794929f9b594d563039253336ad1a29381b7c6cb2ba2f",
+      "content_sha256": "00e95c7ee278d12b2eb462239bd93b5ca3447b932d07555e09a85a2b3fd43c62",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q19-v5-25001-i009-c/replay/client.jsonl",
+      "source_client_sha256": "0664db488c984b72114d317864f75f8d83eba89ff541a401ae179090d426912f"
+    },
+    {
+      "req_id": "v5-25001-i009-o",
+      "pair_id": "v5-25001-i009",
+      "arm": "O",
+      "task_kind": "organize",
+      "category": "interactive",
+      "input_token_bucket": 2,
+      "business_correct": true,
+      "review_note": "按R2/R1返回76/15，两种指令均正确。",
+      "public_instruction": "按R2,R1顺序整理。每行ID|值。",
+      "public_target_ids": [
+        "R2",
+        "R1"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R2",
+          "source_value": "76",
+          "expected": "76"
+        },
+        {
+          "id": "R1",
+          "source_value": "15",
+          "expected": "15"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R2|76",
+        "R1|15"
+      ],
+      "original_content": "R2|76\nR1|15",
+      "parsed_fields": [
+        [
+          "R2",
+          "76"
+        ],
+        [
+          "R1",
+          "15"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R2",
+          "expected": "76",
+          "observed_values": [
+            "76"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R1",
+          "expected": "15",
+          "observed_values": [
+            "15"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2,
+      "prompt_sha256": "9cb2c7db97317b8f156dd0328996e5fde0a4481954d141d4b42ed7a8d0a88b4e",
+      "content_sha256": "00e95c7ee278d12b2eb462239bd93b5ca3447b932d07555e09a85a2b3fd43c62",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q20-v5-25001-i009-o/replay/client.jsonl",
+      "source_client_sha256": "0dd5fe757a7590eb83a42df9dbadc37b695e82ee708331e38918d9d080a0f3b4"
+    },
+    {
+      "req_id": "v5-25001-i010-o",
+      "pair_id": "v5-25001-i010",
+      "arm": "O",
+      "task_kind": "organize",
+      "category": "interactive",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "只两条资料，按R2/R1返回79/22，两种指令均正确。",
+      "public_instruction": "按R2,R1顺序整理。每行ID|值。",
+      "public_target_ids": [
+        "R2",
+        "R1"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R2",
+          "source_value": "79",
+          "expected": "79"
+        },
+        {
+          "id": "R1",
+          "source_value": "22",
+          "expected": "22"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R2|79",
+        "R1|22"
+      ],
+      "original_content": "R2|79\nR1|22",
+      "parsed_fields": [
+        [
+          "R2",
+          "79"
+        ],
+        [
+          "R1",
+          "22"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R2",
+          "expected": "79",
+          "observed_values": [
+            "79"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R1",
+          "expected": "22",
+          "observed_values": [
+            "22"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2,
+      "prompt_sha256": "03f1e2c27a2a3d260ebcc120e0fe38e23b4e54a02952b6e131d44ebc8860d0e2",
+      "content_sha256": "b3aa71621572e4e07cf086e4954a13f45da7c5b926f1eb51358508e4931f7e6d",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q21-v5-25001-i010-o/replay/client.jsonl",
+      "source_client_sha256": "6f107958576b8beb9737b71fc0bddbeea247988dea2156191851c8d2b55ef490"
+    },
+    {
+      "req_id": "v5-25001-i010-c",
+      "pair_id": "v5-25001-i010",
+      "arm": "C",
+      "task_kind": "organize",
+      "category": "interactive",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "只两条资料，按R2/R1返回79/22，两种指令均正确。",
+      "public_instruction": "只按R2,R1顺序抄对应数值，不要抄其他行。每行ID|值。",
+      "public_target_ids": [
+        "R2",
+        "R1"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R2",
+          "source_value": "79",
+          "expected": "79"
+        },
+        {
+          "id": "R1",
+          "source_value": "22",
+          "expected": "22"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R2|79",
+        "R1|22"
+      ],
+      "original_content": "R2|79\nR1|22",
+      "parsed_fields": [
+        [
+          "R2",
+          "79"
+        ],
+        [
+          "R1",
+          "22"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R2",
+          "expected": "79",
+          "observed_values": [
+            "79"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R1",
+          "expected": "22",
+          "observed_values": [
+            "22"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2,
+      "prompt_sha256": "d9d28075df737c3fa477f28e7cb91b00e81bc3a5dc2759b6c73c8a890deba832",
+      "content_sha256": "b3aa71621572e4e07cf086e4954a13f45da7c5b926f1eb51358508e4931f7e6d",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q22-v5-25001-i010-c/replay/client.jsonl",
+      "source_client_sha256": "dd713f040deaf9a002ea008b014bf2ec5af0d788d2ff59aff68bfce475db49ec"
+    },
+    {
+      "req_id": "v5-25001-i011-c",
+      "pair_id": "v5-25001-i011",
+      "arm": "C",
+      "task_kind": "organize",
+      "category": "interactive",
+      "input_token_bucket": 1,
+      "business_correct": true,
+      "review_note": "按R2/R1返回20/29，两种指令均正确。",
+      "public_instruction": "只按R2,R1顺序抄对应数值，不要抄其他行。每行ID|值。",
+      "public_target_ids": [
+        "R2",
+        "R1"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R2",
+          "source_value": "20",
+          "expected": "20"
+        },
+        {
+          "id": "R1",
+          "source_value": "29",
+          "expected": "29"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R2|20",
+        "R1|29"
+      ],
+      "original_content": "R2|20\nR1|29",
+      "parsed_fields": [
+        [
+          "R2",
+          "20"
+        ],
+        [
+          "R1",
+          "29"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R2",
+          "expected": "20",
+          "observed_values": [
+            "20"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R1",
+          "expected": "29",
+          "observed_values": [
+            "29"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2,
+      "prompt_sha256": "b55f51727a5b9ea7b5f0bd79c7408f40c1e10ff5f044d0a6bb577b89b8c79d00",
+      "content_sha256": "7d3dc5d3f22960bbfb321b9c55dbddba42beb8ae14d648e94536f8674fe5e355",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q23-v5-25001-i011-c/replay/client.jsonl",
+      "source_client_sha256": "4cbbf97f0aa8268518ee1891f499accb9a55f99296afee0571e93695f1c0eb2a"
+    },
+    {
+      "req_id": "v5-25001-i011-o",
+      "pair_id": "v5-25001-i011",
+      "arm": "O",
+      "task_kind": "organize",
+      "category": "interactive",
+      "input_token_bucket": 1,
+      "business_correct": true,
+      "review_note": "按R2/R1返回20/29，两种指令均正确。",
+      "public_instruction": "按R2,R1顺序整理。每行ID|值。",
+      "public_target_ids": [
+        "R2",
+        "R1"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R2",
+          "source_value": "20",
+          "expected": "20"
+        },
+        {
+          "id": "R1",
+          "source_value": "29",
+          "expected": "29"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R2|20",
+        "R1|29"
+      ],
+      "original_content": "R2|20\nR1|29",
+      "parsed_fields": [
+        [
+          "R2",
+          "20"
+        ],
+        [
+          "R1",
+          "29"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R2",
+          "expected": "20",
+          "observed_values": [
+            "20"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R1",
+          "expected": "29",
+          "observed_values": [
+            "29"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2,
+      "prompt_sha256": "6b3e23126426bfcbe31a917002c6783d0f95b8b8cc013935f6519e1caee6e0eb",
+      "content_sha256": "7d3dc5d3f22960bbfb321b9c55dbddba42beb8ae14d648e94536f8674fe5e355",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q24-v5-25001-i011-o/replay/client.jsonl",
+      "source_client_sha256": "12f85a81da6ab39a0f82c11416165843ba1183d5035b3922d1f01082e50f012f"
+    },
+    {
+      "req_id": "v5-25001-b000-o",
+      "pair_id": "v5-25001-b000",
+      "arm": "O",
+      "task_kind": "extract",
+      "category": "background",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "六目标值42/23/14/76/91/15，O逐项准确。",
+      "public_instruction": "提取R1,R2,R3,R4,R5,R6。每行ID|值。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "42",
+          "expected": "42"
+        },
+        {
+          "id": "R2",
+          "source_value": "23",
+          "expected": "23"
+        },
+        {
+          "id": "R3",
+          "source_value": "14",
+          "expected": "14"
+        },
+        {
+          "id": "R4",
+          "source_value": "76",
+          "expected": "76"
+        },
+        {
+          "id": "R5",
+          "source_value": "91",
+          "expected": "91"
+        },
+        {
+          "id": "R6",
+          "source_value": "15",
+          "expected": "15"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|42",
+        "R2|23",
+        "R3|14",
+        "R4|76",
+        "R5|91",
+        "R6|15"
+      ],
+      "original_content": "R1|42\nR2|23\nR3|14\nR4|76\nR5|91\nR6|15",
+      "parsed_fields": [
+        [
+          "R1",
+          "42"
+        ],
+        [
+          "R2",
+          "23"
+        ],
+        [
+          "R3",
+          "14"
+        ],
+        [
+          "R4",
+          "76"
+        ],
+        [
+          "R5",
+          "91"
+        ],
+        [
+          "R6",
+          "15"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "42",
+          "observed_values": [
+            "42"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R2",
+          "expected": "23",
+          "observed_values": [
+            "23"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R3",
+          "expected": "14",
+          "observed_values": [
+            "14"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R4",
+          "expected": "76",
+          "observed_values": [
+            "76"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R5",
+          "expected": "91",
+          "observed_values": [
+            "91"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R6",
+          "expected": "15",
+          "observed_values": [
+            "15"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "prompt_sha256": "0b4651370005a5964c2cd7b7d781adff95d2274c47f048dcf51df28d5fe21522",
+      "content_sha256": "515fbcd0d20f46e06d0cd9507221ffd944b35d860821bc8bdbb5c224bdbeae92",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q25-v5-25001-b000-o/replay/client.jsonl",
+      "source_client_sha256": "4cf1c23a33c5f1a103387c6ca9c288738d88f012049053f0cf112ad82ae96abc"
+    },
+    {
+      "req_id": "v5-25001-b000-c",
+      "pair_id": "v5-25001-b000",
+      "arm": "C",
+      "task_kind": "extract",
+      "category": "background",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "同六目标值，C也全部准确。",
+      "public_instruction": "提取R1,R2,R3,R4,R5,R6对应的数值，不要复制编号作值。每行ID|值。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "42",
+          "expected": "42"
+        },
+        {
+          "id": "R2",
+          "source_value": "23",
+          "expected": "23"
+        },
+        {
+          "id": "R3",
+          "source_value": "14",
+          "expected": "14"
+        },
+        {
+          "id": "R4",
+          "source_value": "76",
+          "expected": "76"
+        },
+        {
+          "id": "R5",
+          "source_value": "91",
+          "expected": "91"
+        },
+        {
+          "id": "R6",
+          "source_value": "15",
+          "expected": "15"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|42",
+        "R2|23",
+        "R3|14",
+        "R4|76",
+        "R5|91",
+        "R6|15"
+      ],
+      "original_content": "R1|42\nR2|23\nR3|14\nR4|76\nR5|91\nR6|15",
+      "parsed_fields": [
+        [
+          "R1",
+          "42"
+        ],
+        [
+          "R2",
+          "23"
+        ],
+        [
+          "R3",
+          "14"
+        ],
+        [
+          "R4",
+          "76"
+        ],
+        [
+          "R5",
+          "91"
+        ],
+        [
+          "R6",
+          "15"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "42",
+          "observed_values": [
+            "42"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R2",
+          "expected": "23",
+          "observed_values": [
+            "23"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R3",
+          "expected": "14",
+          "observed_values": [
+            "14"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R4",
+          "expected": "76",
+          "observed_values": [
+            "76"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R5",
+          "expected": "91",
+          "observed_values": [
+            "91"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R6",
+          "expected": "15",
+          "observed_values": [
+            "15"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "prompt_sha256": "25dc6a7965e4410baeb357e9dc358e5c9cfb648bb7bfb863f3da1e0693780176",
+      "content_sha256": "515fbcd0d20f46e06d0cd9507221ffd944b35d860821bc8bdbb5c224bdbeae92",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q26-v5-25001-b000-c/replay/client.jsonl",
+      "source_client_sha256": "cca26d17f756217dc8aae321f0fc405999103a361c5de9a025a013dd0476feb5"
+    },
+    {
+      "req_id": "v5-25001-b001-c",
+      "pair_id": "v5-25001-b001",
+      "arm": "C",
+      "task_kind": "extract",
+      "category": "background",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "R1改回正确49，另外五项仍正确，整题改善。",
+      "public_instruction": "提取R1,R2,R3,R4,R5,R6对应的数值，不要复制编号作值。每行ID|值。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "49",
+          "expected": "49"
+        },
+        {
+          "id": "R2",
+          "source_value": "21",
+          "expected": "21"
+        },
+        {
+          "id": "R3",
+          "source_value": "49",
+          "expected": "49"
+        },
+        {
+          "id": "R4",
+          "source_value": "47",
+          "expected": "47"
+        },
+        {
+          "id": "R5",
+          "source_value": "21",
+          "expected": "21"
+        },
+        {
+          "id": "R6",
+          "source_value": "66",
+          "expected": "66"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|49",
+        "R2|21",
+        "R3|49",
+        "R4|47",
+        "R5|21",
+        "R6|66"
+      ],
+      "original_content": "R1|49\nR2|21\nR3|49\nR4|47\nR5|21\nR6|66",
+      "parsed_fields": [
+        [
+          "R1",
+          "49"
+        ],
+        [
+          "R2",
+          "21"
+        ],
+        [
+          "R3",
+          "49"
+        ],
+        [
+          "R4",
+          "47"
+        ],
+        [
+          "R5",
+          "21"
+        ],
+        [
+          "R6",
+          "66"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "49",
+          "observed_values": [
+            "49"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R2",
+          "expected": "21",
+          "observed_values": [
+            "21"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R3",
+          "expected": "49",
+          "observed_values": [
+            "49"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R4",
+          "expected": "47",
+          "observed_values": [
+            "47"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R5",
+          "expected": "21",
+          "observed_values": [
+            "21"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R6",
+          "expected": "66",
+          "observed_values": [
+            "66"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "prompt_sha256": "89a3fe16f1b01667e8a599e0f38d0c1fcb8d1c116b1cac1d54cbf8a87ebe0938",
+      "content_sha256": "efbe358ba6ddde1cf328f8c09aea2368bbbb714f818ce289d280ce50921ebc5a",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q27-v5-25001-b001-c/replay/client.jsonl",
+      "source_client_sha256": "bbb14f857bfba50081a2e42759431468d75419858f6441ce1e4478898b657c41"
+    },
+    {
+      "req_id": "v5-25001-b001-o",
+      "pair_id": "v5-25001-b001",
+      "arm": "O",
+      "task_kind": "extract",
+      "category": "background",
+      "input_token_bucket": 0,
+      "business_correct": false,
+      "review_note": "R1应49，O写47；其余五项正确。",
+      "public_instruction": "提取R1,R2,R3,R4,R5,R6。每行ID|值。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "49",
+          "expected": "49"
+        },
+        {
+          "id": "R2",
+          "source_value": "21",
+          "expected": "21"
+        },
+        {
+          "id": "R3",
+          "source_value": "49",
+          "expected": "49"
+        },
+        {
+          "id": "R4",
+          "source_value": "47",
+          "expected": "47"
+        },
+        {
+          "id": "R5",
+          "source_value": "21",
+          "expected": "21"
+        },
+        {
+          "id": "R6",
+          "source_value": "66",
+          "expected": "66"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|49",
+        "R2|21",
+        "R3|49",
+        "R4|47",
+        "R5|21",
+        "R6|66"
+      ],
+      "original_content": "R1|47\nR2|21\nR3|49\nR4|47\nR5|21\nR6|66",
+      "parsed_fields": [
+        [
+          "R1",
+          "47"
+        ],
+        [
+          "R2",
+          "21"
+        ],
+        [
+          "R3",
+          "49"
+        ],
+        [
+          "R4",
+          "47"
+        ],
+        [
+          "R5",
+          "21"
+        ],
+        [
+          "R6",
+          "66"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "49",
+          "observed_values": [
+            "47"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R2",
+          "expected": "21",
+          "observed_values": [
+            "21"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R3",
+          "expected": "49",
+          "observed_values": [
+            "49"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R4",
+          "expected": "47",
+          "observed_values": [
+            "47"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R5",
+          "expected": "21",
+          "observed_values": [
+            "21"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R6",
+          "expected": "66",
+          "observed_values": [
+            "66"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 5,
+      "target_fields_expected": 6,
+      "prompt_sha256": "bfc0c069634a2da09c197f807f4fbe51b18a2f2507f0adf9653c364011292916",
+      "content_sha256": "0856141e155977eda721972ea9de94b227a031f7ea7d466226d29ec14c8553e3",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q28-v5-25001-b001-o/replay/client.jsonl",
+      "source_client_sha256": "4dff984acc6889abf054507f1cb0027e6d151d2d735d042062f26883ae4beba8"
+    },
+    {
+      "req_id": "v5-25001-b002-o",
+      "pair_id": "v5-25001-b002",
+      "arm": "O",
+      "task_kind": "extract",
+      "category": "background",
+      "input_token_bucket": 1,
+      "business_correct": false,
+      "review_note": "R1应56，O写25；其余五项正确。",
+      "public_instruction": "提取R1,R2,R3,R4,R5,R6。每行ID|值。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "56",
+          "expected": "56"
+        },
+        {
+          "id": "R2",
+          "source_value": "25",
+          "expected": "25"
+        },
+        {
+          "id": "R3",
+          "source_value": "37",
+          "expected": "37"
+        },
+        {
+          "id": "R4",
+          "source_value": "49",
+          "expected": "49"
+        },
+        {
+          "id": "R5",
+          "source_value": "10",
+          "expected": "10"
+        },
+        {
+          "id": "R6",
+          "source_value": "42",
+          "expected": "42"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|56",
+        "R2|25",
+        "R3|37",
+        "R4|49",
+        "R5|10",
+        "R6|42"
+      ],
+      "original_content": "R1|25\nR2|25\nR3|37\nR4|49\nR5|10\nR6|42",
+      "parsed_fields": [
+        [
+          "R1",
+          "25"
+        ],
+        [
+          "R2",
+          "25"
+        ],
+        [
+          "R3",
+          "37"
+        ],
+        [
+          "R4",
+          "49"
+        ],
+        [
+          "R5",
+          "10"
+        ],
+        [
+          "R6",
+          "42"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "56",
+          "observed_values": [
+            "25"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R2",
+          "expected": "25",
+          "observed_values": [
+            "25"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R3",
+          "expected": "37",
+          "observed_values": [
+            "37"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R4",
+          "expected": "49",
+          "observed_values": [
+            "49"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R5",
+          "expected": "10",
+          "observed_values": [
+            "10"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R6",
+          "expected": "42",
+          "observed_values": [
+            "42"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 5,
+      "target_fields_expected": 6,
+      "prompt_sha256": "625dd74f92d6174bd20c3916fbcba071be020ce0ee35036dafc47f04786fd625",
+      "content_sha256": "9ec8847d187cca99f29dd9d2aabb29ec95f6b5e3c469fda89c6078a22e2a5578",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q29-v5-25001-b002-o/replay/client.jsonl",
+      "source_client_sha256": "be839cbb7b536fcc3aa7f332b2f3b0bfa090847a4d36cde2b45d7b083506859f"
+    },
+    {
+      "req_id": "v5-25001-b002-c",
+      "pair_id": "v5-25001-b002",
+      "arm": "C",
+      "task_kind": "extract",
+      "category": "background",
+      "input_token_bucket": 1,
+      "business_correct": false,
+      "review_note": "R1应56，C改写73仍错；其余五项正确。",
+      "public_instruction": "提取R1,R2,R3,R4,R5,R6对应的数值，不要复制编号作值。每行ID|值。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "56",
+          "expected": "56"
+        },
+        {
+          "id": "R2",
+          "source_value": "25",
+          "expected": "25"
+        },
+        {
+          "id": "R3",
+          "source_value": "37",
+          "expected": "37"
+        },
+        {
+          "id": "R4",
+          "source_value": "49",
+          "expected": "49"
+        },
+        {
+          "id": "R5",
+          "source_value": "10",
+          "expected": "10"
+        },
+        {
+          "id": "R6",
+          "source_value": "42",
+          "expected": "42"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|56",
+        "R2|25",
+        "R3|37",
+        "R4|49",
+        "R5|10",
+        "R6|42"
+      ],
+      "original_content": "R1|73\nR2|25\nR3|37\nR4|49\nR5|10\nR6|42",
+      "parsed_fields": [
+        [
+          "R1",
+          "73"
+        ],
+        [
+          "R2",
+          "25"
+        ],
+        [
+          "R3",
+          "37"
+        ],
+        [
+          "R4",
+          "49"
+        ],
+        [
+          "R5",
+          "10"
+        ],
+        [
+          "R6",
+          "42"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "56",
+          "observed_values": [
+            "73"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R2",
+          "expected": "25",
+          "observed_values": [
+            "25"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R3",
+          "expected": "37",
+          "observed_values": [
+            "37"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R4",
+          "expected": "49",
+          "observed_values": [
+            "49"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R5",
+          "expected": "10",
+          "observed_values": [
+            "10"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R6",
+          "expected": "42",
+          "observed_values": [
+            "42"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 5,
+      "target_fields_expected": 6,
+      "prompt_sha256": "e1ea7bb3afc800e5f4c511817331ddb25878dd06cb77e3d83e790efe2bf2b394",
+      "content_sha256": "8fdd89ecdfb9c1a70bb9f768b7189bf2f0f9c9ad0ffec41b4b25a54da065e1c0",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q30-v5-25001-b002-c/replay/client.jsonl",
+      "source_client_sha256": "b43d166676f36cb359c3d7c8862988e88fffcfd25f60fa9b9cdc37858d4de4d9"
+    },
+    {
+      "req_id": "v5-25001-b003-c",
+      "pair_id": "v5-25001-b003",
+      "arm": "C",
+      "task_kind": "extract",
+      "category": "background",
+      "input_token_bucket": 2,
+      "business_correct": false,
+      "review_note": "R6改回20，但R1仍75、R5仍84，两项错，整题仍未通过。",
+      "public_instruction": "提取R1,R2,R3,R4,R5,R6对应的数值，不要复制编号作值。每行ID|值。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "63",
+          "expected": "63"
+        },
+        {
+          "id": "R2",
+          "source_value": "82",
+          "expected": "82"
+        },
+        {
+          "id": "R3",
+          "source_value": "58",
+          "expected": "58"
+        },
+        {
+          "id": "R4",
+          "source_value": "45",
+          "expected": "45"
+        },
+        {
+          "id": "R5",
+          "source_value": "94",
+          "expected": "94"
+        },
+        {
+          "id": "R6",
+          "source_value": "20",
+          "expected": "20"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|63",
+        "R2|82",
+        "R3|58",
+        "R4|45",
+        "R5|94",
+        "R6|20"
+      ],
+      "original_content": "R1|75\nR2|82\nR3|58\nR4|45\nR5|84\nR6|20",
+      "parsed_fields": [
+        [
+          "R1",
+          "75"
+        ],
+        [
+          "R2",
+          "82"
+        ],
+        [
+          "R3",
+          "58"
+        ],
+        [
+          "R4",
+          "45"
+        ],
+        [
+          "R5",
+          "84"
+        ],
+        [
+          "R6",
+          "20"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "63",
+          "observed_values": [
+            "75"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R2",
+          "expected": "82",
+          "observed_values": [
+            "82"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R3",
+          "expected": "58",
+          "observed_values": [
+            "58"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R4",
+          "expected": "45",
+          "observed_values": [
+            "45"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R5",
+          "expected": "94",
+          "observed_values": [
+            "84"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R6",
+          "expected": "20",
+          "observed_values": [
+            "20"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 4,
+      "target_fields_expected": 6,
+      "prompt_sha256": "6502f04c4011b272a5a6586d0c1f29e4b20653afce78ddde06f7a82ee2fc2aa7",
+      "content_sha256": "d07496562c908b51c771295fcc8025f70c076908e00599ef51597b8a9b532610",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q31-v5-25001-b003-c/replay/client.jsonl",
+      "source_client_sha256": "d581586d798b171dfcf0f13668888de54c14710c789435c58c257c32e895c738"
+    },
+    {
+      "req_id": "v5-25001-b003-o",
+      "pair_id": "v5-25001-b003",
+      "arm": "O",
+      "task_kind": "extract",
+      "category": "background",
+      "input_token_bucket": 2,
+      "business_correct": false,
+      "review_note": "R1应63写75、R5应94写84、R6应20写62，三项错。",
+      "public_instruction": "提取R1,R2,R3,R4,R5,R6。每行ID|值。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "63",
+          "expected": "63"
+        },
+        {
+          "id": "R2",
+          "source_value": "82",
+          "expected": "82"
+        },
+        {
+          "id": "R3",
+          "source_value": "58",
+          "expected": "58"
+        },
+        {
+          "id": "R4",
+          "source_value": "45",
+          "expected": "45"
+        },
+        {
+          "id": "R5",
+          "source_value": "94",
+          "expected": "94"
+        },
+        {
+          "id": "R6",
+          "source_value": "20",
+          "expected": "20"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|63",
+        "R2|82",
+        "R3|58",
+        "R4|45",
+        "R5|94",
+        "R6|20"
+      ],
+      "original_content": "R1|75\nR2|82\nR3|58\nR4|45\nR5|84\nR6|62",
+      "parsed_fields": [
+        [
+          "R1",
+          "75"
+        ],
+        [
+          "R2",
+          "82"
+        ],
+        [
+          "R3",
+          "58"
+        ],
+        [
+          "R4",
+          "45"
+        ],
+        [
+          "R5",
+          "84"
+        ],
+        [
+          "R6",
+          "62"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "63",
+          "observed_values": [
+            "75"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R2",
+          "expected": "82",
+          "observed_values": [
+            "82"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R3",
+          "expected": "58",
+          "observed_values": [
+            "58"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R4",
+          "expected": "45",
+          "observed_values": [
+            "45"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R5",
+          "expected": "94",
+          "observed_values": [
+            "84"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R6",
+          "expected": "20",
+          "observed_values": [
+            "62"
+          ],
+          "correct": false
+        }
+      ],
+      "target_fields_correct": 3,
+      "target_fields_expected": 6,
+      "prompt_sha256": "d1a53cf158e59e7b481a140b46e30a77dec3758d10e8d39c74681237aa5c036a",
+      "content_sha256": "01aa92440946af4ade897023453b03aa3ea00e19a11b6685ca2674e86aaf5211",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q32-v5-25001-b003-o/replay/client.jsonl",
+      "source_client_sha256": "f7fcbc8d0b694beb4f649c3a2c399a51592503434b9c3e9ab1c491defa00b330"
+    },
+    {
+      "req_id": "v5-25001-b004-o",
+      "pair_id": "v5-25001-b004",
+      "arm": "O",
+      "task_kind": "check",
+      "category": "background",
+      "input_token_bucket": 1,
+      "business_correct": false,
+      "review_note": "六项全判一致；R1为70/71、R3为44/45、R5为48/49，三项错。",
+      "public_instruction": "核对R1,R2,R3,R4,R5,R6：同写一致，异写不一致。每行ID|结论。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "70",
+          "B": "71",
+          "expected": "不一致"
+        },
+        {
+          "id": "R2",
+          "A": "79",
+          "B": "79",
+          "expected": "一致"
+        },
+        {
+          "id": "R3",
+          "A": "44",
+          "B": "45",
+          "expected": "不一致"
+        },
+        {
+          "id": "R4",
+          "A": "36",
+          "B": "36",
+          "expected": "一致"
+        },
+        {
+          "id": "R5",
+          "A": "48",
+          "B": "49",
+          "expected": "不一致"
+        },
+        {
+          "id": "R6",
+          "A": "48",
+          "B": "48",
+          "expected": "一致"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|不一致",
+        "R2|一致",
+        "R3|不一致",
+        "R4|一致",
+        "R5|不一致",
+        "R6|一致"
+      ],
+      "original_content": "R1|一致\nR2|一致\nR3|一致\nR4|一致\nR5|一致\nR6|一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R2",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R3",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R4",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R5",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R6",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 3,
+      "target_fields_expected": 6,
+      "prompt_sha256": "d0b3f7072358f5c0a20cc18b4f82744ca1b683e13818e29b79ef91db1884f08c",
+      "content_sha256": "51575a9e53043fa153cd278a748906685b062558c201ade33a2c2b05f56c84a7",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q33-v5-25001-b004-o/replay/client.jsonl",
+      "source_client_sha256": "a2f18cf1a89471d2c928773a140766271ea035f5c9da05687f53d8ca142338ca"
+    },
+    {
+      "req_id": "v5-25001-b004-c",
+      "pair_id": "v5-25001-b004",
+      "arm": "C",
+      "task_kind": "check",
+      "category": "background",
+      "input_token_bucket": 1,
+      "business_correct": false,
+      "review_note": "同样六项全判一致，同三项仍错。",
+      "public_instruction": "逐项比较A和B中R1,R2,R3,R4,R5,R6的数值：相等写一致，否则写不一致。每行ID|结论。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "70",
+          "B": "71",
+          "expected": "不一致"
+        },
+        {
+          "id": "R2",
+          "A": "79",
+          "B": "79",
+          "expected": "一致"
+        },
+        {
+          "id": "R3",
+          "A": "44",
+          "B": "45",
+          "expected": "不一致"
+        },
+        {
+          "id": "R4",
+          "A": "36",
+          "B": "36",
+          "expected": "一致"
+        },
+        {
+          "id": "R5",
+          "A": "48",
+          "B": "49",
+          "expected": "不一致"
+        },
+        {
+          "id": "R6",
+          "A": "48",
+          "B": "48",
+          "expected": "一致"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|不一致",
+        "R2|一致",
+        "R3|不一致",
+        "R4|一致",
+        "R5|不一致",
+        "R6|一致"
+      ],
+      "original_content": "R1|一致\nR2|一致\nR3|一致\nR4|一致\nR5|一致\nR6|一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R2",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R3",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R4",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R5",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R6",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 3,
+      "target_fields_expected": 6,
+      "prompt_sha256": "afd3ab40e595aaae3dd5ea3359484000692be574ceace24283a44e4e81ca0fb9",
+      "content_sha256": "51575a9e53043fa153cd278a748906685b062558c201ade33a2c2b05f56c84a7",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q34-v5-25001-b004-c/replay/client.jsonl",
+      "source_client_sha256": "f3f21acf2b6175f4cc57c3b2f665afe7dd5c1707334dfdaeebda999f5f72b515"
+    },
+    {
+      "req_id": "v5-25001-b005-c",
+      "pair_id": "v5-25001-b005",
+      "arm": "C",
+      "task_kind": "check",
+      "category": "background",
+      "input_token_bucket": 1,
+      "business_correct": false,
+      "review_note": "C正确识别R4/R6不同，但R2的92/93仍判一致；5/6字段正确但整题错。",
+      "public_instruction": "逐项比较A和B中R1,R2,R3,R4,R5,R6的数值：相等写一致，否则写不一致。每行ID|结论。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "77",
+          "B": "77",
+          "expected": "一致"
+        },
+        {
+          "id": "R2",
+          "A": "92",
+          "B": "93",
+          "expected": "不一致"
+        },
+        {
+          "id": "R3",
+          "A": "96",
+          "B": "96",
+          "expected": "一致"
+        },
+        {
+          "id": "R4",
+          "A": "34",
+          "B": "35",
+          "expected": "不一致"
+        },
+        {
+          "id": "R5",
+          "A": "89",
+          "B": "89",
+          "expected": "一致"
+        },
+        {
+          "id": "R6",
+          "A": "66",
+          "B": "67",
+          "expected": "不一致"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|一致",
+        "R2|不一致",
+        "R3|一致",
+        "R4|不一致",
+        "R5|一致",
+        "R6|不一致"
+      ],
+      "original_content": "R1|一致\nR2|一致\nR3|一致\nR4|不一致\nR5|一致\nR6|不一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "不一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "不一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R2",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R3",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R4",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R5",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R6",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 5,
+      "target_fields_expected": 6,
+      "prompt_sha256": "6980ecf9e0a3de0ba2efbf704e5712bdd2aaca0a03b9926770ac3485c8317f67",
+      "content_sha256": "a10d0c4ad358e6ab6711cb6625105554f6aabc6eea35e67ac82cc0406942b0a2",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q35-v5-25001-b005-c/replay/client.jsonl",
+      "source_client_sha256": "b2f013566d6f46160ec2b4bd3519b62ede266a447fb9e7c524c7ecddfa5bd76d"
+    },
+    {
+      "req_id": "v5-25001-b005-o",
+      "pair_id": "v5-25001-b005",
+      "arm": "O",
+      "task_kind": "check",
+      "category": "background",
+      "input_token_bucket": 1,
+      "business_correct": false,
+      "review_note": "六项全判一致；R2为92/93、R4为34/35、R6为66/67，三项应不一致。",
+      "public_instruction": "核对R1,R2,R3,R4,R5,R6：同写一致，异写不一致。每行ID|结论。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "77",
+          "B": "77",
+          "expected": "一致"
+        },
+        {
+          "id": "R2",
+          "A": "92",
+          "B": "93",
+          "expected": "不一致"
+        },
+        {
+          "id": "R3",
+          "A": "96",
+          "B": "96",
+          "expected": "一致"
+        },
+        {
+          "id": "R4",
+          "A": "34",
+          "B": "35",
+          "expected": "不一致"
+        },
+        {
+          "id": "R5",
+          "A": "89",
+          "B": "89",
+          "expected": "一致"
+        },
+        {
+          "id": "R6",
+          "A": "66",
+          "B": "67",
+          "expected": "不一致"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|一致",
+        "R2|不一致",
+        "R3|一致",
+        "R4|不一致",
+        "R5|一致",
+        "R6|不一致"
+      ],
+      "original_content": "R1|一致\nR2|一致\nR3|一致\nR4|一致\nR5|一致\nR6|一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R2",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R3",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R4",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R5",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R6",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": false
+        }
+      ],
+      "target_fields_correct": 3,
+      "target_fields_expected": 6,
+      "prompt_sha256": "3a3546c38cb009709185c6ed192cb8df1cca8639fbbad8f38dcaa51875e1a535",
+      "content_sha256": "51575a9e53043fa153cd278a748906685b062558c201ade33a2c2b05f56c84a7",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q36-v5-25001-b005-o/replay/client.jsonl",
+      "source_client_sha256": "cf985c6334439f5f2e6a044c827631d30835cf7c8c520862c089544409c4c646"
+    },
+    {
+      "req_id": "v5-25001-b006-o",
+      "pair_id": "v5-25001-b006",
+      "arm": "O",
+      "task_kind": "check",
+      "category": "background",
+      "input_token_bucket": 2,
+      "business_correct": false,
+      "review_note": "R1的84/85已判不同，但R3的80/81、R5的93/94仍判一致，两项错。",
+      "public_instruction": "核对R1,R2,R3,R4,R5,R6：同写一致，异写不一致。每行ID|结论。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "84",
+          "B": "85",
+          "expected": "不一致"
+        },
+        {
+          "id": "R2",
+          "A": "98",
+          "B": "98",
+          "expected": "一致"
+        },
+        {
+          "id": "R3",
+          "A": "80",
+          "B": "81",
+          "expected": "不一致"
+        },
+        {
+          "id": "R4",
+          "A": "90",
+          "B": "90",
+          "expected": "一致"
+        },
+        {
+          "id": "R5",
+          "A": "93",
+          "B": "94",
+          "expected": "不一致"
+        },
+        {
+          "id": "R6",
+          "A": "56",
+          "B": "56",
+          "expected": "一致"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|不一致",
+        "R2|一致",
+        "R3|不一致",
+        "R4|一致",
+        "R5|不一致",
+        "R6|一致"
+      ],
+      "original_content": "R1|不一致\nR2|一致\nR3|一致\nR4|一致\nR5|一致\nR6|一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "不一致"
+        ],
+        [
+          "R2",
+          "一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R2",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R3",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R4",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R5",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R6",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 4,
+      "target_fields_expected": 6,
+      "prompt_sha256": "b0899d06ae6080bf904086befdbb97da8ef1dc421c7fc9c28d632f21abdba9ee",
+      "content_sha256": "0d2471265b05a95b1d06b1a07d3468d2b3b02529911e7079574037a02454461b",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q37-v5-25001-b006-o/replay/client.jsonl",
+      "source_client_sha256": "4cf974ddbcdb288fd403826c19b739925ce0ab5989dad6e147e82ed55ad18306"
+    },
+    {
+      "req_id": "v5-25001-b006-c",
+      "pair_id": "v5-25001-b006",
+      "arm": "C",
+      "task_kind": "check",
+      "category": "background",
+      "input_token_bucket": 2,
+      "business_correct": false,
+      "review_note": "六项全判一致，连原先正确的R1也变错，共三项错。",
+      "public_instruction": "逐项比较A和B中R1,R2,R3,R4,R5,R6的数值：相等写一致，否则写不一致。每行ID|结论。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "84",
+          "B": "85",
+          "expected": "不一致"
+        },
+        {
+          "id": "R2",
+          "A": "98",
+          "B": "98",
+          "expected": "一致"
+        },
+        {
+          "id": "R3",
+          "A": "80",
+          "B": "81",
+          "expected": "不一致"
+        },
+        {
+          "id": "R4",
+          "A": "90",
+          "B": "90",
+          "expected": "一致"
+        },
+        {
+          "id": "R5",
+          "A": "93",
+          "B": "94",
+          "expected": "不一致"
+        },
+        {
+          "id": "R6",
+          "A": "56",
+          "B": "56",
+          "expected": "一致"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|不一致",
+        "R2|一致",
+        "R3|不一致",
+        "R4|一致",
+        "R5|不一致",
+        "R6|一致"
+      ],
+      "original_content": "R1|一致\nR2|一致\nR3|一致\nR4|一致\nR5|一致\nR6|一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R2",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R3",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R4",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R5",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R6",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 3,
+      "target_fields_expected": 6,
+      "prompt_sha256": "62027ddc595f59da40a7f8351430e4492306064991e1db35add11155e7fb0cb8",
+      "content_sha256": "51575a9e53043fa153cd278a748906685b062558c201ade33a2c2b05f56c84a7",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q38-v5-25001-b006-c/replay/client.jsonl",
+      "source_client_sha256": "d395ee53c9b9a5002b731a345cf9312841da5573a9e333a642ac07ac165c0cbf"
+    },
+    {
+      "req_id": "v5-25001-b007-c",
+      "pair_id": "v5-25001-b007",
+      "arm": "C",
+      "task_kind": "check",
+      "category": "background",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "C逐项区分三同三异，六项全部正确，整题改善。",
+      "public_instruction": "逐项比较A和B中R1,R2,R3,R4,R5,R6的数值：相等写一致，否则写不一致。每行ID|结论。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "91",
+          "B": "91",
+          "expected": "一致"
+        },
+        {
+          "id": "R2",
+          "A": "39",
+          "B": "40",
+          "expected": "不一致"
+        },
+        {
+          "id": "R3",
+          "A": "42",
+          "B": "42",
+          "expected": "一致"
+        },
+        {
+          "id": "R4",
+          "A": "65",
+          "B": "66",
+          "expected": "不一致"
+        },
+        {
+          "id": "R5",
+          "A": "97",
+          "B": "97",
+          "expected": "一致"
+        },
+        {
+          "id": "R6",
+          "A": "25",
+          "B": "26",
+          "expected": "不一致"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|一致",
+        "R2|不一致",
+        "R3|一致",
+        "R4|不一致",
+        "R5|一致",
+        "R6|不一致"
+      ],
+      "original_content": "R1|一致\nR2|不一致\nR3|一致\nR4|不一致\nR5|一致\nR6|不一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "不一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "不一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "不一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R2",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R3",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R4",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R5",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R6",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "prompt_sha256": "67dc16d449a67bb030ba4efceaade6afba9ddaf29655cf5e4bfa5aabf620e7db",
+      "content_sha256": "763062d5b68885e821fb3b2376e654410ff3dcf3b1b5cb6c522a2b7b60200eea",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q39-v5-25001-b007-c/replay/client.jsonl",
+      "source_client_sha256": "50f4b3555977c94a6e091e56052b4e72fbbfd18e707cfb21403588193f52a831"
+    },
+    {
+      "req_id": "v5-25001-b007-o",
+      "pair_id": "v5-25001-b007",
+      "arm": "O",
+      "task_kind": "check",
+      "category": "background",
+      "input_token_bucket": 0,
+      "business_correct": false,
+      "review_note": "六项全判一致；R2为39/40、R4为65/66、R6为25/26，三项错。",
+      "public_instruction": "核对R1,R2,R3,R4,R5,R6：同写一致，异写不一致。每行ID|结论。",
+      "public_target_ids": [
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "A": "91",
+          "B": "91",
+          "expected": "一致"
+        },
+        {
+          "id": "R2",
+          "A": "39",
+          "B": "40",
+          "expected": "不一致"
+        },
+        {
+          "id": "R3",
+          "A": "42",
+          "B": "42",
+          "expected": "一致"
+        },
+        {
+          "id": "R4",
+          "A": "65",
+          "B": "66",
+          "expected": "不一致"
+        },
+        {
+          "id": "R5",
+          "A": "97",
+          "B": "97",
+          "expected": "一致"
+        },
+        {
+          "id": "R6",
+          "A": "25",
+          "B": "26",
+          "expected": "不一致"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|一致",
+        "R2|不一致",
+        "R3|一致",
+        "R4|不一致",
+        "R5|一致",
+        "R6|不一致"
+      ],
+      "original_content": "R1|一致\nR2|一致\nR3|一致\nR4|一致\nR5|一致\nR6|一致",
+      "parsed_fields": [
+        [
+          "R1",
+          "一致"
+        ],
+        [
+          "R2",
+          "一致"
+        ],
+        [
+          "R3",
+          "一致"
+        ],
+        [
+          "R4",
+          "一致"
+        ],
+        [
+          "R5",
+          "一致"
+        ],
+        [
+          "R6",
+          "一致"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R2",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R3",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R4",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R5",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R6",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "correct": false
+        }
+      ],
+      "target_fields_correct": 3,
+      "target_fields_expected": 6,
+      "prompt_sha256": "39336e26081004b0f25ddd6f4ba0f6eb3433309d5c29be1e5e1e2f9f0d34df8a",
+      "content_sha256": "51575a9e53043fa153cd278a748906685b062558c201ade33a2c2b05f56c84a7",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q40-v5-25001-b007-o/replay/client.jsonl",
+      "source_client_sha256": "42768fc2f6bb1ed86e8bbee105ebc188abb57128cf1ad8207cab87501ba27e7d"
+    },
+    {
+      "req_id": "v5-25001-b008-o",
+      "pair_id": "v5-25001-b008",
+      "arm": "O",
+      "task_kind": "organize",
+      "category": "background",
+      "input_token_bucket": 2,
+      "business_correct": false,
+      "review_note": "目标顺序正确，但R2应88写32，其余五项正确。",
+      "public_instruction": "按R2,R1,R5,R3,R6,R4顺序整理。每行ID|值。",
+      "public_target_ids": [
+        "R2",
+        "R1",
+        "R5",
+        "R3",
+        "R6",
+        "R4"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R2",
+          "source_value": "88",
+          "expected": "88"
+        },
+        {
+          "id": "R1",
+          "source_value": "98",
+          "expected": "98"
+        },
+        {
+          "id": "R5",
+          "source_value": "24",
+          "expected": "24"
+        },
+        {
+          "id": "R3",
+          "source_value": "60",
+          "expected": "60"
+        },
+        {
+          "id": "R6",
+          "source_value": "35",
+          "expected": "35"
+        },
+        {
+          "id": "R4",
+          "source_value": "16",
+          "expected": "16"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R2|88",
+        "R1|98",
+        "R5|24",
+        "R3|60",
+        "R6|35",
+        "R4|16"
+      ],
+      "original_content": "R2|32\nR1|98\nR5|24\nR3|60\nR6|35\nR4|16",
+      "parsed_fields": [
+        [
+          "R2",
+          "32"
+        ],
+        [
+          "R1",
+          "98"
+        ],
+        [
+          "R5",
+          "24"
+        ],
+        [
+          "R3",
+          "60"
+        ],
+        [
+          "R6",
+          "35"
+        ],
+        [
+          "R4",
+          "16"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R2",
+          "expected": "88",
+          "observed_values": [
+            "32"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R1",
+          "expected": "98",
+          "observed_values": [
+            "98"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R5",
+          "expected": "24",
+          "observed_values": [
+            "24"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R3",
+          "expected": "60",
+          "observed_values": [
+            "60"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R6",
+          "expected": "35",
+          "observed_values": [
+            "35"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R4",
+          "expected": "16",
+          "observed_values": [
+            "16"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 5,
+      "target_fields_expected": 6,
+      "prompt_sha256": "d55bd4867591f6e2eeccbed3a2566905fa0d825a9a62fd739c91cc67467ceee9",
+      "content_sha256": "6d658b84cbbd81fc210cdfe6479aea036fb966afb0e15f667455a863a571baba",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q41-v5-25001-b008-o/replay/client.jsonl",
+      "source_client_sha256": "bd0f61945f7c18dfc4f6f86daa158805286ae1944b35226f5d0ed6af180c83ff"
+    },
+    {
+      "req_id": "v5-25001-b008-c",
+      "pair_id": "v5-25001-b008",
+      "arm": "C",
+      "task_kind": "organize",
+      "category": "background",
+      "input_token_bucket": 2,
+      "business_correct": false,
+      "review_note": "同样R2应88写32，未改善。",
+      "public_instruction": "只按R2,R1,R5,R3,R6,R4顺序抄对应数值，不要抄其他行。每行ID|值。",
+      "public_target_ids": [
+        "R2",
+        "R1",
+        "R5",
+        "R3",
+        "R6",
+        "R4"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R2",
+          "source_value": "88",
+          "expected": "88"
+        },
+        {
+          "id": "R1",
+          "source_value": "98",
+          "expected": "98"
+        },
+        {
+          "id": "R5",
+          "source_value": "24",
+          "expected": "24"
+        },
+        {
+          "id": "R3",
+          "source_value": "60",
+          "expected": "60"
+        },
+        {
+          "id": "R6",
+          "source_value": "35",
+          "expected": "35"
+        },
+        {
+          "id": "R4",
+          "source_value": "16",
+          "expected": "16"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R2|88",
+        "R1|98",
+        "R5|24",
+        "R3|60",
+        "R6|35",
+        "R4|16"
+      ],
+      "original_content": "R2|32\nR1|98\nR5|24\nR3|60\nR6|35\nR4|16",
+      "parsed_fields": [
+        [
+          "R2",
+          "32"
+        ],
+        [
+          "R1",
+          "98"
+        ],
+        [
+          "R5",
+          "24"
+        ],
+        [
+          "R3",
+          "60"
+        ],
+        [
+          "R6",
+          "35"
+        ],
+        [
+          "R4",
+          "16"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R2",
+          "expected": "88",
+          "observed_values": [
+            "32"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R1",
+          "expected": "98",
+          "observed_values": [
+            "98"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R5",
+          "expected": "24",
+          "observed_values": [
+            "24"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R3",
+          "expected": "60",
+          "observed_values": [
+            "60"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R6",
+          "expected": "35",
+          "observed_values": [
+            "35"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R4",
+          "expected": "16",
+          "observed_values": [
+            "16"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 5,
+      "target_fields_expected": 6,
+      "prompt_sha256": "cc88168f27771f4555faa54be34ce52169f45f41b1c2ec907d5f2024a64e5dfc",
+      "content_sha256": "6d658b84cbbd81fc210cdfe6479aea036fb966afb0e15f667455a863a571baba",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q42-v5-25001-b008-c/replay/client.jsonl",
+      "source_client_sha256": "0ade76edd3eed53212f394f639fe248c9ea7d1231c5538a4bd3ea71b35223823"
+    },
+    {
+      "req_id": "v5-25001-b009-c",
+      "pair_id": "v5-25001-b009",
+      "arm": "C",
+      "task_kind": "organize",
+      "category": "background",
+      "input_token_bucket": 2,
+      "business_correct": false,
+      "review_note": "C的R6写73，应43；另外五项正确，整题退化。",
+      "public_instruction": "只按R6,R2,R3,R5,R1,R4顺序抄对应数值，不要抄其他行。每行ID|值。",
+      "public_target_ids": [
+        "R6",
+        "R2",
+        "R3",
+        "R5",
+        "R1",
+        "R4"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R6",
+          "source_value": "43",
+          "expected": "43"
+        },
+        {
+          "id": "R2",
+          "source_value": "17",
+          "expected": "17"
+        },
+        {
+          "id": "R3",
+          "source_value": "63",
+          "expected": "63"
+        },
+        {
+          "id": "R5",
+          "source_value": "17",
+          "expected": "17"
+        },
+        {
+          "id": "R1",
+          "source_value": "15",
+          "expected": "15"
+        },
+        {
+          "id": "R4",
+          "source_value": "41",
+          "expected": "41"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R6|43",
+        "R2|17",
+        "R3|63",
+        "R5|17",
+        "R1|15",
+        "R4|41"
+      ],
+      "original_content": "R6|73\nR2|17\nR3|63\nR5|17\nR1|15\nR4|41",
+      "parsed_fields": [
+        [
+          "R6",
+          "73"
+        ],
+        [
+          "R2",
+          "17"
+        ],
+        [
+          "R3",
+          "63"
+        ],
+        [
+          "R5",
+          "17"
+        ],
+        [
+          "R1",
+          "15"
+        ],
+        [
+          "R4",
+          "41"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R6",
+          "expected": "43",
+          "observed_values": [
+            "73"
+          ],
+          "correct": false
+        },
+        {
+          "id": "R2",
+          "expected": "17",
+          "observed_values": [
+            "17"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R3",
+          "expected": "63",
+          "observed_values": [
+            "63"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R5",
+          "expected": "17",
+          "observed_values": [
+            "17"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R1",
+          "expected": "15",
+          "observed_values": [
+            "15"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R4",
+          "expected": "41",
+          "observed_values": [
+            "41"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 5,
+      "target_fields_expected": 6,
+      "prompt_sha256": "c2d3813d7991f66f2470c8606cc2ec563aac54dda1b8e32fe05beedcf091ca24",
+      "content_sha256": "9af448db3366e66fef13fb5d1b6fe7b0501fb633f4b8ca51a132c900d8cfb38d",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q43-v5-25001-b009-c/replay/client.jsonl",
+      "source_client_sha256": "dc344d90e6063a2dcb276665397a8d48100b1a61749c88b92a466d9b1184eb6f"
+    },
+    {
+      "req_id": "v5-25001-b009-o",
+      "pair_id": "v5-25001-b009",
+      "arm": "O",
+      "task_kind": "organize",
+      "category": "background",
+      "input_token_bucket": 2,
+      "business_correct": true,
+      "review_note": "按R6/R2/R3/R5/R1/R4返回43/17/63/17/15/41，O正确。",
+      "public_instruction": "按R6,R2,R3,R5,R1,R4顺序整理。每行ID|值。",
+      "public_target_ids": [
+        "R6",
+        "R2",
+        "R3",
+        "R5",
+        "R1",
+        "R4"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R6",
+          "source_value": "43",
+          "expected": "43"
+        },
+        {
+          "id": "R2",
+          "source_value": "17",
+          "expected": "17"
+        },
+        {
+          "id": "R3",
+          "source_value": "63",
+          "expected": "63"
+        },
+        {
+          "id": "R5",
+          "source_value": "17",
+          "expected": "17"
+        },
+        {
+          "id": "R1",
+          "source_value": "15",
+          "expected": "15"
+        },
+        {
+          "id": "R4",
+          "source_value": "41",
+          "expected": "41"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R6|43",
+        "R2|17",
+        "R3|63",
+        "R5|17",
+        "R1|15",
+        "R4|41"
+      ],
+      "original_content": "R6|43\nR2|17\nR3|63\nR5|17\nR1|15\nR4|41",
+      "parsed_fields": [
+        [
+          "R6",
+          "43"
+        ],
+        [
+          "R2",
+          "17"
+        ],
+        [
+          "R3",
+          "63"
+        ],
+        [
+          "R5",
+          "17"
+        ],
+        [
+          "R1",
+          "15"
+        ],
+        [
+          "R4",
+          "41"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R6",
+          "expected": "43",
+          "observed_values": [
+            "43"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R2",
+          "expected": "17",
+          "observed_values": [
+            "17"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R3",
+          "expected": "63",
+          "observed_values": [
+            "63"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R5",
+          "expected": "17",
+          "observed_values": [
+            "17"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R1",
+          "expected": "15",
+          "observed_values": [
+            "15"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R4",
+          "expected": "41",
+          "observed_values": [
+            "41"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "prompt_sha256": "b4a04086292ac18e05a6e3b60f669ab17c94175532528cdfe4d03aac15b3e5bf",
+      "content_sha256": "3d95d00dfaa5e880adf58c57ba4b529ae71e26ae5083badf0442772cf0b794c2",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q44-v5-25001-b009-o/replay/client.jsonl",
+      "source_client_sha256": "4b5d96f957e6e51ceca61418e82fb9154af6abb23aaf9f95766fc118d292644b"
+    },
+    {
+      "req_id": "v5-25001-b010-o",
+      "pair_id": "v5-25001-b010",
+      "arm": "O",
+      "task_kind": "organize",
+      "category": "background",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "指定顺序R3/R1/R4/R2/R6/R5，对应19/22/10/10/88/59，两种指令均正确。",
+      "public_instruction": "按R3,R1,R4,R2,R6,R5顺序整理。每行ID|值。",
+      "public_target_ids": [
+        "R3",
+        "R1",
+        "R4",
+        "R2",
+        "R6",
+        "R5"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R3",
+          "source_value": "19",
+          "expected": "19"
+        },
+        {
+          "id": "R1",
+          "source_value": "22",
+          "expected": "22"
+        },
+        {
+          "id": "R4",
+          "source_value": "10",
+          "expected": "10"
+        },
+        {
+          "id": "R2",
+          "source_value": "10",
+          "expected": "10"
+        },
+        {
+          "id": "R6",
+          "source_value": "88",
+          "expected": "88"
+        },
+        {
+          "id": "R5",
+          "source_value": "59",
+          "expected": "59"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R3|19",
+        "R1|22",
+        "R4|10",
+        "R2|10",
+        "R6|88",
+        "R5|59"
+      ],
+      "original_content": "R3|19\nR1|22\nR4|10\nR2|10\nR6|88\nR5|59",
+      "parsed_fields": [
+        [
+          "R3",
+          "19"
+        ],
+        [
+          "R1",
+          "22"
+        ],
+        [
+          "R4",
+          "10"
+        ],
+        [
+          "R2",
+          "10"
+        ],
+        [
+          "R6",
+          "88"
+        ],
+        [
+          "R5",
+          "59"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R3",
+          "expected": "19",
+          "observed_values": [
+            "19"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R1",
+          "expected": "22",
+          "observed_values": [
+            "22"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R4",
+          "expected": "10",
+          "observed_values": [
+            "10"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R2",
+          "expected": "10",
+          "observed_values": [
+            "10"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R6",
+          "expected": "88",
+          "observed_values": [
+            "88"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R5",
+          "expected": "59",
+          "observed_values": [
+            "59"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "prompt_sha256": "c3869345421d306343757c1d276b56e1fd664169b9219098224f1821fe69bbff",
+      "content_sha256": "a1cd306e8e70027356fb2efd08b953c7ec3271fb05ba6f847893833f47cbc2fd",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q45-v5-25001-b010-o/replay/client.jsonl",
+      "source_client_sha256": "f35082a18588999c6c1f47315b35d3377ea56d59bf3f879e397bfdbbd7fb6b93"
+    },
+    {
+      "req_id": "v5-25001-b010-c",
+      "pair_id": "v5-25001-b010",
+      "arm": "C",
+      "task_kind": "organize",
+      "category": "background",
+      "input_token_bucket": 0,
+      "business_correct": true,
+      "review_note": "同目标和数值，两种指令均正确。",
+      "public_instruction": "只按R3,R1,R4,R2,R6,R5顺序抄对应数值，不要抄其他行。每行ID|值。",
+      "public_target_ids": [
+        "R3",
+        "R1",
+        "R4",
+        "R2",
+        "R6",
+        "R5"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R3",
+          "source_value": "19",
+          "expected": "19"
+        },
+        {
+          "id": "R1",
+          "source_value": "22",
+          "expected": "22"
+        },
+        {
+          "id": "R4",
+          "source_value": "10",
+          "expected": "10"
+        },
+        {
+          "id": "R2",
+          "source_value": "10",
+          "expected": "10"
+        },
+        {
+          "id": "R6",
+          "source_value": "88",
+          "expected": "88"
+        },
+        {
+          "id": "R5",
+          "source_value": "59",
+          "expected": "59"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R3|19",
+        "R1|22",
+        "R4|10",
+        "R2|10",
+        "R6|88",
+        "R5|59"
+      ],
+      "original_content": "R3|19\nR1|22\nR4|10\nR2|10\nR6|88\nR5|59",
+      "parsed_fields": [
+        [
+          "R3",
+          "19"
+        ],
+        [
+          "R1",
+          "22"
+        ],
+        [
+          "R4",
+          "10"
+        ],
+        [
+          "R2",
+          "10"
+        ],
+        [
+          "R6",
+          "88"
+        ],
+        [
+          "R5",
+          "59"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R3",
+          "expected": "19",
+          "observed_values": [
+            "19"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R1",
+          "expected": "22",
+          "observed_values": [
+            "22"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R4",
+          "expected": "10",
+          "observed_values": [
+            "10"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R2",
+          "expected": "10",
+          "observed_values": [
+            "10"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R6",
+          "expected": "88",
+          "observed_values": [
+            "88"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R5",
+          "expected": "59",
+          "observed_values": [
+            "59"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "prompt_sha256": "f8208b032f2cf5cecb2fb1b044a323baa5752d967cab61161a88d0bc6d5f5751",
+      "content_sha256": "a1cd306e8e70027356fb2efd08b953c7ec3271fb05ba6f847893833f47cbc2fd",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q46-v5-25001-b010-c/replay/client.jsonl",
+      "source_client_sha256": "f5ad9938d15442aa9d3d61cd85cb04852eaec46860680ccc2eba6dbd770c443f"
+    },
+    {
+      "req_id": "v5-25001-b011-c",
+      "pair_id": "v5-25001-b011",
+      "arm": "C",
+      "task_kind": "organize",
+      "category": "background",
+      "input_token_bucket": 1,
+      "business_correct": true,
+      "review_note": "同目标和数值，两种指令均正确。",
+      "public_instruction": "只按R1,R6,R4,R3,R2,R5顺序抄对应数值，不要抄其他行。每行ID|值。",
+      "public_target_ids": [
+        "R1",
+        "R6",
+        "R4",
+        "R3",
+        "R2",
+        "R5"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "29",
+          "expected": "29"
+        },
+        {
+          "id": "R6",
+          "source_value": "34",
+          "expected": "34"
+        },
+        {
+          "id": "R4",
+          "source_value": "99",
+          "expected": "99"
+        },
+        {
+          "id": "R3",
+          "source_value": "91",
+          "expected": "91"
+        },
+        {
+          "id": "R2",
+          "source_value": "11",
+          "expected": "11"
+        },
+        {
+          "id": "R5",
+          "source_value": "97",
+          "expected": "97"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|29",
+        "R6|34",
+        "R4|99",
+        "R3|91",
+        "R2|11",
+        "R5|97"
+      ],
+      "original_content": "R1|29\nR6|34\nR4|99\nR3|91\nR2|11\nR5|97",
+      "parsed_fields": [
+        [
+          "R1",
+          "29"
+        ],
+        [
+          "R6",
+          "34"
+        ],
+        [
+          "R4",
+          "99"
+        ],
+        [
+          "R3",
+          "91"
+        ],
+        [
+          "R2",
+          "11"
+        ],
+        [
+          "R5",
+          "97"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "29",
+          "observed_values": [
+            "29"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R6",
+          "expected": "34",
+          "observed_values": [
+            "34"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R4",
+          "expected": "99",
+          "observed_values": [
+            "99"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R3",
+          "expected": "91",
+          "observed_values": [
+            "91"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R2",
+          "expected": "11",
+          "observed_values": [
+            "11"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R5",
+          "expected": "97",
+          "observed_values": [
+            "97"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "prompt_sha256": "b1ce81c3490318c9458595711bfa5424e599a55b7aa9090a633c777cff49b82a",
+      "content_sha256": "ce524ae9848207f2dfeef88b3f2a840f3de95e8254c825ffc6bf40e4d8763697",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q47-v5-25001-b011-c/replay/client.jsonl",
+      "source_client_sha256": "c5e48548349fe5e06640a16ec5d2f899214bf52b504545775b1b007373f9f406"
+    },
+    {
+      "req_id": "v5-25001-b011-o",
+      "pair_id": "v5-25001-b011",
+      "arm": "O",
+      "task_kind": "organize",
+      "category": "background",
+      "input_token_bucket": 1,
+      "business_correct": true,
+      "review_note": "指定顺序R1/R6/R4/R3/R2/R5，对应29/34/99/91/11/97，两种指令均正确。",
+      "public_instruction": "按R1,R6,R4,R3,R2,R5顺序整理。每行ID|值。",
+      "public_target_ids": [
+        "R1",
+        "R6",
+        "R4",
+        "R3",
+        "R2",
+        "R5"
+      ],
+      "target_source_facts": [
+        {
+          "id": "R1",
+          "source_value": "29",
+          "expected": "29"
+        },
+        {
+          "id": "R6",
+          "source_value": "34",
+          "expected": "34"
+        },
+        {
+          "id": "R4",
+          "source_value": "99",
+          "expected": "99"
+        },
+        {
+          "id": "R3",
+          "source_value": "91",
+          "expected": "91"
+        },
+        {
+          "id": "R2",
+          "source_value": "11",
+          "expected": "11"
+        },
+        {
+          "id": "R5",
+          "source_value": "97",
+          "expected": "97"
+        }
+      ],
+      "expected_lines_from_actual_prompt": [
+        "R1|29",
+        "R6|34",
+        "R4|99",
+        "R3|91",
+        "R2|11",
+        "R5|97"
+      ],
+      "original_content": "R1|29\nR6|34\nR4|99\nR3|91\nR2|11\nR5|97",
+      "parsed_fields": [
+        [
+          "R1",
+          "29"
+        ],
+        [
+          "R6",
+          "34"
+        ],
+        [
+          "R4",
+          "99"
+        ],
+        [
+          "R3",
+          "91"
+        ],
+        [
+          "R2",
+          "11"
+        ],
+        [
+          "R5",
+          "97"
+        ]
+      ],
+      "invalid_lines": [],
+      "field_review": [
+        {
+          "id": "R1",
+          "expected": "29",
+          "observed_values": [
+            "29"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R6",
+          "expected": "34",
+          "observed_values": [
+            "34"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R4",
+          "expected": "99",
+          "observed_values": [
+            "99"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R3",
+          "expected": "91",
+          "observed_values": [
+            "91"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R2",
+          "expected": "11",
+          "observed_values": [
+            "11"
+          ],
+          "correct": true
+        },
+        {
+          "id": "R5",
+          "expected": "97",
+          "observed_values": [
+            "97"
+          ],
+          "correct": true
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "prompt_sha256": "334f43774dc1276ce797f7993cda1720086873ee5d3837992e1c6118fd7d6959",
+      "content_sha256": "ce524ae9848207f2dfeef88b3f2a840f3de95e8254c825ffc6bf40e4d8763697",
+      "source_client_file": "results/raw/development/20261025-1645-p1-explicit-instructions-v5/cases/q48-v5-25001-b011-o/replay/client.jsonl",
+      "source_client_sha256": "b46945b6741f95ab54111c53802c3eb0ede02fb3172045b2fa342e053f60ffc2"
+    }
+  ]
+}

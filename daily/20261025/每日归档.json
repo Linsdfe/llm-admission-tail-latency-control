@@ -1,22 +1,22 @@
 {
   "date": "20261025",
-  "archive": "results/archives/20261025/daily-20261025-105417-c410194e.zip",
-  "sha256": "89d205b24fe65818892799372d1d8f555a7cba968a5a9af62b298181616a8a73",
-  "file_count": 1976,
+  "archive": "results/archives/20261025/daily-20261025-165326-ac86bd11.zip",
+  "sha256": "44fe6230c5a8926ea7049e9cc822fafc539385249cee29a4b2fa2b4ed0ed6c87",
+  "file_count": 1679,
   "run_dirs": [
-    "results/raw/development/20261025-1045-p1-output-constraints-v4",
-    "results/raw/client-verification/20261025-p1-structured-client-v4",
-    "results/raw/client-verification/20261025-p1-structured-client-v4-r2",
-    "results/raw/maintenance/20261025-p1-output-constraints-preflight-v4",
-    "results/raw/maintenance/20261025-p1-output-constraints-preflight-v4-r2",
-    "results/raw/maintenance/20261025-p1-output-constraints-evaluation-freeze-v4",
-    "results/raw/maintenance/20261025-p1-output-constraints-model-free-v4",
-    "results/raw/maintenance/20261025-p1-output-constraints-supervisor-v4",
-    "results/raw/maintenance/20261025-p1-output-constraints-independent-audit-v4",
-    "results/raw/maintenance/20261025-p1-output-constraints-assistant-review-v4",
-    "results/raw/maintenance/20261025-p1-output-constraints-delivery-v4"
+    "results/raw/development/20261025-1645-p1-explicit-instructions-v5",
+    "results/raw/maintenance/20261025-p1-explicit-instructions-model-free-v5",
+    "results/raw/maintenance/20261025-p1-explicit-instructions-model-free-v5-r2",
+    "results/raw/maintenance/20261025-p1-explicit-instructions-evaluation-freeze-v5",
+    "results/raw/maintenance/20261025-p1-explicit-instructions-evaluation-freeze-v5-r2",
+    "results/raw/maintenance/20261025-p1-explicit-instructions-workload-precheck-v5",
+    "results/raw/maintenance/20261025-p1-explicit-instructions-preparation-v5",
+    "results/raw/maintenance/20261025-p1-explicit-instructions-supervisor-v5",
+    "results/raw/maintenance/20261025-p1-explicit-instructions-independent-audit-v5",
+    "results/raw/maintenance/20261025-p1-explicit-instructions-assistant-review-v5",
+    "results/raw/maintenance/20261025-p1-explicit-instructions-delivery-v5"
   ],
   "verified": true,
-  "packed_at": "2026-10-25T10:54:17.035526+08:00",
+  "packed_at": "2026-10-25T16:53:26.399821+08:00",
   "backup_scope": "local_only"
 }
