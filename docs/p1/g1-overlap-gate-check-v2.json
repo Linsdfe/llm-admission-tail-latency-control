@@ -1,0 +1,31 @@
+{
+  "status": "blocked_overlap",
+  "candidate_requests": 48,
+  "unique_prompts": 48,
+  "duplicates": [
+    {
+      "req_id": "v10-dev-30301-i001-c",
+      "sha256": "0be46ee65c936c291190cae5ad230af2bb1c97daa9bc560034bdb0c5852ba1d6",
+      "history": [
+        {
+          "path": "C:\\Users\\1\\Desktop\\面向混合长短请求的 LLM 推理准入与尾延迟控制系统设计与实现\\results\\raw\\development\\20261026-0930-p1-format-calibration-v9-r2\\evaluation-plan.jsonl",
+          "req_id": "v9-dev-29201-i000-c"
+        }
+      ],
+      "within_batch": null
+    },
+    {
+      "req_id": "v10-dev-30302-i001-c",
+      "sha256": "e4ede93eae2dcf0ff84ef75de7feccb070006a81853c56c49fe8778387fd18ea",
+      "history": [
+        {
+          "path": "C:\\Users\\1\\Desktop\\面向混合长短请求的 LLM 推理准入与尾延迟控制系统设计与实现\\results\\raw\\development\\20261026-0930-p1-format-calibration-v9-r2\\evaluation-plan.jsonl",
+          "req_id": "v9-dev-29202-i000-c"
+        }
+      ],
+      "within_batch": null
+    }
+  ],
+  "history_files": 1,
+  "inference_performed": false
+}

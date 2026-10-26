@@ -1,0 +1,6766 @@
+[
+  {
+    "req_id": "v10-dev-30301-i000-c",
+    "content_id": "v10-dev-30301-i000",
+    "split": "development",
+    "seed": 30301,
+    "category": "interactive",
+    "category_index": 0,
+    "task_kind": "extract",
+    "kind_instance": 0,
+    "template_family": "v9_C_extract",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 0,
+    "input_token_range": [
+      32,
+      79
+    ],
+    "target_count": 1,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R100"
+    ],
+    "extra_records": 0,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R100",
+        "value": "12"
+      }
+    ],
+    "expected_lines": [
+      "R100|12"
+    ],
+    "expected_answer": "R100|12",
+    "pair_id": "v10-dev-30301-i000",
+    "pair_index": 1,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR100|12\n提取R100对应的数值，不要复制编号作值。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 51,
+    "token_ids_sha256": "c376c385a72bd9aea8c7c1de132ce1acd4f828500dc2c10b4b9422be22dbf21e",
+    "content_sha256": "aa59a70f43e4587bed737726d86fcb2272f152216daa91d96be8e903d4eb3547",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 7,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30301-i001-c",
+    "content_id": "v10-dev-30301-i001",
+    "split": "development",
+    "seed": 30301,
+    "category": "interactive",
+    "category_index": 1,
+    "task_kind": "extract",
+    "kind_instance": 1,
+    "template_family": "v9_C_extract",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 0,
+    "input_token_range": [
+      32,
+      79
+    ],
+    "target_count": 1,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R100"
+    ],
+    "extra_records": 0,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R100",
+        "value": "19"
+      }
+    ],
+    "expected_lines": [
+      "R100|19"
+    ],
+    "expected_answer": "R100|19",
+    "pair_id": "v10-dev-30301-i001",
+    "pair_index": 2,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR100|19\n提取R100对应的数值，不要复制编号作值。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 51,
+    "token_ids_sha256": "14d4ea28d40d4bcc8338dcaecde567dd12fa229b3950906da18af4ac507c3ea2",
+    "content_sha256": "0be46ee65c936c291190cae5ad230af2bb1c97daa9bc560034bdb0c5852ba1d6",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 7,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30301-i002-c",
+    "content_id": "v10-dev-30301-i002",
+    "split": "development",
+    "seed": 30301,
+    "category": "interactive",
+    "category_index": 2,
+    "task_kind": "extract",
+    "kind_instance": 2,
+    "template_family": "v9_C_extract",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 1,
+    "input_token_range": [
+      80,
+      143
+    ],
+    "target_count": 1,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R100"
+    ],
+    "extra_records": 4,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R102",
+        "value": "51"
+      },
+      {
+        "id": "R104",
+        "value": "37"
+      },
+      {
+        "id": "R100",
+        "value": "26"
+      },
+      {
+        "id": "R103",
+        "value": "69"
+      },
+      {
+        "id": "R101",
+        "value": "43"
+      }
+    ],
+    "expected_lines": [
+      "R100|26"
+    ],
+    "expected_answer": "R100|26",
+    "pair_id": "v10-dev-30301-i002",
+    "pair_index": 3,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR102|51\nR104|37\nR100|26\nR103|69\nR101|43\n提取R100对应的数值，不要复制编号作值。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 83,
+    "token_ids_sha256": "b6dc36fb5aa386119370746834733da02b5372942ae2560277f6c353a1b2a41c",
+    "content_sha256": "32dfc87292a6bf36584504a282e0e131b054f74e7f1462b33f751e24aaab4983",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 7,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30301-i003-c",
+    "content_id": "v10-dev-30301-i003",
+    "split": "development",
+    "seed": 30301,
+    "category": "interactive",
+    "category_index": 3,
+    "task_kind": "extract",
+    "kind_instance": 3,
+    "template_family": "v9_C_extract",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 2,
+    "input_token_range": [
+      144,
+      256
+    ],
+    "target_count": 1,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R100"
+    ],
+    "extra_records": 12,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R103",
+        "value": "71"
+      },
+      {
+        "id": "R102",
+        "value": "31"
+      },
+      {
+        "id": "R111",
+        "value": "55"
+      },
+      {
+        "id": "R101",
+        "value": "31"
+      },
+      {
+        "id": "R112",
+        "value": "54"
+      },
+      {
+        "id": "R109",
+        "value": "69"
+      },
+      {
+        "id": "R107",
+        "value": "24"
+      },
+      {
+        "id": "R108",
+        "value": "56"
+      },
+      {
+        "id": "R110",
+        "value": "82"
+      },
+      {
+        "id": "R106",
+        "value": "35"
+      },
+      {
+        "id": "R100",
+        "value": "33"
+      },
+      {
+        "id": "R104",
+        "value": "60"
+      },
+      {
+        "id": "R105",
+        "value": "47"
+      }
+    ],
+    "expected_lines": [
+      "R100|33"
+    ],
+    "expected_answer": "R100|33",
+    "pair_id": "v10-dev-30301-i003",
+    "pair_index": 4,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR103|71\nR102|31\nR111|55\nR101|31\nR112|54\nR109|69\nR107|24\nR108|56\nR110|82\nR106|35\nR100|33\nR104|60\nR105|47\n提取R100对应的数值，不要复制编号作值。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 147,
+    "token_ids_sha256": "b04b4f3d218cc6873ea8d7b0795b051b9fba70e6494544e30cec0bb64438b3db",
+    "content_sha256": "b0e72f71b4f6165ebea8a038587ff25453db71bd24a5040e1e1b2401bf5fab8d",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 7,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30301-i004-c",
+    "content_id": "v10-dev-30301-i004",
+    "split": "development",
+    "seed": 30301,
+    "category": "interactive",
+    "category_index": 4,
+    "task_kind": "check",
+    "kind_instance": 0,
+    "template_family": "v9_C_check",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 1,
+    "input_token_range": [
+      80,
+      143
+    ],
+    "target_count": 1,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R100"
+    ],
+    "extra_records": 1,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "left_records": [
+      {
+        "id": "R100",
+        "value": "40"
+      },
+      {
+        "id": "R101",
+        "value": "86"
+      }
+    ],
+    "right_records": [
+      {
+        "id": "R101",
+        "value": "86"
+      },
+      {
+        "id": "R100",
+        "value": "41"
+      }
+    ],
+    "expected_lines": [
+      "R100|不一致"
+    ],
+    "expected_answer": "R100|不一致",
+    "pair_id": "v10-dev-30301-i004",
+    "pair_index": 5,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\nA\nR100|40\nR101|86\nB\nR101|86\nR100|41\n逐项比较A和B中R100的数值：相等写一致，否则写不一致。每行ID|结论。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 87,
+    "token_ids_sha256": "c677c3a7955fb876ba70e69a47c0fc4678468bd96cc0c113b47cc6eb85177b7c",
+    "content_sha256": "397e22d24543d038b99b56435c8c59f0689572adf5ccec67b7c2d423fb88a310",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 6,
+    "grammar_ceiling": 9
+  },
+  {
+    "req_id": "v10-dev-30301-i005-c",
+    "content_id": "v10-dev-30301-i005",
+    "split": "development",
+    "seed": 30301,
+    "category": "interactive",
+    "category_index": 5,
+    "task_kind": "check",
+    "kind_instance": 1,
+    "template_family": "v9_C_check",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 1,
+    "input_token_range": [
+      80,
+      143
+    ],
+    "target_count": 1,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R100"
+    ],
+    "extra_records": 1,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "left_records": [
+      {
+        "id": "R100",
+        "value": "47"
+      },
+      {
+        "id": "R101",
+        "value": "63"
+      }
+    ],
+    "right_records": [
+      {
+        "id": "R101",
+        "value": "64"
+      },
+      {
+        "id": "R100",
+        "value": "47"
+      }
+    ],
+    "expected_lines": [
+      "R100|一致"
+    ],
+    "expected_answer": "R100|一致",
+    "pair_id": "v10-dev-30301-i005",
+    "pair_index": 6,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\nA\nR100|47\nR101|63\nB\nR101|64\nR100|47\n逐项比较A和B中R100的数值：相等写一致，否则写不一致。每行ID|结论。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 87,
+    "token_ids_sha256": "a0538487c219346c91e919e1ddb7a58c101e55964df3c8d0cf14c1ee0ea0024e",
+    "content_sha256": "379c3f55c3255a104926bbfdee02ecdc5603ee60be26b867ca739d4ccb400743",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 6,
+    "grammar_ceiling": 9
+  },
+  {
+    "req_id": "v10-dev-30301-i006-c",
+    "content_id": "v10-dev-30301-i006",
+    "split": "development",
+    "seed": 30301,
+    "category": "interactive",
+    "category_index": 6,
+    "task_kind": "check",
+    "kind_instance": 2,
+    "template_family": "v9_C_check",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 2,
+    "input_token_range": [
+      144,
+      256
+    ],
+    "target_count": 1,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R100"
+    ],
+    "extra_records": 5,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "left_records": [
+      {
+        "id": "R101",
+        "value": "34"
+      },
+      {
+        "id": "R100",
+        "value": "54"
+      },
+      {
+        "id": "R102",
+        "value": "75"
+      },
+      {
+        "id": "R103",
+        "value": "68"
+      },
+      {
+        "id": "R105",
+        "value": "87"
+      },
+      {
+        "id": "R104",
+        "value": "63"
+      }
+    ],
+    "right_records": [
+      {
+        "id": "R104",
+        "value": "64"
+      },
+      {
+        "id": "R105",
+        "value": "87"
+      },
+      {
+        "id": "R103",
+        "value": "68"
+      },
+      {
+        "id": "R102",
+        "value": "76"
+      },
+      {
+        "id": "R100",
+        "value": "55"
+      },
+      {
+        "id": "R101",
+        "value": "34"
+      }
+    ],
+    "expected_lines": [
+      "R100|不一致"
+    ],
+    "expected_answer": "R100|不一致",
+    "pair_id": "v10-dev-30301-i006",
+    "pair_index": 7,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\nA\nR101|34\nR100|54\nR102|75\nR103|68\nR105|87\nR104|63\nB\nR104|64\nR105|87\nR103|68\nR102|76\nR100|55\nR101|34\n逐项比较A和B中R100的数值：相等写一致，否则写不一致。每行ID|结论。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 151,
+    "token_ids_sha256": "ac91addcf17b49a0ca1e7e33d3172dcaaddf5f739e6c07b199925e0a836ad4f2",
+    "content_sha256": "bad310821618f5324ddd840ac5de60814c1daa0ead550947d0b0a25497c5e6c0",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 6,
+    "grammar_ceiling": 9
+  },
+  {
+    "req_id": "v10-dev-30301-i007-c",
+    "content_id": "v10-dev-30301-i007",
+    "split": "development",
+    "seed": 30301,
+    "category": "interactive",
+    "category_index": 7,
+    "task_kind": "check",
+    "kind_instance": 3,
+    "template_family": "v9_C_check",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 0,
+    "input_token_range": [
+      32,
+      79
+    ],
+    "target_count": 1,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R100"
+    ],
+    "extra_records": 0,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "left_records": [
+      {
+        "id": "R100",
+        "value": "61"
+      }
+    ],
+    "right_records": [
+      {
+        "id": "R100",
+        "value": "61"
+      }
+    ],
+    "expected_lines": [
+      "R100|一致"
+    ],
+    "expected_answer": "R100|一致",
+    "pair_id": "v10-dev-30301-i007",
+    "pair_index": 8,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\nA\nR100|61\nB\nR100|61\n逐项比较A和B中R100的数值：相等写一致，否则写不一致。每行ID|结论。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 71,
+    "token_ids_sha256": "34fcf5d062f88fcf386137659f4e2e7790ffd8c924e9a2ea4f085c2c68a826ca",
+    "content_sha256": "7f2cbd5d57a1aea633da95fe3de22cd625b2a543aee3340b996f1b05d2b3509d",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 6,
+    "grammar_ceiling": 9
+  },
+  {
+    "req_id": "v10-dev-30301-i008-c",
+    "content_id": "v10-dev-30301-i008",
+    "split": "development",
+    "seed": 30301,
+    "category": "interactive",
+    "category_index": 8,
+    "task_kind": "organize",
+    "kind_instance": 0,
+    "template_family": "v9_C_organize",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 2,
+    "input_token_range": [
+      144,
+      256
+    ],
+    "target_count": 2,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R101",
+      "R100"
+    ],
+    "extra_records": 10,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R110",
+        "value": "59"
+      },
+      {
+        "id": "R111",
+        "value": "35"
+      },
+      {
+        "id": "R104",
+        "value": "26"
+      },
+      {
+        "id": "R102",
+        "value": "18"
+      },
+      {
+        "id": "R107",
+        "value": "22"
+      },
+      {
+        "id": "R103",
+        "value": "79"
+      },
+      {
+        "id": "R100",
+        "value": "68"
+      },
+      {
+        "id": "R105",
+        "value": "11"
+      },
+      {
+        "id": "R109",
+        "value": "47"
+      },
+      {
+        "id": "R108",
+        "value": "81"
+      },
+      {
+        "id": "R101",
+        "value": "16"
+      },
+      {
+        "id": "R106",
+        "value": "81"
+      }
+    ],
+    "expected_lines": [
+      "R101|16",
+      "R100|68"
+    ],
+    "expected_answer": "R101|16\nR100|68",
+    "pair_id": "v10-dev-30301-i008",
+    "pair_index": 9,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR110|59\nR111|35\nR104|26\nR102|18\nR107|22\nR103|79\nR100|68\nR105|11\nR109|47\nR108|81\nR101|16\nR106|81\n只按R101,R100顺序抄对应数值，不要抄其他行。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 145,
+    "token_ids_sha256": "560037935938383ab59292e99ef88b785f5269400be9ec30ed060f92a9d74bcd",
+    "content_sha256": "714e55c58e94d5c79a9b158fe9d53589433370a78d9394a63b1839ca91de9a42",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 15,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30301-i009-c",
+    "content_id": "v10-dev-30301-i009",
+    "split": "development",
+    "seed": 30301,
+    "category": "interactive",
+    "category_index": 9,
+    "task_kind": "organize",
+    "kind_instance": 1,
+    "template_family": "v9_C_organize",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 2,
+    "input_token_range": [
+      144,
+      256
+    ],
+    "target_count": 2,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R101",
+      "R100"
+    ],
+    "extra_records": 10,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R104",
+        "value": "24"
+      },
+      {
+        "id": "R107",
+        "value": "67"
+      },
+      {
+        "id": "R100",
+        "value": "75"
+      },
+      {
+        "id": "R102",
+        "value": "76"
+      },
+      {
+        "id": "R101",
+        "value": "35"
+      },
+      {
+        "id": "R110",
+        "value": "85"
+      },
+      {
+        "id": "R111",
+        "value": "35"
+      },
+      {
+        "id": "R103",
+        "value": "97"
+      },
+      {
+        "id": "R109",
+        "value": "27"
+      },
+      {
+        "id": "R106",
+        "value": "73"
+      },
+      {
+        "id": "R105",
+        "value": "83"
+      },
+      {
+        "id": "R108",
+        "value": "85"
+      }
+    ],
+    "expected_lines": [
+      "R101|35",
+      "R100|75"
+    ],
+    "expected_answer": "R101|35\nR100|75",
+    "pair_id": "v10-dev-30301-i009",
+    "pair_index": 10,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR104|24\nR107|67\nR100|75\nR102|76\nR101|35\nR110|85\nR111|35\nR103|97\nR109|27\nR106|73\nR105|83\nR108|85\n只按R101,R100顺序抄对应数值，不要抄其他行。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 145,
+    "token_ids_sha256": "090cd0ac03a75dbc6f3b71f7e52677d963bdec1d4c86aa6211232b29d12269e8",
+    "content_sha256": "a521d7b8ad53a526a0035f3550c02164e8cbc6b1f3833bc58663059d7e6dcf70",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 15,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30301-i010-c",
+    "content_id": "v10-dev-30301-i010",
+    "split": "development",
+    "seed": 30301,
+    "category": "interactive",
+    "category_index": 10,
+    "task_kind": "organize",
+    "kind_instance": 2,
+    "template_family": "v9_C_organize",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 0,
+    "input_token_range": [
+      32,
+      79
+    ],
+    "target_count": 2,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R100",
+      "R101"
+    ],
+    "extra_records": 0,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R101",
+        "value": "74"
+      },
+      {
+        "id": "R100",
+        "value": "82"
+      }
+    ],
+    "expected_lines": [
+      "R100|82",
+      "R101|74"
+    ],
+    "expected_answer": "R100|82\nR101|74",
+    "pair_id": "v10-dev-30301-i010",
+    "pair_index": 11,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR101|74\nR100|82\n只按R100,R101顺序抄对应数值，不要抄其他行。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 65,
+    "token_ids_sha256": "7eba6d353bfcc6844d2c82b701b10dddc82954e2c457727bc2dd18afd6ec000c",
+    "content_sha256": "08edfc4129a6b206bb656bf156810614d424e5ca449711b7177ae88703b44555",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 15,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30301-i011-c",
+    "content_id": "v10-dev-30301-i011",
+    "split": "development",
+    "seed": 30301,
+    "category": "interactive",
+    "category_index": 11,
+    "task_kind": "organize",
+    "kind_instance": 3,
+    "template_family": "v9_C_organize",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 1,
+    "input_token_range": [
+      80,
+      143
+    ],
+    "target_count": 2,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R101",
+      "R100"
+    ],
+    "extra_records": 2,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R102",
+        "value": "84"
+      },
+      {
+        "id": "R100",
+        "value": "89"
+      },
+      {
+        "id": "R101",
+        "value": "92"
+      },
+      {
+        "id": "R103",
+        "value": "93"
+      }
+    ],
+    "expected_lines": [
+      "R101|92",
+      "R100|89"
+    ],
+    "expected_answer": "R101|92\nR100|89",
+    "pair_id": "v10-dev-30301-i011",
+    "pair_index": 12,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR102|84\nR100|89\nR101|92\nR103|93\n只按R101,R100顺序抄对应数值，不要抄其他行。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 81,
+    "token_ids_sha256": "e67a8e413c109d67527c95c346ea6e48bb94f070f03e645ff7846c328d5e26af",
+    "content_sha256": "eedb22fbf13296375db6cf7bc9282f944eacf78eb1a093166e8808d1ae48475e",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 15,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30301-b000-c",
+    "content_id": "v10-dev-30301-b000",
+    "split": "development",
+    "seed": 30301,
+    "category": "background",
+    "category_index": 0,
+    "task_kind": "extract",
+    "kind_instance": 0,
+    "template_family": "v9_C_extract",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 0,
+    "input_token_range": [
+      128,
+      319
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R100",
+      "R101",
+      "R102",
+      "R103",
+      "R104",
+      "R105"
+    ],
+    "extra_records": 3,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R102",
+        "value": "27"
+      },
+      {
+        "id": "R107",
+        "value": "21"
+      },
+      {
+        "id": "R104",
+        "value": "76"
+      },
+      {
+        "id": "R103",
+        "value": "88"
+      },
+      {
+        "id": "R106",
+        "value": "93"
+      },
+      {
+        "id": "R101",
+        "value": "58"
+      },
+      {
+        "id": "R105",
+        "value": "33"
+      },
+      {
+        "id": "R108",
+        "value": "68"
+      },
+      {
+        "id": "R100",
+        "value": "12"
+      }
+    ],
+    "expected_lines": [
+      "R100|12",
+      "R101|58",
+      "R102|27",
+      "R103|88",
+      "R104|76",
+      "R105|33"
+    ],
+    "expected_answer": "R100|12\nR101|58\nR102|27\nR103|88\nR104|76\nR105|33",
+    "pair_id": "v10-dev-30301-b000",
+    "pair_index": 13,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR102|27\nR107|21\nR104|76\nR103|88\nR106|93\nR101|58\nR105|33\nR108|68\nR100|12\n提取R100,R101,R102,R103,R104,R105对应的数值，不要复制编号作值。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 135,
+    "token_ids_sha256": "3cea150b349b5886918bec6ec591c19e44ae5a53fd282f68b303aa8dafc06298",
+    "content_sha256": "0c81fb168263c27a997cc48f8461f34fc1fb9808925adc684f420b4869fa8554",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 47,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30301-b001-c",
+    "content_id": "v10-dev-30301-b001",
+    "split": "development",
+    "seed": 30301,
+    "category": "background",
+    "category_index": 1,
+    "task_kind": "extract",
+    "kind_instance": 1,
+    "template_family": "v9_C_extract",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 0,
+    "input_token_range": [
+      128,
+      319
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R100",
+      "R101",
+      "R102",
+      "R103",
+      "R104",
+      "R105"
+    ],
+    "extra_records": 3,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R108",
+        "value": "53"
+      },
+      {
+        "id": "R105",
+        "value": "79"
+      },
+      {
+        "id": "R107",
+        "value": "73"
+      },
+      {
+        "id": "R103",
+        "value": "67"
+      },
+      {
+        "id": "R102",
+        "value": "30"
+      },
+      {
+        "id": "R106",
+        "value": "87"
+      },
+      {
+        "id": "R104",
+        "value": "55"
+      },
+      {
+        "id": "R101",
+        "value": "31"
+      },
+      {
+        "id": "R100",
+        "value": "19"
+      }
+    ],
+    "expected_lines": [
+      "R100|19",
+      "R101|31",
+      "R102|30",
+      "R103|67",
+      "R104|55",
+      "R105|79"
+    ],
+    "expected_answer": "R100|19\nR101|31\nR102|30\nR103|67\nR104|55\nR105|79",
+    "pair_id": "v10-dev-30301-b001",
+    "pair_index": 14,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR108|53\nR105|79\nR107|73\nR103|67\nR102|30\nR106|87\nR104|55\nR101|31\nR100|19\n提取R100,R101,R102,R103,R104,R105对应的数值，不要复制编号作值。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 135,
+    "token_ids_sha256": "1cc667e434e44d45f2905517d275790d47631dbcffdff81f73a71276715b463a",
+    "content_sha256": "c8ecc3017d1d4a98ddef6a0f33dc6dbafa38d97f4a9c466bce4a949931302f4f",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 47,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30301-b002-c",
+    "content_id": "v10-dev-30301-b002",
+    "split": "development",
+    "seed": 30301,
+    "category": "background",
+    "category_index": 2,
+    "task_kind": "extract",
+    "kind_instance": 2,
+    "template_family": "v9_C_extract",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 1,
+    "input_token_range": [
+      320,
+      639
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R100",
+      "R101",
+      "R102",
+      "R103",
+      "R104",
+      "R105"
+    ],
+    "extra_records": 27,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R131",
+        "value": "64"
+      },
+      {
+        "id": "R129",
+        "value": "57"
+      },
+      {
+        "id": "R130",
+        "value": "50"
+      },
+      {
+        "id": "R128",
+        "value": "62"
+      },
+      {
+        "id": "R112",
+        "value": "18"
+      },
+      {
+        "id": "R111",
+        "value": "17"
+      },
+      {
+        "id": "R127",
+        "value": "92"
+      },
+      {
+        "id": "R104",
+        "value": "25"
+      },
+      {
+        "id": "R109",
+        "value": "80"
+      },
+      {
+        "id": "R116",
+        "value": "34"
+      },
+      {
+        "id": "R110",
+        "value": "43"
+      },
+      {
+        "id": "R105",
+        "value": "11"
+      },
+      {
+        "id": "R118",
+        "value": "14"
+      },
+      {
+        "id": "R113",
+        "value": "55"
+      },
+      {
+        "id": "R106",
+        "value": "61"
+      },
+      {
+        "id": "R126",
+        "value": "23"
+      },
+      {
+        "id": "R120",
+        "value": "81"
+      },
+      {
+        "id": "R125",
+        "value": "40"
+      },
+      {
+        "id": "R115",
+        "value": "39"
+      },
+      {
+        "id": "R124",
+        "value": "61"
+      },
+      {
+        "id": "R121",
+        "value": "46"
+      },
+      {
+        "id": "R123",
+        "value": "57"
+      },
+      {
+        "id": "R103",
+        "value": "35"
+      },
+      {
+        "id": "R114",
+        "value": "50"
+      },
+      {
+        "id": "R107",
+        "value": "45"
+      },
+      {
+        "id": "R100",
+        "value": "26"
+      },
+      {
+        "id": "R108",
+        "value": "43"
+      },
+      {
+        "id": "R117",
+        "value": "59"
+      },
+      {
+        "id": "R132",
+        "value": "59"
+      },
+      {
+        "id": "R101",
+        "value": "42"
+      },
+      {
+        "id": "R122",
+        "value": "23"
+      },
+      {
+        "id": "R102",
+        "value": "97"
+      },
+      {
+        "id": "R119",
+        "value": "27"
+      }
+    ],
+    "expected_lines": [
+      "R100|26",
+      "R101|42",
+      "R102|97",
+      "R103|35",
+      "R104|25",
+      "R105|11"
+    ],
+    "expected_answer": "R100|26\nR101|42\nR102|97\nR103|35\nR104|25\nR105|11",
+    "pair_id": "v10-dev-30301-b002",
+    "pair_index": 15,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR131|64\nR129|57\nR130|50\nR128|62\nR112|18\nR111|17\nR127|92\nR104|25\nR109|80\nR116|34\nR110|43\nR105|11\nR118|14\nR113|55\nR106|61\nR126|23\nR120|81\nR125|40\nR115|39\nR124|61\nR121|46\nR123|57\nR103|35\nR114|50\nR107|45\nR100|26\nR108|43\nR117|59\nR132|59\nR101|42\nR122|23\nR102|97\nR119|27\n提取R100,R101,R102,R103,R104,R105对应的数值，不要复制编号作值。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 327,
+    "token_ids_sha256": "eea613b80617f0dd594af01869fa310ea2e72cfa3d931b1d5af610fccef77a8d",
+    "content_sha256": "7fe92de566a159b772fc606378f903e69f495c3e924c7128f7187f8b078e7180",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 47,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30301-b003-c",
+    "content_id": "v10-dev-30301-b003",
+    "split": "development",
+    "seed": 30301,
+    "category": "background",
+    "category_index": 3,
+    "task_kind": "extract",
+    "kind_instance": 3,
+    "template_family": "v9_C_extract",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 2,
+    "input_token_range": [
+      640,
+      1024
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R100",
+      "R101",
+      "R102",
+      "R103",
+      "R104",
+      "R105"
+    ],
+    "extra_records": 67,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R134",
+        "value": "11"
+      },
+      {
+        "id": "R106",
+        "value": "51"
+      },
+      {
+        "id": "R127",
+        "value": "79"
+      },
+      {
+        "id": "R143",
+        "value": "60"
+      },
+      {
+        "id": "R161",
+        "value": "53"
+      },
+      {
+        "id": "R141",
+        "value": "90"
+      },
+      {
+        "id": "R135",
+        "value": "31"
+      },
+      {
+        "id": "R152",
+        "value": "91"
+      },
+      {
+        "id": "R114",
+        "value": "47"
+      },
+      {
+        "id": "R149",
+        "value": "84"
+      },
+      {
+        "id": "R118",
+        "value": "46"
+      },
+      {
+        "id": "R154",
+        "value": "27"
+      },
+      {
+        "id": "R123",
+        "value": "69"
+      },
+      {
+        "id": "R151",
+        "value": "70"
+      },
+      {
+        "id": "R171",
+        "value": "15"
+      },
+      {
+        "id": "R147",
+        "value": "21"
+      },
+      {
+        "id": "R169",
+        "value": "31"
+      },
+      {
+        "id": "R111",
+        "value": "54"
+      },
+      {
+        "id": "R129",
+        "value": "52"
+      },
+      {
+        "id": "R110",
+        "value": "47"
+      },
+      {
+        "id": "R163",
+        "value": "50"
+      },
+      {
+        "id": "R101",
+        "value": "71"
+      },
+      {
+        "id": "R164",
+        "value": "32"
+      },
+      {
+        "id": "R165",
+        "value": "13"
+      },
+      {
+        "id": "R121",
+        "value": "88"
+      },
+      {
+        "id": "R160",
+        "value": "66"
+      },
+      {
+        "id": "R146",
+        "value": "99"
+      },
+      {
+        "id": "R109",
+        "value": "98"
+      },
+      {
+        "id": "R105",
+        "value": "77"
+      },
+      {
+        "id": "R148",
+        "value": "75"
+      },
+      {
+        "id": "R156",
+        "value": "84"
+      },
+      {
+        "id": "R131",
+        "value": "16"
+      },
+      {
+        "id": "R104",
+        "value": "79"
+      },
+      {
+        "id": "R119",
+        "value": "32"
+      },
+      {
+        "id": "R128",
+        "value": "87"
+      },
+      {
+        "id": "R112",
+        "value": "41"
+      },
+      {
+        "id": "R168",
+        "value": "69"
+      },
+      {
+        "id": "R139",
+        "value": "42"
+      },
+      {
+        "id": "R103",
+        "value": "65"
+      },
+      {
+        "id": "R125",
+        "value": "81"
+      },
+      {
+        "id": "R167",
+        "value": "41"
+      },
+      {
+        "id": "R122",
+        "value": "96"
+      },
+      {
+        "id": "R137",
+        "value": "80"
+      },
+      {
+        "id": "R138",
+        "value": "61"
+      },
+      {
+        "id": "R162",
+        "value": "24"
+      },
+      {
+        "id": "R150",
+        "value": "40"
+      },
+      {
+        "id": "R124",
+        "value": "61"
+      },
+      {
+        "id": "R157",
+        "value": "81"
+      },
+      {
+        "id": "R144",
+        "value": "30"
+      },
+      {
+        "id": "R108",
+        "value": "34"
+      },
+      {
+        "id": "R120",
+        "value": "94"
+      },
+      {
+        "id": "R140",
+        "value": "46"
+      },
+      {
+        "id": "R158",
+        "value": "55"
+      },
+      {
+        "id": "R102",
+        "value": "46"
+      },
+      {
+        "id": "R100",
+        "value": "33"
+      },
+      {
+        "id": "R155",
+        "value": "65"
+      },
+      {
+        "id": "R145",
+        "value": "18"
+      },
+      {
+        "id": "R172",
+        "value": "53"
+      },
+      {
+        "id": "R170",
+        "value": "38"
+      },
+      {
+        "id": "R133",
+        "value": "86"
+      },
+      {
+        "id": "R159",
+        "value": "69"
+      },
+      {
+        "id": "R113",
+        "value": "34"
+      },
+      {
+        "id": "R116",
+        "value": "42"
+      },
+      {
+        "id": "R107",
+        "value": "46"
+      },
+      {
+        "id": "R136",
+        "value": "84"
+      },
+      {
+        "id": "R142",
+        "value": "50"
+      },
+      {
+        "id": "R153",
+        "value": "48"
+      },
+      {
+        "id": "R166",
+        "value": "54"
+      },
+      {
+        "id": "R132",
+        "value": "19"
+      },
+      {
+        "id": "R115",
+        "value": "27"
+      },
+      {
+        "id": "R117",
+        "value": "77"
+      },
+      {
+        "id": "R126",
+        "value": "51"
+      },
+      {
+        "id": "R130",
+        "value": "76"
+      }
+    ],
+    "expected_lines": [
+      "R100|33",
+      "R101|71",
+      "R102|46",
+      "R103|65",
+      "R104|79",
+      "R105|77"
+    ],
+    "expected_answer": "R100|33\nR101|71\nR102|46\nR103|65\nR104|79\nR105|77",
+    "pair_id": "v10-dev-30301-b003",
+    "pair_index": 16,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR134|11\nR106|51\nR127|79\nR143|60\nR161|53\nR141|90\nR135|31\nR152|91\nR114|47\nR149|84\nR118|46\nR154|27\nR123|69\nR151|70\nR171|15\nR147|21\nR169|31\nR111|54\nR129|52\nR110|47\nR163|50\nR101|71\nR164|32\nR165|13\nR121|88\nR160|66\nR146|99\nR109|98\nR105|77\nR148|75\nR156|84\nR131|16\nR104|79\nR119|32\nR128|87\nR112|41\nR168|69\nR139|42\nR103|65\nR125|81\nR167|41\nR122|96\nR137|80\nR138|61\nR162|24\nR150|40\nR124|61\nR157|81\nR144|30\nR108|34\nR120|94\nR140|46\nR158|55\nR102|46\nR100|33\nR155|65\nR145|18\nR172|53\nR170|38\nR133|86\nR159|69\nR113|34\nR116|42\nR107|46\nR136|84\nR142|50\nR153|48\nR166|54\nR132|19\nR115|27\nR117|77\nR126|51\nR130|76\n提取R100,R101,R102,R103,R104,R105对应的数值，不要复制编号作值。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 647,
+    "token_ids_sha256": "6a13def0e98569ab643bab93bac482badb86ca5b3066cf6c1b530d2a76536b9e",
+    "content_sha256": "59d85e2b78b6c1521d73b9a67914eddf73bc55a45ce168c468ddecbf3e844790",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 47,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30301-b004-c",
+    "content_id": "v10-dev-30301-b004",
+    "split": "development",
+    "seed": 30301,
+    "category": "background",
+    "category_index": 4,
+    "task_kind": "check",
+    "kind_instance": 0,
+    "template_family": "v9_C_check",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 1,
+    "input_token_range": [
+      320,
+      639
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R100",
+      "R101",
+      "R102",
+      "R103",
+      "R104",
+      "R105"
+    ],
+    "extra_records": 10,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "left_records": [
+      {
+        "id": "R111",
+        "value": "93"
+      },
+      {
+        "id": "R106",
+        "value": "67"
+      },
+      {
+        "id": "R103",
+        "value": "87"
+      },
+      {
+        "id": "R115",
+        "value": "22"
+      },
+      {
+        "id": "R112",
+        "value": "97"
+      },
+      {
+        "id": "R110",
+        "value": "30"
+      },
+      {
+        "id": "R102",
+        "value": "44"
+      },
+      {
+        "id": "R108",
+        "value": "81"
+      },
+      {
+        "id": "R113",
+        "value": "73"
+      },
+      {
+        "id": "R104",
+        "value": "12"
+      },
+      {
+        "id": "R114",
+        "value": "24"
+      },
+      {
+        "id": "R107",
+        "value": "31"
+      },
+      {
+        "id": "R100",
+        "value": "40"
+      },
+      {
+        "id": "R109",
+        "value": "73"
+      },
+      {
+        "id": "R101",
+        "value": "84"
+      },
+      {
+        "id": "R105",
+        "value": "13"
+      }
+    ],
+    "right_records": [
+      {
+        "id": "R105",
+        "value": "13"
+      },
+      {
+        "id": "R101",
+        "value": "84"
+      },
+      {
+        "id": "R109",
+        "value": "73"
+      },
+      {
+        "id": "R100",
+        "value": "41"
+      },
+      {
+        "id": "R107",
+        "value": "31"
+      },
+      {
+        "id": "R114",
+        "value": "25"
+      },
+      {
+        "id": "R104",
+        "value": "13"
+      },
+      {
+        "id": "R113",
+        "value": "73"
+      },
+      {
+        "id": "R108",
+        "value": "82"
+      },
+      {
+        "id": "R102",
+        "value": "45"
+      },
+      {
+        "id": "R110",
+        "value": "31"
+      },
+      {
+        "id": "R112",
+        "value": "98"
+      },
+      {
+        "id": "R115",
+        "value": "22"
+      },
+      {
+        "id": "R103",
+        "value": "87"
+      },
+      {
+        "id": "R106",
+        "value": "68"
+      },
+      {
+        "id": "R111",
+        "value": "93"
+      }
+    ],
+    "expected_lines": [
+      "R100|不一致",
+      "R101|一致",
+      "R102|不一致",
+      "R103|一致",
+      "R104|不一致",
+      "R105|一致"
+    ],
+    "expected_answer": "R100|不一致\nR101|一致\nR102|不一致\nR103|一致\nR104|不一致\nR105|一致",
+    "pair_id": "v10-dev-30301-b004",
+    "pair_index": 17,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\nA\nR111|93\nR106|67\nR103|87\nR115|22\nR112|97\nR110|30\nR102|44\nR108|81\nR113|73\nR104|12\nR114|24\nR107|31\nR100|40\nR109|73\nR101|84\nR105|13\nB\nR105|13\nR101|84\nR109|73\nR100|41\nR107|31\nR114|25\nR104|13\nR113|73\nR108|82\nR102|45\nR110|31\nR112|98\nR115|22\nR103|87\nR106|68\nR111|93\n逐项比较A和B中R100,R101,R102,R103,R104,R105的数值：相等写一致，否则写不一致。每行ID|结论。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 331,
+    "token_ids_sha256": "27c4b11b377b266b77a71a32d4a6c7263f7dbecfaa1391d8bc8e7717b5c02e8a",
+    "content_sha256": "fb5ca3db28a9e3598b75dbdd54bb3ac6974ae91204406558edca468dfb03a27d",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 41,
+    "grammar_ceiling": 49
+  },
+  {
+    "req_id": "v10-dev-30301-b005-c",
+    "content_id": "v10-dev-30301-b005",
+    "split": "development",
+    "seed": 30301,
+    "category": "background",
+    "category_index": 5,
+    "task_kind": "check",
+    "kind_instance": 1,
+    "template_family": "v9_C_check",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 1,
+    "input_token_range": [
+      320,
+      639
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R100",
+      "R101",
+      "R102",
+      "R103",
+      "R104",
+      "R105"
+    ],
+    "extra_records": 10,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "left_records": [
+      {
+        "id": "R109",
+        "value": "34"
+      },
+      {
+        "id": "R112",
+        "value": "73"
+      },
+      {
+        "id": "R104",
+        "value": "64"
+      },
+      {
+        "id": "R115",
+        "value": "88"
+      },
+      {
+        "id": "R102",
+        "value": "78"
+      },
+      {
+        "id": "R106",
+        "value": "11"
+      },
+      {
+        "id": "R107",
+        "value": "21"
+      },
+      {
+        "id": "R101",
+        "value": "47"
+      },
+      {
+        "id": "R114",
+        "value": "23"
+      },
+      {
+        "id": "R111",
+        "value": "66"
+      },
+      {
+        "id": "R100",
+        "value": "47"
+      },
+      {
+        "id": "R110",
+        "value": "75"
+      },
+      {
+        "id": "R113",
+        "value": "28"
+      },
+      {
+        "id": "R103",
+        "value": "12"
+      },
+      {
+        "id": "R105",
+        "value": "12"
+      },
+      {
+        "id": "R108",
+        "value": "22"
+      }
+    ],
+    "right_records": [
+      {
+        "id": "R108",
+        "value": "22"
+      },
+      {
+        "id": "R105",
+        "value": "13"
+      },
+      {
+        "id": "R103",
+        "value": "13"
+      },
+      {
+        "id": "R113",
+        "value": "29"
+      },
+      {
+        "id": "R110",
+        "value": "75"
+      },
+      {
+        "id": "R100",
+        "value": "47"
+      },
+      {
+        "id": "R111",
+        "value": "67"
+      },
+      {
+        "id": "R114",
+        "value": "23"
+      },
+      {
+        "id": "R101",
+        "value": "48"
+      },
+      {
+        "id": "R107",
+        "value": "22"
+      },
+      {
+        "id": "R106",
+        "value": "11"
+      },
+      {
+        "id": "R102",
+        "value": "78"
+      },
+      {
+        "id": "R115",
+        "value": "89"
+      },
+      {
+        "id": "R104",
+        "value": "64"
+      },
+      {
+        "id": "R112",
+        "value": "73"
+      },
+      {
+        "id": "R109",
+        "value": "35"
+      }
+    ],
+    "expected_lines": [
+      "R100|一致",
+      "R101|不一致",
+      "R102|一致",
+      "R103|不一致",
+      "R104|一致",
+      "R105|不一致"
+    ],
+    "expected_answer": "R100|一致\nR101|不一致\nR102|一致\nR103|不一致\nR104|一致\nR105|不一致",
+    "pair_id": "v10-dev-30301-b005",
+    "pair_index": 18,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\nA\nR109|34\nR112|73\nR104|64\nR115|88\nR102|78\nR106|11\nR107|21\nR101|47\nR114|23\nR111|66\nR100|47\nR110|75\nR113|28\nR103|12\nR105|12\nR108|22\nB\nR108|22\nR105|13\nR103|13\nR113|29\nR110|75\nR100|47\nR111|67\nR114|23\nR101|48\nR107|22\nR106|11\nR102|78\nR115|89\nR104|64\nR112|73\nR109|35\n逐项比较A和B中R100,R101,R102,R103,R104,R105的数值：相等写一致，否则写不一致。每行ID|结论。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 331,
+    "token_ids_sha256": "d787de5edbbbb6f71e4dc93190e2248dbc524804e7ad7d7c2fc7d1b3c228c614",
+    "content_sha256": "ca874fbcdf9e4777b4308207b65852555322dce6db2b467c76097a7d6ddd0f69",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 41,
+    "grammar_ceiling": 49
+  },
+  {
+    "req_id": "v10-dev-30301-b006-c",
+    "content_id": "v10-dev-30301-b006",
+    "split": "development",
+    "seed": 30301,
+    "category": "background",
+    "category_index": 6,
+    "task_kind": "check",
+    "kind_instance": 2,
+    "template_family": "v9_C_check",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 2,
+    "input_token_range": [
+      640,
+      1024
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R100",
+      "R101",
+      "R102",
+      "R103",
+      "R104",
+      "R105"
+    ],
+    "extra_records": 30,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "left_records": [
+      {
+        "id": "R119",
+        "value": "34"
+      },
+      {
+        "id": "R122",
+        "value": "53"
+      },
+      {
+        "id": "R105",
+        "value": "62"
+      },
+      {
+        "id": "R131",
+        "value": "71"
+      },
+      {
+        "id": "R132",
+        "value": "71"
+      },
+      {
+        "id": "R111",
+        "value": "72"
+      },
+      {
+        "id": "R129",
+        "value": "95"
+      },
+      {
+        "id": "R125",
+        "value": "70"
+      },
+      {
+        "id": "R116",
+        "value": "79"
+      },
+      {
+        "id": "R123",
+        "value": "58"
+      },
+      {
+        "id": "R114",
+        "value": "33"
+      },
+      {
+        "id": "R118",
+        "value": "44"
+      },
+      {
+        "id": "R133",
+        "value": "62"
+      },
+      {
+        "id": "R120",
+        "value": "71"
+      },
+      {
+        "id": "R106",
+        "value": "61"
+      },
+      {
+        "id": "R115",
+        "value": "86"
+      },
+      {
+        "id": "R121",
+        "value": "30"
+      },
+      {
+        "id": "R109",
+        "value": "62"
+      },
+      {
+        "id": "R134",
+        "value": "83"
+      },
+      {
+        "id": "R100",
+        "value": "54"
+      },
+      {
+        "id": "R112",
+        "value": "36"
+      },
+      {
+        "id": "R128",
+        "value": "19"
+      },
+      {
+        "id": "R103",
+        "value": "58"
+      },
+      {
+        "id": "R124",
+        "value": "40"
+      },
+      {
+        "id": "R110",
+        "value": "11"
+      },
+      {
+        "id": "R107",
+        "value": "52"
+      },
+      {
+        "id": "R104",
+        "value": "68"
+      },
+      {
+        "id": "R130",
+        "value": "75"
+      },
+      {
+        "id": "R135",
+        "value": "63"
+      },
+      {
+        "id": "R113",
+        "value": "59"
+      },
+      {
+        "id": "R117",
+        "value": "18"
+      },
+      {
+        "id": "R127",
+        "value": "52"
+      },
+      {
+        "id": "R108",
+        "value": "80"
+      },
+      {
+        "id": "R102",
+        "value": "11"
+      },
+      {
+        "id": "R101",
+        "value": "64"
+      },
+      {
+        "id": "R126",
+        "value": "82"
+      }
+    ],
+    "right_records": [
+      {
+        "id": "R126",
+        "value": "83"
+      },
+      {
+        "id": "R101",
+        "value": "64"
+      },
+      {
+        "id": "R102",
+        "value": "12"
+      },
+      {
+        "id": "R108",
+        "value": "81"
+      },
+      {
+        "id": "R127",
+        "value": "52"
+      },
+      {
+        "id": "R117",
+        "value": "18"
+      },
+      {
+        "id": "R113",
+        "value": "59"
+      },
+      {
+        "id": "R135",
+        "value": "63"
+      },
+      {
+        "id": "R130",
+        "value": "76"
+      },
+      {
+        "id": "R104",
+        "value": "69"
+      },
+      {
+        "id": "R107",
+        "value": "52"
+      },
+      {
+        "id": "R110",
+        "value": "12"
+      },
+      {
+        "id": "R124",
+        "value": "41"
+      },
+      {
+        "id": "R103",
+        "value": "58"
+      },
+      {
+        "id": "R128",
+        "value": "20"
+      },
+      {
+        "id": "R112",
+        "value": "37"
+      },
+      {
+        "id": "R100",
+        "value": "55"
+      },
+      {
+        "id": "R134",
+        "value": "84"
+      },
+      {
+        "id": "R109",
+        "value": "62"
+      },
+      {
+        "id": "R121",
+        "value": "30"
+      },
+      {
+        "id": "R115",
+        "value": "86"
+      },
+      {
+        "id": "R106",
+        "value": "62"
+      },
+      {
+        "id": "R120",
+        "value": "72"
+      },
+      {
+        "id": "R133",
+        "value": "62"
+      },
+      {
+        "id": "R118",
+        "value": "45"
+      },
+      {
+        "id": "R114",
+        "value": "34"
+      },
+      {
+        "id": "R123",
+        "value": "58"
+      },
+      {
+        "id": "R116",
+        "value": "80"
+      },
+      {
+        "id": "R125",
+        "value": "70"
+      },
+      {
+        "id": "R129",
+        "value": "95"
+      },
+      {
+        "id": "R111",
+        "value": "72"
+      },
+      {
+        "id": "R132",
+        "value": "72"
+      },
+      {
+        "id": "R131",
+        "value": "71"
+      },
+      {
+        "id": "R105",
+        "value": "62"
+      },
+      {
+        "id": "R122",
+        "value": "54"
+      },
+      {
+        "id": "R119",
+        "value": "34"
+      }
+    ],
+    "expected_lines": [
+      "R100|不一致",
+      "R101|一致",
+      "R102|不一致",
+      "R103|一致",
+      "R104|不一致",
+      "R105|一致"
+    ],
+    "expected_answer": "R100|不一致\nR101|一致\nR102|不一致\nR103|一致\nR104|不一致\nR105|一致",
+    "pair_id": "v10-dev-30301-b006",
+    "pair_index": 19,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\nA\nR119|34\nR122|53\nR105|62\nR131|71\nR132|71\nR111|72\nR129|95\nR125|70\nR116|79\nR123|58\nR114|33\nR118|44\nR133|62\nR120|71\nR106|61\nR115|86\nR121|30\nR109|62\nR134|83\nR100|54\nR112|36\nR128|19\nR103|58\nR124|40\nR110|11\nR107|52\nR104|68\nR130|75\nR135|63\nR113|59\nR117|18\nR127|52\nR108|80\nR102|11\nR101|64\nR126|82\nB\nR126|83\nR101|64\nR102|12\nR108|81\nR127|52\nR117|18\nR113|59\nR135|63\nR130|76\nR104|69\nR107|52\nR110|12\nR124|41\nR103|58\nR128|20\nR112|37\nR100|55\nR134|84\nR109|62\nR121|30\nR115|86\nR106|62\nR120|72\nR133|62\nR118|45\nR114|34\nR123|58\nR116|80\nR125|70\nR129|95\nR111|72\nR132|72\nR131|71\nR105|62\nR122|54\nR119|34\n逐项比较A和B中R100,R101,R102,R103,R104,R105的数值：相等写一致，否则写不一致。每行ID|结论。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 651,
+    "token_ids_sha256": "2decd03e1e42429a06145ea3f7961b93cf43840f890db809098792c3d6dc5e5a",
+    "content_sha256": "da36102b1c4b4514ce170bd2a1071b9024533f128e6654d6fd002a91e2aa2f13",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 41,
+    "grammar_ceiling": 49
+  },
+  {
+    "req_id": "v10-dev-30301-b007-c",
+    "content_id": "v10-dev-30301-b007",
+    "split": "development",
+    "seed": 30301,
+    "category": "background",
+    "category_index": 7,
+    "task_kind": "check",
+    "kind_instance": 3,
+    "template_family": "v9_C_check",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 0,
+    "input_token_range": [
+      128,
+      319
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R100",
+      "R101",
+      "R102",
+      "R103",
+      "R104",
+      "R105"
+    ],
+    "extra_records": 0,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "left_records": [
+      {
+        "id": "R102",
+        "value": "39"
+      },
+      {
+        "id": "R103",
+        "value": "92"
+      },
+      {
+        "id": "R101",
+        "value": "92"
+      },
+      {
+        "id": "R105",
+        "value": "60"
+      },
+      {
+        "id": "R100",
+        "value": "61"
+      },
+      {
+        "id": "R104",
+        "value": "50"
+      }
+    ],
+    "right_records": [
+      {
+        "id": "R104",
+        "value": "50"
+      },
+      {
+        "id": "R100",
+        "value": "61"
+      },
+      {
+        "id": "R105",
+        "value": "61"
+      },
+      {
+        "id": "R101",
+        "value": "93"
+      },
+      {
+        "id": "R103",
+        "value": "93"
+      },
+      {
+        "id": "R102",
+        "value": "39"
+      }
+    ],
+    "expected_lines": [
+      "R100|一致",
+      "R101|不一致",
+      "R102|一致",
+      "R103|不一致",
+      "R104|一致",
+      "R105|不一致"
+    ],
+    "expected_answer": "R100|一致\nR101|不一致\nR102|一致\nR103|不一致\nR104|一致\nR105|不一致",
+    "pair_id": "v10-dev-30301-b007",
+    "pair_index": 20,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\nA\nR102|39\nR103|92\nR101|92\nR105|60\nR100|61\nR104|50\nB\nR104|50\nR100|61\nR105|61\nR101|93\nR103|93\nR102|39\n逐项比较A和B中R100,R101,R102,R103,R104,R105的数值：相等写一致，否则写不一致。每行ID|结论。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 171,
+    "token_ids_sha256": "7e5b384942927bdeececb30655d01f1450d0cc060c971ec5117a805e5261b1c2",
+    "content_sha256": "7dc4feadc846e0d895d3b9a78ad8cd5faccc0796bb89e30db2381569c68007c9",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 41,
+    "grammar_ceiling": 49
+  },
+  {
+    "req_id": "v10-dev-30301-b008-c",
+    "content_id": "v10-dev-30301-b008",
+    "split": "development",
+    "seed": 30301,
+    "category": "background",
+    "category_index": 8,
+    "task_kind": "organize",
+    "kind_instance": 0,
+    "template_family": "v9_C_organize",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 2,
+    "input_token_range": [
+      640,
+      1024
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R105",
+      "R101",
+      "R103",
+      "R100",
+      "R104",
+      "R102"
+    ],
+    "extra_records": 66,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R147",
+        "value": "69"
+      },
+      {
+        "id": "R170",
+        "value": "47"
+      },
+      {
+        "id": "R144",
+        "value": "63"
+      },
+      {
+        "id": "R130",
+        "value": "84"
+      },
+      {
+        "id": "R124",
+        "value": "61"
+      },
+      {
+        "id": "R119",
+        "value": "13"
+      },
+      {
+        "id": "R102",
+        "value": "27"
+      },
+      {
+        "id": "R141",
+        "value": "34"
+      },
+      {
+        "id": "R163",
+        "value": "98"
+      },
+      {
+        "id": "R167",
+        "value": "91"
+      },
+      {
+        "id": "R116",
+        "value": "90"
+      },
+      {
+        "id": "R118",
+        "value": "32"
+      },
+      {
+        "id": "R109",
+        "value": "55"
+      },
+      {
+        "id": "R151",
+        "value": "12"
+      },
+      {
+        "id": "R171",
+        "value": "26"
+      },
+      {
+        "id": "R126",
+        "value": "29"
+      },
+      {
+        "id": "R112",
+        "value": "11"
+      },
+      {
+        "id": "R104",
+        "value": "40"
+      },
+      {
+        "id": "R106",
+        "value": "66"
+      },
+      {
+        "id": "R100",
+        "value": "68"
+      },
+      {
+        "id": "R150",
+        "value": "67"
+      },
+      {
+        "id": "R122",
+        "value": "83"
+      },
+      {
+        "id": "R131",
+        "value": "60"
+      },
+      {
+        "id": "R111",
+        "value": "59"
+      },
+      {
+        "id": "R125",
+        "value": "83"
+      },
+      {
+        "id": "R139",
+        "value": "20"
+      },
+      {
+        "id": "R137",
+        "value": "97"
+      },
+      {
+        "id": "R145",
+        "value": "19"
+      },
+      {
+        "id": "R161",
+        "value": "18"
+      },
+      {
+        "id": "R132",
+        "value": "72"
+      },
+      {
+        "id": "R149",
+        "value": "24"
+      },
+      {
+        "id": "R162",
+        "value": "49"
+      },
+      {
+        "id": "R103",
+        "value": "58"
+      },
+      {
+        "id": "R154",
+        "value": "15"
+      },
+      {
+        "id": "R101",
+        "value": "33"
+      },
+      {
+        "id": "R169",
+        "value": "78"
+      },
+      {
+        "id": "R140",
+        "value": "48"
+      },
+      {
+        "id": "R138",
+        "value": "47"
+      },
+      {
+        "id": "R143",
+        "value": "98"
+      },
+      {
+        "id": "R155",
+        "value": "45"
+      },
+      {
+        "id": "R153",
+        "value": "54"
+      },
+      {
+        "id": "R142",
+        "value": "87"
+      },
+      {
+        "id": "R108",
+        "value": "68"
+      },
+      {
+        "id": "R110",
+        "value": "53"
+      },
+      {
+        "id": "R135",
+        "value": "93"
+      },
+      {
+        "id": "R114",
+        "value": "66"
+      },
+      {
+        "id": "R148",
+        "value": "15"
+      },
+      {
+        "id": "R160",
+        "value": "43"
+      },
+      {
+        "id": "R107",
+        "value": "38"
+      },
+      {
+        "id": "R127",
+        "value": "74"
+      },
+      {
+        "id": "R134",
+        "value": "93"
+      },
+      {
+        "id": "R164",
+        "value": "13"
+      },
+      {
+        "id": "R128",
+        "value": "45"
+      },
+      {
+        "id": "R157",
+        "value": "14"
+      },
+      {
+        "id": "R123",
+        "value": "50"
+      },
+      {
+        "id": "R165",
+        "value": "35"
+      },
+      {
+        "id": "R152",
+        "value": "53"
+      },
+      {
+        "id": "R168",
+        "value": "80"
+      },
+      {
+        "id": "R120",
+        "value": "40"
+      },
+      {
+        "id": "R166",
+        "value": "30"
+      },
+      {
+        "id": "R121",
+        "value": "86"
+      },
+      {
+        "id": "R129",
+        "value": "12"
+      },
+      {
+        "id": "R105",
+        "value": "18"
+      },
+      {
+        "id": "R136",
+        "value": "82"
+      },
+      {
+        "id": "R133",
+        "value": "92"
+      },
+      {
+        "id": "R113",
+        "value": "93"
+      },
+      {
+        "id": "R146",
+        "value": "44"
+      },
+      {
+        "id": "R117",
+        "value": "85"
+      },
+      {
+        "id": "R156",
+        "value": "18"
+      },
+      {
+        "id": "R158",
+        "value": "39"
+      },
+      {
+        "id": "R159",
+        "value": "48"
+      },
+      {
+        "id": "R115",
+        "value": "41"
+      }
+    ],
+    "expected_lines": [
+      "R105|18",
+      "R101|33",
+      "R103|58",
+      "R100|68",
+      "R104|40",
+      "R102|27"
+    ],
+    "expected_answer": "R105|18\nR101|33\nR103|58\nR100|68\nR104|40\nR102|27",
+    "pair_id": "v10-dev-30301-b008",
+    "pair_index": 21,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR147|69\nR170|47\nR144|63\nR130|84\nR124|61\nR119|13\nR102|27\nR141|34\nR163|98\nR167|91\nR116|90\nR118|32\nR109|55\nR151|12\nR171|26\nR126|29\nR112|11\nR104|40\nR106|66\nR100|68\nR150|67\nR122|83\nR131|60\nR111|59\nR125|83\nR139|20\nR137|97\nR145|19\nR161|18\nR132|72\nR149|24\nR162|49\nR103|58\nR154|15\nR101|33\nR169|78\nR140|48\nR138|47\nR143|98\nR155|45\nR153|54\nR142|87\nR108|68\nR110|53\nR135|93\nR114|66\nR148|15\nR160|43\nR107|38\nR127|74\nR134|93\nR164|13\nR128|45\nR157|14\nR123|50\nR165|35\nR152|53\nR168|80\nR120|40\nR166|30\nR121|86\nR129|12\nR105|18\nR136|82\nR133|92\nR113|93\nR146|44\nR117|85\nR156|18\nR158|39\nR159|48\nR115|41\n只按R105,R101,R103,R100,R104,R102顺序抄对应数值，不要抄其他行。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 641,
+    "token_ids_sha256": "8df0acd3ebd660d1f235266f5712cf478f6fd886d780c253f6c0c31f178939e6",
+    "content_sha256": "5b5f421e2fa64a1767a44d24a153112ef4fc787d1ec33e252be6f2101ba9ad1e",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 47,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30301-b009-c",
+    "content_id": "v10-dev-30301-b009",
+    "split": "development",
+    "seed": 30301,
+    "category": "background",
+    "category_index": 9,
+    "task_kind": "organize",
+    "kind_instance": 1,
+    "template_family": "v9_C_organize",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 2,
+    "input_token_range": [
+      640,
+      1024
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R100",
+      "R102",
+      "R104",
+      "R101",
+      "R105",
+      "R103"
+    ],
+    "extra_records": 66,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R127",
+        "value": "66"
+      },
+      {
+        "id": "R170",
+        "value": "71"
+      },
+      {
+        "id": "R107",
+        "value": "33"
+      },
+      {
+        "id": "R158",
+        "value": "95"
+      },
+      {
+        "id": "R137",
+        "value": "97"
+      },
+      {
+        "id": "R164",
+        "value": "80"
+      },
+      {
+        "id": "R161",
+        "value": "39"
+      },
+      {
+        "id": "R103",
+        "value": "92"
+      },
+      {
+        "id": "R155",
+        "value": "52"
+      },
+      {
+        "id": "R126",
+        "value": "67"
+      },
+      {
+        "id": "R171",
+        "value": "52"
+      },
+      {
+        "id": "R105",
+        "value": "46"
+      },
+      {
+        "id": "R101",
+        "value": "79"
+      },
+      {
+        "id": "R151",
+        "value": "38"
+      },
+      {
+        "id": "R117",
+        "value": "87"
+      },
+      {
+        "id": "R139",
+        "value": "79"
+      },
+      {
+        "id": "R146",
+        "value": "19"
+      },
+      {
+        "id": "R122",
+        "value": "15"
+      },
+      {
+        "id": "R104",
+        "value": "89"
+      },
+      {
+        "id": "R153",
+        "value": "68"
+      },
+      {
+        "id": "R147",
+        "value": "63"
+      },
+      {
+        "id": "R157",
+        "value": "53"
+      },
+      {
+        "id": "R130",
+        "value": "23"
+      },
+      {
+        "id": "R120",
+        "value": "73"
+      },
+      {
+        "id": "R131",
+        "value": "86"
+      },
+      {
+        "id": "R113",
+        "value": "11"
+      },
+      {
+        "id": "R116",
+        "value": "58"
+      },
+      {
+        "id": "R167",
+        "value": "39"
+      },
+      {
+        "id": "R133",
+        "value": "98"
+      },
+      {
+        "id": "R114",
+        "value": "53"
+      },
+      {
+        "id": "R163",
+        "value": "35"
+      },
+      {
+        "id": "R156",
+        "value": "38"
+      },
+      {
+        "id": "R109",
+        "value": "65"
+      },
+      {
+        "id": "R121",
+        "value": "34"
+      },
+      {
+        "id": "R140",
+        "value": "46"
+      },
+      {
+        "id": "R134",
+        "value": "93"
+      },
+      {
+        "id": "R154",
+        "value": "53"
+      },
+      {
+        "id": "R102",
+        "value": "19"
+      },
+      {
+        "id": "R169",
+        "value": "80"
+      },
+      {
+        "id": "R160",
+        "value": "39"
+      },
+      {
+        "id": "R168",
+        "value": "35"
+      },
+      {
+        "id": "R124",
+        "value": "91"
+      },
+      {
+        "id": "R159",
+        "value": "79"
+      },
+      {
+        "id": "R152",
+        "value": "97"
+      },
+      {
+        "id": "R118",
+        "value": "59"
+      },
+      {
+        "id": "R111",
+        "value": "33"
+      },
+      {
+        "id": "R110",
+        "value": "56"
+      },
+      {
+        "id": "R149",
+        "value": "88"
+      },
+      {
+        "id": "R162",
+        "value": "60"
+      },
+      {
+        "id": "R123",
+        "value": "71"
+      },
+      {
+        "id": "R142",
+        "value": "57"
+      },
+      {
+        "id": "R135",
+        "value": "75"
+      },
+      {
+        "id": "R166",
+        "value": "66"
+      },
+      {
+        "id": "R128",
+        "value": "73"
+      },
+      {
+        "id": "R100",
+        "value": "75"
+      },
+      {
+        "id": "R150",
+        "value": "47"
+      },
+      {
+        "id": "R144",
+        "value": "33"
+      },
+      {
+        "id": "R129",
+        "value": "83"
+      },
+      {
+        "id": "R148",
+        "value": "33"
+      },
+      {
+        "id": "R125",
+        "value": "27"
+      },
+      {
+        "id": "R165",
+        "value": "96"
+      },
+      {
+        "id": "R138",
+        "value": "67"
+      },
+      {
+        "id": "R112",
+        "value": "24"
+      },
+      {
+        "id": "R115",
+        "value": "22"
+      },
+      {
+        "id": "R141",
+        "value": "53"
+      },
+      {
+        "id": "R143",
+        "value": "11"
+      },
+      {
+        "id": "R106",
+        "value": "98"
+      },
+      {
+        "id": "R108",
+        "value": "52"
+      },
+      {
+        "id": "R132",
+        "value": "52"
+      },
+      {
+        "id": "R136",
+        "value": "13"
+      },
+      {
+        "id": "R145",
+        "value": "65"
+      },
+      {
+        "id": "R119",
+        "value": "95"
+      }
+    ],
+    "expected_lines": [
+      "R100|75",
+      "R102|19",
+      "R104|89",
+      "R101|79",
+      "R105|46",
+      "R103|92"
+    ],
+    "expected_answer": "R100|75\nR102|19\nR104|89\nR101|79\nR105|46\nR103|92",
+    "pair_id": "v10-dev-30301-b009",
+    "pair_index": 22,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR127|66\nR170|71\nR107|33\nR158|95\nR137|97\nR164|80\nR161|39\nR103|92\nR155|52\nR126|67\nR171|52\nR105|46\nR101|79\nR151|38\nR117|87\nR139|79\nR146|19\nR122|15\nR104|89\nR153|68\nR147|63\nR157|53\nR130|23\nR120|73\nR131|86\nR113|11\nR116|58\nR167|39\nR133|98\nR114|53\nR163|35\nR156|38\nR109|65\nR121|34\nR140|46\nR134|93\nR154|53\nR102|19\nR169|80\nR160|39\nR168|35\nR124|91\nR159|79\nR152|97\nR118|59\nR111|33\nR110|56\nR149|88\nR162|60\nR123|71\nR142|57\nR135|75\nR166|66\nR128|73\nR100|75\nR150|47\nR144|33\nR129|83\nR148|33\nR125|27\nR165|96\nR138|67\nR112|24\nR115|22\nR141|53\nR143|11\nR106|98\nR108|52\nR132|52\nR136|13\nR145|65\nR119|95\n只按R100,R102,R104,R101,R105,R103顺序抄对应数值，不要抄其他行。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 641,
+    "token_ids_sha256": "321de54663f21478d79dbc2af1e70feb5b669afcb0f4db69a5be40c4032b1a4f",
+    "content_sha256": "be81dea97f0ff90967535c3f61e5e2b7b79de34e7b9d974384f032926c35c359",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 47,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30301-b010-c",
+    "content_id": "v10-dev-30301-b010",
+    "split": "development",
+    "seed": 30301,
+    "category": "background",
+    "category_index": 10,
+    "task_kind": "organize",
+    "kind_instance": 2,
+    "template_family": "v9_C_organize",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 0,
+    "input_token_range": [
+      128,
+      319
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R105",
+      "R102",
+      "R103",
+      "R104",
+      "R100",
+      "R101"
+    ],
+    "extra_records": 2,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R101",
+        "value": "33"
+      },
+      {
+        "id": "R100",
+        "value": "82"
+      },
+      {
+        "id": "R106",
+        "value": "51"
+      },
+      {
+        "id": "R104",
+        "value": "65"
+      },
+      {
+        "id": "R103",
+        "value": "96"
+      },
+      {
+        "id": "R107",
+        "value": "92"
+      },
+      {
+        "id": "R102",
+        "value": "63"
+      },
+      {
+        "id": "R105",
+        "value": "76"
+      }
+    ],
+    "expected_lines": [
+      "R105|76",
+      "R102|63",
+      "R103|96",
+      "R104|65",
+      "R100|82",
+      "R101|33"
+    ],
+    "expected_answer": "R105|76\nR102|63\nR103|96\nR104|65\nR100|82\nR101|33",
+    "pair_id": "v10-dev-30301-b010",
+    "pair_index": 23,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR101|33\nR100|82\nR106|51\nR104|65\nR103|96\nR107|92\nR102|63\nR105|76\n只按R105,R102,R103,R104,R100,R101顺序抄对应数值，不要抄其他行。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 129,
+    "token_ids_sha256": "ad47ec05772a06778083bbb8d9e9f0010b9087b20010c401fcb96ad316cb518d",
+    "content_sha256": "aed97656a25bd62f1dc720759a642fb763d1e6ae0835e225a42efaee1cb11914",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 47,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30301-b011-c",
+    "content_id": "v10-dev-30301-b011",
+    "split": "development",
+    "seed": 30301,
+    "category": "background",
+    "category_index": 11,
+    "task_kind": "organize",
+    "kind_instance": 3,
+    "template_family": "v9_C_organize",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 1,
+    "input_token_range": [
+      320,
+      639
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R103",
+      "R105",
+      "R104",
+      "R100",
+      "R102",
+      "R101"
+    ],
+    "extra_records": 26,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R116",
+        "value": "90"
+      },
+      {
+        "id": "R124",
+        "value": "65"
+      },
+      {
+        "id": "R107",
+        "value": "29"
+      },
+      {
+        "id": "R115",
+        "value": "36"
+      },
+      {
+        "id": "R123",
+        "value": "26"
+      },
+      {
+        "id": "R101",
+        "value": "26"
+      },
+      {
+        "id": "R102",
+        "value": "26"
+      },
+      {
+        "id": "R100",
+        "value": "89"
+      },
+      {
+        "id": "R129",
+        "value": "24"
+      },
+      {
+        "id": "R119",
+        "value": "40"
+      },
+      {
+        "id": "R130",
+        "value": "10"
+      },
+      {
+        "id": "R113",
+        "value": "72"
+      },
+      {
+        "id": "R126",
+        "value": "79"
+      },
+      {
+        "id": "R104",
+        "value": "89"
+      },
+      {
+        "id": "R128",
+        "value": "65"
+      },
+      {
+        "id": "R106",
+        "value": "74"
+      },
+      {
+        "id": "R131",
+        "value": "40"
+      },
+      {
+        "id": "R122",
+        "value": "11"
+      },
+      {
+        "id": "R108",
+        "value": "55"
+      },
+      {
+        "id": "R105",
+        "value": "77"
+      },
+      {
+        "id": "R121",
+        "value": "54"
+      },
+      {
+        "id": "R120",
+        "value": "57"
+      },
+      {
+        "id": "R114",
+        "value": "10"
+      },
+      {
+        "id": "R118",
+        "value": "75"
+      },
+      {
+        "id": "R111",
+        "value": "59"
+      },
+      {
+        "id": "R125",
+        "value": "95"
+      },
+      {
+        "id": "R109",
+        "value": "73"
+      },
+      {
+        "id": "R110",
+        "value": "15"
+      },
+      {
+        "id": "R103",
+        "value": "90"
+      },
+      {
+        "id": "R127",
+        "value": "34"
+      },
+      {
+        "id": "R117",
+        "value": "36"
+      },
+      {
+        "id": "R112",
+        "value": "56"
+      }
+    ],
+    "expected_lines": [
+      "R103|90",
+      "R105|77",
+      "R104|89",
+      "R100|89",
+      "R102|26",
+      "R101|26"
+    ],
+    "expected_answer": "R103|90\nR105|77\nR104|89\nR100|89\nR102|26\nR101|26",
+    "pair_id": "v10-dev-30301-b011",
+    "pair_index": 24,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR116|90\nR124|65\nR107|29\nR115|36\nR123|26\nR101|26\nR102|26\nR100|89\nR129|24\nR119|40\nR130|10\nR113|72\nR126|79\nR104|89\nR128|65\nR106|74\nR131|40\nR122|11\nR108|55\nR105|77\nR121|54\nR120|57\nR114|10\nR118|75\nR111|59\nR125|95\nR109|73\nR110|15\nR103|90\nR127|34\nR117|36\nR112|56\n只按R103,R105,R104,R100,R102,R101顺序抄对应数值，不要抄其他行。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 321,
+    "token_ids_sha256": "948128bcfc721fe8260af82239ea25590e85c562bcbaaa6cf5d6fc41adf4397d",
+    "content_sha256": "da117ec74f5844de41e4e438bd1197b1c2e592abd9572d35307808b043959a3f",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 47,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30302-i000-c",
+    "content_id": "v10-dev-30302-i000",
+    "split": "development",
+    "seed": 30302,
+    "category": "interactive",
+    "category_index": 0,
+    "task_kind": "extract",
+    "kind_instance": 0,
+    "template_family": "v9_C_extract",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 0,
+    "input_token_range": [
+      32,
+      79
+    ],
+    "target_count": 1,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1000"
+    ],
+    "extra_records": 0,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R1000",
+        "value": "13"
+      }
+    ],
+    "expected_lines": [
+      "R1000|13"
+    ],
+    "expected_answer": "R1000|13",
+    "pair_id": "v10-dev-30302-i000",
+    "pair_index": 1,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1000|13\n提取R1000对应的数值，不要复制编号作值。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 53,
+    "token_ids_sha256": "e02a118c74c951dbbddf8528db770664c0cec5a46249dc1ae2839eeb9adf2e92",
+    "content_sha256": "7534991b9b9e47b02876575f3360d757c5957f699ffa99e1aa1478bf69d6f9dc",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 8,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30302-i001-c",
+    "content_id": "v10-dev-30302-i001",
+    "split": "development",
+    "seed": 30302,
+    "category": "interactive",
+    "category_index": 1,
+    "task_kind": "extract",
+    "kind_instance": 1,
+    "template_family": "v9_C_extract",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 0,
+    "input_token_range": [
+      32,
+      79
+    ],
+    "target_count": 1,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1000"
+    ],
+    "extra_records": 0,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R1000",
+        "value": "20"
+      }
+    ],
+    "expected_lines": [
+      "R1000|20"
+    ],
+    "expected_answer": "R1000|20",
+    "pair_id": "v10-dev-30302-i001",
+    "pair_index": 2,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1000|20\n提取R1000对应的数值，不要复制编号作值。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 53,
+    "token_ids_sha256": "b074f506ffcac5604670739e55768a92a0746f1ddde74a5cbbb9d038091c4f51",
+    "content_sha256": "e4ede93eae2dcf0ff84ef75de7feccb070006a81853c56c49fe8778387fd18ea",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 8,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30302-i002-c",
+    "content_id": "v10-dev-30302-i002",
+    "split": "development",
+    "seed": 30302,
+    "category": "interactive",
+    "category_index": 2,
+    "task_kind": "extract",
+    "kind_instance": 2,
+    "template_family": "v9_C_extract",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 1,
+    "input_token_range": [
+      80,
+      143
+    ],
+    "target_count": 1,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1000"
+    ],
+    "extra_records": 3,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R1003",
+        "value": "20"
+      },
+      {
+        "id": "R1002",
+        "value": "53"
+      },
+      {
+        "id": "R1001",
+        "value": "58"
+      },
+      {
+        "id": "R1000",
+        "value": "27"
+      }
+    ],
+    "expected_lines": [
+      "R1000|27"
+    ],
+    "expected_answer": "R1000|27",
+    "pair_id": "v10-dev-30302-i002",
+    "pair_index": 3,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1003|20\nR1002|53\nR1001|58\nR1000|27\n提取R1000对应的数值，不要复制编号作值。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 80,
+    "token_ids_sha256": "c39a4f5e7b5b344eaa7a423ca46eb7ce60876993ea21734bf4341488fa8033ee",
+    "content_sha256": "3b7ddda4c814feb81425661530181585c95497cb333e959e07029a14cc3730fa",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 8,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30302-i003-c",
+    "content_id": "v10-dev-30302-i003",
+    "split": "development",
+    "seed": 30302,
+    "category": "interactive",
+    "category_index": 3,
+    "task_kind": "extract",
+    "kind_instance": 3,
+    "template_family": "v9_C_extract",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 2,
+    "input_token_range": [
+      144,
+      256
+    ],
+    "target_count": 1,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1000"
+    ],
+    "extra_records": 11,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R1007",
+        "value": "34"
+      },
+      {
+        "id": "R1010",
+        "value": "12"
+      },
+      {
+        "id": "R1000",
+        "value": "34"
+      },
+      {
+        "id": "R1001",
+        "value": "82"
+      },
+      {
+        "id": "R1009",
+        "value": "16"
+      },
+      {
+        "id": "R1011",
+        "value": "56"
+      },
+      {
+        "id": "R1002",
+        "value": "46"
+      },
+      {
+        "id": "R1006",
+        "value": "76"
+      },
+      {
+        "id": "R1003",
+        "value": "47"
+      },
+      {
+        "id": "R1005",
+        "value": "99"
+      },
+      {
+        "id": "R1004",
+        "value": "68"
+      },
+      {
+        "id": "R1008",
+        "value": "52"
+      }
+    ],
+    "expected_lines": [
+      "R1000|34"
+    ],
+    "expected_answer": "R1000|34",
+    "pair_id": "v10-dev-30302-i003",
+    "pair_index": 4,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1007|34\nR1010|12\nR1000|34\nR1001|82\nR1009|16\nR1011|56\nR1002|46\nR1006|76\nR1003|47\nR1005|99\nR1004|68\nR1008|52\n提取R1000对应的数值，不要复制编号作值。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 152,
+    "token_ids_sha256": "0da7796942eab36ef1ded2caa58b218a254a4fac186488a724609a57c39170b6",
+    "content_sha256": "d14a3ddcc443ba14f003a5d68492493ac0a8ae974feecd25b78c5782e2f21849",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 8,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30302-i004-c",
+    "content_id": "v10-dev-30302-i004",
+    "split": "development",
+    "seed": 30302,
+    "category": "interactive",
+    "category_index": 4,
+    "task_kind": "check",
+    "kind_instance": 0,
+    "template_family": "v9_C_check",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 1,
+    "input_token_range": [
+      80,
+      143
+    ],
+    "target_count": 1,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1000"
+    ],
+    "extra_records": 1,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "left_records": [
+      {
+        "id": "R1001",
+        "value": "24"
+      },
+      {
+        "id": "R1000",
+        "value": "41"
+      }
+    ],
+    "right_records": [
+      {
+        "id": "R1000",
+        "value": "42"
+      },
+      {
+        "id": "R1001",
+        "value": "24"
+      }
+    ],
+    "expected_lines": [
+      "R1000|不一致"
+    ],
+    "expected_answer": "R1000|不一致",
+    "pair_id": "v10-dev-30302-i004",
+    "pair_index": 5,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\nA\nR1001|24\nR1000|41\nB\nR1000|42\nR1001|24\n逐项比较A和B中R1000的数值：相等写一致，否则写不一致。每行ID|结论。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 92,
+    "token_ids_sha256": "9bea1b46a0b0c01308c591583ef3a65dc41ce106bc539e5ccc921051b6c84b5c",
+    "content_sha256": "7b339d62a444bb90f1301d9076b686b3ddd13fafa97631eebe88d2387f8663b1",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 7,
+    "grammar_ceiling": 10
+  },
+  {
+    "req_id": "v10-dev-30302-i005-c",
+    "content_id": "v10-dev-30302-i005",
+    "split": "development",
+    "seed": 30302,
+    "category": "interactive",
+    "category_index": 5,
+    "task_kind": "check",
+    "kind_instance": 1,
+    "template_family": "v9_C_check",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 1,
+    "input_token_range": [
+      80,
+      143
+    ],
+    "target_count": 1,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1000"
+    ],
+    "extra_records": 1,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "left_records": [
+      {
+        "id": "R1001",
+        "value": "42"
+      },
+      {
+        "id": "R1000",
+        "value": "48"
+      }
+    ],
+    "right_records": [
+      {
+        "id": "R1000",
+        "value": "48"
+      },
+      {
+        "id": "R1001",
+        "value": "43"
+      }
+    ],
+    "expected_lines": [
+      "R1000|一致"
+    ],
+    "expected_answer": "R1000|一致",
+    "pair_id": "v10-dev-30302-i005",
+    "pair_index": 6,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\nA\nR1001|42\nR1000|48\nB\nR1000|48\nR1001|43\n逐项比较A和B中R1000的数值：相等写一致，否则写不一致。每行ID|结论。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 92,
+    "token_ids_sha256": "1f754871c6af4a8d3b8a5f0240181cb7cd9dcda4a1bdf575ab60e91330cd02eb",
+    "content_sha256": "613b6876e62f0c5ff44a3f78f0f92f8465c3c6ee235647b770da738bcfa5a001",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 7,
+    "grammar_ceiling": 10
+  },
+  {
+    "req_id": "v10-dev-30302-i006-c",
+    "content_id": "v10-dev-30302-i006",
+    "split": "development",
+    "seed": 30302,
+    "category": "interactive",
+    "category_index": 6,
+    "task_kind": "check",
+    "kind_instance": 2,
+    "template_family": "v9_C_check",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 2,
+    "input_token_range": [
+      144,
+      256
+    ],
+    "target_count": 1,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1000"
+    ],
+    "extra_records": 4,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "left_records": [
+      {
+        "id": "R1003",
+        "value": "62"
+      },
+      {
+        "id": "R1004",
+        "value": "57"
+      },
+      {
+        "id": "R1000",
+        "value": "55"
+      },
+      {
+        "id": "R1001",
+        "value": "44"
+      },
+      {
+        "id": "R1002",
+        "value": "69"
+      }
+    ],
+    "right_records": [
+      {
+        "id": "R1002",
+        "value": "70"
+      },
+      {
+        "id": "R1001",
+        "value": "44"
+      },
+      {
+        "id": "R1000",
+        "value": "56"
+      },
+      {
+        "id": "R1004",
+        "value": "58"
+      },
+      {
+        "id": "R1003",
+        "value": "62"
+      }
+    ],
+    "expected_lines": [
+      "R1000|不一致"
+    ],
+    "expected_answer": "R1000|不一致",
+    "pair_id": "v10-dev-30302-i006",
+    "pair_index": 7,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\nA\nR1003|62\nR1004|57\nR1000|55\nR1001|44\nR1002|69\nB\nR1002|70\nR1001|44\nR1000|56\nR1004|58\nR1003|62\n逐项比较A和B中R1000的数值：相等写一致，否则写不一致。每行ID|结论。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 146,
+    "token_ids_sha256": "90f706cdf902e1c99e7c2420ba9ea3bf5c2452c205fe172c6c808d127fde5c69",
+    "content_sha256": "7e24a3b5bf538b3a6c66a85cb7ee3b8145ce756f45547d521178d1834fa9f8b6",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 7,
+    "grammar_ceiling": 10
+  },
+  {
+    "req_id": "v10-dev-30302-i007-c",
+    "content_id": "v10-dev-30302-i007",
+    "split": "development",
+    "seed": 30302,
+    "category": "interactive",
+    "category_index": 7,
+    "task_kind": "check",
+    "kind_instance": 3,
+    "template_family": "v9_C_check",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 0,
+    "input_token_range": [
+      32,
+      79
+    ],
+    "target_count": 1,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1000"
+    ],
+    "extra_records": 0,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "left_records": [
+      {
+        "id": "R1000",
+        "value": "62"
+      }
+    ],
+    "right_records": [
+      {
+        "id": "R1000",
+        "value": "62"
+      }
+    ],
+    "expected_lines": [
+      "R1000|一致"
+    ],
+    "expected_answer": "R1000|一致",
+    "pair_id": "v10-dev-30302-i007",
+    "pair_index": 8,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\nA\nR1000|62\nB\nR1000|62\n逐项比较A和B中R1000的数值：相等写一致，否则写不一致。每行ID|结论。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 74,
+    "token_ids_sha256": "5a53ea389e01b5f70fd5aedcf85185c46ee1b334072e006d4dfb5ce6906a2cbf",
+    "content_sha256": "a66aee311141f72797b8054bd1b20ac17a6830e5f08d89d84ca8df3ef52c8641",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 7,
+    "grammar_ceiling": 10
+  },
+  {
+    "req_id": "v10-dev-30302-i008-c",
+    "content_id": "v10-dev-30302-i008",
+    "split": "development",
+    "seed": 30302,
+    "category": "interactive",
+    "category_index": 8,
+    "task_kind": "organize",
+    "kind_instance": 0,
+    "template_family": "v9_C_organize",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 2,
+    "input_token_range": [
+      144,
+      256
+    ],
+    "target_count": 2,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1000",
+      "R1001"
+    ],
+    "extra_records": 9,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R1007",
+        "value": "19"
+      },
+      {
+        "id": "R1001",
+        "value": "13"
+      },
+      {
+        "id": "R1002",
+        "value": "25"
+      },
+      {
+        "id": "R1008",
+        "value": "26"
+      },
+      {
+        "id": "R1005",
+        "value": "37"
+      },
+      {
+        "id": "R1004",
+        "value": "60"
+      },
+      {
+        "id": "R1006",
+        "value": "57"
+      },
+      {
+        "id": "R1009",
+        "value": "96"
+      },
+      {
+        "id": "R1000",
+        "value": "69"
+      },
+      {
+        "id": "R1010",
+        "value": "93"
+      },
+      {
+        "id": "R1003",
+        "value": "26"
+      }
+    ],
+    "expected_lines": [
+      "R1000|69",
+      "R1001|13"
+    ],
+    "expected_answer": "R1000|69\nR1001|13",
+    "pair_id": "v10-dev-30302-i008",
+    "pair_index": 9,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1007|19\nR1001|13\nR1002|25\nR1008|26\nR1005|37\nR1004|60\nR1006|57\nR1009|96\nR1000|69\nR1010|93\nR1003|26\n只按R1000,R1001顺序抄对应数值，不要抄其他行。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 150,
+    "token_ids_sha256": "d6e33693584cf4c7ac0fc2cf1023fdcd52ea8233939a30fd001d184f3a7db5b1",
+    "content_sha256": "a6c4e9949454bc15e3694f00a17c782123102c6764d3388d4356a6e964c334ac",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 17,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30302-i009-c",
+    "content_id": "v10-dev-30302-i009",
+    "split": "development",
+    "seed": 30302,
+    "category": "interactive",
+    "category_index": 9,
+    "task_kind": "organize",
+    "kind_instance": 1,
+    "template_family": "v9_C_organize",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 2,
+    "input_token_range": [
+      144,
+      256
+    ],
+    "target_count": 2,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1000",
+      "R1001"
+    ],
+    "extra_records": 9,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R1001",
+        "value": "34"
+      },
+      {
+        "id": "R1007",
+        "value": "59"
+      },
+      {
+        "id": "R1008",
+        "value": "88"
+      },
+      {
+        "id": "R1005",
+        "value": "76"
+      },
+      {
+        "id": "R1002",
+        "value": "59"
+      },
+      {
+        "id": "R1004",
+        "value": "69"
+      },
+      {
+        "id": "R1009",
+        "value": "63"
+      },
+      {
+        "id": "R1000",
+        "value": "76"
+      },
+      {
+        "id": "R1006",
+        "value": "56"
+      },
+      {
+        "id": "R1010",
+        "value": "67"
+      },
+      {
+        "id": "R1003",
+        "value": "48"
+      }
+    ],
+    "expected_lines": [
+      "R1000|76",
+      "R1001|34"
+    ],
+    "expected_answer": "R1000|76\nR1001|34",
+    "pair_id": "v10-dev-30302-i009",
+    "pair_index": 10,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1001|34\nR1007|59\nR1008|88\nR1005|76\nR1002|59\nR1004|69\nR1009|63\nR1000|76\nR1006|56\nR1010|67\nR1003|48\n只按R1000,R1001顺序抄对应数值，不要抄其他行。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 150,
+    "token_ids_sha256": "c7aff5cc7a6280ff560652707da2ea10d34f87c333567402d077cc9ed24b9f3a",
+    "content_sha256": "4d66148091b3d3080b6489fcf6f6809b9ba5bed0d70d6d5788de354fca3b0dfe",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 17,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30302-i010-c",
+    "content_id": "v10-dev-30302-i010",
+    "split": "development",
+    "seed": 30302,
+    "category": "interactive",
+    "category_index": 10,
+    "task_kind": "organize",
+    "kind_instance": 2,
+    "template_family": "v9_C_organize",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 0,
+    "input_token_range": [
+      32,
+      79
+    ],
+    "target_count": 2,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1000",
+      "R1001"
+    ],
+    "extra_records": 0,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R1001",
+        "value": "23"
+      },
+      {
+        "id": "R1000",
+        "value": "83"
+      }
+    ],
+    "expected_lines": [
+      "R1000|83",
+      "R1001|23"
+    ],
+    "expected_answer": "R1000|83\nR1001|23",
+    "pair_id": "v10-dev-30302-i010",
+    "pair_index": 11,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1001|23\nR1000|83\n只按R1000,R1001顺序抄对应数值，不要抄其他行。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 69,
+    "token_ids_sha256": "0dd8ee6470a047f9ff6a286a847f354fe20689861a53a3fa97348d34f2be2219",
+    "content_sha256": "b7d1557b3a5f242a2eca718fd0a18a7154ac5acaefcaba16572bc94c7e3cd866",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 17,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30302-i011-c",
+    "content_id": "v10-dev-30302-i011",
+    "split": "development",
+    "seed": 30302,
+    "category": "interactive",
+    "category_index": 11,
+    "task_kind": "organize",
+    "kind_instance": 3,
+    "template_family": "v9_C_organize",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 1,
+    "input_token_range": [
+      80,
+      143
+    ],
+    "target_count": 2,
+    "max_tokens": 64,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1000",
+      "R1001"
+    ],
+    "extra_records": 2,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R1001",
+        "value": "12"
+      },
+      {
+        "id": "R1002",
+        "value": "66"
+      },
+      {
+        "id": "R1000",
+        "value": "90"
+      },
+      {
+        "id": "R1003",
+        "value": "98"
+      }
+    ],
+    "expected_lines": [
+      "R1000|90",
+      "R1001|12"
+    ],
+    "expected_answer": "R1000|90\nR1001|12",
+    "pair_id": "v10-dev-30302-i011",
+    "pair_index": 12,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1001|12\nR1002|66\nR1000|90\nR1003|98\n只按R1000,R1001顺序抄对应数值，不要抄其他行。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 87,
+    "token_ids_sha256": "5c62f2726345abafc7f111131f8c454f25e02dd1b84bbdb588eca6f5bf28a31b",
+    "content_sha256": "f9f3716db2b8b623eaa7847cfcd8e3801095b2dbe6a7539906253f91bf54672d",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 17,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30302-b000-c",
+    "content_id": "v10-dev-30302-b000",
+    "split": "development",
+    "seed": 30302,
+    "category": "background",
+    "category_index": 0,
+    "task_kind": "extract",
+    "kind_instance": 0,
+    "template_family": "v9_C_extract",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 0,
+    "input_token_range": [
+      128,
+      319
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1000",
+      "R1001",
+      "R1002",
+      "R1003",
+      "R1004",
+      "R1005"
+    ],
+    "extra_records": 1,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R1003",
+        "value": "72"
+      },
+      {
+        "id": "R1002",
+        "value": "72"
+      },
+      {
+        "id": "R1006",
+        "value": "12"
+      },
+      {
+        "id": "R1004",
+        "value": "86"
+      },
+      {
+        "id": "R1000",
+        "value": "13"
+      },
+      {
+        "id": "R1005",
+        "value": "34"
+      },
+      {
+        "id": "R1001",
+        "value": "57"
+      }
+    ],
+    "expected_lines": [
+      "R1000|13",
+      "R1001|57",
+      "R1002|72",
+      "R1003|72",
+      "R1004|86",
+      "R1005|34"
+    ],
+    "expected_answer": "R1000|13\nR1001|57\nR1002|72\nR1003|72\nR1004|86\nR1005|34",
+    "pair_id": "v10-dev-30302-b000",
+    "pair_index": 13,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1003|72\nR1002|72\nR1006|12\nR1004|86\nR1000|13\nR1005|34\nR1001|57\n提取R1000,R1001,R1002,R1003,R1004,R1005对应的数值，不要复制编号作值。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 132,
+    "token_ids_sha256": "24548e919ea68a9a58bd18c141bdaa572363324ee69cb58e8b1501d9dbb34709",
+    "content_sha256": "bd924eb69072f03fca16f5de92763b1df24bc0a80429e179b174d30ff6a0ebd7",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 53,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30302-b001-c",
+    "content_id": "v10-dev-30302-b001",
+    "split": "development",
+    "seed": 30302,
+    "category": "background",
+    "category_index": 1,
+    "task_kind": "extract",
+    "kind_instance": 1,
+    "template_family": "v9_C_extract",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 0,
+    "input_token_range": [
+      128,
+      319
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1000",
+      "R1001",
+      "R1002",
+      "R1003",
+      "R1004",
+      "R1005"
+    ],
+    "extra_records": 1,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R1005",
+        "value": "79"
+      },
+      {
+        "id": "R1004",
+        "value": "50"
+      },
+      {
+        "id": "R1001",
+        "value": "88"
+      },
+      {
+        "id": "R1006",
+        "value": "85"
+      },
+      {
+        "id": "R1002",
+        "value": "66"
+      },
+      {
+        "id": "R1003",
+        "value": "76"
+      },
+      {
+        "id": "R1000",
+        "value": "20"
+      }
+    ],
+    "expected_lines": [
+      "R1000|20",
+      "R1001|88",
+      "R1002|66",
+      "R1003|76",
+      "R1004|50",
+      "R1005|79"
+    ],
+    "expected_answer": "R1000|20\nR1001|88\nR1002|66\nR1003|76\nR1004|50\nR1005|79",
+    "pair_id": "v10-dev-30302-b001",
+    "pair_index": 14,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1005|79\nR1004|50\nR1001|88\nR1006|85\nR1002|66\nR1003|76\nR1000|20\n提取R1000,R1001,R1002,R1003,R1004,R1005对应的数值，不要复制编号作值。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 132,
+    "token_ids_sha256": "8a5662543c336a66e4976ee4026fba6d166da36457af60288321813ea698f945",
+    "content_sha256": "dedf38ef427f1012cdf3caa4fb7a1dd71c91ae843e6187b5abd9ce16f5101c6f",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 53,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30302-b002-c",
+    "content_id": "v10-dev-30302-b002",
+    "split": "development",
+    "seed": 30302,
+    "category": "background",
+    "category_index": 2,
+    "task_kind": "extract",
+    "kind_instance": 2,
+    "template_family": "v9_C_extract",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 1,
+    "input_token_range": [
+      320,
+      639
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1000",
+      "R1001",
+      "R1002",
+      "R1003",
+      "R1004",
+      "R1005"
+    ],
+    "extra_records": 22,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R1021",
+        "value": "26"
+      },
+      {
+        "id": "R1013",
+        "value": "24"
+      },
+      {
+        "id": "R1006",
+        "value": "61"
+      },
+      {
+        "id": "R1007",
+        "value": "62"
+      },
+      {
+        "id": "R1000",
+        "value": "27"
+      },
+      {
+        "id": "R1026",
+        "value": "61"
+      },
+      {
+        "id": "R1009",
+        "value": "66"
+      },
+      {
+        "id": "R1004",
+        "value": "24"
+      },
+      {
+        "id": "R1008",
+        "value": "94"
+      },
+      {
+        "id": "R1010",
+        "value": "25"
+      },
+      {
+        "id": "R1014",
+        "value": "73"
+      },
+      {
+        "id": "R1002",
+        "value": "52"
+      },
+      {
+        "id": "R1012",
+        "value": "29"
+      },
+      {
+        "id": "R1017",
+        "value": "91"
+      },
+      {
+        "id": "R1018",
+        "value": "33"
+      },
+      {
+        "id": "R1022",
+        "value": "14"
+      },
+      {
+        "id": "R1025",
+        "value": "75"
+      },
+      {
+        "id": "R1024",
+        "value": "88"
+      },
+      {
+        "id": "R1011",
+        "value": "39"
+      },
+      {
+        "id": "R1015",
+        "value": "67"
+      },
+      {
+        "id": "R1023",
+        "value": "89"
+      },
+      {
+        "id": "R1020",
+        "value": "56"
+      },
+      {
+        "id": "R1003",
+        "value": "71"
+      },
+      {
+        "id": "R1005",
+        "value": "17"
+      },
+      {
+        "id": "R1027",
+        "value": "58"
+      },
+      {
+        "id": "R1016",
+        "value": "72"
+      },
+      {
+        "id": "R1001",
+        "value": "93"
+      },
+      {
+        "id": "R1019",
+        "value": "65"
+      }
+    ],
+    "expected_lines": [
+      "R1000|27",
+      "R1001|93",
+      "R1002|52",
+      "R1003|71",
+      "R1004|24",
+      "R1005|17"
+    ],
+    "expected_answer": "R1000|27\nR1001|93\nR1002|52\nR1003|71\nR1004|24\nR1005|17",
+    "pair_id": "v10-dev-30302-b002",
+    "pair_index": 15,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1021|26\nR1013|24\nR1006|61\nR1007|62\nR1000|27\nR1026|61\nR1009|66\nR1004|24\nR1008|94\nR1010|25\nR1014|73\nR1002|52\nR1012|29\nR1017|91\nR1018|33\nR1022|14\nR1025|75\nR1024|88\nR1011|39\nR1015|67\nR1023|89\nR1020|56\nR1003|71\nR1005|17\nR1027|58\nR1016|72\nR1001|93\nR1019|65\n提取R1000,R1001,R1002,R1003,R1004,R1005对应的数值，不要复制编号作值。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 321,
+    "token_ids_sha256": "232e1c671b85af32e1d1c0b354c438b3a0d70e534fd7daa8e3b1327e2a59415a",
+    "content_sha256": "dc676b2f096ac6b0e0e0c81e6295f84c27fc6c15ba55ef422a3c6b9bd910f280",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 53,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30302-b003-c",
+    "content_id": "v10-dev-30302-b003",
+    "split": "development",
+    "seed": 30302,
+    "category": "background",
+    "category_index": 3,
+    "task_kind": "extract",
+    "kind_instance": 3,
+    "template_family": "v9_C_extract",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 2,
+    "input_token_range": [
+      640,
+      1024
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1000",
+      "R1001",
+      "R1002",
+      "R1003",
+      "R1004",
+      "R1005"
+    ],
+    "extra_records": 58,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R1037",
+        "value": "98"
+      },
+      {
+        "id": "R1043",
+        "value": "19"
+      },
+      {
+        "id": "R1023",
+        "value": "12"
+      },
+      {
+        "id": "R1016",
+        "value": "58"
+      },
+      {
+        "id": "R1030",
+        "value": "36"
+      },
+      {
+        "id": "R1028",
+        "value": "47"
+      },
+      {
+        "id": "R1055",
+        "value": "73"
+      },
+      {
+        "id": "R1004",
+        "value": "24"
+      },
+      {
+        "id": "R1040",
+        "value": "30"
+      },
+      {
+        "id": "R1059",
+        "value": "46"
+      },
+      {
+        "id": "R1044",
+        "value": "48"
+      },
+      {
+        "id": "R1019",
+        "value": "76"
+      },
+      {
+        "id": "R1011",
+        "value": "58"
+      },
+      {
+        "id": "R1035",
+        "value": "27"
+      },
+      {
+        "id": "R1053",
+        "value": "82"
+      },
+      {
+        "id": "R1002",
+        "value": "44"
+      },
+      {
+        "id": "R1005",
+        "value": "87"
+      },
+      {
+        "id": "R1061",
+        "value": "86"
+      },
+      {
+        "id": "R1025",
+        "value": "61"
+      },
+      {
+        "id": "R1033",
+        "value": "89"
+      },
+      {
+        "id": "R1056",
+        "value": "19"
+      },
+      {
+        "id": "R1063",
+        "value": "16"
+      },
+      {
+        "id": "R1046",
+        "value": "75"
+      },
+      {
+        "id": "R1026",
+        "value": "22"
+      },
+      {
+        "id": "R1013",
+        "value": "87"
+      },
+      {
+        "id": "R1054",
+        "value": "54"
+      },
+      {
+        "id": "R1010",
+        "value": "54"
+      },
+      {
+        "id": "R1047",
+        "value": "26"
+      },
+      {
+        "id": "R1038",
+        "value": "80"
+      },
+      {
+        "id": "R1001",
+        "value": "38"
+      },
+      {
+        "id": "R1057",
+        "value": "22"
+      },
+      {
+        "id": "R1006",
+        "value": "84"
+      },
+      {
+        "id": "R1060",
+        "value": "46"
+      },
+      {
+        "id": "R1015",
+        "value": "79"
+      },
+      {
+        "id": "R1062",
+        "value": "97"
+      },
+      {
+        "id": "R1049",
+        "value": "41"
+      },
+      {
+        "id": "R1058",
+        "value": "55"
+      },
+      {
+        "id": "R1034",
+        "value": "35"
+      },
+      {
+        "id": "R1018",
+        "value": "82"
+      },
+      {
+        "id": "R1042",
+        "value": "32"
+      },
+      {
+        "id": "R1007",
+        "value": "18"
+      },
+      {
+        "id": "R1031",
+        "value": "49"
+      },
+      {
+        "id": "R1024",
+        "value": "54"
+      },
+      {
+        "id": "R1027",
+        "value": "90"
+      },
+      {
+        "id": "R1045",
+        "value": "18"
+      },
+      {
+        "id": "R1032",
+        "value": "62"
+      },
+      {
+        "id": "R1050",
+        "value": "57"
+      },
+      {
+        "id": "R1020",
+        "value": "35"
+      },
+      {
+        "id": "R1012",
+        "value": "71"
+      },
+      {
+        "id": "R1008",
+        "value": "18"
+      },
+      {
+        "id": "R1029",
+        "value": "19"
+      },
+      {
+        "id": "R1009",
+        "value": "24"
+      },
+      {
+        "id": "R1048",
+        "value": "62"
+      },
+      {
+        "id": "R1017",
+        "value": "59"
+      },
+      {
+        "id": "R1003",
+        "value": "76"
+      },
+      {
+        "id": "R1036",
+        "value": "72"
+      },
+      {
+        "id": "R1051",
+        "value": "94"
+      },
+      {
+        "id": "R1000",
+        "value": "34"
+      },
+      {
+        "id": "R1039",
+        "value": "69"
+      },
+      {
+        "id": "R1014",
+        "value": "45"
+      },
+      {
+        "id": "R1041",
+        "value": "42"
+      },
+      {
+        "id": "R1021",
+        "value": "38"
+      },
+      {
+        "id": "R1052",
+        "value": "15"
+      },
+      {
+        "id": "R1022",
+        "value": "78"
+      }
+    ],
+    "expected_lines": [
+      "R1000|34",
+      "R1001|38",
+      "R1002|44",
+      "R1003|76",
+      "R1004|24",
+      "R1005|87"
+    ],
+    "expected_answer": "R1000|34\nR1001|38\nR1002|44\nR1003|76\nR1004|24\nR1005|87",
+    "pair_id": "v10-dev-30302-b003",
+    "pair_index": 16,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1037|98\nR1043|19\nR1023|12\nR1016|58\nR1030|36\nR1028|47\nR1055|73\nR1004|24\nR1040|30\nR1059|46\nR1044|48\nR1019|76\nR1011|58\nR1035|27\nR1053|82\nR1002|44\nR1005|87\nR1061|86\nR1025|61\nR1033|89\nR1056|19\nR1063|16\nR1046|75\nR1026|22\nR1013|87\nR1054|54\nR1010|54\nR1047|26\nR1038|80\nR1001|38\nR1057|22\nR1006|84\nR1060|46\nR1015|79\nR1062|97\nR1049|41\nR1058|55\nR1034|35\nR1018|82\nR1042|32\nR1007|18\nR1031|49\nR1024|54\nR1027|90\nR1045|18\nR1032|62\nR1050|57\nR1020|35\nR1012|71\nR1008|18\nR1029|19\nR1009|24\nR1048|62\nR1017|59\nR1003|76\nR1036|72\nR1051|94\nR1000|34\nR1039|69\nR1014|45\nR1041|42\nR1021|38\nR1052|15\nR1022|78\n提取R1000,R1001,R1002,R1003,R1004,R1005对应的数值，不要复制编号作值。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 645,
+    "token_ids_sha256": "e71f4ceeaa6d9f33ef851f91695e6708ff7372c6038e5fae3feb19bad7eb084b",
+    "content_sha256": "c391a006d15502aa4036c98abb318f9a0ba7f012955d0c9d8731e257ebcabda7",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 53,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30302-b004-c",
+    "content_id": "v10-dev-30302-b004",
+    "split": "development",
+    "seed": 30302,
+    "category": "background",
+    "category_index": 4,
+    "task_kind": "check",
+    "kind_instance": 0,
+    "template_family": "v9_C_check",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 1,
+    "input_token_range": [
+      320,
+      639
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1000",
+      "R1001",
+      "R1002",
+      "R1003",
+      "R1004",
+      "R1005"
+    ],
+    "extra_records": 8,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "left_records": [
+      {
+        "id": "R1009",
+        "value": "56"
+      },
+      {
+        "id": "R1001",
+        "value": "39"
+      },
+      {
+        "id": "R1010",
+        "value": "67"
+      },
+      {
+        "id": "R1000",
+        "value": "41"
+      },
+      {
+        "id": "R1004",
+        "value": "10"
+      },
+      {
+        "id": "R1012",
+        "value": "39"
+      },
+      {
+        "id": "R1008",
+        "value": "20"
+      },
+      {
+        "id": "R1002",
+        "value": "41"
+      },
+      {
+        "id": "R1003",
+        "value": "87"
+      },
+      {
+        "id": "R1011",
+        "value": "52"
+      },
+      {
+        "id": "R1006",
+        "value": "32"
+      },
+      {
+        "id": "R1007",
+        "value": "83"
+      },
+      {
+        "id": "R1013",
+        "value": "57"
+      },
+      {
+        "id": "R1005",
+        "value": "63"
+      }
+    ],
+    "right_records": [
+      {
+        "id": "R1005",
+        "value": "63"
+      },
+      {
+        "id": "R1013",
+        "value": "57"
+      },
+      {
+        "id": "R1007",
+        "value": "83"
+      },
+      {
+        "id": "R1006",
+        "value": "33"
+      },
+      {
+        "id": "R1011",
+        "value": "52"
+      },
+      {
+        "id": "R1003",
+        "value": "87"
+      },
+      {
+        "id": "R1002",
+        "value": "42"
+      },
+      {
+        "id": "R1008",
+        "value": "21"
+      },
+      {
+        "id": "R1012",
+        "value": "40"
+      },
+      {
+        "id": "R1004",
+        "value": "11"
+      },
+      {
+        "id": "R1000",
+        "value": "42"
+      },
+      {
+        "id": "R1010",
+        "value": "68"
+      },
+      {
+        "id": "R1001",
+        "value": "39"
+      },
+      {
+        "id": "R1009",
+        "value": "56"
+      }
+    ],
+    "expected_lines": [
+      "R1000|不一致",
+      "R1001|一致",
+      "R1002|不一致",
+      "R1003|一致",
+      "R1004|不一致",
+      "R1005|一致"
+    ],
+    "expected_answer": "R1000|不一致\nR1001|一致\nR1002|不一致\nR1003|一致\nR1004|不一致\nR1005|一致",
+    "pair_id": "v10-dev-30302-b004",
+    "pair_index": 17,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\nA\nR1009|56\nR1001|39\nR1010|67\nR1000|41\nR1004|10\nR1012|39\nR1008|20\nR1002|41\nR1003|87\nR1011|52\nR1006|32\nR1007|83\nR1013|57\nR1005|63\nB\nR1005|63\nR1013|57\nR1007|83\nR1006|33\nR1011|52\nR1003|87\nR1002|42\nR1008|21\nR1012|40\nR1004|11\nR1000|42\nR1010|68\nR1001|39\nR1009|56\n逐项比较A和B中R1000,R1001,R1002,R1003,R1004,R1005的数值：相等写一致，否则写不一致。每行ID|结论。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 333,
+    "token_ids_sha256": "9613bf8c6f8b3cd2d7257b4f91055d9bdf226ff3ee533c2e6b909655d7a9bc54",
+    "content_sha256": "61b1cbdee3d03b73c61b7f8fcdd55ec8558fd997f0a865cabcb1becb1c897114",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 47,
+    "grammar_ceiling": 55
+  },
+  {
+    "req_id": "v10-dev-30302-b005-c",
+    "content_id": "v10-dev-30302-b005",
+    "split": "development",
+    "seed": 30302,
+    "category": "background",
+    "category_index": 5,
+    "task_kind": "check",
+    "kind_instance": 1,
+    "template_family": "v9_C_check",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 1,
+    "input_token_range": [
+      320,
+      639
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1000",
+      "R1001",
+      "R1002",
+      "R1003",
+      "R1004",
+      "R1005"
+    ],
+    "extra_records": 8,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "left_records": [
+      {
+        "id": "R1006",
+        "value": "63"
+      },
+      {
+        "id": "R1012",
+        "value": "14"
+      },
+      {
+        "id": "R1010",
+        "value": "72"
+      },
+      {
+        "id": "R1003",
+        "value": "10"
+      },
+      {
+        "id": "R1011",
+        "value": "53"
+      },
+      {
+        "id": "R1005",
+        "value": "56"
+      },
+      {
+        "id": "R1008",
+        "value": "30"
+      },
+      {
+        "id": "R1002",
+        "value": "20"
+      },
+      {
+        "id": "R1009",
+        "value": "71"
+      },
+      {
+        "id": "R1004",
+        "value": "32"
+      },
+      {
+        "id": "R1001",
+        "value": "20"
+      },
+      {
+        "id": "R1007",
+        "value": "78"
+      },
+      {
+        "id": "R1013",
+        "value": "63"
+      },
+      {
+        "id": "R1000",
+        "value": "48"
+      }
+    ],
+    "right_records": [
+      {
+        "id": "R1000",
+        "value": "48"
+      },
+      {
+        "id": "R1013",
+        "value": "64"
+      },
+      {
+        "id": "R1007",
+        "value": "79"
+      },
+      {
+        "id": "R1001",
+        "value": "21"
+      },
+      {
+        "id": "R1004",
+        "value": "32"
+      },
+      {
+        "id": "R1009",
+        "value": "72"
+      },
+      {
+        "id": "R1002",
+        "value": "20"
+      },
+      {
+        "id": "R1008",
+        "value": "30"
+      },
+      {
+        "id": "R1005",
+        "value": "57"
+      },
+      {
+        "id": "R1011",
+        "value": "54"
+      },
+      {
+        "id": "R1003",
+        "value": "11"
+      },
+      {
+        "id": "R1010",
+        "value": "72"
+      },
+      {
+        "id": "R1012",
+        "value": "14"
+      },
+      {
+        "id": "R1006",
+        "value": "63"
+      }
+    ],
+    "expected_lines": [
+      "R1000|一致",
+      "R1001|不一致",
+      "R1002|一致",
+      "R1003|不一致",
+      "R1004|一致",
+      "R1005|不一致"
+    ],
+    "expected_answer": "R1000|一致\nR1001|不一致\nR1002|一致\nR1003|不一致\nR1004|一致\nR1005|不一致",
+    "pair_id": "v10-dev-30302-b005",
+    "pair_index": 18,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\nA\nR1006|63\nR1012|14\nR1010|72\nR1003|10\nR1011|53\nR1005|56\nR1008|30\nR1002|20\nR1009|71\nR1004|32\nR1001|20\nR1007|78\nR1013|63\nR1000|48\nB\nR1000|48\nR1013|64\nR1007|79\nR1001|21\nR1004|32\nR1009|72\nR1002|20\nR1008|30\nR1005|57\nR1011|54\nR1003|11\nR1010|72\nR1012|14\nR1006|63\n逐项比较A和B中R1000,R1001,R1002,R1003,R1004,R1005的数值：相等写一致，否则写不一致。每行ID|结论。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 333,
+    "token_ids_sha256": "13621db9c427cbf9eeec1228e4cac9427fdf1ec0e04fb4cf3d7d8cbce96d662e",
+    "content_sha256": "688262d2558779b2d3fde9dcfb7f2174111445c32620742fea760bb579b0843c",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 47,
+    "grammar_ceiling": 55
+  },
+  {
+    "req_id": "v10-dev-30302-b006-c",
+    "content_id": "v10-dev-30302-b006",
+    "split": "development",
+    "seed": 30302,
+    "category": "background",
+    "category_index": 6,
+    "task_kind": "check",
+    "kind_instance": 2,
+    "template_family": "v9_C_check",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 2,
+    "input_token_range": [
+      640,
+      1024
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1000",
+      "R1001",
+      "R1002",
+      "R1003",
+      "R1004",
+      "R1005"
+    ],
+    "extra_records": 26,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "left_records": [
+      {
+        "id": "R1014",
+        "value": "79"
+      },
+      {
+        "id": "R1001",
+        "value": "93"
+      },
+      {
+        "id": "R1025",
+        "value": "57"
+      },
+      {
+        "id": "R1008",
+        "value": "30"
+      },
+      {
+        "id": "R1015",
+        "value": "98"
+      },
+      {
+        "id": "R1024",
+        "value": "52"
+      },
+      {
+        "id": "R1007",
+        "value": "58"
+      },
+      {
+        "id": "R1027",
+        "value": "21"
+      },
+      {
+        "id": "R1004",
+        "value": "55"
+      },
+      {
+        "id": "R1017",
+        "value": "94"
+      },
+      {
+        "id": "R1016",
+        "value": "60"
+      },
+      {
+        "id": "R1000",
+        "value": "55"
+      },
+      {
+        "id": "R1023",
+        "value": "31"
+      },
+      {
+        "id": "R1011",
+        "value": "65"
+      },
+      {
+        "id": "R1019",
+        "value": "30"
+      },
+      {
+        "id": "R1030",
+        "value": "91"
+      },
+      {
+        "id": "R1031",
+        "value": "12"
+      },
+      {
+        "id": "R1002",
+        "value": "39"
+      },
+      {
+        "id": "R1006",
+        "value": "82"
+      },
+      {
+        "id": "R1026",
+        "value": "81"
+      },
+      {
+        "id": "R1003",
+        "value": "59"
+      },
+      {
+        "id": "R1010",
+        "value": "16"
+      },
+      {
+        "id": "R1012",
+        "value": "84"
+      },
+      {
+        "id": "R1022",
+        "value": "98"
+      },
+      {
+        "id": "R1018",
+        "value": "79"
+      },
+      {
+        "id": "R1028",
+        "value": "25"
+      },
+      {
+        "id": "R1005",
+        "value": "68"
+      },
+      {
+        "id": "R1013",
+        "value": "97"
+      },
+      {
+        "id": "R1009",
+        "value": "74"
+      },
+      {
+        "id": "R1021",
+        "value": "65"
+      },
+      {
+        "id": "R1020",
+        "value": "42"
+      },
+      {
+        "id": "R1029",
+        "value": "76"
+      }
+    ],
+    "right_records": [
+      {
+        "id": "R1029",
+        "value": "76"
+      },
+      {
+        "id": "R1020",
+        "value": "43"
+      },
+      {
+        "id": "R1021",
+        "value": "65"
+      },
+      {
+        "id": "R1009",
+        "value": "74"
+      },
+      {
+        "id": "R1013",
+        "value": "97"
+      },
+      {
+        "id": "R1005",
+        "value": "68"
+      },
+      {
+        "id": "R1028",
+        "value": "26"
+      },
+      {
+        "id": "R1018",
+        "value": "80"
+      },
+      {
+        "id": "R1022",
+        "value": "99"
+      },
+      {
+        "id": "R1012",
+        "value": "85"
+      },
+      {
+        "id": "R1010",
+        "value": "17"
+      },
+      {
+        "id": "R1003",
+        "value": "59"
+      },
+      {
+        "id": "R1026",
+        "value": "82"
+      },
+      {
+        "id": "R1006",
+        "value": "83"
+      },
+      {
+        "id": "R1002",
+        "value": "40"
+      },
+      {
+        "id": "R1031",
+        "value": "12"
+      },
+      {
+        "id": "R1030",
+        "value": "92"
+      },
+      {
+        "id": "R1019",
+        "value": "30"
+      },
+      {
+        "id": "R1011",
+        "value": "65"
+      },
+      {
+        "id": "R1023",
+        "value": "31"
+      },
+      {
+        "id": "R1000",
+        "value": "56"
+      },
+      {
+        "id": "R1016",
+        "value": "61"
+      },
+      {
+        "id": "R1017",
+        "value": "94"
+      },
+      {
+        "id": "R1004",
+        "value": "56"
+      },
+      {
+        "id": "R1027",
+        "value": "21"
+      },
+      {
+        "id": "R1007",
+        "value": "58"
+      },
+      {
+        "id": "R1024",
+        "value": "53"
+      },
+      {
+        "id": "R1015",
+        "value": "98"
+      },
+      {
+        "id": "R1008",
+        "value": "31"
+      },
+      {
+        "id": "R1025",
+        "value": "57"
+      },
+      {
+        "id": "R1001",
+        "value": "93"
+      },
+      {
+        "id": "R1014",
+        "value": "80"
+      }
+    ],
+    "expected_lines": [
+      "R1000|不一致",
+      "R1001|一致",
+      "R1002|不一致",
+      "R1003|一致",
+      "R1004|不一致",
+      "R1005|一致"
+    ],
+    "expected_answer": "R1000|不一致\nR1001|一致\nR1002|不一致\nR1003|一致\nR1004|不一致\nR1005|一致",
+    "pair_id": "v10-dev-30302-b006",
+    "pair_index": 19,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\nA\nR1014|79\nR1001|93\nR1025|57\nR1008|30\nR1015|98\nR1024|52\nR1007|58\nR1027|21\nR1004|55\nR1017|94\nR1016|60\nR1000|55\nR1023|31\nR1011|65\nR1019|30\nR1030|91\nR1031|12\nR1002|39\nR1006|82\nR1026|81\nR1003|59\nR1010|16\nR1012|84\nR1022|98\nR1018|79\nR1028|25\nR1005|68\nR1013|97\nR1009|74\nR1021|65\nR1020|42\nR1029|76\nB\nR1029|76\nR1020|43\nR1021|65\nR1009|74\nR1013|97\nR1005|68\nR1028|26\nR1018|80\nR1022|99\nR1012|85\nR1010|17\nR1003|59\nR1026|82\nR1006|83\nR1002|40\nR1031|12\nR1030|92\nR1019|30\nR1011|65\nR1023|31\nR1000|56\nR1016|61\nR1017|94\nR1004|56\nR1027|21\nR1007|58\nR1024|53\nR1015|98\nR1008|31\nR1025|57\nR1001|93\nR1014|80\n逐项比较A和B中R1000,R1001,R1002,R1003,R1004,R1005的数值：相等写一致，否则写不一致。每行ID|结论。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 657,
+    "token_ids_sha256": "4f518726e8a97fc41efde797fe948da20ed2ef832edbc3e4acbab86a3812ad88",
+    "content_sha256": "a6b817eefbf5c402243210852a752f48f7eee8c52574da0cb8c918fd8de466b7",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 47,
+    "grammar_ceiling": 55
+  },
+  {
+    "req_id": "v10-dev-30302-b007-c",
+    "content_id": "v10-dev-30302-b007",
+    "split": "development",
+    "seed": 30302,
+    "category": "background",
+    "category_index": 7,
+    "task_kind": "check",
+    "kind_instance": 3,
+    "template_family": "v9_C_check",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 0,
+    "input_token_range": [
+      128,
+      319
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1000",
+      "R1001",
+      "R1002",
+      "R1003",
+      "R1004",
+      "R1005"
+    ],
+    "extra_records": 0,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "left_records": [
+      {
+        "id": "R1005",
+        "value": "90"
+      },
+      {
+        "id": "R1000",
+        "value": "62"
+      },
+      {
+        "id": "R1001",
+        "value": "15"
+      },
+      {
+        "id": "R1003",
+        "value": "31"
+      },
+      {
+        "id": "R1004",
+        "value": "81"
+      },
+      {
+        "id": "R1002",
+        "value": "17"
+      }
+    ],
+    "right_records": [
+      {
+        "id": "R1002",
+        "value": "17"
+      },
+      {
+        "id": "R1004",
+        "value": "81"
+      },
+      {
+        "id": "R1003",
+        "value": "32"
+      },
+      {
+        "id": "R1001",
+        "value": "16"
+      },
+      {
+        "id": "R1000",
+        "value": "62"
+      },
+      {
+        "id": "R1005",
+        "value": "91"
+      }
+    ],
+    "expected_lines": [
+      "R1000|一致",
+      "R1001|不一致",
+      "R1002|一致",
+      "R1003|不一致",
+      "R1004|一致",
+      "R1005|不一致"
+    ],
+    "expected_answer": "R1000|一致\nR1001|不一致\nR1002|一致\nR1003|不一致\nR1004|一致\nR1005|不一致",
+    "pair_id": "v10-dev-30302-b007",
+    "pair_index": 20,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\nA\nR1005|90\nR1000|62\nR1001|15\nR1003|31\nR1004|81\nR1002|17\nB\nR1002|17\nR1004|81\nR1003|32\nR1001|16\nR1000|62\nR1005|91\n逐项比较A和B中R1000,R1001,R1002,R1003,R1004,R1005的数值：相等写一致，否则写不一致。每行ID|结论。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 189,
+    "token_ids_sha256": "6f2b083553a895a4f3932b54226de6a6ded25bb9df4739d9acfa710d8f41bbfd",
+    "content_sha256": "72addc01de3d028a75cee8658c576ec346d496a3df803bec2325cc989412d315",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 47,
+    "grammar_ceiling": 55
+  },
+  {
+    "req_id": "v10-dev-30302-b008-c",
+    "content_id": "v10-dev-30302-b008",
+    "split": "development",
+    "seed": 30302,
+    "category": "background",
+    "category_index": 8,
+    "task_kind": "organize",
+    "kind_instance": 0,
+    "template_family": "v9_C_organize",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 2,
+    "input_token_range": [
+      640,
+      1024
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1004",
+      "R1003",
+      "R1002",
+      "R1000",
+      "R1005",
+      "R1001"
+    ],
+    "extra_records": 58,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R1039",
+        "value": "19"
+      },
+      {
+        "id": "R1044",
+        "value": "97"
+      },
+      {
+        "id": "R1040",
+        "value": "27"
+      },
+      {
+        "id": "R1031",
+        "value": "34"
+      },
+      {
+        "id": "R1054",
+        "value": "61"
+      },
+      {
+        "id": "R1008",
+        "value": "36"
+      },
+      {
+        "id": "R1007",
+        "value": "32"
+      },
+      {
+        "id": "R1060",
+        "value": "55"
+      },
+      {
+        "id": "R1062",
+        "value": "39"
+      },
+      {
+        "id": "R1058",
+        "value": "85"
+      },
+      {
+        "id": "R1001",
+        "value": "82"
+      },
+      {
+        "id": "R1005",
+        "value": "63"
+      },
+      {
+        "id": "R1035",
+        "value": "56"
+      },
+      {
+        "id": "R1057",
+        "value": "89"
+      },
+      {
+        "id": "R1030",
+        "value": "91"
+      },
+      {
+        "id": "R1017",
+        "value": "12"
+      },
+      {
+        "id": "R1048",
+        "value": "89"
+      },
+      {
+        "id": "R1032",
+        "value": "59"
+      },
+      {
+        "id": "R1024",
+        "value": "84"
+      },
+      {
+        "id": "R1028",
+        "value": "64"
+      },
+      {
+        "id": "R1051",
+        "value": "36"
+      },
+      {
+        "id": "R1016",
+        "value": "23"
+      },
+      {
+        "id": "R1038",
+        "value": "44"
+      },
+      {
+        "id": "R1029",
+        "value": "78"
+      },
+      {
+        "id": "R1050",
+        "value": "99"
+      },
+      {
+        "id": "R1022",
+        "value": "76"
+      },
+      {
+        "id": "R1021",
+        "value": "73"
+      },
+      {
+        "id": "R1027",
+        "value": "94"
+      },
+      {
+        "id": "R1025",
+        "value": "58"
+      },
+      {
+        "id": "R1015",
+        "value": "19"
+      },
+      {
+        "id": "R1045",
+        "value": "25"
+      },
+      {
+        "id": "R1055",
+        "value": "26"
+      },
+      {
+        "id": "R1018",
+        "value": "14"
+      },
+      {
+        "id": "R1046",
+        "value": "47"
+      },
+      {
+        "id": "R1012",
+        "value": "35"
+      },
+      {
+        "id": "R1033",
+        "value": "70"
+      },
+      {
+        "id": "R1042",
+        "value": "94"
+      },
+      {
+        "id": "R1063",
+        "value": "69"
+      },
+      {
+        "id": "R1011",
+        "value": "55"
+      },
+      {
+        "id": "R1026",
+        "value": "27"
+      },
+      {
+        "id": "R1049",
+        "value": "54"
+      },
+      {
+        "id": "R1020",
+        "value": "34"
+      },
+      {
+        "id": "R1061",
+        "value": "78"
+      },
+      {
+        "id": "R1036",
+        "value": "84"
+      },
+      {
+        "id": "R1023",
+        "value": "23"
+      },
+      {
+        "id": "R1000",
+        "value": "69"
+      },
+      {
+        "id": "R1059",
+        "value": "68"
+      },
+      {
+        "id": "R1043",
+        "value": "97"
+      },
+      {
+        "id": "R1034",
+        "value": "73"
+      },
+      {
+        "id": "R1013",
+        "value": "90"
+      },
+      {
+        "id": "R1052",
+        "value": "64"
+      },
+      {
+        "id": "R1056",
+        "value": "58"
+      },
+      {
+        "id": "R1002",
+        "value": "12"
+      },
+      {
+        "id": "R1014",
+        "value": "30"
+      },
+      {
+        "id": "R1006",
+        "value": "40"
+      },
+      {
+        "id": "R1041",
+        "value": "93"
+      },
+      {
+        "id": "R1053",
+        "value": "44"
+      },
+      {
+        "id": "R1009",
+        "value": "47"
+      },
+      {
+        "id": "R1010",
+        "value": "84"
+      },
+      {
+        "id": "R1047",
+        "value": "88"
+      },
+      {
+        "id": "R1003",
+        "value": "54"
+      },
+      {
+        "id": "R1019",
+        "value": "72"
+      },
+      {
+        "id": "R1004",
+        "value": "92"
+      },
+      {
+        "id": "R1037",
+        "value": "71"
+      }
+    ],
+    "expected_lines": [
+      "R1004|92",
+      "R1003|54",
+      "R1002|12",
+      "R1000|69",
+      "R1005|63",
+      "R1001|82"
+    ],
+    "expected_answer": "R1004|92\nR1003|54\nR1002|12\nR1000|69\nR1005|63\nR1001|82",
+    "pair_id": "v10-dev-30302-b008",
+    "pair_index": 21,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1039|19\nR1044|97\nR1040|27\nR1031|34\nR1054|61\nR1008|36\nR1007|32\nR1060|55\nR1062|39\nR1058|85\nR1001|82\nR1005|63\nR1035|56\nR1057|89\nR1030|91\nR1017|12\nR1048|89\nR1032|59\nR1024|84\nR1028|64\nR1051|36\nR1016|23\nR1038|44\nR1029|78\nR1050|99\nR1022|76\nR1021|73\nR1027|94\nR1025|58\nR1015|19\nR1045|25\nR1055|26\nR1018|14\nR1046|47\nR1012|35\nR1033|70\nR1042|94\nR1063|69\nR1011|55\nR1026|27\nR1049|54\nR1020|34\nR1061|78\nR1036|84\nR1023|23\nR1000|69\nR1059|68\nR1043|97\nR1034|73\nR1013|90\nR1052|64\nR1056|58\nR1002|12\nR1014|30\nR1006|40\nR1041|93\nR1053|44\nR1009|47\nR1010|84\nR1047|88\nR1003|54\nR1019|72\nR1004|92\nR1037|71\n只按R1004,R1003,R1002,R1000,R1005,R1001顺序抄对应数值，不要抄其他行。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 647,
+    "token_ids_sha256": "ae4b8f673f7c2243debfebec08f726cff6a6fe6c431577ad75c48c97173c29a5",
+    "content_sha256": "c74c3261a721d285f0885d75c5f1695a38dc1e852618436825c7dabe8a4b9b16",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 53,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30302-b009-c",
+    "content_id": "v10-dev-30302-b009",
+    "split": "development",
+    "seed": 30302,
+    "category": "background",
+    "category_index": 9,
+    "task_kind": "organize",
+    "kind_instance": 1,
+    "template_family": "v9_C_organize",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 2,
+    "input_token_range": [
+      640,
+      1024
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1004",
+      "R1002",
+      "R1005",
+      "R1000",
+      "R1003",
+      "R1001"
+    ],
+    "extra_records": 58,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R1061",
+        "value": "20"
+      },
+      {
+        "id": "R1001",
+        "value": "85"
+      },
+      {
+        "id": "R1022",
+        "value": "21"
+      },
+      {
+        "id": "R1042",
+        "value": "23"
+      },
+      {
+        "id": "R1032",
+        "value": "90"
+      },
+      {
+        "id": "R1056",
+        "value": "20"
+      },
+      {
+        "id": "R1035",
+        "value": "69"
+      },
+      {
+        "id": "R1041",
+        "value": "43"
+      },
+      {
+        "id": "R1021",
+        "value": "47"
+      },
+      {
+        "id": "R1063",
+        "value": "46"
+      },
+      {
+        "id": "R1058",
+        "value": "67"
+      },
+      {
+        "id": "R1037",
+        "value": "48"
+      },
+      {
+        "id": "R1057",
+        "value": "87"
+      },
+      {
+        "id": "R1025",
+        "value": "54"
+      },
+      {
+        "id": "R1007",
+        "value": "29"
+      },
+      {
+        "id": "R1003",
+        "value": "44"
+      },
+      {
+        "id": "R1036",
+        "value": "80"
+      },
+      {
+        "id": "R1039",
+        "value": "13"
+      },
+      {
+        "id": "R1008",
+        "value": "27"
+      },
+      {
+        "id": "R1013",
+        "value": "33"
+      },
+      {
+        "id": "R1006",
+        "value": "87"
+      },
+      {
+        "id": "R1020",
+        "value": "58"
+      },
+      {
+        "id": "R1046",
+        "value": "70"
+      },
+      {
+        "id": "R1000",
+        "value": "76"
+      },
+      {
+        "id": "R1012",
+        "value": "58"
+      },
+      {
+        "id": "R1052",
+        "value": "99"
+      },
+      {
+        "id": "R1055",
+        "value": "42"
+      },
+      {
+        "id": "R1005",
+        "value": "26"
+      },
+      {
+        "id": "R1038",
+        "value": "13"
+      },
+      {
+        "id": "R1054",
+        "value": "27"
+      },
+      {
+        "id": "R1024",
+        "value": "53"
+      },
+      {
+        "id": "R1026",
+        "value": "10"
+      },
+      {
+        "id": "R1011",
+        "value": "73"
+      },
+      {
+        "id": "R1049",
+        "value": "52"
+      },
+      {
+        "id": "R1051",
+        "value": "27"
+      },
+      {
+        "id": "R1040",
+        "value": "37"
+      },
+      {
+        "id": "R1044",
+        "value": "37"
+      },
+      {
+        "id": "R1027",
+        "value": "53"
+      },
+      {
+        "id": "R1034",
+        "value": "15"
+      },
+      {
+        "id": "R1014",
+        "value": "10"
+      },
+      {
+        "id": "R1002",
+        "value": "78"
+      },
+      {
+        "id": "R1015",
+        "value": "37"
+      },
+      {
+        "id": "R1030",
+        "value": "74"
+      },
+      {
+        "id": "R1004",
+        "value": "84"
+      },
+      {
+        "id": "R1019",
+        "value": "63"
+      },
+      {
+        "id": "R1062",
+        "value": "49"
+      },
+      {
+        "id": "R1043",
+        "value": "74"
+      },
+      {
+        "id": "R1023",
+        "value": "45"
+      },
+      {
+        "id": "R1053",
+        "value": "93"
+      },
+      {
+        "id": "R1047",
+        "value": "14"
+      },
+      {
+        "id": "R1033",
+        "value": "95"
+      },
+      {
+        "id": "R1048",
+        "value": "31"
+      },
+      {
+        "id": "R1060",
+        "value": "47"
+      },
+      {
+        "id": "R1031",
+        "value": "86"
+      },
+      {
+        "id": "R1059",
+        "value": "56"
+      },
+      {
+        "id": "R1010",
+        "value": "20"
+      },
+      {
+        "id": "R1009",
+        "value": "86"
+      },
+      {
+        "id": "R1018",
+        "value": "63"
+      },
+      {
+        "id": "R1029",
+        "value": "84"
+      },
+      {
+        "id": "R1028",
+        "value": "58"
+      },
+      {
+        "id": "R1050",
+        "value": "63"
+      },
+      {
+        "id": "R1045",
+        "value": "18"
+      },
+      {
+        "id": "R1017",
+        "value": "38"
+      },
+      {
+        "id": "R1016",
+        "value": "89"
+      }
+    ],
+    "expected_lines": [
+      "R1004|84",
+      "R1002|78",
+      "R1005|26",
+      "R1000|76",
+      "R1003|44",
+      "R1001|85"
+    ],
+    "expected_answer": "R1004|84\nR1002|78\nR1005|26\nR1000|76\nR1003|44\nR1001|85",
+    "pair_id": "v10-dev-30302-b009",
+    "pair_index": 22,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1061|20\nR1001|85\nR1022|21\nR1042|23\nR1032|90\nR1056|20\nR1035|69\nR1041|43\nR1021|47\nR1063|46\nR1058|67\nR1037|48\nR1057|87\nR1025|54\nR1007|29\nR1003|44\nR1036|80\nR1039|13\nR1008|27\nR1013|33\nR1006|87\nR1020|58\nR1046|70\nR1000|76\nR1012|58\nR1052|99\nR1055|42\nR1005|26\nR1038|13\nR1054|27\nR1024|53\nR1026|10\nR1011|73\nR1049|52\nR1051|27\nR1040|37\nR1044|37\nR1027|53\nR1034|15\nR1014|10\nR1002|78\nR1015|37\nR1030|74\nR1004|84\nR1019|63\nR1062|49\nR1043|74\nR1023|45\nR1053|93\nR1047|14\nR1033|95\nR1048|31\nR1060|47\nR1031|86\nR1059|56\nR1010|20\nR1009|86\nR1018|63\nR1029|84\nR1028|58\nR1050|63\nR1045|18\nR1017|38\nR1016|89\n只按R1004,R1002,R1005,R1000,R1003,R1001顺序抄对应数值，不要抄其他行。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 647,
+    "token_ids_sha256": "842c11243da50df3a1b843716f94b2b6dedf0613ef767baf85be131d581b24f5",
+    "content_sha256": "0f2838495fb4dd45c3bd6f35dec0234ffba65439f0d548342e4105c4042a75d1",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 53,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30302-b010-c",
+    "content_id": "v10-dev-30302-b010",
+    "split": "development",
+    "seed": 30302,
+    "category": "background",
+    "category_index": 10,
+    "task_kind": "organize",
+    "kind_instance": 2,
+    "template_family": "v9_C_organize",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 0,
+    "input_token_range": [
+      128,
+      319
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1001",
+      "R1004",
+      "R1003",
+      "R1000",
+      "R1002",
+      "R1005"
+    ],
+    "extra_records": 1,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R1005",
+        "value": "34"
+      },
+      {
+        "id": "R1002",
+        "value": "63"
+      },
+      {
+        "id": "R1000",
+        "value": "83"
+      },
+      {
+        "id": "R1003",
+        "value": "22"
+      },
+      {
+        "id": "R1004",
+        "value": "34"
+      },
+      {
+        "id": "R1001",
+        "value": "55"
+      },
+      {
+        "id": "R1006",
+        "value": "86"
+      }
+    ],
+    "expected_lines": [
+      "R1001|55",
+      "R1004|34",
+      "R1003|22",
+      "R1000|83",
+      "R1002|63",
+      "R1005|34"
+    ],
+    "expected_answer": "R1001|55\nR1004|34\nR1003|22\nR1000|83\nR1002|63\nR1005|34",
+    "pair_id": "v10-dev-30302-b010",
+    "pair_index": 23,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1005|34\nR1002|63\nR1000|83\nR1003|22\nR1004|34\nR1001|55\nR1006|86\n只按R1001,R1004,R1003,R1000,R1002,R1005顺序抄对应数值，不要抄其他行。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 134,
+    "token_ids_sha256": "065482caad685deddbb6e24ebf6164a57d0b828c22bbbdc3dc0d7c26fb94e064",
+    "content_sha256": "d17f95e3f77eed7f1bb40d9db20b39317cb6bc967aec8c24fc8d6980e569fc99",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 53,
+    "grammar_ceiling": null
+  },
+  {
+    "req_id": "v10-dev-30302-b011-c",
+    "content_id": "v10-dev-30302-b011",
+    "split": "development",
+    "seed": 30302,
+    "category": "background",
+    "category_index": 11,
+    "task_kind": "organize",
+    "kind_instance": 3,
+    "template_family": "v9_C_organize",
+    "template_version": "p1_grammar_upper_v10",
+    "source_id": "project_original_grammar_upper_v10",
+    "input_token_bucket": 1,
+    "input_token_range": [
+      320,
+      639
+    ],
+    "target_count": 6,
+    "max_tokens": 384,
+    "temperature": 0.0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "target_ids": [
+      "R1004",
+      "R1003",
+      "R1002",
+      "R1000",
+      "R1005",
+      "R1001"
+    ],
+    "extra_records": 22,
+    "oracle_evaluation_only": true,
+    "evaluation_only": true,
+    "source_records": [
+      {
+        "id": "R1001",
+        "value": "66"
+      },
+      {
+        "id": "R1022",
+        "value": "16"
+      },
+      {
+        "id": "R1006",
+        "value": "98"
+      },
+      {
+        "id": "R1005",
+        "value": "37"
+      },
+      {
+        "id": "R1000",
+        "value": "90"
+      },
+      {
+        "id": "R1027",
+        "value": "87"
+      },
+      {
+        "id": "R1013",
+        "value": "48"
+      },
+      {
+        "id": "R1002",
+        "value": "28"
+      },
+      {
+        "id": "R1014",
+        "value": "14"
+      },
+      {
+        "id": "R1019",
+        "value": "82"
+      },
+      {
+        "id": "R1017",
+        "value": "27"
+      },
+      {
+        "id": "R1025",
+        "value": "99"
+      },
+      {
+        "id": "R1024",
+        "value": "23"
+      },
+      {
+        "id": "R1003",
+        "value": "79"
+      },
+      {
+        "id": "R1026",
+        "value": "11"
+      },
+      {
+        "id": "R1012",
+        "value": "71"
+      },
+      {
+        "id": "R1023",
+        "value": "88"
+      },
+      {
+        "id": "R1007",
+        "value": "60"
+      },
+      {
+        "id": "R1021",
+        "value": "90"
+      },
+      {
+        "id": "R1015",
+        "value": "37"
+      },
+      {
+        "id": "R1004",
+        "value": "42"
+      },
+      {
+        "id": "R1009",
+        "value": "62"
+      },
+      {
+        "id": "R1016",
+        "value": "85"
+      },
+      {
+        "id": "R1018",
+        "value": "18"
+      },
+      {
+        "id": "R1020",
+        "value": "13"
+      },
+      {
+        "id": "R1008",
+        "value": "80"
+      },
+      {
+        "id": "R1010",
+        "value": "91"
+      },
+      {
+        "id": "R1011",
+        "value": "25"
+      }
+    ],
+    "expected_lines": [
+      "R1004|42",
+      "R1003|79",
+      "R1002|28",
+      "R1000|90",
+      "R1005|37",
+      "R1001|66"
+    ],
+    "expected_answer": "R1004|42\nR1003|79\nR1002|28\nR1000|90\nR1005|37\nR1001|66",
+    "pair_id": "v10-dev-30302-b011",
+    "pair_index": 24,
+    "arm": "C",
+    "condition_order": "C",
+    "condition_position": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1001|66\nR1022|16\nR1006|98\nR1005|37\nR1000|90\nR1027|87\nR1013|48\nR1002|28\nR1014|14\nR1019|82\nR1017|27\nR1025|99\nR1024|23\nR1003|79\nR1026|11\nR1012|71\nR1023|88\nR1007|60\nR1021|90\nR1015|37\nR1004|42\nR1009|62\nR1016|85\nR1018|18\nR1020|13\nR1008|80\nR1010|91\nR1011|25\n只按R1004,R1003,R1002,R1000,R1005,R1001顺序抄对应数值，不要抄其他行。每行ID|值。<|im_end|>\n<|im_start|>assistant\n",
+    "input_tokens": 323,
+    "token_ids_sha256": "4f4c812d7a198ec7a8df73513ec28b26b56f01f0fddf8f4128cb86f28472bc86",
+    "content_sha256": "7b56a3a85cced7b815e2d163ad30d758af07d242c0f79ffdff7bb44c3c91b3bf",
+    "prompt_format": "explicit_qwen_chatml_completion",
+    "tokenization": {
+      "add_special": true,
+      "parse_special": true
+    },
+    "arrival_offset_ms": 0,
+    "format_tokens": 53,
+    "grammar_ceiling": null
+  }
+]

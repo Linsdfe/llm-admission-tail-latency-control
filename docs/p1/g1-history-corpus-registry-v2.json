@@ -1,0 +1,19 @@
+{
+  "status": "historical_sources_only_no_final_access",
+  "files": {
+    "results/raw/development/20261025-1015-p1-verifiable-tasks-v3/evaluation-plan.jsonl": "bf6613ebfc685b3413ab95c775625cfe54a9da237bd045c3dd85b73964d616b3",
+    "results/raw/development/20261025-1045-p1-output-constraints-v4/evaluation-plan.jsonl": "5b498b33f5d6069538fe05aa7ef004d2f5dfd3d9ca41a2499d3c82d63d7c4445",
+    "results/raw/development/20261025-1645-p1-explicit-instructions-v5/evaluation-plan.jsonl": "98b1373f43185131fbacc8e375b50e4ca3a094aa93c6238d3c4aeea45b631c48",
+    "results/raw/development/20261025-2210-p1-model-adaptation-v6/evaluation-plan.jsonl": "45b588bc3654c6cd2c02e4d40c576363696314d57973514e7e30e33368a4dded",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/evaluation-plan.jsonl": "167d6fe6235dc11ee8b6c1f6ce145ff9960544db6f366823a92e5cfb850e148d",
+    "results/raw/development/20261025-2320-p1-target-mix-v8/evaluation-plan.jsonl": "74c5bfa5d0efb2837235a11e02303a2fecc789eebf28e858cc420aca5e8444cf",
+    "results/raw/development/20261026-0845-p1-target-mix-v8-r2/evaluation-plan.jsonl": "74c5bfa5d0efb2837235a11e02303a2fecc789eebf28e858cc420aca5e8444cf",
+    "results/raw/development/20261026-0930-p1-format-calibration-v9-r2/evaluation-plan.jsonl": "1ff4ff01d410da957ef52ac7335a5d48bd6e1b378a69ed19c09f30fd70ec0623",
+    "results/raw/development/20261026-1035-p1-grammar-upper-v10-r2/evaluation-plan.jsonl": "bbbbe0d9c86111fba00fd303cd2b209efbabaf01a566fb8def12cfcc5550af64",
+    "results/raw/development/20261025-2210-p1-model-adaptation-v6/blocks/block1/evaluation-plan.jsonl": "ad23dfb1bb8b5ab0eab0443798db1b609f39cf4e0b29e5efb6c1fec4d334b097",
+    "results/raw/development/20261025-2210-p1-model-adaptation-v6/blocks/block2/evaluation-plan.jsonl": "bec30608aa495e82ed2bae9a496065d730bd02799f66cef0f31411c034d7e5f2",
+    "results/raw/development/20261025-2210-p1-model-adaptation-v6/blocks/block3/evaluation-plan.jsonl": "c83f47e85c439991bba04ca0457ed7720553dfe73a2471e61b58d1f54ad42d30",
+    "results/raw/development/20261025-2210-p1-model-adaptation-v6/blocks/block4/evaluation-plan.jsonl": "890d2d4d5b01b05bf060ca6ae7b25c7f5b59f395e333da576ff7b59fd4a0d2d0"
+  },
+  "formal_gate": "Compare complete prompt SHA256 to every registered history corpus and within each new batch before any inference; reject and preserve conflicts. Final remains disabled."
+}

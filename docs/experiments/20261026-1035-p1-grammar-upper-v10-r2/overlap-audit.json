@@ -1,0 +1,22 @@
+{
+  "status": "overlap_found_and_reported",
+  "planned": 48,
+  "overlap_with_v9": [
+    {
+      "v10_req_id": "v10-dev-30301-i001-c",
+      "v9_req_id": "v9-dev-29201-i000-c",
+      "content_sha256": "0be46ee65c936c291190cae5ad230af2bb1c97daa9bc560034bdb0c5852ba1d6"
+    },
+    {
+      "v10_req_id": "v10-dev-30302-i001-c",
+      "v9_req_id": "v9-dev-29202-i000-c",
+      "content_sha256": "e4ede93eae2dcf0ff84ef75de7feccb070006a81853c56c49fe8778387fd18ea"
+    }
+  ],
+  "previously_unseen": 46,
+  "unseen_upper_coverage": 46,
+  "unseen_mae": 0.43478260869565216,
+  "unseen_correct": 33,
+  "primary_48_denominator_preserved": true,
+  "cause": "Preflight compared to v8 corpus, but did not include adjacent v9 corpus. Secondary unseen-only analysis is retrospective; no refit or discarded requests."
+}

@@ -1,0 +1,774 @@
+{
+  "status": "model_free_plan_verified",
+  "reserved_schedule": [
+    {
+      "block": 1,
+      "scene": "main",
+      "seed_reserved_not_materialized": 39101,
+      "execution_order": [
+        "B0",
+        "B1",
+        "B2-P",
+        "B2-Q",
+        "B3",
+        "B4",
+        "M",
+        "NN",
+        "M-no-cal",
+        "M-no-aging",
+        "S_cap1"
+      ],
+      "scene_order_in_block": [
+        "main",
+        "boundary"
+      ]
+    },
+    {
+      "block": 1,
+      "scene": "boundary",
+      "seed_reserved_not_materialized": 39201,
+      "execution_order": [
+        "B1",
+        "B3",
+        "S",
+        "M",
+        "NN"
+      ],
+      "scene_order_in_block": [
+        "main",
+        "boundary"
+      ]
+    },
+    {
+      "block": 2,
+      "scene": "main",
+      "seed_reserved_not_materialized": 39102,
+      "execution_order": [
+        "B1",
+        "B2-P",
+        "B2-Q",
+        "B3",
+        "B4",
+        "M",
+        "NN",
+        "M-no-cal",
+        "M-no-aging",
+        "S_cap1",
+        "B0"
+      ],
+      "scene_order_in_block": [
+        "boundary",
+        "main"
+      ]
+    },
+    {
+      "block": 2,
+      "scene": "boundary",
+      "seed_reserved_not_materialized": 39202,
+      "execution_order": [
+        "B3",
+        "S",
+        "M",
+        "NN",
+        "B1"
+      ],
+      "scene_order_in_block": [
+        "boundary",
+        "main"
+      ]
+    },
+    {
+      "block": 3,
+      "scene": "main",
+      "seed_reserved_not_materialized": 39103,
+      "execution_order": [
+        "B2-P",
+        "B2-Q",
+        "B3",
+        "B4",
+        "M",
+        "NN",
+        "M-no-cal",
+        "M-no-aging",
+        "S_cap1",
+        "B0",
+        "B1"
+      ],
+      "scene_order_in_block": [
+        "main",
+        "boundary"
+      ]
+    },
+    {
+      "block": 3,
+      "scene": "boundary",
+      "seed_reserved_not_materialized": 39203,
+      "execution_order": [
+        "S",
+        "M",
+        "NN",
+        "B1",
+        "B3"
+      ],
+      "scene_order_in_block": [
+        "main",
+        "boundary"
+      ]
+    },
+    {
+      "block": 4,
+      "scene": "main",
+      "seed_reserved_not_materialized": 39104,
+      "execution_order": [
+        "B2-Q",
+        "B3",
+        "B4",
+        "M",
+        "NN",
+        "M-no-cal",
+        "M-no-aging",
+        "S_cap1",
+        "B0",
+        "B1",
+        "B2-P"
+      ],
+      "scene_order_in_block": [
+        "boundary",
+        "main"
+      ]
+    },
+    {
+      "block": 4,
+      "scene": "boundary",
+      "seed_reserved_not_materialized": 39204,
+      "execution_order": [
+        "M",
+        "NN",
+        "B1",
+        "B3",
+        "S"
+      ],
+      "scene_order_in_block": [
+        "boundary",
+        "main"
+      ]
+    },
+    {
+      "block": 5,
+      "scene": "main",
+      "seed_reserved_not_materialized": 39105,
+      "execution_order": [
+        "B3",
+        "B4",
+        "M",
+        "NN",
+        "M-no-cal",
+        "M-no-aging",
+        "S_cap1",
+        "B0",
+        "B1",
+        "B2-P",
+        "B2-Q"
+      ],
+      "scene_order_in_block": [
+        "main",
+        "boundary"
+      ]
+    },
+    {
+      "block": 5,
+      "scene": "boundary",
+      "seed_reserved_not_materialized": 39205,
+      "execution_order": [
+        "NN",
+        "B1",
+        "B3",
+        "S",
+        "M"
+      ],
+      "scene_order_in_block": [
+        "main",
+        "boundary"
+      ]
+    },
+    {
+      "block": 6,
+      "scene": "main",
+      "seed_reserved_not_materialized": 39106,
+      "execution_order": [
+        "B4",
+        "M",
+        "NN",
+        "M-no-cal",
+        "M-no-aging",
+        "S_cap1",
+        "B0",
+        "B1",
+        "B2-P",
+        "B2-Q",
+        "B3"
+      ],
+      "scene_order_in_block": [
+        "boundary",
+        "main"
+      ]
+    },
+    {
+      "block": 6,
+      "scene": "boundary",
+      "seed_reserved_not_materialized": 39206,
+      "execution_order": [
+        "NN",
+        "M",
+        "S",
+        "B3",
+        "B1"
+      ],
+      "scene_order_in_block": [
+        "boundary",
+        "main"
+      ]
+    },
+    {
+      "block": 7,
+      "scene": "main",
+      "seed_reserved_not_materialized": 39107,
+      "execution_order": [
+        "M",
+        "NN",
+        "M-no-cal",
+        "M-no-aging",
+        "S_cap1",
+        "B0",
+        "B1",
+        "B2-P",
+        "B2-Q",
+        "B3",
+        "B4"
+      ],
+      "scene_order_in_block": [
+        "main",
+        "boundary"
+      ]
+    },
+    {
+      "block": 7,
+      "scene": "boundary",
+      "seed_reserved_not_materialized": 39207,
+      "execution_order": [
+        "B1",
+        "NN",
+        "M",
+        "S",
+        "B3"
+      ],
+      "scene_order_in_block": [
+        "main",
+        "boundary"
+      ]
+    },
+    {
+      "block": 8,
+      "scene": "main",
+      "seed_reserved_not_materialized": 39108,
+      "execution_order": [
+        "NN",
+        "M-no-cal",
+        "M-no-aging",
+        "S_cap1",
+        "B0",
+        "B1",
+        "B2-P",
+        "B2-Q",
+        "B3",
+        "B4",
+        "M"
+      ],
+      "scene_order_in_block": [
+        "boundary",
+        "main"
+      ]
+    },
+    {
+      "block": 8,
+      "scene": "boundary",
+      "seed_reserved_not_materialized": 39208,
+      "execution_order": [
+        "B3",
+        "B1",
+        "NN",
+        "M",
+        "S"
+      ],
+      "scene_order_in_block": [
+        "boundary",
+        "main"
+      ]
+    },
+    {
+      "block": 9,
+      "scene": "main",
+      "seed_reserved_not_materialized": 39109,
+      "execution_order": [
+        "M-no-cal",
+        "M-no-aging",
+        "S_cap1",
+        "B0",
+        "B1",
+        "B2-P",
+        "B2-Q",
+        "B3",
+        "B4",
+        "M",
+        "NN"
+      ],
+      "scene_order_in_block": [
+        "main",
+        "boundary"
+      ]
+    },
+    {
+      "block": 9,
+      "scene": "boundary",
+      "seed_reserved_not_materialized": 39209,
+      "execution_order": [
+        "S",
+        "B3",
+        "B1",
+        "NN",
+        "M"
+      ],
+      "scene_order_in_block": [
+        "main",
+        "boundary"
+      ]
+    },
+    {
+      "block": 10,
+      "scene": "main",
+      "seed_reserved_not_materialized": 39110,
+      "execution_order": [
+        "M-no-aging",
+        "S_cap1",
+        "B0",
+        "B1",
+        "B2-P",
+        "B2-Q",
+        "B3",
+        "B4",
+        "M",
+        "NN",
+        "M-no-cal"
+      ],
+      "scene_order_in_block": [
+        "boundary",
+        "main"
+      ]
+    },
+    {
+      "block": 10,
+      "scene": "boundary",
+      "seed_reserved_not_materialized": 39210,
+      "execution_order": [
+        "M",
+        "S",
+        "B3",
+        "B1",
+        "NN"
+      ],
+      "scene_order_in_block": [
+        "boundary",
+        "main"
+      ]
+    },
+    {
+      "block": 11,
+      "scene": "main",
+      "seed_reserved_not_materialized": 39111,
+      "execution_order": [
+        "S_cap1",
+        "B0",
+        "B1",
+        "B2-P",
+        "B2-Q",
+        "B3",
+        "B4",
+        "M",
+        "NN",
+        "M-no-cal",
+        "M-no-aging"
+      ],
+      "scene_order_in_block": [
+        "main",
+        "boundary"
+      ]
+    },
+    {
+      "block": 11,
+      "scene": "boundary",
+      "seed_reserved_not_materialized": 39211,
+      "execution_order": [
+        "B1",
+        "B3",
+        "S",
+        "M",
+        "NN"
+      ],
+      "scene_order_in_block": [
+        "main",
+        "boundary"
+      ]
+    },
+    {
+      "block": 12,
+      "scene": "main",
+      "seed_reserved_not_materialized": 39112,
+      "execution_order": [
+        "S_cap1",
+        "M-no-aging",
+        "M-no-cal",
+        "NN",
+        "M",
+        "B4",
+        "B3",
+        "B2-Q",
+        "B2-P",
+        "B1",
+        "B0"
+      ],
+      "scene_order_in_block": [
+        "boundary",
+        "main"
+      ]
+    },
+    {
+      "block": 12,
+      "scene": "boundary",
+      "seed_reserved_not_materialized": 39212,
+      "execution_order": [
+        "B3",
+        "S",
+        "M",
+        "NN",
+        "B1"
+      ],
+      "scene_order_in_block": [
+        "boundary",
+        "main"
+      ]
+    },
+    {
+      "block": 13,
+      "scene": "main",
+      "seed_reserved_not_materialized": 39113,
+      "execution_order": [
+        "B0",
+        "S_cap1",
+        "M-no-aging",
+        "M-no-cal",
+        "NN",
+        "M",
+        "B4",
+        "B3",
+        "B2-Q",
+        "B2-P",
+        "B1"
+      ],
+      "scene_order_in_block": [
+        "main",
+        "boundary"
+      ]
+    },
+    {
+      "block": 13,
+      "scene": "boundary",
+      "seed_reserved_not_materialized": 39213,
+      "execution_order": [
+        "S",
+        "M",
+        "NN",
+        "B1",
+        "B3"
+      ],
+      "scene_order_in_block": [
+        "main",
+        "boundary"
+      ]
+    },
+    {
+      "block": 14,
+      "scene": "main",
+      "seed_reserved_not_materialized": 39114,
+      "execution_order": [
+        "B1",
+        "B0",
+        "S_cap1",
+        "M-no-aging",
+        "M-no-cal",
+        "NN",
+        "M",
+        "B4",
+        "B3",
+        "B2-Q",
+        "B2-P"
+      ],
+      "scene_order_in_block": [
+        "boundary",
+        "main"
+      ]
+    },
+    {
+      "block": 14,
+      "scene": "boundary",
+      "seed_reserved_not_materialized": 39214,
+      "execution_order": [
+        "M",
+        "NN",
+        "B1",
+        "B3",
+        "S"
+      ],
+      "scene_order_in_block": [
+        "boundary",
+        "main"
+      ]
+    },
+    {
+      "block": 15,
+      "scene": "main",
+      "seed_reserved_not_materialized": 39115,
+      "execution_order": [
+        "B2-P",
+        "B1",
+        "B0",
+        "S_cap1",
+        "M-no-aging",
+        "M-no-cal",
+        "NN",
+        "M",
+        "B4",
+        "B3",
+        "B2-Q"
+      ],
+      "scene_order_in_block": [
+        "main",
+        "boundary"
+      ]
+    },
+    {
+      "block": 15,
+      "scene": "boundary",
+      "seed_reserved_not_materialized": 39215,
+      "execution_order": [
+        "NN",
+        "B1",
+        "B3",
+        "S",
+        "M"
+      ],
+      "scene_order_in_block": [
+        "main",
+        "boundary"
+      ]
+    },
+    {
+      "block": 16,
+      "scene": "main",
+      "seed_reserved_not_materialized": 39116,
+      "execution_order": [
+        "B2-Q",
+        "B2-P",
+        "B1",
+        "B0",
+        "S_cap1",
+        "M-no-aging",
+        "M-no-cal",
+        "NN",
+        "M",
+        "B4",
+        "B3"
+      ],
+      "scene_order_in_block": [
+        "boundary",
+        "main"
+      ]
+    },
+    {
+      "block": 16,
+      "scene": "boundary",
+      "seed_reserved_not_materialized": 39216,
+      "execution_order": [
+        "NN",
+        "M",
+        "S",
+        "B3",
+        "B1"
+      ],
+      "scene_order_in_block": [
+        "boundary",
+        "main"
+      ]
+    },
+    {
+      "block": 17,
+      "scene": "main",
+      "seed_reserved_not_materialized": 39117,
+      "execution_order": [
+        "B3",
+        "B2-Q",
+        "B2-P",
+        "B1",
+        "B0",
+        "S_cap1",
+        "M-no-aging",
+        "M-no-cal",
+        "NN",
+        "M",
+        "B4"
+      ],
+      "scene_order_in_block": [
+        "main",
+        "boundary"
+      ]
+    },
+    {
+      "block": 17,
+      "scene": "boundary",
+      "seed_reserved_not_materialized": 39217,
+      "execution_order": [
+        "B1",
+        "NN",
+        "M",
+        "S",
+        "B3"
+      ],
+      "scene_order_in_block": [
+        "main",
+        "boundary"
+      ]
+    },
+    {
+      "block": 18,
+      "scene": "main",
+      "seed_reserved_not_materialized": 39118,
+      "execution_order": [
+        "B4",
+        "B3",
+        "B2-Q",
+        "B2-P",
+        "B1",
+        "B0",
+        "S_cap1",
+        "M-no-aging",
+        "M-no-cal",
+        "NN",
+        "M"
+      ],
+      "scene_order_in_block": [
+        "boundary",
+        "main"
+      ]
+    },
+    {
+      "block": 18,
+      "scene": "boundary",
+      "seed_reserved_not_materialized": 39218,
+      "execution_order": [
+        "B3",
+        "B1",
+        "NN",
+        "M",
+        "S"
+      ],
+      "scene_order_in_block": [
+        "boundary",
+        "main"
+      ]
+    },
+    {
+      "block": 19,
+      "scene": "main",
+      "seed_reserved_not_materialized": 39119,
+      "execution_order": [
+        "M",
+        "B4",
+        "B3",
+        "B2-Q",
+        "B2-P",
+        "B1",
+        "B0",
+        "S_cap1",
+        "M-no-aging",
+        "M-no-cal",
+        "NN"
+      ],
+      "scene_order_in_block": [
+        "main",
+        "boundary"
+      ]
+    },
+    {
+      "block": 19,
+      "scene": "boundary",
+      "seed_reserved_not_materialized": 39219,
+      "execution_order": [
+        "S",
+        "B3",
+        "B1",
+        "NN",
+        "M"
+      ],
+      "scene_order_in_block": [
+        "main",
+        "boundary"
+      ]
+    },
+    {
+      "block": 20,
+      "scene": "main",
+      "seed_reserved_not_materialized": 39120,
+      "execution_order": [
+        "NN",
+        "M",
+        "B4",
+        "B3",
+        "B2-Q",
+        "B2-P",
+        "B1",
+        "B0",
+        "S_cap1",
+        "M-no-aging",
+        "M-no-cal"
+      ],
+      "scene_order_in_block": [
+        "boundary",
+        "main"
+      ]
+    },
+    {
+      "block": 20,
+      "scene": "boundary",
+      "seed_reserved_not_materialized": 39220,
+      "execution_order": [
+        "M",
+        "S",
+        "B3",
+        "B1",
+        "NN"
+      ],
+      "scene_order_in_block": [
+        "boundary",
+        "main"
+      ]
+    }
+  ],
+  "count": 320,
+  "no_prompts_generated": true,
+  "interval_coverage": 0.9974231719970703,
+  "joint_coverage_lower_bound": 0.9742317199707031,
+  "formal_hours_with_reserve_and_stability": 55.86666666666667,
+  "development_hours_with_reserve": 16.272222222222222,
+  "development_attempts_with_reserve": 116,
+  "formal_attempts_with_reserve": 384,
+  "total_hours_with_reserve_and_stability": 72.13888888888889
+}

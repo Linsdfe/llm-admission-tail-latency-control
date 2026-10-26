@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "run_id": "20261026-0930-p1-format-calibration-v9-r2",
+  "checks": 540,
+  "counts": {
+    "calibration": 48,
+    "development": 48,
+    "warmups": 2
+  },
+  "model": {
+    "candidate": "format_residual",
+    "values": {
+      "extract": 1.0,
+      "check": 1.0,
+      "organize": 1.0
+    },
+    "cross_validation_mae": {
+      "category_task_median": 3.5833333333333335,
+      "format_residual": 0.08333333333333333
+    },
+    "margin": 1,
+    "calibration_requests": 48
+  },
+  "development": {
+    "mae": 0.4166666666666667,
+    "upper_coverage": 41,
+    "point_at_cap": 0,
+    "upper_at_cap": 0,
+    "correct": 37
+  },
+  "calibration_correct": 36,
+  "feature_tokenization_cost_ms": {
+    "sum": 70.694065,
+    "median": 0.7169015,
+    "maximum": 1.125353
+  },
+  "elapsed_seconds": 330.630779823,
+  "G1_passed": false,
+  "final_test_accessed": false,
+  "limits": [
+    "48 dev source tasks, two seeds; empirical coverage only.",
+    "O and C instruction families were previously explored, but separated across new splits.",
+    "ID format, instruction and seed changes jointly; not isolated causal ID-effect.",
+    "No scheduling-performance or M/B3-value inference."
+  ]
+}

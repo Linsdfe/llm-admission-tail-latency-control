@@ -1,0 +1,4945 @@
+[
+  {
+    "req_id": "v10-dev-30301-i000-c",
+    "task_kind": "extract",
+    "prediction": 8.0,
+    "upper": 9.0,
+    "actual": 8,
+    "content": "R100|12",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R100",
+          "12"
+        ]
+      ],
+      "expected_lines": [
+        "R100|12"
+      ],
+      "observed_fields": [
+        [
+          "R100",
+          "12"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R100",
+          "expected": "12",
+          "observed_values": [
+            "12"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-i001-c",
+    "task_kind": "extract",
+    "prediction": 8.0,
+    "upper": 9.0,
+    "actual": 8,
+    "content": "R100|19",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R100",
+          "19"
+        ]
+      ],
+      "expected_lines": [
+        "R100|19"
+      ],
+      "observed_fields": [
+        [
+          "R100",
+          "19"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R100",
+          "expected": "19",
+          "observed_values": [
+            "19"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-i002-c",
+    "task_kind": "extract",
+    "prediction": 8.0,
+    "upper": 9.0,
+    "actual": 8,
+    "content": "R100|26",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R100",
+          "26"
+        ]
+      ],
+      "expected_lines": [
+        "R100|26"
+      ],
+      "observed_fields": [
+        [
+          "R100",
+          "26"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R100",
+          "expected": "26",
+          "observed_values": [
+            "26"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-i003-c",
+    "task_kind": "extract",
+    "prediction": 8.0,
+    "upper": 9.0,
+    "actual": 8,
+    "content": "R100|33",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R100",
+          "33"
+        ]
+      ],
+      "expected_lines": [
+        "R100|33"
+      ],
+      "observed_fields": [
+        [
+          "R100",
+          "33"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R100",
+          "expected": "33",
+          "observed_values": [
+            "33"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-i004-c",
+    "task_kind": "check",
+    "prediction": 7.0,
+    "upper": 9,
+    "actual": 7,
+    "content": "R100|一致",
+    "quality": {
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R100",
+          "不一致"
+        ]
+      ],
+      "expected_lines": [
+        "R100|不一致"
+      ],
+      "observed_fields": [
+        [
+          "R100",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 1,
+          "id": "R100",
+          "expected": "不一致",
+          "observed": "一致"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R100",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        }
+      ],
+      "target_fields_correct": 0,
+      "target_fields_expected": 1,
+      "completed_and_correct": false
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-i005-c",
+    "task_kind": "check",
+    "prediction": 7.0,
+    "upper": 9,
+    "actual": 7,
+    "content": "R100|一致",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R100",
+          "一致"
+        ]
+      ],
+      "expected_lines": [
+        "R100|一致"
+      ],
+      "observed_fields": [
+        [
+          "R100",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R100",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-i006-c",
+    "task_kind": "check",
+    "prediction": 7.0,
+    "upper": 9,
+    "actual": 7,
+    "content": "R100|一致",
+    "quality": {
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R100",
+          "不一致"
+        ]
+      ],
+      "expected_lines": [
+        "R100|不一致"
+      ],
+      "observed_fields": [
+        [
+          "R100",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 1,
+          "id": "R100",
+          "expected": "不一致",
+          "observed": "一致"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R100",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        }
+      ],
+      "target_fields_correct": 0,
+      "target_fields_expected": 1,
+      "completed_and_correct": false
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-i007-c",
+    "task_kind": "check",
+    "prediction": 7.0,
+    "upper": 9,
+    "actual": 7,
+    "content": "R100|一致",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R100",
+          "一致"
+        ]
+      ],
+      "expected_lines": [
+        "R100|一致"
+      ],
+      "observed_fields": [
+        [
+          "R100",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R100",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-i008-c",
+    "task_kind": "organize",
+    "prediction": 16.0,
+    "upper": 17.0,
+    "actual": 16,
+    "content": "R101|16\nR100|68",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R101",
+          "16"
+        ],
+        [
+          "R100",
+          "68"
+        ]
+      ],
+      "expected_lines": [
+        "R101|16",
+        "R100|68"
+      ],
+      "observed_fields": [
+        [
+          "R101",
+          "16"
+        ],
+        [
+          "R100",
+          "68"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R101",
+          "expected": "16",
+          "observed_values": [
+            "16"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R100",
+          "expected": "68",
+          "observed_values": [
+            "68"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-i009-c",
+    "task_kind": "organize",
+    "prediction": 16.0,
+    "upper": 17.0,
+    "actual": 16,
+    "content": "R101|35\nR100|75",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R101",
+          "35"
+        ],
+        [
+          "R100",
+          "75"
+        ]
+      ],
+      "expected_lines": [
+        "R101|35",
+        "R100|75"
+      ],
+      "observed_fields": [
+        [
+          "R101",
+          "35"
+        ],
+        [
+          "R100",
+          "75"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R101",
+          "expected": "35",
+          "observed_values": [
+            "35"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R100",
+          "expected": "75",
+          "observed_values": [
+            "75"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-i010-c",
+    "task_kind": "organize",
+    "prediction": 16.0,
+    "upper": 17.0,
+    "actual": 16,
+    "content": "R100|82\nR101|74",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R100",
+          "82"
+        ],
+        [
+          "R101",
+          "74"
+        ]
+      ],
+      "expected_lines": [
+        "R100|82",
+        "R101|74"
+      ],
+      "observed_fields": [
+        [
+          "R100",
+          "82"
+        ],
+        [
+          "R101",
+          "74"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R100",
+          "expected": "82",
+          "observed_values": [
+            "82"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R101",
+          "expected": "74",
+          "observed_values": [
+            "74"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-i011-c",
+    "task_kind": "organize",
+    "prediction": 16.0,
+    "upper": 17.0,
+    "actual": 16,
+    "content": "R101|92\nR100|89",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R101",
+          "92"
+        ],
+        [
+          "R100",
+          "89"
+        ]
+      ],
+      "expected_lines": [
+        "R101|92",
+        "R100|89"
+      ],
+      "observed_fields": [
+        [
+          "R101",
+          "92"
+        ],
+        [
+          "R100",
+          "89"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R101",
+          "expected": "92",
+          "observed_values": [
+            "92"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R100",
+          "expected": "89",
+          "observed_values": [
+            "89"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-b000-c",
+    "task_kind": "extract",
+    "prediction": 48.0,
+    "upper": 49.0,
+    "actual": 48,
+    "content": "R100|12\nR101|58\nR102|27\nR103|88\nR104|76\nR105|33",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R100",
+          "12"
+        ],
+        [
+          "R101",
+          "58"
+        ],
+        [
+          "R102",
+          "27"
+        ],
+        [
+          "R103",
+          "88"
+        ],
+        [
+          "R104",
+          "76"
+        ],
+        [
+          "R105",
+          "33"
+        ]
+      ],
+      "expected_lines": [
+        "R100|12",
+        "R101|58",
+        "R102|27",
+        "R103|88",
+        "R104|76",
+        "R105|33"
+      ],
+      "observed_fields": [
+        [
+          "R100",
+          "12"
+        ],
+        [
+          "R101",
+          "58"
+        ],
+        [
+          "R102",
+          "27"
+        ],
+        [
+          "R103",
+          "88"
+        ],
+        [
+          "R104",
+          "76"
+        ],
+        [
+          "R105",
+          "33"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R100",
+          "expected": "12",
+          "observed_values": [
+            "12"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R101",
+          "expected": "58",
+          "observed_values": [
+            "58"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R102",
+          "expected": "27",
+          "observed_values": [
+            "27"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R103",
+          "expected": "88",
+          "observed_values": [
+            "88"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R104",
+          "expected": "76",
+          "observed_values": [
+            "76"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R105",
+          "expected": "33",
+          "observed_values": [
+            "33"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-b001-c",
+    "task_kind": "extract",
+    "prediction": 48.0,
+    "upper": 49.0,
+    "actual": 48,
+    "content": "R100|19\nR101|31\nR102|30\nR103|67\nR104|55\nR105|79",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R100",
+          "19"
+        ],
+        [
+          "R101",
+          "31"
+        ],
+        [
+          "R102",
+          "30"
+        ],
+        [
+          "R103",
+          "67"
+        ],
+        [
+          "R104",
+          "55"
+        ],
+        [
+          "R105",
+          "79"
+        ]
+      ],
+      "expected_lines": [
+        "R100|19",
+        "R101|31",
+        "R102|30",
+        "R103|67",
+        "R104|55",
+        "R105|79"
+      ],
+      "observed_fields": [
+        [
+          "R100",
+          "19"
+        ],
+        [
+          "R101",
+          "31"
+        ],
+        [
+          "R102",
+          "30"
+        ],
+        [
+          "R103",
+          "67"
+        ],
+        [
+          "R104",
+          "55"
+        ],
+        [
+          "R105",
+          "79"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R100",
+          "expected": "19",
+          "observed_values": [
+            "19"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R101",
+          "expected": "31",
+          "observed_values": [
+            "31"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R102",
+          "expected": "30",
+          "observed_values": [
+            "30"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R103",
+          "expected": "67",
+          "observed_values": [
+            "67"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R104",
+          "expected": "55",
+          "observed_values": [
+            "55"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R105",
+          "expected": "79",
+          "observed_values": [
+            "79"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-b002-c",
+    "task_kind": "extract",
+    "prediction": 48.0,
+    "upper": 49.0,
+    "actual": 48,
+    "content": "R100|26\nR101|97\nR102|35\nR103|35\nR104|25\nR105|11",
+    "quality": {
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R100",
+          "26"
+        ],
+        [
+          "R101",
+          "42"
+        ],
+        [
+          "R102",
+          "97"
+        ],
+        [
+          "R103",
+          "35"
+        ],
+        [
+          "R104",
+          "25"
+        ],
+        [
+          "R105",
+          "11"
+        ]
+      ],
+      "expected_lines": [
+        "R100|26",
+        "R101|42",
+        "R102|97",
+        "R103|35",
+        "R104|25",
+        "R105|11"
+      ],
+      "observed_fields": [
+        [
+          "R100",
+          "26"
+        ],
+        [
+          "R101",
+          "97"
+        ],
+        [
+          "R102",
+          "35"
+        ],
+        [
+          "R103",
+          "35"
+        ],
+        [
+          "R104",
+          "25"
+        ],
+        [
+          "R105",
+          "11"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 2,
+          "id": "R101",
+          "expected": "42",
+          "observed": "97"
+        },
+        {
+          "position": 3,
+          "id": "R102",
+          "expected": "97",
+          "observed": "35"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R100",
+          "expected": "26",
+          "observed_values": [
+            "26"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R101",
+          "expected": "42",
+          "observed_values": [
+            "97"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R102",
+          "expected": "97",
+          "observed_values": [
+            "35"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R103",
+          "expected": "35",
+          "observed_values": [
+            "35"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R104",
+          "expected": "25",
+          "observed_values": [
+            "25"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R105",
+          "expected": "11",
+          "observed_values": [
+            "11"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 4,
+      "target_fields_expected": 6,
+      "completed_and_correct": false
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-b003-c",
+    "task_kind": "extract",
+    "prediction": 48.0,
+    "upper": 49.0,
+    "actual": 48,
+    "content": "R100|33\nR101|71\nR102|46\nR103|65\nR104|79\nR105|77",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R100",
+          "33"
+        ],
+        [
+          "R101",
+          "71"
+        ],
+        [
+          "R102",
+          "46"
+        ],
+        [
+          "R103",
+          "65"
+        ],
+        [
+          "R104",
+          "79"
+        ],
+        [
+          "R105",
+          "77"
+        ]
+      ],
+      "expected_lines": [
+        "R100|33",
+        "R101|71",
+        "R102|46",
+        "R103|65",
+        "R104|79",
+        "R105|77"
+      ],
+      "observed_fields": [
+        [
+          "R100",
+          "33"
+        ],
+        [
+          "R101",
+          "71"
+        ],
+        [
+          "R102",
+          "46"
+        ],
+        [
+          "R103",
+          "65"
+        ],
+        [
+          "R104",
+          "79"
+        ],
+        [
+          "R105",
+          "77"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R100",
+          "expected": "33",
+          "observed_values": [
+            "33"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R101",
+          "expected": "71",
+          "observed_values": [
+            "71"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R102",
+          "expected": "46",
+          "observed_values": [
+            "46"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R103",
+          "expected": "65",
+          "observed_values": [
+            "65"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R104",
+          "expected": "79",
+          "observed_values": [
+            "79"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R105",
+          "expected": "77",
+          "observed_values": [
+            "77"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-b004-c",
+    "task_kind": "check",
+    "prediction": 42.0,
+    "upper": 49,
+    "actual": 45,
+    "content": "R100|一致\nR101|不一致\nR102|一致\nR103|不一致\nR104|一致\nR105|不一致",
+    "quality": {
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R100",
+          "不一致"
+        ],
+        [
+          "R101",
+          "一致"
+        ],
+        [
+          "R102",
+          "不一致"
+        ],
+        [
+          "R103",
+          "一致"
+        ],
+        [
+          "R104",
+          "不一致"
+        ],
+        [
+          "R105",
+          "一致"
+        ]
+      ],
+      "expected_lines": [
+        "R100|不一致",
+        "R101|一致",
+        "R102|不一致",
+        "R103|一致",
+        "R104|不一致",
+        "R105|一致"
+      ],
+      "observed_fields": [
+        [
+          "R100",
+          "一致"
+        ],
+        [
+          "R101",
+          "不一致"
+        ],
+        [
+          "R102",
+          "一致"
+        ],
+        [
+          "R103",
+          "不一致"
+        ],
+        [
+          "R104",
+          "一致"
+        ],
+        [
+          "R105",
+          "不一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 1,
+          "id": "R100",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "position": 2,
+          "id": "R101",
+          "expected": "一致",
+          "observed": "不一致"
+        },
+        {
+          "position": 3,
+          "id": "R102",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "position": 4,
+          "id": "R103",
+          "expected": "一致",
+          "observed": "不一致"
+        },
+        {
+          "position": 5,
+          "id": "R104",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "position": 6,
+          "id": "R105",
+          "expected": "一致",
+          "observed": "不一致"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R100",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R101",
+          "expected": "一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R102",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R103",
+          "expected": "一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R104",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R105",
+          "expected": "一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "wrong_value"
+        }
+      ],
+      "target_fields_correct": 0,
+      "target_fields_expected": 6,
+      "completed_and_correct": false
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-b005-c",
+    "task_kind": "check",
+    "prediction": 42.0,
+    "upper": 49,
+    "actual": 43,
+    "content": "R100|一致\nR101|一致\nR102|一致\nR103|不一致\nR104|一致\nR105|一致",
+    "quality": {
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R100",
+          "一致"
+        ],
+        [
+          "R101",
+          "不一致"
+        ],
+        [
+          "R102",
+          "一致"
+        ],
+        [
+          "R103",
+          "不一致"
+        ],
+        [
+          "R104",
+          "一致"
+        ],
+        [
+          "R105",
+          "不一致"
+        ]
+      ],
+      "expected_lines": [
+        "R100|一致",
+        "R101|不一致",
+        "R102|一致",
+        "R103|不一致",
+        "R104|一致",
+        "R105|不一致"
+      ],
+      "observed_fields": [
+        [
+          "R100",
+          "一致"
+        ],
+        [
+          "R101",
+          "一致"
+        ],
+        [
+          "R102",
+          "一致"
+        ],
+        [
+          "R103",
+          "不一致"
+        ],
+        [
+          "R104",
+          "一致"
+        ],
+        [
+          "R105",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 2,
+          "id": "R101",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "position": 6,
+          "id": "R105",
+          "expected": "不一致",
+          "observed": "一致"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R100",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R101",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R102",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R103",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R104",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R105",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        }
+      ],
+      "target_fields_correct": 4,
+      "target_fields_expected": 6,
+      "completed_and_correct": false
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-b006-c",
+    "task_kind": "check",
+    "prediction": 42.0,
+    "upper": 49,
+    "actual": 43,
+    "content": "R100|一致\nR101|一致\nR102|不一致\nR103|一致\nR104|一致\nR105|一致",
+    "quality": {
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R100",
+          "不一致"
+        ],
+        [
+          "R101",
+          "一致"
+        ],
+        [
+          "R102",
+          "不一致"
+        ],
+        [
+          "R103",
+          "一致"
+        ],
+        [
+          "R104",
+          "不一致"
+        ],
+        [
+          "R105",
+          "一致"
+        ]
+      ],
+      "expected_lines": [
+        "R100|不一致",
+        "R101|一致",
+        "R102|不一致",
+        "R103|一致",
+        "R104|不一致",
+        "R105|一致"
+      ],
+      "observed_fields": [
+        [
+          "R100",
+          "一致"
+        ],
+        [
+          "R101",
+          "一致"
+        ],
+        [
+          "R102",
+          "不一致"
+        ],
+        [
+          "R103",
+          "一致"
+        ],
+        [
+          "R104",
+          "一致"
+        ],
+        [
+          "R105",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 1,
+          "id": "R100",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "position": 5,
+          "id": "R104",
+          "expected": "不一致",
+          "observed": "一致"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R100",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R101",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R102",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R103",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R104",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R105",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 4,
+      "target_fields_expected": 6,
+      "completed_and_correct": false
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-b007-c",
+    "task_kind": "check",
+    "prediction": 42.0,
+    "upper": 49,
+    "actual": 45,
+    "content": "R100|一致\nR101|不一致\nR102|不一致\nR103|不一致\nR104|一致\nR105|一致",
+    "quality": {
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R100",
+          "一致"
+        ],
+        [
+          "R101",
+          "不一致"
+        ],
+        [
+          "R102",
+          "一致"
+        ],
+        [
+          "R103",
+          "不一致"
+        ],
+        [
+          "R104",
+          "一致"
+        ],
+        [
+          "R105",
+          "不一致"
+        ]
+      ],
+      "expected_lines": [
+        "R100|一致",
+        "R101|不一致",
+        "R102|一致",
+        "R103|不一致",
+        "R104|一致",
+        "R105|不一致"
+      ],
+      "observed_fields": [
+        [
+          "R100",
+          "一致"
+        ],
+        [
+          "R101",
+          "不一致"
+        ],
+        [
+          "R102",
+          "不一致"
+        ],
+        [
+          "R103",
+          "不一致"
+        ],
+        [
+          "R104",
+          "一致"
+        ],
+        [
+          "R105",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 3,
+          "id": "R102",
+          "expected": "一致",
+          "observed": "不一致"
+        },
+        {
+          "position": 6,
+          "id": "R105",
+          "expected": "不一致",
+          "observed": "一致"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R100",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R101",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R102",
+          "expected": "一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R103",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R104",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R105",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        }
+      ],
+      "target_fields_correct": 4,
+      "target_fields_expected": 6,
+      "completed_and_correct": false
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-b008-c",
+    "task_kind": "organize",
+    "prediction": 48.0,
+    "upper": 49.0,
+    "actual": 48,
+    "content": "R105|18\nR101|33\nR103|58\nR100|68\nR104|40\nR102|27",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R105",
+          "18"
+        ],
+        [
+          "R101",
+          "33"
+        ],
+        [
+          "R103",
+          "58"
+        ],
+        [
+          "R100",
+          "68"
+        ],
+        [
+          "R104",
+          "40"
+        ],
+        [
+          "R102",
+          "27"
+        ]
+      ],
+      "expected_lines": [
+        "R105|18",
+        "R101|33",
+        "R103|58",
+        "R100|68",
+        "R104|40",
+        "R102|27"
+      ],
+      "observed_fields": [
+        [
+          "R105",
+          "18"
+        ],
+        [
+          "R101",
+          "33"
+        ],
+        [
+          "R103",
+          "58"
+        ],
+        [
+          "R100",
+          "68"
+        ],
+        [
+          "R104",
+          "40"
+        ],
+        [
+          "R102",
+          "27"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R105",
+          "expected": "18",
+          "observed_values": [
+            "18"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R101",
+          "expected": "33",
+          "observed_values": [
+            "33"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R103",
+          "expected": "58",
+          "observed_values": [
+            "58"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R100",
+          "expected": "68",
+          "observed_values": [
+            "68"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R104",
+          "expected": "40",
+          "observed_values": [
+            "40"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R102",
+          "expected": "27",
+          "observed_values": [
+            "27"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-b009-c",
+    "task_kind": "organize",
+    "prediction": 48.0,
+    "upper": 49.0,
+    "actual": 48,
+    "content": "R100|75\nR102|19\nR104|89\nR101|79\nR105|46\nR103|92",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R100",
+          "75"
+        ],
+        [
+          "R102",
+          "19"
+        ],
+        [
+          "R104",
+          "89"
+        ],
+        [
+          "R101",
+          "79"
+        ],
+        [
+          "R105",
+          "46"
+        ],
+        [
+          "R103",
+          "92"
+        ]
+      ],
+      "expected_lines": [
+        "R100|75",
+        "R102|19",
+        "R104|89",
+        "R101|79",
+        "R105|46",
+        "R103|92"
+      ],
+      "observed_fields": [
+        [
+          "R100",
+          "75"
+        ],
+        [
+          "R102",
+          "19"
+        ],
+        [
+          "R104",
+          "89"
+        ],
+        [
+          "R101",
+          "79"
+        ],
+        [
+          "R105",
+          "46"
+        ],
+        [
+          "R103",
+          "92"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R100",
+          "expected": "75",
+          "observed_values": [
+            "75"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R102",
+          "expected": "19",
+          "observed_values": [
+            "19"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R104",
+          "expected": "89",
+          "observed_values": [
+            "89"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R101",
+          "expected": "79",
+          "observed_values": [
+            "79"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R105",
+          "expected": "46",
+          "observed_values": [
+            "46"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R103",
+          "expected": "92",
+          "observed_values": [
+            "92"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-b010-c",
+    "task_kind": "organize",
+    "prediction": 48.0,
+    "upper": 49.0,
+    "actual": 48,
+    "content": "R105|76\nR102|63\nR103|96\nR104|65\nR100|82\nR101|33",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R105",
+          "76"
+        ],
+        [
+          "R102",
+          "63"
+        ],
+        [
+          "R103",
+          "96"
+        ],
+        [
+          "R104",
+          "65"
+        ],
+        [
+          "R100",
+          "82"
+        ],
+        [
+          "R101",
+          "33"
+        ]
+      ],
+      "expected_lines": [
+        "R105|76",
+        "R102|63",
+        "R103|96",
+        "R104|65",
+        "R100|82",
+        "R101|33"
+      ],
+      "observed_fields": [
+        [
+          "R105",
+          "76"
+        ],
+        [
+          "R102",
+          "63"
+        ],
+        [
+          "R103",
+          "96"
+        ],
+        [
+          "R104",
+          "65"
+        ],
+        [
+          "R100",
+          "82"
+        ],
+        [
+          "R101",
+          "33"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R105",
+          "expected": "76",
+          "observed_values": [
+            "76"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R102",
+          "expected": "63",
+          "observed_values": [
+            "63"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R103",
+          "expected": "96",
+          "observed_values": [
+            "96"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R104",
+          "expected": "65",
+          "observed_values": [
+            "65"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R100",
+          "expected": "82",
+          "observed_values": [
+            "82"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R101",
+          "expected": "33",
+          "observed_values": [
+            "33"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30301-b011-c",
+    "task_kind": "organize",
+    "prediction": 48.0,
+    "upper": 49.0,
+    "actual": 48,
+    "content": "R103|90\nR105|77\nR104|89\nR100|89\nR102|26\nR101|26",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R103",
+          "90"
+        ],
+        [
+          "R105",
+          "77"
+        ],
+        [
+          "R104",
+          "89"
+        ],
+        [
+          "R100",
+          "89"
+        ],
+        [
+          "R102",
+          "26"
+        ],
+        [
+          "R101",
+          "26"
+        ]
+      ],
+      "expected_lines": [
+        "R103|90",
+        "R105|77",
+        "R104|89",
+        "R100|89",
+        "R102|26",
+        "R101|26"
+      ],
+      "observed_fields": [
+        [
+          "R103",
+          "90"
+        ],
+        [
+          "R105",
+          "77"
+        ],
+        [
+          "R104",
+          "89"
+        ],
+        [
+          "R100",
+          "89"
+        ],
+        [
+          "R102",
+          "26"
+        ],
+        [
+          "R101",
+          "26"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R103",
+          "expected": "90",
+          "observed_values": [
+            "90"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R105",
+          "expected": "77",
+          "observed_values": [
+            "77"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R104",
+          "expected": "89",
+          "observed_values": [
+            "89"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R100",
+          "expected": "89",
+          "observed_values": [
+            "89"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R102",
+          "expected": "26",
+          "observed_values": [
+            "26"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R101",
+          "expected": "26",
+          "observed_values": [
+            "26"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-i000-c",
+    "task_kind": "extract",
+    "prediction": 9.0,
+    "upper": 10.0,
+    "actual": 9,
+    "content": "R1000|13",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1000",
+          "13"
+        ]
+      ],
+      "expected_lines": [
+        "R1000|13"
+      ],
+      "observed_fields": [
+        [
+          "R1000",
+          "13"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1000",
+          "expected": "13",
+          "observed_values": [
+            "13"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-i001-c",
+    "task_kind": "extract",
+    "prediction": 9.0,
+    "upper": 10.0,
+    "actual": 9,
+    "content": "R1000|20",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1000",
+          "20"
+        ]
+      ],
+      "expected_lines": [
+        "R1000|20"
+      ],
+      "observed_fields": [
+        [
+          "R1000",
+          "20"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1000",
+          "expected": "20",
+          "observed_values": [
+            "20"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-i002-c",
+    "task_kind": "extract",
+    "prediction": 9.0,
+    "upper": 10.0,
+    "actual": 9,
+    "content": "R1000|27",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1000",
+          "27"
+        ]
+      ],
+      "expected_lines": [
+        "R1000|27"
+      ],
+      "observed_fields": [
+        [
+          "R1000",
+          "27"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1000",
+          "expected": "27",
+          "observed_values": [
+            "27"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-i003-c",
+    "task_kind": "extract",
+    "prediction": 9.0,
+    "upper": 10.0,
+    "actual": 9,
+    "content": "R1000|34",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1000",
+          "34"
+        ]
+      ],
+      "expected_lines": [
+        "R1000|34"
+      ],
+      "observed_fields": [
+        [
+          "R1000",
+          "34"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1000",
+          "expected": "34",
+          "observed_values": [
+            "34"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-i004-c",
+    "task_kind": "check",
+    "prediction": 8.0,
+    "upper": 10,
+    "actual": 8,
+    "content": "R1000|一致",
+    "quality": {
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R1000",
+          "不一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1000|不一致"
+      ],
+      "observed_fields": [
+        [
+          "R1000",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 1,
+          "id": "R1000",
+          "expected": "不一致",
+          "observed": "一致"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1000",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        }
+      ],
+      "target_fields_correct": 0,
+      "target_fields_expected": 1,
+      "completed_and_correct": false
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-i005-c",
+    "task_kind": "check",
+    "prediction": 8.0,
+    "upper": 10,
+    "actual": 8,
+    "content": "R1000|一致",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1000",
+          "一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1000|一致"
+      ],
+      "observed_fields": [
+        [
+          "R1000",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1000",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-i006-c",
+    "task_kind": "check",
+    "prediction": 8.0,
+    "upper": 10,
+    "actual": 8,
+    "content": "R1000|一致",
+    "quality": {
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R1000",
+          "不一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1000|不一致"
+      ],
+      "observed_fields": [
+        [
+          "R1000",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 1,
+          "id": "R1000",
+          "expected": "不一致",
+          "observed": "一致"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1000",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        }
+      ],
+      "target_fields_correct": 0,
+      "target_fields_expected": 1,
+      "completed_and_correct": false
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-i007-c",
+    "task_kind": "check",
+    "prediction": 8.0,
+    "upper": 10,
+    "actual": 8,
+    "content": "R1000|一致",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1000",
+          "一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1000|一致"
+      ],
+      "observed_fields": [
+        [
+          "R1000",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1000",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 1,
+      "target_fields_expected": 1,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-i008-c",
+    "task_kind": "organize",
+    "prediction": 18.0,
+    "upper": 19.0,
+    "actual": 18,
+    "content": "R1000|69\nR1001|13",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1000",
+          "69"
+        ],
+        [
+          "R1001",
+          "13"
+        ]
+      ],
+      "expected_lines": [
+        "R1000|69",
+        "R1001|13"
+      ],
+      "observed_fields": [
+        [
+          "R1000",
+          "69"
+        ],
+        [
+          "R1001",
+          "13"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1000",
+          "expected": "69",
+          "observed_values": [
+            "69"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1001",
+          "expected": "13",
+          "observed_values": [
+            "13"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-i009-c",
+    "task_kind": "organize",
+    "prediction": 18.0,
+    "upper": 19.0,
+    "actual": 18,
+    "content": "R1000|76\nR1001|34",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1000",
+          "76"
+        ],
+        [
+          "R1001",
+          "34"
+        ]
+      ],
+      "expected_lines": [
+        "R1000|76",
+        "R1001|34"
+      ],
+      "observed_fields": [
+        [
+          "R1000",
+          "76"
+        ],
+        [
+          "R1001",
+          "34"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1000",
+          "expected": "76",
+          "observed_values": [
+            "76"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1001",
+          "expected": "34",
+          "observed_values": [
+            "34"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-i010-c",
+    "task_kind": "organize",
+    "prediction": 18.0,
+    "upper": 19.0,
+    "actual": 18,
+    "content": "R1000|83\nR1001|23",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1000",
+          "83"
+        ],
+        [
+          "R1001",
+          "23"
+        ]
+      ],
+      "expected_lines": [
+        "R1000|83",
+        "R1001|23"
+      ],
+      "observed_fields": [
+        [
+          "R1000",
+          "83"
+        ],
+        [
+          "R1001",
+          "23"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1000",
+          "expected": "83",
+          "observed_values": [
+            "83"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1001",
+          "expected": "23",
+          "observed_values": [
+            "23"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-i011-c",
+    "task_kind": "organize",
+    "prediction": 18.0,
+    "upper": 19.0,
+    "actual": 18,
+    "content": "R1000|90\nR1001|12",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1000",
+          "90"
+        ],
+        [
+          "R1001",
+          "12"
+        ]
+      ],
+      "expected_lines": [
+        "R1000|90",
+        "R1001|12"
+      ],
+      "observed_fields": [
+        [
+          "R1000",
+          "90"
+        ],
+        [
+          "R1001",
+          "12"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1000",
+          "expected": "90",
+          "observed_values": [
+            "90"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1001",
+          "expected": "12",
+          "observed_values": [
+            "12"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 2,
+      "target_fields_expected": 2,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-b000-c",
+    "task_kind": "extract",
+    "prediction": 54.0,
+    "upper": 55.0,
+    "actual": 54,
+    "content": "R1000|13\nR1001|57\nR1002|72\nR1003|72\nR1004|86\nR1005|34",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1000",
+          "13"
+        ],
+        [
+          "R1001",
+          "57"
+        ],
+        [
+          "R1002",
+          "72"
+        ],
+        [
+          "R1003",
+          "72"
+        ],
+        [
+          "R1004",
+          "86"
+        ],
+        [
+          "R1005",
+          "34"
+        ]
+      ],
+      "expected_lines": [
+        "R1000|13",
+        "R1001|57",
+        "R1002|72",
+        "R1003|72",
+        "R1004|86",
+        "R1005|34"
+      ],
+      "observed_fields": [
+        [
+          "R1000",
+          "13"
+        ],
+        [
+          "R1001",
+          "57"
+        ],
+        [
+          "R1002",
+          "72"
+        ],
+        [
+          "R1003",
+          "72"
+        ],
+        [
+          "R1004",
+          "86"
+        ],
+        [
+          "R1005",
+          "34"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1000",
+          "expected": "13",
+          "observed_values": [
+            "13"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1001",
+          "expected": "57",
+          "observed_values": [
+            "57"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1002",
+          "expected": "72",
+          "observed_values": [
+            "72"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1003",
+          "expected": "72",
+          "observed_values": [
+            "72"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1004",
+          "expected": "86",
+          "observed_values": [
+            "86"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1005",
+          "expected": "34",
+          "observed_values": [
+            "34"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-b001-c",
+    "task_kind": "extract",
+    "prediction": 54.0,
+    "upper": 55.0,
+    "actual": 54,
+    "content": "R1000|20\nR1001|88\nR1002|66\nR1003|76\nR1004|50\nR1005|79",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1000",
+          "20"
+        ],
+        [
+          "R1001",
+          "88"
+        ],
+        [
+          "R1002",
+          "66"
+        ],
+        [
+          "R1003",
+          "76"
+        ],
+        [
+          "R1004",
+          "50"
+        ],
+        [
+          "R1005",
+          "79"
+        ]
+      ],
+      "expected_lines": [
+        "R1000|20",
+        "R1001|88",
+        "R1002|66",
+        "R1003|76",
+        "R1004|50",
+        "R1005|79"
+      ],
+      "observed_fields": [
+        [
+          "R1000",
+          "20"
+        ],
+        [
+          "R1001",
+          "88"
+        ],
+        [
+          "R1002",
+          "66"
+        ],
+        [
+          "R1003",
+          "76"
+        ],
+        [
+          "R1004",
+          "50"
+        ],
+        [
+          "R1005",
+          "79"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1000",
+          "expected": "20",
+          "observed_values": [
+            "20"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1001",
+          "expected": "88",
+          "observed_values": [
+            "88"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1002",
+          "expected": "66",
+          "observed_values": [
+            "66"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1003",
+          "expected": "76",
+          "observed_values": [
+            "76"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1004",
+          "expected": "50",
+          "observed_values": [
+            "50"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1005",
+          "expected": "79",
+          "observed_values": [
+            "79"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-b002-c",
+    "task_kind": "extract",
+    "prediction": 54.0,
+    "upper": 55.0,
+    "actual": 54,
+    "content": "R1000|27\nR1001|93\nR1002|52\nR1003|71\nR1004|24\nR1005|17",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1000",
+          "27"
+        ],
+        [
+          "R1001",
+          "93"
+        ],
+        [
+          "R1002",
+          "52"
+        ],
+        [
+          "R1003",
+          "71"
+        ],
+        [
+          "R1004",
+          "24"
+        ],
+        [
+          "R1005",
+          "17"
+        ]
+      ],
+      "expected_lines": [
+        "R1000|27",
+        "R1001|93",
+        "R1002|52",
+        "R1003|71",
+        "R1004|24",
+        "R1005|17"
+      ],
+      "observed_fields": [
+        [
+          "R1000",
+          "27"
+        ],
+        [
+          "R1001",
+          "93"
+        ],
+        [
+          "R1002",
+          "52"
+        ],
+        [
+          "R1003",
+          "71"
+        ],
+        [
+          "R1004",
+          "24"
+        ],
+        [
+          "R1005",
+          "17"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1000",
+          "expected": "27",
+          "observed_values": [
+            "27"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1001",
+          "expected": "93",
+          "observed_values": [
+            "93"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1002",
+          "expected": "52",
+          "observed_values": [
+            "52"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1003",
+          "expected": "71",
+          "observed_values": [
+            "71"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1004",
+          "expected": "24",
+          "observed_values": [
+            "24"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1005",
+          "expected": "17",
+          "observed_values": [
+            "17"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-b003-c",
+    "task_kind": "extract",
+    "prediction": 54.0,
+    "upper": 55.0,
+    "actual": 54,
+    "content": "R1000|34\nR1001|38\nR1002|44\nR1003|76\nR1004|24\nR1005|87",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1000",
+          "34"
+        ],
+        [
+          "R1001",
+          "38"
+        ],
+        [
+          "R1002",
+          "44"
+        ],
+        [
+          "R1003",
+          "76"
+        ],
+        [
+          "R1004",
+          "24"
+        ],
+        [
+          "R1005",
+          "87"
+        ]
+      ],
+      "expected_lines": [
+        "R1000|34",
+        "R1001|38",
+        "R1002|44",
+        "R1003|76",
+        "R1004|24",
+        "R1005|87"
+      ],
+      "observed_fields": [
+        [
+          "R1000",
+          "34"
+        ],
+        [
+          "R1001",
+          "38"
+        ],
+        [
+          "R1002",
+          "44"
+        ],
+        [
+          "R1003",
+          "76"
+        ],
+        [
+          "R1004",
+          "24"
+        ],
+        [
+          "R1005",
+          "87"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1000",
+          "expected": "34",
+          "observed_values": [
+            "34"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1001",
+          "expected": "38",
+          "observed_values": [
+            "38"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1002",
+          "expected": "44",
+          "observed_values": [
+            "44"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1003",
+          "expected": "76",
+          "observed_values": [
+            "76"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1004",
+          "expected": "24",
+          "observed_values": [
+            "24"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1005",
+          "expected": "87",
+          "observed_values": [
+            "87"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-b004-c",
+    "task_kind": "check",
+    "prediction": 48.0,
+    "upper": 55,
+    "actual": 51,
+    "content": "R1000|一致\nR1001|不一致\nR1002|不一致\nR1003|一致\nR1004|不一致\nR1005|一致",
+    "quality": {
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R1000",
+          "不一致"
+        ],
+        [
+          "R1001",
+          "一致"
+        ],
+        [
+          "R1002",
+          "不一致"
+        ],
+        [
+          "R1003",
+          "一致"
+        ],
+        [
+          "R1004",
+          "不一致"
+        ],
+        [
+          "R1005",
+          "一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1000|不一致",
+        "R1001|一致",
+        "R1002|不一致",
+        "R1003|一致",
+        "R1004|不一致",
+        "R1005|一致"
+      ],
+      "observed_fields": [
+        [
+          "R1000",
+          "一致"
+        ],
+        [
+          "R1001",
+          "不一致"
+        ],
+        [
+          "R1002",
+          "不一致"
+        ],
+        [
+          "R1003",
+          "一致"
+        ],
+        [
+          "R1004",
+          "不一致"
+        ],
+        [
+          "R1005",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 1,
+          "id": "R1000",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "position": 2,
+          "id": "R1001",
+          "expected": "一致",
+          "observed": "不一致"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1000",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R1001",
+          "expected": "一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R1002",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1003",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1004",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1005",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 4,
+      "target_fields_expected": 6,
+      "completed_and_correct": false
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-b005-c",
+    "task_kind": "check",
+    "prediction": 48.0,
+    "upper": 55,
+    "actual": 52,
+    "content": "R1000|一致\nR1001|不一致\nR1002|不一致\nR1003|不一致\nR1004|不一致\nR1005|一致",
+    "quality": {
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R1000",
+          "一致"
+        ],
+        [
+          "R1001",
+          "不一致"
+        ],
+        [
+          "R1002",
+          "一致"
+        ],
+        [
+          "R1003",
+          "不一致"
+        ],
+        [
+          "R1004",
+          "一致"
+        ],
+        [
+          "R1005",
+          "不一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1000|一致",
+        "R1001|不一致",
+        "R1002|一致",
+        "R1003|不一致",
+        "R1004|一致",
+        "R1005|不一致"
+      ],
+      "observed_fields": [
+        [
+          "R1000",
+          "一致"
+        ],
+        [
+          "R1001",
+          "不一致"
+        ],
+        [
+          "R1002",
+          "不一致"
+        ],
+        [
+          "R1003",
+          "不一致"
+        ],
+        [
+          "R1004",
+          "不一致"
+        ],
+        [
+          "R1005",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 3,
+          "id": "R1002",
+          "expected": "一致",
+          "observed": "不一致"
+        },
+        {
+          "position": 5,
+          "id": "R1004",
+          "expected": "一致",
+          "observed": "不一致"
+        },
+        {
+          "position": 6,
+          "id": "R1005",
+          "expected": "不一致",
+          "observed": "一致"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1000",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1001",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1002",
+          "expected": "一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R1003",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1004",
+          "expected": "一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R1005",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        }
+      ],
+      "target_fields_correct": 3,
+      "target_fields_expected": 6,
+      "completed_and_correct": false
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-b006-c",
+    "task_kind": "check",
+    "prediction": 48.0,
+    "upper": 55,
+    "actual": 50,
+    "content": "R1000|一致\nR1001|不一致\nR1002|不一致\nR1003|一致\nR1004|一致\nR1005|一致",
+    "quality": {
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R1000",
+          "不一致"
+        ],
+        [
+          "R1001",
+          "一致"
+        ],
+        [
+          "R1002",
+          "不一致"
+        ],
+        [
+          "R1003",
+          "一致"
+        ],
+        [
+          "R1004",
+          "不一致"
+        ],
+        [
+          "R1005",
+          "一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1000|不一致",
+        "R1001|一致",
+        "R1002|不一致",
+        "R1003|一致",
+        "R1004|不一致",
+        "R1005|一致"
+      ],
+      "observed_fields": [
+        [
+          "R1000",
+          "一致"
+        ],
+        [
+          "R1001",
+          "不一致"
+        ],
+        [
+          "R1002",
+          "不一致"
+        ],
+        [
+          "R1003",
+          "一致"
+        ],
+        [
+          "R1004",
+          "一致"
+        ],
+        [
+          "R1005",
+          "一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 1,
+          "id": "R1000",
+          "expected": "不一致",
+          "observed": "一致"
+        },
+        {
+          "position": 2,
+          "id": "R1001",
+          "expected": "一致",
+          "observed": "不一致"
+        },
+        {
+          "position": 5,
+          "id": "R1004",
+          "expected": "不一致",
+          "observed": "一致"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1000",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R1001",
+          "expected": "一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R1002",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1003",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1004",
+          "expected": "不一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R1005",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 3,
+      "target_fields_expected": 6,
+      "completed_and_correct": false
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-b007-c",
+    "task_kind": "check",
+    "prediction": 48.0,
+    "upper": 55,
+    "actual": 51,
+    "content": "R1000|一致\nR1001|不一致\nR1002|一致\nR1003|不一致\nR1004|一致\nR1005|不一致",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1000",
+          "一致"
+        ],
+        [
+          "R1001",
+          "不一致"
+        ],
+        [
+          "R1002",
+          "一致"
+        ],
+        [
+          "R1003",
+          "不一致"
+        ],
+        [
+          "R1004",
+          "一致"
+        ],
+        [
+          "R1005",
+          "不一致"
+        ]
+      ],
+      "expected_lines": [
+        "R1000|一致",
+        "R1001|不一致",
+        "R1002|一致",
+        "R1003|不一致",
+        "R1004|一致",
+        "R1005|不一致"
+      ],
+      "observed_fields": [
+        [
+          "R1000",
+          "一致"
+        ],
+        [
+          "R1001",
+          "不一致"
+        ],
+        [
+          "R1002",
+          "一致"
+        ],
+        [
+          "R1003",
+          "不一致"
+        ],
+        [
+          "R1004",
+          "一致"
+        ],
+        [
+          "R1005",
+          "不一致"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1000",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1001",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1002",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1003",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1004",
+          "expected": "一致",
+          "observed_values": [
+            "一致"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1005",
+          "expected": "不一致",
+          "observed_values": [
+            "不一致"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-b008-c",
+    "task_kind": "organize",
+    "prediction": 54.0,
+    "upper": 55.0,
+    "actual": 54,
+    "content": "R1004|92\nR1003|54\nR1002|12\nR1000|69\nR1005|63\nR1001|82",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1004",
+          "92"
+        ],
+        [
+          "R1003",
+          "54"
+        ],
+        [
+          "R1002",
+          "12"
+        ],
+        [
+          "R1000",
+          "69"
+        ],
+        [
+          "R1005",
+          "63"
+        ],
+        [
+          "R1001",
+          "82"
+        ]
+      ],
+      "expected_lines": [
+        "R1004|92",
+        "R1003|54",
+        "R1002|12",
+        "R1000|69",
+        "R1005|63",
+        "R1001|82"
+      ],
+      "observed_fields": [
+        [
+          "R1004",
+          "92"
+        ],
+        [
+          "R1003",
+          "54"
+        ],
+        [
+          "R1002",
+          "12"
+        ],
+        [
+          "R1000",
+          "69"
+        ],
+        [
+          "R1005",
+          "63"
+        ],
+        [
+          "R1001",
+          "82"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1004",
+          "expected": "92",
+          "observed_values": [
+            "92"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1003",
+          "expected": "54",
+          "observed_values": [
+            "54"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1002",
+          "expected": "12",
+          "observed_values": [
+            "12"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1000",
+          "expected": "69",
+          "observed_values": [
+            "69"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1005",
+          "expected": "63",
+          "observed_values": [
+            "63"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1001",
+          "expected": "82",
+          "observed_values": [
+            "82"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-b009-c",
+    "task_kind": "organize",
+    "prediction": 54.0,
+    "upper": 55.0,
+    "actual": 54,
+    "content": "R1004|78\nR1002|78\nR1005|26\nR1000|76\nR1003|44\nR1001|85",
+    "quality": {
+      "business_correct": false,
+      "raw_text_exact": false,
+      "expected_fields": [
+        [
+          "R1004",
+          "84"
+        ],
+        [
+          "R1002",
+          "78"
+        ],
+        [
+          "R1005",
+          "26"
+        ],
+        [
+          "R1000",
+          "76"
+        ],
+        [
+          "R1003",
+          "44"
+        ],
+        [
+          "R1001",
+          "85"
+        ]
+      ],
+      "expected_lines": [
+        "R1004|84",
+        "R1002|78",
+        "R1005|26",
+        "R1000|76",
+        "R1003|44",
+        "R1001|85"
+      ],
+      "observed_fields": [
+        [
+          "R1004",
+          "78"
+        ],
+        [
+          "R1002",
+          "78"
+        ],
+        [
+          "R1005",
+          "26"
+        ],
+        [
+          "R1000",
+          "76"
+        ],
+        [
+          "R1003",
+          "44"
+        ],
+        [
+          "R1001",
+          "85"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": false,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [
+        {
+          "position": 1,
+          "id": "R1004",
+          "expected": "84",
+          "observed": "78"
+        }
+      ],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1004",
+          "expected": "84",
+          "observed_values": [
+            "78"
+          ],
+          "status": "wrong_value"
+        },
+        {
+          "id": "R1002",
+          "expected": "78",
+          "observed_values": [
+            "78"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1005",
+          "expected": "26",
+          "observed_values": [
+            "26"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1000",
+          "expected": "76",
+          "observed_values": [
+            "76"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1003",
+          "expected": "44",
+          "observed_values": [
+            "44"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1001",
+          "expected": "85",
+          "observed_values": [
+            "85"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 5,
+      "target_fields_expected": 6,
+      "completed_and_correct": false
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-b010-c",
+    "task_kind": "organize",
+    "prediction": 54.0,
+    "upper": 55.0,
+    "actual": 54,
+    "content": "R1001|55\nR1004|34\nR1003|22\nR1000|83\nR1002|63\nR1005|34",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1001",
+          "55"
+        ],
+        [
+          "R1004",
+          "34"
+        ],
+        [
+          "R1003",
+          "22"
+        ],
+        [
+          "R1000",
+          "83"
+        ],
+        [
+          "R1002",
+          "63"
+        ],
+        [
+          "R1005",
+          "34"
+        ]
+      ],
+      "expected_lines": [
+        "R1001|55",
+        "R1004|34",
+        "R1003|22",
+        "R1000|83",
+        "R1002|63",
+        "R1005|34"
+      ],
+      "observed_fields": [
+        [
+          "R1001",
+          "55"
+        ],
+        [
+          "R1004",
+          "34"
+        ],
+        [
+          "R1003",
+          "22"
+        ],
+        [
+          "R1000",
+          "83"
+        ],
+        [
+          "R1002",
+          "63"
+        ],
+        [
+          "R1005",
+          "34"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1001",
+          "expected": "55",
+          "observed_values": [
+            "55"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1004",
+          "expected": "34",
+          "observed_values": [
+            "34"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1003",
+          "expected": "22",
+          "observed_values": [
+            "22"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1000",
+          "expected": "83",
+          "observed_values": [
+            "83"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1002",
+          "expected": "63",
+          "observed_values": [
+            "63"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1005",
+          "expected": "34",
+          "observed_values": [
+            "34"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "completed_and_correct": true
+    }
+  },
+  {
+    "req_id": "v10-dev-30302-b011-c",
+    "task_kind": "organize",
+    "prediction": 54.0,
+    "upper": 55.0,
+    "actual": 54,
+    "content": "R1004|42\nR1003|79\nR1002|28\nR1000|90\nR1005|37\nR1001|66",
+    "quality": {
+      "business_correct": true,
+      "raw_text_exact": true,
+      "expected_fields": [
+        [
+          "R1004",
+          "42"
+        ],
+        [
+          "R1003",
+          "79"
+        ],
+        [
+          "R1002",
+          "28"
+        ],
+        [
+          "R1000",
+          "90"
+        ],
+        [
+          "R1005",
+          "37"
+        ],
+        [
+          "R1001",
+          "66"
+        ]
+      ],
+      "expected_lines": [
+        "R1004|42",
+        "R1003|79",
+        "R1002|28",
+        "R1000|90",
+        "R1005|37",
+        "R1001|66"
+      ],
+      "observed_fields": [
+        [
+          "R1004",
+          "42"
+        ],
+        [
+          "R1003",
+          "79"
+        ],
+        [
+          "R1002",
+          "28"
+        ],
+        [
+          "R1000",
+          "90"
+        ],
+        [
+          "R1005",
+          "37"
+        ],
+        [
+          "R1001",
+          "66"
+        ]
+      ],
+      "structure_valid": true,
+      "field_values_correct": true,
+      "order_correct": true,
+      "missing_ids": [],
+      "extra_ids": [],
+      "duplicate_ids": [],
+      "value_mismatches": [],
+      "invalid_lines": [],
+      "nonempty_extra_text": [],
+      "missing_line_count": 0,
+      "extra_line_count": 0,
+      "blank_lines_ignored": 0,
+      "normalization": "CRLF/CR to LF, ignore whitespace-only lines, trim two ASCII-pipe fields only",
+      "schema_valid": true,
+      "target_field_results": [
+        {
+          "id": "R1004",
+          "expected": "42",
+          "observed_values": [
+            "42"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1003",
+          "expected": "79",
+          "observed_values": [
+            "79"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1002",
+          "expected": "28",
+          "observed_values": [
+            "28"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1000",
+          "expected": "90",
+          "observed_values": [
+            "90"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1005",
+          "expected": "37",
+          "observed_values": [
+            "37"
+          ],
+          "status": "correct"
+        },
+        {
+          "id": "R1001",
+          "expected": "66",
+          "observed_values": [
+            "66"
+          ],
+          "status": "correct"
+        }
+      ],
+      "target_fields_correct": 6,
+      "target_fields_expected": 6,
+      "completed_and_correct": true
+    }
+  }
+]

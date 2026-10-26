@@ -1,0 +1,22 @@
+{
+  "status": "passed",
+  "checks": 351,
+  "counts": {
+    "development": 48,
+    "warmups": 2
+  },
+  "development": {
+    "mae": 0.4166666666666667,
+    "upper_coverage": 48,
+    "correct": 35
+  },
+  "grammar_tokenization_requests": 528,
+  "elapsed_seconds": 130.326181079,
+  "G1_passed": false,
+  "final_test_accessed": false,
+  "limits": [
+    "One prospective supplementary development check, two seeds, no unseen-template claim.",
+    "Branch enumeration is bounded to restricted check grammar, not arbitrary LLM text.",
+    "No M/B3 value or scheduling-performance conclusion."
+  ]
+}

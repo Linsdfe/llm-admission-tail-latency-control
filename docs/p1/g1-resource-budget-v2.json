@@ -1,0 +1,23 @@
+{
+  "reference_run": "20261026-0845-p1-target-mix-v8-r2",
+  "round_bytes": {
+    "r1-capped": 6778352,
+    "r1-original": 6745564,
+    "r1-simple": 6721028,
+    "r2-capped": 6819189,
+    "r2-original": 6820427,
+    "r2-simple": 6813608,
+    "r3-capped": 6790123,
+    "r3-original": 6827164,
+    "r3-simple": 6779328
+  },
+  "maximum_round_bytes": 6827164,
+  "log_growth_factor": 2,
+  "planned_development_formal_with_20pct_reserve": 500,
+  "two_hour_equivalent_100s_windows": 72,
+  "native_raw_estimate_bytes": 7810275616,
+  "raw_plus_zip_and_metadata_budget_bytes": 17768034880,
+  "free_bytes_at_check": 92400955392,
+  "limits": "Native raw estimate from old prototype; G3 must remeasure new decision logs. 2GiB reserve excludes model downloads and source/build copies.",
+  "recommended_disk_reservation_GiB": 18
+}

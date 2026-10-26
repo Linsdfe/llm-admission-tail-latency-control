@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "measured": 48,
+  "warmups": 2,
+  "cap_events": 100,
+  "service_exit_zero": true,
+  "scope": "Supplementary retrospective event/ID checks using frozen gate implementation; no score/threshold changes."
+}
