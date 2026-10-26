@@ -1,0 +1,9 @@
+{
+  "analysis-source.py": "e3c6830931fc07be4f2f8f7c9205e21f9555f9e937ab83245cc67364381bc63e",
+  "fixture-deviation.json": "40a184204cf16458ecabd11dafd68afdb7a47a8d96702fe7014ff98cd0447241",
+  "independent-audit.json": "5783d98f093101133a3379b1ebce66de5edfc5a484b5d79c9fe0f3b827c6bb61",
+  "legacy-regression.json": "b430d908c739f70384d6447b23d785b3fd1c98f531b5f7f9d755de54d56ac5af",
+  "README.md": "6fb394a5ecfe23b7160bd13c4b81194006c4e3155d9ab2964cdfbcd36da64439",
+  "summary.json": "4cca5be674747768e16b50ed8e0bdf75bc3e2eac2cf78ff16d17edc8e174a109",
+  "synthetic-gate.json": "4fdbad1ba91a43a709dbd40a608e4752d73767f2b169e64cd2b1585e970c79c6"
+}

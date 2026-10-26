@@ -1,0 +1,6 @@
+{
+  "status": "failed_fixture",
+  "scenario": "transient_read",
+  "reason": "Injected literal Linux errno61 on Windows; use platform errno.ENODATA. Controller correctly treated the different error as fatal. Earlier scenario records retained.",
+  "new_GPU_measurements": 0
+}

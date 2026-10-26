@@ -1,0 +1,178 @@
+{
+  "status": "passed",
+  "scope": "synthetic engineering tests, not GPU measurements",
+  "scenarios": [
+    {
+      "scenario": "normal",
+      "status": "passed",
+      "transport_terminal": "completed",
+      "recorded": 1,
+      "reclaim_proof": "native_release",
+      "returns": 1,
+      "feedback": 1,
+      "same_server_recovery": true,
+      "expected_quarantine": false
+    },
+    {
+      "scenario": "queue_cancel",
+      "status": "passed",
+      "transport_terminal": "cancelled",
+      "recorded": 2,
+      "reclaim_proof": "no_reservation",
+      "returns": 1,
+      "feedback": 1,
+      "same_server_recovery": true,
+      "expected_quarantine": false
+    },
+    {
+      "scenario": "queue_timeout",
+      "status": "passed",
+      "transport_terminal": "timeout",
+      "recorded": 2,
+      "reclaim_proof": "no_reservation",
+      "returns": 1,
+      "feedback": 1,
+      "same_server_recovery": true,
+      "expected_quarantine": false
+    },
+    {
+      "scenario": "active_cancel",
+      "status": "passed",
+      "transport_terminal": "cancelled",
+      "recorded": 1,
+      "reclaim_proof": "native_release",
+      "returns": 1,
+      "feedback": 0,
+      "same_server_recovery": true,
+      "expected_quarantine": false
+    },
+    {
+      "scenario": "active_timeout",
+      "status": "passed",
+      "transport_terminal": "timeout",
+      "recorded": 1,
+      "reclaim_proof": "native_release",
+      "returns": 1,
+      "feedback": 0,
+      "same_server_recovery": true,
+      "expected_quarantine": false
+    },
+    {
+      "scenario": "http_503",
+      "status": "passed",
+      "transport_terminal": "rejected",
+      "recorded": 1,
+      "reclaim_proof": "http_rejection_and_exclusive_idle",
+      "returns": 1,
+      "feedback": 0,
+      "same_server_recovery": true,
+      "expected_quarantine": false
+    },
+    {
+      "scenario": "http_400",
+      "status": "passed",
+      "transport_terminal": "rejected",
+      "recorded": 1,
+      "reclaim_proof": "http_rejection_and_exclusive_idle",
+      "returns": 1,
+      "feedback": 0,
+      "same_server_recovery": true,
+      "expected_quarantine": false
+    },
+    {
+      "scenario": "connect_failure",
+      "status": "passed",
+      "transport_terminal": "failed",
+      "recorded": 1,
+      "reclaim_proof": "not_sent",
+      "returns": 1,
+      "feedback": 0,
+      "same_server_recovery": true,
+      "expected_quarantine": false
+    },
+    {
+      "scenario": "truncated_sse",
+      "status": "passed",
+      "transport_terminal": "failed",
+      "recorded": 1,
+      "reclaim_proof": "native_release",
+      "returns": 1,
+      "feedback": 0,
+      "same_server_recovery": true,
+      "expected_quarantine": false
+    },
+    {
+      "scenario": "global_cutoff",
+      "status": "passed",
+      "transport_terminal": "unfinished",
+      "recorded": 1,
+      "reclaim_proof": "native_release",
+      "returns": 1,
+      "feedback": 0,
+      "same_server_recovery": true,
+      "expected_quarantine": false
+    },
+    {
+      "scenario": "local_capacity",
+      "status": "passed",
+      "transport_terminal": "rejected",
+      "recorded": 1,
+      "reclaim_proof": "no_reservation",
+      "returns": 0,
+      "feedback": 0,
+      "same_server_recovery": true,
+      "expected_quarantine": false
+    },
+    {
+      "scenario": "double_callback",
+      "status": "passed",
+      "transport_terminal": "completed",
+      "recorded": 1,
+      "reclaim_proof": "native_release",
+      "returns": 1,
+      "feedback": 1,
+      "same_server_recovery": true,
+      "expected_quarantine": false
+    },
+    {
+      "scenario": "unknown_length",
+      "status": "passed",
+      "transport_terminal": "completed",
+      "recorded": 1,
+      "reclaim_proof": "native_release",
+      "returns": 1,
+      "feedback": 0,
+      "same_server_recovery": true,
+      "expected_quarantine": false
+    },
+    {
+      "scenario": "transient_read",
+      "status": "passed",
+      "transport_terminal": "completed",
+      "recorded": 1,
+      "reclaim_proof": "native_release",
+      "returns": 1,
+      "feedback": 1,
+      "same_server_recovery": true,
+      "expected_quarantine": false
+    },
+    {
+      "scenario": "missing_release",
+      "status": "passed",
+      "transport_terminal": "completed",
+      "recorded": 1,
+      "reclaim_proof": null,
+      "returns": 0,
+      "feedback": 0,
+      "same_server_recovery": false,
+      "expected_quarantine": true
+    }
+  ],
+  "source_sha256": {
+    "tests/integration/verify_p1_lifecycle_v13.py": "5b0d629aee446592cf87f14268b8fd530f0706c881e4a30a19199d274288bbde",
+    "scripts/replay/p1_live_control_v13.py": "2340e9df4179aaa11738593b6d54fda9d975a4fbdb75c1617ac6580a6df56865",
+    "scripts/replay/p1_controlled_replay_v13.py": "409ea3029118eb5d2e1a7635b9aa089343ef2289c3c1ba0933523cc320ddb20b",
+    "scripts/replay/p1_live_control_v12.py": "2fb399374357ff85859811a675b2a164174822337eeeb8eb16986748e02f4159",
+    "scripts/replay/p1_controlled_replay_v11.py": "2be0ffa947634796f5053957f88b6979fe36978299311cdf35f2cb0107b8b47a"
+  }
+}

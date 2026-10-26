@@ -1,0 +1,33 @@
+{
+  "status": "passed",
+  "checks": 4905,
+  "observed_states": 4064,
+  "different_cost": 164,
+  "masked_empty": 30,
+  "complete_intervals": 134,
+  "all_intervals_miss_locked_budget": true,
+  "component_wall_clock_us": {
+    "B3_0": {
+      "median_us": 0.5229305852485302,
+      "min_us": 0.4940255879208979,
+      "max_us": 0.5569097407803314
+    },
+    "B3_1": {
+      "median_us": 0.5036076964190273,
+      "min_us": 0.49686831908070556,
+      "max_us": 0.5368502805986104
+    },
+    "M": {
+      "median_us": 1.5117701095670764,
+      "min_us": 1.4261357562800643,
+      "max_us": 1.5594217664350616
+    }
+  },
+  "limits": [
+    "Intervals hold the recorded state fixed; no changed-budget queue performance claim.",
+    "Microbenchmark times only Python length/margin calculations; no C++ or end-to-end cost claim.",
+    "Nine benchmark blocks are not nine GPU performance repetitions."
+  ],
+  "new_GPU_measurements": 0,
+  "G1_passed": false
+}

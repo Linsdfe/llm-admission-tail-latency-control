@@ -1,24 +1,15 @@
 {
   "date": "20261026",
-  "archive": "results/archives/20261026/daily-20261026-161720-ca10e1d1.zip",
-  "sha256": "a8ce7741b0142370ecfe96895bd38f90067adc8675bde2c2988b361239919c7e",
-  "file_count": 9165,
+  "archive": "results/archives/20261026/daily-20261026-170342-d129d7dc.zip",
+  "sha256": "4e9ee988321923dfa85ab725b5a56a4619c369e9b735dfe26f6cdf3dc2fb09b9",
+  "file_count": 1182,
   "run_dirs": [
-    "results/raw/development/20261026-1500-p1-live-mechanism-v11",
-    "results/raw/development/20261026-1515-p1-live-mechanism-v11-r2",
-    "results/raw/development/20261026-1525-p1-live-mechanism-v11-r3",
-    "results/raw/development/20261026-1545-p1-soft-role-v12",
-    "results/raw/maintenance/20261026-p1-live-mechanism-preparation-v11",
-    "results/raw/maintenance/20261026-p1-live-mechanism-preparation-v11-r2",
-    "results/raw/maintenance/20261026-p1-live-mechanism-preparation-v11-r3",
-    "results/raw/maintenance/20261026-p1-live-mechanism-supervisor-v11",
-    "results/raw/maintenance/20261026-p1-live-mechanism-supervisor-v11-r2",
-    "results/raw/maintenance/20261026-p1-live-mechanism-supervisor-v11-r3",
-    "results/raw/maintenance/20261026-p1-soft-role-preparation-v12",
-    "results/raw/maintenance/20261026-p1-soft-role-supervisor-v12",
-    "results/raw/maintenance/20261026-p1-quality-delivery-v4"
+    "results/raw/development/20261026-1650-p1-lifecycle-v13",
+    "results/raw/maintenance/20261026-p1-lifecycle-preparation-v13",
+    "results/raw/maintenance/20261026-p1-lifecycle-supervisor-v13",
+    "results/raw/maintenance/20261026-p1-quality-delivery-v5"
   ],
   "verified": true,
-  "packed_at": "2026-10-26T16:17:20.433650+08:00",
+  "packed_at": "2026-10-26T17:03:42.663091+08:00",
   "backup_scope": "local_only"
 }

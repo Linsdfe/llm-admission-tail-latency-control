@@ -1,0 +1,92 @@
+{
+  "status": "completed",
+  "correctness_requests": 18,
+  "warmups": 2,
+  "terminal_counts": {
+    "completed": 11,
+    "cancelled": 2,
+    "timeout": 2,
+    "rejected": 1,
+    "failed": 1,
+    "unfinished": 1
+  },
+  "scenarios": [
+    {
+      "name": "normal",
+      "expected_terminal": "completed",
+      "observed_terminal": "completed",
+      "recorded": 2,
+      "same_server_recovery": true,
+      "owned_pid": 400
+    },
+    {
+      "name": "queue_cancel",
+      "expected_terminal": "cancelled",
+      "observed_terminal": "cancelled",
+      "recorded": 3,
+      "same_server_recovery": true,
+      "owned_pid": 400
+    },
+    {
+      "name": "queue_timeout",
+      "expected_terminal": "timeout",
+      "observed_terminal": "timeout",
+      "recorded": 3,
+      "same_server_recovery": true,
+      "owned_pid": 400
+    },
+    {
+      "name": "active_cancel",
+      "expected_terminal": "cancelled",
+      "observed_terminal": "cancelled",
+      "recorded": 2,
+      "same_server_recovery": true,
+      "owned_pid": 400
+    },
+    {
+      "name": "active_timeout",
+      "expected_terminal": "timeout",
+      "observed_terminal": "timeout",
+      "recorded": 2,
+      "same_server_recovery": true,
+      "owned_pid": 400
+    },
+    {
+      "name": "local_capacity",
+      "expected_terminal": "rejected",
+      "observed_terminal": "rejected",
+      "recorded": 2,
+      "same_server_recovery": true,
+      "owned_pid": 400
+    },
+    {
+      "name": "http_400",
+      "expected_terminal": "failed",
+      "observed_terminal": "failed",
+      "recorded": 2,
+      "same_server_recovery": true,
+      "owned_pid": 400
+    },
+    {
+      "name": "global_cutoff",
+      "expected_terminal": "unfinished",
+      "observed_terminal": "unfinished",
+      "recorded": 2,
+      "same_server_recovery": true,
+      "owned_pid": 400
+    }
+  ],
+  "accounting": {
+    "cap": 0,
+    "events": 32,
+    "peak_running_background": 1,
+    "final_running_background": 0,
+    "final_active_slots": 0
+  },
+  "elapsed_seconds": 20.711269437,
+  "service_exit_zero": true,
+  "source_model_runtime_unchanged": true,
+  "G1_passed": false,
+  "final_test_accessed": false,
+  "finished_at": "2026-10-26T16:47:38.439683+08:00"
+}

@@ -1,0 +1,29 @@
+{
+  "status": "known_problems_reproduced",
+  "scope": "synthetic engineering tests, not GPU measurements",
+  "scenarios": [
+    {
+      "scenario": "http_503",
+      "status": "known_problem_reproduced",
+      "expected": "rejected",
+      "observed": "failed",
+      "fatal": "RuntimeError('native release not confirmed')",
+      "recorded": 1
+    },
+    {
+      "scenario": "local_capacity",
+      "status": "known_problem_reproduced",
+      "expected": "rejected",
+      "observed": "timeout",
+      "fatal": null,
+      "recorded": 1
+    }
+  ],
+  "source_sha256": {
+    "tests/integration/verify_p1_lifecycle_v13.py": "5b0d629aee446592cf87f14268b8fd530f0706c881e4a30a19199d274288bbde",
+    "scripts/replay/p1_live_control_v13.py": "2340e9df4179aaa11738593b6d54fda9d975a4fbdb75c1617ac6580a6df56865",
+    "scripts/replay/p1_controlled_replay_v13.py": "409ea3029118eb5d2e1a7635b9aa089343ef2289c3c1ba0933523cc320ddb20b",
+    "scripts/replay/p1_live_control_v12.py": "2fb399374357ff85859811a675b2a164174822337eeeb8eb16986748e02f4159",
+    "scripts/replay/p1_controlled_replay_v11.py": "2be0ffa947634796f5053957f88b6979fe36978299311cdf35f2cb0107b8b47a"
+  }
+}

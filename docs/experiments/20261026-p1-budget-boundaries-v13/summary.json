@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "checks": 5002,
+  "roles": {
+    "floor": {
+      "observed_decisions": 2193,
+      "locked_budget_admit_differences": 0,
+      "equal_cost": 2193
+    },
+    "clip": {
+      "observed_decisions": 1871,
+      "locked_budget_admit_differences": 0,
+      "equal_cost": 1707,
+      "different_cost": 164,
+      "masked_empty": 30,
+      "eligible_intervals": 134
+    }
+  },
+  "new_GPU_measurements": 0,
+  "scope": "retrospective complete conditional budget intervals, not a budget search or counterfactual queue performance",
+  "eligible_intervals": 134,
+  "width_proxy_ms_range": [
+    14.148868055554885,
+    28.29773611111159
+  ],
+  "width_over_budget_range": [
+    0.008696572371913285,
+    0.017393144743827686
+  ],
+  "closest_distance_from_locked_budget": 62.554149371069116,
+  "benchmark_median_cpu_ns_per_call": {
+    "B3_0": 521.9468198824159,
+    "B3_1": 521.9468198824159,
+    "M": 1565.8404596472474
+  },
+  "independent_new_samples": 0,
+  "final_test_accessed": false,
+  "G1_passed": false
+}

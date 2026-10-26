@@ -1,0 +1,229 @@
+{
+  "scope": "Python isolated length/margin component; excludes history update, queue selection, I/O, shadows and inference",
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "platform": "Windows-11-10.0.26200-SP0",
+  "recorded_states": 1871,
+  "blocks": [
+    {
+      "block": 0,
+      "policy": "B3_0",
+      "calls": 59872,
+      "cpu_ns_per_call": 521.9468198824159,
+      "wall_ns_per_call": 554.8820817744522,
+      "checksum": 35563242.1055903
+    },
+    {
+      "block": 0,
+      "policy": "B3_1",
+      "calls": 59872,
+      "cpu_ns_per_call": 521.9468198824159,
+      "wall_ns_per_call": 499.1080972741849,
+      "checksum": 36410363.13379773
+    },
+    {
+      "block": 0,
+      "policy": "M",
+      "calls": 59872,
+      "cpu_ns_per_call": 1565.8404596472474,
+      "wall_ns_per_call": 1461.3709246392305,
+      "checksum": 35672810.93981139
+    },
+    {
+      "block": 1,
+      "policy": "B3_1",
+      "calls": 59872,
+      "cpu_ns_per_call": 521.9468198824159,
+      "wall_ns_per_call": 501.17250133618387,
+      "checksum": 36410363.13379773
+    },
+    {
+      "block": 1,
+      "policy": "M",
+      "calls": 59872,
+      "cpu_ns_per_call": 1304.8670497060396,
+      "wall_ns_per_call": 1426.1357562800642,
+      "checksum": 35672810.93981139
+    },
+    {
+      "block": 1,
+      "policy": "B3_0",
+      "calls": 59872,
+      "cpu_ns_per_call": 521.9468198824159,
+      "wall_ns_per_call": 553.555919294495,
+      "checksum": 35563242.1055903
+    },
+    {
+      "block": 2,
+      "policy": "M",
+      "calls": 59872,
+      "cpu_ns_per_call": 1565.8404596472474,
+      "wall_ns_per_call": 1427.9329235702833,
+      "checksum": 35672810.93981139
+    },
+    {
+      "block": 2,
+      "policy": "B3_0",
+      "calls": 59872,
+      "cpu_ns_per_call": 521.9468198824159,
+      "wall_ns_per_call": 494.0255879208979,
+      "checksum": 35563242.1055903
+    },
+    {
+      "block": 2,
+      "policy": "B3_1",
+      "calls": 59872,
+      "cpu_ns_per_call": 260.97340994120793,
+      "wall_ns_per_call": 503.60769641902726,
+      "checksum": 36410363.13379773
+    },
+    {
+      "block": 3,
+      "policy": "B3_0",
+      "calls": 59872,
+      "cpu_ns_per_call": 521.9468198824159,
+      "wall_ns_per_call": 506.4654596472475,
+      "checksum": 35563242.1055903
+    },
+    {
+      "block": 3,
+      "policy": "B3_1",
+      "calls": 59872,
+      "cpu_ns_per_call": 521.9468198824159,
+      "wall_ns_per_call": 497.9957242116515,
+      "checksum": 36410363.13379773
+    },
+    {
+      "block": 3,
+      "policy": "M",
+      "calls": 59872,
+      "cpu_ns_per_call": 1565.8404596472474,
+      "wall_ns_per_call": 1490.860502405131,
+      "checksum": 35672810.93981139
+    },
+    {
+      "block": 4,
+      "policy": "B3_1",
+      "calls": 59872,
+      "cpu_ns_per_call": 521.9468198824159,
+      "wall_ns_per_call": 528.8482095136291,
+      "checksum": 36410363.13379773
+    },
+    {
+      "block": 4,
+      "policy": "M",
+      "calls": 59872,
+      "cpu_ns_per_call": 1565.8404596472474,
+      "wall_ns_per_call": 1559.4217664350615,
+      "checksum": 35672810.93981139
+    },
+    {
+      "block": 4,
+      "policy": "B3_0",
+      "calls": 59872,
+      "cpu_ns_per_call": 521.9468198824159,
+      "wall_ns_per_call": 533.8806119722074,
+      "checksum": 35563242.1055903
+    },
+    {
+      "block": 5,
+      "policy": "M",
+      "calls": 59872,
+      "cpu_ns_per_call": 1565.8404596472474,
+      "wall_ns_per_call": 1511.7701095670764,
+      "checksum": 35672810.93981139
+    },
+    {
+      "block": 5,
+      "policy": "B3_0",
+      "calls": 59872,
+      "cpu_ns_per_call": 521.9468198824159,
+      "wall_ns_per_call": 499.7043693212186,
+      "checksum": 35563242.1055903
+    },
+    {
+      "block": 5,
+      "policy": "B3_1",
+      "calls": 59872,
+      "cpu_ns_per_call": 521.9468198824159,
+      "wall_ns_per_call": 512.473276322822,
+      "checksum": 36410363.13379773
+    },
+    {
+      "block": 6,
+      "policy": "B3_0",
+      "calls": 59872,
+      "cpu_ns_per_call": 521.9468198824159,
+      "wall_ns_per_call": 556.9097407803314,
+      "checksum": 35563242.1055903
+    },
+    {
+      "block": 6,
+      "policy": "B3_1",
+      "calls": 59872,
+      "cpu_ns_per_call": 521.9468198824159,
+      "wall_ns_per_call": 525.2321619454837,
+      "checksum": 36410363.13379773
+    },
+    {
+      "block": 6,
+      "policy": "M",
+      "calls": 59872,
+      "cpu_ns_per_call": 1565.8404596472474,
+      "wall_ns_per_call": 1535.1215927311598,
+      "checksum": 35672810.93981139
+    },
+    {
+      "block": 7,
+      "policy": "B3_1",
+      "calls": 59872,
+      "cpu_ns_per_call": 521.9468198824159,
+      "wall_ns_per_call": 536.8502805986104,
+      "checksum": 36410363.13379773
+    },
+    {
+      "block": 7,
+      "policy": "M",
+      "calls": 59872,
+      "cpu_ns_per_call": 1565.8404596472474,
+      "wall_ns_per_call": 1522.9840326028861,
+      "checksum": 35672810.93981139
+    },
+    {
+      "block": 7,
+      "policy": "B3_0",
+      "calls": 59872,
+      "cpu_ns_per_call": 521.9468198824159,
+      "wall_ns_per_call": 522.9305852485302,
+      "checksum": 35563242.1055903
+    },
+    {
+      "block": 8,
+      "policy": "M",
+      "calls": 59872,
+      "cpu_ns_per_call": 1304.8670497060396,
+      "wall_ns_per_call": 1524.893105291288,
+      "checksum": 35672810.93981139
+    },
+    {
+      "block": 8,
+      "policy": "B3_0",
+      "calls": 59872,
+      "cpu_ns_per_call": 521.9468198824159,
+      "wall_ns_per_call": 499.0128941742384,
+      "checksum": 35563242.1055903
+    },
+    {
+      "block": 8,
+      "policy": "B3_1",
+      "calls": 59872,
+      "cpu_ns_per_call": 521.9468198824159,
+      "wall_ns_per_call": 496.86831908070553,
+      "checksum": 36410363.13379773
+    }
+  ],
+  "median_cpu_ns_per_call": {
+    "B3_0": 521.9468198824159,
+    "B3_1": 521.9468198824159,
+    "M": 1565.8404596472474
+  }
+}
