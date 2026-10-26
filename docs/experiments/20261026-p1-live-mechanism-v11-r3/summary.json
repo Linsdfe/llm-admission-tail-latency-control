@@ -1,0 +1,391 @@
+{
+  "status": "passed_independent_prototype_audit",
+  "checks": 29592,
+  "run_id": "20261026-1525-p1-live-mechanism-v11-r3",
+  "measured_requests": 1754,
+  "warmups": 16,
+  "study_calibration": 144,
+  "new_calibration_in_attempt": 0,
+  "reused_calibration": 144,
+  "new_measured_in_attempt": 1610,
+  "prior_calibration": 48,
+  "initial_per_bucket": 32,
+  "calibration_correct": 107,
+  "selected_multiplier": 1.0,
+  "rounds": [
+    {
+      "name": "pilot-1p0",
+      "seed": 32100,
+      "policy": "B3_0",
+      "phase": "budget_feasibility",
+      "multiplier": 1.0,
+      "terminal_counts": {
+        "completed": 230,
+        "rejected": 0,
+        "timeout": 0,
+        "cancelled": 0,
+        "failed": 0,
+        "unfinished": 0
+      },
+      "background_permit_reasons": {
+        "empty": 18,
+        "normal": 12
+      },
+      "background_own_cost_fits": 24,
+      "accounting": {
+        "cap": 0,
+        "events": 464,
+        "peak_running_background": 1,
+        "final_running_background": 0,
+        "final_active_slots": 0
+      },
+      "interactive_p95_ms": 555.6947812000033,
+      "background_p95_ms": 2965.2748526500022,
+      "full_completion": true,
+      "output_tps": 34.44,
+      "correct": 186,
+      "background_normal_fraction": 0.4,
+      "background_max_hold_ms": 2045.8369770000136,
+      "native_feedback_updates": {
+        "interactive:extract": 68,
+        "background:extract": 12,
+        "interactive:check": 68,
+        "interactive:organize": 64,
+        "background:check": 10,
+        "background:organize": 8
+      },
+      "observed_shadow_differences": {
+        "total": 307,
+        "M_vs_B3_0": 0,
+        "M_vs_B3_1": 3
+      },
+      "decision_us_p95": 32.546
+    },
+    {
+      "name": "32101-B3_0",
+      "seed": 32101,
+      "policy": "B3_0",
+      "phase": "paired_development",
+      "multiplier": 1.0,
+      "terminal_counts": {
+        "completed": 230,
+        "rejected": 0,
+        "timeout": 0,
+        "cancelled": 0,
+        "failed": 0,
+        "unfinished": 0
+      },
+      "background_permit_reasons": {
+        "empty": 17,
+        "normal": 13
+      },
+      "background_own_cost_fits": 24,
+      "accounting": {
+        "cap": 0,
+        "events": 464,
+        "peak_running_background": 1,
+        "final_running_background": 0,
+        "final_active_slots": 0
+      },
+      "interactive_p95_ms": 469.52737624998645,
+      "background_p95_ms": 2911.8646107500213,
+      "full_completion": true,
+      "output_tps": 34.39,
+      "correct": 182,
+      "background_normal_fraction": 0.43333333333333335,
+      "background_max_hold_ms": 2015.2549020000006,
+      "native_feedback_updates": {
+        "interactive:extract": 68,
+        "background:extract": 12,
+        "interactive:check": 68,
+        "interactive:organize": 64,
+        "background:check": 10,
+        "background:organize": 8
+      },
+      "observed_shadow_differences": {
+        "total": 306,
+        "M_vs_B3_0": 0,
+        "M_vs_B3_1": 3
+      },
+      "decision_us_p95": 33.155
+    },
+    {
+      "name": "32101-B3_1",
+      "seed": 32101,
+      "policy": "B3_1",
+      "phase": "paired_development",
+      "multiplier": 1.0,
+      "terminal_counts": {
+        "completed": 230,
+        "rejected": 0,
+        "timeout": 0,
+        "cancelled": 0,
+        "failed": 0,
+        "unfinished": 0
+      },
+      "background_permit_reasons": {
+        "empty": 17,
+        "normal": 13
+      },
+      "background_own_cost_fits": 24,
+      "accounting": {
+        "cap": 0,
+        "events": 464,
+        "peak_running_background": 1,
+        "final_running_background": 0,
+        "final_active_slots": 0
+      },
+      "interactive_p95_ms": 660.5919063500086,
+      "background_p95_ms": 2899.426003700003,
+      "full_completion": true,
+      "output_tps": 34.39,
+      "correct": 182,
+      "background_normal_fraction": 0.43333333333333335,
+      "background_max_hold_ms": 2075.161673000046,
+      "native_feedback_updates": {
+        "interactive:extract": 68,
+        "background:extract": 12,
+        "interactive:check": 68,
+        "interactive:organize": 64,
+        "background:check": 10,
+        "background:organize": 8
+      },
+      "observed_shadow_differences": {
+        "total": 309,
+        "M_vs_B3_0": 0,
+        "M_vs_B3_1": 5
+      },
+      "decision_us_p95": 33.0436
+    },
+    {
+      "name": "32101-M",
+      "seed": 32101,
+      "policy": "M",
+      "phase": "paired_development",
+      "multiplier": 1.0,
+      "terminal_counts": {
+        "completed": 230,
+        "rejected": 0,
+        "timeout": 0,
+        "cancelled": 0,
+        "failed": 0,
+        "unfinished": 0
+      },
+      "background_permit_reasons": {
+        "empty": 19,
+        "normal": 11
+      },
+      "background_own_cost_fits": 24,
+      "accounting": {
+        "cap": 0,
+        "events": 464,
+        "peak_running_background": 1,
+        "final_running_background": 0,
+        "final_active_slots": 0
+      },
+      "interactive_p95_ms": 555.7067392500226,
+      "background_p95_ms": 2925.729605949987,
+      "full_completion": true,
+      "output_tps": 34.39,
+      "correct": 182,
+      "background_normal_fraction": 0.36666666666666664,
+      "background_max_hold_ms": 2048.4680009999684,
+      "native_feedback_updates": {
+        "interactive:extract": 68,
+        "background:extract": 12,
+        "interactive:check": 68,
+        "interactive:organize": 64,
+        "background:check": 10,
+        "background:organize": 8
+      },
+      "observed_shadow_differences": {
+        "total": 307,
+        "M_vs_B3_0": 0,
+        "M_vs_B3_1": 3
+      },
+      "decision_us_p95": 37.5015
+    },
+    {
+      "name": "32102-M",
+      "seed": 32102,
+      "policy": "M",
+      "phase": "paired_development",
+      "multiplier": 1.0,
+      "terminal_counts": {
+        "completed": 230,
+        "rejected": 0,
+        "timeout": 0,
+        "cancelled": 0,
+        "failed": 0,
+        "unfinished": 0
+      },
+      "background_permit_reasons": {
+        "empty": 23,
+        "normal": 7
+      },
+      "background_own_cost_fits": 20,
+      "accounting": {
+        "cap": 0,
+        "events": 464,
+        "peak_running_background": 1,
+        "final_running_background": 0,
+        "final_active_slots": 0
+      },
+      "interactive_p95_ms": 871.7374149499665,
+      "background_p95_ms": 3473.587776999922,
+      "full_completion": true,
+      "output_tps": 38.94,
+      "correct": 186,
+      "background_normal_fraction": 0.23333333333333334,
+      "background_max_hold_ms": 2524.2250199999253,
+      "native_feedback_updates": {
+        "interactive:extract": 68,
+        "background:extract": 12,
+        "interactive:check": 68,
+        "interactive:organize": 64,
+        "background:check": 10,
+        "background:organize": 8
+      },
+      "observed_shadow_differences": {
+        "total": 320,
+        "M_vs_B3_0": 0,
+        "M_vs_B3_1": 2
+      },
+      "decision_us_p95": 32.892450000000004
+    },
+    {
+      "name": "32102-B3_1",
+      "seed": 32102,
+      "policy": "B3_1",
+      "phase": "paired_development",
+      "multiplier": 1.0,
+      "terminal_counts": {
+        "completed": 230,
+        "rejected": 0,
+        "timeout": 0,
+        "cancelled": 0,
+        "failed": 0,
+        "unfinished": 0
+      },
+      "background_permit_reasons": {
+        "empty": 26,
+        "normal": 4
+      },
+      "background_own_cost_fits": 20,
+      "accounting": {
+        "cap": 0,
+        "events": 464,
+        "peak_running_background": 1,
+        "final_running_background": 0,
+        "final_active_slots": 0
+      },
+      "interactive_p95_ms": 887.7399679999883,
+      "background_p95_ms": 3468.979839999986,
+      "full_completion": true,
+      "output_tps": 38.94,
+      "correct": 186,
+      "background_normal_fraction": 0.13333333333333333,
+      "background_max_hold_ms": 2487.9866589999656,
+      "native_feedback_updates": {
+        "interactive:extract": 68,
+        "background:extract": 12,
+        "interactive:check": 68,
+        "interactive:organize": 64,
+        "background:check": 10,
+        "background:organize": 8
+      },
+      "observed_shadow_differences": {
+        "total": 325,
+        "M_vs_B3_0": 0,
+        "M_vs_B3_1": 0
+      },
+      "decision_us_p95": 30.491400000000002
+    },
+    {
+      "name": "32102-B3_0",
+      "seed": 32102,
+      "policy": "B3_0",
+      "phase": "paired_development",
+      "multiplier": 1.0,
+      "terminal_counts": {
+        "completed": 230,
+        "rejected": 0,
+        "timeout": 0,
+        "cancelled": 0,
+        "failed": 0,
+        "unfinished": 0
+      },
+      "background_permit_reasons": {
+        "empty": 22,
+        "normal": 8
+      },
+      "background_own_cost_fits": 20,
+      "accounting": {
+        "cap": 0,
+        "events": 464,
+        "peak_running_background": 1,
+        "final_running_background": 0,
+        "final_active_slots": 0
+      },
+      "interactive_p95_ms": 879.3110021500169,
+      "background_p95_ms": 3487.646510200029,
+      "full_completion": true,
+      "output_tps": 38.94,
+      "correct": 186,
+      "background_normal_fraction": 0.26666666666666666,
+      "background_max_hold_ms": 2505.6963680000554,
+      "native_feedback_updates": {
+        "interactive:extract": 68,
+        "background:extract": 12,
+        "interactive:check": 68,
+        "interactive:organize": 64,
+        "background:check": 10,
+        "background:organize": 8
+      },
+      "observed_shadow_differences": {
+        "total": 319,
+        "M_vs_B3_0": 0,
+        "M_vs_B3_1": 2
+      },
+      "decision_us_p95": 29.553799999999963
+    }
+  ],
+  "paired_development": [
+    {
+      "seed": 32101,
+      "policy_vs_B3_0": "M",
+      "interactive_p95_difference_ms": 86.17936300003612,
+      "background_p95_change_fraction": 0.004761552150734927,
+      "output_rate_change_fraction": 0.0
+    },
+    {
+      "seed": 32101,
+      "policy_vs_B3_0": "B3_1",
+      "interactive_p95_difference_ms": 191.06453010002213,
+      "background_p95_change_fraction": -0.004271698280235103,
+      "output_rate_change_fraction": 0.0
+    },
+    {
+      "seed": 32102,
+      "policy_vs_B3_0": "M",
+      "interactive_p95_difference_ms": -7.573587200050383,
+      "background_p95_change_fraction": -0.004031008635476785,
+      "output_rate_change_fraction": 0.0
+    },
+    {
+      "seed": 32102,
+      "policy_vs_B3_0": "B3_1",
+      "interactive_p95_difference_ms": 8.428965849971405,
+      "background_p95_change_fraction": -0.0053522253890840865,
+      "output_rate_change_fraction": 0.0
+    }
+  ],
+  "G1_passed": false,
+  "final_test_accessed": false,
+  "limits": [
+    "Client-side shared admission prototype, not formal C++ M/B3 or complete native KV ledger.",
+    "Two paired development seeds only; no population benefit/equivalence claim.",
+    "Conditional shadows share the actual state, not counterfactual completion timelines.",
+    "Completed-only latency quantiles are descriptive if any terminal failed; no joint success claim in that case."
+  ]
+}

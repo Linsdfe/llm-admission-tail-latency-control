@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="2332" viewBox="0 0 1120 2332" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="2424" viewBox="0 0 1120 2424" role="img" aria-labelledby="title desc">
 <title id="title">P0 成果与 P1 进展</title><desc id="desc">进度快照 2026.10.26  /  P0 已完成 · G0 通过  /  P1 进行中 · G1 待审</desc>
 <g font-family="Segoe UI, PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">
-<rect x="0" y="0" width="1120" height="2332" rx="24" fill="#f5f7fa" stroke="none"/>
+<rect x="0" y="0" width="1120" height="2424" rx="24" fill="#f5f7fa" stroke="none"/>
 <rect x="0" y="0" width="1120" height="142" rx="24" fill="#182d43" stroke="none"/>
 <rect x="0" y="80" width="1120" height="62" rx="0" fill="#182d43" stroke="none"/>
 <text x="40" y="36" font-size="13" fill="#9cb6cc" font-weight="600">LLM ADMISSION / PROJECT ROADMAP</text>
@@ -134,9 +134,15 @@
 <text x="124" y="2129" font-size="21" fill="#182d43" font-weight="600">G1 方案与预测验证</text>
 <text x="124" y="2156" font-size="16" fill="#53677c" font-weight="400">已有 144 条测量 + 离线机制核对；小作用空间与负面交付路线明确，等待用户评审</text>
 <rect x="972" y="2120" width="82" height="28" rx="14" fill="#dff3ed" stroke="none"/><text x="986" y="2140" font-size="14" fill="#087f78" font-weight="600">已备齐</text>
-<rect x="40" y="2202" width="1040" height="98" rx="14" fill="#fff3dd" stroke="none"/>
-<text x="60" y="2250" font-size="23" fill="#8b641e" font-weight="700">G1</text>
-<text x="126" y="2230" font-size="17" fill="#182d43" font-weight="400">v3 材料就绪：作用空间与预算参考已核；无增益交付路线明确，等待用户评审。</text>
-<text x="126" y="2257" font-size="16" fill="#53677c" font-weight="400">技术检查通过不等于 G1 通过；M/B3 尚未实现或比较。</text>
-<text x="126" y="2283" font-size="16" fill="#53677c" font-weight="400">v3 未新增 GPU 测量；离线见证不等于原生性能，G1 未自动通过。</text>
+<rect x="40" y="2188" width="1040" height="78" rx="16" fill="#f0f8f5" stroke="#80c4b8"/>
+<rect x="56" y="2203" width="48" height="48" rx="12" fill="#dff3ed" stroke="none"/>
+<text x="65" y="2235" font-size="22" fill="#087f78" font-weight="700">12</text>
+<text x="124" y="2221" font-size="21" fill="#182d43" font-weight="600">统一预检与真实反馈补强</text>
+<text x="124" y="2248" font-size="16" fill="#53677c" font-weight="400">3134 有效测量 + 28 预热；含复用资料，在线方法未见增益；固定量表 84 分</text>
+<rect x="972" y="2212" width="82" height="28" rx="14" fill="#dff3ed" stroke="none"/><text x="986" y="2232" font-size="14" fill="#087f78" font-weight="600">已核对</text>
+<rect x="40" y="2294" width="1040" height="98" rx="14" fill="#fff3dd" stroke="none"/>
+<text x="60" y="2342" font-size="23" fill="#8b641e" font-weight="700">G1</text>
+<text x="126" y="2322" font-size="17" fill="#182d43" font-weight="400">统一质量评分 84 / 100：较 76 分改善，仍低于 90 分线；G1 待用户评审。</text>
+<text x="126" y="2349" font-size="16" fill="#53677c" font-weight="400">已运行客户端 M/B3 原型；正式 C++ 与完整异常合同尚未验收。</text>
+<text x="126" y="2375" font-size="16" fill="#53677c" font-weight="400">下一项：收窄研究范围，明确软估计角色，重锁正式校准与对照矩阵。</text>
 </g></svg>

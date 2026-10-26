@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "checks": 3998,
+  "scope": "Public features and r2 supplementary rule registered before original probe result; reused calibration not new samples.",
+  "G1_passed": false,
+  "final_test_accessed": false
+}

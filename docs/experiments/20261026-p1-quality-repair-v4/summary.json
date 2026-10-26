@@ -1,0 +1,148 @@
+{
+  "status": "passed",
+  "new_valid_measurements": 3134,
+  "new_valid_warmups": 28,
+  "new_calibration_unique": 144,
+  "prior_calibration_history": 48,
+  "warm_history_unique": 192,
+  "independent_development_groups_per_role": 2,
+  "roles_not_interleaved": true,
+  "reports": {
+    "floor": {
+      "run_id": "20261026-1525-p1-live-mechanism-v11-r3",
+      "counts": {
+        "observed_decisions": 2193,
+        "M_vs_B3_0_admit_diff": 0,
+        "M_vs_B3_1_admit_diff": 18,
+        "M_vs_B3_0_cost_diff": 0
+      },
+      "M_margin_at_observed_decisions": {
+        "0": 1999,
+        "1": 100,
+        "2": 94
+      },
+      "M_reason_at_observed_decisions": {
+        "empty": 1136,
+        "soft_wait": 578,
+        "normal": 479
+      },
+      "paired_development": [
+        {
+          "seed": 32101,
+          "policy_vs_B3_0": "M",
+          "interactive_p95_difference_ms": 86.17936300003612,
+          "background_p95_change_fraction": 0.004761552150734927,
+          "output_rate_change_fraction": 0.0
+        },
+        {
+          "seed": 32101,
+          "policy_vs_B3_0": "B3_1",
+          "interactive_p95_difference_ms": 191.06453010002213,
+          "background_p95_change_fraction": -0.004271698280235103,
+          "output_rate_change_fraction": 0.0
+        },
+        {
+          "seed": 32102,
+          "policy_vs_B3_0": "M",
+          "interactive_p95_difference_ms": -7.573587200050383,
+          "background_p95_change_fraction": -0.004031008635476785,
+          "output_rate_change_fraction": 0.0
+        },
+        {
+          "seed": 32102,
+          "policy_vs_B3_0": "B3_1",
+          "interactive_p95_difference_ms": 8.428965849971405,
+          "background_p95_change_fraction": -0.0053522253890840865,
+          "output_rate_change_fraction": 0.0
+        }
+      ]
+    },
+    "clip": {
+      "run_id": "20261026-1545-p1-soft-role-v12",
+      "counts": {
+        "observed_decisions": 1871,
+        "M_vs_B3_0_admit_diff": 0,
+        "M_vs_B3_1_admit_diff": 7,
+        "M_vs_B3_0_cost_diff": 164
+      },
+      "M_margin_at_observed_decisions": {
+        "0": 1707,
+        "1": 86,
+        "2": 78
+      },
+      "M_reason_at_observed_decisions": {
+        "empty": 972,
+        "soft_wait": 488,
+        "normal": 411
+      },
+      "paired_development": [
+        {
+          "seed": 32101,
+          "policy_vs_B3_0": "M",
+          "interactive_p95_difference_ms": 49.300723749973486,
+          "background_p95_change_fraction": -0.015103316559960889,
+          "output_rate_change_fraction": 0.0
+        },
+        {
+          "seed": 32101,
+          "policy_vs_B3_0": "B3_1",
+          "interactive_p95_difference_ms": 184.99212290003504,
+          "background_p95_change_fraction": 0.025918510551922624,
+          "output_rate_change_fraction": 0.0
+        },
+        {
+          "seed": 32102,
+          "policy_vs_B3_0": "M",
+          "interactive_p95_difference_ms": 68.16277310011583,
+          "background_p95_change_fraction": 0.01139384504651475,
+          "output_rate_change_fraction": 0.0
+        },
+        {
+          "seed": 32102,
+          "policy_vs_B3_0": "B3_1",
+          "interactive_p95_difference_ms": 49.326893500003166,
+          "background_p95_change_fraction": -0.00024783010779627634,
+          "output_rate_change_fraction": 0.0
+        }
+      ]
+    }
+  },
+  "failed_attempts": [
+    {
+      "run_id": "20261026-1500-p1-live-mechanism-v11",
+      "planned_client_terminal_records": 230,
+      "actually_sent": 1,
+      "terminal_counts": {
+        "failed": 230
+      },
+      "usable_performance_round": false
+    },
+    {
+      "run_id": "20261026-1515-p1-live-mechanism-v11-r2",
+      "planned_client_terminal_records": 230,
+      "actually_sent": 35,
+      "terminal_counts": {
+        "completed": 34,
+        "failed": 196
+      },
+      "usable_performance_round": false
+    }
+  ],
+  "fixed_rubric_baseline": [
+    13,
+    12,
+    15,
+    18,
+    18
+  ],
+  "fixed_rubric_after": [
+    15,
+    15,
+    17,
+    19,
+    18
+  ],
+  "subjective_work_quality_score": 84,
+  "G1_passed": false,
+  "final_test_accessed": false
+}

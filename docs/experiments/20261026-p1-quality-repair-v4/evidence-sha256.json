@@ -1,0 +1,19 @@
+{
+  "docs/experiments/20261026-p1-live-mechanism-v11-r3/summary.json": "3a142cc1faaf3452d349d90654f0d2f0e541a1f81a273a2e2d0e18d7ae853446",
+  "results/raw/development/20261026-1525-p1-live-mechanism-v11-r3/rounds/pilot-1p0/replay/control/events.jsonl": "ba18a0564d439094ee3f77b78ff120e80c19416742a20b5b175f166b4ac5d546",
+  "results/raw/development/20261026-1525-p1-live-mechanism-v11-r3/rounds/32101-B3_0/replay/control/events.jsonl": "f7732dc57ac7d73c5cfc7d79141a8aa9034d351abc963211f9c498576e0d1a96",
+  "results/raw/development/20261026-1525-p1-live-mechanism-v11-r3/rounds/32101-B3_1/replay/control/events.jsonl": "2c15c8da973f02e4667dad6a86ca209333483e87b16a97a3d4ee6481932480d5",
+  "results/raw/development/20261026-1525-p1-live-mechanism-v11-r3/rounds/32101-M/replay/control/events.jsonl": "472544cc04e8f3810ea30bc290c4384ff207ccbb7fe951b5183eecba45e5ad5d",
+  "results/raw/development/20261026-1525-p1-live-mechanism-v11-r3/rounds/32102-M/replay/control/events.jsonl": "5c121a680ef61ea84513767aadc78d75258ebdb002a8d24fb19a37de391ac755",
+  "results/raw/development/20261026-1525-p1-live-mechanism-v11-r3/rounds/32102-B3_1/replay/control/events.jsonl": "26e9d9ab650836a20e8321a6bc7266a1e42920217f4d0314e657bd4694af0b45",
+  "results/raw/development/20261026-1525-p1-live-mechanism-v11-r3/rounds/32102-B3_0/replay/control/events.jsonl": "0bcbb1143d98a4575510732079e40c020e014c3bae8c48c426ef48817527590c",
+  "docs/experiments/20261026-p1-soft-role-v12/summary.json": "d47ac00fb3ecb1f4bceb463d38099649688e359317957433860dc2d440736b4b",
+  "results/raw/development/20261026-1545-p1-soft-role-v12/rounds/32101-B3_0/replay/control/events.jsonl": "3cc78d71e6b122d0c1936493d061202de7ed61b816233dfb1202baf8d46db029",
+  "results/raw/development/20261026-1545-p1-soft-role-v12/rounds/32101-B3_1/replay/control/events.jsonl": "a17631bc4f607f765e4f288daae4425d12265b25f5f771dcafdbb1bd66e80355",
+  "results/raw/development/20261026-1545-p1-soft-role-v12/rounds/32101-M/replay/control/events.jsonl": "7e01c7ccb29e68c7b3e3bd48df5d814fea746dc92fa7c83008941002c6c7894a",
+  "results/raw/development/20261026-1545-p1-soft-role-v12/rounds/32102-M/replay/control/events.jsonl": "b752096067c2fd87761a65669f01c6fdefa04089a25c70f95c251e3461af8f01",
+  "results/raw/development/20261026-1545-p1-soft-role-v12/rounds/32102-B3_1/replay/control/events.jsonl": "186224d2959ca15f206e2f033f3162292ea16c50b3a24e997505c12393a41381",
+  "results/raw/development/20261026-1545-p1-soft-role-v12/rounds/32102-B3_0/replay/control/events.jsonl": "ab9023855deb2fa178b549cb479ee544abcf4922863c1f558eec61e223749c25",
+  "results/raw/development/20261026-1500-p1-live-mechanism-v11/rounds/pilot-1p0/replay/client.jsonl": "d7ac4e53a97ee3fe35366f531c349ce295e963f297de7dbf9914049d6aa94662",
+  "results/raw/development/20261026-1515-p1-live-mechanism-v11-r2/rounds/pilot-1p0/replay/client.jsonl": "d2d7556fa14d7db7d643c703335e993a1b0cbfd073bf6a42019979ea5b9f1c3f"
+}

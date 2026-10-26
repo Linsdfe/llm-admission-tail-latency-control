@@ -1,15 +1,24 @@
 {
   "date": "20261026",
-  "archive": "results/archives/20261026/daily-20261026-142014-ca8acfed.zip",
-  "sha256": "0150fadb64a4fead3850a2a4169f83c580f2a09284f11b523f0906e780734948",
-  "file_count": 1783,
+  "archive": "results/archives/20261026/daily-20261026-161720-ca10e1d1.zip",
+  "sha256": "a8ce7741b0142370ecfe96895bd38f90067adc8675bde2c2988b361239919c7e",
+  "file_count": 9165,
   "run_dirs": [
-    "results/raw/maintenance/20261026-p1-g1-improvement-v3",
-    "results/raw/development/20261026-0930-p1-format-calibration-v9-r2",
-    "results/raw/development/20261026-1035-p1-grammar-upper-v10-r2",
-    "results/raw/maintenance/20261026-p1-g1-delivery-v2"
+    "results/raw/development/20261026-1500-p1-live-mechanism-v11",
+    "results/raw/development/20261026-1515-p1-live-mechanism-v11-r2",
+    "results/raw/development/20261026-1525-p1-live-mechanism-v11-r3",
+    "results/raw/development/20261026-1545-p1-soft-role-v12",
+    "results/raw/maintenance/20261026-p1-live-mechanism-preparation-v11",
+    "results/raw/maintenance/20261026-p1-live-mechanism-preparation-v11-r2",
+    "results/raw/maintenance/20261026-p1-live-mechanism-preparation-v11-r3",
+    "results/raw/maintenance/20261026-p1-live-mechanism-supervisor-v11",
+    "results/raw/maintenance/20261026-p1-live-mechanism-supervisor-v11-r2",
+    "results/raw/maintenance/20261026-p1-live-mechanism-supervisor-v11-r3",
+    "results/raw/maintenance/20261026-p1-soft-role-preparation-v12",
+    "results/raw/maintenance/20261026-p1-soft-role-supervisor-v12",
+    "results/raw/maintenance/20261026-p1-quality-delivery-v4"
   ],
   "verified": true,
-  "packed_at": "2026-10-26T14:20:14.575541+08:00",
+  "packed_at": "2026-10-26T16:17:20.433650+08:00",
   "backup_scope": "local_only"
 }
