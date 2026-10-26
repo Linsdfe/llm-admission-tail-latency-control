@@ -1,12 +1,12 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="2148" viewBox="0 0 1120 2148" role="img" aria-labelledby="title desc">
-<title id="title">P0 成果与 P1 进展</title><desc id="desc">进度快照 2026.10.25  /  P0 已完成 · G0 通过  /  P1 进行中 · G1 待审</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="2240" viewBox="0 0 1120 2240" role="img" aria-labelledby="title desc">
+<title id="title">P0 成果与 P1 进展</title><desc id="desc">进度快照 2026.10.26  /  P0 已完成 · G0 通过  /  P1 进行中 · G1 待审</desc>
 <g font-family="Segoe UI, PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">
-<rect x="0" y="0" width="1120" height="2148" rx="24" fill="#f5f7fa" stroke="none"/>
+<rect x="0" y="0" width="1120" height="2240" rx="24" fill="#f5f7fa" stroke="none"/>
 <rect x="0" y="0" width="1120" height="142" rx="24" fill="#182d43" stroke="none"/>
 <rect x="0" y="80" width="1120" height="62" rx="0" fill="#182d43" stroke="none"/>
 <text x="40" y="36" font-size="13" fill="#9cb6cc" font-weight="600">LLM ADMISSION / PROJECT ROADMAP</text>
 <text x="40" y="80" font-size="30" fill="#ffffff" font-weight="700">P0 成果与 P1 进展</text>
-<text x="40" y="115" font-size="17" fill="#c4d3df" font-weight="400">进度快照 2026.10.25  /  P0 已完成 · G0 通过  /  P1 进行中 · G1 待审</text>
+<text x="40" y="115" font-size="17" fill="#c4d3df" font-weight="400">进度快照 2026.10.26  /  P0 已完成 · G0 通过  /  P1 进行中 · G1 待审</text>
 <text x="40" y="182" font-size="18" fill="#087f78" font-weight="600">P0 已完成  /  第一步 · 2026.10.19</text>
 <rect x="40" y="202" width="248" height="100" rx="16" fill="#e7f4ef" stroke="#c4dfd5"/>
 <text x="58" y="237" font-size="21" fill="#087f78" font-weight="600">01  环境冻结</text>
@@ -122,9 +122,15 @@
 <text x="124" y="1945" font-size="21" fill="#182d43" font-weight="600">本地 3B 真实负载 v7</text>
 <text x="124" y="1972" font-size="16" fill="#53677c" font-weight="400">96 条新单条 + 9 轮 216 条排队对照；语义正确率与速度单列，原失败保留</text>
 <rect x="972" y="1936" width="82" height="28" rx="14" fill="#dff3ed" stroke="none"/><text x="986" y="1956" font-size="14" fill="#087f78" font-weight="600">已测完</text>
-<rect x="40" y="2018" width="1040" height="98" rx="14" fill="#fff3dd" stroke="none"/>
-<text x="60" y="2066" font-size="23" fill="#8b641e" font-weight="700">G1</text>
-<text x="126" y="2046" font-size="17" fill="#182d43" font-weight="400">待评审：已测实际工作量与简单规则取舍；正式场景、预测分类和参数待冻结。</text>
-<text x="126" y="2073" font-size="16" fill="#53677c" font-weight="400">技术检查通过不等于 G1 通过；M/B3 尚未实现或比较。</text>
-<text x="126" y="2099" font-size="16" fill="#53677c" font-weight="400">v7 共 312 测量 + 20 预热，683.398 秒；8591 项独立核对通过。</text>
+<rect x="40" y="2004" width="1040" height="78" rx="16" fill="#f0f8f5" stroke="#80c4b8"/>
+<rect x="56" y="2019" width="48" height="48" rx="12" fill="#dff3ed" stroke="none"/>
+<text x="65" y="2051" font-size="22" fill="#087f78" font-weight="700">10</text>
+<text x="124" y="2037" font-size="21" fill="#182d43" font-weight="600">目标流量与预测复核 v8</text>
+<text x="124" y="2064" font-size="16" fill="#53677c" font-weight="400">200/30 九轮完整复跑；2094 测量 + 20 预热，分类重合与编号长度误差留证</text>
+<rect x="972" y="2028" width="82" height="28" rx="14" fill="#dff3ed" stroke="none"/><text x="986" y="2048" font-size="14" fill="#087f78" font-weight="600">已测完</text>
+<rect x="40" y="2110" width="1040" height="98" rx="14" fill="#fff3dd" stroke="none"/>
+<text x="60" y="2158" font-size="23" fill="#8b641e" font-weight="700">G1</text>
+<text x="126" y="2138" font-size="17" fill="#182d43" font-weight="400">待评审：目标流量已测；公开格式长度特征、新校准与参数仍需冻结。</text>
+<text x="126" y="2165" font-size="16" fill="#53677c" font-weight="400">技术检查通过不等于 G1 通过；M/B3 尚未实现或比较。</text>
+<text x="126" y="2191" font-size="16" fill="#53677c" font-weight="400">v8 共 2094 测量 + 20 预热；55579 项独立核对，旧中断批次保留。</text>
 </g></svg>

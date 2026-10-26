@@ -1,0 +1,22 @@
+{
+  "date": "20261026",
+  "archive": "results/archives/20261026/daily-20261026-090416-43a57fba.zip",
+  "sha256": "6acb91d6f0cd76ac5dd3b79aca5c5d4eb4f10853171dd19363da08ef40595796",
+  "file_count": 8157,
+  "run_dirs": [
+    "results/raw/development/20261025-2320-p1-target-mix-v8",
+    "results/raw/maintenance/20261025-p1-target-mix-supervisor-v8",
+    "results/raw/maintenance/20261025-p1-target-mix-preparation-v8",
+    "results/raw/maintenance/20261025-qba-source-pin-v1",
+    "results/raw/development/20261026-0845-p1-target-mix-v8-r2",
+    "results/raw/maintenance/20261026-p1-target-mix-supervisor-v8-r2",
+    "results/raw/maintenance/20261026-p1-target-mix-independent-audit-v8-r2",
+    "results/raw/maintenance/20261026-p1-target-mix-delivery-v8-r2",
+    "results/raw/development/20261025-2240-p1-system-workload-v7",
+    "results/raw/maintenance/20261025-p1-system-workload-preparation-v7",
+    "results/raw/maintenance/20261025-p1-system-workload-delivery-v7"
+  ],
+  "verified": true,
+  "packed_at": "2026-10-26T09:04:16.042453+08:00",
+  "backup_scope": "local_only"
+}

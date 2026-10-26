@@ -1,0 +1,177 @@
+[
+  {
+    "name": "fresh_no_debt",
+    "now_ms": 1000,
+    "tasks": [
+      {
+        "req_id": "B",
+        "task_id": 1,
+        "category": "background",
+        "enqueued_ms": 800
+      },
+      {
+        "req_id": "I",
+        "task_id": 2,
+        "category": "interactive",
+        "enqueued_ms": 950
+      }
+    ],
+    "state": {
+      "debt": false,
+      "c": 0,
+      "history": [
+        0
+      ]
+    },
+    "simple_order": [
+      "I",
+      "B"
+    ],
+    "adaptation_order": [
+      "I",
+      "B"
+    ],
+    "theta": 5000,
+    "different": false
+  },
+  {
+    "name": "aged_no_debt",
+    "now_ms": 6001,
+    "tasks": [
+      {
+        "req_id": "B",
+        "task_id": 1,
+        "category": "background",
+        "enqueued_ms": 0
+      },
+      {
+        "req_id": "I",
+        "task_id": 2,
+        "category": "interactive",
+        "enqueued_ms": 5951
+      }
+    ],
+    "state": {
+      "debt": false,
+      "c": 0,
+      "history": [
+        0
+      ]
+    },
+    "simple_order": [
+      "B",
+      "I"
+    ],
+    "adaptation_order": [
+      "I",
+      "B"
+    ],
+    "theta": 5000,
+    "different": true
+  },
+  {
+    "name": "aged_with_debt",
+    "now_ms": 6001,
+    "tasks": [
+      {
+        "req_id": "B",
+        "task_id": 1,
+        "category": "background",
+        "enqueued_ms": 0
+      },
+      {
+        "req_id": "I",
+        "task_id": 2,
+        "category": "interactive",
+        "enqueued_ms": 5951
+      }
+    ],
+    "state": {
+      "debt": true,
+      "c": 5,
+      "history": [
+        0,
+        0,
+        0,
+        0,
+        0
+      ]
+    },
+    "simple_order": [
+      "B",
+      "I"
+    ],
+    "adaptation_order": [
+      "B",
+      "I"
+    ],
+    "theta": 5000,
+    "different": false
+  },
+  {
+    "name": "history_threshold_with_debt",
+    "now_ms": 2000,
+    "tasks": [
+      {
+        "req_id": "B",
+        "task_id": 1,
+        "category": "background",
+        "enqueued_ms": 1000
+      },
+      {
+        "req_id": "I",
+        "task_id": 2,
+        "category": "interactive",
+        "enqueued_ms": 1950
+      }
+    ],
+    "state": {
+      "debt": true,
+      "c": 5,
+      "history": [
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100,
+        100
+      ]
+    },
+    "simple_order": [
+      "I",
+      "B"
+    ],
+    "adaptation_order": [
+      "B",
+      "I"
+    ],
+    "theta": 100.0,
+    "different": true
+  }
+]

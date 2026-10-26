@@ -1,0 +1,10 @@
+{
+  "scope": "Assistant reviewed aggregate metrics, all 9 round summaries, 6 paired comparisons, classification diagnostics and independent audit. Automated independent checks cover all 2094 measured records; no claim of manual full-text review of all outputs.",
+  "G1_passed": false,
+  "findings": [
+    "Target labels equal business class on 72 source tasks; full policies not proven equivalent.",
+    "Old predictor tested unchanged on new ID format; actual coverage/error reported without refit.",
+    "Old interrupted batch excluded from complete-run aggregate and preserved.",
+    "Only 3 paired development seeds; no final test or complex-algorithm value claim."
+  ]
+}

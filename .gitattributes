@@ -162,3 +162,18 @@ scripts/analysis/99_analyze_p1_system_workload_v7.py -text whitespace=-blank-at-
 tests/unit/test_p1_system_workload_v7.py -text whitespace=-blank-at-eol,-blank-at-eof
 tests/integration/audit_p1_system_workload_v7.py -text whitespace=-blank-at-eol,-blank-at-eof
 docs/experiments/20261025-2240-p1-system-workload-v7/** -text whitespace=-blank-at-eol,-blank-at-eof
+
+# Target-mix v8 pre-collection source bytes.
+configs/p1-target-mix-v8.json -text whitespace=-blank-at-eol,-blank-at-eof
+docs/p1/nearest-neighbor-adaptation-amendment-v3.md -text whitespace=-blank-at-eol,-blank-at-eof
+docs/p1/target-mix-development-protocol-v8.md -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/79j_run_p1_target_mix_v8.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/p1_target_workload_v8.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/replay/p1_target_mix_v8.py -text whitespace=-blank-at-eol,-blank-at-eof
+scripts/analysis/100_analyze_p1_target_mix_v8.py -text whitespace=-blank-at-eol,-blank-at-eof
+tests/unit/test_p1_target_mix_v8.py -text whitespace=-blank-at-eol,-blank-at-eof
+tests/integration/audit_p1_target_mix_v8.py -text whitespace=-blank-at-eol,-blank-at-eof
+docs/experiments/20261025-2320-p1-target-mix-v8/** -text whitespace=-blank-at-eol,-blank-at-eof
+
+docs/experiments/20261026-0845-p1-target-mix-v8-r2/** -text whitespace=-blank-at-eol,-blank-at-eof
+docs/references/qba-source-v1/** -text whitespace=cr-at-eol

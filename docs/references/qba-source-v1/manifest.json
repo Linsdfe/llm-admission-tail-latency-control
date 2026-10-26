@@ -1,0 +1,20 @@
+{
+  "status": "source_snapshot_pinned_no_execution",
+  "recorded_at": "2026-10-25T23:27:29.9841660+08:00",
+  "repository": "https://github.com/Julianjiuxi/qba-llm-serving",
+  "revision": "e51873c85cb62a0095567577fc11bf4e1b7c7cde",
+  "resolved_via": "git ls-remote over SSH",
+  "license": "MIT",
+  "copyright": "Copyright (c) 2026 The Quota-Based Aging Authors",
+  "files_sha256": {
+    "LICENSE.txt": "5c5a55a7fbef11342d531fe780e1cfe89c20c0532c99615fd8b5f9e1a000ac69",
+    "README-upstream.md": "66f97b8b4b481626710d72b3d5b470d9f10cfeda0d1e997e766fc7d00cf79580",
+    "qba.py.txt": "4f1eb52a960ee7c0f530ed88003c118d51fd07912f2c4c0d353edfa245ea58ef",
+    "state.py.txt": "78aa7847f17f74020a6215ef11041bbab4eba7abdd07b8844872cf91ca9c4e66",
+    "types.py.txt": "f89e1956f07f7d21487fbf8ce6f7902cd4777f249e996b9bbf7f50873602f737"
+  },
+  "paper": "https://arxiv.org/abs/2610.17795v1",
+  "executed": false,
+  "native_NN_implemented": false,
+  "note": "Captured after v8 collection started. This reference snapshot did not drive the pre-frozen model-free witnesses or GPU experiment. First unauthenticated API request was rate-limited; HTTPS git transport reset; SSH resolved the fixed revision."
+}

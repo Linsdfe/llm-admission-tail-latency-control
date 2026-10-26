@@ -1,0 +1,65 @@
+{
+  "status": "frozen_calibration_only",
+  "point_model": {
+    "candidate": "category_task_median",
+    "values": {
+      "interactive:extract": 6.0,
+      "interactive:check": 5.0,
+      "interactive:organize": 12.0,
+      "background:extract": 36.0,
+      "background:check": 34.0,
+      "background:organize": 36.0
+    },
+    "cross_validation_mae": {
+      "category_median": 1.5833333333333333,
+      "category_task_median": 0.08333333333333333
+    },
+    "margin": 0,
+    "calibration_requests": 24,
+    "selection": "4fold kind_instance held out; tie prefers category median; no development fitting"
+  },
+  "weighted_cutoff": 12,
+  "ordinary_cutoff": 36.0,
+  "target_bucket_counts": {
+    "interactive": [
+      67,
+      67,
+      66
+    ],
+    "background": [
+      10,
+      10,
+      10
+    ]
+  },
+  "weight_sum": "230",
+  "calibration_requests": 24,
+  "source_sha256": {
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q001-v7-cal-27001-i000-c/replay/client.jsonl": "1def4fa2a3d2b28a495d71c6563c7663c12a6a280c20a1fb2152969ac6e0df19",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q002-v7-cal-27001-i001-c/replay/client.jsonl": "ee746cbc64f759d869c35b53fbf4c578405bd3791fee71e50e4a730b5f203a0a",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q003-v7-cal-27001-i002-c/replay/client.jsonl": "474a1103fd2c89790f987f2c9aad205dd95edfb784e11f64a55ba32cf3c84625",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q004-v7-cal-27001-i003-c/replay/client.jsonl": "2096ca7caaa703c09197328f92659cfa7ac0759c7e56fbac4e4d7564ae1b22a7",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q005-v7-cal-27001-i004-c/replay/client.jsonl": "8e628589c2fe7bd51704869b1466bfe4e23305779fcfa52a19b2cbbc51dfb475",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q006-v7-cal-27001-i005-c/replay/client.jsonl": "6ada2a14503305068f1f5d90cc7d097b03970cb7fc2a055454c6e8e8ced0fb92",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q007-v7-cal-27001-i006-c/replay/client.jsonl": "0156aee5daf2a5ff975b96aafca0c57970f65db7903904cc9cfa7f3840a739c8",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q008-v7-cal-27001-i007-c/replay/client.jsonl": "bd8d554b8790d343ca3ae5a3f51bdab74cc89b551d8dc638ae54af8f99912ee5",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q009-v7-cal-27001-i008-c/replay/client.jsonl": "40fcb040e08dae6ca79f071dd055fa764a51d1d873b512ce53192c7de765a186",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q010-v7-cal-27001-i009-c/replay/client.jsonl": "d6161588b63963b5fee0872ca9505164fb75f69c42dedb2522dea08e89f2947c",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q011-v7-cal-27001-i010-c/replay/client.jsonl": "3011fdcb89cbd6843d881d9b9840fae2dbe8ecec035a94a668bacb0423a7b4de",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q012-v7-cal-27001-i011-c/replay/client.jsonl": "359acf55184814f95e919b5d03c17fe8c1635b7ec681f373570b378b7162de80",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q013-v7-cal-27001-b000-c/replay/client.jsonl": "006862df675b2afbe321e23b62e0aede052eb5994c1919c09bf1e1e7b5e5445d",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q014-v7-cal-27001-b001-c/replay/client.jsonl": "c0633088efd634300d685a5bc0927a0dd30154403b7cffce5a734024307e2e02",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q015-v7-cal-27001-b002-c/replay/client.jsonl": "21818cdbea03ef7c24122169cc67b89232b1b37a0efa2121601fd207a68f407e",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q016-v7-cal-27001-b003-c/replay/client.jsonl": "9989ec0d9225dce89752799adb7494bb5e31e8ecc81f4af1c9dd5de36c36b0db",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q017-v7-cal-27001-b004-c/replay/client.jsonl": "79a1f86ec2b6a49df813c9a3b4d88dcde3d141bded6ce4027af2795cef60f55f",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q018-v7-cal-27001-b005-c/replay/client.jsonl": "969e5ca245f91eb1800800d834f6db34ea9722c0c072b6ca29bf46d579a95147",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q019-v7-cal-27001-b006-c/replay/client.jsonl": "f5f6d1a04113bf157a72147271e0bfa0ced7bce4d472d3229f76fd47e1222d78",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q020-v7-cal-27001-b007-c/replay/client.jsonl": "5d0366e20088909be61693fe7a91b6675f7f9a6ee0826ecc190c5993527bef29",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q021-v7-cal-27001-b008-c/replay/client.jsonl": "3ea9561d003c270951e1294fea96c3ede34d970e37c0d29d5e7165db146bdca2",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q022-v7-cal-27001-b009-c/replay/client.jsonl": "e6f83d95d77d9883523bf111baecaeb29440e2238b88d7cf293779c5c3143b09",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q023-v7-cal-27001-b010-c/replay/client.jsonl": "5060f4697a1ac5babbe9fb311251fc690308c86923ac55fcb53ff5f75d8225a2",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/profile/cases/q024-v7-cal-27001-b011-c/replay/client.jsonl": "aebcc731637aabd8d037eb0c9693d0895b257dd23c280293bb352d7e05c35f91",
+    "results/raw/development/20261025-2240-p1-system-workload-v7/calibration-model.json": "657f40598819ebf5f482bddf0eb77d405cc6b64a17ecfe8e441e2ddbe8bfee5c"
+  },
+  "selection": "Existing target200/30 weighting applied to v7 calibration only; no v8 fitting"
+}

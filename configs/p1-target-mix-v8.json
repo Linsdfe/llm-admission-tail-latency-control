@@ -1,0 +1,176 @@
+{
+  "schema_version": 1,
+  "document_id": "p1-target-mix-v8",
+  "study": "p1-target-mix-v8",
+  "created_date_local": "2026-10-25",
+  "stage": "development",
+  "status": "registered_single_clearer_instruction_candidate_development_pilot_not_G1_frozen",
+  "protocol_path": "docs/p1/target-mix-development-protocol-v8.md",
+  "prompt_format": "explicit_qwen_chatml_completion",
+  "tokenizer_request": {
+    "add_special": true,
+    "parse_special": true
+  },
+  "input_token_buckets": {
+    "interactive": [
+      [
+        32,
+        79
+      ],
+      [
+        80,
+        143
+      ],
+      [
+        144,
+        256
+      ]
+    ],
+    "background": [
+      [
+        128,
+        319
+      ],
+      [
+        320,
+        639
+      ],
+      [
+        640,
+        1024
+      ]
+    ]
+  },
+  "max_output_tokens": {
+    "interactive": 64,
+    "background": 384
+  },
+  "sampling": {
+    "temperature": 0.0,
+    "ignore_eos": false
+  },
+  "cache_prompt": false,
+  "slot_context_tokens": 2048,
+  "input_plus_output_safety_tokens": 1,
+  "allowed_splits": [
+    "development"
+  ],
+  "final_test_generation_enabled": false,
+  "development": {
+    "seeds": [
+      28101,
+      28102,
+      28103
+    ]
+  },
+  "task_kinds": [
+    "extract",
+    "check",
+    "organize"
+  ],
+  "per_category_per_kind": 4,
+  "bucket_assignment_by_kind": {
+    "extract": [
+      0,
+      0,
+      1,
+      2
+    ],
+    "check": [
+      1,
+      1,
+      2,
+      0
+    ],
+    "organize": [
+      2,
+      2,
+      0,
+      1
+    ]
+  },
+  "target_counts": {
+    "interactive": {
+      "extract": 1,
+      "check": 1,
+      "organize": 2
+    },
+    "background": {
+      "extract": 6,
+      "check": 6,
+      "organize": 6
+    }
+  },
+  "max_extra_records": 128,
+  "source_id": "project_original_target_mix_records_v8",
+  "template_version": "p1_target_mix_C_ID10_v8",
+  "output_format": "ASCII ID|value or ID|一致/不一致, one requested ID per line in requested order",
+  "scope": "Target200/30 developer validation, frozen v7 calibration-weighted cutoff12, class overlap and model-free witnesses. No final, G1, NN, hard ledger or M/B3 implementation.",
+  "comparison": {
+    "unique_corpus": 72,
+    "serial_profile_requests": 24,
+    "load_rounds": 9,
+    "requests_per_round": 230,
+    "load_requests": 2070,
+    "measured_requests": 2094,
+    "warmup_requests": 20,
+    "completion_requests": 2114,
+    "expected_cap_events": 4228
+  },
+  "model_sha256": "626b4a6678b86442240e33df819e00132d3ba7dddfe1cdc4fbb18e0a9615c62d",
+  "model_path": "/home/aiinfra/projects/llm-admission-tail-latency-control/models/qwen2.5-3b-instruct-q4_k_m-v6-20261025/qwen2.5-3b-instruct-q4_k_m.gguf",
+  "engine_commit": "620d2225cc436ab0b001e3200e590e3b286ef9ab",
+  "measurement_seconds": 100,
+  "drain_seconds": 180,
+  "request_timeout_seconds": 180,
+  "transport_timeout_seconds": 360,
+  "send_lag_limit_ms": 50,
+  "batch_timeout_seconds": 7200,
+  "execution_order": [
+    {
+      "repeat": 1,
+      "seed": 28101,
+      "policy": "original"
+    },
+    {
+      "repeat": 1,
+      "seed": 28101,
+      "policy": "simple"
+    },
+    {
+      "repeat": 1,
+      "seed": 28101,
+      "policy": "capped"
+    },
+    {
+      "repeat": 2,
+      "seed": 28102,
+      "policy": "simple"
+    },
+    {
+      "repeat": 2,
+      "seed": 28102,
+      "policy": "capped"
+    },
+    {
+      "repeat": 2,
+      "seed": 28102,
+      "policy": "original"
+    },
+    {
+      "repeat": 3,
+      "seed": 28103,
+      "policy": "capped"
+    },
+    {
+      "repeat": 3,
+      "seed": 28103,
+      "policy": "original"
+    },
+    {
+      "repeat": 3,
+      "seed": 28103,
+      "policy": "simple"
+    }
+  ]
+}
