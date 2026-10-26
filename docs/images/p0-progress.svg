@@ -132,11 +132,11 @@
 <rect x="56" y="2111" width="48" height="48" rx="12" fill="#dff3ed" stroke="none"/>
 <text x="65" y="2143" font-size="22" fill="#087f78" font-weight="700">11</text>
 <text x="124" y="2129" font-size="21" fill="#182d43" font-weight="600">G1 方案与预测验证</text>
-<text x="124" y="2156" font-size="16" fill="#53677c" font-weight="400">144 条测量；旧预测失败保留，方案、对照、参数、20 配对块与资源预算送审</text>
+<text x="124" y="2156" font-size="16" fill="#53677c" font-weight="400">已有 144 条测量 + 离线机制核对；小作用空间与负面交付路线明确，等待用户评审</text>
 <rect x="972" y="2120" width="82" height="28" rx="14" fill="#dff3ed" stroke="none"/><text x="986" y="2140" font-size="14" fill="#087f78" font-weight="600">已备齐</text>
 <rect x="40" y="2202" width="1040" height="98" rx="14" fill="#fff3dd" stroke="none"/>
 <text x="60" y="2250" font-size="23" fill="#8b641e" font-weight="700">G1</text>
-<text x="126" y="2230" font-size="17" fill="#182d43" font-weight="400">评审材料就绪：请确认研究范围、同信息对照、数据划分、参数规则与预算。</text>
+<text x="126" y="2230" font-size="17" fill="#182d43" font-weight="400">v3 材料就绪：作用空间与预算参考已核；无增益交付路线明确，等待用户评审。</text>
 <text x="126" y="2257" font-size="16" fill="#53677c" font-weight="400">技术检查通过不等于 G1 通过；M/B3 尚未实现或比较。</text>
-<text x="126" y="2283" font-size="16" fill="#53677c" font-weight="400">v9/v10 共 144 测量 + 4 预热；失败完整保留，最终测试未访问。</text>
+<text x="126" y="2283" font-size="16" fill="#53677c" font-weight="400">v3 未新增 GPU 测量；离线见证不等于原生性能，G1 未自动通过。</text>
 </g></svg>

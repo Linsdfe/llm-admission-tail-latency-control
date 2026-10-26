@@ -1,0 +1,20 @@
+{
+  "status": "sampling_boundary_clarification",
+  "background_diagnostic_decisions": 240,
+  "background_all_fallback": true,
+  "observed_max_background_history_at_decision": 19,
+  "v9_calibration_per_bucket": 8,
+  "per_run_background_feedback_per_bucket_max": 12,
+  "v9_total_background_samples_max": 20,
+  "formal_calibration_per_bucket": 16,
+  "formal_total_background_samples_max": 28,
+  "minimum_history": 32,
+  "new_GPU_measurements": 0,
+  "scope": "Under six category/task buckets and 200/30 per run, background history remains insufficient. Do not claim background online updates. No parameter changed.",
+  "per_run_background_feedback_by_kind": {
+    "extract": 12,
+    "check": 10,
+    "organize": 8
+  },
+  "calculation_note": "Use actual deterministic bucket/corpus rotation, not an assumption of 30/3 equal task kinds; 12/10/8 occurrences. Both maxima remain below32. First draft arithmetic retained in maintenance."
+}

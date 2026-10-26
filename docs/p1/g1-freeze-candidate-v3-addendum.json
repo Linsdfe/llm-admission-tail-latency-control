@@ -1,0 +1,10 @@
+{
+  "base_candidate_manifest": "docs/p1/g1-freeze-candidate-v3.json",
+  "base_manifest_sha256": "98d871b91a7ff02ffbccc6fca42c9fcc0aa51c9e19e721b6955decfd612e32dc",
+  "files": {
+    "docs/p1/g1-background-history-boundary-v1.md": "ba171e96053c63cee5d0cdd3fe8d182ce6e195a020458633ba0f7b5aef7c6f1f",
+    "docs/experiments/20261026-p1-margin-mechanism-audit-v1/sampling-boundary.json": "878c92a3d5ff5683776166a99ff67c55e06df9a9087067be50dd6503b83d5d1e"
+  },
+  "changes_parameters": false,
+  "G1_passed": false
+}

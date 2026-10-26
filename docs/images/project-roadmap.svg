@@ -23,7 +23,7 @@
 <rect x="450" y="220" width="82" height="28" rx="14" fill="#dff3ed" stroke="none"/><text x="464" y="240" font-size="14" fill="#087f78" font-weight="600">进行中</text>
 <text x="324" y="286" font-size="23" fill="#182d43" font-weight="600">需求与预注册</text>
 <text x="324" y="317" font-size="17" fill="#53677c" font-weight="400">10.24 启动 / 11.29 计划</text>
-<text x="324" y="357" font-size="16" fill="#53677c" font-weight="400">G1 评审材料就绪</text>
+<text x="324" y="357" font-size="16" fill="#53677c" font-weight="400">G1 v3 补强已核对</text>
 <path d="M324 380h208" stroke="#e3e9ef"/>
 <text x="324" y="412" font-size="16" fill="#087f78" font-weight="600">G1  等待用户评审</text>
 <text x="554" y="323" font-size="22" fill="#8b9bab" font-weight="400">›</text>

@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "checks": 5823,
+  "scope": "Independent fixed-feedback arithmetic and constructed-state checks; not a real-engine M/B3 comparison.",
+  "G1_passed": false,
+  "final_test_accessed": false
+}

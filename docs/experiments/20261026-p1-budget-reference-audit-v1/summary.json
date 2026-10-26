@@ -1,0 +1,98 @@
+{
+  "status": "retrospective_reference_diagnostic",
+  "new_GPU_measurements": 0,
+  "class_calibration_p75_ms_proxy": {
+    "interactive": 240.89381481481482,
+    "background": 1048.6059166666669
+  },
+  "proposed_reference": 1048.6059166666669,
+  "rows": [
+    {
+      "reference_rule": "v2_target_weighted_p75",
+      "reference_ms_proxy": 292.7440555555556,
+      "multiplier": 0.5,
+      "budget_ms_proxy": 146.3720277777778,
+      "interactive": {
+        "source_requests": 24,
+        "own_cost_exceeds_budget": 24
+      },
+      "background": {
+        "source_requests": 24,
+        "own_cost_exceeds_budget": 24
+      }
+    },
+    {
+      "reference_rule": "v2_target_weighted_p75",
+      "reference_ms_proxy": 292.7440555555556,
+      "multiplier": 0.75,
+      "budget_ms_proxy": 219.55804166666667,
+      "interactive": {
+        "source_requests": 24,
+        "own_cost_exceeds_budget": 12
+      },
+      "background": {
+        "source_requests": 24,
+        "own_cost_exceeds_budget": 24
+      }
+    },
+    {
+      "reference_rule": "v2_target_weighted_p75",
+      "reference_ms_proxy": 292.7440555555556,
+      "multiplier": 1,
+      "budget_ms_proxy": 292.7440555555556,
+      "interactive": {
+        "source_requests": 24,
+        "own_cost_exceeds_budget": 7
+      },
+      "background": {
+        "source_requests": 24,
+        "own_cost_exceeds_budget": 24
+      }
+    },
+    {
+      "reference_rule": "v3_max_class_p75",
+      "reference_ms_proxy": 1048.6059166666669,
+      "multiplier": 0.5,
+      "budget_ms_proxy": 524.3029583333334,
+      "interactive": {
+        "source_requests": 24,
+        "own_cost_exceeds_budget": 0
+      },
+      "background": {
+        "source_requests": 24,
+        "own_cost_exceeds_budget": 24
+      }
+    },
+    {
+      "reference_rule": "v3_max_class_p75",
+      "reference_ms_proxy": 1048.6059166666669,
+      "multiplier": 0.75,
+      "budget_ms_proxy": 786.4544375000002,
+      "interactive": {
+        "source_requests": 24,
+        "own_cost_exceeds_budget": 0
+      },
+      "background": {
+        "source_requests": 24,
+        "own_cost_exceeds_budget": 23
+      }
+    },
+    {
+      "reference_rule": "v3_max_class_p75",
+      "reference_ms_proxy": 1048.6059166666669,
+      "multiplier": 1,
+      "budget_ms_proxy": 1048.6059166666669,
+      "interactive": {
+        "source_requests": 24,
+        "own_cost_exceeds_budget": 0
+      },
+      "background": {
+        "source_requests": 24,
+        "own_cost_exceeds_budget": 10
+      }
+    }
+  ],
+  "source": "v9 calibration only sets proposed reference; v9 development used to describe cost feasibility, not fit or native performance.",
+  "interpretation": "Own cost above budget means ordinary nonempty-queue soft admission cannot admit this request even with zero remaining cost; common empty/protected bypass can still serve it. This is not observed starvation.",
+  "final_test_accessed": false
+}

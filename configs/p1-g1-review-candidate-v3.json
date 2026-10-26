@@ -1,0 +1,218 @@
+{
+  "schema_version": 3,
+  "status": "candidate_for_G1_review_not_approved",
+  "stage": "P1",
+  "main_question": "M vs B3 under shared predictor, execution, protection and information",
+  "scenario": {
+    "main": {
+      "interactive": 200,
+      "background": 30,
+      "window_seconds": 100,
+      "background_first_ms": 250,
+      "background_batch": 3,
+      "batch_period_ms": 10000,
+      "within_batch_ms": 50
+    },
+    "boundary": {
+      "interactive": 200,
+      "background": 30,
+      "window_seconds": 100,
+      "background_first_ms": 250,
+      "background_period_ms": 3333.3333333333335
+    }
+  },
+  "formal_data": {
+    "calibration_seeds": [
+      30101,
+      30102,
+      30103,
+      30104
+    ],
+    "development_seeds": [
+      30201,
+      30202,
+      30203
+    ],
+    "final_main_seeds": [
+      39101,
+      39102,
+      39103,
+      39104,
+      39105,
+      39106,
+      39107,
+      39108,
+      39109,
+      39110,
+      39111,
+      39112,
+      39113,
+      39114,
+      39115,
+      39116,
+      39117,
+      39118,
+      39119,
+      39120
+    ],
+    "final_boundary_seeds": [
+      39201,
+      39202,
+      39203,
+      39204,
+      39205,
+      39206,
+      39207,
+      39208,
+      39209,
+      39210,
+      39211,
+      39212,
+      39213,
+      39214,
+      39215,
+      39216,
+      39217,
+      39218,
+      39219,
+      39220
+    ],
+    "final_generation_enabled": false,
+    "final_accessed": false,
+    "families": {
+      "calibration": "O",
+      "development": "C",
+      "final": "FINAL_new_directives_in_candidate_v2"
+    },
+    "final_directives": {
+      "extract": "对下列编号返回资料中的对应数值：{targets}。每行ID|值，不写其他内容。",
+      "check": "判断每个编号在两表中的值是否相同：{targets}。相同写一致，不同写不一致。每行ID|结论。",
+      "organize": "依照给出的编号列表逐行输出对应值：{targets}。严格保持列表顺序，每行ID|值。"
+    },
+    "calibration_cv": "leave-one-seed-out over four calibration seeds; development never fits"
+  },
+  "search": {
+    "shared_budget_multipliers": [
+      0.5,
+      0.75,
+      1
+    ],
+    "aging_seconds": [
+      2,
+      5,
+      10
+    ],
+    "B3_margin_tokens": [
+      0,
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "M_window": [
+      32,
+      128
+    ],
+    "M_quantile": [
+      0.8,
+      0.95
+    ],
+    "NN_k_gamma": [
+      [
+        2,
+        0.8
+      ],
+      [
+        5,
+        0.8
+      ],
+      [
+        8,
+        0.8
+      ],
+      [
+        5,
+        0.95
+      ]
+    ],
+    "max_candidates_each": 6,
+    "development_blocks_each": 3,
+    "max_native_development_runs": 96,
+    "reference_rule": "max of class-conditional type7 P75 of calibration shared effective costs; B3 margin zero with public check floor"
+  },
+  "formal": {
+    "blocks": 20,
+    "main_policies": [
+      "B0",
+      "B1",
+      "B2-P",
+      "B2-Q",
+      "B3",
+      "B4",
+      "M",
+      "NN",
+      "M-no-cal",
+      "M-no-aging",
+      "S_cap1"
+    ],
+    "boundary_policies": [
+      "B1",
+      "B3",
+      "S",
+      "M",
+      "NN"
+    ],
+    "native_runs_before_alias_merge": 320,
+    "interval_order_stats": [
+      4,
+      17
+    ],
+    "familywise_alpha": 0.05,
+    "endpoints": 10
+  },
+  "criteria": {
+    "interactive_p95_ms_max": 1000,
+    "absolute_gain_ms_min": 100,
+    "relative_gain_min": 0.15,
+    "background_p95_cost_max": 0.2,
+    "output_rate_cost_max": 0.05
+  },
+  "scope": {
+    "R08": false,
+    "api_inference": false,
+    "preemption": false,
+    "multiple_gpu": false
+  },
+  "freeze_policy": "G1 locks design and deterministic selection rules; G2/G3 validates implementations; G4 locks executable parameters/code/final trace hashes before final data.",
+  "predictor_candidate": {
+    "point": "format_residual",
+    "fit": "calibration only",
+    "empirical_initial_margin": "max positive leave-one-seed-out residual rounded up",
+    "check_common_fallback": "max(point+method_margin, exhaustive public check grammar token max + 2), clipped to max_tokens",
+    "if_v10_not_95pct": "max_tokens fallback; stop predictor tuning; review scope at G2/G3",
+    "applies_equally_to": [
+      "M",
+      "B3",
+      "all policies using same soft cost"
+    ],
+    "no_unseen_template_or_population_coverage_claim": true
+  },
+  "supersedes": "configs/p1-g1-review-candidate-v2.json with explicitly documented limited changes",
+  "mechanism_contract": {
+    "buckets": "category x task_kind, six buckets",
+    "minimum_history": 32,
+    "warm_calibration_counts_toward_minimum": true,
+    "feedback": "strictly earlier completion only",
+    "cost_input_coefficient": "median(prompt_ms / prompt_n)",
+    "cost_output_coefficient": "median(predicted_ms / predicted_n)",
+    "native_trigger_validation_required_at": "G3",
+    "offline_witness_is_not_native_performance": true
+  },
+  "negative_result_plan": "docs/p1/negative-result-delivery-plan-v1.md",
+  "review_recommendation": {
+    "assistant_score": 90,
+    "subjective_design_readiness_only": true,
+    "G1_passed": false
+  }
+}
