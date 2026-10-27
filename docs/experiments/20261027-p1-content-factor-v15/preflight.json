@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "planned": 32,
+  "distinct_prompts": 16,
+  "seen_source_facts": 8,
+  "new_source_facts": 0,
+  "duplicate_policy": "registered paired reuse; exact source bytes checked",
+  "online_updates_enabled": false,
+  "G1_passed": false,
+  "final_test_accessed": false
+}

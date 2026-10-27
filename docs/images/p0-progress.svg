@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="2608" viewBox="0 0 1120 2608" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="2700" viewBox="0 0 1120 2700" role="img" aria-labelledby="title desc">
 <title id="title">P0 成果与 P1 进展</title><desc id="desc">进度快照 2026.10.27  /  P0 已完成 · G0 通过  /  P1 进行中 · G1 待审</desc>
 <g font-family="Segoe UI, PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">
-<rect x="0" y="0" width="1120" height="2608" rx="24" fill="#f5f7fa" stroke="none"/>
+<rect x="0" y="0" width="1120" height="2700" rx="24" fill="#f5f7fa" stroke="none"/>
 <rect x="0" y="0" width="1120" height="142" rx="24" fill="#182d43" stroke="none"/>
 <rect x="0" y="80" width="1120" height="62" rx="0" fill="#182d43" stroke="none"/>
 <text x="40" y="36" font-size="13" fill="#9cb6cc" font-weight="600">LLM ADMISSION / PROJECT ROADMAP</text>
@@ -152,9 +152,15 @@
 <text x="124" y="2405" font-size="21" fill="#182d43" font-weight="600">可变结果任务验证 v14</text>
 <text x="124" y="2432" font-size="16" fill="#53677c" font-weight="400">10-26 测量 48 条 + 2 预热；整题 2/48，未过质量门槛；10-27 跨日收尾</text>
 <rect x="972" y="2396" width="82" height="28" rx="14" fill="#edf1f5" stroke="none"/><text x="986" y="2416" font-size="14" fill="#53677c" font-weight="600">未通过</text>
-<rect x="40" y="2478" width="1040" height="98" rx="14" fill="#fff3dd" stroke="none"/>
-<text x="60" y="2526" font-size="23" fill="#8b641e" font-weight="700">G1</text>
-<text x="126" y="2506" font-size="17" fill="#182d43" font-weight="400">统一质量评分保持 88 / 100：新任务质量未过，停止扩大本版调度；G1 待审。</text>
-<text x="126" y="2533" font-size="16" fill="#53677c" font-weight="400">10-27 仅核对和跨日收尾；技术记录通过不等于答案正确或算法收益。</text>
-<text x="126" y="2559" font-size="16" fill="#53677c" font-weight="400">下一项：另立小对照定位时间判断与输出约束的影响，旧 2/48 结果保留。</text>
+<rect x="40" y="2464" width="1040" height="78" rx="16" fill="#fff3dd" stroke="#d6b474"/>
+<rect x="56" y="2479" width="48" height="48" rx="12" fill="#dff3ed" stroke="none"/>
+<text x="65" y="2511" font-size="22" fill="#087f78" font-weight="700">15</text>
+<text x="124" y="2497" font-size="21" fill="#182d43" font-weight="600">筛选任务四条件诊断 v15</text>
+<text x="124" y="2524" font-size="16" fill="#53677c" font-weight="400">32 次 / 8 组已见资料；四臂正确 0、0、1、1（各8次）；旧失败保留，评分88</text>
+<rect x="972" y="2488" width="82" height="28" rx="14" fill="#edf1f5" stroke="none"/><text x="986" y="2508" font-size="14" fill="#53677c" font-weight="600">未解决</text>
+<rect x="40" y="2570" width="1040" height="98" rx="14" fill="#fff3dd" stroke="none"/>
+<text x="60" y="2618" font-size="23" fill="#8b641e" font-weight="700">G1</text>
+<text x="126" y="2598" font-size="17" fill="#182d43" font-weight="400">统一质量评分保持 88 / 100：筛选支线不扩成主负载，原课题继续；G1 待审。</text>
+<text x="126" y="2625" font-size="16" fill="#53677c" font-weight="400">当前状态与关闭约束均未解决问题；32次是已见资料诊断，不替换旧2/48。</text>
+<text x="126" y="2651" font-size="16" fill="#53677c" font-weight="400">下一项：新资料验证提取/整理候选，统一桶、暖启动、强对照及正式矩阵。</text>
 </g></svg>

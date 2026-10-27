@@ -1,0 +1,253 @@
+{
+  "status": "passed_read_only_template_audit",
+  "model_started": false,
+  "new_GPU_measurements": 0,
+  "jinja2_version": "3.1.2",
+  "unique_prompts_checked": 16,
+  "request_checks": [
+    {
+      "prompt_sha256": "6457cff4142300bfe482c09d1db7ad6a1af859322232768dfadf5bc0ec183c45",
+      "rendered_equals_actual": true
+    },
+    {
+      "prompt_sha256": "da31b4aa00be855a82e1b0fda696ea405bf8d4bec55162830d282c5fd4cb8258",
+      "rendered_equals_actual": true
+    },
+    {
+      "prompt_sha256": "ebc52e02e1086eab8ad637f290a372108fd9ca44371533dc8075c54676cbd095",
+      "rendered_equals_actual": true
+    },
+    {
+      "prompt_sha256": "ea6a1fbde4790fddf127e290d2cd9834ca683346e82782cf7a9b6842d845423a",
+      "rendered_equals_actual": true
+    },
+    {
+      "prompt_sha256": "4fd34560d27c9c6604f13c599ed0eb078ce14871187c2a82f5d5b24f7fdc6bc6",
+      "rendered_equals_actual": true
+    },
+    {
+      "prompt_sha256": "5f8ffca89cfea2d36ca794557e0d28ab09ff1ba9cada6d73113a11f4c74e121c",
+      "rendered_equals_actual": true
+    },
+    {
+      "prompt_sha256": "26a1d32d38bda7545830a2be927caeebfbeeb4883905b24fd09304ea1abc77ea",
+      "rendered_equals_actual": true
+    },
+    {
+      "prompt_sha256": "558c4b06d93c8d5ff2b0b7fd6ccde706594f987283243a272577ea569a267e3a",
+      "rendered_equals_actual": true
+    },
+    {
+      "prompt_sha256": "f281306cb8b5dfe4ed330654e43302666a90d98b8830af75481e8b22b4b6114d",
+      "rendered_equals_actual": true
+    },
+    {
+      "prompt_sha256": "c24aaf07d924556127a4ab954d8ed1879c94cbe28841502d3a22c2576cb1f2b7",
+      "rendered_equals_actual": true
+    },
+    {
+      "prompt_sha256": "411a7df4ed5427690bb8786fc09ca8d9e715b0ed25d8507e67d12442e33f24d7",
+      "rendered_equals_actual": true
+    },
+    {
+      "prompt_sha256": "c74d7e090f8f5159071685c05e4e477601098c09b1ecf9a1a4df3aef78af2f10",
+      "rendered_equals_actual": true
+    },
+    {
+      "prompt_sha256": "120de13ac6204ccbb76de135e3454310842457b7885b31b3e59c1e7c53ef4b25",
+      "rendered_equals_actual": true
+    },
+    {
+      "prompt_sha256": "5d0c6a480a90ac5a7642cfb481cfc494e00e4792f4d200a481538ffe1644db62",
+      "rendered_equals_actual": true
+    },
+    {
+      "prompt_sha256": "0f5c18fb66a067e0190122e3e215ce210972e5337a4ddc3fbbf353911253697e",
+      "rendered_equals_actual": true
+    },
+    {
+      "prompt_sha256": "47353082ac10619c44085ffdb7997f4ba2078669c4a27729b4b15715deed42b0",
+      "rendered_equals_actual": true
+    }
+  ],
+  "token_checks": [
+    {
+      "prompt_sha256": "6457cff4142300bfe482c09d1db7ad6a1af859322232768dfadf5bc0ec183c45",
+      "chatml_tokens": [
+        151644,
+        151645,
+        151644,
+        151645,
+        151644
+      ],
+      "correct_markers": true
+    },
+    {
+      "prompt_sha256": "da31b4aa00be855a82e1b0fda696ea405bf8d4bec55162830d282c5fd4cb8258",
+      "chatml_tokens": [
+        151644,
+        151645,
+        151644,
+        151645,
+        151644
+      ],
+      "correct_markers": true
+    },
+    {
+      "prompt_sha256": "ebc52e02e1086eab8ad637f290a372108fd9ca44371533dc8075c54676cbd095",
+      "chatml_tokens": [
+        151644,
+        151645,
+        151644,
+        151645,
+        151644
+      ],
+      "correct_markers": true
+    },
+    {
+      "prompt_sha256": "ea6a1fbde4790fddf127e290d2cd9834ca683346e82782cf7a9b6842d845423a",
+      "chatml_tokens": [
+        151644,
+        151645,
+        151644,
+        151645,
+        151644
+      ],
+      "correct_markers": true
+    },
+    {
+      "prompt_sha256": "4fd34560d27c9c6604f13c599ed0eb078ce14871187c2a82f5d5b24f7fdc6bc6",
+      "chatml_tokens": [
+        151644,
+        151645,
+        151644,
+        151645,
+        151644
+      ],
+      "correct_markers": true
+    },
+    {
+      "prompt_sha256": "5f8ffca89cfea2d36ca794557e0d28ab09ff1ba9cada6d73113a11f4c74e121c",
+      "chatml_tokens": [
+        151644,
+        151645,
+        151644,
+        151645,
+        151644
+      ],
+      "correct_markers": true
+    },
+    {
+      "prompt_sha256": "26a1d32d38bda7545830a2be927caeebfbeeb4883905b24fd09304ea1abc77ea",
+      "chatml_tokens": [
+        151644,
+        151645,
+        151644,
+        151645,
+        151644
+      ],
+      "correct_markers": true
+    },
+    {
+      "prompt_sha256": "558c4b06d93c8d5ff2b0b7fd6ccde706594f987283243a272577ea569a267e3a",
+      "chatml_tokens": [
+        151644,
+        151645,
+        151644,
+        151645,
+        151644
+      ],
+      "correct_markers": true
+    },
+    {
+      "prompt_sha256": "f281306cb8b5dfe4ed330654e43302666a90d98b8830af75481e8b22b4b6114d",
+      "chatml_tokens": [
+        151644,
+        151645,
+        151644,
+        151645,
+        151644
+      ],
+      "correct_markers": true
+    },
+    {
+      "prompt_sha256": "c24aaf07d924556127a4ab954d8ed1879c94cbe28841502d3a22c2576cb1f2b7",
+      "chatml_tokens": [
+        151644,
+        151645,
+        151644,
+        151645,
+        151644
+      ],
+      "correct_markers": true
+    },
+    {
+      "prompt_sha256": "411a7df4ed5427690bb8786fc09ca8d9e715b0ed25d8507e67d12442e33f24d7",
+      "chatml_tokens": [
+        151644,
+        151645,
+        151644,
+        151645,
+        151644
+      ],
+      "correct_markers": true
+    },
+    {
+      "prompt_sha256": "c74d7e090f8f5159071685c05e4e477601098c09b1ecf9a1a4df3aef78af2f10",
+      "chatml_tokens": [
+        151644,
+        151645,
+        151644,
+        151645,
+        151644
+      ],
+      "correct_markers": true
+    },
+    {
+      "prompt_sha256": "120de13ac6204ccbb76de135e3454310842457b7885b31b3e59c1e7c53ef4b25",
+      "chatml_tokens": [
+        151644,
+        151645,
+        151644,
+        151645,
+        151644
+      ],
+      "correct_markers": true
+    },
+    {
+      "prompt_sha256": "5d0c6a480a90ac5a7642cfb481cfc494e00e4792f4d200a481538ffe1644db62",
+      "chatml_tokens": [
+        151644,
+        151645,
+        151644,
+        151645,
+        151644
+      ],
+      "correct_markers": true
+    },
+    {
+      "prompt_sha256": "0f5c18fb66a067e0190122e3e215ce210972e5337a4ddc3fbbf353911253697e",
+      "chatml_tokens": [
+        151644,
+        151645,
+        151644,
+        151645,
+        151644
+      ],
+      "correct_markers": true
+    },
+    {
+      "prompt_sha256": "47353082ac10619c44085ffdb7997f4ba2078669c4a27729b4b15715deed42b0",
+      "chatml_tokens": [
+        151644,
+        151645,
+        151644,
+        151645,
+        151644
+      ],
+      "correct_markers": true
+    }
+  ],
+  "limits": "Checks the recorded service template and special IDs; does not rule out all runtime or model issues.",
+  "G1_passed": false
+}

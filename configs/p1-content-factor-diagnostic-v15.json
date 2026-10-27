@@ -1,0 +1,18 @@
+{
+  "purpose": "posthoc_factor_diagnostic",
+  "source_run": "20261026-1730-p1-content-profile-v14",
+  "source_req_ids": [
+    "v14-dev-34101-i00", "v14-dev-34101-i01", "v14-dev-34101-i02", "v14-dev-34101-i04",
+    "v14-dev-34101-b00", "v14-dev-34101-b01", "v14-dev-34101-b03", "v14-dev-34101-b05"
+  ],
+  "orders": [["TG", "TU", "SU", "SG"], ["TU", "SG", "TG", "SU"], ["SG", "SU", "TU", "TG"], ["SU", "TG", "SG", "TU"]],
+  "conditions": ["TG", "TU", "SG", "SU"],
+  "planned_measurements": 32,
+  "warmups": 2,
+  "new_source_facts": 0,
+  "max_tokens": {"interactive": 64, "background": 128},
+  "batch_timeout_seconds": 900,
+  "scheduler_comparison_started": false,
+  "final_test_generation_enabled": false,
+  "G1_passed": false
+}

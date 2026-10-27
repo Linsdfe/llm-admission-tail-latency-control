@@ -1,15 +1,15 @@
 {
   "date": "20261027",
-  "archive": "results/archives/20261027/daily-20261027-090350-ffac7cd4.zip",
-  "sha256": "905ff98439920dfd54e01e700d0247091e06bf4a0d079c44c23502d6877d5b53",
-  "file_count": 1141,
+  "archive": "results/archives/20261027/daily-20261027-093425-cb10b3b7.zip",
+  "sha256": "64739afc956ac216593f0df99459a95d238d76b3d312df458bf9291a25b76897",
+  "file_count": 1027,
   "run_dirs": [
-    "results/raw/development/20261026-1730-p1-content-profile-v14",
-    "results/raw/maintenance/20261026-p1-content-profile-preparation-v14",
-    "results/raw/maintenance/20261026-p1-content-profile-supervisor-v14",
-    "results/raw/maintenance/20261027-p1-content-delivery-v6"
+    "results/raw/development/20261027-0920-p1-content-factor-v15",
+    "results/raw/maintenance/20261027-p1-content-factor-preparation-v15",
+    "results/raw/maintenance/20261027-p1-content-factor-supervisor-v15",
+    "results/raw/maintenance/20261027-p1-content-factor-delivery-v7"
   ],
   "verified": true,
-  "packed_at": "2026-10-27T09:03:50.669057+08:00",
+  "packed_at": "2026-10-27T09:34:25.297436+08:00",
   "backup_scope": "local_only"
 }

@@ -1,0 +1,37 @@
+{
+  "status": "completed_posthoc_description",
+  "counts": {
+    "empty_fixture_condition_appearances": 8,
+    "empty_correct": 0,
+    "full_fixture_condition_appearances": 8,
+    "full_correct": 0
+  },
+  "by_arm": {
+    "TG": {
+      "set_correct_ignoring_order_posthoc": 0,
+      "ids_only_but_unsorted": 0,
+      "non_id_explanation_or_invalid_text": 0
+    },
+    "TU": {
+      "set_correct_ignoring_order_posthoc": 0,
+      "ids_only_but_unsorted": 3,
+      "non_id_explanation_or_invalid_text": 0
+    },
+    "SG": {
+      "set_correct_ignoring_order_posthoc": 1,
+      "ids_only_but_unsorted": 0,
+      "non_id_explanation_or_invalid_text": 0
+    },
+    "SU": {
+      "set_correct_ignoring_order_posthoc": 2,
+      "ids_only_but_unsorted": 4,
+      "non_id_explanation_or_invalid_text": 0
+    }
+  },
+  "new_GPU_measurements": 0,
+  "primary_score_not_replaced": true,
+  "subjective_score_unchanged": 88,
+  "limits": "Set equality ignoring order is a posthoc explanatory count, not the registered strict or field-only success metric.",
+  "audit_sha256": "0a0203cc8ac0a55ddeb6505b1576c5a3d271f27e49647a8f0f5be72b6a4f0747",
+  "G1_passed": false
+}
