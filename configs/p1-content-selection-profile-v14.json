@@ -1,0 +1,18 @@
+{
+  "stage": "development",
+  "purpose": "serial_task_profile",
+  "allowed_seeds": [34101, 34102],
+  "records": {"interactive": 4, "background": 8},
+  "answer_counts": {
+    "interactive": [0, 1, 2, 3, 4, 0, 1, 2, 3, 4, 0, 4],
+    "background": [0, 1, 2, 4, 6, 8, 0, 1, 2, 4, 6, 8]
+  },
+  "input_ranges": {"interactive": [64, 767], "background": [128, 1407]},
+  "max_tokens": {"interactive": 64, "background": 128},
+  "minimum_correct_total": 46,
+  "minimum_correct_per_class": 23,
+  "minimum_correct_nonempty_output_lengths_per_class": 3,
+  "final_test_generation_enabled": false,
+  "batch_timeout_seconds": 1200,
+  "G1_passed": false
+}

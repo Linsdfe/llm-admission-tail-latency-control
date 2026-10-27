@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "checks": 2638,
+  "unique_new_prompts": 48,
+  "historical_unique_prompts": 1946,
+  "historical_plan_files": 2295,
+  "native_launches": 50,
+  "native_releases": 50,
+  "validation_only_does_not_change_acceptance_criteria": true,
+  "G1_passed": false
+}

@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "unique_prompts": 48,
+  "purpose": "serial_task_profile",
+  "online_updates_enabled": false,
+  "warm_history_minimum_changed": false,
+  "final_test_accessed": false
+}

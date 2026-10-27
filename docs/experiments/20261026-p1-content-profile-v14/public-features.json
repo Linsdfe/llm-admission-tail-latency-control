@@ -1,0 +1,652 @@
+[
+  {
+    "req_id": "v14-dev-34101-i00",
+    "rule_ids": [],
+    "rule_output_tokens": 2,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-i01",
+    "rule_ids": [
+      "R4110"
+    ],
+    "rule_output_tokens": 6,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-i02",
+    "rule_ids": [
+      "R4121",
+      "R4123"
+    ],
+    "rule_output_tokens": 12,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-i03",
+    "rule_ids": [
+      "R4130",
+      "R4132",
+      "R4133"
+    ],
+    "rule_output_tokens": 18,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-i04",
+    "rule_ids": [
+      "R4140",
+      "R4141",
+      "R4142",
+      "R4143"
+    ],
+    "rule_output_tokens": 24,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-i05",
+    "rule_ids": [],
+    "rule_output_tokens": 2,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-i06",
+    "rule_ids": [
+      "R4161"
+    ],
+    "rule_output_tokens": 6,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-i07",
+    "rule_ids": [
+      "R4171",
+      "R4172"
+    ],
+    "rule_output_tokens": 12,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-i08",
+    "rule_ids": [
+      "R4180",
+      "R4182",
+      "R4183"
+    ],
+    "rule_output_tokens": 18,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-i09",
+    "rule_ids": [
+      "R4190",
+      "R4191",
+      "R4192",
+      "R4193"
+    ],
+    "rule_output_tokens": 24,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-i10",
+    "rule_ids": [],
+    "rule_output_tokens": 2,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-i11",
+    "rule_ids": [
+      "R4210",
+      "R4211",
+      "R4212",
+      "R4213"
+    ],
+    "rule_output_tokens": 24,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-b00",
+    "rule_ids": [],
+    "rule_output_tokens": 2,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-b01",
+    "rule_ids": [
+      "R4234"
+    ],
+    "rule_output_tokens": 6,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-b02",
+    "rule_ids": [
+      "R4241",
+      "R4243"
+    ],
+    "rule_output_tokens": 12,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-b03",
+    "rule_ids": [
+      "R4250",
+      "R4254",
+      "R4255",
+      "R4257"
+    ],
+    "rule_output_tokens": 24,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-b04",
+    "rule_ids": [
+      "R4261",
+      "R4262",
+      "R4263",
+      "R4264",
+      "R4266",
+      "R4267"
+    ],
+    "rule_output_tokens": 36,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-b05",
+    "rule_ids": [
+      "R4270",
+      "R4271",
+      "R4272",
+      "R4273",
+      "R4274",
+      "R4275",
+      "R4276",
+      "R4277"
+    ],
+    "rule_output_tokens": 48,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-b06",
+    "rule_ids": [],
+    "rule_output_tokens": 2,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-b07",
+    "rule_ids": [
+      "R4297"
+    ],
+    "rule_output_tokens": 6,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-b08",
+    "rule_ids": [
+      "R4300",
+      "R4302"
+    ],
+    "rule_output_tokens": 12,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-b09",
+    "rule_ids": [
+      "R4310",
+      "R4311",
+      "R4312",
+      "R4317"
+    ],
+    "rule_output_tokens": 24,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-b10",
+    "rule_ids": [
+      "R4320",
+      "R4322",
+      "R4323",
+      "R4324",
+      "R4326",
+      "R4327"
+    ],
+    "rule_output_tokens": 36,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34101-b11",
+    "rule_ids": [
+      "R4330",
+      "R4331",
+      "R4332",
+      "R4333",
+      "R4334",
+      "R4335",
+      "R4336",
+      "R4337"
+    ],
+    "rule_output_tokens": 48,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-i00",
+    "rule_ids": [],
+    "rule_output_tokens": 2,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-i01",
+    "rule_ids": [
+      "R4350"
+    ],
+    "rule_output_tokens": 6,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-i02",
+    "rule_ids": [
+      "R4360",
+      "R4363"
+    ],
+    "rule_output_tokens": 12,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-i03",
+    "rule_ids": [
+      "R4370",
+      "R4371",
+      "R4372"
+    ],
+    "rule_output_tokens": 18,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-i04",
+    "rule_ids": [
+      "R4380",
+      "R4381",
+      "R4382",
+      "R4383"
+    ],
+    "rule_output_tokens": 24,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-i05",
+    "rule_ids": [],
+    "rule_output_tokens": 2,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-i06",
+    "rule_ids": [
+      "R4401"
+    ],
+    "rule_output_tokens": 6,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-i07",
+    "rule_ids": [
+      "R4411",
+      "R4412"
+    ],
+    "rule_output_tokens": 12,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-i08",
+    "rule_ids": [
+      "R4421",
+      "R4422",
+      "R4423"
+    ],
+    "rule_output_tokens": 18,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-i09",
+    "rule_ids": [
+      "R4430",
+      "R4431",
+      "R4432",
+      "R4433"
+    ],
+    "rule_output_tokens": 24,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-i10",
+    "rule_ids": [],
+    "rule_output_tokens": 2,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-i11",
+    "rule_ids": [
+      "R4450",
+      "R4451",
+      "R4452",
+      "R4453"
+    ],
+    "rule_output_tokens": 24,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 24,
+    "allowed_outputs": 16,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-b00",
+    "rule_ids": [],
+    "rule_output_tokens": 2,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-b01",
+    "rule_ids": [
+      "R4477"
+    ],
+    "rule_output_tokens": 6,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-b02",
+    "rule_ids": [
+      "R4480",
+      "R4482"
+    ],
+    "rule_output_tokens": 12,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-b03",
+    "rule_ids": [
+      "R4491",
+      "R4492",
+      "R4496",
+      "R4497"
+    ],
+    "rule_output_tokens": 24,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-b04",
+    "rule_ids": [
+      "R4501",
+      "R4502",
+      "R4503",
+      "R4504",
+      "R4506",
+      "R4507"
+    ],
+    "rule_output_tokens": 36,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-b05",
+    "rule_ids": [
+      "R4510",
+      "R4511",
+      "R4512",
+      "R4513",
+      "R4514",
+      "R4515",
+      "R4516",
+      "R4517"
+    ],
+    "rule_output_tokens": 48,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-b06",
+    "rule_ids": [],
+    "rule_output_tokens": 2,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-b07",
+    "rule_ids": [
+      "R4535"
+    ],
+    "rule_output_tokens": 6,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-b08",
+    "rule_ids": [
+      "R4545",
+      "R4546"
+    ],
+    "rule_output_tokens": 12,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-b09",
+    "rule_ids": [
+      "R4550",
+      "R4553",
+      "R4555",
+      "R4556"
+    ],
+    "rule_output_tokens": 24,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-b10",
+    "rule_ids": [
+      "R4560",
+      "R4562",
+      "R4563",
+      "R4564",
+      "R4565",
+      "R4566"
+    ],
+    "rule_output_tokens": 36,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  },
+  {
+    "req_id": "v14-dev-34102-b11",
+    "rule_ids": [
+      "R4570",
+      "R4571",
+      "R4572",
+      "R4573",
+      "R4574",
+      "R4575",
+      "R4576",
+      "R4577"
+    ],
+    "rule_output_tokens": 48,
+    "grammar_min_output_tokens": 2,
+    "grammar_max_output_tokens": 48,
+    "allowed_outputs": 256,
+    "read_actual_prompt_only": true,
+    "model_output_accessed": false
+  }
+]

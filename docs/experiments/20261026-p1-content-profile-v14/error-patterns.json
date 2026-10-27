@@ -1,0 +1,22 @@
+{
+  "status": "task_entry_rejected",
+  "counts": {
+    "total": 48,
+    "whole_correct": 2,
+    "has_missing_items": 29,
+    "has_extra_items": 26,
+    "missing_items": 63,
+    "extra_items": 48,
+    "expected_empty": 10,
+    "empty_correct": 0,
+    "expected_all_records": 10,
+    "all_records_correct": 0
+  },
+  "evidence_sha256": "4aed007a3ce5c57874b6e9931dfe8d1a1f706920402a61efad0808a759e9c666",
+  "evaluation_plan_sha256": "555aa482dac6b3b1ac0a575b6b741f2d556fbe670b2d473ba7dd133d7a667d6e",
+  "new_GPU_measurements": 0,
+  "subjective_score_unchanged": 88,
+  "scope": "posthoc descriptive failure counts; does not identify whether temporal reasoning, prompt or grammar caused errors",
+  "G1_passed": false,
+  "final_test_accessed": false
+}
