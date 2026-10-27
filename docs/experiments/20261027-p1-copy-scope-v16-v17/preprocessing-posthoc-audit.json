@@ -1,0 +1,10 @@
+{
+  "status": "passed_read_only_preprocessing_audit",
+  "checked_requests": 64,
+  "checks": 256,
+  "source": "actual raw documents and sent prompts",
+  "new_inference_requests": 0,
+  "post_collection_check": true,
+  "preprocessing_cpu_cost_measured": false,
+  "G1_passed": false
+}

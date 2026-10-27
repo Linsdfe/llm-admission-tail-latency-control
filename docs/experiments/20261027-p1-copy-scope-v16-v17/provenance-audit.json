@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "versions": {
+    "16": {
+      "historical_plan_files": 2384,
+      "historical_unique_prompts": 2002,
+      "new_unique_prompts": 64,
+      "historical_overlap": 0,
+      "execution_source_files": 104,
+      "source_snapshots_current_and_unchanged": true,
+      "environment_recorded_at": "2026-10-27T10:24:21.267795+08:00",
+      "worker": {
+        "command": [
+          "/usr/bin/python3",
+          "-B",
+          "scripts/replay/79t_run_p1_copy_profile_v16.py",
+          "--out-dir",
+          "results/raw/development/20261027-1030-p1-copy-profile-v16",
+          "--engine-bin",
+          "/home/aiinfra/projects/llm-admission-tail-latency-control/third_party/llama.cpp-background-cap-v1-20261023/build/bin/llama-server"
+        ],
+        "started_at": "2026-10-27T10:23:01.430575+08:00",
+        "exit_code": 0,
+        "elapsed_seconds": 170.80026075,
+        "finished_at": "2026-10-27T10:25:52.230866+08:00"
+      },
+      "actual_finished_at": "2026-10-27T10:25:52.204063+08:00"
+    },
+    "17": {
+      "historical_plan_files": 2451,
+      "historical_unique_prompts": 2066,
+      "new_unique_prompts": 64,
+      "historical_overlap": 0,
+      "execution_source_files": 104,
+      "source_snapshots_current_and_unchanged": true,
+      "environment_recorded_at": "2026-10-27T10:30:22.070180+08:00",
+      "worker": {
+        "command": [
+          "/usr/bin/python3",
+          "-B",
+          "scripts/replay/79u_run_p1_copy_profile_v17.py",
+          "--out-dir",
+          "results/raw/development/20261027-1040-p1-copy-profile-v17",
+          "--engine-bin",
+          "/home/aiinfra/projects/llm-admission-tail-latency-control/third_party/llama.cpp-background-cap-v1-20261023/build/bin/llama-server"
+        ],
+        "started_at": "2026-10-27T10:29:08.816471+08:00",
+        "exit_code": 0,
+        "elapsed_seconds": 156.498236224,
+        "finished_at": "2026-10-27T10:31:45.314745+08:00"
+      },
+      "actual_finished_at": "2026-10-27T10:31:45.293522+08:00"
+    }
+  },
+  "final_test_accessed": false
+}

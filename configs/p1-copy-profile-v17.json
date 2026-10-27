@@ -1,0 +1,73 @@
+{
+  "version": 17,
+  "purpose": "serial_task_profile",
+  "stage": "development",
+  "allowed_seeds": [
+    36101,
+    36102
+  ],
+  "task_kinds": [
+    "extract",
+    "organize"
+  ],
+  "target_counts": {
+    "interactive": [
+      1,
+      2,
+      3,
+      4,
+      1,
+      2,
+      3,
+      4
+    ],
+    "background": [
+      4,
+      6,
+      8,
+      10,
+      4,
+      6,
+      8,
+      10
+    ]
+  },
+  "input_ranges": {
+    "interactive": [
+      40,
+      192
+    ],
+    "background": [
+      64,
+      320
+    ]
+  },
+  "max_tokens": {
+    "interactive": 64,
+    "background": 384
+  },
+  "extra_records_max": 0,
+  "quality_gate": {
+    "whole_correct_min": 61,
+    "each_class_min": 30,
+    "each_task_min": 30,
+    "each_class_task_min": 15,
+    "distinct_correct_output_lengths_per_class_min": 4
+  },
+  "planned": 64,
+  "warmups": 2,
+  "batch_timeout_seconds": 1500,
+  "final_generation_enabled": false,
+  "online_updates_enabled": false,
+  "raw_extra_records": [
+    32,
+    64,
+    96,
+    32,
+    64,
+    96,
+    32,
+    64
+  ],
+  "public_preprocessing": "select requested rows from raw document; retain raw row order; preserve target instruction; no model outputs or oracle access"
+}

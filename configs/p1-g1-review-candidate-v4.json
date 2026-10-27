@@ -1,0 +1,454 @@
+{
+  "schema_version": 4,
+  "status": "candidate_for_G1_review_not_approved",
+  "stage": "P1",
+  "main_question": "Under a fixed public preprocessing and verifiable synthetic workload, which admission rule meets interactive latency and background/throughput limits; does online margin add useful value over a strong public fixed rule?",
+  "scenario": {
+    "main": {
+      "interactive": 200,
+      "background": 30,
+      "window_seconds": 100,
+      "background_first_ms": 250,
+      "background_batch": 3,
+      "batch_period_ms": 10000,
+      "within_batch_ms": 50
+    },
+    "boundary": {
+      "interactive": 200,
+      "background": 30,
+      "window_seconds": 100,
+      "background_first_ms": 250,
+      "background_period_ms": 3333.3333333333335
+    }
+  },
+  "formal_data": {
+    "calibration_seeds": [
+      30101,
+      30102,
+      30103,
+      30104
+    ],
+    "development_seeds": [
+      30201,
+      30202,
+      30203
+    ],
+    "final_main_seeds": [
+      39101,
+      39102,
+      39103,
+      39104,
+      39105,
+      39106,
+      39107,
+      39108,
+      39109,
+      39110,
+      39111,
+      39112,
+      39113,
+      39114,
+      39115,
+      39116,
+      39117,
+      39118,
+      39119,
+      39120
+    ],
+    "final_boundary_seeds": [
+      39101,
+      39102,
+      39103,
+      39104,
+      39105,
+      39106,
+      39107,
+      39108,
+      39109,
+      39110,
+      39111,
+      39112,
+      39113,
+      39114,
+      39115,
+      39116,
+      39117,
+      39118,
+      39119,
+      39120
+    ],
+    "final_generation_enabled": false,
+    "final_accessed": false,
+    "families": {
+      "calibration": "CAL_copy_v4",
+      "development": "DEV_copy_v4",
+      "final": "FINAL_copy_v4"
+    },
+    "final_directives": {
+      "extract": "对下列编号返回资料中的对应数值：{targets}。每行ID|值，不写其他内容。",
+      "organize": "依照给出的编号列表逐行输出对应值：{targets}。严格保持列表顺序，每行ID|值。"
+    },
+    "calibration_cv": "not applicable: public rule point has no fitted parameters; initial fallback uses maximum positive calibration residual per bucket",
+    "source_rows_per_seed": 32,
+    "calibration_sources": 128,
+    "development_sources": 96,
+    "final_unique_sources": 640,
+    "final_source_sharing": "same32 source rows per block for main and boundary;392xx retired unused",
+    "retired_unused_seeds": [
+      39201,
+      39202,
+      39203,
+      39204,
+      39205,
+      39206,
+      39207,
+      39208,
+      39209,
+      39210,
+      39211,
+      39212,
+      39213,
+      39214,
+      39215,
+      39216,
+      39217,
+      39218,
+      39219,
+      39220
+    ],
+    "calibration_directives": {
+      "extract": "提取{targets}。每行ID|值。",
+      "organize": "按{targets}顺序整理。每行ID|值。"
+    },
+    "development_directives": {
+      "extract": "提取以下编号对应的数值：{targets}。每行ID|值，不写其他内容。",
+      "organize": "按以下编号顺序整理对应的数值：{targets}。每行ID|值，不写其他内容。"
+    }
+  },
+  "search": {
+    "shared_budget_multipliers": [
+      0.5,
+      0.75,
+      1
+    ],
+    "aging_seconds": [
+      2,
+      5,
+      10
+    ],
+    "B3_margin_tokens": [
+      0,
+      1,
+      2,
+      4,
+      8,
+      16
+    ],
+    "M_window": [
+      32,
+      128
+    ],
+    "M_quantile": [
+      0.8,
+      0.95
+    ],
+    "NN_k_gamma": [
+      [
+        2,
+        0.8
+      ],
+      [
+        5,
+        0.8
+      ],
+      [
+        8,
+        0.8
+      ],
+      [
+        5,
+        0.95
+      ]
+    ],
+    "max_candidates_each": 6,
+    "development_blocks_each": 3,
+    "max_native_development_runs": 96,
+    "reference_rule": "max of class-conditional type7 P75 of calibration public-rule-point costs; margin0; no grammar floor",
+    "common_selection_reference": "B3 at fixed empirical initial calibration margin; 3 budgets x3 aging x3 development blocks",
+    "S_candidates": [
+      "B2-P",
+      "B2-Q",
+      "B4",
+      "S_cap1"
+    ],
+    "development_runs_by_step": {
+      "common": 27,
+      "B3": 18,
+      "M": 12,
+      "NN": 12,
+      "B2-Q": 9,
+      "S": 12,
+      "observation_pairs": 6
+    },
+    "ranking": "feasible first (I P95<=1000ms,B P95 cost<=20%,output rate loss<=5%, complete accounting); then median I P95,B P95,rate loss,fixed candidate order; report per-block ranges; if none feasible freeze representative by same order and declare no feasible candidate",
+    "common_serviceability_gate": "on B3 margin0 public probe, each class has at least one source with own cost<=Q and at least one ordinary native admission per class; at max reference budget Q; if absent stop common configuration freeze and amend, never choose by M wins",
+    "NN_tau": "weighted calibration actual-output P85; each calibration sample weight=230-trace allocation for its class/task/target_count divided by calibration stratum count; first sorted value reaching85% total weight; ties short"
+  },
+  "formal": {
+    "blocks": 20,
+    "main_policies": [
+      "B0",
+      "B1",
+      "B2-P",
+      "B2-Q",
+      "B3",
+      "B4",
+      "M",
+      "NN",
+      "M-no-cal",
+      "M-no-aging",
+      "S_cap1"
+    ],
+    "boundary_policies": [
+      "B1",
+      "B3",
+      "S",
+      "M",
+      "NN"
+    ],
+    "native_runs_before_alias_merge": 320,
+    "interval_order_stats": [
+      4,
+      17
+    ],
+    "familywise_alpha": 0.05,
+    "endpoints": 10,
+    "predeclared_equivalence": "merge only configurations with proved identical transition rules for all legal states and same executable path; observed equality on development is insufficient; publish aliases and actual run count",
+    "primary_comparisons": [
+      "M/B3",
+      "M/B1"
+    ],
+    "same_source_across_scenarios": true,
+    "ablation_contract": {
+      "M-no-cal": "public point retained; empty residual histories, fallback0; other mechanisms shared",
+      "M-no-aging": "only disables public T aging; other mechanisms shared"
+    }
+  },
+  "criteria": {
+    "interactive_p95_ms_max": 1000,
+    "absolute_gain_ms_min": 100,
+    "relative_gain_min": 0.15,
+    "background_p95_cost_max": 0.2,
+    "output_rate_cost_max": 0.05
+  },
+  "scope": {
+    "R08": false,
+    "api_inference": false,
+    "preemption": false,
+    "multiple_gpu": false
+  },
+  "freeze_policy": "G1 locks design and deterministic selection rules; G2/G3 validates implementations; G4 locks executable parameters/code/final trace hashes before final data.",
+  "predictor_candidate": {
+    "point": "tokenize text computed from actual public source and target list; add native EOS count1; max_tokens clip",
+    "fit": "none for length point; calibration only for timing coefficients and initial residual fallback",
+    "initial_margin": "per bucket max(0, actual_output_tokens-public_rule_point) over32 registered calibration completions, ceil; empirical only",
+    "effective_length": "min(max_tokens, max(1, point + method_margin)); no public grammar floor or upper clip other than max_tokens",
+    "same_public_information_for": [
+      "B3",
+      "M",
+      "B4",
+      "NN"
+    ],
+    "no_general_length_prediction_claim": true,
+    "old_predictors": "v7/v9/grammar-floor/upper-clip retained as historical evidence; not executable v4 contract"
+  },
+  "supersedes": "configs/p1-g1-review-candidate-v3.json; self-contained v4 workload/prediction/count contract",
+  "mechanism_contract": {
+    "buckets": [
+      "interactive/extract",
+      "interactive/organize",
+      "background/extract",
+      "background/organize"
+    ],
+    "minimum_history": 32,
+    "warm_calibration_counts_toward_minimum": true,
+    "feedback": "completed normal-EOS known-token measurement only; after native slot release; no future data; include factual errors as observed lengths but report quality separately",
+    "cost_input_coefficient": "median(prompt_ms / prompt_n)",
+    "cost_output_coefficient": "median(predicted_ms / predicted_n)",
+    "native_trigger_validation_required_at": "G3",
+    "offline_witness_is_not_native_performance": true,
+    "warm_samples_per_bucket": 32,
+    "warm_total": 128,
+    "warm_history_order": "calibration seed ascending then per-seed instance order; reset from same128 calibration records each run",
+    "M_history_window_candidates": [
+      32,
+      128
+    ],
+    "quantile": "type7; nonnegative positive residual; ceil; zero valid",
+    "NN_history": "separate admission-wait history H128/min32, initially empty; not the four residual buckets"
+  },
+  "negative_result_plan": "docs/p1/negative-result-delivery-plan-v1.md",
+  "review_recommendation": {
+    "G1_passed": false,
+    "reviewed_by_user": false,
+    "acceptance_conditional_on_v17": true,
+    "assistant_quality_score": 90,
+    "assistant_rubric_components": [
+      17,
+      17,
+      18,
+      19,
+      19
+    ],
+    "assistant_recommends_G1_pass": true
+  },
+  "workload": {
+    "task_kinds": [
+      "extract",
+      "organize"
+    ],
+    "preprocessing": "public ID extraction; preserve source row order and instruction; all policies share it; preserve full raw source separately",
+    "raw_extra_records": [
+      32,
+      64,
+      96,
+      32,
+      64,
+      96,
+      32,
+      64
+    ],
+    "instances_per_class_task_seed": 8,
+    "target_counts": {
+      "interactive": [
+        1,
+        2,
+        3,
+        4,
+        1,
+        2,
+        3,
+        4
+      ],
+      "background": [
+        4,
+        6,
+        8,
+        10,
+        4,
+        6,
+        8,
+        10
+      ]
+    },
+    "id_offset_by_seed_parity": {
+      "odd": 100,
+      "even": 1000
+    },
+    "value_range": [
+      10,
+      99
+    ],
+    "input_ranges": {
+      "interactive": [
+        40,
+        192
+      ],
+      "background": [
+        64,
+        320
+      ]
+    },
+    "input_bucket_quotas": null,
+    "max_tokens": {
+      "interactive": 64,
+      "background": 384
+    },
+    "sampling": {
+      "temperature": 0,
+      "ignore_eos": false,
+      "cache_prompt": false
+    },
+    "slot_context_tokens": 2048,
+    "safety_tokens": 1,
+    "trace_class_task_counts": {
+      "interactive/extract": 100,
+      "interactive/organize": 100,
+      "background/extract": 15,
+      "background/organize": 15
+    },
+    "trace_count_allocation_per_task": {
+      "interactive": {
+        "1": 25,
+        "2": 25,
+        "3": 25,
+        "4": 25
+      },
+      "background": {
+        "4": 4,
+        "6": 4,
+        "8": 4,
+        "10": 3
+      }
+    },
+    "within_stratum_source_choice": "alternate the two source instances; fixed seed-derived starting phase; preserve per-task allocation; merge in deterministic alternating task order",
+    "historical_prompt_duplicates": "stop before inference; no model-output-based filtering; amend source generation before reattempt with new run ID",
+    "pilot_passed": "v17 64/64; all four cells16/16; one serial service, no population/performance claim"
+  },
+  "quality_gate": {
+    "pilot": "v17 gate in configs/p1-copy-profile-v17.json must pass before recommending v4",
+    "formal_calibration": "all128 complete with known tokens and natural EOS; whole correct>=122/128, each of4 buckets>=31/32; any failure stops freeze, no selective removal",
+    "formal_load": "report correct/ALL230, all six terminals; never discard a run for poor task quality or performance"
+  },
+  "environment": {
+    "model_sha256": "626b4a6678b86442240e33df819e00132d3ba7dddfe1cdc4fbb18e0a9615c62d",
+    "engine_commit": "620d2225cc436ab0b001e3200e590e3b286ef9ab",
+    "gpu": "RTX3050Ti Laptop4GiB",
+    "gpu_layers": "37/37",
+    "slots": 2,
+    "context_total": 4096,
+    "context_per_slot": 2048,
+    "ngl": 99,
+    "batch": 2048,
+    "ubatch": 512
+  },
+  "measurement": {
+    "open_seconds": 100,
+    "drain_seconds": 180,
+    "request_deadline_after_planned_seconds": 180,
+    "transport_timeout_seconds": 360,
+    "send_lag_limit_ms": 50,
+    "warmups_per_service": 2,
+    "between_runs_seconds_min": 15,
+    "interactive_P95": "planned arrival to first nonempty content over all200; interval/extended infinity for missing",
+    "background_P95": "planned arrival to completion over all30; interval/extended infinity for missing",
+    "output_rate": "all measured output tokens / max(100,last observed terminal seconds); unknown tokens=>lower bound, no pass claim",
+    "quantile": "type7; latency endpoints and inclusive deadline order frozen atG2",
+    "complexity": "decision CPU P50/P95/max, process CPU/RSS, state bytes, code delta, public preprocessing/tokenization/cache/observability cost; no invented human hours",
+    "front_end_boundary": "raw request planned arrival precedes public extraction and feature lookup; all policies includingB0 share same front end; report preprocessing and tokenization/cache CPU cost, include actual online work in end-to-end latency"
+  },
+  "phase_ownership": {
+    "G1": "freeze scope and selection rules, not parameters or performance success",
+    "G2": "C++ design and lifecycle, common public preprocessing/parser, event ordering, capacity and state transitions",
+    "G3": "C++ baseline/controller correctness,128 actual calibration, release recovery, online causality, native mechanism witnesses and shared-budget serviceability; re-estimate logs/resources",
+    "G4": "finite development search, final parameter/code/hash freeze; generate final only after implementation and access gates",
+    "G5": "20paired final blocks, complete matrix and intervals",
+    "G6": "archive/reproduce/deliver"
+  },
+  "resource_budget": {
+    "formal_runs": 320,
+    "development_runs": 96,
+    "max_attempts_with_reserve": 500,
+    "seconds_per_attempt": 505,
+    "load_and_stability_hours": 72.14,
+    "stability_hours_included": 2,
+    "calibration_additional_requests": 128,
+    "calibration_upper_seconds_each": 60,
+    "calibration_additional_hours": 2.81,
+    "calibration_upper_rule": "128*1.2*60/3600+15min service startup rounded up; no code/correctness debugging included",
+    "planned_machine_hours_upper": 74.95,
+    "disk_reserve_GiB": 20,
+    "reestimate_at": "G3 actual new C++ log volume; raw+zip+calibration reserve; source archive chain retained",
+    "human_hours": "pending owner verification"
+  }
+}

@@ -1,7 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="2700" viewBox="0 0 1120 2700" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="2884" viewBox="0 0 1120 2884" role="img" aria-labelledby="title desc">
 <title id="title">P0 成果与 P1 进展</title><desc id="desc">进度快照 2026.10.27  /  P0 已完成 · G0 通过  /  P1 进行中 · G1 待审</desc>
 <g font-family="Segoe UI, PingFang SC, Microsoft YaHei, Noto Sans CJK SC, sans-serif">
-<rect x="0" y="0" width="1120" height="2700" rx="24" fill="#f5f7fa" stroke="none"/>
+<rect x="0" y="0" width="1120" height="2884" rx="24" fill="#f5f7fa" stroke="none"/>
 <rect x="0" y="0" width="1120" height="142" rx="24" fill="#182d43" stroke="none"/>
 <rect x="0" y="80" width="1120" height="62" rx="0" fill="#182d43" stroke="none"/>
 <text x="40" y="36" font-size="13" fill="#9cb6cc" font-weight="600">LLM ADMISSION / PROJECT ROADMAP</text>
@@ -158,9 +158,21 @@
 <text x="124" y="2497" font-size="21" fill="#182d43" font-weight="600">筛选任务四条件诊断 v15</text>
 <text x="124" y="2524" font-size="16" fill="#53677c" font-weight="400">32 次 / 8 组已见资料；四臂正确 0、0、1、1（各8次）；旧失败保留，评分88</text>
 <rect x="972" y="2488" width="82" height="28" rx="14" fill="#edf1f5" stroke="none"/><text x="986" y="2508" font-size="14" fill="#53677c" font-weight="600">未解决</text>
-<rect x="40" y="2570" width="1040" height="98" rx="14" fill="#fff3dd" stroke="none"/>
-<text x="60" y="2618" font-size="23" fill="#8b641e" font-weight="700">G1</text>
-<text x="126" y="2598" font-size="17" fill="#182d43" font-weight="400">统一质量评分保持 88 / 100：筛选支线不扩成主负载，原课题继续；G1 待审。</text>
-<text x="126" y="2625" font-size="16" fill="#53677c" font-weight="400">当前状态与关闭约束均未解决问题；32次是已见资料诊断，不替换旧2/48。</text>
-<text x="126" y="2651" font-size="16" fill="#53677c" font-weight="400">下一项：新资料验证提取/整理候选，统一桶、暖启动、强对照及正式矩阵。</text>
+<rect x="40" y="2556" width="1040" height="78" rx="16" fill="#fff3dd" stroke="#d6b474"/>
+<rect x="56" y="2571" width="48" height="48" rx="12" fill="#dff3ed" stroke="none"/>
+<text x="65" y="2603" font-size="22" fill="#087f78" font-weight="700">16</text>
+<text x="124" y="2589" font-size="21" fill="#182d43" font-weight="600">完整新资料提取与整理 v16</text>
+<text x="124" y="2616" font-size="16" fill="#53677c" font-weight="400">64 新资料中 59 全对，后台 27/32，未过采前门槛；全部原答与失败保留</text>
+<rect x="972" y="2580" width="82" height="28" rx="14" fill="#edf1f5" stroke="none"/><text x="986" y="2600" font-size="14" fill="#53677c" font-weight="600">未通过</text>
+<rect x="40" y="2648" width="1040" height="78" rx="16" fill="#f0f8f5" stroke="#80c4b8"/>
+<rect x="56" y="2663" width="48" height="48" rx="12" fill="#dff3ed" stroke="none"/>
+<text x="65" y="2695" font-size="22" fill="#087f78" font-weight="700">17</text>
+<text x="124" y="2681" font-size="21" fill="#182d43" font-weight="600">公开取资料后整理 v17 / 合同统一</text>
+<text x="124" y="2708" font-size="16" fill="#53677c" font-weight="400">另 64 新资料全部正确；四桶、128校准计划、强规则与96/320矩阵统一</text>
+<rect x="972" y="2672" width="82" height="28" rx="14" fill="#dff3ed" stroke="none"/><text x="986" y="2692" font-size="14" fill="#087f78" font-weight="600">已验证</text>
+<rect x="40" y="2754" width="1040" height="98" rx="14" fill="#fff3dd" stroke="none"/>
+<text x="60" y="2802" font-size="23" fill="#8b641e" font-weight="700">G1</text>
+<text x="126" y="2782" font-size="17" fill="#182d43" font-weight="400">固定质量评分 90 / 100：助手建议G1通过；用户尚未批准，仍为P1。</text>
+<text x="126" y="2809" font-size="16" fill="#53677c" font-weight="400">公开简单规则两批128/128长度精确；复杂方法增益未证实，旧失败保留。</text>
+<text x="126" y="2835" font-size="16" fill="#53677c" font-weight="400">下一项：G1决定后进入C++设计；128正式校准与生命周期按G3核验。</text>
 </g></svg>

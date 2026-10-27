@@ -1,0 +1,227 @@
+{
+  "versions": {
+    "16": {
+      "status": "passed_evidence_audit",
+      "checks": 817,
+      "whole_correct": 59,
+      "total": 64,
+      "warmups": 2,
+      "cells": {
+        "interactive/extract": {
+          "total": 16,
+          "whole_correct": 16
+        },
+        "interactive/organize": {
+          "total": 16,
+          "whole_correct": 16
+        },
+        "background/extract": {
+          "total": 16,
+          "whole_correct": 14
+        },
+        "background/organize": {
+          "total": 16,
+          "whole_correct": 13
+        }
+      },
+      "by_category": {
+        "interactive": {
+          "total": 32,
+          "whole_correct": 32,
+          "distinct_correct_output_lengths": [
+            8,
+            9,
+            16,
+            18,
+            24,
+            27,
+            32,
+            36
+          ]
+        },
+        "background": {
+          "total": 32,
+          "whole_correct": 27,
+          "distinct_correct_output_lengths": [
+            32,
+            36,
+            48,
+            54,
+            64,
+            72,
+            80,
+            90
+          ]
+        }
+      },
+      "rule_exact_actual_length": 64,
+      "output_limits": 0,
+      "task_acceptance_passed": false,
+      "performance_repeated_runs": 1,
+      "scheduler_comparison_started": false,
+      "G1_passed": false,
+      "run_id": "20261027-1030-p1-copy-profile-v16",
+      "elapsed_seconds": 170.319693633,
+      "descriptive_ranges": {
+        "interactive": {
+          "input_tokens": {
+            "min": 97,
+            "median": 161.5,
+            "max": 231
+          },
+          "output_tokens": {
+            "min": 8,
+            "median": 21.0,
+            "max": 36
+          },
+          "prompt_ms": {
+            "min": 44.797,
+            "median": 70.92349999999999,
+            "max": 105.567
+          },
+          "predicted_ms": {
+            "min": 98.746,
+            "median": 275.122,
+            "max": 475.464
+          }
+        },
+        "background": {
+          "input_tokens": {
+            "min": 321,
+            "median": 513.0,
+            "max": 776
+          },
+          "output_tokens": {
+            "min": 32,
+            "median": 59.0,
+            "max": 90
+          },
+          "prompt_ms": {
+            "min": 112.34,
+            "median": 183.62400000000002,
+            "max": 294.181
+          },
+          "predicted_ms": {
+            "min": 417.167,
+            "median": 793.1545,
+            "max": 1287.38
+          }
+        }
+      }
+    },
+    "17": {
+      "status": "passed_evidence_audit",
+      "checks": 1009,
+      "whole_correct": 64,
+      "total": 64,
+      "warmups": 2,
+      "cells": {
+        "interactive/extract": {
+          "total": 16,
+          "whole_correct": 16
+        },
+        "interactive/organize": {
+          "total": 16,
+          "whole_correct": 16
+        },
+        "background/extract": {
+          "total": 16,
+          "whole_correct": 16
+        },
+        "background/organize": {
+          "total": 16,
+          "whole_correct": 16
+        }
+      },
+      "by_category": {
+        "interactive": {
+          "total": 32,
+          "whole_correct": 32,
+          "distinct_correct_output_lengths": [
+            8,
+            9,
+            16,
+            18,
+            24,
+            27,
+            32,
+            36
+          ]
+        },
+        "background": {
+          "total": 32,
+          "whole_correct": 32,
+          "distinct_correct_output_lengths": [
+            32,
+            36,
+            48,
+            54,
+            64,
+            72,
+            80,
+            90
+          ]
+        }
+      },
+      "rule_exact_actual_length": 64,
+      "output_limits": 0,
+      "task_acceptance_passed": true,
+      "performance_repeated_runs": 1,
+      "scheduler_comparison_started": false,
+      "G1_passed": false,
+      "run_id": "20261027-1040-p1-copy-profile-v17",
+      "elapsed_seconds": 155.98571227,
+      "descriptive_ranges": {
+        "interactive": {
+          "input_tokens": {
+            "min": 53,
+            "median": 74.0,
+            "max": 99
+          },
+          "output_tokens": {
+            "min": 8,
+            "median": 21.0,
+            "max": 36
+          },
+          "prompt_ms": {
+            "min": 36.709,
+            "median": 51.6005,
+            "max": 66.897
+          },
+          "predicted_ms": {
+            "min": 96.405,
+            "median": 275.644,
+            "max": 468.159
+          }
+        },
+        "background": {
+          "input_tokens": {
+            "min": 89,
+            "median": 132.0,
+            "max": 183
+          },
+          "output_tokens": {
+            "min": 32,
+            "median": 59.0,
+            "max": 90
+          },
+          "prompt_ms": {
+            "min": 41.135,
+            "median": 68.8355,
+            "max": 88.63
+          },
+          "predicted_ms": {
+            "min": 409.19,
+            "median": 810.5735,
+            "max": 1218.269
+          }
+        }
+      }
+    }
+  },
+  "total_measured_requests": 128,
+  "warmups": 4,
+  "native_launch_release_pairs": 132,
+  "G1_passed": false,
+  "final_test_accessed": false
+}

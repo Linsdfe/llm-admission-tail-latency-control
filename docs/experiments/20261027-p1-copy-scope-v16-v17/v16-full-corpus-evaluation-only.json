@@ -1,0 +1,10334 @@
+[
+  {
+    "req_id": "v16-dev-35101-i-extract-0",
+    "seed": 35101,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "extract",
+    "target_count": 1,
+    "bucket": 0,
+    "index": 0,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR105|25\nR106|57\nR100|52\nR102|95\nR103|25\nR104|48\nR101|28\n提取以下编号对应的数值：R100。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R100|52",
+    "source_records_evaluation_only": [
+      [
+        "R105",
+        "25"
+      ],
+      [
+        "R106",
+        "57"
+      ],
+      [
+        "R100",
+        "52"
+      ],
+      [
+        "R102",
+        "95"
+      ],
+      [
+        "R103",
+        "25"
+      ],
+      [
+        "R104",
+        "48"
+      ],
+      [
+        "R101",
+        "28"
+      ]
+    ],
+    "target_ids": [
+      "R100"
+    ],
+    "extra_records": 6,
+    "content_sha256": "6410aadb15bba25cebc7813b93052a4cbef33841ea14c146bd1d6336a9b75b36",
+    "input_token_range": [
+      96,
+      159
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 101,
+    "token_ids_sha256": "d73c0c24ea43bc3a94dc7fb15f828693f1789974e9d304207e89742bd974d7d8",
+    "grammar": "root ::= \"R100|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-i-extract-1",
+    "seed": 35101,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "extract",
+    "target_count": 2,
+    "bucket": 1,
+    "index": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR101|24\nR104|97\nR106|88\nR112|96\nR108|72\nR103|51\nR113|88\nR110|29\nR105|58\nR111|33\nR107|97\nR100|88\nR109|68\nR102|81\n提取以下编号对应的数值：R100,R101。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R100|88\nR101|24",
+    "source_records_evaluation_only": [
+      [
+        "R101",
+        "24"
+      ],
+      [
+        "R104",
+        "97"
+      ],
+      [
+        "R106",
+        "88"
+      ],
+      [
+        "R112",
+        "96"
+      ],
+      [
+        "R108",
+        "72"
+      ],
+      [
+        "R103",
+        "51"
+      ],
+      [
+        "R113",
+        "88"
+      ],
+      [
+        "R110",
+        "29"
+      ],
+      [
+        "R105",
+        "58"
+      ],
+      [
+        "R111",
+        "33"
+      ],
+      [
+        "R107",
+        "97"
+      ],
+      [
+        "R100",
+        "88"
+      ],
+      [
+        "R109",
+        "68"
+      ],
+      [
+        "R102",
+        "81"
+      ]
+    ],
+    "target_ids": [
+      "R100",
+      "R101"
+    ],
+    "extra_records": 12,
+    "content_sha256": "795ceba6bfe49d79a5b8958c9c836849d7f0732ce3eb8445a11eb541bc70294d",
+    "input_token_range": [
+      160,
+      223
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 161,
+    "token_ids_sha256": "e01189748148ef72f3a16a66b88056087fa6c1c24ff1a70c72cf1f45cfbe95c1",
+    "grammar": "root ::= \"R100|\" [1-9] [0-9] \"\\n\" \"R101|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-i-extract-2",
+    "seed": 35101,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "extract",
+    "target_count": 3,
+    "bucket": 2,
+    "index": 2,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR100|50\nR111|65\nR112|19\nR102|65\nR105|52\nR113|68\nR121|28\nR103|24\nR109|15\nR115|13\nR114|39\nR119|69\nR104|47\nR110|22\nR107|93\nR101|30\nR108|32\nR116|57\nR117|53\nR118|82\nR106|21\nR120|18\n提取以下编号对应的数值：R100,R101,R102。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R100|50\nR101|30\nR102|65",
+    "source_records_evaluation_only": [
+      [
+        "R100",
+        "50"
+      ],
+      [
+        "R111",
+        "65"
+      ],
+      [
+        "R112",
+        "19"
+      ],
+      [
+        "R102",
+        "65"
+      ],
+      [
+        "R105",
+        "52"
+      ],
+      [
+        "R113",
+        "68"
+      ],
+      [
+        "R121",
+        "28"
+      ],
+      [
+        "R103",
+        "24"
+      ],
+      [
+        "R109",
+        "15"
+      ],
+      [
+        "R115",
+        "13"
+      ],
+      [
+        "R114",
+        "39"
+      ],
+      [
+        "R119",
+        "69"
+      ],
+      [
+        "R104",
+        "47"
+      ],
+      [
+        "R110",
+        "22"
+      ],
+      [
+        "R107",
+        "93"
+      ],
+      [
+        "R101",
+        "30"
+      ],
+      [
+        "R108",
+        "32"
+      ],
+      [
+        "R116",
+        "57"
+      ],
+      [
+        "R117",
+        "53"
+      ],
+      [
+        "R118",
+        "82"
+      ],
+      [
+        "R106",
+        "21"
+      ],
+      [
+        "R120",
+        "18"
+      ]
+    ],
+    "target_ids": [
+      "R100",
+      "R101",
+      "R102"
+    ],
+    "extra_records": 19,
+    "content_sha256": "d9fa65968d0f38640ab2d3cebcd04eb914588abfe5a62324c93cf7022ff89b41",
+    "input_token_range": [
+      224,
+      320
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 229,
+    "token_ids_sha256": "e4df098d510c71d4df701c9d21769cd058e57e054e9c01e60a2f39dcb488e300",
+    "grammar": "root ::= \"R100|\" [1-9] [0-9] \"\\n\" \"R101|\" [1-9] [0-9] \"\\n\" \"R102|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-i-extract-3",
+    "seed": 35101,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "extract",
+    "target_count": 4,
+    "bucket": 0,
+    "index": 3,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR101|61\nR102|34\nR104|77\nR103|52\nR100|82\n提取以下编号对应的数值：R100,R101,R102,R103。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R100|82\nR101|61\nR102|34\nR103|52",
+    "source_records_evaluation_only": [
+      [
+        "R101",
+        "61"
+      ],
+      [
+        "R102",
+        "34"
+      ],
+      [
+        "R104",
+        "77"
+      ],
+      [
+        "R103",
+        "52"
+      ],
+      [
+        "R100",
+        "82"
+      ]
+    ],
+    "target_ids": [
+      "R100",
+      "R101",
+      "R102",
+      "R103"
+    ],
+    "extra_records": 1,
+    "content_sha256": "c135acdb6cb2e9b7c5171ad9df84704581dfa45c9f8450b795de62f4c470340d",
+    "input_token_range": [
+      96,
+      159
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 97,
+    "token_ids_sha256": "09e176f6b62d24b05ed1947e985f7326c05f1178413c76b31204c0beee1d25a0",
+    "grammar": "root ::= \"R100|\" [1-9] [0-9] \"\\n\" \"R101|\" [1-9] [0-9] \"\\n\" \"R102|\" [1-9] [0-9] \"\\n\" \"R103|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-i-extract-4",
+    "seed": 35101,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "extract",
+    "target_count": 1,
+    "bucket": 1,
+    "index": 4,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR111|44\nR109|27\nR114|88\nR112|92\nR107|41\nR108|20\nR103|95\nR106|53\nR113|78\nR110|95\nR104|16\nR100|99\nR105|12\nR101|77\nR102|66\n提取以下编号对应的数值：R100。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R100|99",
+    "source_records_evaluation_only": [
+      [
+        "R111",
+        "44"
+      ],
+      [
+        "R109",
+        "27"
+      ],
+      [
+        "R114",
+        "88"
+      ],
+      [
+        "R112",
+        "92"
+      ],
+      [
+        "R107",
+        "41"
+      ],
+      [
+        "R108",
+        "20"
+      ],
+      [
+        "R103",
+        "95"
+      ],
+      [
+        "R106",
+        "53"
+      ],
+      [
+        "R113",
+        "78"
+      ],
+      [
+        "R110",
+        "95"
+      ],
+      [
+        "R104",
+        "16"
+      ],
+      [
+        "R100",
+        "99"
+      ],
+      [
+        "R105",
+        "12"
+      ],
+      [
+        "R101",
+        "77"
+      ],
+      [
+        "R102",
+        "66"
+      ]
+    ],
+    "target_ids": [
+      "R100"
+    ],
+    "extra_records": 14,
+    "content_sha256": "42e08650818c9e4445ab9a64de3874d5ce5bf56b2a31ca12ca33987c5e8dafc4",
+    "input_token_range": [
+      160,
+      223
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 165,
+    "token_ids_sha256": "f7de1ed24d455360d832195de487330347ce3f3b232ce2005528cbe5ff93fc5b",
+    "grammar": "root ::= \"R100|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-i-extract-5",
+    "seed": 35101,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "extract",
+    "target_count": 2,
+    "bucket": 2,
+    "index": 5,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR105|39\nR101|53\nR100|28\nR120|58\nR106|37\nR119|73\nR109|48\nR107|79\nR111|37\nR121|64\nR108|42\nR102|63\nR118|55\nR103|77\nR117|65\nR112|72\nR113|23\nR104|17\nR110|51\nR116|46\nR114|35\nR115|11\n提取以下编号对应的数值：R100,R101。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R100|28\nR101|53",
+    "source_records_evaluation_only": [
+      [
+        "R105",
+        "39"
+      ],
+      [
+        "R101",
+        "53"
+      ],
+      [
+        "R100",
+        "28"
+      ],
+      [
+        "R120",
+        "58"
+      ],
+      [
+        "R106",
+        "37"
+      ],
+      [
+        "R119",
+        "73"
+      ],
+      [
+        "R109",
+        "48"
+      ],
+      [
+        "R107",
+        "79"
+      ],
+      [
+        "R111",
+        "37"
+      ],
+      [
+        "R121",
+        "64"
+      ],
+      [
+        "R108",
+        "42"
+      ],
+      [
+        "R102",
+        "63"
+      ],
+      [
+        "R118",
+        "55"
+      ],
+      [
+        "R103",
+        "77"
+      ],
+      [
+        "R117",
+        "65"
+      ],
+      [
+        "R112",
+        "72"
+      ],
+      [
+        "R113",
+        "23"
+      ],
+      [
+        "R104",
+        "17"
+      ],
+      [
+        "R110",
+        "51"
+      ],
+      [
+        "R116",
+        "46"
+      ],
+      [
+        "R114",
+        "35"
+      ],
+      [
+        "R115",
+        "11"
+      ]
+    ],
+    "target_ids": [
+      "R100",
+      "R101"
+    ],
+    "extra_records": 20,
+    "content_sha256": "9bf93c534151313990f2f837bbf3b518d24fa05973ec757dbdd0c82db158e393",
+    "input_token_range": [
+      224,
+      320
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 225,
+    "token_ids_sha256": "f6c884e03a86be1be0b38bad68c02bf1fef7bc89639c15a0a46c0dc3f8fb3a5e",
+    "grammar": "root ::= \"R100|\" [1-9] [0-9] \"\\n\" \"R101|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-i-extract-6",
+    "seed": 35101,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "extract",
+    "target_count": 3,
+    "bucket": 0,
+    "index": 6,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR100|97\nR103|53\nR101|67\nR105|97\nR102|49\nR104|51\n提取以下编号对应的数值：R100,R101,R102。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R100|97\nR101|67\nR102|49",
+    "source_records_evaluation_only": [
+      [
+        "R100",
+        "97"
+      ],
+      [
+        "R103",
+        "53"
+      ],
+      [
+        "R101",
+        "67"
+      ],
+      [
+        "R105",
+        "97"
+      ],
+      [
+        "R102",
+        "49"
+      ],
+      [
+        "R104",
+        "51"
+      ]
+    ],
+    "target_ids": [
+      "R100",
+      "R101",
+      "R102"
+    ],
+    "extra_records": 3,
+    "content_sha256": "e16fbb11c0a1a06f1d45fbcca8fa3998081a8b0e22c2d1a5c70cf45f0b25caab",
+    "input_token_range": [
+      96,
+      159
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 101,
+    "token_ids_sha256": "2b47f2fe2455cb08d75ea1eadbc443537d66f492d16eb698db60b29b73854ff0",
+    "grammar": "root ::= \"R100|\" [1-9] [0-9] \"\\n\" \"R101|\" [1-9] [0-9] \"\\n\" \"R102|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-i-extract-7",
+    "seed": 35101,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "extract",
+    "target_count": 4,
+    "bucket": 1,
+    "index": 7,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR101|34\nR109|49\nR100|10\nR111|47\nR105|10\nR104|76\nR112|17\nR106|63\nR110|32\nR102|78\nR107|84\nR103|17\nR108|47\n提取以下编号对应的数值：R100,R101,R102,R103。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R100|10\nR101|34\nR102|78\nR103|17",
+    "source_records_evaluation_only": [
+      [
+        "R101",
+        "34"
+      ],
+      [
+        "R109",
+        "49"
+      ],
+      [
+        "R100",
+        "10"
+      ],
+      [
+        "R111",
+        "47"
+      ],
+      [
+        "R105",
+        "10"
+      ],
+      [
+        "R104",
+        "76"
+      ],
+      [
+        "R112",
+        "17"
+      ],
+      [
+        "R106",
+        "63"
+      ],
+      [
+        "R110",
+        "32"
+      ],
+      [
+        "R102",
+        "78"
+      ],
+      [
+        "R107",
+        "84"
+      ],
+      [
+        "R103",
+        "17"
+      ],
+      [
+        "R108",
+        "47"
+      ]
+    ],
+    "target_ids": [
+      "R100",
+      "R101",
+      "R102",
+      "R103"
+    ],
+    "extra_records": 9,
+    "content_sha256": "3a587594156d2344ed7a1e3d20296fb98e9ab517fe0e3f69cdf24b367102366b",
+    "input_token_range": [
+      160,
+      223
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 161,
+    "token_ids_sha256": "770865d4bd2df71df9f4977b1b165d02c2d4443b4598baece1339a4cd1985e48",
+    "grammar": "root ::= \"R100|\" [1-9] [0-9] \"\\n\" \"R101|\" [1-9] [0-9] \"\\n\" \"R102|\" [1-9] [0-9] \"\\n\" \"R103|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-i-organize-0",
+    "seed": 35101,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "organize",
+    "target_count": 1,
+    "bucket": 0,
+    "index": 0,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR105|55\nR106|17\nR104|93\nR100|41\nR102|80\nR103|28\nR101|75\n按以下编号顺序整理对应的数值：R100。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R100|41",
+    "source_records_evaluation_only": [
+      [
+        "R105",
+        "55"
+      ],
+      [
+        "R106",
+        "17"
+      ],
+      [
+        "R104",
+        "93"
+      ],
+      [
+        "R100",
+        "41"
+      ],
+      [
+        "R102",
+        "80"
+      ],
+      [
+        "R103",
+        "28"
+      ],
+      [
+        "R101",
+        "75"
+      ]
+    ],
+    "target_ids": [
+      "R100"
+    ],
+    "extra_records": 6,
+    "content_sha256": "ed18deb5f17663e11c6f96babdac3ceae9d0da6209522ba6bb2d1c9d7de4bd00",
+    "input_token_range": [
+      96,
+      159
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 103,
+    "token_ids_sha256": "4b2ea82b0ebc59d783ed461ae3bb11d60090563cc234cbb2af781b9383b31a9f",
+    "grammar": "root ::= \"R100|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-i-organize-1",
+    "seed": 35101,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "organize",
+    "target_count": 2,
+    "bucket": 1,
+    "index": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR104|80\nR109|48\nR112|49\nR110|14\nR105|65\nR101|47\nR103|17\nR107|35\nR108|79\nR102|56\nR113|85\nR106|51\nR111|92\nR100|31\n按以下编号顺序整理对应的数值：R101,R100。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R101|47\nR100|31",
+    "source_records_evaluation_only": [
+      [
+        "R104",
+        "80"
+      ],
+      [
+        "R109",
+        "48"
+      ],
+      [
+        "R112",
+        "49"
+      ],
+      [
+        "R110",
+        "14"
+      ],
+      [
+        "R105",
+        "65"
+      ],
+      [
+        "R101",
+        "47"
+      ],
+      [
+        "R103",
+        "17"
+      ],
+      [
+        "R107",
+        "35"
+      ],
+      [
+        "R108",
+        "79"
+      ],
+      [
+        "R102",
+        "56"
+      ],
+      [
+        "R113",
+        "85"
+      ],
+      [
+        "R106",
+        "51"
+      ],
+      [
+        "R111",
+        "92"
+      ],
+      [
+        "R100",
+        "31"
+      ]
+    ],
+    "target_ids": [
+      "R101",
+      "R100"
+    ],
+    "extra_records": 12,
+    "content_sha256": "f482a86b6f870a8cdc64253c13b4050bfa8ec285a867aa5d504c81b22b9b8fd5",
+    "input_token_range": [
+      160,
+      223
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 163,
+    "token_ids_sha256": "47aaf3430f48e2f65e37843911f4f27704025cf8da8f201c5e6a6f928199378f",
+    "grammar": "root ::= \"R101|\" [1-9] [0-9] \"\\n\" \"R100|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-i-organize-2",
+    "seed": 35101,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "organize",
+    "target_count": 3,
+    "bucket": 2,
+    "index": 2,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR109|13\nR113|90\nR117|72\nR111|63\nR106|22\nR103|88\nR114|68\nR120|91\nR108|86\nR118|55\nR110|54\nR116|98\nR100|34\nR112|25\nR119|46\nR102|79\nR104|29\nR101|33\nR107|77\nR105|40\nR115|43\nR121|59\n按以下编号顺序整理对应的数值：R102,R100,R101。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R102|79\nR100|34\nR101|33",
+    "source_records_evaluation_only": [
+      [
+        "R109",
+        "13"
+      ],
+      [
+        "R113",
+        "90"
+      ],
+      [
+        "R117",
+        "72"
+      ],
+      [
+        "R111",
+        "63"
+      ],
+      [
+        "R106",
+        "22"
+      ],
+      [
+        "R103",
+        "88"
+      ],
+      [
+        "R114",
+        "68"
+      ],
+      [
+        "R120",
+        "91"
+      ],
+      [
+        "R108",
+        "86"
+      ],
+      [
+        "R118",
+        "55"
+      ],
+      [
+        "R110",
+        "54"
+      ],
+      [
+        "R116",
+        "98"
+      ],
+      [
+        "R100",
+        "34"
+      ],
+      [
+        "R112",
+        "25"
+      ],
+      [
+        "R119",
+        "46"
+      ],
+      [
+        "R102",
+        "79"
+      ],
+      [
+        "R104",
+        "29"
+      ],
+      [
+        "R101",
+        "33"
+      ],
+      [
+        "R107",
+        "77"
+      ],
+      [
+        "R105",
+        "40"
+      ],
+      [
+        "R115",
+        "43"
+      ],
+      [
+        "R121",
+        "59"
+      ]
+    ],
+    "target_ids": [
+      "R102",
+      "R100",
+      "R101"
+    ],
+    "extra_records": 19,
+    "content_sha256": "bd7a0c12899e37bf4edb8c511e75b04175b2810564aa03236820fb974441ca09",
+    "input_token_range": [
+      224,
+      320
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 231,
+    "token_ids_sha256": "d77015a8ac5cbec4801988eeba5731217c75fe374ef222a6ae6754e6fed944bc",
+    "grammar": "root ::= \"R102|\" [1-9] [0-9] \"\\n\" \"R100|\" [1-9] [0-9] \"\\n\" \"R101|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-i-organize-3",
+    "seed": 35101,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "organize",
+    "target_count": 4,
+    "bucket": 0,
+    "index": 3,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR101|88\nR104|24\nR103|90\nR100|10\nR102|69\n按以下编号顺序整理对应的数值：R101,R100,R103,R102。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R101|88\nR100|10\nR103|90\nR102|69",
+    "source_records_evaluation_only": [
+      [
+        "R101",
+        "88"
+      ],
+      [
+        "R104",
+        "24"
+      ],
+      [
+        "R103",
+        "90"
+      ],
+      [
+        "R100",
+        "10"
+      ],
+      [
+        "R102",
+        "69"
+      ]
+    ],
+    "target_ids": [
+      "R101",
+      "R100",
+      "R103",
+      "R102"
+    ],
+    "extra_records": 1,
+    "content_sha256": "3f4b40c661f3dd410b26eec48bc6d9749b9905ffb18d56c962f98f2b12a56d31",
+    "input_token_range": [
+      96,
+      159
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 99,
+    "token_ids_sha256": "2fc3d629cb64c85cdc207347585a8b9db4fdeb6e092f0523506ade8a2320c277",
+    "grammar": "root ::= \"R101|\" [1-9] [0-9] \"\\n\" \"R100|\" [1-9] [0-9] \"\\n\" \"R103|\" [1-9] [0-9] \"\\n\" \"R102|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-i-organize-4",
+    "seed": 35101,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "organize",
+    "target_count": 1,
+    "bucket": 1,
+    "index": 4,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR106|68\nR104|20\nR107|76\nR105|37\nR114|45\nR112|40\nR108|19\nR111|94\nR101|16\nR113|39\nR102|53\nR100|19\nR103|52\nR110|68\nR109|25\n按以下编号顺序整理对应的数值：R100。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R100|19",
+    "source_records_evaluation_only": [
+      [
+        "R106",
+        "68"
+      ],
+      [
+        "R104",
+        "20"
+      ],
+      [
+        "R107",
+        "76"
+      ],
+      [
+        "R105",
+        "37"
+      ],
+      [
+        "R114",
+        "45"
+      ],
+      [
+        "R112",
+        "40"
+      ],
+      [
+        "R108",
+        "19"
+      ],
+      [
+        "R111",
+        "94"
+      ],
+      [
+        "R101",
+        "16"
+      ],
+      [
+        "R113",
+        "39"
+      ],
+      [
+        "R102",
+        "53"
+      ],
+      [
+        "R100",
+        "19"
+      ],
+      [
+        "R103",
+        "52"
+      ],
+      [
+        "R110",
+        "68"
+      ],
+      [
+        "R109",
+        "25"
+      ]
+    ],
+    "target_ids": [
+      "R100"
+    ],
+    "extra_records": 14,
+    "content_sha256": "1edc734d8afc0d826c1d159517540697c867803009bc995a255cfbe2fb488c2c",
+    "input_token_range": [
+      160,
+      223
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 167,
+    "token_ids_sha256": "d0dfd5af313417693a8a8c16184e4cbea78729c94c72a1a85b50767575553ead",
+    "grammar": "root ::= \"R100|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-i-organize-5",
+    "seed": 35101,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "organize",
+    "target_count": 2,
+    "bucket": 2,
+    "index": 5,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR117|39\nR112|33\nR113|18\nR115|10\nR110|21\nR114|88\nR101|63\nR120|76\nR116|49\nR111|32\nR108|50\nR119|57\nR106|97\nR100|28\nR121|59\nR102|74\nR103|99\nR104|87\nR105|39\nR118|99\nR107|32\nR109|99\n按以下编号顺序整理对应的数值：R101,R100。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R101|63\nR100|28",
+    "source_records_evaluation_only": [
+      [
+        "R117",
+        "39"
+      ],
+      [
+        "R112",
+        "33"
+      ],
+      [
+        "R113",
+        "18"
+      ],
+      [
+        "R115",
+        "10"
+      ],
+      [
+        "R110",
+        "21"
+      ],
+      [
+        "R114",
+        "88"
+      ],
+      [
+        "R101",
+        "63"
+      ],
+      [
+        "R120",
+        "76"
+      ],
+      [
+        "R116",
+        "49"
+      ],
+      [
+        "R111",
+        "32"
+      ],
+      [
+        "R108",
+        "50"
+      ],
+      [
+        "R119",
+        "57"
+      ],
+      [
+        "R106",
+        "97"
+      ],
+      [
+        "R100",
+        "28"
+      ],
+      [
+        "R121",
+        "59"
+      ],
+      [
+        "R102",
+        "74"
+      ],
+      [
+        "R103",
+        "99"
+      ],
+      [
+        "R104",
+        "87"
+      ],
+      [
+        "R105",
+        "39"
+      ],
+      [
+        "R118",
+        "99"
+      ],
+      [
+        "R107",
+        "32"
+      ],
+      [
+        "R109",
+        "99"
+      ]
+    ],
+    "target_ids": [
+      "R101",
+      "R100"
+    ],
+    "extra_records": 20,
+    "content_sha256": "3cf0f9670f652e2b6da0850460cc47b1366b517e4b82bbe7f8b24cb3be03f032",
+    "input_token_range": [
+      224,
+      320
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 227,
+    "token_ids_sha256": "d2524ad83ec6900aab1946b8e8ffd2ab2f80277d3732766c7ee0bc1ab98c85a2",
+    "grammar": "root ::= \"R101|\" [1-9] [0-9] \"\\n\" \"R100|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-i-organize-6",
+    "seed": 35101,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "organize",
+    "target_count": 3,
+    "bucket": 0,
+    "index": 6,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR104|33\nR102|27\nR103|70\nR101|86\nR100|86\nR105|60\n按以下编号顺序整理对应的数值：R102,R101,R100。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R102|27\nR101|86\nR100|86",
+    "source_records_evaluation_only": [
+      [
+        "R104",
+        "33"
+      ],
+      [
+        "R102",
+        "27"
+      ],
+      [
+        "R103",
+        "70"
+      ],
+      [
+        "R101",
+        "86"
+      ],
+      [
+        "R100",
+        "86"
+      ],
+      [
+        "R105",
+        "60"
+      ]
+    ],
+    "target_ids": [
+      "R102",
+      "R101",
+      "R100"
+    ],
+    "extra_records": 3,
+    "content_sha256": "46f06e5a95feef0288996231072ff5bd1be9d80cc45144d7a85203f6b0e50ab8",
+    "input_token_range": [
+      96,
+      159
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 103,
+    "token_ids_sha256": "af744b2822333797a63345e5967a0ce9870a561cf960a761ac0ac2c1adf2d3cb",
+    "grammar": "root ::= \"R102|\" [1-9] [0-9] \"\\n\" \"R101|\" [1-9] [0-9] \"\\n\" \"R100|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-i-organize-7",
+    "seed": 35101,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "organize",
+    "target_count": 4,
+    "bucket": 1,
+    "index": 7,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR112|64\nR102|23\nR104|92\nR111|29\nR103|97\nR110|57\nR108|28\nR106|86\nR109|54\nR100|86\nR101|94\nR105|56\nR107|52\n按以下编号顺序整理对应的数值：R101,R102,R103,R100。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R101|94\nR102|23\nR103|97\nR100|86",
+    "source_records_evaluation_only": [
+      [
+        "R112",
+        "64"
+      ],
+      [
+        "R102",
+        "23"
+      ],
+      [
+        "R104",
+        "92"
+      ],
+      [
+        "R111",
+        "29"
+      ],
+      [
+        "R103",
+        "97"
+      ],
+      [
+        "R110",
+        "57"
+      ],
+      [
+        "R108",
+        "28"
+      ],
+      [
+        "R106",
+        "86"
+      ],
+      [
+        "R109",
+        "54"
+      ],
+      [
+        "R100",
+        "86"
+      ],
+      [
+        "R101",
+        "94"
+      ],
+      [
+        "R105",
+        "56"
+      ],
+      [
+        "R107",
+        "52"
+      ]
+    ],
+    "target_ids": [
+      "R101",
+      "R102",
+      "R103",
+      "R100"
+    ],
+    "extra_records": 9,
+    "content_sha256": "f3454f5ff1ba300ea27166b89d7ef3a14b6c1e520dcafcf9de349edb8d8541b4",
+    "input_token_range": [
+      160,
+      223
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 163,
+    "token_ids_sha256": "e71f36801d9c07a5668aa5f6d4f52160ee99db27fe83fd566c5d6386c01ab08c",
+    "grammar": "root ::= \"R101|\" [1-9] [0-9] \"\\n\" \"R102|\" [1-9] [0-9] \"\\n\" \"R103|\" [1-9] [0-9] \"\\n\" \"R100|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-b-extract-0",
+    "seed": 35101,
+    "split": "development",
+    "category": "background",
+    "task_kind": "extract",
+    "target_count": 4,
+    "bucket": 0,
+    "index": 0,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR127|65\nR116|15\nR128|50\nR104|95\nR108|55\nR100|56\nR103|97\nR119|50\nR102|94\nR131|84\nR126|12\nR125|66\nR132|15\nR109|89\nR111|63\nR122|19\nR112|28\nR110|34\nR107|29\nR106|36\nR115|63\nR113|38\nR123|79\nR120|45\nR101|31\nR130|94\nR114|45\nR105|24\nR118|38\nR117|69\nR121|79\nR129|90\nR124|69\n提取以下编号对应的数值：R100,R101,R102,R103。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R100|56\nR101|31\nR102|94\nR103|97",
+    "source_records_evaluation_only": [
+      [
+        "R127",
+        "65"
+      ],
+      [
+        "R116",
+        "15"
+      ],
+      [
+        "R128",
+        "50"
+      ],
+      [
+        "R104",
+        "95"
+      ],
+      [
+        "R108",
+        "55"
+      ],
+      [
+        "R100",
+        "56"
+      ],
+      [
+        "R103",
+        "97"
+      ],
+      [
+        "R119",
+        "50"
+      ],
+      [
+        "R102",
+        "94"
+      ],
+      [
+        "R131",
+        "84"
+      ],
+      [
+        "R126",
+        "12"
+      ],
+      [
+        "R125",
+        "66"
+      ],
+      [
+        "R132",
+        "15"
+      ],
+      [
+        "R109",
+        "89"
+      ],
+      [
+        "R111",
+        "63"
+      ],
+      [
+        "R122",
+        "19"
+      ],
+      [
+        "R112",
+        "28"
+      ],
+      [
+        "R110",
+        "34"
+      ],
+      [
+        "R107",
+        "29"
+      ],
+      [
+        "R106",
+        "36"
+      ],
+      [
+        "R115",
+        "63"
+      ],
+      [
+        "R113",
+        "38"
+      ],
+      [
+        "R123",
+        "79"
+      ],
+      [
+        "R120",
+        "45"
+      ],
+      [
+        "R101",
+        "31"
+      ],
+      [
+        "R130",
+        "94"
+      ],
+      [
+        "R114",
+        "45"
+      ],
+      [
+        "R105",
+        "24"
+      ],
+      [
+        "R118",
+        "38"
+      ],
+      [
+        "R117",
+        "69"
+      ],
+      [
+        "R121",
+        "79"
+      ],
+      [
+        "R129",
+        "90"
+      ],
+      [
+        "R124",
+        "69"
+      ]
+    ],
+    "target_ids": [
+      "R100",
+      "R101",
+      "R102",
+      "R103"
+    ],
+    "extra_records": 29,
+    "content_sha256": "17becb9af9a44b890f21ad9351cf3ae7a5dde67fc4d9d2bc6d8e3e56f564065e",
+    "input_token_range": [
+      320,
+      511
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 321,
+    "token_ids_sha256": "6bf468b13a4cd6349f5ca95f884aee7afbd80e7d30e65026824f7f909d13e737",
+    "grammar": "root ::= \"R100|\" [1-9] [0-9] \"\\n\" \"R101|\" [1-9] [0-9] \"\\n\" \"R102|\" [1-9] [0-9] \"\\n\" \"R103|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-b-extract-1",
+    "seed": 35101,
+    "split": "development",
+    "category": "background",
+    "task_kind": "extract",
+    "target_count": 6,
+    "bucket": 1,
+    "index": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR111|80\nR100|77\nR133|32\nR102|14\nR141|80\nR113|58\nR135|49\nR155|60\nR109|37\nR149|90\nR152|80\nR131|68\nR136|81\nR140|29\nR150|38\nR148|82\nR153|76\nR143|42\nR115|31\nR145|18\nR114|95\nR108|61\nR124|50\nR154|57\nR118|40\nR120|30\nR106|37\nR142|35\nR134|75\nR147|68\nR104|51\nR103|24\nR129|40\nR137|63\nR127|24\nR123|66\nR112|39\nR119|88\nR121|31\nR138|46\nR151|73\nR105|13\nR130|21\nR117|89\nR128|31\nR116|97\nR126|13\nR107|31\nR110|63\nR146|80\nR144|75\nR132|94\nR125|34\nR101|54\nR122|98\nR139|48\n提取以下编号对应的数值：R100,R101,R102,R103,R104,R105。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R100|77\nR101|54\nR102|14\nR103|24\nR104|51\nR105|13",
+    "source_records_evaluation_only": [
+      [
+        "R111",
+        "80"
+      ],
+      [
+        "R100",
+        "77"
+      ],
+      [
+        "R133",
+        "32"
+      ],
+      [
+        "R102",
+        "14"
+      ],
+      [
+        "R141",
+        "80"
+      ],
+      [
+        "R113",
+        "58"
+      ],
+      [
+        "R135",
+        "49"
+      ],
+      [
+        "R155",
+        "60"
+      ],
+      [
+        "R109",
+        "37"
+      ],
+      [
+        "R149",
+        "90"
+      ],
+      [
+        "R152",
+        "80"
+      ],
+      [
+        "R131",
+        "68"
+      ],
+      [
+        "R136",
+        "81"
+      ],
+      [
+        "R140",
+        "29"
+      ],
+      [
+        "R150",
+        "38"
+      ],
+      [
+        "R148",
+        "82"
+      ],
+      [
+        "R153",
+        "76"
+      ],
+      [
+        "R143",
+        "42"
+      ],
+      [
+        "R115",
+        "31"
+      ],
+      [
+        "R145",
+        "18"
+      ],
+      [
+        "R114",
+        "95"
+      ],
+      [
+        "R108",
+        "61"
+      ],
+      [
+        "R124",
+        "50"
+      ],
+      [
+        "R154",
+        "57"
+      ],
+      [
+        "R118",
+        "40"
+      ],
+      [
+        "R120",
+        "30"
+      ],
+      [
+        "R106",
+        "37"
+      ],
+      [
+        "R142",
+        "35"
+      ],
+      [
+        "R134",
+        "75"
+      ],
+      [
+        "R147",
+        "68"
+      ],
+      [
+        "R104",
+        "51"
+      ],
+      [
+        "R103",
+        "24"
+      ],
+      [
+        "R129",
+        "40"
+      ],
+      [
+        "R137",
+        "63"
+      ],
+      [
+        "R127",
+        "24"
+      ],
+      [
+        "R123",
+        "66"
+      ],
+      [
+        "R112",
+        "39"
+      ],
+      [
+        "R119",
+        "88"
+      ],
+      [
+        "R121",
+        "31"
+      ],
+      [
+        "R138",
+        "46"
+      ],
+      [
+        "R151",
+        "73"
+      ],
+      [
+        "R105",
+        "13"
+      ],
+      [
+        "R130",
+        "21"
+      ],
+      [
+        "R117",
+        "89"
+      ],
+      [
+        "R128",
+        "31"
+      ],
+      [
+        "R116",
+        "97"
+      ],
+      [
+        "R126",
+        "13"
+      ],
+      [
+        "R107",
+        "31"
+      ],
+      [
+        "R110",
+        "63"
+      ],
+      [
+        "R146",
+        "80"
+      ],
+      [
+        "R144",
+        "75"
+      ],
+      [
+        "R132",
+        "94"
+      ],
+      [
+        "R125",
+        "34"
+      ],
+      [
+        "R101",
+        "54"
+      ],
+      [
+        "R122",
+        "98"
+      ],
+      [
+        "R139",
+        "48"
+      ]
+    ],
+    "target_ids": [
+      "R100",
+      "R101",
+      "R102",
+      "R103",
+      "R104",
+      "R105"
+    ],
+    "extra_records": 50,
+    "content_sha256": "a52c11ea1e3f29c098817da660b45df2201edcda232278bb1a12849c185ee0ab",
+    "input_token_range": [
+      512,
+      767
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 513,
+    "token_ids_sha256": "3cb325c1425a75570702135418c83b18a47af5c393b576ef9d95f35caadf7dd9",
+    "grammar": "root ::= \"R100|\" [1-9] [0-9] \"\\n\" \"R101|\" [1-9] [0-9] \"\\n\" \"R102|\" [1-9] [0-9] \"\\n\" \"R103|\" [1-9] [0-9] \"\\n\" \"R104|\" [1-9] [0-9] \"\\n\" \"R105|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-b-extract-2",
+    "seed": 35101,
+    "split": "development",
+    "category": "background",
+    "task_kind": "extract",
+    "target_count": 8,
+    "bucket": 2,
+    "index": 2,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR165|75\nR161|66\nR166|30\nR155|78\nR132|52\nR102|97\nR108|98\nR133|61\nR120|16\nR151|57\nR177|33\nR141|84\nR162|72\nR169|71\nR127|75\nR117|74\nR147|41\nR186|57\nR157|71\nR142|51\nR107|70\nR168|79\nR172|42\nR158|79\nR167|53\nR185|94\nR163|91\nR119|33\nR179|37\nR106|14\nR148|98\nR145|64\nR164|76\nR116|87\nR181|55\nR101|57\nR126|62\nR131|76\nR125|62\nR111|70\nR114|78\nR182|18\nR135|99\nR137|85\nR184|91\nR143|36\nR173|66\nR152|84\nR178|12\nR100|79\nR110|95\nR156|11\nR128|44\nR159|84\nR144|63\nR130|55\nR171|34\nR180|26\nR123|31\nR160|30\nR176|23\nR149|58\nR104|23\nR122|23\nR105|69\nR175|52\nR150|41\nR124|97\nR183|64\nR118|41\nR112|40\nR154|65\nR174|86\nR140|61\nR170|50\nR136|71\nR153|95\nR109|82\nR129|69\nR134|75\nR113|33\nR115|15\nR138|28\nR146|63\nR103|22\nR121|95\nR139|71\n提取以下编号对应的数值：R100,R101,R102,R103,R104,R105,R106,R107。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R100|79\nR101|57\nR102|97\nR103|22\nR104|23\nR105|69\nR106|14\nR107|70",
+    "source_records_evaluation_only": [
+      [
+        "R165",
+        "75"
+      ],
+      [
+        "R161",
+        "66"
+      ],
+      [
+        "R166",
+        "30"
+      ],
+      [
+        "R155",
+        "78"
+      ],
+      [
+        "R132",
+        "52"
+      ],
+      [
+        "R102",
+        "97"
+      ],
+      [
+        "R108",
+        "98"
+      ],
+      [
+        "R133",
+        "61"
+      ],
+      [
+        "R120",
+        "16"
+      ],
+      [
+        "R151",
+        "57"
+      ],
+      [
+        "R177",
+        "33"
+      ],
+      [
+        "R141",
+        "84"
+      ],
+      [
+        "R162",
+        "72"
+      ],
+      [
+        "R169",
+        "71"
+      ],
+      [
+        "R127",
+        "75"
+      ],
+      [
+        "R117",
+        "74"
+      ],
+      [
+        "R147",
+        "41"
+      ],
+      [
+        "R186",
+        "57"
+      ],
+      [
+        "R157",
+        "71"
+      ],
+      [
+        "R142",
+        "51"
+      ],
+      [
+        "R107",
+        "70"
+      ],
+      [
+        "R168",
+        "79"
+      ],
+      [
+        "R172",
+        "42"
+      ],
+      [
+        "R158",
+        "79"
+      ],
+      [
+        "R167",
+        "53"
+      ],
+      [
+        "R185",
+        "94"
+      ],
+      [
+        "R163",
+        "91"
+      ],
+      [
+        "R119",
+        "33"
+      ],
+      [
+        "R179",
+        "37"
+      ],
+      [
+        "R106",
+        "14"
+      ],
+      [
+        "R148",
+        "98"
+      ],
+      [
+        "R145",
+        "64"
+      ],
+      [
+        "R164",
+        "76"
+      ],
+      [
+        "R116",
+        "87"
+      ],
+      [
+        "R181",
+        "55"
+      ],
+      [
+        "R101",
+        "57"
+      ],
+      [
+        "R126",
+        "62"
+      ],
+      [
+        "R131",
+        "76"
+      ],
+      [
+        "R125",
+        "62"
+      ],
+      [
+        "R111",
+        "70"
+      ],
+      [
+        "R114",
+        "78"
+      ],
+      [
+        "R182",
+        "18"
+      ],
+      [
+        "R135",
+        "99"
+      ],
+      [
+        "R137",
+        "85"
+      ],
+      [
+        "R184",
+        "91"
+      ],
+      [
+        "R143",
+        "36"
+      ],
+      [
+        "R173",
+        "66"
+      ],
+      [
+        "R152",
+        "84"
+      ],
+      [
+        "R178",
+        "12"
+      ],
+      [
+        "R100",
+        "79"
+      ],
+      [
+        "R110",
+        "95"
+      ],
+      [
+        "R156",
+        "11"
+      ],
+      [
+        "R128",
+        "44"
+      ],
+      [
+        "R159",
+        "84"
+      ],
+      [
+        "R144",
+        "63"
+      ],
+      [
+        "R130",
+        "55"
+      ],
+      [
+        "R171",
+        "34"
+      ],
+      [
+        "R180",
+        "26"
+      ],
+      [
+        "R123",
+        "31"
+      ],
+      [
+        "R160",
+        "30"
+      ],
+      [
+        "R176",
+        "23"
+      ],
+      [
+        "R149",
+        "58"
+      ],
+      [
+        "R104",
+        "23"
+      ],
+      [
+        "R122",
+        "23"
+      ],
+      [
+        "R105",
+        "69"
+      ],
+      [
+        "R175",
+        "52"
+      ],
+      [
+        "R150",
+        "41"
+      ],
+      [
+        "R124",
+        "97"
+      ],
+      [
+        "R183",
+        "64"
+      ],
+      [
+        "R118",
+        "41"
+      ],
+      [
+        "R112",
+        "40"
+      ],
+      [
+        "R154",
+        "65"
+      ],
+      [
+        "R174",
+        "86"
+      ],
+      [
+        "R140",
+        "61"
+      ],
+      [
+        "R170",
+        "50"
+      ],
+      [
+        "R136",
+        "71"
+      ],
+      [
+        "R153",
+        "95"
+      ],
+      [
+        "R109",
+        "82"
+      ],
+      [
+        "R129",
+        "69"
+      ],
+      [
+        "R134",
+        "75"
+      ],
+      [
+        "R113",
+        "33"
+      ],
+      [
+        "R115",
+        "15"
+      ],
+      [
+        "R138",
+        "28"
+      ],
+      [
+        "R146",
+        "63"
+      ],
+      [
+        "R103",
+        "22"
+      ],
+      [
+        "R121",
+        "95"
+      ],
+      [
+        "R139",
+        "71"
+      ]
+    ],
+    "target_ids": [
+      "R100",
+      "R101",
+      "R102",
+      "R103",
+      "R104",
+      "R105",
+      "R106",
+      "R107"
+    ],
+    "extra_records": 79,
+    "content_sha256": "ea4a43c8d964bb6c53ba23475b4d67ba9ce40c5bc3a992a2419c587fab54afee",
+    "input_token_range": [
+      768,
+      1024
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 769,
+    "token_ids_sha256": "7fbc69326d1f152ecba8a385b6bdb105bab2a229381557f5cbf58e0533d5b8ff",
+    "grammar": "root ::= \"R100|\" [1-9] [0-9] \"\\n\" \"R101|\" [1-9] [0-9] \"\\n\" \"R102|\" [1-9] [0-9] \"\\n\" \"R103|\" [1-9] [0-9] \"\\n\" \"R104|\" [1-9] [0-9] \"\\n\" \"R105|\" [1-9] [0-9] \"\\n\" \"R106|\" [1-9] [0-9] \"\\n\" \"R107|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-b-extract-3",
+    "seed": 35101,
+    "split": "development",
+    "category": "background",
+    "task_kind": "extract",
+    "target_count": 10,
+    "bucket": 0,
+    "index": 3,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR107|62\nR115|13\nR113|28\nR112|19\nR117|81\nR104|40\nR109|17\nR128|38\nR120|16\nR129|67\nR108|18\nR124|83\nR114|27\nR116|80\nR127|78\nR126|27\nR123|19\nR111|58\nR110|69\nR103|42\nR105|27\nR106|64\nR101|80\nR100|76\nR121|81\nR122|33\nR102|25\nR125|34\nR118|95\nR119|31\n提取以下编号对应的数值：R100,R101,R102,R103,R104,R105,R106,R107,R108,R109。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R100|76\nR101|80\nR102|25\nR103|42\nR104|40\nR105|27\nR106|64\nR107|62\nR108|18\nR109|17",
+    "source_records_evaluation_only": [
+      [
+        "R107",
+        "62"
+      ],
+      [
+        "R115",
+        "13"
+      ],
+      [
+        "R113",
+        "28"
+      ],
+      [
+        "R112",
+        "19"
+      ],
+      [
+        "R117",
+        "81"
+      ],
+      [
+        "R104",
+        "40"
+      ],
+      [
+        "R109",
+        "17"
+      ],
+      [
+        "R128",
+        "38"
+      ],
+      [
+        "R120",
+        "16"
+      ],
+      [
+        "R129",
+        "67"
+      ],
+      [
+        "R108",
+        "18"
+      ],
+      [
+        "R124",
+        "83"
+      ],
+      [
+        "R114",
+        "27"
+      ],
+      [
+        "R116",
+        "80"
+      ],
+      [
+        "R127",
+        "78"
+      ],
+      [
+        "R126",
+        "27"
+      ],
+      [
+        "R123",
+        "19"
+      ],
+      [
+        "R111",
+        "58"
+      ],
+      [
+        "R110",
+        "69"
+      ],
+      [
+        "R103",
+        "42"
+      ],
+      [
+        "R105",
+        "27"
+      ],
+      [
+        "R106",
+        "64"
+      ],
+      [
+        "R101",
+        "80"
+      ],
+      [
+        "R100",
+        "76"
+      ],
+      [
+        "R121",
+        "81"
+      ],
+      [
+        "R122",
+        "33"
+      ],
+      [
+        "R102",
+        "25"
+      ],
+      [
+        "R125",
+        "34"
+      ],
+      [
+        "R118",
+        "95"
+      ],
+      [
+        "R119",
+        "31"
+      ]
+    ],
+    "target_ids": [
+      "R100",
+      "R101",
+      "R102",
+      "R103",
+      "R104",
+      "R105",
+      "R106",
+      "R107",
+      "R108",
+      "R109"
+    ],
+    "extra_records": 20,
+    "content_sha256": "e0477b4e18a57aaca924eeebb4476ee4e513cc1107f476d66b491b7505de9ef9",
+    "input_token_range": [
+      320,
+      511
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 321,
+    "token_ids_sha256": "82eb4976ba885ddaa05a5e61e9093e40f91bce9f848b8229dcbb58b96a002343",
+    "grammar": "root ::= \"R100|\" [1-9] [0-9] \"\\n\" \"R101|\" [1-9] [0-9] \"\\n\" \"R102|\" [1-9] [0-9] \"\\n\" \"R103|\" [1-9] [0-9] \"\\n\" \"R104|\" [1-9] [0-9] \"\\n\" \"R105|\" [1-9] [0-9] \"\\n\" \"R106|\" [1-9] [0-9] \"\\n\" \"R107|\" [1-9] [0-9] \"\\n\" \"R108|\" [1-9] [0-9] \"\\n\" \"R109|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-b-extract-4",
+    "seed": 35101,
+    "split": "development",
+    "category": "background",
+    "task_kind": "extract",
+    "target_count": 4,
+    "bucket": 1,
+    "index": 4,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR134|74\nR155|53\nR132|30\nR113|11\nR143|32\nR151|16\nR156|85\nR124|36\nR137|77\nR135|17\nR121|64\nR125|22\nR102|42\nR127|66\nR123|86\nR118|59\nR101|35\nR131|63\nR111|85\nR133|75\nR129|69\nR148|65\nR153|88\nR150|24\nR128|45\nR106|49\nR120|38\nR108|35\nR104|27\nR100|44\nR138|21\nR122|48\nR136|39\nR115|81\nR126|40\nR114|70\nR107|67\nR147|90\nR109|21\nR152|57\nR112|91\nR154|36\nR149|87\nR144|39\nR145|84\nR119|53\nR142|29\nR139|76\nR105|95\nR117|79\nR146|88\nR130|67\nR116|84\nR140|17\nR141|27\nR110|42\nR103|69\n提取以下编号对应的数值：R100,R101,R102,R103。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R100|44\nR101|35\nR102|42\nR103|69",
+    "source_records_evaluation_only": [
+      [
+        "R134",
+        "74"
+      ],
+      [
+        "R155",
+        "53"
+      ],
+      [
+        "R132",
+        "30"
+      ],
+      [
+        "R113",
+        "11"
+      ],
+      [
+        "R143",
+        "32"
+      ],
+      [
+        "R151",
+        "16"
+      ],
+      [
+        "R156",
+        "85"
+      ],
+      [
+        "R124",
+        "36"
+      ],
+      [
+        "R137",
+        "77"
+      ],
+      [
+        "R135",
+        "17"
+      ],
+      [
+        "R121",
+        "64"
+      ],
+      [
+        "R125",
+        "22"
+      ],
+      [
+        "R102",
+        "42"
+      ],
+      [
+        "R127",
+        "66"
+      ],
+      [
+        "R123",
+        "86"
+      ],
+      [
+        "R118",
+        "59"
+      ],
+      [
+        "R101",
+        "35"
+      ],
+      [
+        "R131",
+        "63"
+      ],
+      [
+        "R111",
+        "85"
+      ],
+      [
+        "R133",
+        "75"
+      ],
+      [
+        "R129",
+        "69"
+      ],
+      [
+        "R148",
+        "65"
+      ],
+      [
+        "R153",
+        "88"
+      ],
+      [
+        "R150",
+        "24"
+      ],
+      [
+        "R128",
+        "45"
+      ],
+      [
+        "R106",
+        "49"
+      ],
+      [
+        "R120",
+        "38"
+      ],
+      [
+        "R108",
+        "35"
+      ],
+      [
+        "R104",
+        "27"
+      ],
+      [
+        "R100",
+        "44"
+      ],
+      [
+        "R138",
+        "21"
+      ],
+      [
+        "R122",
+        "48"
+      ],
+      [
+        "R136",
+        "39"
+      ],
+      [
+        "R115",
+        "81"
+      ],
+      [
+        "R126",
+        "40"
+      ],
+      [
+        "R114",
+        "70"
+      ],
+      [
+        "R107",
+        "67"
+      ],
+      [
+        "R147",
+        "90"
+      ],
+      [
+        "R109",
+        "21"
+      ],
+      [
+        "R152",
+        "57"
+      ],
+      [
+        "R112",
+        "91"
+      ],
+      [
+        "R154",
+        "36"
+      ],
+      [
+        "R149",
+        "87"
+      ],
+      [
+        "R144",
+        "39"
+      ],
+      [
+        "R145",
+        "84"
+      ],
+      [
+        "R119",
+        "53"
+      ],
+      [
+        "R142",
+        "29"
+      ],
+      [
+        "R139",
+        "76"
+      ],
+      [
+        "R105",
+        "95"
+      ],
+      [
+        "R117",
+        "79"
+      ],
+      [
+        "R146",
+        "88"
+      ],
+      [
+        "R130",
+        "67"
+      ],
+      [
+        "R116",
+        "84"
+      ],
+      [
+        "R140",
+        "17"
+      ],
+      [
+        "R141",
+        "27"
+      ],
+      [
+        "R110",
+        "42"
+      ],
+      [
+        "R103",
+        "69"
+      ]
+    ],
+    "target_ids": [
+      "R100",
+      "R101",
+      "R102",
+      "R103"
+    ],
+    "extra_records": 53,
+    "content_sha256": "f8cd99ac2056ff1ae26ae89e49f10ef55b55d66c3af1502a13901fa03ef6bbbb",
+    "input_token_range": [
+      512,
+      767
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 513,
+    "token_ids_sha256": "794c9c7ec8ff706974ebb8aec83e813123b60099b5be964cc3de5779836ebd6c",
+    "grammar": "root ::= \"R100|\" [1-9] [0-9] \"\\n\" \"R101|\" [1-9] [0-9] \"\\n\" \"R102|\" [1-9] [0-9] \"\\n\" \"R103|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-b-extract-5",
+    "seed": 35101,
+    "split": "development",
+    "category": "background",
+    "task_kind": "extract",
+    "target_count": 6,
+    "bucket": 2,
+    "index": 5,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR146|63\nR144|25\nR118|89\nR176|17\nR173|74\nR169|97\nR168|92\nR103|67\nR148|87\nR120|84\nR145|20\nR171|28\nR131|35\nR126|53\nR157|54\nR122|49\nR172|10\nR119|76\nR135|21\nR115|27\nR156|58\nR127|54\nR121|12\nR141|49\nR177|44\nR111|38\nR101|43\nR152|65\nR113|46\nR138|90\nR125|49\nR108|75\nR166|24\nR170|63\nR151|21\nR107|87\nR179|23\nR184|86\nR155|48\nR124|44\nR185|41\nR109|17\nR114|65\nR132|11\nR187|40\nR154|47\nR104|46\nR112|76\nR159|53\nR110|27\nR162|52\nR174|47\nR123|72\nR129|40\nR181|33\nR165|92\nR164|95\nR163|88\nR100|96\nR149|17\nR133|85\nR105|96\nR150|44\nR140|84\nR117|99\nR178|96\nR143|89\nR182|22\nR147|36\nR106|33\nR134|88\nR180|49\nR158|38\nR142|72\nR102|30\nR160|87\nR139|75\nR183|92\nR175|77\nR153|88\nR137|56\nR116|85\nR128|19\nR167|58\nR130|67\nR186|12\nR161|58\nR136|65\n提取以下编号对应的数值：R100,R101,R102,R103,R104,R105。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R100|96\nR101|43\nR102|30\nR103|67\nR104|46\nR105|96",
+    "source_records_evaluation_only": [
+      [
+        "R146",
+        "63"
+      ],
+      [
+        "R144",
+        "25"
+      ],
+      [
+        "R118",
+        "89"
+      ],
+      [
+        "R176",
+        "17"
+      ],
+      [
+        "R173",
+        "74"
+      ],
+      [
+        "R169",
+        "97"
+      ],
+      [
+        "R168",
+        "92"
+      ],
+      [
+        "R103",
+        "67"
+      ],
+      [
+        "R148",
+        "87"
+      ],
+      [
+        "R120",
+        "84"
+      ],
+      [
+        "R145",
+        "20"
+      ],
+      [
+        "R171",
+        "28"
+      ],
+      [
+        "R131",
+        "35"
+      ],
+      [
+        "R126",
+        "53"
+      ],
+      [
+        "R157",
+        "54"
+      ],
+      [
+        "R122",
+        "49"
+      ],
+      [
+        "R172",
+        "10"
+      ],
+      [
+        "R119",
+        "76"
+      ],
+      [
+        "R135",
+        "21"
+      ],
+      [
+        "R115",
+        "27"
+      ],
+      [
+        "R156",
+        "58"
+      ],
+      [
+        "R127",
+        "54"
+      ],
+      [
+        "R121",
+        "12"
+      ],
+      [
+        "R141",
+        "49"
+      ],
+      [
+        "R177",
+        "44"
+      ],
+      [
+        "R111",
+        "38"
+      ],
+      [
+        "R101",
+        "43"
+      ],
+      [
+        "R152",
+        "65"
+      ],
+      [
+        "R113",
+        "46"
+      ],
+      [
+        "R138",
+        "90"
+      ],
+      [
+        "R125",
+        "49"
+      ],
+      [
+        "R108",
+        "75"
+      ],
+      [
+        "R166",
+        "24"
+      ],
+      [
+        "R170",
+        "63"
+      ],
+      [
+        "R151",
+        "21"
+      ],
+      [
+        "R107",
+        "87"
+      ],
+      [
+        "R179",
+        "23"
+      ],
+      [
+        "R184",
+        "86"
+      ],
+      [
+        "R155",
+        "48"
+      ],
+      [
+        "R124",
+        "44"
+      ],
+      [
+        "R185",
+        "41"
+      ],
+      [
+        "R109",
+        "17"
+      ],
+      [
+        "R114",
+        "65"
+      ],
+      [
+        "R132",
+        "11"
+      ],
+      [
+        "R187",
+        "40"
+      ],
+      [
+        "R154",
+        "47"
+      ],
+      [
+        "R104",
+        "46"
+      ],
+      [
+        "R112",
+        "76"
+      ],
+      [
+        "R159",
+        "53"
+      ],
+      [
+        "R110",
+        "27"
+      ],
+      [
+        "R162",
+        "52"
+      ],
+      [
+        "R174",
+        "47"
+      ],
+      [
+        "R123",
+        "72"
+      ],
+      [
+        "R129",
+        "40"
+      ],
+      [
+        "R181",
+        "33"
+      ],
+      [
+        "R165",
+        "92"
+      ],
+      [
+        "R164",
+        "95"
+      ],
+      [
+        "R163",
+        "88"
+      ],
+      [
+        "R100",
+        "96"
+      ],
+      [
+        "R149",
+        "17"
+      ],
+      [
+        "R133",
+        "85"
+      ],
+      [
+        "R105",
+        "96"
+      ],
+      [
+        "R150",
+        "44"
+      ],
+      [
+        "R140",
+        "84"
+      ],
+      [
+        "R117",
+        "99"
+      ],
+      [
+        "R178",
+        "96"
+      ],
+      [
+        "R143",
+        "89"
+      ],
+      [
+        "R182",
+        "22"
+      ],
+      [
+        "R147",
+        "36"
+      ],
+      [
+        "R106",
+        "33"
+      ],
+      [
+        "R134",
+        "88"
+      ],
+      [
+        "R180",
+        "49"
+      ],
+      [
+        "R158",
+        "38"
+      ],
+      [
+        "R142",
+        "72"
+      ],
+      [
+        "R102",
+        "30"
+      ],
+      [
+        "R160",
+        "87"
+      ],
+      [
+        "R139",
+        "75"
+      ],
+      [
+        "R183",
+        "92"
+      ],
+      [
+        "R175",
+        "77"
+      ],
+      [
+        "R153",
+        "88"
+      ],
+      [
+        "R137",
+        "56"
+      ],
+      [
+        "R116",
+        "85"
+      ],
+      [
+        "R128",
+        "19"
+      ],
+      [
+        "R167",
+        "58"
+      ],
+      [
+        "R130",
+        "67"
+      ],
+      [
+        "R186",
+        "12"
+      ],
+      [
+        "R161",
+        "58"
+      ],
+      [
+        "R136",
+        "65"
+      ]
+    ],
+    "target_ids": [
+      "R100",
+      "R101",
+      "R102",
+      "R103",
+      "R104",
+      "R105"
+    ],
+    "extra_records": 82,
+    "content_sha256": "671459f92047e657b264b6ad34daf7703e5545c14062948e506220a761939a54",
+    "input_token_range": [
+      768,
+      1024
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 769,
+    "token_ids_sha256": "53d1426bca2e0c010fd42076ad9ebbc9cfecaac180818427c1d1b1a42d2680ed",
+    "grammar": "root ::= \"R100|\" [1-9] [0-9] \"\\n\" \"R101|\" [1-9] [0-9] \"\\n\" \"R102|\" [1-9] [0-9] \"\\n\" \"R103|\" [1-9] [0-9] \"\\n\" \"R104|\" [1-9] [0-9] \"\\n\" \"R105|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-b-extract-6",
+    "seed": 35101,
+    "split": "development",
+    "category": "background",
+    "task_kind": "extract",
+    "target_count": 8,
+    "bucket": 0,
+    "index": 6,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR113|15\nR112|54\nR108|81\nR122|45\nR116|69\nR118|69\nR126|22\nR123|57\nR130|89\nR109|55\nR114|75\nR120|53\nR127|97\nR103|80\nR104|47\nR115|83\nR125|35\nR105|71\nR100|71\nR117|12\nR129|41\nR107|91\nR106|36\nR101|38\nR121|53\nR128|40\nR124|69\nR110|62\nR119|71\nR111|76\nR102|22\n提取以下编号对应的数值：R100,R101,R102,R103,R104,R105,R106,R107。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R100|71\nR101|38\nR102|22\nR103|80\nR104|47\nR105|71\nR106|36\nR107|91",
+    "source_records_evaluation_only": [
+      [
+        "R113",
+        "15"
+      ],
+      [
+        "R112",
+        "54"
+      ],
+      [
+        "R108",
+        "81"
+      ],
+      [
+        "R122",
+        "45"
+      ],
+      [
+        "R116",
+        "69"
+      ],
+      [
+        "R118",
+        "69"
+      ],
+      [
+        "R126",
+        "22"
+      ],
+      [
+        "R123",
+        "57"
+      ],
+      [
+        "R130",
+        "89"
+      ],
+      [
+        "R109",
+        "55"
+      ],
+      [
+        "R114",
+        "75"
+      ],
+      [
+        "R120",
+        "53"
+      ],
+      [
+        "R127",
+        "97"
+      ],
+      [
+        "R103",
+        "80"
+      ],
+      [
+        "R104",
+        "47"
+      ],
+      [
+        "R115",
+        "83"
+      ],
+      [
+        "R125",
+        "35"
+      ],
+      [
+        "R105",
+        "71"
+      ],
+      [
+        "R100",
+        "71"
+      ],
+      [
+        "R117",
+        "12"
+      ],
+      [
+        "R129",
+        "41"
+      ],
+      [
+        "R107",
+        "91"
+      ],
+      [
+        "R106",
+        "36"
+      ],
+      [
+        "R101",
+        "38"
+      ],
+      [
+        "R121",
+        "53"
+      ],
+      [
+        "R128",
+        "40"
+      ],
+      [
+        "R124",
+        "69"
+      ],
+      [
+        "R110",
+        "62"
+      ],
+      [
+        "R119",
+        "71"
+      ],
+      [
+        "R111",
+        "76"
+      ],
+      [
+        "R102",
+        "22"
+      ]
+    ],
+    "target_ids": [
+      "R100",
+      "R101",
+      "R102",
+      "R103",
+      "R104",
+      "R105",
+      "R106",
+      "R107"
+    ],
+    "extra_records": 23,
+    "content_sha256": "c360b9922173096eb4dffe90d310e5a0e10cd49a0b034cb58a5c91034512f0ae",
+    "input_token_range": [
+      320,
+      511
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 321,
+    "token_ids_sha256": "d9c1157c6444ef862274d85a91aadba16f8a699ea9d3979b1958f450a8495812",
+    "grammar": "root ::= \"R100|\" [1-9] [0-9] \"\\n\" \"R101|\" [1-9] [0-9] \"\\n\" \"R102|\" [1-9] [0-9] \"\\n\" \"R103|\" [1-9] [0-9] \"\\n\" \"R104|\" [1-9] [0-9] \"\\n\" \"R105|\" [1-9] [0-9] \"\\n\" \"R106|\" [1-9] [0-9] \"\\n\" \"R107|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-b-extract-7",
+    "seed": 35101,
+    "split": "development",
+    "category": "background",
+    "task_kind": "extract",
+    "target_count": 10,
+    "bucket": 1,
+    "index": 7,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR142|90\nR127|14\nR115|57\nR150|41\nR148|67\nR135|50\nR146|61\nR126|95\nR104|18\nR149|33\nR124|45\nR144|63\nR101|25\nR109|10\nR118|77\nR119|46\nR123|28\nR125|78\nR117|55\nR112|44\nR100|92\nR116|81\nR102|82\nR113|78\nR121|56\nR151|33\nR143|23\nR110|90\nR152|78\nR129|54\nR105|88\nR120|84\nR138|66\nR140|14\nR103|68\nR131|37\nR153|10\nR122|68\nR114|99\nR130|22\nR108|72\nR136|70\nR134|87\nR147|20\nR133|18\nR141|96\nR139|81\nR128|33\nR145|65\nR106|67\nR137|35\nR132|32\nR111|87\nR107|43\n提取以下编号对应的数值：R100,R101,R102,R103,R104,R105,R106,R107,R108,R109。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R100|92\nR101|25\nR102|82\nR103|68\nR104|18\nR105|88\nR106|67\nR107|43\nR108|72\nR109|10",
+    "source_records_evaluation_only": [
+      [
+        "R142",
+        "90"
+      ],
+      [
+        "R127",
+        "14"
+      ],
+      [
+        "R115",
+        "57"
+      ],
+      [
+        "R150",
+        "41"
+      ],
+      [
+        "R148",
+        "67"
+      ],
+      [
+        "R135",
+        "50"
+      ],
+      [
+        "R146",
+        "61"
+      ],
+      [
+        "R126",
+        "95"
+      ],
+      [
+        "R104",
+        "18"
+      ],
+      [
+        "R149",
+        "33"
+      ],
+      [
+        "R124",
+        "45"
+      ],
+      [
+        "R144",
+        "63"
+      ],
+      [
+        "R101",
+        "25"
+      ],
+      [
+        "R109",
+        "10"
+      ],
+      [
+        "R118",
+        "77"
+      ],
+      [
+        "R119",
+        "46"
+      ],
+      [
+        "R123",
+        "28"
+      ],
+      [
+        "R125",
+        "78"
+      ],
+      [
+        "R117",
+        "55"
+      ],
+      [
+        "R112",
+        "44"
+      ],
+      [
+        "R100",
+        "92"
+      ],
+      [
+        "R116",
+        "81"
+      ],
+      [
+        "R102",
+        "82"
+      ],
+      [
+        "R113",
+        "78"
+      ],
+      [
+        "R121",
+        "56"
+      ],
+      [
+        "R151",
+        "33"
+      ],
+      [
+        "R143",
+        "23"
+      ],
+      [
+        "R110",
+        "90"
+      ],
+      [
+        "R152",
+        "78"
+      ],
+      [
+        "R129",
+        "54"
+      ],
+      [
+        "R105",
+        "88"
+      ],
+      [
+        "R120",
+        "84"
+      ],
+      [
+        "R138",
+        "66"
+      ],
+      [
+        "R140",
+        "14"
+      ],
+      [
+        "R103",
+        "68"
+      ],
+      [
+        "R131",
+        "37"
+      ],
+      [
+        "R153",
+        "10"
+      ],
+      [
+        "R122",
+        "68"
+      ],
+      [
+        "R114",
+        "99"
+      ],
+      [
+        "R130",
+        "22"
+      ],
+      [
+        "R108",
+        "72"
+      ],
+      [
+        "R136",
+        "70"
+      ],
+      [
+        "R134",
+        "87"
+      ],
+      [
+        "R147",
+        "20"
+      ],
+      [
+        "R133",
+        "18"
+      ],
+      [
+        "R141",
+        "96"
+      ],
+      [
+        "R139",
+        "81"
+      ],
+      [
+        "R128",
+        "33"
+      ],
+      [
+        "R145",
+        "65"
+      ],
+      [
+        "R106",
+        "67"
+      ],
+      [
+        "R137",
+        "35"
+      ],
+      [
+        "R132",
+        "32"
+      ],
+      [
+        "R111",
+        "87"
+      ],
+      [
+        "R107",
+        "43"
+      ]
+    ],
+    "target_ids": [
+      "R100",
+      "R101",
+      "R102",
+      "R103",
+      "R104",
+      "R105",
+      "R106",
+      "R107",
+      "R108",
+      "R109"
+    ],
+    "extra_records": 44,
+    "content_sha256": "5cc63c4852cc518d8832bfca5146dbf8b2ab1f3a976910f5d6a05a69ef92134e",
+    "input_token_range": [
+      512,
+      767
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 513,
+    "token_ids_sha256": "5d562f5493175da605ca8291f29e21a679e80547f14197611f2fe0e581c92523",
+    "grammar": "root ::= \"R100|\" [1-9] [0-9] \"\\n\" \"R101|\" [1-9] [0-9] \"\\n\" \"R102|\" [1-9] [0-9] \"\\n\" \"R103|\" [1-9] [0-9] \"\\n\" \"R104|\" [1-9] [0-9] \"\\n\" \"R105|\" [1-9] [0-9] \"\\n\" \"R106|\" [1-9] [0-9] \"\\n\" \"R107|\" [1-9] [0-9] \"\\n\" \"R108|\" [1-9] [0-9] \"\\n\" \"R109|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-b-organize-0",
+    "seed": 35101,
+    "split": "development",
+    "category": "background",
+    "task_kind": "organize",
+    "target_count": 4,
+    "bucket": 0,
+    "index": 0,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR104|60\nR114|51\nR109|79\nR112|12\nR102|56\nR128|43\nR120|78\nR132|10\nR118|28\nR126|13\nR113|23\nR103|44\nR127|56\nR124|25\nR116|31\nR117|72\nR129|21\nR123|96\nR115|22\nR107|53\nR110|88\nR131|41\nR122|74\nR101|39\nR108|65\nR100|17\nR121|46\nR130|71\nR106|19\nR119|74\nR125|98\nR105|54\nR111|82\n按以下编号顺序整理对应的数值：R100,R103,R101,R102。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R100|17\nR103|44\nR101|39\nR102|56",
+    "source_records_evaluation_only": [
+      [
+        "R104",
+        "60"
+      ],
+      [
+        "R114",
+        "51"
+      ],
+      [
+        "R109",
+        "79"
+      ],
+      [
+        "R112",
+        "12"
+      ],
+      [
+        "R102",
+        "56"
+      ],
+      [
+        "R128",
+        "43"
+      ],
+      [
+        "R120",
+        "78"
+      ],
+      [
+        "R132",
+        "10"
+      ],
+      [
+        "R118",
+        "28"
+      ],
+      [
+        "R126",
+        "13"
+      ],
+      [
+        "R113",
+        "23"
+      ],
+      [
+        "R103",
+        "44"
+      ],
+      [
+        "R127",
+        "56"
+      ],
+      [
+        "R124",
+        "25"
+      ],
+      [
+        "R116",
+        "31"
+      ],
+      [
+        "R117",
+        "72"
+      ],
+      [
+        "R129",
+        "21"
+      ],
+      [
+        "R123",
+        "96"
+      ],
+      [
+        "R115",
+        "22"
+      ],
+      [
+        "R107",
+        "53"
+      ],
+      [
+        "R110",
+        "88"
+      ],
+      [
+        "R131",
+        "41"
+      ],
+      [
+        "R122",
+        "74"
+      ],
+      [
+        "R101",
+        "39"
+      ],
+      [
+        "R108",
+        "65"
+      ],
+      [
+        "R100",
+        "17"
+      ],
+      [
+        "R121",
+        "46"
+      ],
+      [
+        "R130",
+        "71"
+      ],
+      [
+        "R106",
+        "19"
+      ],
+      [
+        "R119",
+        "74"
+      ],
+      [
+        "R125",
+        "98"
+      ],
+      [
+        "R105",
+        "54"
+      ],
+      [
+        "R111",
+        "82"
+      ]
+    ],
+    "target_ids": [
+      "R100",
+      "R103",
+      "R101",
+      "R102"
+    ],
+    "extra_records": 29,
+    "content_sha256": "3af97cc8cd007cbc2b2585e9ff980d012acba31425638885865c3469f147e708",
+    "input_token_range": [
+      320,
+      511
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 323,
+    "token_ids_sha256": "82d9a7e37a8e4e8f2cecad9b07ffbcaf46b9de2a5f691750ce281fabaadfdb39",
+    "grammar": "root ::= \"R100|\" [1-9] [0-9] \"\\n\" \"R103|\" [1-9] [0-9] \"\\n\" \"R101|\" [1-9] [0-9] \"\\n\" \"R102|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-b-organize-1",
+    "seed": 35101,
+    "split": "development",
+    "category": "background",
+    "task_kind": "organize",
+    "target_count": 6,
+    "bucket": 1,
+    "index": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR145|83\nR119|56\nR121|38\nR130|60\nR137|80\nR124|33\nR144|26\nR111|41\nR104|69\nR139|11\nR147|99\nR135|46\nR128|16\nR112|63\nR142|98\nR113|98\nR141|49\nR125|44\nR109|69\nR106|98\nR122|22\nR108|65\nR101|64\nR136|25\nR155|24\nR132|12\nR138|85\nR148|19\nR131|88\nR152|74\nR126|16\nR118|61\nR117|92\nR115|23\nR140|32\nR143|19\nR129|84\nR133|68\nR110|21\nR116|93\nR114|91\nR134|75\nR150|20\nR103|66\nR149|98\nR120|74\nR151|50\nR146|81\nR154|21\nR123|39\nR127|58\nR105|35\nR102|72\nR100|16\nR153|85\nR107|57\n按以下编号顺序整理对应的数值：R104,R100,R102,R105,R101,R103。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R104|69\nR100|16\nR102|72\nR105|35\nR101|64\nR103|66",
+    "source_records_evaluation_only": [
+      [
+        "R145",
+        "83"
+      ],
+      [
+        "R119",
+        "56"
+      ],
+      [
+        "R121",
+        "38"
+      ],
+      [
+        "R130",
+        "60"
+      ],
+      [
+        "R137",
+        "80"
+      ],
+      [
+        "R124",
+        "33"
+      ],
+      [
+        "R144",
+        "26"
+      ],
+      [
+        "R111",
+        "41"
+      ],
+      [
+        "R104",
+        "69"
+      ],
+      [
+        "R139",
+        "11"
+      ],
+      [
+        "R147",
+        "99"
+      ],
+      [
+        "R135",
+        "46"
+      ],
+      [
+        "R128",
+        "16"
+      ],
+      [
+        "R112",
+        "63"
+      ],
+      [
+        "R142",
+        "98"
+      ],
+      [
+        "R113",
+        "98"
+      ],
+      [
+        "R141",
+        "49"
+      ],
+      [
+        "R125",
+        "44"
+      ],
+      [
+        "R109",
+        "69"
+      ],
+      [
+        "R106",
+        "98"
+      ],
+      [
+        "R122",
+        "22"
+      ],
+      [
+        "R108",
+        "65"
+      ],
+      [
+        "R101",
+        "64"
+      ],
+      [
+        "R136",
+        "25"
+      ],
+      [
+        "R155",
+        "24"
+      ],
+      [
+        "R132",
+        "12"
+      ],
+      [
+        "R138",
+        "85"
+      ],
+      [
+        "R148",
+        "19"
+      ],
+      [
+        "R131",
+        "88"
+      ],
+      [
+        "R152",
+        "74"
+      ],
+      [
+        "R126",
+        "16"
+      ],
+      [
+        "R118",
+        "61"
+      ],
+      [
+        "R117",
+        "92"
+      ],
+      [
+        "R115",
+        "23"
+      ],
+      [
+        "R140",
+        "32"
+      ],
+      [
+        "R143",
+        "19"
+      ],
+      [
+        "R129",
+        "84"
+      ],
+      [
+        "R133",
+        "68"
+      ],
+      [
+        "R110",
+        "21"
+      ],
+      [
+        "R116",
+        "93"
+      ],
+      [
+        "R114",
+        "91"
+      ],
+      [
+        "R134",
+        "75"
+      ],
+      [
+        "R150",
+        "20"
+      ],
+      [
+        "R103",
+        "66"
+      ],
+      [
+        "R149",
+        "98"
+      ],
+      [
+        "R120",
+        "74"
+      ],
+      [
+        "R151",
+        "50"
+      ],
+      [
+        "R146",
+        "81"
+      ],
+      [
+        "R154",
+        "21"
+      ],
+      [
+        "R123",
+        "39"
+      ],
+      [
+        "R127",
+        "58"
+      ],
+      [
+        "R105",
+        "35"
+      ],
+      [
+        "R102",
+        "72"
+      ],
+      [
+        "R100",
+        "16"
+      ],
+      [
+        "R153",
+        "85"
+      ],
+      [
+        "R107",
+        "57"
+      ]
+    ],
+    "target_ids": [
+      "R104",
+      "R100",
+      "R102",
+      "R105",
+      "R101",
+      "R103"
+    ],
+    "extra_records": 50,
+    "content_sha256": "7369032f353221ad9f5c9221b2c92149ee698c041c4950314549149b7b51e9bb",
+    "input_token_range": [
+      512,
+      767
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 515,
+    "token_ids_sha256": "6708431aaf1a83224ebcd878bc986aebbb79ecc88e49276182793c67db309a36",
+    "grammar": "root ::= \"R104|\" [1-9] [0-9] \"\\n\" \"R100|\" [1-9] [0-9] \"\\n\" \"R102|\" [1-9] [0-9] \"\\n\" \"R105|\" [1-9] [0-9] \"\\n\" \"R101|\" [1-9] [0-9] \"\\n\" \"R103|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-b-organize-2",
+    "seed": 35101,
+    "split": "development",
+    "category": "background",
+    "task_kind": "organize",
+    "target_count": 8,
+    "bucket": 2,
+    "index": 2,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR134|35\nR152|73\nR148|69\nR137|48\nR147|99\nR102|27\nR123|97\nR126|90\nR160|40\nR141|48\nR113|47\nR163|52\nR136|16\nR175|91\nR131|63\nR125|24\nR151|13\nR173|67\nR159|84\nR143|97\nR135|94\nR140|72\nR103|66\nR106|22\nR132|67\nR183|16\nR109|52\nR121|87\nR174|85\nR150|36\nR139|52\nR167|25\nR119|94\nR161|82\nR107|48\nR117|72\nR100|34\nR108|99\nR101|10\nR172|59\nR155|73\nR186|66\nR105|86\nR165|68\nR168|62\nR182|84\nR122|89\nR104|18\nR116|38\nR185|35\nR170|99\nR120|66\nR149|94\nR169|46\nR142|77\nR162|55\nR184|94\nR176|88\nR115|33\nR124|24\nR171|99\nR110|30\nR153|17\nR156|79\nR164|73\nR144|42\nR145|41\nR129|57\nR118|29\nR130|10\nR128|37\nR157|33\nR111|53\nR127|37\nR181|46\nR179|58\nR112|76\nR154|95\nR133|18\nR177|72\nR158|64\nR114|67\nR166|74\nR138|88\nR180|74\nR178|24\nR146|37\n按以下编号顺序整理对应的数值：R103,R102,R101,R105,R100,R107,R106,R104。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R103|66\nR102|27\nR101|10\nR105|86\nR100|34\nR107|48\nR106|22\nR104|18",
+    "source_records_evaluation_only": [
+      [
+        "R134",
+        "35"
+      ],
+      [
+        "R152",
+        "73"
+      ],
+      [
+        "R148",
+        "69"
+      ],
+      [
+        "R137",
+        "48"
+      ],
+      [
+        "R147",
+        "99"
+      ],
+      [
+        "R102",
+        "27"
+      ],
+      [
+        "R123",
+        "97"
+      ],
+      [
+        "R126",
+        "90"
+      ],
+      [
+        "R160",
+        "40"
+      ],
+      [
+        "R141",
+        "48"
+      ],
+      [
+        "R113",
+        "47"
+      ],
+      [
+        "R163",
+        "52"
+      ],
+      [
+        "R136",
+        "16"
+      ],
+      [
+        "R175",
+        "91"
+      ],
+      [
+        "R131",
+        "63"
+      ],
+      [
+        "R125",
+        "24"
+      ],
+      [
+        "R151",
+        "13"
+      ],
+      [
+        "R173",
+        "67"
+      ],
+      [
+        "R159",
+        "84"
+      ],
+      [
+        "R143",
+        "97"
+      ],
+      [
+        "R135",
+        "94"
+      ],
+      [
+        "R140",
+        "72"
+      ],
+      [
+        "R103",
+        "66"
+      ],
+      [
+        "R106",
+        "22"
+      ],
+      [
+        "R132",
+        "67"
+      ],
+      [
+        "R183",
+        "16"
+      ],
+      [
+        "R109",
+        "52"
+      ],
+      [
+        "R121",
+        "87"
+      ],
+      [
+        "R174",
+        "85"
+      ],
+      [
+        "R150",
+        "36"
+      ],
+      [
+        "R139",
+        "52"
+      ],
+      [
+        "R167",
+        "25"
+      ],
+      [
+        "R119",
+        "94"
+      ],
+      [
+        "R161",
+        "82"
+      ],
+      [
+        "R107",
+        "48"
+      ],
+      [
+        "R117",
+        "72"
+      ],
+      [
+        "R100",
+        "34"
+      ],
+      [
+        "R108",
+        "99"
+      ],
+      [
+        "R101",
+        "10"
+      ],
+      [
+        "R172",
+        "59"
+      ],
+      [
+        "R155",
+        "73"
+      ],
+      [
+        "R186",
+        "66"
+      ],
+      [
+        "R105",
+        "86"
+      ],
+      [
+        "R165",
+        "68"
+      ],
+      [
+        "R168",
+        "62"
+      ],
+      [
+        "R182",
+        "84"
+      ],
+      [
+        "R122",
+        "89"
+      ],
+      [
+        "R104",
+        "18"
+      ],
+      [
+        "R116",
+        "38"
+      ],
+      [
+        "R185",
+        "35"
+      ],
+      [
+        "R170",
+        "99"
+      ],
+      [
+        "R120",
+        "66"
+      ],
+      [
+        "R149",
+        "94"
+      ],
+      [
+        "R169",
+        "46"
+      ],
+      [
+        "R142",
+        "77"
+      ],
+      [
+        "R162",
+        "55"
+      ],
+      [
+        "R184",
+        "94"
+      ],
+      [
+        "R176",
+        "88"
+      ],
+      [
+        "R115",
+        "33"
+      ],
+      [
+        "R124",
+        "24"
+      ],
+      [
+        "R171",
+        "99"
+      ],
+      [
+        "R110",
+        "30"
+      ],
+      [
+        "R153",
+        "17"
+      ],
+      [
+        "R156",
+        "79"
+      ],
+      [
+        "R164",
+        "73"
+      ],
+      [
+        "R144",
+        "42"
+      ],
+      [
+        "R145",
+        "41"
+      ],
+      [
+        "R129",
+        "57"
+      ],
+      [
+        "R118",
+        "29"
+      ],
+      [
+        "R130",
+        "10"
+      ],
+      [
+        "R128",
+        "37"
+      ],
+      [
+        "R157",
+        "33"
+      ],
+      [
+        "R111",
+        "53"
+      ],
+      [
+        "R127",
+        "37"
+      ],
+      [
+        "R181",
+        "46"
+      ],
+      [
+        "R179",
+        "58"
+      ],
+      [
+        "R112",
+        "76"
+      ],
+      [
+        "R154",
+        "95"
+      ],
+      [
+        "R133",
+        "18"
+      ],
+      [
+        "R177",
+        "72"
+      ],
+      [
+        "R158",
+        "64"
+      ],
+      [
+        "R114",
+        "67"
+      ],
+      [
+        "R166",
+        "74"
+      ],
+      [
+        "R138",
+        "88"
+      ],
+      [
+        "R180",
+        "74"
+      ],
+      [
+        "R178",
+        "24"
+      ],
+      [
+        "R146",
+        "37"
+      ]
+    ],
+    "target_ids": [
+      "R103",
+      "R102",
+      "R101",
+      "R105",
+      "R100",
+      "R107",
+      "R106",
+      "R104"
+    ],
+    "extra_records": 79,
+    "content_sha256": "6f5ce0833ea1ff894e320468186083c8e967c083d0925c37fcc0f3475d9a5986",
+    "input_token_range": [
+      768,
+      1024
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 771,
+    "token_ids_sha256": "a8ab5f97f57c82695bedb82c6f596fe3f21cc9a1b1af6bedbb70dcda8beff821",
+    "grammar": "root ::= \"R103|\" [1-9] [0-9] \"\\n\" \"R102|\" [1-9] [0-9] \"\\n\" \"R101|\" [1-9] [0-9] \"\\n\" \"R105|\" [1-9] [0-9] \"\\n\" \"R100|\" [1-9] [0-9] \"\\n\" \"R107|\" [1-9] [0-9] \"\\n\" \"R106|\" [1-9] [0-9] \"\\n\" \"R104|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-b-organize-3",
+    "seed": 35101,
+    "split": "development",
+    "category": "background",
+    "task_kind": "organize",
+    "target_count": 10,
+    "bucket": 0,
+    "index": 3,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR112|70\nR123|19\nR119|98\nR121|18\nR111|61\nR104|76\nR110|95\nR105|80\nR101|96\nR124|66\nR108|17\nR114|86\nR116|86\nR125|40\nR127|71\nR128|28\nR126|90\nR122|60\nR109|93\nR103|74\nR117|57\nR100|60\nR102|24\nR118|81\nR115|85\nR106|75\nR129|91\nR107|69\nR120|53\nR113|75\n按以下编号顺序整理对应的数值：R105,R109,R102,R104,R101,R100,R103,R108,R107,R106。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R105|80\nR109|93\nR102|24\nR104|76\nR101|96\nR100|60\nR103|74\nR108|17\nR107|69\nR106|75",
+    "source_records_evaluation_only": [
+      [
+        "R112",
+        "70"
+      ],
+      [
+        "R123",
+        "19"
+      ],
+      [
+        "R119",
+        "98"
+      ],
+      [
+        "R121",
+        "18"
+      ],
+      [
+        "R111",
+        "61"
+      ],
+      [
+        "R104",
+        "76"
+      ],
+      [
+        "R110",
+        "95"
+      ],
+      [
+        "R105",
+        "80"
+      ],
+      [
+        "R101",
+        "96"
+      ],
+      [
+        "R124",
+        "66"
+      ],
+      [
+        "R108",
+        "17"
+      ],
+      [
+        "R114",
+        "86"
+      ],
+      [
+        "R116",
+        "86"
+      ],
+      [
+        "R125",
+        "40"
+      ],
+      [
+        "R127",
+        "71"
+      ],
+      [
+        "R128",
+        "28"
+      ],
+      [
+        "R126",
+        "90"
+      ],
+      [
+        "R122",
+        "60"
+      ],
+      [
+        "R109",
+        "93"
+      ],
+      [
+        "R103",
+        "74"
+      ],
+      [
+        "R117",
+        "57"
+      ],
+      [
+        "R100",
+        "60"
+      ],
+      [
+        "R102",
+        "24"
+      ],
+      [
+        "R118",
+        "81"
+      ],
+      [
+        "R115",
+        "85"
+      ],
+      [
+        "R106",
+        "75"
+      ],
+      [
+        "R129",
+        "91"
+      ],
+      [
+        "R107",
+        "69"
+      ],
+      [
+        "R120",
+        "53"
+      ],
+      [
+        "R113",
+        "75"
+      ]
+    ],
+    "target_ids": [
+      "R105",
+      "R109",
+      "R102",
+      "R104",
+      "R101",
+      "R100",
+      "R103",
+      "R108",
+      "R107",
+      "R106"
+    ],
+    "extra_records": 20,
+    "content_sha256": "a246c5e26fbf8fb193652d13f31d89fc9418ce8652896ec5c441f58d4486fc48",
+    "input_token_range": [
+      320,
+      511
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 323,
+    "token_ids_sha256": "70a67788dfaba3e81896eab8666098039188411f3352573844ad22044660de18",
+    "grammar": "root ::= \"R105|\" [1-9] [0-9] \"\\n\" \"R109|\" [1-9] [0-9] \"\\n\" \"R102|\" [1-9] [0-9] \"\\n\" \"R104|\" [1-9] [0-9] \"\\n\" \"R101|\" [1-9] [0-9] \"\\n\" \"R100|\" [1-9] [0-9] \"\\n\" \"R103|\" [1-9] [0-9] \"\\n\" \"R108|\" [1-9] [0-9] \"\\n\" \"R107|\" [1-9] [0-9] \"\\n\" \"R106|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-b-organize-4",
+    "seed": 35101,
+    "split": "development",
+    "category": "background",
+    "task_kind": "organize",
+    "target_count": 4,
+    "bucket": 1,
+    "index": 4,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR130|28\nR102|25\nR153|76\nR138|25\nR151|84\nR108|42\nR133|87\nR129|41\nR112|34\nR107|90\nR137|19\nR142|77\nR127|18\nR106|39\nR109|12\nR118|84\nR143|63\nR139|36\nR145|25\nR152|20\nR123|67\nR149|43\nR147|67\nR103|29\nR101|27\nR125|85\nR113|45\nR115|96\nR120|48\nR116|97\nR141|41\nR111|99\nR126|76\nR148|91\nR154|73\nR150|45\nR131|34\nR119|54\nR156|29\nR155|66\nR134|51\nR135|87\nR114|79\nR117|98\nR132|67\nR124|94\nR100|45\nR146|68\nR122|58\nR140|48\nR128|57\nR144|21\nR104|16\nR136|97\nR121|91\nR105|17\nR110|21\n按以下编号顺序整理对应的数值：R101,R102,R100,R103。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R101|27\nR102|25\nR100|45\nR103|29",
+    "source_records_evaluation_only": [
+      [
+        "R130",
+        "28"
+      ],
+      [
+        "R102",
+        "25"
+      ],
+      [
+        "R153",
+        "76"
+      ],
+      [
+        "R138",
+        "25"
+      ],
+      [
+        "R151",
+        "84"
+      ],
+      [
+        "R108",
+        "42"
+      ],
+      [
+        "R133",
+        "87"
+      ],
+      [
+        "R129",
+        "41"
+      ],
+      [
+        "R112",
+        "34"
+      ],
+      [
+        "R107",
+        "90"
+      ],
+      [
+        "R137",
+        "19"
+      ],
+      [
+        "R142",
+        "77"
+      ],
+      [
+        "R127",
+        "18"
+      ],
+      [
+        "R106",
+        "39"
+      ],
+      [
+        "R109",
+        "12"
+      ],
+      [
+        "R118",
+        "84"
+      ],
+      [
+        "R143",
+        "63"
+      ],
+      [
+        "R139",
+        "36"
+      ],
+      [
+        "R145",
+        "25"
+      ],
+      [
+        "R152",
+        "20"
+      ],
+      [
+        "R123",
+        "67"
+      ],
+      [
+        "R149",
+        "43"
+      ],
+      [
+        "R147",
+        "67"
+      ],
+      [
+        "R103",
+        "29"
+      ],
+      [
+        "R101",
+        "27"
+      ],
+      [
+        "R125",
+        "85"
+      ],
+      [
+        "R113",
+        "45"
+      ],
+      [
+        "R115",
+        "96"
+      ],
+      [
+        "R120",
+        "48"
+      ],
+      [
+        "R116",
+        "97"
+      ],
+      [
+        "R141",
+        "41"
+      ],
+      [
+        "R111",
+        "99"
+      ],
+      [
+        "R126",
+        "76"
+      ],
+      [
+        "R148",
+        "91"
+      ],
+      [
+        "R154",
+        "73"
+      ],
+      [
+        "R150",
+        "45"
+      ],
+      [
+        "R131",
+        "34"
+      ],
+      [
+        "R119",
+        "54"
+      ],
+      [
+        "R156",
+        "29"
+      ],
+      [
+        "R155",
+        "66"
+      ],
+      [
+        "R134",
+        "51"
+      ],
+      [
+        "R135",
+        "87"
+      ],
+      [
+        "R114",
+        "79"
+      ],
+      [
+        "R117",
+        "98"
+      ],
+      [
+        "R132",
+        "67"
+      ],
+      [
+        "R124",
+        "94"
+      ],
+      [
+        "R100",
+        "45"
+      ],
+      [
+        "R146",
+        "68"
+      ],
+      [
+        "R122",
+        "58"
+      ],
+      [
+        "R140",
+        "48"
+      ],
+      [
+        "R128",
+        "57"
+      ],
+      [
+        "R144",
+        "21"
+      ],
+      [
+        "R104",
+        "16"
+      ],
+      [
+        "R136",
+        "97"
+      ],
+      [
+        "R121",
+        "91"
+      ],
+      [
+        "R105",
+        "17"
+      ],
+      [
+        "R110",
+        "21"
+      ]
+    ],
+    "target_ids": [
+      "R101",
+      "R102",
+      "R100",
+      "R103"
+    ],
+    "extra_records": 53,
+    "content_sha256": "adcffb35968383682e47a3638267b12d4f4cc92ada1444ee3dc7ae59c59904d0",
+    "input_token_range": [
+      512,
+      767
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 515,
+    "token_ids_sha256": "01a86fdde1201de0e0bc45cce38420314d88c6aab246f420a4acac348127589d",
+    "grammar": "root ::= \"R101|\" [1-9] [0-9] \"\\n\" \"R102|\" [1-9] [0-9] \"\\n\" \"R100|\" [1-9] [0-9] \"\\n\" \"R103|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-b-organize-5",
+    "seed": 35101,
+    "split": "development",
+    "category": "background",
+    "task_kind": "organize",
+    "target_count": 6,
+    "bucket": 2,
+    "index": 5,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR150|44\nR173|67\nR143|96\nR122|21\nR119|55\nR111|42\nR106|50\nR148|71\nR172|50\nR103|76\nR160|97\nR133|75\nR180|61\nR179|43\nR171|39\nR149|99\nR117|12\nR123|99\nR113|59\nR185|39\nR181|21\nR126|90\nR156|18\nR137|25\nR139|28\nR166|38\nR145|88\nR152|49\nR118|96\nR132|20\nR183|62\nR161|55\nR136|24\nR184|57\nR164|13\nR151|79\nR131|72\nR107|87\nR124|96\nR120|92\nR100|50\nR140|96\nR159|20\nR127|53\nR130|32\nR178|85\nR134|97\nR129|28\nR105|22\nR177|92\nR176|58\nR102|65\nR165|78\nR146|49\nR167|82\nR158|79\nR174|99\nR108|16\nR170|89\nR169|16\nR128|30\nR104|86\nR125|85\nR114|58\nR141|76\nR121|76\nR147|52\nR162|76\nR115|29\nR116|91\nR112|79\nR157|60\nR153|62\nR168|61\nR155|68\nR154|36\nR144|73\nR182|49\nR163|74\nR187|22\nR109|50\nR175|45\nR135|92\nR186|86\nR142|18\nR101|98\nR110|77\nR138|94\n按以下编号顺序整理对应的数值：R101,R104,R103,R100,R105,R102。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R101|98\nR104|86\nR103|76\nR100|50\nR105|22\nR102|65",
+    "source_records_evaluation_only": [
+      [
+        "R150",
+        "44"
+      ],
+      [
+        "R173",
+        "67"
+      ],
+      [
+        "R143",
+        "96"
+      ],
+      [
+        "R122",
+        "21"
+      ],
+      [
+        "R119",
+        "55"
+      ],
+      [
+        "R111",
+        "42"
+      ],
+      [
+        "R106",
+        "50"
+      ],
+      [
+        "R148",
+        "71"
+      ],
+      [
+        "R172",
+        "50"
+      ],
+      [
+        "R103",
+        "76"
+      ],
+      [
+        "R160",
+        "97"
+      ],
+      [
+        "R133",
+        "75"
+      ],
+      [
+        "R180",
+        "61"
+      ],
+      [
+        "R179",
+        "43"
+      ],
+      [
+        "R171",
+        "39"
+      ],
+      [
+        "R149",
+        "99"
+      ],
+      [
+        "R117",
+        "12"
+      ],
+      [
+        "R123",
+        "99"
+      ],
+      [
+        "R113",
+        "59"
+      ],
+      [
+        "R185",
+        "39"
+      ],
+      [
+        "R181",
+        "21"
+      ],
+      [
+        "R126",
+        "90"
+      ],
+      [
+        "R156",
+        "18"
+      ],
+      [
+        "R137",
+        "25"
+      ],
+      [
+        "R139",
+        "28"
+      ],
+      [
+        "R166",
+        "38"
+      ],
+      [
+        "R145",
+        "88"
+      ],
+      [
+        "R152",
+        "49"
+      ],
+      [
+        "R118",
+        "96"
+      ],
+      [
+        "R132",
+        "20"
+      ],
+      [
+        "R183",
+        "62"
+      ],
+      [
+        "R161",
+        "55"
+      ],
+      [
+        "R136",
+        "24"
+      ],
+      [
+        "R184",
+        "57"
+      ],
+      [
+        "R164",
+        "13"
+      ],
+      [
+        "R151",
+        "79"
+      ],
+      [
+        "R131",
+        "72"
+      ],
+      [
+        "R107",
+        "87"
+      ],
+      [
+        "R124",
+        "96"
+      ],
+      [
+        "R120",
+        "92"
+      ],
+      [
+        "R100",
+        "50"
+      ],
+      [
+        "R140",
+        "96"
+      ],
+      [
+        "R159",
+        "20"
+      ],
+      [
+        "R127",
+        "53"
+      ],
+      [
+        "R130",
+        "32"
+      ],
+      [
+        "R178",
+        "85"
+      ],
+      [
+        "R134",
+        "97"
+      ],
+      [
+        "R129",
+        "28"
+      ],
+      [
+        "R105",
+        "22"
+      ],
+      [
+        "R177",
+        "92"
+      ],
+      [
+        "R176",
+        "58"
+      ],
+      [
+        "R102",
+        "65"
+      ],
+      [
+        "R165",
+        "78"
+      ],
+      [
+        "R146",
+        "49"
+      ],
+      [
+        "R167",
+        "82"
+      ],
+      [
+        "R158",
+        "79"
+      ],
+      [
+        "R174",
+        "99"
+      ],
+      [
+        "R108",
+        "16"
+      ],
+      [
+        "R170",
+        "89"
+      ],
+      [
+        "R169",
+        "16"
+      ],
+      [
+        "R128",
+        "30"
+      ],
+      [
+        "R104",
+        "86"
+      ],
+      [
+        "R125",
+        "85"
+      ],
+      [
+        "R114",
+        "58"
+      ],
+      [
+        "R141",
+        "76"
+      ],
+      [
+        "R121",
+        "76"
+      ],
+      [
+        "R147",
+        "52"
+      ],
+      [
+        "R162",
+        "76"
+      ],
+      [
+        "R115",
+        "29"
+      ],
+      [
+        "R116",
+        "91"
+      ],
+      [
+        "R112",
+        "79"
+      ],
+      [
+        "R157",
+        "60"
+      ],
+      [
+        "R153",
+        "62"
+      ],
+      [
+        "R168",
+        "61"
+      ],
+      [
+        "R155",
+        "68"
+      ],
+      [
+        "R154",
+        "36"
+      ],
+      [
+        "R144",
+        "73"
+      ],
+      [
+        "R182",
+        "49"
+      ],
+      [
+        "R163",
+        "74"
+      ],
+      [
+        "R187",
+        "22"
+      ],
+      [
+        "R109",
+        "50"
+      ],
+      [
+        "R175",
+        "45"
+      ],
+      [
+        "R135",
+        "92"
+      ],
+      [
+        "R186",
+        "86"
+      ],
+      [
+        "R142",
+        "18"
+      ],
+      [
+        "R101",
+        "98"
+      ],
+      [
+        "R110",
+        "77"
+      ],
+      [
+        "R138",
+        "94"
+      ]
+    ],
+    "target_ids": [
+      "R101",
+      "R104",
+      "R103",
+      "R100",
+      "R105",
+      "R102"
+    ],
+    "extra_records": 82,
+    "content_sha256": "8ff6da5a6c2147099ea1086b1397c139b672263108a798a2d40d815658b6660a",
+    "input_token_range": [
+      768,
+      1024
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 771,
+    "token_ids_sha256": "610ceb56b12decdd556e0132b8424a86553579b0d26250f065273f6414aa22f8",
+    "grammar": "root ::= \"R101|\" [1-9] [0-9] \"\\n\" \"R104|\" [1-9] [0-9] \"\\n\" \"R103|\" [1-9] [0-9] \"\\n\" \"R100|\" [1-9] [0-9] \"\\n\" \"R105|\" [1-9] [0-9] \"\\n\" \"R102|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-b-organize-6",
+    "seed": 35101,
+    "split": "development",
+    "category": "background",
+    "task_kind": "organize",
+    "target_count": 8,
+    "bucket": 0,
+    "index": 6,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR124|72\nR105|17\nR128|76\nR129|97\nR118|28\nR112|64\nR108|51\nR106|38\nR123|42\nR100|35\nR114|41\nR126|89\nR121|22\nR122|72\nR130|44\nR113|87\nR104|54\nR109|20\nR120|26\nR119|80\nR102|69\nR107|88\nR111|10\nR116|68\nR110|77\nR115|27\nR103|51\nR125|55\nR127|36\nR117|35\nR101|38\n按以下编号顺序整理对应的数值：R100,R103,R104,R101,R107,R105,R106,R102。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R100|35\nR103|51\nR104|54\nR101|38\nR107|88\nR105|17\nR106|38\nR102|69",
+    "source_records_evaluation_only": [
+      [
+        "R124",
+        "72"
+      ],
+      [
+        "R105",
+        "17"
+      ],
+      [
+        "R128",
+        "76"
+      ],
+      [
+        "R129",
+        "97"
+      ],
+      [
+        "R118",
+        "28"
+      ],
+      [
+        "R112",
+        "64"
+      ],
+      [
+        "R108",
+        "51"
+      ],
+      [
+        "R106",
+        "38"
+      ],
+      [
+        "R123",
+        "42"
+      ],
+      [
+        "R100",
+        "35"
+      ],
+      [
+        "R114",
+        "41"
+      ],
+      [
+        "R126",
+        "89"
+      ],
+      [
+        "R121",
+        "22"
+      ],
+      [
+        "R122",
+        "72"
+      ],
+      [
+        "R130",
+        "44"
+      ],
+      [
+        "R113",
+        "87"
+      ],
+      [
+        "R104",
+        "54"
+      ],
+      [
+        "R109",
+        "20"
+      ],
+      [
+        "R120",
+        "26"
+      ],
+      [
+        "R119",
+        "80"
+      ],
+      [
+        "R102",
+        "69"
+      ],
+      [
+        "R107",
+        "88"
+      ],
+      [
+        "R111",
+        "10"
+      ],
+      [
+        "R116",
+        "68"
+      ],
+      [
+        "R110",
+        "77"
+      ],
+      [
+        "R115",
+        "27"
+      ],
+      [
+        "R103",
+        "51"
+      ],
+      [
+        "R125",
+        "55"
+      ],
+      [
+        "R127",
+        "36"
+      ],
+      [
+        "R117",
+        "35"
+      ],
+      [
+        "R101",
+        "38"
+      ]
+    ],
+    "target_ids": [
+      "R100",
+      "R103",
+      "R104",
+      "R101",
+      "R107",
+      "R105",
+      "R106",
+      "R102"
+    ],
+    "extra_records": 23,
+    "content_sha256": "99a690eefb77f21863cb5573cd06b71116f046cd0dccee341dc14b89d13f54ec",
+    "input_token_range": [
+      320,
+      511
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 323,
+    "token_ids_sha256": "757fc9f5d165b34eeaf56cfb3ff2934c57c87325c3bb7b063e7414e418abd432",
+    "grammar": "root ::= \"R100|\" [1-9] [0-9] \"\\n\" \"R103|\" [1-9] [0-9] \"\\n\" \"R104|\" [1-9] [0-9] \"\\n\" \"R101|\" [1-9] [0-9] \"\\n\" \"R107|\" [1-9] [0-9] \"\\n\" \"R105|\" [1-9] [0-9] \"\\n\" \"R106|\" [1-9] [0-9] \"\\n\" \"R102|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35101-b-organize-7",
+    "seed": 35101,
+    "split": "development",
+    "category": "background",
+    "task_kind": "organize",
+    "target_count": 10,
+    "bucket": 1,
+    "index": 7,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR129|54\nR137|10\nR117|88\nR130|68\nR135|72\nR151|26\nR109|16\nR144|34\nR102|28\nR147|21\nR128|88\nR153|47\nR116|98\nR122|91\nR111|91\nR108|55\nR124|52\nR141|27\nR131|80\nR125|21\nR146|36\nR148|30\nR150|59\nR100|54\nR119|24\nR105|55\nR140|85\nR133|44\nR104|37\nR112|97\nR113|96\nR136|95\nR115|98\nR114|53\nR123|78\nR134|89\nR118|49\nR126|94\nR101|39\nR120|46\nR145|94\nR110|83\nR132|40\nR143|37\nR121|76\nR127|21\nR138|71\nR152|85\nR107|46\nR142|64\nR149|24\nR103|64\nR106|89\nR139|39\n按以下编号顺序整理对应的数值：R101,R108,R109,R103,R107,R104,R102,R100,R106,R105。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R101|39\nR108|55\nR109|16\nR103|64\nR107|46\nR104|37\nR102|28\nR100|54\nR106|89\nR105|55",
+    "source_records_evaluation_only": [
+      [
+        "R129",
+        "54"
+      ],
+      [
+        "R137",
+        "10"
+      ],
+      [
+        "R117",
+        "88"
+      ],
+      [
+        "R130",
+        "68"
+      ],
+      [
+        "R135",
+        "72"
+      ],
+      [
+        "R151",
+        "26"
+      ],
+      [
+        "R109",
+        "16"
+      ],
+      [
+        "R144",
+        "34"
+      ],
+      [
+        "R102",
+        "28"
+      ],
+      [
+        "R147",
+        "21"
+      ],
+      [
+        "R128",
+        "88"
+      ],
+      [
+        "R153",
+        "47"
+      ],
+      [
+        "R116",
+        "98"
+      ],
+      [
+        "R122",
+        "91"
+      ],
+      [
+        "R111",
+        "91"
+      ],
+      [
+        "R108",
+        "55"
+      ],
+      [
+        "R124",
+        "52"
+      ],
+      [
+        "R141",
+        "27"
+      ],
+      [
+        "R131",
+        "80"
+      ],
+      [
+        "R125",
+        "21"
+      ],
+      [
+        "R146",
+        "36"
+      ],
+      [
+        "R148",
+        "30"
+      ],
+      [
+        "R150",
+        "59"
+      ],
+      [
+        "R100",
+        "54"
+      ],
+      [
+        "R119",
+        "24"
+      ],
+      [
+        "R105",
+        "55"
+      ],
+      [
+        "R140",
+        "85"
+      ],
+      [
+        "R133",
+        "44"
+      ],
+      [
+        "R104",
+        "37"
+      ],
+      [
+        "R112",
+        "97"
+      ],
+      [
+        "R113",
+        "96"
+      ],
+      [
+        "R136",
+        "95"
+      ],
+      [
+        "R115",
+        "98"
+      ],
+      [
+        "R114",
+        "53"
+      ],
+      [
+        "R123",
+        "78"
+      ],
+      [
+        "R134",
+        "89"
+      ],
+      [
+        "R118",
+        "49"
+      ],
+      [
+        "R126",
+        "94"
+      ],
+      [
+        "R101",
+        "39"
+      ],
+      [
+        "R120",
+        "46"
+      ],
+      [
+        "R145",
+        "94"
+      ],
+      [
+        "R110",
+        "83"
+      ],
+      [
+        "R132",
+        "40"
+      ],
+      [
+        "R143",
+        "37"
+      ],
+      [
+        "R121",
+        "76"
+      ],
+      [
+        "R127",
+        "21"
+      ],
+      [
+        "R138",
+        "71"
+      ],
+      [
+        "R152",
+        "85"
+      ],
+      [
+        "R107",
+        "46"
+      ],
+      [
+        "R142",
+        "64"
+      ],
+      [
+        "R149",
+        "24"
+      ],
+      [
+        "R103",
+        "64"
+      ],
+      [
+        "R106",
+        "89"
+      ],
+      [
+        "R139",
+        "39"
+      ]
+    ],
+    "target_ids": [
+      "R101",
+      "R108",
+      "R109",
+      "R103",
+      "R107",
+      "R104",
+      "R102",
+      "R100",
+      "R106",
+      "R105"
+    ],
+    "extra_records": 44,
+    "content_sha256": "4560259ef9fd75b8705ef12b8bbd2c560943f4f8a03d8da8a2d0c699aaafcd18",
+    "input_token_range": [
+      512,
+      767
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 515,
+    "token_ids_sha256": "58512a112ab5a6c7e1205d19108d0574b38f83fffd88efd0381a42fd14a73ae4",
+    "grammar": "root ::= \"R101|\" [1-9] [0-9] \"\\n\" \"R108|\" [1-9] [0-9] \"\\n\" \"R109|\" [1-9] [0-9] \"\\n\" \"R103|\" [1-9] [0-9] \"\\n\" \"R107|\" [1-9] [0-9] \"\\n\" \"R104|\" [1-9] [0-9] \"\\n\" \"R102|\" [1-9] [0-9] \"\\n\" \"R100|\" [1-9] [0-9] \"\\n\" \"R106|\" [1-9] [0-9] \"\\n\" \"R105|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-i-extract-0",
+    "seed": 35102,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "extract",
+    "target_count": 1,
+    "bucket": 0,
+    "index": 0,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1002|39\nR1000|12\nR1001|54\nR1003|13\nR1004|14\nR1005|28\n提取以下编号对应的数值：R1000。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1000|12",
+    "source_records_evaluation_only": [
+      [
+        "R1002",
+        "39"
+      ],
+      [
+        "R1000",
+        "12"
+      ],
+      [
+        "R1001",
+        "54"
+      ],
+      [
+        "R1003",
+        "13"
+      ],
+      [
+        "R1004",
+        "14"
+      ],
+      [
+        "R1005",
+        "28"
+      ]
+    ],
+    "target_ids": [
+      "R1000"
+    ],
+    "extra_records": 5,
+    "content_sha256": "6f10f483a54c3df68a89d20a9c5bfc19579a05f48d5af13b210475f82f7ebad4",
+    "input_token_range": [
+      96,
+      159
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 100,
+    "token_ids_sha256": "483df4f52ec29eca8b5d8bfe00361e8077bbd0631fc9e38397b9df331907e985",
+    "grammar": "root ::= \"R1000|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-i-extract-1",
+    "seed": 35102,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "extract",
+    "target_count": 2,
+    "bucket": 1,
+    "index": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1008|70\nR1012|51\nR1001|29\nR1011|92\nR1005|42\nR1003|13\nR1009|18\nR1002|73\nR1006|66\nR1004|98\nR1000|29\nR1010|90\nR1007|79\n提取以下编号对应的数值：R1000,R1001。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1000|29\nR1001|29",
+    "source_records_evaluation_only": [
+      [
+        "R1008",
+        "70"
+      ],
+      [
+        "R1012",
+        "51"
+      ],
+      [
+        "R1001",
+        "29"
+      ],
+      [
+        "R1011",
+        "92"
+      ],
+      [
+        "R1005",
+        "42"
+      ],
+      [
+        "R1003",
+        "13"
+      ],
+      [
+        "R1009",
+        "18"
+      ],
+      [
+        "R1002",
+        "73"
+      ],
+      [
+        "R1006",
+        "66"
+      ],
+      [
+        "R1004",
+        "98"
+      ],
+      [
+        "R1000",
+        "29"
+      ],
+      [
+        "R1010",
+        "90"
+      ],
+      [
+        "R1007",
+        "79"
+      ]
+    ],
+    "target_ids": [
+      "R1000",
+      "R1001"
+    ],
+    "extra_records": 11,
+    "content_sha256": "1ff39c8c44f72b723a7e80b7dd2cb60dc71d91001c2a99200b4dd5353b671e22",
+    "input_token_range": [
+      160,
+      223
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 168,
+    "token_ids_sha256": "df3ee294b27e235f9c921228a92a775c0a6fbc2f2e7ca6c500238dd0849d4c68",
+    "grammar": "root ::= \"R1000|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-i-extract-2",
+    "seed": 35102,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "extract",
+    "target_count": 3,
+    "bucket": 2,
+    "index": 2,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1013|44\nR1014|86\nR1000|79\nR1005|32\nR1015|32\nR1004|12\nR1010|61\nR1011|71\nR1012|41\nR1003|59\nR1009|10\nR1017|24\nR1007|86\nR1001|18\nR1008|48\nR1016|61\nR1018|45\nR1006|87\nR1002|83\n提取以下编号对应的数值：R1000,R1001,R1002。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1000|79\nR1001|18\nR1002|83",
+    "source_records_evaluation_only": [
+      [
+        "R1013",
+        "44"
+      ],
+      [
+        "R1014",
+        "86"
+      ],
+      [
+        "R1000",
+        "79"
+      ],
+      [
+        "R1005",
+        "32"
+      ],
+      [
+        "R1015",
+        "32"
+      ],
+      [
+        "R1004",
+        "12"
+      ],
+      [
+        "R1010",
+        "61"
+      ],
+      [
+        "R1011",
+        "71"
+      ],
+      [
+        "R1012",
+        "41"
+      ],
+      [
+        "R1003",
+        "59"
+      ],
+      [
+        "R1009",
+        "10"
+      ],
+      [
+        "R1017",
+        "24"
+      ],
+      [
+        "R1007",
+        "86"
+      ],
+      [
+        "R1001",
+        "18"
+      ],
+      [
+        "R1008",
+        "48"
+      ],
+      [
+        "R1016",
+        "61"
+      ],
+      [
+        "R1018",
+        "45"
+      ],
+      [
+        "R1006",
+        "87"
+      ],
+      [
+        "R1002",
+        "83"
+      ]
+    ],
+    "target_ids": [
+      "R1000",
+      "R1001",
+      "R1002"
+    ],
+    "extra_records": 16,
+    "content_sha256": "65add637ad55d16d8ce3cbd03a41ff8d3f5d45f08bae42675d3dd1dca466a3a9",
+    "input_token_range": [
+      224,
+      320
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 227,
+    "token_ids_sha256": "0c696e0b142e53b7329ef3c741062d5be237272427a1f29e9e4ba4a1b5151c8c",
+    "grammar": "root ::= \"R1000|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9] \"\\n\" \"R1002|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-i-extract-3",
+    "seed": 35102,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "extract",
+    "target_count": 4,
+    "bucket": 0,
+    "index": 3,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1001|36\nR1002|44\nR1003|67\nR1000|85\n提取以下编号对应的数值：R1000,R1001,R1002,R1003。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1000|85\nR1001|36\nR1002|44\nR1003|67",
+    "source_records_evaluation_only": [
+      [
+        "R1001",
+        "36"
+      ],
+      [
+        "R1002",
+        "44"
+      ],
+      [
+        "R1003",
+        "67"
+      ],
+      [
+        "R1000",
+        "85"
+      ]
+    ],
+    "target_ids": [
+      "R1000",
+      "R1001",
+      "R1002",
+      "R1003"
+    ],
+    "extra_records": 0,
+    "content_sha256": "167cc9c35b4002f8b936b0b1cf1e5849afda81d9d5ff4753bbcec592ac20356e",
+    "input_token_range": [
+      96,
+      159
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 97,
+    "token_ids_sha256": "af378ce025646143aaef01464b936a2ef3fe9712ae119b326b312efdc5acdcbc",
+    "grammar": "root ::= \"R1000|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9] \"\\n\" \"R1002|\" [1-9] [0-9] \"\\n\" \"R1003|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-i-extract-4",
+    "seed": 35102,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "extract",
+    "target_count": 1,
+    "bucket": 1,
+    "index": 4,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1009|83\nR1008|75\nR1003|27\nR1007|99\nR1002|64\nR1000|20\nR1004|44\nR1005|59\nR1012|64\nR1011|21\nR1006|80\nR1001|96\nR1010|86\n提取以下编号对应的数值：R1000。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1000|20",
+    "source_records_evaluation_only": [
+      [
+        "R1009",
+        "83"
+      ],
+      [
+        "R1008",
+        "75"
+      ],
+      [
+        "R1003",
+        "27"
+      ],
+      [
+        "R1007",
+        "99"
+      ],
+      [
+        "R1002",
+        "64"
+      ],
+      [
+        "R1000",
+        "20"
+      ],
+      [
+        "R1004",
+        "44"
+      ],
+      [
+        "R1005",
+        "59"
+      ],
+      [
+        "R1012",
+        "64"
+      ],
+      [
+        "R1011",
+        "21"
+      ],
+      [
+        "R1006",
+        "80"
+      ],
+      [
+        "R1001",
+        "96"
+      ],
+      [
+        "R1010",
+        "86"
+      ]
+    ],
+    "target_ids": [
+      "R1000"
+    ],
+    "extra_records": 12,
+    "content_sha256": "0492bacccdc7dc8e4248186c4c43d6d1700848c499b9e8489eb1554ad8aacf8c",
+    "input_token_range": [
+      160,
+      223
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 163,
+    "token_ids_sha256": "fa3d8360b21114d8f92eaa18974bf756bee09fab9c465fbb2e9ec9c41777e609",
+    "grammar": "root ::= \"R1000|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-i-extract-5",
+    "seed": 35102,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "extract",
+    "target_count": 2,
+    "bucket": 2,
+    "index": 5,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1003|59\nR1000|91\nR1016|58\nR1005|31\nR1002|78\nR1009|69\nR1008|28\nR1018|68\nR1014|87\nR1015|93\nR1004|27\nR1006|17\nR1011|15\nR1010|91\nR1007|49\nR1013|77\nR1001|17\nR1019|94\nR1017|43\nR1012|58\n提取以下编号对应的数值：R1000,R1001。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1000|91\nR1001|17",
+    "source_records_evaluation_only": [
+      [
+        "R1003",
+        "59"
+      ],
+      [
+        "R1000",
+        "91"
+      ],
+      [
+        "R1016",
+        "58"
+      ],
+      [
+        "R1005",
+        "31"
+      ],
+      [
+        "R1002",
+        "78"
+      ],
+      [
+        "R1009",
+        "69"
+      ],
+      [
+        "R1008",
+        "28"
+      ],
+      [
+        "R1018",
+        "68"
+      ],
+      [
+        "R1014",
+        "87"
+      ],
+      [
+        "R1015",
+        "93"
+      ],
+      [
+        "R1004",
+        "27"
+      ],
+      [
+        "R1006",
+        "17"
+      ],
+      [
+        "R1011",
+        "15"
+      ],
+      [
+        "R1010",
+        "91"
+      ],
+      [
+        "R1007",
+        "49"
+      ],
+      [
+        "R1013",
+        "77"
+      ],
+      [
+        "R1001",
+        "17"
+      ],
+      [
+        "R1019",
+        "94"
+      ],
+      [
+        "R1017",
+        "43"
+      ],
+      [
+        "R1012",
+        "58"
+      ]
+    ],
+    "target_ids": [
+      "R1000",
+      "R1001"
+    ],
+    "extra_records": 18,
+    "content_sha256": "735394eecea6630a7d8e7ef2d02e33a89e362b8119440f77cb3b0ff54c999522",
+    "input_token_range": [
+      224,
+      320
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 231,
+    "token_ids_sha256": "10cae67a1094d57b7444ff2681dc7b1ff1b03d3dade6f0f5825ef210867f9b00",
+    "grammar": "root ::= \"R1000|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-i-extract-6",
+    "seed": 35102,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "extract",
+    "target_count": 3,
+    "bucket": 0,
+    "index": 6,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1001|74\nR1004|90\nR1002|37\nR1003|20\nR1000|36\n提取以下编号对应的数值：R1000,R1001,R1002。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1000|36\nR1001|74\nR1002|37",
+    "source_records_evaluation_only": [
+      [
+        "R1001",
+        "74"
+      ],
+      [
+        "R1004",
+        "90"
+      ],
+      [
+        "R1002",
+        "37"
+      ],
+      [
+        "R1003",
+        "20"
+      ],
+      [
+        "R1000",
+        "36"
+      ]
+    ],
+    "target_ids": [
+      "R1000",
+      "R1001",
+      "R1002"
+    ],
+    "extra_records": 2,
+    "content_sha256": "fa08b6512d718ed814819806be05243eaa7040756888638aebe31a2f89459e6d",
+    "input_token_range": [
+      96,
+      159
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 101,
+    "token_ids_sha256": "e9c01f33e3b5e4aeea5800e27464dee403012aef5d0231a02db19e7fecd14cfa",
+    "grammar": "root ::= \"R1000|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9] \"\\n\" \"R1002|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-i-extract-7",
+    "seed": 35102,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "extract",
+    "target_count": 4,
+    "bucket": 1,
+    "index": 7,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1006|80\nR1001|15\nR1010|53\nR1007|97\nR1008|87\nR1009|23\nR1005|69\nR1000|62\nR1004|67\nR1003|40\nR1002|76\n提取以下编号对应的数值：R1000,R1001,R1002,R1003。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1000|62\nR1001|15\nR1002|76\nR1003|40",
+    "source_records_evaluation_only": [
+      [
+        "R1006",
+        "80"
+      ],
+      [
+        "R1001",
+        "15"
+      ],
+      [
+        "R1010",
+        "53"
+      ],
+      [
+        "R1007",
+        "97"
+      ],
+      [
+        "R1008",
+        "87"
+      ],
+      [
+        "R1009",
+        "23"
+      ],
+      [
+        "R1005",
+        "69"
+      ],
+      [
+        "R1000",
+        "62"
+      ],
+      [
+        "R1004",
+        "67"
+      ],
+      [
+        "R1003",
+        "40"
+      ],
+      [
+        "R1002",
+        "76"
+      ]
+    ],
+    "target_ids": [
+      "R1000",
+      "R1001",
+      "R1002",
+      "R1003"
+    ],
+    "extra_records": 7,
+    "content_sha256": "de9ae76a61256668f4ddc0af271520f0149aad3f82bc63bf8a3ea49d7e3826bd",
+    "input_token_range": [
+      160,
+      223
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 160,
+    "token_ids_sha256": "28d80ea5a0fa875ea97251dc7fb3d1cf442b97ade9b2cfb59bc373a67c48d510",
+    "grammar": "root ::= \"R1000|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9] \"\\n\" \"R1002|\" [1-9] [0-9] \"\\n\" \"R1003|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-i-organize-0",
+    "seed": 35102,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "organize",
+    "target_count": 1,
+    "bucket": 0,
+    "index": 0,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1003|66\nR1001|51\nR1004|48\nR1000|95\nR1005|20\nR1002|35\n按以下编号顺序整理对应的数值：R1000。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1000|95",
+    "source_records_evaluation_only": [
+      [
+        "R1003",
+        "66"
+      ],
+      [
+        "R1001",
+        "51"
+      ],
+      [
+        "R1004",
+        "48"
+      ],
+      [
+        "R1000",
+        "95"
+      ],
+      [
+        "R1005",
+        "20"
+      ],
+      [
+        "R1002",
+        "35"
+      ]
+    ],
+    "target_ids": [
+      "R1000"
+    ],
+    "extra_records": 5,
+    "content_sha256": "a58c94e235011862e1766abc1b539145a04a523bb8e4830b08358c77ff2d5787",
+    "input_token_range": [
+      96,
+      159
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 102,
+    "token_ids_sha256": "e6a8000578437db2b5800d1b94c136f0fa2dcac64f58a0c98ba6e2602ded20a3",
+    "grammar": "root ::= \"R1000|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-i-organize-1",
+    "seed": 35102,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "organize",
+    "target_count": 2,
+    "bucket": 1,
+    "index": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1000|22\nR1005|96\nR1008|77\nR1011|62\nR1009|63\nR1004|34\nR1002|56\nR1001|24\nR1006|85\nR1003|76\nR1007|22\nR1010|80\n按以下编号顺序整理对应的数值：R1000,R1001。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1000|22\nR1001|24",
+    "source_records_evaluation_only": [
+      [
+        "R1000",
+        "22"
+      ],
+      [
+        "R1005",
+        "96"
+      ],
+      [
+        "R1008",
+        "77"
+      ],
+      [
+        "R1011",
+        "62"
+      ],
+      [
+        "R1009",
+        "63"
+      ],
+      [
+        "R1004",
+        "34"
+      ],
+      [
+        "R1002",
+        "56"
+      ],
+      [
+        "R1001",
+        "24"
+      ],
+      [
+        "R1006",
+        "85"
+      ],
+      [
+        "R1003",
+        "76"
+      ],
+      [
+        "R1007",
+        "22"
+      ],
+      [
+        "R1010",
+        "80"
+      ]
+    ],
+    "target_ids": [
+      "R1000",
+      "R1001"
+    ],
+    "extra_records": 10,
+    "content_sha256": "ee1baced5c1d687fd19f6a951b33fedb96e48118f5eaa0566064c78506826afb",
+    "input_token_range": [
+      160,
+      223
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 161,
+    "token_ids_sha256": "ed5064179fb29ab9f79c9d7fb09c4d18deb3cfd991a565c9ed4cbc1d6a83ac95",
+    "grammar": "root ::= \"R1000|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-i-organize-2",
+    "seed": 35102,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "organize",
+    "target_count": 3,
+    "bucket": 2,
+    "index": 2,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1005|43\nR1002|47\nR1018|61\nR1014|46\nR1012|49\nR1003|20\nR1004|47\nR1015|15\nR1008|25\nR1011|10\nR1006|78\nR1000|42\nR1017|57\nR1016|61\nR1010|84\nR1013|52\nR1009|20\nR1007|21\nR1001|21\n按以下编号顺序整理对应的数值：R1002,R1000,R1001。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1002|47\nR1000|42\nR1001|21",
+    "source_records_evaluation_only": [
+      [
+        "R1005",
+        "43"
+      ],
+      [
+        "R1002",
+        "47"
+      ],
+      [
+        "R1018",
+        "61"
+      ],
+      [
+        "R1014",
+        "46"
+      ],
+      [
+        "R1012",
+        "49"
+      ],
+      [
+        "R1003",
+        "20"
+      ],
+      [
+        "R1004",
+        "47"
+      ],
+      [
+        "R1015",
+        "15"
+      ],
+      [
+        "R1008",
+        "25"
+      ],
+      [
+        "R1011",
+        "10"
+      ],
+      [
+        "R1006",
+        "78"
+      ],
+      [
+        "R1000",
+        "42"
+      ],
+      [
+        "R1017",
+        "57"
+      ],
+      [
+        "R1016",
+        "61"
+      ],
+      [
+        "R1010",
+        "84"
+      ],
+      [
+        "R1013",
+        "52"
+      ],
+      [
+        "R1009",
+        "20"
+      ],
+      [
+        "R1007",
+        "21"
+      ],
+      [
+        "R1001",
+        "21"
+      ]
+    ],
+    "target_ids": [
+      "R1002",
+      "R1000",
+      "R1001"
+    ],
+    "extra_records": 16,
+    "content_sha256": "32256a3ea557ceb804db551dacda74be700d9c85545723b95ee6575b7f99da0d",
+    "input_token_range": [
+      224,
+      320
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 229,
+    "token_ids_sha256": "3378203d8b5b8d9ffab14206ecf423b8aa3cc99ab0576526cb26540efef3a928",
+    "grammar": "root ::= \"R1002|\" [1-9] [0-9] \"\\n\" \"R1000|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-i-organize-3",
+    "seed": 35102,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "organize",
+    "target_count": 4,
+    "bucket": 0,
+    "index": 3,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1000|93\nR1001|73\nR1002|42\nR1003|16\n按以下编号顺序整理对应的数值：R1000,R1003,R1001,R1002。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1000|93\nR1003|16\nR1001|73\nR1002|42",
+    "source_records_evaluation_only": [
+      [
+        "R1000",
+        "93"
+      ],
+      [
+        "R1001",
+        "73"
+      ],
+      [
+        "R1002",
+        "42"
+      ],
+      [
+        "R1003",
+        "16"
+      ]
+    ],
+    "target_ids": [
+      "R1000",
+      "R1003",
+      "R1001",
+      "R1002"
+    ],
+    "extra_records": 0,
+    "content_sha256": "094e350169f84b1a7df57ec46093a34720a3271825b80c2b46bcb087743ed022",
+    "input_token_range": [
+      96,
+      159
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 99,
+    "token_ids_sha256": "5968a766d3f152f5b267aa3ac738b406e807095a0dd688adec30db15e5698474",
+    "grammar": "root ::= \"R1000|\" [1-9] [0-9] \"\\n\" \"R1003|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9] \"\\n\" \"R1002|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-i-organize-4",
+    "seed": 35102,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "organize",
+    "target_count": 1,
+    "bucket": 1,
+    "index": 4,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1008|60\nR1009|43\nR1000|61\nR1011|81\nR1010|61\nR1007|53\nR1002|83\nR1003|78\nR1012|75\nR1006|69\nR1001|27\nR1005|10\nR1004|25\n按以下编号顺序整理对应的数值：R1000。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1000|61",
+    "source_records_evaluation_only": [
+      [
+        "R1008",
+        "60"
+      ],
+      [
+        "R1009",
+        "43"
+      ],
+      [
+        "R1000",
+        "61"
+      ],
+      [
+        "R1011",
+        "81"
+      ],
+      [
+        "R1010",
+        "61"
+      ],
+      [
+        "R1007",
+        "53"
+      ],
+      [
+        "R1002",
+        "83"
+      ],
+      [
+        "R1003",
+        "78"
+      ],
+      [
+        "R1012",
+        "75"
+      ],
+      [
+        "R1006",
+        "69"
+      ],
+      [
+        "R1001",
+        "27"
+      ],
+      [
+        "R1005",
+        "10"
+      ],
+      [
+        "R1004",
+        "25"
+      ]
+    ],
+    "target_ids": [
+      "R1000"
+    ],
+    "extra_records": 12,
+    "content_sha256": "597e40771c147b88b45f3e5b2290dc651f8d817f9f768736e9826a6a71c03f6d",
+    "input_token_range": [
+      160,
+      223
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 165,
+    "token_ids_sha256": "2db60a773630afda3067fcb65e7cf85e995a8df81325c9bd63713bfe045b1d1c",
+    "grammar": "root ::= \"R1000|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-i-organize-5",
+    "seed": 35102,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "organize",
+    "target_count": 2,
+    "bucket": 2,
+    "index": 5,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1018|21\nR1002|89\nR1011|54\nR1012|41\nR1017|93\nR1013|80\nR1006|93\nR1010|71\nR1004|15\nR1014|34\nR1008|88\nR1005|47\nR1009|44\nR1016|66\nR1007|26\nR1000|45\nR1003|88\nR1015|73\nR1001|18\n按以下编号顺序整理对应的数值：R1001,R1000。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1001|18\nR1000|45",
+    "source_records_evaluation_only": [
+      [
+        "R1018",
+        "21"
+      ],
+      [
+        "R1002",
+        "89"
+      ],
+      [
+        "R1011",
+        "54"
+      ],
+      [
+        "R1012",
+        "41"
+      ],
+      [
+        "R1017",
+        "93"
+      ],
+      [
+        "R1013",
+        "80"
+      ],
+      [
+        "R1006",
+        "93"
+      ],
+      [
+        "R1010",
+        "71"
+      ],
+      [
+        "R1004",
+        "15"
+      ],
+      [
+        "R1014",
+        "34"
+      ],
+      [
+        "R1008",
+        "88"
+      ],
+      [
+        "R1005",
+        "47"
+      ],
+      [
+        "R1009",
+        "44"
+      ],
+      [
+        "R1016",
+        "66"
+      ],
+      [
+        "R1007",
+        "26"
+      ],
+      [
+        "R1000",
+        "45"
+      ],
+      [
+        "R1003",
+        "88"
+      ],
+      [
+        "R1015",
+        "73"
+      ],
+      [
+        "R1001",
+        "18"
+      ]
+    ],
+    "target_ids": [
+      "R1001",
+      "R1000"
+    ],
+    "extra_records": 17,
+    "content_sha256": "34a1b044db775c8376b4f1b4d88f09a38cf04c827ea78230db5b461f1bb60cd5",
+    "input_token_range": [
+      224,
+      320
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 224,
+    "token_ids_sha256": "b9badaf5ccbbb04e50bb873eeaa7f5910ccd6fc10423de7e707784d45aad9951",
+    "grammar": "root ::= \"R1001|\" [1-9] [0-9] \"\\n\" \"R1000|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-i-organize-6",
+    "seed": 35102,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "organize",
+    "target_count": 3,
+    "bucket": 0,
+    "index": 6,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1000|39\nR1004|49\nR1003|59\nR1002|64\nR1001|76\n按以下编号顺序整理对应的数值：R1001,R1000,R1002。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1001|76\nR1000|39\nR1002|64",
+    "source_records_evaluation_only": [
+      [
+        "R1000",
+        "39"
+      ],
+      [
+        "R1004",
+        "49"
+      ],
+      [
+        "R1003",
+        "59"
+      ],
+      [
+        "R1002",
+        "64"
+      ],
+      [
+        "R1001",
+        "76"
+      ]
+    ],
+    "target_ids": [
+      "R1001",
+      "R1000",
+      "R1002"
+    ],
+    "extra_records": 2,
+    "content_sha256": "51034fa2cf4209ae56248233160da30fb199cfce7c1fc734d1d914540c6615e6",
+    "input_token_range": [
+      96,
+      159
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 103,
+    "token_ids_sha256": "9b6646e7b4aa3ed633c30394a66698defdf448344bc699a19c9fe07fbcd665e2",
+    "grammar": "root ::= \"R1001|\" [1-9] [0-9] \"\\n\" \"R1000|\" [1-9] [0-9] \"\\n\" \"R1002|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-i-organize-7",
+    "seed": 35102,
+    "split": "development",
+    "category": "interactive",
+    "task_kind": "organize",
+    "target_count": 4,
+    "bucket": 1,
+    "index": 7,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1008|29\nR1001|21\nR1002|61\nR1003|79\nR1000|84\nR1004|56\nR1006|72\nR1009|47\nR1010|24\nR1007|84\nR1005|11\n按以下编号顺序整理对应的数值：R1001,R1002,R1000,R1003。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1001|21\nR1002|61\nR1000|84\nR1003|79",
+    "source_records_evaluation_only": [
+      [
+        "R1008",
+        "29"
+      ],
+      [
+        "R1001",
+        "21"
+      ],
+      [
+        "R1002",
+        "61"
+      ],
+      [
+        "R1003",
+        "79"
+      ],
+      [
+        "R1000",
+        "84"
+      ],
+      [
+        "R1004",
+        "56"
+      ],
+      [
+        "R1006",
+        "72"
+      ],
+      [
+        "R1009",
+        "47"
+      ],
+      [
+        "R1010",
+        "24"
+      ],
+      [
+        "R1007",
+        "84"
+      ],
+      [
+        "R1005",
+        "11"
+      ]
+    ],
+    "target_ids": [
+      "R1001",
+      "R1002",
+      "R1000",
+      "R1003"
+    ],
+    "extra_records": 7,
+    "content_sha256": "e19e3f8bc151ecd9c91f286f67c76965bd5536d9c47385d7bc5af10edb5604b1",
+    "input_token_range": [
+      160,
+      223
+    ],
+    "max_tokens": 64,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 162,
+    "token_ids_sha256": "ea73abe2c757a7ed9ccc1cdfded3b4da110f0cd87c75cb6d30bf9d7eec9cd5e2",
+    "grammar": "root ::= \"R1001|\" [1-9] [0-9] \"\\n\" \"R1002|\" [1-9] [0-9] \"\\n\" \"R1000|\" [1-9] [0-9] \"\\n\" \"R1003|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-b-extract-0",
+    "seed": 35102,
+    "split": "development",
+    "category": "background",
+    "task_kind": "extract",
+    "target_count": 4,
+    "bucket": 0,
+    "index": 0,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1021|86\nR1010|70\nR1000|15\nR1008|82\nR1015|48\nR1022|45\nR1001|86\nR1004|90\nR1003|10\nR1023|67\nR1014|27\nR1017|84\nR1027|48\nR1016|93\nR1007|81\nR1005|46\nR1026|15\nR1024|16\nR1006|77\nR1025|76\nR1012|80\nR1028|18\nR1018|46\nR1009|14\nR1002|85\nR1020|13\nR1019|54\nR1013|31\nR1011|57\n提取以下编号对应的数值：R1000,R1001,R1002,R1003。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1000|15\nR1001|86\nR1002|85\nR1003|10",
+    "source_records_evaluation_only": [
+      [
+        "R1021",
+        "86"
+      ],
+      [
+        "R1010",
+        "70"
+      ],
+      [
+        "R1000",
+        "15"
+      ],
+      [
+        "R1008",
+        "82"
+      ],
+      [
+        "R1015",
+        "48"
+      ],
+      [
+        "R1022",
+        "45"
+      ],
+      [
+        "R1001",
+        "86"
+      ],
+      [
+        "R1004",
+        "90"
+      ],
+      [
+        "R1003",
+        "10"
+      ],
+      [
+        "R1023",
+        "67"
+      ],
+      [
+        "R1014",
+        "27"
+      ],
+      [
+        "R1017",
+        "84"
+      ],
+      [
+        "R1027",
+        "48"
+      ],
+      [
+        "R1016",
+        "93"
+      ],
+      [
+        "R1007",
+        "81"
+      ],
+      [
+        "R1005",
+        "46"
+      ],
+      [
+        "R1026",
+        "15"
+      ],
+      [
+        "R1024",
+        "16"
+      ],
+      [
+        "R1006",
+        "77"
+      ],
+      [
+        "R1025",
+        "76"
+      ],
+      [
+        "R1012",
+        "80"
+      ],
+      [
+        "R1028",
+        "18"
+      ],
+      [
+        "R1018",
+        "46"
+      ],
+      [
+        "R1009",
+        "14"
+      ],
+      [
+        "R1002",
+        "85"
+      ],
+      [
+        "R1020",
+        "13"
+      ],
+      [
+        "R1019",
+        "54"
+      ],
+      [
+        "R1013",
+        "31"
+      ],
+      [
+        "R1011",
+        "57"
+      ]
+    ],
+    "target_ids": [
+      "R1000",
+      "R1001",
+      "R1002",
+      "R1003"
+    ],
+    "extra_records": 25,
+    "content_sha256": "2b1c3cab374e9b60ce12128fc6bde31079de0b56b0f546159cfd11df0a932c19",
+    "input_token_range": [
+      320,
+      511
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 322,
+    "token_ids_sha256": "804efa36544d4ae17e732fc146796bcbb46644b5d363646e2b5b86bac0412970",
+    "grammar": "root ::= \"R1000|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9] \"\\n\" \"R1002|\" [1-9] [0-9] \"\\n\" \"R1003|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-b-extract-1",
+    "seed": 35102,
+    "split": "development",
+    "category": "background",
+    "task_kind": "extract",
+    "target_count": 6,
+    "bucket": 1,
+    "index": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1012|95\nR1026|93\nR1015|46\nR1005|61\nR1004|36\nR1008|77\nR1002|13\nR1006|41\nR1034|14\nR1013|17\nR1032|46\nR1046|61\nR1041|23\nR1019|77\nR1029|52\nR1039|10\nR1014|78\nR1042|69\nR1043|12\nR1036|83\nR1017|52\nR1037|12\nR1040|68\nR1044|11\nR1025|52\nR1033|65\nR1009|76\nR1022|15\nR1030|10\nR1048|65\nR1007|79\nR1035|26\nR1024|36\nR1018|79\nR1021|20\nR1016|35\nR1003|36\nR1020|25\nR1045|63\nR1031|69\nR1028|74\nR1038|64\nR1027|59\nR1047|31\nR1010|47\nR1023|46\nR1001|52\nR1000|56\nR1011|76\n提取以下编号对应的数值：R1000,R1001,R1002,R1003,R1004,R1005。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1000|56\nR1001|52\nR1002|13\nR1003|36\nR1004|36\nR1005|61",
+    "source_records_evaluation_only": [
+      [
+        "R1012",
+        "95"
+      ],
+      [
+        "R1026",
+        "93"
+      ],
+      [
+        "R1015",
+        "46"
+      ],
+      [
+        "R1005",
+        "61"
+      ],
+      [
+        "R1004",
+        "36"
+      ],
+      [
+        "R1008",
+        "77"
+      ],
+      [
+        "R1002",
+        "13"
+      ],
+      [
+        "R1006",
+        "41"
+      ],
+      [
+        "R1034",
+        "14"
+      ],
+      [
+        "R1013",
+        "17"
+      ],
+      [
+        "R1032",
+        "46"
+      ],
+      [
+        "R1046",
+        "61"
+      ],
+      [
+        "R1041",
+        "23"
+      ],
+      [
+        "R1019",
+        "77"
+      ],
+      [
+        "R1029",
+        "52"
+      ],
+      [
+        "R1039",
+        "10"
+      ],
+      [
+        "R1014",
+        "78"
+      ],
+      [
+        "R1042",
+        "69"
+      ],
+      [
+        "R1043",
+        "12"
+      ],
+      [
+        "R1036",
+        "83"
+      ],
+      [
+        "R1017",
+        "52"
+      ],
+      [
+        "R1037",
+        "12"
+      ],
+      [
+        "R1040",
+        "68"
+      ],
+      [
+        "R1044",
+        "11"
+      ],
+      [
+        "R1025",
+        "52"
+      ],
+      [
+        "R1033",
+        "65"
+      ],
+      [
+        "R1009",
+        "76"
+      ],
+      [
+        "R1022",
+        "15"
+      ],
+      [
+        "R1030",
+        "10"
+      ],
+      [
+        "R1048",
+        "65"
+      ],
+      [
+        "R1007",
+        "79"
+      ],
+      [
+        "R1035",
+        "26"
+      ],
+      [
+        "R1024",
+        "36"
+      ],
+      [
+        "R1018",
+        "79"
+      ],
+      [
+        "R1021",
+        "20"
+      ],
+      [
+        "R1016",
+        "35"
+      ],
+      [
+        "R1003",
+        "36"
+      ],
+      [
+        "R1020",
+        "25"
+      ],
+      [
+        "R1045",
+        "63"
+      ],
+      [
+        "R1031",
+        "69"
+      ],
+      [
+        "R1028",
+        "74"
+      ],
+      [
+        "R1038",
+        "64"
+      ],
+      [
+        "R1027",
+        "59"
+      ],
+      [
+        "R1047",
+        "31"
+      ],
+      [
+        "R1010",
+        "47"
+      ],
+      [
+        "R1023",
+        "46"
+      ],
+      [
+        "R1001",
+        "52"
+      ],
+      [
+        "R1000",
+        "56"
+      ],
+      [
+        "R1011",
+        "76"
+      ]
+    ],
+    "target_ids": [
+      "R1000",
+      "R1001",
+      "R1002",
+      "R1003",
+      "R1004",
+      "R1005"
+    ],
+    "extra_records": 43,
+    "content_sha256": "474add3b1c73c58b054cf7426241961a11348fc531c654b2852627b538a155ed",
+    "input_token_range": [
+      512,
+      767
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 512,
+    "token_ids_sha256": "d2d6b009d26d1e29e603809eb1fab5f32cd2a04dfcc7449467f4fa941fb88737",
+    "grammar": "root ::= \"R1000|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9] \"\\n\" \"R1002|\" [1-9] [0-9] \"\\n\" \"R1003|\" [1-9] [0-9] \"\\n\" \"R1004|\" [1-9] [0-9] \"\\n\" \"R1005|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-b-extract-2",
+    "seed": 35102,
+    "split": "development",
+    "category": "background",
+    "task_kind": "extract",
+    "target_count": 8,
+    "bucket": 2,
+    "index": 2,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1042|97\nR1029|79\nR1012|57\nR1066|83\nR1067|75\nR1044|19\nR1035|30\nR1059|48\nR1036|10\nR1000|51\nR1071|77\nR1076|90\nR1049|36\nR1043|37\nR1058|50\nR1056|29\nR1050|43\nR1051|11\nR1016|48\nR1025|27\nR1057|49\nR1021|54\nR1070|47\nR1027|44\nR1013|53\nR1020|38\nR1072|31\nR1041|14\nR1023|21\nR1017|76\nR1030|27\nR1034|26\nR1065|30\nR1026|69\nR1061|61\nR1069|19\nR1011|78\nR1006|45\nR1004|61\nR1028|19\nR1068|11\nR1038|93\nR1002|94\nR1031|67\nR1054|44\nR1032|36\nR1015|96\nR1014|57\nR1018|90\nR1008|10\nR1046|73\nR1063|69\nR1022|83\nR1040|44\nR1033|94\nR1001|98\nR1055|69\nR1048|67\nR1073|66\nR1074|14\nR1007|42\nR1010|75\nR1009|71\nR1039|15\nR1037|12\nR1052|44\nR1047|94\nR1003|42\nR1064|39\nR1005|29\nR1053|69\nR1024|25\nR1060|96\nR1075|82\nR1045|10\nR1062|43\nR1019|83\n提取以下编号对应的数值：R1000,R1001,R1002,R1003,R1004,R1005,R1006,R1007。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1000|51\nR1001|98\nR1002|94\nR1003|42\nR1004|61\nR1005|29\nR1006|45\nR1007|42",
+    "source_records_evaluation_only": [
+      [
+        "R1042",
+        "97"
+      ],
+      [
+        "R1029",
+        "79"
+      ],
+      [
+        "R1012",
+        "57"
+      ],
+      [
+        "R1066",
+        "83"
+      ],
+      [
+        "R1067",
+        "75"
+      ],
+      [
+        "R1044",
+        "19"
+      ],
+      [
+        "R1035",
+        "30"
+      ],
+      [
+        "R1059",
+        "48"
+      ],
+      [
+        "R1036",
+        "10"
+      ],
+      [
+        "R1000",
+        "51"
+      ],
+      [
+        "R1071",
+        "77"
+      ],
+      [
+        "R1076",
+        "90"
+      ],
+      [
+        "R1049",
+        "36"
+      ],
+      [
+        "R1043",
+        "37"
+      ],
+      [
+        "R1058",
+        "50"
+      ],
+      [
+        "R1056",
+        "29"
+      ],
+      [
+        "R1050",
+        "43"
+      ],
+      [
+        "R1051",
+        "11"
+      ],
+      [
+        "R1016",
+        "48"
+      ],
+      [
+        "R1025",
+        "27"
+      ],
+      [
+        "R1057",
+        "49"
+      ],
+      [
+        "R1021",
+        "54"
+      ],
+      [
+        "R1070",
+        "47"
+      ],
+      [
+        "R1027",
+        "44"
+      ],
+      [
+        "R1013",
+        "53"
+      ],
+      [
+        "R1020",
+        "38"
+      ],
+      [
+        "R1072",
+        "31"
+      ],
+      [
+        "R1041",
+        "14"
+      ],
+      [
+        "R1023",
+        "21"
+      ],
+      [
+        "R1017",
+        "76"
+      ],
+      [
+        "R1030",
+        "27"
+      ],
+      [
+        "R1034",
+        "26"
+      ],
+      [
+        "R1065",
+        "30"
+      ],
+      [
+        "R1026",
+        "69"
+      ],
+      [
+        "R1061",
+        "61"
+      ],
+      [
+        "R1069",
+        "19"
+      ],
+      [
+        "R1011",
+        "78"
+      ],
+      [
+        "R1006",
+        "45"
+      ],
+      [
+        "R1004",
+        "61"
+      ],
+      [
+        "R1028",
+        "19"
+      ],
+      [
+        "R1068",
+        "11"
+      ],
+      [
+        "R1038",
+        "93"
+      ],
+      [
+        "R1002",
+        "94"
+      ],
+      [
+        "R1031",
+        "67"
+      ],
+      [
+        "R1054",
+        "44"
+      ],
+      [
+        "R1032",
+        "36"
+      ],
+      [
+        "R1015",
+        "96"
+      ],
+      [
+        "R1014",
+        "57"
+      ],
+      [
+        "R1018",
+        "90"
+      ],
+      [
+        "R1008",
+        "10"
+      ],
+      [
+        "R1046",
+        "73"
+      ],
+      [
+        "R1063",
+        "69"
+      ],
+      [
+        "R1022",
+        "83"
+      ],
+      [
+        "R1040",
+        "44"
+      ],
+      [
+        "R1033",
+        "94"
+      ],
+      [
+        "R1001",
+        "98"
+      ],
+      [
+        "R1055",
+        "69"
+      ],
+      [
+        "R1048",
+        "67"
+      ],
+      [
+        "R1073",
+        "66"
+      ],
+      [
+        "R1074",
+        "14"
+      ],
+      [
+        "R1007",
+        "42"
+      ],
+      [
+        "R1010",
+        "75"
+      ],
+      [
+        "R1009",
+        "71"
+      ],
+      [
+        "R1039",
+        "15"
+      ],
+      [
+        "R1037",
+        "12"
+      ],
+      [
+        "R1052",
+        "44"
+      ],
+      [
+        "R1047",
+        "94"
+      ],
+      [
+        "R1003",
+        "42"
+      ],
+      [
+        "R1064",
+        "39"
+      ],
+      [
+        "R1005",
+        "29"
+      ],
+      [
+        "R1053",
+        "69"
+      ],
+      [
+        "R1024",
+        "25"
+      ],
+      [
+        "R1060",
+        "96"
+      ],
+      [
+        "R1075",
+        "82"
+      ],
+      [
+        "R1045",
+        "10"
+      ],
+      [
+        "R1062",
+        "43"
+      ],
+      [
+        "R1019",
+        "83"
+      ]
+    ],
+    "target_ids": [
+      "R1000",
+      "R1001",
+      "R1002",
+      "R1003",
+      "R1004",
+      "R1005",
+      "R1006",
+      "R1007"
+    ],
+    "extra_records": 69,
+    "content_sha256": "48e4c68a90541d81ad64ec8967a69f3cb24e604918d3db509852c071f770e3be",
+    "input_token_range": [
+      768,
+      1024
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 774,
+    "token_ids_sha256": "2b3a00b1ce52cb3809cdcc97b01ef113d02b248aaf08cb51a13c78426b0851ba",
+    "grammar": "root ::= \"R1000|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9] \"\\n\" \"R1002|\" [1-9] [0-9] \"\\n\" \"R1003|\" [1-9] [0-9] \"\\n\" \"R1004|\" [1-9] [0-9] \"\\n\" \"R1005|\" [1-9] [0-9] \"\\n\" \"R1006|\" [1-9] [0-9] \"\\n\" \"R1007|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-b-extract-3",
+    "seed": 35102,
+    "split": "development",
+    "category": "background",
+    "task_kind": "extract",
+    "target_count": 10,
+    "bucket": 0,
+    "index": 3,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1008|52\nR1005|58\nR1018|12\nR1002|58\nR1021|20\nR1009|94\nR1024|83\nR1017|57\nR1020|28\nR1022|74\nR1004|22\nR1001|50\nR1006|17\nR1019|26\nR1012|37\nR1000|64\nR1010|15\nR1003|76\nR1013|46\nR1007|69\nR1015|60\nR1016|10\nR1011|30\nR1014|70\nR1025|95\nR1023|89\n提取以下编号对应的数值：R1000,R1001,R1002,R1003,R1004,R1005,R1006,R1007,R1008,R1009。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1000|64\nR1001|50\nR1002|58\nR1003|76\nR1004|22\nR1005|58\nR1006|17\nR1007|69\nR1008|52\nR1009|94",
+    "source_records_evaluation_only": [
+      [
+        "R1008",
+        "52"
+      ],
+      [
+        "R1005",
+        "58"
+      ],
+      [
+        "R1018",
+        "12"
+      ],
+      [
+        "R1002",
+        "58"
+      ],
+      [
+        "R1021",
+        "20"
+      ],
+      [
+        "R1009",
+        "94"
+      ],
+      [
+        "R1024",
+        "83"
+      ],
+      [
+        "R1017",
+        "57"
+      ],
+      [
+        "R1020",
+        "28"
+      ],
+      [
+        "R1022",
+        "74"
+      ],
+      [
+        "R1004",
+        "22"
+      ],
+      [
+        "R1001",
+        "50"
+      ],
+      [
+        "R1006",
+        "17"
+      ],
+      [
+        "R1019",
+        "26"
+      ],
+      [
+        "R1012",
+        "37"
+      ],
+      [
+        "R1000",
+        "64"
+      ],
+      [
+        "R1010",
+        "15"
+      ],
+      [
+        "R1003",
+        "76"
+      ],
+      [
+        "R1013",
+        "46"
+      ],
+      [
+        "R1007",
+        "69"
+      ],
+      [
+        "R1015",
+        "60"
+      ],
+      [
+        "R1016",
+        "10"
+      ],
+      [
+        "R1011",
+        "30"
+      ],
+      [
+        "R1014",
+        "70"
+      ],
+      [
+        "R1025",
+        "95"
+      ],
+      [
+        "R1023",
+        "89"
+      ]
+    ],
+    "target_ids": [
+      "R1000",
+      "R1001",
+      "R1002",
+      "R1003",
+      "R1004",
+      "R1005",
+      "R1006",
+      "R1007",
+      "R1008",
+      "R1009"
+    ],
+    "extra_records": 16,
+    "content_sha256": "36b76ed5ee4887732d4b17b6587bf09cf8f12d7dc88b8328848885a8dc7f83ac",
+    "input_token_range": [
+      320,
+      511
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 325,
+    "token_ids_sha256": "033c7c8a5805efe0f0f5d28511c099e771730587860cd18d6246631c9ae915ff",
+    "grammar": "root ::= \"R1000|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9] \"\\n\" \"R1002|\" [1-9] [0-9] \"\\n\" \"R1003|\" [1-9] [0-9] \"\\n\" \"R1004|\" [1-9] [0-9] \"\\n\" \"R1005|\" [1-9] [0-9] \"\\n\" \"R1006|\" [1-9] [0-9] \"\\n\" \"R1007|\" [1-9] [0-9] \"\\n\" \"R1008|\" [1-9] [0-9] \"\\n\" \"R1009|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-b-extract-4",
+    "seed": 35102,
+    "split": "development",
+    "category": "background",
+    "task_kind": "extract",
+    "target_count": 4,
+    "bucket": 1,
+    "index": 4,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1050|62\nR1004|35\nR1049|98\nR1016|86\nR1021|66\nR1029|43\nR1009|77\nR1042|37\nR1038|97\nR1041|33\nR1012|81\nR1022|46\nR1040|43\nR1014|21\nR1027|68\nR1010|80\nR1032|32\nR1019|81\nR1013|42\nR1003|99\nR1006|73\nR1007|61\nR1028|55\nR1017|86\nR1047|10\nR1044|11\nR1045|95\nR1020|25\nR1008|13\nR1036|15\nR1026|59\nR1035|27\nR1039|55\nR1037|42\nR1048|90\nR1000|14\nR1043|89\nR1023|82\nR1005|19\nR1015|69\nR1034|23\nR1025|58\nR1030|70\nR1011|61\nR1031|68\nR1024|27\nR1046|28\nR1033|16\nR1001|48\nR1002|26\nR1018|53\n提取以下编号对应的数值：R1000,R1001,R1002,R1003。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1000|14\nR1001|48\nR1002|26\nR1003|99",
+    "source_records_evaluation_only": [
+      [
+        "R1050",
+        "62"
+      ],
+      [
+        "R1004",
+        "35"
+      ],
+      [
+        "R1049",
+        "98"
+      ],
+      [
+        "R1016",
+        "86"
+      ],
+      [
+        "R1021",
+        "66"
+      ],
+      [
+        "R1029",
+        "43"
+      ],
+      [
+        "R1009",
+        "77"
+      ],
+      [
+        "R1042",
+        "37"
+      ],
+      [
+        "R1038",
+        "97"
+      ],
+      [
+        "R1041",
+        "33"
+      ],
+      [
+        "R1012",
+        "81"
+      ],
+      [
+        "R1022",
+        "46"
+      ],
+      [
+        "R1040",
+        "43"
+      ],
+      [
+        "R1014",
+        "21"
+      ],
+      [
+        "R1027",
+        "68"
+      ],
+      [
+        "R1010",
+        "80"
+      ],
+      [
+        "R1032",
+        "32"
+      ],
+      [
+        "R1019",
+        "81"
+      ],
+      [
+        "R1013",
+        "42"
+      ],
+      [
+        "R1003",
+        "99"
+      ],
+      [
+        "R1006",
+        "73"
+      ],
+      [
+        "R1007",
+        "61"
+      ],
+      [
+        "R1028",
+        "55"
+      ],
+      [
+        "R1017",
+        "86"
+      ],
+      [
+        "R1047",
+        "10"
+      ],
+      [
+        "R1044",
+        "11"
+      ],
+      [
+        "R1045",
+        "95"
+      ],
+      [
+        "R1020",
+        "25"
+      ],
+      [
+        "R1008",
+        "13"
+      ],
+      [
+        "R1036",
+        "15"
+      ],
+      [
+        "R1026",
+        "59"
+      ],
+      [
+        "R1035",
+        "27"
+      ],
+      [
+        "R1039",
+        "55"
+      ],
+      [
+        "R1037",
+        "42"
+      ],
+      [
+        "R1048",
+        "90"
+      ],
+      [
+        "R1000",
+        "14"
+      ],
+      [
+        "R1043",
+        "89"
+      ],
+      [
+        "R1023",
+        "82"
+      ],
+      [
+        "R1005",
+        "19"
+      ],
+      [
+        "R1015",
+        "69"
+      ],
+      [
+        "R1034",
+        "23"
+      ],
+      [
+        "R1025",
+        "58"
+      ],
+      [
+        "R1030",
+        "70"
+      ],
+      [
+        "R1011",
+        "61"
+      ],
+      [
+        "R1031",
+        "68"
+      ],
+      [
+        "R1024",
+        "27"
+      ],
+      [
+        "R1046",
+        "28"
+      ],
+      [
+        "R1033",
+        "16"
+      ],
+      [
+        "R1001",
+        "48"
+      ],
+      [
+        "R1002",
+        "26"
+      ],
+      [
+        "R1018",
+        "53"
+      ]
+    ],
+    "target_ids": [
+      "R1000",
+      "R1001",
+      "R1002",
+      "R1003"
+    ],
+    "extra_records": 47,
+    "content_sha256": "8e7b827a19bb2ac985a3ed494d19b845c49c92c3e14d364cfab569068cfd7bd4",
+    "input_token_range": [
+      512,
+      767
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 520,
+    "token_ids_sha256": "06984fdde2549ac8c487854fefd1d7bffe4689494fa0df6a123cf2479106ebed",
+    "grammar": "root ::= \"R1000|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9] \"\\n\" \"R1002|\" [1-9] [0-9] \"\\n\" \"R1003|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-b-extract-5",
+    "seed": 35102,
+    "split": "development",
+    "category": "background",
+    "task_kind": "extract",
+    "target_count": 6,
+    "bucket": 2,
+    "index": 5,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1033|83\nR1038|75\nR1014|76\nR1036|89\nR1029|82\nR1020|51\nR1022|59\nR1066|37\nR1063|51\nR1006|78\nR1034|58\nR1044|73\nR1015|83\nR1064|58\nR1070|43\nR1002|68\nR1073|99\nR1062|16\nR1016|85\nR1000|92\nR1037|25\nR1060|15\nR1039|68\nR1059|56\nR1050|43\nR1007|60\nR1008|32\nR1018|56\nR1030|76\nR1012|98\nR1077|37\nR1074|32\nR1076|50\nR1005|17\nR1067|51\nR1045|15\nR1048|82\nR1011|48\nR1004|79\nR1058|73\nR1017|11\nR1056|27\nR1057|66\nR1068|34\nR1055|99\nR1031|42\nR1075|86\nR1023|46\nR1072|77\nR1052|83\nR1010|19\nR1042|61\nR1054|19\nR1001|82\nR1019|67\nR1047|48\nR1026|96\nR1013|50\nR1046|70\nR1027|14\nR1041|36\nR1053|72\nR1028|57\nR1021|78\nR1032|84\nR1051|32\nR1025|26\nR1003|34\nR1040|96\nR1035|25\nR1065|29\nR1049|74\nR1024|88\nR1043|29\nR1061|80\nR1069|33\nR1009|79\nR1071|10\n提取以下编号对应的数值：R1000,R1001,R1002,R1003,R1004,R1005。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1000|92\nR1001|82\nR1002|68\nR1003|34\nR1004|79\nR1005|17",
+    "source_records_evaluation_only": [
+      [
+        "R1033",
+        "83"
+      ],
+      [
+        "R1038",
+        "75"
+      ],
+      [
+        "R1014",
+        "76"
+      ],
+      [
+        "R1036",
+        "89"
+      ],
+      [
+        "R1029",
+        "82"
+      ],
+      [
+        "R1020",
+        "51"
+      ],
+      [
+        "R1022",
+        "59"
+      ],
+      [
+        "R1066",
+        "37"
+      ],
+      [
+        "R1063",
+        "51"
+      ],
+      [
+        "R1006",
+        "78"
+      ],
+      [
+        "R1034",
+        "58"
+      ],
+      [
+        "R1044",
+        "73"
+      ],
+      [
+        "R1015",
+        "83"
+      ],
+      [
+        "R1064",
+        "58"
+      ],
+      [
+        "R1070",
+        "43"
+      ],
+      [
+        "R1002",
+        "68"
+      ],
+      [
+        "R1073",
+        "99"
+      ],
+      [
+        "R1062",
+        "16"
+      ],
+      [
+        "R1016",
+        "85"
+      ],
+      [
+        "R1000",
+        "92"
+      ],
+      [
+        "R1037",
+        "25"
+      ],
+      [
+        "R1060",
+        "15"
+      ],
+      [
+        "R1039",
+        "68"
+      ],
+      [
+        "R1059",
+        "56"
+      ],
+      [
+        "R1050",
+        "43"
+      ],
+      [
+        "R1007",
+        "60"
+      ],
+      [
+        "R1008",
+        "32"
+      ],
+      [
+        "R1018",
+        "56"
+      ],
+      [
+        "R1030",
+        "76"
+      ],
+      [
+        "R1012",
+        "98"
+      ],
+      [
+        "R1077",
+        "37"
+      ],
+      [
+        "R1074",
+        "32"
+      ],
+      [
+        "R1076",
+        "50"
+      ],
+      [
+        "R1005",
+        "17"
+      ],
+      [
+        "R1067",
+        "51"
+      ],
+      [
+        "R1045",
+        "15"
+      ],
+      [
+        "R1048",
+        "82"
+      ],
+      [
+        "R1011",
+        "48"
+      ],
+      [
+        "R1004",
+        "79"
+      ],
+      [
+        "R1058",
+        "73"
+      ],
+      [
+        "R1017",
+        "11"
+      ],
+      [
+        "R1056",
+        "27"
+      ],
+      [
+        "R1057",
+        "66"
+      ],
+      [
+        "R1068",
+        "34"
+      ],
+      [
+        "R1055",
+        "99"
+      ],
+      [
+        "R1031",
+        "42"
+      ],
+      [
+        "R1075",
+        "86"
+      ],
+      [
+        "R1023",
+        "46"
+      ],
+      [
+        "R1072",
+        "77"
+      ],
+      [
+        "R1052",
+        "83"
+      ],
+      [
+        "R1010",
+        "19"
+      ],
+      [
+        "R1042",
+        "61"
+      ],
+      [
+        "R1054",
+        "19"
+      ],
+      [
+        "R1001",
+        "82"
+      ],
+      [
+        "R1019",
+        "67"
+      ],
+      [
+        "R1047",
+        "48"
+      ],
+      [
+        "R1026",
+        "96"
+      ],
+      [
+        "R1013",
+        "50"
+      ],
+      [
+        "R1046",
+        "70"
+      ],
+      [
+        "R1027",
+        "14"
+      ],
+      [
+        "R1041",
+        "36"
+      ],
+      [
+        "R1053",
+        "72"
+      ],
+      [
+        "R1028",
+        "57"
+      ],
+      [
+        "R1021",
+        "78"
+      ],
+      [
+        "R1032",
+        "84"
+      ],
+      [
+        "R1051",
+        "32"
+      ],
+      [
+        "R1025",
+        "26"
+      ],
+      [
+        "R1003",
+        "34"
+      ],
+      [
+        "R1040",
+        "96"
+      ],
+      [
+        "R1035",
+        "25"
+      ],
+      [
+        "R1065",
+        "29"
+      ],
+      [
+        "R1049",
+        "74"
+      ],
+      [
+        "R1024",
+        "88"
+      ],
+      [
+        "R1043",
+        "29"
+      ],
+      [
+        "R1061",
+        "80"
+      ],
+      [
+        "R1069",
+        "33"
+      ],
+      [
+        "R1009",
+        "79"
+      ],
+      [
+        "R1071",
+        "10"
+      ]
+    ],
+    "target_ids": [
+      "R1000",
+      "R1001",
+      "R1002",
+      "R1003",
+      "R1004",
+      "R1005"
+    ],
+    "extra_records": 72,
+    "content_sha256": "13316935ad623960c9f8e3018820d9b7b72d5ce15f3432405aa8ce76868b9c05",
+    "input_token_range": [
+      768,
+      1024
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 773,
+    "token_ids_sha256": "9164d7d1015767e50df99b297daefac091476bfa098b93e2dba444227b3d2921",
+    "grammar": "root ::= \"R1000|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9] \"\\n\" \"R1002|\" [1-9] [0-9] \"\\n\" \"R1003|\" [1-9] [0-9] \"\\n\" \"R1004|\" [1-9] [0-9] \"\\n\" \"R1005|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-b-extract-6",
+    "seed": 35102,
+    "split": "development",
+    "category": "background",
+    "task_kind": "extract",
+    "target_count": 8,
+    "bucket": 0,
+    "index": 6,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1002|39\nR1014|43\nR1013|97\nR1011|14\nR1025|30\nR1017|90\nR1022|55\nR1012|44\nR1026|85\nR1005|77\nR1006|84\nR1007|41\nR1020|63\nR1016|59\nR1010|51\nR1024|23\nR1008|93\nR1004|70\nR1001|63\nR1009|22\nR1021|24\nR1023|43\nR1015|17\nR1018|53\nR1003|85\nR1019|10\nR1000|66\n提取以下编号对应的数值：R1000,R1001,R1002,R1003,R1004,R1005,R1006,R1007。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1000|66\nR1001|63\nR1002|39\nR1003|85\nR1004|70\nR1005|77\nR1006|84\nR1007|41",
+    "source_records_evaluation_only": [
+      [
+        "R1002",
+        "39"
+      ],
+      [
+        "R1014",
+        "43"
+      ],
+      [
+        "R1013",
+        "97"
+      ],
+      [
+        "R1011",
+        "14"
+      ],
+      [
+        "R1025",
+        "30"
+      ],
+      [
+        "R1017",
+        "90"
+      ],
+      [
+        "R1022",
+        "55"
+      ],
+      [
+        "R1012",
+        "44"
+      ],
+      [
+        "R1026",
+        "85"
+      ],
+      [
+        "R1005",
+        "77"
+      ],
+      [
+        "R1006",
+        "84"
+      ],
+      [
+        "R1007",
+        "41"
+      ],
+      [
+        "R1020",
+        "63"
+      ],
+      [
+        "R1016",
+        "59"
+      ],
+      [
+        "R1010",
+        "51"
+      ],
+      [
+        "R1024",
+        "23"
+      ],
+      [
+        "R1008",
+        "93"
+      ],
+      [
+        "R1004",
+        "70"
+      ],
+      [
+        "R1001",
+        "63"
+      ],
+      [
+        "R1009",
+        "22"
+      ],
+      [
+        "R1021",
+        "24"
+      ],
+      [
+        "R1023",
+        "43"
+      ],
+      [
+        "R1015",
+        "17"
+      ],
+      [
+        "R1018",
+        "53"
+      ],
+      [
+        "R1003",
+        "85"
+      ],
+      [
+        "R1019",
+        "10"
+      ],
+      [
+        "R1000",
+        "66"
+      ]
+    ],
+    "target_ids": [
+      "R1000",
+      "R1001",
+      "R1002",
+      "R1003",
+      "R1004",
+      "R1005",
+      "R1006",
+      "R1007"
+    ],
+    "extra_records": 19,
+    "content_sha256": "fada8e08ee73957bde228ffc1d0c9182d84aaa70519a973c3faac3c8c2f99b3a",
+    "input_token_range": [
+      320,
+      511
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 324,
+    "token_ids_sha256": "833977458d634eaa3a82a4cc83e93ee050dce5e8a2ef6ddb5a23624229e3f94b",
+    "grammar": "root ::= \"R1000|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9] \"\\n\" \"R1002|\" [1-9] [0-9] \"\\n\" \"R1003|\" [1-9] [0-9] \"\\n\" \"R1004|\" [1-9] [0-9] \"\\n\" \"R1005|\" [1-9] [0-9] \"\\n\" \"R1006|\" [1-9] [0-9] \"\\n\" \"R1007|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-b-extract-7",
+    "seed": 35102,
+    "split": "development",
+    "category": "background",
+    "task_kind": "extract",
+    "target_count": 10,
+    "bucket": 1,
+    "index": 7,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1004|54\nR1027|70\nR1026|72\nR1001|79\nR1020|69\nR1014|93\nR1013|91\nR1046|46\nR1043|96\nR1028|15\nR1023|44\nR1003|37\nR1042|51\nR1015|44\nR1019|84\nR1044|63\nR1002|43\nR1033|54\nR1025|55\nR1039|45\nR1024|60\nR1031|10\nR1010|81\nR1018|51\nR1041|39\nR1034|17\nR1040|92\nR1007|22\nR1035|81\nR1029|16\nR1032|74\nR1016|63\nR1009|84\nR1038|14\nR1036|20\nR1045|62\nR1012|96\nR1037|30\nR1005|35\nR1000|13\nR1021|77\nR1011|88\nR1008|54\nR1030|41\nR1017|96\nR1006|14\nR1022|52\n提取以下编号对应的数值：R1000,R1001,R1002,R1003,R1004,R1005,R1006,R1007,R1008,R1009。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1000|13\nR1001|79\nR1002|43\nR1003|37\nR1004|54\nR1005|35\nR1006|14\nR1007|22\nR1008|54\nR1009|84",
+    "source_records_evaluation_only": [
+      [
+        "R1004",
+        "54"
+      ],
+      [
+        "R1027",
+        "70"
+      ],
+      [
+        "R1026",
+        "72"
+      ],
+      [
+        "R1001",
+        "79"
+      ],
+      [
+        "R1020",
+        "69"
+      ],
+      [
+        "R1014",
+        "93"
+      ],
+      [
+        "R1013",
+        "91"
+      ],
+      [
+        "R1046",
+        "46"
+      ],
+      [
+        "R1043",
+        "96"
+      ],
+      [
+        "R1028",
+        "15"
+      ],
+      [
+        "R1023",
+        "44"
+      ],
+      [
+        "R1003",
+        "37"
+      ],
+      [
+        "R1042",
+        "51"
+      ],
+      [
+        "R1015",
+        "44"
+      ],
+      [
+        "R1019",
+        "84"
+      ],
+      [
+        "R1044",
+        "63"
+      ],
+      [
+        "R1002",
+        "43"
+      ],
+      [
+        "R1033",
+        "54"
+      ],
+      [
+        "R1025",
+        "55"
+      ],
+      [
+        "R1039",
+        "45"
+      ],
+      [
+        "R1024",
+        "60"
+      ],
+      [
+        "R1031",
+        "10"
+      ],
+      [
+        "R1010",
+        "81"
+      ],
+      [
+        "R1018",
+        "51"
+      ],
+      [
+        "R1041",
+        "39"
+      ],
+      [
+        "R1034",
+        "17"
+      ],
+      [
+        "R1040",
+        "92"
+      ],
+      [
+        "R1007",
+        "22"
+      ],
+      [
+        "R1035",
+        "81"
+      ],
+      [
+        "R1029",
+        "16"
+      ],
+      [
+        "R1032",
+        "74"
+      ],
+      [
+        "R1016",
+        "63"
+      ],
+      [
+        "R1009",
+        "84"
+      ],
+      [
+        "R1038",
+        "14"
+      ],
+      [
+        "R1036",
+        "20"
+      ],
+      [
+        "R1045",
+        "62"
+      ],
+      [
+        "R1012",
+        "96"
+      ],
+      [
+        "R1037",
+        "30"
+      ],
+      [
+        "R1005",
+        "35"
+      ],
+      [
+        "R1000",
+        "13"
+      ],
+      [
+        "R1021",
+        "77"
+      ],
+      [
+        "R1011",
+        "88"
+      ],
+      [
+        "R1008",
+        "54"
+      ],
+      [
+        "R1030",
+        "41"
+      ],
+      [
+        "R1017",
+        "96"
+      ],
+      [
+        "R1006",
+        "14"
+      ],
+      [
+        "R1022",
+        "52"
+      ]
+    ],
+    "target_ids": [
+      "R1000",
+      "R1001",
+      "R1002",
+      "R1003",
+      "R1004",
+      "R1005",
+      "R1006",
+      "R1007",
+      "R1008",
+      "R1009"
+    ],
+    "extra_records": 37,
+    "content_sha256": "6badb64d794f757778a9a21f6bd97527f036ca850424b51be3d8f7eeb9f8a4b3",
+    "input_token_range": [
+      512,
+      767
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 514,
+    "token_ids_sha256": "523f5de64693c8d34b5c7b31da8b52d6cefc448cf331b295d42fcbd7d0e88138",
+    "grammar": "root ::= \"R1000|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9] \"\\n\" \"R1002|\" [1-9] [0-9] \"\\n\" \"R1003|\" [1-9] [0-9] \"\\n\" \"R1004|\" [1-9] [0-9] \"\\n\" \"R1005|\" [1-9] [0-9] \"\\n\" \"R1006|\" [1-9] [0-9] \"\\n\" \"R1007|\" [1-9] [0-9] \"\\n\" \"R1008|\" [1-9] [0-9] \"\\n\" \"R1009|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-b-organize-0",
+    "seed": 35102,
+    "split": "development",
+    "category": "background",
+    "task_kind": "organize",
+    "target_count": 4,
+    "bucket": 0,
+    "index": 0,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1017|97\nR1004|11\nR1002|83\nR1013|81\nR1018|13\nR1023|59\nR1011|81\nR1028|50\nR1005|38\nR1014|75\nR1000|35\nR1007|48\nR1026|97\nR1022|15\nR1025|45\nR1008|41\nR1015|74\nR1021|65\nR1012|68\nR1009|31\nR1020|41\nR1010|52\nR1027|77\nR1001|91\nR1006|69\nR1024|63\nR1019|24\nR1003|61\nR1016|15\n按以下编号顺序整理对应的数值：R1002,R1003,R1001,R1000。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1002|83\nR1003|61\nR1001|91\nR1000|35",
+    "source_records_evaluation_only": [
+      [
+        "R1017",
+        "97"
+      ],
+      [
+        "R1004",
+        "11"
+      ],
+      [
+        "R1002",
+        "83"
+      ],
+      [
+        "R1013",
+        "81"
+      ],
+      [
+        "R1018",
+        "13"
+      ],
+      [
+        "R1023",
+        "59"
+      ],
+      [
+        "R1011",
+        "81"
+      ],
+      [
+        "R1028",
+        "50"
+      ],
+      [
+        "R1005",
+        "38"
+      ],
+      [
+        "R1014",
+        "75"
+      ],
+      [
+        "R1000",
+        "35"
+      ],
+      [
+        "R1007",
+        "48"
+      ],
+      [
+        "R1026",
+        "97"
+      ],
+      [
+        "R1022",
+        "15"
+      ],
+      [
+        "R1025",
+        "45"
+      ],
+      [
+        "R1008",
+        "41"
+      ],
+      [
+        "R1015",
+        "74"
+      ],
+      [
+        "R1021",
+        "65"
+      ],
+      [
+        "R1012",
+        "68"
+      ],
+      [
+        "R1009",
+        "31"
+      ],
+      [
+        "R1020",
+        "41"
+      ],
+      [
+        "R1010",
+        "52"
+      ],
+      [
+        "R1027",
+        "77"
+      ],
+      [
+        "R1001",
+        "91"
+      ],
+      [
+        "R1006",
+        "69"
+      ],
+      [
+        "R1024",
+        "63"
+      ],
+      [
+        "R1019",
+        "24"
+      ],
+      [
+        "R1003",
+        "61"
+      ],
+      [
+        "R1016",
+        "15"
+      ]
+    ],
+    "target_ids": [
+      "R1002",
+      "R1003",
+      "R1001",
+      "R1000"
+    ],
+    "extra_records": 25,
+    "content_sha256": "be02f0111de3a94603daa2011352c5eb651be0ed27bd9747741e5666c89f4ec3",
+    "input_token_range": [
+      320,
+      511
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 324,
+    "token_ids_sha256": "5b24d857d58128d0aacf0f78ea7a4ddd6b09daf01c0a45bff2b0153e3e9e1094",
+    "grammar": "root ::= \"R1002|\" [1-9] [0-9] \"\\n\" \"R1003|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9] \"\\n\" \"R1000|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-b-organize-1",
+    "seed": 35102,
+    "split": "development",
+    "category": "background",
+    "task_kind": "organize",
+    "target_count": 6,
+    "bucket": 1,
+    "index": 1,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1018|89\nR1004|29\nR1044|89\nR1022|54\nR1048|26\nR1017|17\nR1023|37\nR1036|16\nR1037|80\nR1046|87\nR1010|88\nR1045|48\nR1015|69\nR1039|82\nR1047|52\nR1003|54\nR1038|96\nR1035|90\nR1031|99\nR1034|75\nR1029|25\nR1012|54\nR1005|28\nR1028|77\nR1042|84\nR1007|31\nR1032|69\nR1011|45\nR1040|51\nR1009|45\nR1013|26\nR1033|62\nR1014|47\nR1002|75\nR1026|60\nR1020|58\nR1000|38\nR1016|16\nR1027|50\nR1021|42\nR1019|71\nR1001|18\nR1025|46\nR1008|91\nR1006|89\nR1043|39\nR1024|51\nR1030|19\nR1041|60\n按以下编号顺序整理对应的数值：R1001,R1005,R1000,R1002,R1004,R1003。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1001|18\nR1005|28\nR1000|38\nR1002|75\nR1004|29\nR1003|54",
+    "source_records_evaluation_only": [
+      [
+        "R1018",
+        "89"
+      ],
+      [
+        "R1004",
+        "29"
+      ],
+      [
+        "R1044",
+        "89"
+      ],
+      [
+        "R1022",
+        "54"
+      ],
+      [
+        "R1048",
+        "26"
+      ],
+      [
+        "R1017",
+        "17"
+      ],
+      [
+        "R1023",
+        "37"
+      ],
+      [
+        "R1036",
+        "16"
+      ],
+      [
+        "R1037",
+        "80"
+      ],
+      [
+        "R1046",
+        "87"
+      ],
+      [
+        "R1010",
+        "88"
+      ],
+      [
+        "R1045",
+        "48"
+      ],
+      [
+        "R1015",
+        "69"
+      ],
+      [
+        "R1039",
+        "82"
+      ],
+      [
+        "R1047",
+        "52"
+      ],
+      [
+        "R1003",
+        "54"
+      ],
+      [
+        "R1038",
+        "96"
+      ],
+      [
+        "R1035",
+        "90"
+      ],
+      [
+        "R1031",
+        "99"
+      ],
+      [
+        "R1034",
+        "75"
+      ],
+      [
+        "R1029",
+        "25"
+      ],
+      [
+        "R1012",
+        "54"
+      ],
+      [
+        "R1005",
+        "28"
+      ],
+      [
+        "R1028",
+        "77"
+      ],
+      [
+        "R1042",
+        "84"
+      ],
+      [
+        "R1007",
+        "31"
+      ],
+      [
+        "R1032",
+        "69"
+      ],
+      [
+        "R1011",
+        "45"
+      ],
+      [
+        "R1040",
+        "51"
+      ],
+      [
+        "R1009",
+        "45"
+      ],
+      [
+        "R1013",
+        "26"
+      ],
+      [
+        "R1033",
+        "62"
+      ],
+      [
+        "R1014",
+        "47"
+      ],
+      [
+        "R1002",
+        "75"
+      ],
+      [
+        "R1026",
+        "60"
+      ],
+      [
+        "R1020",
+        "58"
+      ],
+      [
+        "R1000",
+        "38"
+      ],
+      [
+        "R1016",
+        "16"
+      ],
+      [
+        "R1027",
+        "50"
+      ],
+      [
+        "R1021",
+        "42"
+      ],
+      [
+        "R1019",
+        "71"
+      ],
+      [
+        "R1001",
+        "18"
+      ],
+      [
+        "R1025",
+        "46"
+      ],
+      [
+        "R1008",
+        "91"
+      ],
+      [
+        "R1006",
+        "89"
+      ],
+      [
+        "R1043",
+        "39"
+      ],
+      [
+        "R1024",
+        "51"
+      ],
+      [
+        "R1030",
+        "19"
+      ],
+      [
+        "R1041",
+        "60"
+      ]
+    ],
+    "target_ids": [
+      "R1001",
+      "R1005",
+      "R1000",
+      "R1002",
+      "R1004",
+      "R1003"
+    ],
+    "extra_records": 43,
+    "content_sha256": "9e40a8509330ff4f9b2c00f4d52c3a08aae082ad429b7bc521bc445f44820df5",
+    "input_token_range": [
+      512,
+      767
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 514,
+    "token_ids_sha256": "fa993b339d7ca04c4c299b8ce544c6ed772ea6340998ca9d22df7ecc5934957f",
+    "grammar": "root ::= \"R1001|\" [1-9] [0-9] \"\\n\" \"R1005|\" [1-9] [0-9] \"\\n\" \"R1000|\" [1-9] [0-9] \"\\n\" \"R1002|\" [1-9] [0-9] \"\\n\" \"R1004|\" [1-9] [0-9] \"\\n\" \"R1003|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-b-organize-2",
+    "seed": 35102,
+    "split": "development",
+    "category": "background",
+    "task_kind": "organize",
+    "target_count": 8,
+    "bucket": 2,
+    "index": 2,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1025|64\nR1059|29\nR1017|36\nR1018|35\nR1023|59\nR1014|53\nR1044|73\nR1038|72\nR1035|93\nR1022|32\nR1074|72\nR1004|92\nR1053|20\nR1009|37\nR1066|29\nR1076|26\nR1047|35\nR1042|55\nR1061|26\nR1072|35\nR1030|41\nR1034|65\nR1069|35\nR1045|61\nR1008|53\nR1032|61\nR1050|74\nR1043|41\nR1039|70\nR1002|76\nR1055|39\nR1040|70\nR1062|21\nR1028|83\nR1029|18\nR1000|88\nR1011|99\nR1036|68\nR1003|80\nR1012|82\nR1056|88\nR1046|33\nR1068|87\nR1037|33\nR1027|25\nR1064|84\nR1020|10\nR1015|94\nR1010|62\nR1033|62\nR1052|29\nR1001|67\nR1005|34\nR1070|89\nR1021|21\nR1065|29\nR1024|89\nR1049|86\nR1006|35\nR1048|60\nR1058|18\nR1051|53\nR1041|85\nR1016|44\nR1054|13\nR1057|45\nR1063|40\nR1007|67\nR1013|92\nR1075|62\nR1071|21\nR1019|77\nR1060|84\nR1067|30\nR1073|81\nR1026|13\nR1031|95\n按以下编号顺序整理对应的数值：R1006,R1004,R1002,R1003,R1005,R1007,R1001,R1000。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1006|35\nR1004|92\nR1002|76\nR1003|80\nR1005|34\nR1007|67\nR1001|67\nR1000|88",
+    "source_records_evaluation_only": [
+      [
+        "R1025",
+        "64"
+      ],
+      [
+        "R1059",
+        "29"
+      ],
+      [
+        "R1017",
+        "36"
+      ],
+      [
+        "R1018",
+        "35"
+      ],
+      [
+        "R1023",
+        "59"
+      ],
+      [
+        "R1014",
+        "53"
+      ],
+      [
+        "R1044",
+        "73"
+      ],
+      [
+        "R1038",
+        "72"
+      ],
+      [
+        "R1035",
+        "93"
+      ],
+      [
+        "R1022",
+        "32"
+      ],
+      [
+        "R1074",
+        "72"
+      ],
+      [
+        "R1004",
+        "92"
+      ],
+      [
+        "R1053",
+        "20"
+      ],
+      [
+        "R1009",
+        "37"
+      ],
+      [
+        "R1066",
+        "29"
+      ],
+      [
+        "R1076",
+        "26"
+      ],
+      [
+        "R1047",
+        "35"
+      ],
+      [
+        "R1042",
+        "55"
+      ],
+      [
+        "R1061",
+        "26"
+      ],
+      [
+        "R1072",
+        "35"
+      ],
+      [
+        "R1030",
+        "41"
+      ],
+      [
+        "R1034",
+        "65"
+      ],
+      [
+        "R1069",
+        "35"
+      ],
+      [
+        "R1045",
+        "61"
+      ],
+      [
+        "R1008",
+        "53"
+      ],
+      [
+        "R1032",
+        "61"
+      ],
+      [
+        "R1050",
+        "74"
+      ],
+      [
+        "R1043",
+        "41"
+      ],
+      [
+        "R1039",
+        "70"
+      ],
+      [
+        "R1002",
+        "76"
+      ],
+      [
+        "R1055",
+        "39"
+      ],
+      [
+        "R1040",
+        "70"
+      ],
+      [
+        "R1062",
+        "21"
+      ],
+      [
+        "R1028",
+        "83"
+      ],
+      [
+        "R1029",
+        "18"
+      ],
+      [
+        "R1000",
+        "88"
+      ],
+      [
+        "R1011",
+        "99"
+      ],
+      [
+        "R1036",
+        "68"
+      ],
+      [
+        "R1003",
+        "80"
+      ],
+      [
+        "R1012",
+        "82"
+      ],
+      [
+        "R1056",
+        "88"
+      ],
+      [
+        "R1046",
+        "33"
+      ],
+      [
+        "R1068",
+        "87"
+      ],
+      [
+        "R1037",
+        "33"
+      ],
+      [
+        "R1027",
+        "25"
+      ],
+      [
+        "R1064",
+        "84"
+      ],
+      [
+        "R1020",
+        "10"
+      ],
+      [
+        "R1015",
+        "94"
+      ],
+      [
+        "R1010",
+        "62"
+      ],
+      [
+        "R1033",
+        "62"
+      ],
+      [
+        "R1052",
+        "29"
+      ],
+      [
+        "R1001",
+        "67"
+      ],
+      [
+        "R1005",
+        "34"
+      ],
+      [
+        "R1070",
+        "89"
+      ],
+      [
+        "R1021",
+        "21"
+      ],
+      [
+        "R1065",
+        "29"
+      ],
+      [
+        "R1024",
+        "89"
+      ],
+      [
+        "R1049",
+        "86"
+      ],
+      [
+        "R1006",
+        "35"
+      ],
+      [
+        "R1048",
+        "60"
+      ],
+      [
+        "R1058",
+        "18"
+      ],
+      [
+        "R1051",
+        "53"
+      ],
+      [
+        "R1041",
+        "85"
+      ],
+      [
+        "R1016",
+        "44"
+      ],
+      [
+        "R1054",
+        "13"
+      ],
+      [
+        "R1057",
+        "45"
+      ],
+      [
+        "R1063",
+        "40"
+      ],
+      [
+        "R1007",
+        "67"
+      ],
+      [
+        "R1013",
+        "92"
+      ],
+      [
+        "R1075",
+        "62"
+      ],
+      [
+        "R1071",
+        "21"
+      ],
+      [
+        "R1019",
+        "77"
+      ],
+      [
+        "R1060",
+        "84"
+      ],
+      [
+        "R1067",
+        "30"
+      ],
+      [
+        "R1073",
+        "81"
+      ],
+      [
+        "R1026",
+        "13"
+      ],
+      [
+        "R1031",
+        "95"
+      ]
+    ],
+    "target_ids": [
+      "R1006",
+      "R1004",
+      "R1002",
+      "R1003",
+      "R1005",
+      "R1007",
+      "R1001",
+      "R1000"
+    ],
+    "extra_records": 69,
+    "content_sha256": "86790e905f795d4847b2b8bcb36e4b1fad987f22f7f4c35ec419bd3bfca3e94d",
+    "input_token_range": [
+      768,
+      1024
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 776,
+    "token_ids_sha256": "f7900d63d91dd5b56890935a52ed8bb143cef40c28369251a83aadb2f1ca41d8",
+    "grammar": "root ::= \"R1006|\" [1-9] [0-9] \"\\n\" \"R1004|\" [1-9] [0-9] \"\\n\" \"R1002|\" [1-9] [0-9] \"\\n\" \"R1003|\" [1-9] [0-9] \"\\n\" \"R1005|\" [1-9] [0-9] \"\\n\" \"R1007|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9] \"\\n\" \"R1000|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-b-organize-3",
+    "seed": 35102,
+    "split": "development",
+    "category": "background",
+    "task_kind": "organize",
+    "target_count": 10,
+    "bucket": 0,
+    "index": 3,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1011|71\nR1001|29\nR1005|16\nR1003|56\nR1019|86\nR1024|87\nR1004|84\nR1021|35\nR1018|25\nR1006|82\nR1007|53\nR1010|53\nR1002|86\nR1000|87\nR1020|98\nR1025|91\nR1023|87\nR1014|32\nR1013|54\nR1016|13\nR1012|40\nR1008|89\nR1015|25\nR1022|17\nR1017|93\nR1009|36\n按以下编号顺序整理对应的数值：R1008,R1005,R1009,R1001,R1000,R1003,R1006,R1007,R1004,R1002。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1008|89\nR1005|16\nR1009|36\nR1001|29\nR1000|87\nR1003|56\nR1006|82\nR1007|53\nR1004|84\nR1002|86",
+    "source_records_evaluation_only": [
+      [
+        "R1011",
+        "71"
+      ],
+      [
+        "R1001",
+        "29"
+      ],
+      [
+        "R1005",
+        "16"
+      ],
+      [
+        "R1003",
+        "56"
+      ],
+      [
+        "R1019",
+        "86"
+      ],
+      [
+        "R1024",
+        "87"
+      ],
+      [
+        "R1004",
+        "84"
+      ],
+      [
+        "R1021",
+        "35"
+      ],
+      [
+        "R1018",
+        "25"
+      ],
+      [
+        "R1006",
+        "82"
+      ],
+      [
+        "R1007",
+        "53"
+      ],
+      [
+        "R1010",
+        "53"
+      ],
+      [
+        "R1002",
+        "86"
+      ],
+      [
+        "R1000",
+        "87"
+      ],
+      [
+        "R1020",
+        "98"
+      ],
+      [
+        "R1025",
+        "91"
+      ],
+      [
+        "R1023",
+        "87"
+      ],
+      [
+        "R1014",
+        "32"
+      ],
+      [
+        "R1013",
+        "54"
+      ],
+      [
+        "R1016",
+        "13"
+      ],
+      [
+        "R1012",
+        "40"
+      ],
+      [
+        "R1008",
+        "89"
+      ],
+      [
+        "R1015",
+        "25"
+      ],
+      [
+        "R1022",
+        "17"
+      ],
+      [
+        "R1017",
+        "93"
+      ],
+      [
+        "R1009",
+        "36"
+      ]
+    ],
+    "target_ids": [
+      "R1008",
+      "R1005",
+      "R1009",
+      "R1001",
+      "R1000",
+      "R1003",
+      "R1006",
+      "R1007",
+      "R1004",
+      "R1002"
+    ],
+    "extra_records": 16,
+    "content_sha256": "b7ad31ebbe29e1c5a74516d604803abd4956951e7b2502e7e2b0ca7dd4fb419e",
+    "input_token_range": [
+      320,
+      511
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 327,
+    "token_ids_sha256": "36d04a7ad2d152256e90907768b84f1853b5a2d2ab16b39fc1505c1212bbd63c",
+    "grammar": "root ::= \"R1008|\" [1-9] [0-9] \"\\n\" \"R1005|\" [1-9] [0-9] \"\\n\" \"R1009|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9] \"\\n\" \"R1000|\" [1-9] [0-9] \"\\n\" \"R1003|\" [1-9] [0-9] \"\\n\" \"R1006|\" [1-9] [0-9] \"\\n\" \"R1007|\" [1-9] [0-9] \"\\n\" \"R1004|\" [1-9] [0-9] \"\\n\" \"R1002|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-b-organize-4",
+    "seed": 35102,
+    "split": "development",
+    "category": "background",
+    "task_kind": "organize",
+    "target_count": 4,
+    "bucket": 1,
+    "index": 4,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1011|99\nR1036|24\nR1013|65\nR1023|79\nR1048|72\nR1010|79\nR1027|87\nR1045|63\nR1030|72\nR1029|14\nR1004|79\nR1016|69\nR1012|59\nR1043|84\nR1028|38\nR1025|65\nR1037|78\nR1035|29\nR1044|58\nR1031|63\nR1042|58\nR1026|95\nR1040|63\nR1041|33\nR1020|28\nR1009|64\nR1017|44\nR1003|65\nR1047|44\nR1019|68\nR1049|92\nR1046|84\nR1038|94\nR1008|52\nR1018|87\nR1006|85\nR1033|26\nR1039|27\nR1034|35\nR1014|57\nR1005|70\nR1032|80\nR1002|18\nR1021|31\nR1000|13\nR1022|80\nR1001|12\nR1015|37\nR1024|70\nR1007|14\n按以下编号顺序整理对应的数值：R1001,R1003,R1002,R1000。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1001|12\nR1003|65\nR1002|18\nR1000|13",
+    "source_records_evaluation_only": [
+      [
+        "R1011",
+        "99"
+      ],
+      [
+        "R1036",
+        "24"
+      ],
+      [
+        "R1013",
+        "65"
+      ],
+      [
+        "R1023",
+        "79"
+      ],
+      [
+        "R1048",
+        "72"
+      ],
+      [
+        "R1010",
+        "79"
+      ],
+      [
+        "R1027",
+        "87"
+      ],
+      [
+        "R1045",
+        "63"
+      ],
+      [
+        "R1030",
+        "72"
+      ],
+      [
+        "R1029",
+        "14"
+      ],
+      [
+        "R1004",
+        "79"
+      ],
+      [
+        "R1016",
+        "69"
+      ],
+      [
+        "R1012",
+        "59"
+      ],
+      [
+        "R1043",
+        "84"
+      ],
+      [
+        "R1028",
+        "38"
+      ],
+      [
+        "R1025",
+        "65"
+      ],
+      [
+        "R1037",
+        "78"
+      ],
+      [
+        "R1035",
+        "29"
+      ],
+      [
+        "R1044",
+        "58"
+      ],
+      [
+        "R1031",
+        "63"
+      ],
+      [
+        "R1042",
+        "58"
+      ],
+      [
+        "R1026",
+        "95"
+      ],
+      [
+        "R1040",
+        "63"
+      ],
+      [
+        "R1041",
+        "33"
+      ],
+      [
+        "R1020",
+        "28"
+      ],
+      [
+        "R1009",
+        "64"
+      ],
+      [
+        "R1017",
+        "44"
+      ],
+      [
+        "R1003",
+        "65"
+      ],
+      [
+        "R1047",
+        "44"
+      ],
+      [
+        "R1019",
+        "68"
+      ],
+      [
+        "R1049",
+        "92"
+      ],
+      [
+        "R1046",
+        "84"
+      ],
+      [
+        "R1038",
+        "94"
+      ],
+      [
+        "R1008",
+        "52"
+      ],
+      [
+        "R1018",
+        "87"
+      ],
+      [
+        "R1006",
+        "85"
+      ],
+      [
+        "R1033",
+        "26"
+      ],
+      [
+        "R1039",
+        "27"
+      ],
+      [
+        "R1034",
+        "35"
+      ],
+      [
+        "R1014",
+        "57"
+      ],
+      [
+        "R1005",
+        "70"
+      ],
+      [
+        "R1032",
+        "80"
+      ],
+      [
+        "R1002",
+        "18"
+      ],
+      [
+        "R1021",
+        "31"
+      ],
+      [
+        "R1000",
+        "13"
+      ],
+      [
+        "R1022",
+        "80"
+      ],
+      [
+        "R1001",
+        "12"
+      ],
+      [
+        "R1015",
+        "37"
+      ],
+      [
+        "R1024",
+        "70"
+      ],
+      [
+        "R1007",
+        "14"
+      ]
+    ],
+    "target_ids": [
+      "R1001",
+      "R1003",
+      "R1002",
+      "R1000"
+    ],
+    "extra_records": 46,
+    "content_sha256": "53ef6265bd02616d44c64a32b34fb767b9f86518e3a0ac52625bd5c7d9692f81",
+    "input_token_range": [
+      512,
+      767
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 513,
+    "token_ids_sha256": "ac91a7f093b9018c9b22843553eba9228386bb67f9cb0b491e003315371104cd",
+    "grammar": "root ::= \"R1001|\" [1-9] [0-9] \"\\n\" \"R1003|\" [1-9] [0-9] \"\\n\" \"R1002|\" [1-9] [0-9] \"\\n\" \"R1000|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-b-organize-5",
+    "seed": 35102,
+    "split": "development",
+    "category": "background",
+    "task_kind": "organize",
+    "target_count": 6,
+    "bucket": 2,
+    "index": 5,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1033|85\nR1067|51\nR1016|53\nR1018|70\nR1021|78\nR1013|54\nR1038|16\nR1031|44\nR1077|95\nR1060|33\nR1062|38\nR1061|19\nR1010|68\nR1034|74\nR1059|77\nR1058|38\nR1055|28\nR1073|12\nR1019|95\nR1009|64\nR1072|75\nR1039|29\nR1045|48\nR1069|46\nR1064|62\nR1044|36\nR1002|33\nR1015|45\nR1024|85\nR1007|63\nR1023|19\nR1014|96\nR1030|15\nR1075|30\nR1032|59\nR1046|52\nR1003|25\nR1057|64\nR1006|20\nR1017|99\nR1011|85\nR1020|82\nR1054|33\nR1041|12\nR1037|14\nR1026|12\nR1070|34\nR1047|82\nR1074|69\nR1050|60\nR1048|71\nR1022|52\nR1056|49\nR1076|17\nR1000|87\nR1042|16\nR1001|35\nR1029|91\nR1052|87\nR1027|83\nR1028|67\nR1036|68\nR1035|41\nR1063|92\nR1012|34\nR1066|37\nR1065|49\nR1004|30\nR1005|84\nR1068|39\nR1008|97\nR1043|80\nR1040|84\nR1025|81\nR1071|28\nR1051|46\nR1053|79\nR1049|92\n按以下编号顺序整理对应的数值：R1002,R1001,R1003,R1005,R1004,R1000。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1002|33\nR1001|35\nR1003|25\nR1005|84\nR1004|30\nR1000|87",
+    "source_records_evaluation_only": [
+      [
+        "R1033",
+        "85"
+      ],
+      [
+        "R1067",
+        "51"
+      ],
+      [
+        "R1016",
+        "53"
+      ],
+      [
+        "R1018",
+        "70"
+      ],
+      [
+        "R1021",
+        "78"
+      ],
+      [
+        "R1013",
+        "54"
+      ],
+      [
+        "R1038",
+        "16"
+      ],
+      [
+        "R1031",
+        "44"
+      ],
+      [
+        "R1077",
+        "95"
+      ],
+      [
+        "R1060",
+        "33"
+      ],
+      [
+        "R1062",
+        "38"
+      ],
+      [
+        "R1061",
+        "19"
+      ],
+      [
+        "R1010",
+        "68"
+      ],
+      [
+        "R1034",
+        "74"
+      ],
+      [
+        "R1059",
+        "77"
+      ],
+      [
+        "R1058",
+        "38"
+      ],
+      [
+        "R1055",
+        "28"
+      ],
+      [
+        "R1073",
+        "12"
+      ],
+      [
+        "R1019",
+        "95"
+      ],
+      [
+        "R1009",
+        "64"
+      ],
+      [
+        "R1072",
+        "75"
+      ],
+      [
+        "R1039",
+        "29"
+      ],
+      [
+        "R1045",
+        "48"
+      ],
+      [
+        "R1069",
+        "46"
+      ],
+      [
+        "R1064",
+        "62"
+      ],
+      [
+        "R1044",
+        "36"
+      ],
+      [
+        "R1002",
+        "33"
+      ],
+      [
+        "R1015",
+        "45"
+      ],
+      [
+        "R1024",
+        "85"
+      ],
+      [
+        "R1007",
+        "63"
+      ],
+      [
+        "R1023",
+        "19"
+      ],
+      [
+        "R1014",
+        "96"
+      ],
+      [
+        "R1030",
+        "15"
+      ],
+      [
+        "R1075",
+        "30"
+      ],
+      [
+        "R1032",
+        "59"
+      ],
+      [
+        "R1046",
+        "52"
+      ],
+      [
+        "R1003",
+        "25"
+      ],
+      [
+        "R1057",
+        "64"
+      ],
+      [
+        "R1006",
+        "20"
+      ],
+      [
+        "R1017",
+        "99"
+      ],
+      [
+        "R1011",
+        "85"
+      ],
+      [
+        "R1020",
+        "82"
+      ],
+      [
+        "R1054",
+        "33"
+      ],
+      [
+        "R1041",
+        "12"
+      ],
+      [
+        "R1037",
+        "14"
+      ],
+      [
+        "R1026",
+        "12"
+      ],
+      [
+        "R1070",
+        "34"
+      ],
+      [
+        "R1047",
+        "82"
+      ],
+      [
+        "R1074",
+        "69"
+      ],
+      [
+        "R1050",
+        "60"
+      ],
+      [
+        "R1048",
+        "71"
+      ],
+      [
+        "R1022",
+        "52"
+      ],
+      [
+        "R1056",
+        "49"
+      ],
+      [
+        "R1076",
+        "17"
+      ],
+      [
+        "R1000",
+        "87"
+      ],
+      [
+        "R1042",
+        "16"
+      ],
+      [
+        "R1001",
+        "35"
+      ],
+      [
+        "R1029",
+        "91"
+      ],
+      [
+        "R1052",
+        "87"
+      ],
+      [
+        "R1027",
+        "83"
+      ],
+      [
+        "R1028",
+        "67"
+      ],
+      [
+        "R1036",
+        "68"
+      ],
+      [
+        "R1035",
+        "41"
+      ],
+      [
+        "R1063",
+        "92"
+      ],
+      [
+        "R1012",
+        "34"
+      ],
+      [
+        "R1066",
+        "37"
+      ],
+      [
+        "R1065",
+        "49"
+      ],
+      [
+        "R1004",
+        "30"
+      ],
+      [
+        "R1005",
+        "84"
+      ],
+      [
+        "R1068",
+        "39"
+      ],
+      [
+        "R1008",
+        "97"
+      ],
+      [
+        "R1043",
+        "80"
+      ],
+      [
+        "R1040",
+        "84"
+      ],
+      [
+        "R1025",
+        "81"
+      ],
+      [
+        "R1071",
+        "28"
+      ],
+      [
+        "R1051",
+        "46"
+      ],
+      [
+        "R1053",
+        "79"
+      ],
+      [
+        "R1049",
+        "92"
+      ]
+    ],
+    "target_ids": [
+      "R1002",
+      "R1001",
+      "R1003",
+      "R1005",
+      "R1004",
+      "R1000"
+    ],
+    "extra_records": 72,
+    "content_sha256": "5291c252975dabf486d85c0b98a52e8c767fb85bce18f82eb63d713ba622ab15",
+    "input_token_range": [
+      768,
+      1024
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 775,
+    "token_ids_sha256": "ecf0978d5d2e4c65f4c5f8e488943a22e166e4ffad22fc824ce30d618e4d1b9a",
+    "grammar": "root ::= \"R1002|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9] \"\\n\" \"R1003|\" [1-9] [0-9] \"\\n\" \"R1005|\" [1-9] [0-9] \"\\n\" \"R1004|\" [1-9] [0-9] \"\\n\" \"R1000|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-b-organize-6",
+    "seed": 35102,
+    "split": "development",
+    "category": "background",
+    "task_kind": "organize",
+    "target_count": 8,
+    "bucket": 0,
+    "index": 6,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1002|60\nR1007|81\nR1023|13\nR1014|60\nR1006|77\nR1010|83\nR1022|51\nR1021|68\nR1020|97\nR1001|41\nR1016|65\nR1019|90\nR1004|72\nR1003|15\nR1008|80\nR1012|33\nR1015|82\nR1000|53\nR1005|58\nR1017|80\nR1026|53\nR1025|87\nR1024|70\nR1018|29\nR1013|75\nR1011|88\nR1009|46\n按以下编号顺序整理对应的数值：R1000,R1007,R1001,R1003,R1005,R1004,R1006,R1002。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1000|53\nR1007|81\nR1001|41\nR1003|15\nR1005|58\nR1004|72\nR1006|77\nR1002|60",
+    "source_records_evaluation_only": [
+      [
+        "R1002",
+        "60"
+      ],
+      [
+        "R1007",
+        "81"
+      ],
+      [
+        "R1023",
+        "13"
+      ],
+      [
+        "R1014",
+        "60"
+      ],
+      [
+        "R1006",
+        "77"
+      ],
+      [
+        "R1010",
+        "83"
+      ],
+      [
+        "R1022",
+        "51"
+      ],
+      [
+        "R1021",
+        "68"
+      ],
+      [
+        "R1020",
+        "97"
+      ],
+      [
+        "R1001",
+        "41"
+      ],
+      [
+        "R1016",
+        "65"
+      ],
+      [
+        "R1019",
+        "90"
+      ],
+      [
+        "R1004",
+        "72"
+      ],
+      [
+        "R1003",
+        "15"
+      ],
+      [
+        "R1008",
+        "80"
+      ],
+      [
+        "R1012",
+        "33"
+      ],
+      [
+        "R1015",
+        "82"
+      ],
+      [
+        "R1000",
+        "53"
+      ],
+      [
+        "R1005",
+        "58"
+      ],
+      [
+        "R1017",
+        "80"
+      ],
+      [
+        "R1026",
+        "53"
+      ],
+      [
+        "R1025",
+        "87"
+      ],
+      [
+        "R1024",
+        "70"
+      ],
+      [
+        "R1018",
+        "29"
+      ],
+      [
+        "R1013",
+        "75"
+      ],
+      [
+        "R1011",
+        "88"
+      ],
+      [
+        "R1009",
+        "46"
+      ]
+    ],
+    "target_ids": [
+      "R1000",
+      "R1007",
+      "R1001",
+      "R1003",
+      "R1005",
+      "R1004",
+      "R1006",
+      "R1002"
+    ],
+    "extra_records": 19,
+    "content_sha256": "9889b3c58e5ab80a6961792dfa0cfb9a9c6085c852e614f041f4450a593312e3",
+    "input_token_range": [
+      320,
+      511
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 326,
+    "token_ids_sha256": "147c63014f8699e8f4720cf476b2691308312fa75814947e2346f270adfa3b5b",
+    "grammar": "root ::= \"R1000|\" [1-9] [0-9] \"\\n\" \"R1007|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9] \"\\n\" \"R1003|\" [1-9] [0-9] \"\\n\" \"R1005|\" [1-9] [0-9] \"\\n\" \"R1004|\" [1-9] [0-9] \"\\n\" \"R1006|\" [1-9] [0-9] \"\\n\" \"R1002|\" [1-9] [0-9]\n"
+  },
+  {
+    "req_id": "v16-dev-35102-b-organize-7",
+    "seed": 35102,
+    "split": "development",
+    "category": "background",
+    "task_kind": "organize",
+    "target_count": 10,
+    "bucket": 1,
+    "index": 7,
+    "prompt": "<|im_start|>system\n只输出结果，无表头。<|im_end|>\n<|im_start|>user\n资料\nR1023|31\nR1020|38\nR1045|77\nR1010|78\nR1030|82\nR1025|66\nR1039|24\nR1003|69\nR1028|81\nR1019|30\nR1046|28\nR1017|91\nR1011|95\nR1007|81\nR1015|17\nR1005|49\nR1001|62\nR1002|68\nR1038|37\nR1044|39\nR1008|49\nR1037|22\nR1018|17\nR1024|88\nR1027|41\nR1033|59\nR1013|77\nR1036|73\nR1009|93\nR1021|64\nR1041|37\nR1000|77\nR1004|43\nR1031|11\nR1032|25\nR1043|21\nR1034|85\nR1026|48\nR1035|76\nR1029|40\nR1022|56\nR1042|49\nR1014|87\nR1016|73\nR1006|11\nR1012|82\nR1040|24\n按以下编号顺序整理对应的数值：R1005,R1004,R1001,R1009,R1006,R1003,R1008,R1000,R1007,R1002。每行ID|值，不写其他内容。<|im_end|>\n<|im_start|>assistant\n",
+    "expected_answer": "R1005|49\nR1004|43\nR1001|62\nR1009|93\nR1006|11\nR1003|69\nR1008|49\nR1000|77\nR1007|81\nR1002|68",
+    "source_records_evaluation_only": [
+      [
+        "R1023",
+        "31"
+      ],
+      [
+        "R1020",
+        "38"
+      ],
+      [
+        "R1045",
+        "77"
+      ],
+      [
+        "R1010",
+        "78"
+      ],
+      [
+        "R1030",
+        "82"
+      ],
+      [
+        "R1025",
+        "66"
+      ],
+      [
+        "R1039",
+        "24"
+      ],
+      [
+        "R1003",
+        "69"
+      ],
+      [
+        "R1028",
+        "81"
+      ],
+      [
+        "R1019",
+        "30"
+      ],
+      [
+        "R1046",
+        "28"
+      ],
+      [
+        "R1017",
+        "91"
+      ],
+      [
+        "R1011",
+        "95"
+      ],
+      [
+        "R1007",
+        "81"
+      ],
+      [
+        "R1015",
+        "17"
+      ],
+      [
+        "R1005",
+        "49"
+      ],
+      [
+        "R1001",
+        "62"
+      ],
+      [
+        "R1002",
+        "68"
+      ],
+      [
+        "R1038",
+        "37"
+      ],
+      [
+        "R1044",
+        "39"
+      ],
+      [
+        "R1008",
+        "49"
+      ],
+      [
+        "R1037",
+        "22"
+      ],
+      [
+        "R1018",
+        "17"
+      ],
+      [
+        "R1024",
+        "88"
+      ],
+      [
+        "R1027",
+        "41"
+      ],
+      [
+        "R1033",
+        "59"
+      ],
+      [
+        "R1013",
+        "77"
+      ],
+      [
+        "R1036",
+        "73"
+      ],
+      [
+        "R1009",
+        "93"
+      ],
+      [
+        "R1021",
+        "64"
+      ],
+      [
+        "R1041",
+        "37"
+      ],
+      [
+        "R1000",
+        "77"
+      ],
+      [
+        "R1004",
+        "43"
+      ],
+      [
+        "R1031",
+        "11"
+      ],
+      [
+        "R1032",
+        "25"
+      ],
+      [
+        "R1043",
+        "21"
+      ],
+      [
+        "R1034",
+        "85"
+      ],
+      [
+        "R1026",
+        "48"
+      ],
+      [
+        "R1035",
+        "76"
+      ],
+      [
+        "R1029",
+        "40"
+      ],
+      [
+        "R1022",
+        "56"
+      ],
+      [
+        "R1042",
+        "49"
+      ],
+      [
+        "R1014",
+        "87"
+      ],
+      [
+        "R1016",
+        "73"
+      ],
+      [
+        "R1006",
+        "11"
+      ],
+      [
+        "R1012",
+        "82"
+      ],
+      [
+        "R1040",
+        "24"
+      ]
+    ],
+    "target_ids": [
+      "R1005",
+      "R1004",
+      "R1001",
+      "R1009",
+      "R1006",
+      "R1003",
+      "R1008",
+      "R1000",
+      "R1007",
+      "R1002"
+    ],
+    "extra_records": 37,
+    "content_sha256": "1d6c2240e1607e481e552a02dc19143ecac745966ea65c99c648ae361e8d84d8",
+    "input_token_range": [
+      512,
+      767
+    ],
+    "max_tokens": 384,
+    "temperature": 0,
+    "ignore_eos": false,
+    "cache_prompt": false,
+    "arrival_offset_ms": 0,
+    "input_tokens": 516,
+    "token_ids_sha256": "826a665e2e23c0888d7ae88e4bd3432bdf72f7d4463ae43a3c8b6596a376b3ec",
+    "grammar": "root ::= \"R1005|\" [1-9] [0-9] \"\\n\" \"R1004|\" [1-9] [0-9] \"\\n\" \"R1001|\" [1-9] [0-9] \"\\n\" \"R1009|\" [1-9] [0-9] \"\\n\" \"R1006|\" [1-9] [0-9] \"\\n\" \"R1003|\" [1-9] [0-9] \"\\n\" \"R1008|\" [1-9] [0-9] \"\\n\" \"R1000|\" [1-9] [0-9] \"\\n\" \"R1007|\" [1-9] [0-9] \"\\n\" \"R1002|\" [1-9] [0-9]\n"
+  }
+]

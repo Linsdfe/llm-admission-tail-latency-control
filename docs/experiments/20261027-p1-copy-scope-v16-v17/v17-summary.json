@@ -1,0 +1,19 @@
+{
+  "status": "completed",
+  "measured_requests": 64,
+  "warmups": 2,
+  "accounting": {
+    "cap": 0,
+    "events": 132,
+    "peak_running_background": 1,
+    "final_running_background": 0,
+    "final_active_slots": 0
+  },
+  "elapsed_seconds": 155.98571227,
+  "source_model_runtime_unchanged": true,
+  "service_exit_zero": true,
+  "scheduler_comparison_started": false,
+  "G1_passed": false,
+  "final_test_accessed": false,
+  "finished_at": "2026-10-27T10:31:45.293522+08:00"
+}

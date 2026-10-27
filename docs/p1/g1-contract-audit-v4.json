@@ -1,0 +1,13 @@
+{
+  "status": "passed_contract_consistency",
+  "checks": 30,
+  "formal_calibration_planned": 128,
+  "formal_calibration_collected": 0,
+  "residual_buckets": 4,
+  "warm_per_bucket_planned": 32,
+  "development_runs_upper": 96,
+  "formal_runs_upper": 320,
+  "final_unique_sources_planned": 640,
+  "final_generated": false,
+  "G1_passed": false
+}

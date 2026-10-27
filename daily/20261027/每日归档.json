@@ -1,15 +1,18 @@
 {
   "date": "20261027",
-  "archive": "results/archives/20261027/daily-20261027-093425-cb10b3b7.zip",
-  "sha256": "64739afc956ac216593f0df99459a95d238d76b3d312df458bf9291a25b76897",
-  "file_count": 1027,
+  "archive": "results/archives/20261027/daily-20261027-104919-1890ec60.zip",
+  "sha256": "299406302977feda86c663ed27df04409ea2e22040a8f36c6b9908ce5e683418",
+  "file_count": 1989,
   "run_dirs": [
-    "results/raw/development/20261027-0920-p1-content-factor-v15",
-    "results/raw/maintenance/20261027-p1-content-factor-preparation-v15",
-    "results/raw/maintenance/20261027-p1-content-factor-supervisor-v15",
-    "results/raw/maintenance/20261027-p1-content-factor-delivery-v7"
+    "results/raw/development/20261027-1030-p1-copy-profile-v16",
+    "results/raw/development/20261027-1040-p1-copy-profile-v17",
+    "results/raw/maintenance/20261027-p1-copy-profile-preparation-v16",
+    "results/raw/maintenance/20261027-p1-copy-profile-supervisor-v16",
+    "results/raw/maintenance/20261027-p1-copy-profile-preparation-v17",
+    "results/raw/maintenance/20261027-p1-copy-profile-supervisor-v17",
+    "results/raw/maintenance/20261027-p1-copy-scope-delivery-v8"
   ],
   "verified": true,
-  "packed_at": "2026-10-27T09:34:25.297436+08:00",
+  "packed_at": "2026-10-27T10:49:19.711089+08:00",
   "backup_scope": "local_only"
 }

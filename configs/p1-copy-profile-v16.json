@@ -1,0 +1,18 @@
+{
+  "version": 16,
+  "purpose": "serial_task_profile",
+  "stage": "development",
+  "allowed_seeds": [35101, 35102],
+  "task_kinds": ["extract", "organize"],
+  "target_counts": {"interactive": [1,2,3,4,1,2,3,4], "background": [4,6,8,10,4,6,8,10]},
+  "bucket_assignment": [0,1,2,0,1,2,0,1],
+  "input_ranges": {"interactive": [[96,159],[160,223],[224,320]], "background": [[320,511],[512,767],[768,1024]]},
+  "max_tokens": {"interactive": 64, "background": 384},
+  "extra_records_max": 128,
+  "quality_gate": {"whole_correct_min": 61, "each_class_min": 30, "each_task_min": 30, "each_class_task_min": 15, "distinct_correct_output_lengths_per_class_min": 4},
+  "planned": 64,
+  "warmups": 2,
+  "batch_timeout_seconds": 1500,
+  "final_generation_enabled": false,
+  "online_updates_enabled": false
+}

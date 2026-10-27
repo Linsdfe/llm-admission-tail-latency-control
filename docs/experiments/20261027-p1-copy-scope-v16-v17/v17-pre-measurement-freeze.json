@@ -1,0 +1,8 @@
+{
+  "recorded_at": "2026-10-27T10:30:25.417019+08:00",
+  "public_features_sha256": "44afa39d39f34240cd6e5120c16e1ecd167f1facfab8a7c702248a82e6cbe110",
+  "plan_sha256": "25a3fe4d646bd277b9929c22314e00161dd55a569a2cb06fd7679179192019ba",
+  "planned": 64,
+  "outputs_read": 0,
+  "G1_passed": false
+}
